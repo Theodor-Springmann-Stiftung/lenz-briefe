@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opus>
+	<definitions>
+		<personDefs>
+			<personDef index="-1" name="Unbekannt" />
+			<personDef index="1" name="Johann Georg Hamann" ref="https://d-nb.info/gnd/11854523X"
+				vorname="Johann Georg" nachname="Hamann" komm="hamann" />
+		</personDefs>
+		<locationDefs>
+			<locationDef index="1" name="Königsberg" ref="https://d-nb.info/gnd/4030000-5" />
+		</locationDefs>
+		<appDefs>
+			<appDef index="-1" name="" category="Überlieferung &amp; Textkritik" />
+			<appDef index="0" name="Brieftext" category="Brieftext" />
+			<appDef index="1" name="Veränderte Einsortierung" category="Überlieferung &amp; Textkritik" />
+			<appDef index="2" name="Korrigierte Nummerierung" category="Überlieferung &amp; Textkritik" />
+			<appDef index="3" name="Korrigierte Datierung" category="Überlieferung &amp; Textkritik" />
+			<appDef index="4" name="Provenienz" category="Überlieferung &amp; Textkritik" />
+			<appDef index="5" name="Bisherige Drucke" category="Überlieferung &amp; Textkritik" />
+			<appDef index="6" name="Digitalisat" category="Überlieferung &amp; Textkritik" />
+			<appDef index="7" name="Exzerpte" category="Exzerpte" />
+			<appDef index="8" name="Abschriften" category="Abschriften" />
+			<appDef index="9" name="Anhänge" category="Anhänge" />
+			<appDef index="10" name="Entwürfe" category="Entwürfe" />
+			<appDef index="11" name="Übersetzung" category="Übersetzung" />
+		</appDefs>
+	</definitions>
+</opus>

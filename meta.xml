@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opus>
+	<descriptions>
+		<letterDesc letter="1">
+			<date value="Königsberg, November 1752" />
+			<sort value="1752-11-01" notBefore="1752-11-01" notAfter="1752-11-30" />
+			<location ref="2" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="5" />
+			</receivers>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+	</descriptions>
+</opus>

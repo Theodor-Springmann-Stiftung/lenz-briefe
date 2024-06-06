@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opus>
+	<traditions>
+		<letterTradition letter="1">
+			<app ref="1">
+
+			</app>
+		</letterTradition>
+	</traditions>
+</opus>
