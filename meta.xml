@@ -2,16 +2,16 @@
 <opus>
 	<descriptions>
 		<letterDesc letter="1">
-			<date value="Königsberg, November 1752" />
-			<sort value="1752-11-01" notBefore="1752-11-01" notAfter="1752-11-30" />
-			<location ref="2" />
+			<date value="Dorpat (Tartu), 2. Januar 1765" />
+			<sort value="1765-01-02" />
+			<location ref="1" />
 			<senders>
 				<sender ref="1" />
 			</senders>
 			<receivers>
-				<receiver ref="5" />
+				<receiver ref="2" />
 			</receivers>
-			<hasOriginal value="false" />
+			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>

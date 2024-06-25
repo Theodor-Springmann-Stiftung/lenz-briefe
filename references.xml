@@ -3,11 +3,17 @@
 	<definitions>
 		<personDefs>
 			<personDef index="-1" name="Unbekannt" />
-			<personDef index="1" name="Johann Georg Hamann" ref="https://d-nb.info/gnd/11854523X"
-				vorname="Johann Georg" nachname="Hamann" komm="hamann" />
+			<personDef index="1" name="Jakob Michael Reinhold Lenz" ref="https://d-nb.info/gnd/118571656"
+				vorname="Jakob Michael Reinhold" nachname="Lenz" komm="lenz" />
+				<personDef index="2" name="Friedrich Konrad Gadebusch" ref="none"
+				vorname="Friedrich Konrad" nachname="Gadebusch" komm="gadebusch" />
 		</personDefs>
+
+
+
+
 		<locationDefs>
-			<locationDef index="1" name="Königsberg" ref="https://d-nb.info/gnd/4030000-5" />
+			<locationDef index="1" name="Dorpat (Tartu)" ref="https://d-nb.info/gnd/1029285-8" />
 		</locationDefs>
 		<appDefs>
 			<appDef index="-1" name="" category="Überlieferung &amp; Textkritik" />
