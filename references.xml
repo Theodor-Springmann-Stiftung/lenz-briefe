@@ -7,6 +7,8 @@
 				vorname="Jakob Michael Reinhold" nachname="Lenz" komm="lenz" />
 				<personDef index="2" name="Friedrich Konrad Gadebusch" ref="none"
 				vorname="Friedrich Konrad" nachname="Gadebusch" komm="gadebusch" />
+				<personDef index="3" name="Friedrich David Lenz" ref="none"
+				vorname="Friedrich David" nachname="Lenz" komm="fd-lenz" />
 		</personDefs>
 
 
@@ -14,6 +16,7 @@
 
 		<locationDefs>
 			<locationDef index="1" name="Dorpat (Tartu)" ref="https://d-nb.info/gnd/1029285-8" />
+			<locationDef index="2" name="Tarwast (Tarvastu)" ref="https://d-nb.info/gnd/115455998X" />
 		</locationDefs>
 		<appDefs>
 			<appDef index="-1" name="" category="Überlieferung &amp; Textkritik" />

@@ -15,5 +15,19 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
+			<letterDesc letter="2">
+			<date value="Tarwast (Tarvastu), 11. Oktober 1767" />
+			<sort value="1767-10-11" />
+			<location ref="2" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="3" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 	</descriptions>
 </opus>
