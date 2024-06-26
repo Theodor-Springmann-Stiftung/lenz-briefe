@@ -9,6 +9,10 @@
 				vorname="Friedrich Konrad" nachname="Gadebusch" komm="gadebusch" />
 				<personDef index="3" name="Friedrich David Lenz" ref="none"
 				vorname="Friedrich David" nachname="Lenz" komm="fd-lenz" />
+				<personDef index="4" name="Christian David Lenz" ref="https://d-nb.info/gnd/12021363X"
+				vorname="Christian David" nachname="Lenz" komm="chd-lenz" />
+				<personDef index="5" name="Dorothea Lenz" ref="none"
+				vorname="Dorothea" nachname="Lenz" komm="d-lenz" />
 		</personDefs>
 
 
