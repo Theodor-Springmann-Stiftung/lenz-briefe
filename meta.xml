@@ -67,7 +67,7 @@
 	</letterDesc>
 			<letterDesc letter="5">
 			<date value="Tarwast (Tarvastu), nach 24. Januar 1768" />
-			<sort value="notBefore1767-11-24" />
+			<sort value="1767-11-24" notBefore="1767-11-24" />
 			<location ref="1" />
 			<senders>
 				<sender ref="1" />

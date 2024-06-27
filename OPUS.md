@@ -180,7 +180,7 @@ gr                      Text in griechischen Buchstaben
 hand                    Text fremder Hand
 hand[@ref]              Verweis auf opus/definitions/handDefs/handDef[@index]
 hb                      Text in hebräischen Buchstaben
-insertion               Von Hamann nachträglich eingefügt (transkribierte Originale)
+insertion               nachträglich eingefügt (transkribierte Originale)
 note                    Anmerkung der Editor:innen
 nr                      Unentziffert
 sub                     Tiefgestellter Text
