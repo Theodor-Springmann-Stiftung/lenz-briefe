@@ -19,10 +19,25 @@ Riga, Latvijas Akadēmiskā Bibliotekā, [1] Nachlaß J. M. R. Lenz, Ms. 1113, F
 Riga, Latvijas Akadēmiskā Bibliotekā, [1] Nachlaß J. M. R. Lenz, Ms. 1113, F. 25, V. 31, Nr. 4
 			</app>
 		</letterTradition>
+
 					<letterTradition letter="5">
 			<app ref="1">
 Riga, Latvijas Akadēmiskā Bibliotekā, [1] Nachlaß J. M. R. Lenz, Ms. 1113, F. 25, V. 31, Nr. 5
 			</app>
 		</letterTradition>
+
+						<letterTradition letter="6">
+			<app ref="1">
+Riga, Latvijas Akadēmiskā Bibliotekā, [1] Nachlaß J. M. R. Lenz, Ms. 1113, F. 25, V. 31, Nr. 32
+			</app>
+		</letterTradition>
+
+			<letterTradition letter="7">
+			<app ref="1">
+Freye/Stammler I, S. 13–17
+			</app>
+		</letterTradition>
+
+
 	</traditions>
 </opus>

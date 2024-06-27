@@ -82,5 +82,36 @@
 			<isDraft value="false" />
 		</letterDesc>
 
+		<letterDesc letter="6">
+			<date value="Königsberg (Kaliningrad), 14. Oktober 1769" />
+			<sort value="1769-10-14" />
+			<location ref="3" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="5" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+
+			<letterDesc letter="7">
+			<date value="Dorpat (Tartu), wahrscheinlich Mitte 1770" />
+			<sort value="1770-06-15" notBefore="1770-06-01" notAfter="1770-07-01" />
+			<location ref="1" />
+			<senders>
+				<sender ref="5" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+				<receiver ref="8" />
+			</receivers>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="true" />
+		</letterDesc>
+
 	</descriptions>
 </opus>

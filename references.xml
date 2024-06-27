@@ -17,6 +17,8 @@
 				vorname="Christine Margarethe" nachname="Lenz" komm="chm-lenz" />
 				<personDef index="7" name="Obristin von Albedyll" ref="none"
 				vorname="NN" nachname="von Albedyl" komm="albedyll" />
+					<personDef index="8" name="Johann Christian Lenz" ref="none"
+				vorname="Johann Christian" nachname="Lenz" komm="jch-lenz" />
 
 		</personDefs>
 
@@ -26,6 +28,7 @@
 		<locationDefs>
 			<locationDef index="1" name="Dorpat (Tartu)" ref="https://d-nb.info/gnd/1029285-8" />
 			<locationDef index="2" name="Tarwast (Tarvastu)" ref="https://d-nb.info/gnd/115455998X" />
+			<locationDef index="3" name="Königsberg (Kaliningrad)" ref="https://d-nb.info/gnd/4031541-1" />
 		</locationDefs>
 		<appDefs>
 			<appDef index="-1" name="" category="Überlieferung &amp; Textkritik" />
