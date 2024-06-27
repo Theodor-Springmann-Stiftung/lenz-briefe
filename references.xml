@@ -13,6 +13,11 @@
 				vorname="Christian David" nachname="Lenz" komm="chd-lenz" />
 				<personDef index="5" name="Dorothea Lenz" ref="none"
 				vorname="Dorothea" nachname="Lenz" komm="d-lenz" />
+					<personDef index="6" name="Christine Margarethe Lenz" ref="none"
+				vorname="Christine Margarethe" nachname="Lenz" komm="chm-lenz" />
+				<personDef index="7" name="Obristin von Albedyll" ref="none"
+				vorname="NN" nachname="von Albedyl" komm="albedyll" />
+
 		</personDefs>
 
 

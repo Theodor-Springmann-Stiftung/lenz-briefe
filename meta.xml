@@ -64,5 +64,23 @@
 			<isDraft value="false" />
 		</letterDesc>
 
+	</letterDesc>
+			<letterDesc letter="5">
+			<date value="Tarwast (Tarvastu), nach 24. Januar 1768" />
+			<sort value="notBefore1767-11-24" />
+			<location ref="1" />
+			<senders>
+				<sender ref="1" />
+					<sender ref="7" />
+			</senders>
+			<receivers>
+				<receiver ref="3" />
+				<receiver ref="6" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+
 	</descriptions>
 </opus>
