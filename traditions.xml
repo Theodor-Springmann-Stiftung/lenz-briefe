@@ -38,6 +38,11 @@ Freye/Stammler I, S. 13–17
 			</app>
 		</letterTradition>
 
+			<letterTradition letter="8">
+			<app ref="1">
+August Stöber: Der Aktuar Salzmann, Goethe’s Freund und Tischgenosse in Strassburg. Frankfurt am Main 1855, S. 64–71
+			</app>
+		</letterTradition>
 
 	</traditions>
 </opus>
