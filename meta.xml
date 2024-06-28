@@ -143,6 +143,21 @@
 			<isDraft value="false" />
 		</letterDesc>
 
+							<letterDesc letter="10">
+			<date value="Fort Louis, 10. Juni 1772" />
+			<sort value="1772-06-10" />
+			<location ref="4" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="9" />
+			</receivers>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+
 
 	</descriptions>
 </opus>
