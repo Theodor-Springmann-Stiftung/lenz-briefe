@@ -41,8 +41,6 @@ opus/kommentare/kommcat/kommentar/subsection/lemma/titel    Titel eines Werkes
 opus/kommentare/kommcat/kommentar/eintrag  
 opus/kommentare/kommcat/kommentar/subsection/eintrag        Register(unter)eintrag
 ```
-- link 
-- wwwlink
 
 ### `descriptions`
 ```
