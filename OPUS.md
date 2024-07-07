@@ -150,7 +150,7 @@ opus/document/letterText/edit[@ref]                                         Verw
 ```
 
 ## Tags und Attribute zur Textformatierung und Links 
-Die folgenden Tags und Attribute sind in allen Dateien erlaubt und dienen der Textformatierung und der Verlinkung von Textstellen. Sie können in verschiedenen Kontexten vorkommen:
+Die folgenden Tags und Attribute sind in allen Dateien erlaubt und dienen der Textformatierung und der Verlinkung von Textstellen. Sie können in verschiedenen Kontexten vorkommen und, wo sinnvoll, beliebig verschachtelt vorkommen:
 ```
 opus/document/letterText/
 opus/edits/editreason/
@@ -183,13 +183,17 @@ note                    Anmerkung der Editor:innen
 nr                      Unentziffert
 sub                     Tiefgestellter Text
 super                   Hochgestellter Text
+ul                      Unterstrichener Text
+tul                     Dreifach unterstrichener Text
+```
+
+Tabellen:
+```
 tabs                    Tabellenkontext
 tabs/tab                Tabellenzelle
 tabs/tab[@value]        Position der Zelle in der Zeile als Bruch (z.B. 1-3 = 1/3, die Zelle beginnt also bei 1/3 der Zeilenbreite)
                         0-3 1-3 2-3 wären also drei gleich weite Zellen in einer Zeile, jeweils ein Drittel der Zeile weit.
                         0-6 3-6 5-6 wären drei Zellen, die 1/2, 1/4 und 1/6 der Zeilenbreite einnehmen.
-tul                     Dreifach unterstrichener Text
-ul                      Unterstrichener Text
 ```
 
 Semantische Auszeichnungen (zzt. Unbenutzt, dennoch getaggt, ausser `sal`):
