@@ -15,7 +15,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-			<letterDesc letter="2">
+		<letterDesc letter="2">
 			<date value="Tarwast (Tarvastu), 11. Oktober 1767" />
 			<sort value="1767-10-11" />
 			<location ref="2" />
@@ -30,8 +30,7 @@
 			<isDraft value="false" />
 		</letterDesc>
 
-		</letterDesc>
-			<letterDesc letter="3">
+		<letterDesc letter="3">
 			<date value="Tarwast (Tarvastu), 9. November 1767" />
 			<sort value="1767-11-09" />
 			<location ref="2" />
@@ -47,8 +46,7 @@
 			<isDraft value="false" />
 		</letterDesc>
 
-		</letterDesc>
-			<letterDesc letter="4">
+		<letterDesc letter="4">
 			<date value="Tarwast (Tarvastu), 24. November 1767" />
 			<sort value="1767-11-24" />
 			<location ref="2" />
@@ -64,14 +62,13 @@
 			<isDraft value="false" />
 		</letterDesc>
 
-	</letterDesc>
-			<letterDesc letter="5">
+		<letterDesc letter="5">
 			<date value="Tarwast (Tarvastu), nach 24. Januar 1768" />
 			<sort value="1767-11-24" notBefore="1767-11-24" />
 			<location ref="1" />
 			<senders>
 				<sender ref="1" />
-					<sender ref="7" />
+				<sender ref="7" />
 			</senders>
 			<receivers>
 				<receiver ref="3" />
@@ -97,7 +94,7 @@
 			<isDraft value="false" />
 		</letterDesc>
 
-			<letterDesc letter="7">
+		<letterDesc letter="7">
 			<date value="Dorpat (Tartu), wahrscheinlich Mitte 1770" />
 			<sort value="1770-06-15" notBefore="1770-06-01" notAfter="1770-07-01" />
 			<location ref="1" />
@@ -113,7 +110,7 @@
 			<isDraft value="true" />
 		</letterDesc>
 
-					<letterDesc letter="8">
+		<letterDesc letter="8">
 			<date value="Fort Louis, Ende Mai 1772" />
 			<sort value="1772-05-28" notBefore="1772-05-15" notAfter="1772-05-30" />
 			<location ref="4" />
@@ -128,7 +125,7 @@
 			<isDraft value="false" />
 		</letterDesc>
 
-							<letterDesc letter="9">
+		<letterDesc letter="9">
 			<date value="Fort Louis, 3. Juni 1772" />
 			<sort value="1772-06-02" />
 			<location ref="4" />
@@ -143,7 +140,7 @@
 			<isDraft value="false" />
 		</letterDesc>
 
-							<letterDesc letter="10">
+		<letterDesc letter="10">
 			<date value="Fort Louis, 10. Juni 1772" />
 			<sort value="1772-06-10" />
 			<location ref="4" />
