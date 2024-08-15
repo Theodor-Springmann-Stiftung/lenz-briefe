@@ -1,0 +1,35 @@
+{
+  "name": "eleventy-sane",
+  "version": "1.0.0",
+  "description": "Sane default template for 11ty. Breaks with 11ty's \"no-setup\" approach for a clearer folder structure.",
+  "main": "index.js",
+  "scripts": {
+    "build": "(npx postcss src/static/css/site.css -o src/static/css/output.css; npx @11ty/eleventy)",
+    "watch": "npx @11ty/eleventy --serve",
+    "css_watch": "npx postcss src/static/css/site.css -o src/static/css/output.css -w --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schnulller/eleventy-sane.git"
+  },
+  "keywords": [
+    "11ty",
+    "eleventy",
+    "template",
+    "defaults"
+  ],
+  "author": "Simon Martens",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schnulller/eleventy-sane/issues"
+  },
+  "homepage": "https://github.com/schnulller/eleventy-sane#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.5",
+    "postcss": "^8.4.41",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.10"
+  }
+}

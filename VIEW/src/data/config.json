@@ -1,0 +1,10 @@
+{
+    "title": "SITE DEFAULT TITLE",
+    "url": "URL",
+    "description": "Description used for SSO if template provides none.",
+    "keywords": "Keywords. Used for SSO.",
+    "image": "Default Image. Used for sharing on social media if no image is provided.",
+    "twitter": "@Twitter_Handle",
+    "card": "summary"
+  }
+  
