@@ -6,25 +6,25 @@
 			<personDef index="1" name="Jakob Michael Reinhold Lenz" ref="https://d-nb.info/gnd/118571656"
 				vorname="Jakob Michael Reinhold" nachname="Lenz" komm="lenz" />
 
-			<personDef index="2" name="Friedrich Konrad Gadebusch" ref="none"
+			<personDef index="2" name="Friedrich Konrad Gadebusch" 
 				vorname="Friedrich Konrad" nachname="Gadebusch" komm="gadebusch" />
 
-			<personDef index="3" name="Friedrich David Lenz" ref="none"
+			<personDef index="3" name="Friedrich David Lenz"
 				vorname="Friedrich David" nachname="Lenz" komm="fd-lenz" />
 
 			<personDef index="4" name="Christian David Lenz" ref="https://d-nb.info/gnd/12021363X"
 				vorname="Christian David" nachname="Lenz" komm="chd-lenz" />
 
-			<personDef index="5" name="Dorothea Lenz" ref="none"
+			<personDef index="5" name="Dorothea Lenz"
 				vorname="Dorothea" nachname="Lenz" komm="d-lenz" />
 
-			<personDef index="6" name="Christine Margarethe Lenz" ref="none"
+			<personDef index="6" name="Christine Margarethe Lenz" 
 				vorname="Christine Margarethe" nachname="Lenz" komm="chm-lenz" />
 
-			<personDef index="7" name="Obristin von Albedyll" ref="none"
+			<personDef index="7" name="Obristin von Albedyll"
 				vorname="NN" nachname="von Albedyl" komm="albedyll" />
 
-			<personDef index="8" name="Johann Christian Lenz" ref="none"
+			<personDef index="8" name="Johann Christian Lenz"
 				vorname="Johann Christian" nachname="Lenz" komm="jch-lenz" />
 
 			<personDef index="9" name="Johann Daniel Salzmann" ref="https://d-nb.info/gnd/116777265"
