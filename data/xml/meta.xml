@@ -6,7 +6,7 @@
 			<sort value="1765-01-02" />
 			<location ref="1" />
 			<senders>
-				<sender ref="1" />
+				<sender ref="1222" />
 			</senders>
 			<receivers>
 				<receiver ref="2" />
