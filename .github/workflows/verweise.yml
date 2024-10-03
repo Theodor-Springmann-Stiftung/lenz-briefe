@@ -25,4 +25,4 @@ jobs:
         pip install lxml
       
     - name: Verweise prüfen 
-      run: python Scripts/lint_verweise.py
+      run: python scripts/lint_verweise.py
