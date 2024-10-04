@@ -29,7 +29,130 @@
 
 			<personDef index="9" name="Johann Daniel Salzmann" ref="https://d-nb.info/gnd/116777265"
 				vorname="Johann Daniel" nachname="Salzmann " komm="salzmann" />
-
+			
+			<personDef index="10" name="Johann Caspar Lavater" ref="http://d-nb.info/gnd/118570293"
+				vorname="Johann Caspar" nachname="Lavater" komm="lavater" />
+			
+			<personDef index="11" name="Johann Gottfried Röderer" ref="http://d-nb.info/gnd/124456359"
+				vorname="Johann Gottfried" nachname="Röderer" komm="röderer" />
+			
+			<personDef index="12" name="Johann Wolfgang Goethe" ref="http://d-nb.info/gnd/118540238"
+				vorname="Johann Wolfgang" nachname="Goethe" komm="goethe" />
+			
+			<personDef index="13" name="Sophie von La Roche" ref="http://d-nb.info/gnd/118569767"
+				vorname="Sophie von" nachname="La Roche" komm="la roche" />
+			
+			<personDef index="14" name="Friedrich Wilhelm Gotter" ref="http://d-nb.info/gnd/118540939"
+				vorname="Friedrich Wilhelm" nachname="Gotter" komm="gotter" />
+			
+			<personDef index="15" name="Luise König"
+				vorname="Luise" nachname="König" komm="könig" />
+			
+			<personDef index="16" name="Karoline von Herder" ref="http://d-nb.info/gnd/118549561"
+				vorname="Karoline von" nachname="Herder" komm="herder" />
+			
+			<personDef index="17" name="Johann Gottfried von Herder" ref="http://d-nb.info/gnd/118549553"
+				vorname="Johann Gottfried von" nachname="Herder" komm="jg-herder" />
+			
+			<personDef index="18" name="Johann Georg Schlosser" ref="http://d-nb.info/gnd/118795163"
+				vorname="Johann Georg" nachname="Schlosser" komm="schlosser" />
+			
+			<personDef index="19" name="Heinrich Julius von Lindau" ref="http://d-nb.info/gnd/117014214"
+				vorname="Heinrich Julius von" nachname="Lindau" komm="lindau" />
+			
+			<personDef index="20" name="Heinrich Christian Boie" ref="http://d-nb.info/gnd/118661078"
+				vorname="Heinrich Christian" nachname="Boie" komm="boie" />
+			
+			<personDef index="21" name="Gottlieb Konrad Pfeffel" ref="http://d-nb.info/gnd/118740709"
+				vorname="Gottlieb Konrad" nachname="Pfeffel" komm="pfeffel" />
+			
+			<personDef index="22" name="Philipp Christoph Kayser" ref="http://d-nb.info/gnd/116090235"
+				vorname="Philipp Christoph" nachname="Kayser" komm="kayser" />
+			
+			<personDef index="23" name="Johann Konrad Pfenninger" ref="http://d-nb.info/gnd/104318112"
+				vorname="Johann Konrad" nachname="Pfenninger" komm="pfenninger" />
+			
+			<personDef index="24" name="Hieronymus Peter Schlosser" ref="http://d-nb.info/gnd/117330205"
+				vorname="Hieronymus Peter" nachname="Schlosser" komm="hp-schlosser" />
+			
+			<personDef index="25" name="Philipp Seidel" ref="http://d-nb.info/gnd/117463639"
+				vorname="Philipp" nachname="Seidel" komm="seidel" />
+			
+			<personDef index="26" name="Christoph Martin Wieland" ref="http://d-nb.info/gnd/118632477"
+				vorname="Christoph Martin" nachname="Wieland" komm="wieland" />
+			
+			<personDef index="27" name="Friedrich Leopold Graf Stolberg" ref="http://d-nb.info/gnd/1277071357"
+				vorname="Friedrich Leopold" nachname="Graf Stolberg" komm="graf stolberg" />
+			
+			<personDef index="28" name="Karl Ludwig von Knebel" ref="http://d-nb.info/gnd/118777505"
+				vorname="Karl Ludwig von" nachname="Knebel" komm="knebel" />
+			
+			<personDef index="29" name="Johann Heinrich Merck" ref=""
+				vorname="Johann Heinrich" nachname="Merck" komm="http://d-nb.info/gnd/118581015" />
+			
+			<personDef index="30" name="Friederike Hesse" ref="http://d-nb.info/gnd/143459023"
+				vorname="Friederike" nachname="Hesse" komm="hesse" />
+			
+			<personDef index="31" name="Christian Heinrich Schmid" ref="http://d-nb.info/gnd/116697105"
+				vorname="Christian Heinrich" nachname="Schmid" komm="schmid" />
+			
+			<personDef index="32" name="Henriette-Luise von Oberkirch geb. Waldner von Freundstein" ref="http://d-nb.info/gnd/124494692"
+				vorname="Henriette-Luise von" nachname="Oberkirch" komm="oberkirch" />
+			
+			<personDef index="33" name="Verlag Weidmanns Erben und Reich" ref="http://d-nb.info/gnd/6146596-3"
+				vorname="NN" nachname="NN" komm="weidmanns erben und reich" />
+			
+			<personDef index="34" name="Johann Friedrich Simon" ref="http://d-nb.info/gnd/1076372430"
+				vorname="Johann Friedrich" nachname="Simon" komm="simon" />
+			
+			<personDef index="35" name="Friedrich Müller (Maler Müller)"
+				vorname="Friedrich" nachname="Müller" komm="müller" />
+			
+			<personDef index="36" name="Johann August von Kalb" ref="http://d-nb.info/gnd/11602898X"
+				vorname="Johann August von" nachname="Kalb" komm="kalb" />
+			
+			<personDef index="37" name="Friedrich Hildebrand von Einsiedel" ref="http://d-nb.info/gnd/118681818"
+				vorname="Friedrich Hildebrand von" nachname="Einsiedel" komm="einsiedel" />
+			
+			<personDef index="38" name="Luise von Göchhausen"
+				vorname="Luise von" nachname="Göchhausen" komm="göchhausen" />
+			
+			<personDef index="39" name="Ramond de Carbonnières"
+				vorname="Ramond de" nachname="Carbonnières" komm="carbonnières" />
+			
+			<personDef index="40" name="Wilhelm Gottlieb Becker" ref="http://d-nb.info/gnd/115833706"
+				vorname="Wilhelm Gottlieb" nachname="Becker" komm="becker" />
+			
+			<personDef index="41" name="Charlotte von Stein" ref="http://d-nb.info/gnd/118617222"
+				vorname="Charlotte von" nachname="Stein" komm="stein" />
+			
+			<personDef index="42" name="Anna Marie Laudt"
+				vorname="Anna Marie" nachname="Laudt" komm="laudt" />
+			
+			<personDef index="43" name="Susanne Margareta Laudt"
+				vorname="Susanne Margareta" nachname="Laudt" komm="sm-laudt" />
+			
+			<personDef index="44" name="Marchand"
+				vorname="NN" nachname="Marchand" komm="marchand" />
+			
+			<personDef index="45" name="Johann Friedrich Wilhelm Christian Schenck" ref="http://d-nb.info/gnd/102948256X"
+				vorname="Johann Friedrich Wilhelm Christian" nachname="Schenck" komm="schenck" />
+			
+			<personDef index="46" name="Friedrich Maximilian Klinger" ref="http://d-nb.info/gnd/118563319"
+				vorname="Friedrich Maximilian" nachname="Klinger" komm="klinger" />
+			
+			<personDef index="47" name="Christian Wilhelm Gottlob von Wilkau"
+				vorname="Christian Wilhelm Gottlob von" nachname="Wilkau" komm="wilkau" />
+			
+			<personDef index="48" name="Friedrich Philipp Eisenberg" ref="http://d-nb.info/gnd/1157686966"
+				vorname="Friedrich Philipp" nachname="Eisenberg" komm="eisenberg" />
+			
+			<personDef index="49" name="Heinrich Jakob Lenz und dessen Bruder"
+				vorname="Heinrich Jakob" nachname="Lenz" komm="hj-lenz" />
+			
+			<personDef index="50" name="Isaak Haffner" ref="http://d-nb.info/gnd/116370238"
+				vorname="Isaak" nachname="Haffner" komm="haffner" />
+			
 		</personDefs>
 
 
