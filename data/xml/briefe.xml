@@ -642,11 +642,7 @@
 			ich habe aber mich recht sehr darin amusirt; denn ein Auge, womit ich ihn ansah, war poetisch
 			das andere verliebt. – Er läßt sein Leben für mich und ich für seine Tochter. </letterText>
 		
-		<letterText letter="11">
-			Fort Louis, d. 15ten Junius n. St.<line type="empty" />
-			
-			Mein theurester Vater! 
-			
+		<letterText letter="11"> Fort Louis, d. 15ten Junius n. St.<line type="empty" /> Mein theurester Vater! 
 			<line tab="1"/>Abermal muß ich eine Gelegenheit kahl aus meinen Händen lassen, mit der ich in Ihre Arme zu 
 			fliehen hoffte. Wenigstens soll mein Brief mitgehen, wenn ich mein Herz in denselben einschließen 
 			könnte, ich thät es mit Freuden. Ich schreibe jetzt unter den grausamsten Kopfschmerzen an Sie, die 
@@ -669,7 +665,7 @@
 			
 			<line tab="4"/>Und sage Gott, dir Gott allein vertrau ich 
 			
-			<line tab="4"/>Welch Glück, welch Glück kann größer seyn.<line type="empty"/> 
+			<line tab="4"/>Welch Glück, welch Glück kann größer seyn. <line type="empty"/> 
 			
 			<line tab="1"/>Nur daß keiner meiner Briefe zu Ihnen gelangt, daß Sie durch dieses Stillschweigen nicht allein 
 			an meinen Schicksalen, sondern auch an meinem Charakter irre werden; das kränket mich. Ich habe seit 
@@ -698,6 +694,31 @@
 			weiß, was für ein Gefäß er aus ihm machen will. – Ich falle Ihnen und meiner theuresten Mama mit 
 			den zärtlichsten Tränen in die Arme, als Ihr bis ins Grab gehorsamster und getreuester Sohn Jac. Mich.<line type="break"/> 
 			Reinh. Lenz.</letterText>
+		
+		<letterText ref="12"> Fort-Louis, den 28. Juni <line type="empty"/> Gütigster Herr Aktuarius!
+			<line tab="1"/>Ich habe einen empfindlichen Verlust gehabt, Herr Kleist hat mir Ihren und meines guten Ott’s Briefe 
+			recht sorgsam aufheben wollen und hat sie so verwahrt, daß er sie selbst nicht mehr wieder finden 
+			kann. Ich bin noch zu sehr von der Reise ermüdet, als daß ich Ihnen jetzt viel Vernünftiges schreiben 
+			könnte. Denn ich habe noch fast keine Minute gehabt, in der ich zu mir selbst hätte sagen können: 
+			nun ruhe ich. Eigene und fremde, vernünftige und leidenschaftliche, philosophische und poetische 
+			Sorgen und Geschäfte zerteilen mich. Mein Schlaf selber ist so kurz und unruhig, daß ich fast sagen 
+			möchte, ich wache des Nachts mit schlafenden Augen, so wie ich des Tages mit wachendem Auge 
+			schlafe. In Sesenheim bin ich gewesen. Ist es Trägheit oder Gewissensangst, die mir die Hand zu Blei 
+			macht, wenn ich Ihnen die kleinen Scenen abschildern will, in denen ich und eine andere Person, die 
+			einzigen Akteurs sind. Soviel versichere ich Ihnen, daß Ihre weisen Lehren bei mir gefruchtet haben 
+			und daß meinen Leidenschaft dieses Mal sich so ziemlich vernünftig aufgeführt. Doch ist und bleibt es 
+			noch immer Leidenschaft – nur das nenne ich an ihr vernünftig, wenn sie mich zu Hause geruhig 
+			meinen gewöhnlichen centrischen und excentrischen Geschäften nachhängen läßt, und das thut sie, 
+			das thut sie. Die beiden guten Landnymphen lassen Sie mit einem tiefen Knicks grüßen. – – Mein 
+			Trauerspiel (ich muß den gebräuchlichen Namen nennen) nähert sich mit jedem Tage der Zeitigung. 
+			Ich habe von einem Schriftsteller aus Deutschland eine Nachricht erhalten, die ich nicht mit vielem 
+			Golde bezahlen wollte. Er schreibt mir, mein Verleger, von dem ich, durch ihn, ein unreifes 
+			Manuscript zurück verlangte, habe ihm gesagt, es wäre schon an mich abgeschickt. Noch sehe ich 
+			nichts. Lieber aber ist mir dies, als ob mir einer einen Wechsel von 1000 Thalern zurückschenkte. 
+			Lesen Sie dieß andere Blatt in einer leeren Stunde. Unsere letzte Unterredung und die darauf 
+			folgende schlaflose Nacht, hat diese Gedanken veranlaßt. Schreiben Sie Ihr Urtheil drüber <line type="empty"/>
+			
+			Ihrem ergebensten Lenz.</letterText>
 
 	</document>
 </opus>
