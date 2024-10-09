@@ -155,6 +155,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 
-
+		<letterDesc letter="11">
+			<date value="Fort Louis, 15. Juni 1772" />
+			<sort value="1772-06-15" />
+			<location ref="4" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="4" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
