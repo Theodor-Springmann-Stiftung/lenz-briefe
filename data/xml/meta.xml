@@ -245,6 +245,21 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="17">
+			<date value="Weisenburg, 2. September und 2. Oktober 1772" />
+			<sort value="1772-09-02" />
+			<sort value="1772-10-02" />
+			<location ref="6" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="4" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 		
