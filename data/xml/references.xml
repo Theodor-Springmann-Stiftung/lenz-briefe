@@ -164,6 +164,59 @@
 			<locationDef index="3" name="Königsberg (Kaliningrad)" ref="https://d-nb.info/gnd/4031541-1" />
 
 			<locationDef index="4" name="Fort Louis" ref="https://d-nb.info/gnd/4762184-9" />
+			
+			<locationDef index="5" name="Landau" ref="" /><locationDef index="" name="" ref="http://d-nb.info/gnd/4034222-0" />
+			
+			<locationDef index="6" name="Weißenburg" ref="http://d-nb.info/gnd/4079134-8" />
+			
+			<locationDef index="7" name="Straßburg" ref="http://d-nb.info/gnd/4057878-1" />
+			
+			<locationDef index="8" name="Weimar" ref="http://d-nb.info/gnd/4065105-8" />
+			
+			<locationDef index="9" name="Kehl" ref="http://d-nb.info/gnd/4030137-0" />
+			
+			<locationDef index="10" name="Arensburg (Kuressaare)" ref="http://d-nb.info/gnd/4097908-8" />
+			
+			<locationDef index="11" name="Zürich" ref="http://d-nb.info/gnd/4068038-1" />
+			
+			<locationDef index="12" name="Emmendingen" ref="http://d-nb.info/gnd/4014586-4" />
+			
+			<locationDef index="13" name="Ulm" ref="http://d-nb.info/gnd/4061529-7" />
+			
+			<locationDef index="14" name="Berka" ref="http://d-nb.info/gnd/106464340X" />
+			
+			<locationDef index="15" name="Gotha" ref="http://d-nb.info/gnd/4021652-4" />
+			
+			<locationDef index="16" name="Göttingen" ref="http://d-nb.info/gnd/4021477-1" />
+			
+			<locationDef index="17" name="Kopenhagen" ref="http://d-nb.info/gnd/4032399-7" />
+			
+			<locationDef index="18" name="Kassel" ref="http://d-nb.info/gnd/4029869-3" />
+			
+			<locationDef index="19" name="Hannover" ref="http://d-nb.info/gnd/4023349-2" />
+			
+			<locationDef index="20" name="Darmstadt" ref="http://d-nb.info/gnd/4011077-1" />
+			
+			<locationDef index="21" name="Bückeburg" ref="http://d-nb.info/gnd/4008715-3" />
+			
+			<locationDef index="22" name="Gudensberg" ref="http://d-nb.info/gnd/4094205-3" />
+			
+			<locationDef index="23" name="Gießen" ref="http://d-nb.info/gnd/4020989-1" />
+			
+			<locationDef index="24" name="hinter Frankfurt" />
+			
+			<locationDef index="25" name="Dessau" ref="http://d-nb.info/gnd/4011536-7" />
+			
+			<locationDef index="26" name="Colmar" ref="http://d-nb.info/gnd/4010401-1" />
+			
+			<locationDef index="27" name="Leipzig" ref="http://d-nb.info/gnd/4035206-7" />
+			
+			<locationDef index="28" name="Hegi" ref="http://d-nb.info/gnd/4668899-7" />
+			
+			<locationDef index="29" name="Halle" ref="http://d-nb.info/gnd/4023025-9" />
+			
+			<locationDef index="30" name="Kochberg" />
+			
 		</locationDefs>
 		<appDefs>
 			<appDef index="-1" name="" category="Überlieferung &amp; Textkritik" />
