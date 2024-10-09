@@ -217,7 +217,7 @@
 		
 		<letterDesc letter="15">
 			<date value="Fort Louis, Mitte August 1772" />
-			<sort value="1772-08-12" />
+			<sort value="1772-08-15" />
 			<location ref="4" />
 			<senders>
 				<sender ref="1" />
@@ -229,6 +229,22 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
+		
+		<letterDesc letter="16">
+			<date value="Fort Louis, 31. August 1772" />
+			<sort value="1772-08-31" />
+			<location ref="4" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="9" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 		
 		
 		
