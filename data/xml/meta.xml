@@ -275,6 +275,22 @@
 				<isDraft value="false" />
 			</letterDesc>
 			
+			<letterDesc letter="19">
+				<date value="Landau, 18. September 1772" />
+				<sort value="1772-09-18" />
+				<location ref="5" />
+				<senders>
+					<sender ref="1" />
+				</senders>
+				<receivers>
+					<receiver ref="9" />
+				</receivers>
+				<hasOriginal value="true" />
+				<isProofread value="true" />
+				<isDraft value="false" />
+			</letterDesc>
+			
+			
 		</letterDesc>
 		
 		
