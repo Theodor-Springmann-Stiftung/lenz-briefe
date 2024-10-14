@@ -259,8 +259,8 @@
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
-			
-			<letterDesc letter="18">
+		</letterDesc>
+		<letterDesc letter="18">
 				<date value="Landau, 7. September 1772" />
 				<sort value="1772-09-07" />
 				<location ref="5" />
@@ -275,7 +275,7 @@
 				<isDraft value="false" />
 			</letterDesc>
 			
-			<letterDesc letter="19">
+		<letterDesc letter="19">
 				<date value="Landau, 18. September 1772" />
 				<sort value="1772-09-18" />
 				<location ref="5" />
@@ -288,9 +288,9 @@
 				<hasOriginal value="true" />
 				<isProofread value="true" />
 				<isDraft value="false" />
-			</letterDesc>
+		</letterDesc>
 			
-			<letterDesc letter="20">
+		<letterDesc letter="20">
 				<date value="Arensburg (Kuressaare), 24. September 1772" />
 				<sort value="1772-09-24" />
 				<location ref="10" />
@@ -303,9 +303,9 @@
 				<hasOriginal value="true" />
 				<isProofread value="true" />
 				<isDraft value="false" />
-			</letterDesc>
+		</letterDesc>
 			
-			<letterDesc letter="21">
+		<letterDesc letter="21">
 				<date value="Landau, Anfang Oktober 1772" />
 				<sort value="1772-10-05" />
 				<location ref="5" />
@@ -318,9 +318,9 @@
 				<hasOriginal value="true" />
 				<isProofread value="true" />
 				<isDraft value="false" />
-			</letterDesc>
+		</letterDesc>
 			
-			<letterDesc letter="22">
+		<letterDesc letter="22">
 				<date value="Landau, vor Mitte Oktober 1772" />
 				<sort value="1772-10-10" />
 				<location ref="5" />
@@ -333,13 +333,22 @@
 				<hasOriginal value="true" />
 				<isProofread value="true" />
 				<isDraft value="false" />
-			</letterDesc>
-			
-			
-			
 		</letterDesc>
-		
-		
+			
+		<letterDesc letter="23">
+			<date value="Landau, Mitte Oktober 1772" />
+			<sort value="1772-10-15" />
+			<location ref="5" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="9" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 	</descriptions>
 </opus>
