@@ -96,11 +96,11 @@
 			<personDef index="31" name="Christian Heinrich Schmid" ref="http://d-nb.info/gnd/116697105"
 				vorname="Christian Heinrich" nachname="Schmid" komm="schmid" />
 			
-			<personDef index="32" name="Henriette-Luise von Oberkirch geb. Waldner von Freundstein" ref="http://d-nb.info/gnd/124494692"
+			<personDef index="32" name="Henriette von Oberkirch geb. Waldner von Freundstein" ref="http://d-nb.info/gnd/124494692"
 				vorname="Henriette-Luise von" nachname="Oberkirch" komm="oberkirch" />
 			
 			<personDef index="33" name="Verlag Weidmanns Erben und Reich" ref="http://d-nb.info/gnd/6146596-3"
-				vorname="NN" nachname="NN" komm="weidmanns erben und reich" />
+				vorname="NN" nachname="NN" komm="verlag weidmanns erben und reich" />
 			
 			<personDef index="34" name="Johann Friedrich Simon" ref="http://d-nb.info/gnd/1076372430"
 				vorname="Johann Friedrich" nachname="Simon" komm="simon" />
@@ -183,7 +183,7 @@
 			
 			<locationDef index="13" name="Ulm" ref="http://d-nb.info/gnd/4061529-7" />
 			
-			<locationDef index="14" name="Berka" ref="http://d-nb.info/gnd/106464340X" />
+			<locationDef index="14" name="Berka" ref="http://d-nb.info/gnd/4087284-1" />
 			
 			<locationDef index="15" name="Gotha" ref="http://d-nb.info/gnd/4021652-4" />
 			
