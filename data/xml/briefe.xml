@@ -1176,8 +1176,8 @@
 			presentement a Fort Louis
 			P. Cond. 
 			
-			<hand> <note>nicht identifizierte Hand</note> 
-			Capitaine Lieutenant Salomon Bodmer in der Mühle zu Wölflingen im Canton Zürich.</hand></letterText>
+			<note>nicht identifizierte Hand</note> 
+			Capitaine Lieutenant Salomon Bodmer in der Mühle zu Wölflingen im Canton Zürich.<!-- "<hand>" benötigt zwingend eine Referenz. Wie kann dabei in dem Fall vorgegangen werden, wenn keine Hand identifiziert wurde? --></letterText>
 
 	</document>
 </opus>
