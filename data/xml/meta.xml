@@ -290,6 +290,22 @@
 				<isDraft value="false" />
 			</letterDesc>
 			
+			<letterDesc letter="20">
+				<date value="Arensburg (Kuressaare), 24. September 1772" />
+				<sort value="1772-09-24" />
+				<location ref="10" />
+				<senders>
+					<sender ref="8" />
+				</senders>
+				<receivers>
+					<receiver ref="1" />
+				</receivers>
+				<hasOriginal value="true" />
+				<isProofread value="true" />
+				<isDraft value="false" />
+			</letterDesc>
+			
+			
 			
 		</letterDesc>
 		
