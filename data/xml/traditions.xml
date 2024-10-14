@@ -143,6 +143,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="23">
+			<app ref="4">
+				August Stöber: Der Dichter Lenz und Friederike von Sesenheim. Basel 1842, S. 72–74
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
