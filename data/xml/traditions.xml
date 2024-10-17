@@ -155,6 +155,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="25">
+			<app ref="4">
+				August Stöber: : Der Aktuar Salzmann, Goethe’s Freund und Tischgenosse in Strassburg. Frankfurt am Main 1855, S. 71–77
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
