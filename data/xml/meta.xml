@@ -380,6 +380,21 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="26">
+			<date value="Landau, Ende Oktober 1772" />
+			<sort value="1772-10-31" />
+			<location ref="5" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="9" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 		
 	</descriptions>
 </opus>
