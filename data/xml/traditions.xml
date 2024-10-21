@@ -179,7 +179,11 @@
 			</app>
 		</letterTradition>
 		
-		
+		<letterTradition letter="29">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 19
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
