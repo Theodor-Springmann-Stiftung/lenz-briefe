@@ -205,5 +205,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="33">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 20
+			</app>
+		</letterTradition>
+		
+		
 	</traditions>
 </opus>

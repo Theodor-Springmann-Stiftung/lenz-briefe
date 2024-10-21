@@ -487,6 +487,23 @@
 			<isDraft value="true" />
 		</letterDesc>
 		
+		<letterDesc letter="33">
+			<date value="Straßburg, Anfang Juni 1774" />
+			<sort value="1774-06-01" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+				<sender ref="11" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
