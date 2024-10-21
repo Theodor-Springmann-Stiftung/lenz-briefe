@@ -503,7 +503,21 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
-		
+		<letterDesc letter="34">
+			<date value="Zürich, 11. Juni 1774" />
+			<sort value="1774-06-11" />
+			<location ref="11" />
+			<senders>
+				<sender ref="10" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+				<receiver ref="11" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 	</descriptions>
 </opus>
