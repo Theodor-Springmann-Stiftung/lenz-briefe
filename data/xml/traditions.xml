@@ -223,6 +223,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="36">
+			<app ref="4">
+				Freye/Stammler I, S. 75–77(Röderers Hand)/Zürich, Zentralbibliothek, RP 20, Nr. 21(Lenz’ Hand)
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
