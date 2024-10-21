@@ -229,6 +229,15 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="37">
+			<app ref="4">
+				Zürich, Zentralbibliothek, FA Lav. Ms. 16a, Abschrift des Lenz-Gedichts von Johann Caspar Lavater in 
+				seinem „Tagebuch einer Reise nach Bad Ems im Sommer 1774“, Heft X, [S. 10], unter dem Datum vom 
+				15. Juli 1774
+			</app>
+		</letterTradition>
+		
+		
 		
 		
 	</traditions>
