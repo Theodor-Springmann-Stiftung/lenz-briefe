@@ -395,6 +395,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="27">
+			<date value="Landau, 10. Dezember 1772" />
+			<sort value="1772-12-10" />
+			<location ref="5" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="4" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 	</descriptions>
 </opus>
