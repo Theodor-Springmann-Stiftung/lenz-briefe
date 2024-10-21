@@ -471,6 +471,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="32">
+			<date value="Zürich, Ende Mai 1774" />
+			<sort value="1774-05-31" />
+			<location ref="11" />
+			<senders>
+				<sender ref="10" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+				<receiver ref="11" />
+			</receivers>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="true" />
+		</letterDesc>
+		
 		
 	</descriptions>
 </opus>

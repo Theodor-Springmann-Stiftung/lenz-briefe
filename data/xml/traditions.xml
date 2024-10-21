@@ -197,8 +197,13 @@
 			</app>
 		</letterTradition>
 		
-		
-		
+		<letterTradition letter="32">
+			<app ref="4">
+				Zürich, Zentralbibliothek, FA Lav. Ms. 590. Anh. II, Exzerpte von zg. Hand aus Briefen von Johann 
+				Caspar Lavater an Johann Gottfried Röderer; S. 3–5 die Abschrift eines ungedruckten Briefs (Ende Mai 
+				1774), dessen Original verschollen ist
+			</app>
+		</letterTradition>
 		
 	</traditions>
 </opus>
