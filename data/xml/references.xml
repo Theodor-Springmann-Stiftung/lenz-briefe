@@ -4,7 +4,7 @@
 		<personDefs>
 			<personDef index="-1" name="Unbekannt" />
 			<personDef index="1" name="Jakob Michael Reinhold Lenz" ref="https://d-nb.info/gnd/118571656"
-				vorname="Jakob Michael Reinhold" nachname="Lenz" komm="lenz" />
+				vorname="Jakob Michael Reinhold" nachname="Lenz" komm="jmr-lenz" />
 
 			<personDef index="2" name="Friedrich Konrad Gadebusch" 
 				vorname="Friedrich Konrad" nachname="Gadebusch" komm="gadebusch" />
@@ -87,8 +87,8 @@
 			<personDef index="28" name="Karl Ludwig von Knebel" ref="http://d-nb.info/gnd/118777505"
 				vorname="Karl Ludwig von" nachname="Knebel" komm="knebel" />
 			
-			<personDef index="29" name="Johann Heinrich Merck" ref=""
-				vorname="Johann Heinrich" nachname="Merck" komm="http://d-nb.info/gnd/118581015" />
+			<personDef index="29" name="Johann Heinrich Merck" ref="http://d-nb.info/gnd/118581015"
+				vorname="Johann Heinrich" nachname="Merck" komm="merck" />
 			
 			<personDef index="30" name="Friederike Hesse" ref="http://d-nb.info/gnd/143459023"
 				vorname="Friederike" nachname="Hesse" komm="hesse" />
@@ -127,7 +127,7 @@
 				vorname="Charlotte von" nachname="Stein" komm="stein" />
 			
 			<personDef index="42" name="Anna Marie Laudt"
-				vorname="Anna Marie" nachname="Laudt" komm="laudt" />
+				vorname="Anna Marie" nachname="Laudt" komm="am-laudt" />
 			
 			<personDef index="43" name="Susanne Margareta Laudt"
 				vorname="Susanne Margareta" nachname="Laudt" komm="sm-laudt" />
