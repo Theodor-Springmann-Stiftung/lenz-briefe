@@ -776,6 +776,22 @@
 			<isDraft value="false" /> <!-- Handelt es sich hier um einen Entwurf? -->
 		</letterDesc>
 		
+		<letterDesc letter="52">
+			<date value="Straßburg, Wahrscheinlich Anfang Juni 1775" />
+			<sort value="1775-06-07" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="15" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
