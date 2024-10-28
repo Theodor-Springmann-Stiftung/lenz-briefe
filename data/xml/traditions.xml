@@ -261,6 +261,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="42">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 22
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
