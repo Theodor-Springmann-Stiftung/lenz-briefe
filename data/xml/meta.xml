@@ -671,6 +671,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="45">
+			<date value="Straßburg, Ende April 1775" />
+			<sort value="1775-04-30" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
