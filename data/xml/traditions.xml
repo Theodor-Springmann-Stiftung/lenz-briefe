@@ -309,6 +309,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="50">
+			<app ref="4">
+				Weimar, Goethe- und Schiller-Archiv, GSA 56/I,6,1, Bl. 2r–2v, zg. Abschrift
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
