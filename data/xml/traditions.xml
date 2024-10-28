@@ -249,6 +249,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="40">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Krakau, Lenziana 5, Nr. 11
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>

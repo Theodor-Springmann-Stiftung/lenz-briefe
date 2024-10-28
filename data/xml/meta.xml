@@ -596,6 +596,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="40">
+			<date value="Straßburg, 7. November 1774" />
+			<sort value="1774-11-04" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="8" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>
