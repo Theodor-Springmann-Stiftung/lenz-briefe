@@ -243,6 +243,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="39">
+			<app ref="4">
+				Zürich, Zentralbibliothek, FA Lav. Ms. 572, Nr. 19, Abschrift von Lavaters oder anderer zg. Hand
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
