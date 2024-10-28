@@ -656,6 +656,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="44">
+			<date value="Zürich, 20. April 1775" />
+			<sort value="1775-04-20" />
+			<location ref="11" />
+			<senders>
+				<sender ref="10" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>
