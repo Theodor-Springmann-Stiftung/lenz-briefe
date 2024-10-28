@@ -641,6 +641,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="43">
+			<date value="Zürich, 14. April 1775" />
+			<sort value="1775-04-14" />
+			<location ref="11" />
+			<senders>
+				<sender ref="10" />
+			</senders>
+			<receivers>
+				<receiver ref="11" />
+			</receivers>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
