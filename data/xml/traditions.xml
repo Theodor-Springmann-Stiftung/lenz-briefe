@@ -255,6 +255,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="41">
+			<app ref="4">
+				Berlin, Staatsbibliothek zu Berlin – Preußischer Kulturbesitz, NL Lenz, Bd. 2, (Nr. 193), Bl. 10–11
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
