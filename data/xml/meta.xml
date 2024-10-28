@@ -701,6 +701,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="47">
+			<date value="Emmeningen, Anfang Mai 1775" />
+			<sort value="1775-05-03" />
+			<location ref="12" />
+			<senders>
+				<sender ref="18" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
