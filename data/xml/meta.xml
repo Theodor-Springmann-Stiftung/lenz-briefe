@@ -686,6 +686,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="46">
+			<date value="Straßburg, 1. Mai 1775" />
+			<sort value="1775-05-01" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="13" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>
