@@ -297,6 +297,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="48">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 6
+			</app>
+		</letterTradition>
+		
+		
 		
 		
 	</traditions>
