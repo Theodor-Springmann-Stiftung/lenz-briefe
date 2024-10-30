@@ -806,6 +806,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="54"> <!-- Französischer Brief -->
+			<date value="Straßburg, Wahrscheinlich Juni 1775" />
+			<sort value="1775-06-20" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="12" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
