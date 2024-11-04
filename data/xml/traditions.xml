@@ -405,6 +405,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="65">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 23
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>

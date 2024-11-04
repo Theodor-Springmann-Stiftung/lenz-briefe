@@ -973,6 +973,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="65">
+			<date value="Straßburg, 3. September 1775" />
+			<sort value="1775-09-03" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
