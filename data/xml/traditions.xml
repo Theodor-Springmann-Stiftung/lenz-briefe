@@ -393,6 +393,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="63">
+			<app ref="4">
+				Weimar, Goethe- und Schiller-Archiv, GSA 56/I,6,1, Bl. 3v–5r, zg. Abschrift
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
