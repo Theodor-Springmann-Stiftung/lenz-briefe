@@ -381,6 +381,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="61">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 3
+			</app>
+		</letterTradition>
+		
+		
 		
 		
 	</traditions>
