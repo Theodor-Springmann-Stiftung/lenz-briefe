@@ -2062,7 +2062,7 @@
 			euren verbergen. Laßt mich eure Küsse euch zubringen und indem ich so euch beyde zwischen meine 
 			Arme an mein Herz drücke und Gott um Unsterblichkeit bitte für euch – so schickt eure warmen 
 			brüderlichen Seufzer auch für mich empor, daß auch mir es so gut werde – oder wenn ich dies Glück 
-			nicht verdiene daß ich müd von des Tages Hitze einst am Abend ⟨meines Lebens⟩ <!-- Was bedeutet ⟨⟩ ? --> in euren Armen 
+			nicht verdiene daß ich müd von des Tages Hitze einst am Abend <insertion pos="left">meines Lebens</insertion> in euren Armen 
 			ausruhe und sterbe. Ich behalte mir den Platz aus mein Bruder! willigen Sie drin meine Schwester? So 
 			seegne sie Gott für den guten Willen Amen. 
 			<align pos="right">Jakob Michael Reinhold Lenz.</align></letterText>
@@ -2157,7 +2157,7 @@
 			<line tab="5"/>Reißt – und macht mir die Erde zum Himmel! <line type="empty"/>
 			
 			<page index="4"/>
-			<tabs><note>linke Spalte</note><!-- Wie kann ich bei der Tabellendarstellung vorgehen? -->
+			<note>linke Spalte</note><!-- Wie kann ich bei der Tabellendarstellung vorgehen? -->
 			<line tab="1"/>Hier mein Bruder ein Brief den ich Dir schicken muß, warm wie er aus dem Herzen kommt. Dich wird 
 			das Porto nicht dauern lieber obschon kein Geschäft darinnen ist außer eine Commission von Hafner 
 			der mich lange gebethen hat. Ist doch uns kein höher Glück auf der Erde gegönnt als uns zu 
@@ -2168,7 +2168,7 @@
 			Schmieralien gesprochen – nun laß mich wieder ausgehen von dem kleinen Dreckhauffen Ich und 
 			Dich – finden <line type="break"/> <line type="empty"/>
 			<align pos="right">Lenz</align>
-			<note>rechte Spalte</note><!-- Wie kann ich bei der Tabellendarstellung vorgehen? -->
+			<note>rechte Spalte</note>
 			<line tab="1"/>Ich habe viel in der Societät zu überwinden, auf einer Seite ists Unglauben, Zerrüttetheit, vagues 
 			Geschnarch von Bellitteratur wo nichts dahinter ist als Nesselblüthen: auf der andern steife leise 
 			Schneckenmoralphilosophie die ihren grosmütterlichen Gang fortkriecht, daß ich oft drüber die Geduld 
@@ -2177,7 +2177,7 @@
 			ist, die Erfolge wird die Zeit lehren. Und nun stürm ich mit Ossians Helden hinein das alte Erdengefühl 
 			in ihnen aufzuwecken, das ganz in französische <aq>Liqueurs evaporirt</aq> war. Daß wirs ausführen können was 
 			ich mit ganzer Seele strebe, auf Heid und Hügel Deine Helden wieder 
-			naturalisiren.</tabs>
+			naturalisiren.
 				<align pos="center">Addio –</align></letterText>
 		
 		<letterText letter="42"><align pos="right">D 8ten Aprill 1775.</align> <line type="empty"/>
@@ -2764,6 +2764,10 @@
 			freilich viel von mir weiß. Was könnt’ ich nicht in dem Fall! Rosalia!– Erlauben Sie mir diesen Namen! – 
 			Seyn Sie so gütig, und fahren fort. Ach welchen Tag, welche Sonne Sie in diesem 
 			Herzen ausbreiten. – Rosalia!</letterText>
+		
+		<letterText letter="54"><!-- französischer Brief --></letterText>
+		
+		
 
 	</document>
 </opus>
