@@ -1003,6 +1003,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="67">
+			<date value="Tartu, September 1775" />
+			<sort value="1775-09-14" />
+			<location ref="1" />
+			<senders>
+				<sender ref="5" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
