@@ -853,6 +853,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="57">
+			<date value="Straßburg, Juli 1775" />
+			<sort value="1775-07-17" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="13" />
+			</receivers>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
