@@ -821,6 +821,23 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="55">
+			<date value="Straßburg, 13. Juli 1775" />
+			<sort value="1775-07-13" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+				<sender ref="15" />
+			</senders>
+			<receivers>
+				<receiver ref="16" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 		
 	</descriptions>
