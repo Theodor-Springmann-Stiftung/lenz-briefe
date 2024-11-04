@@ -2814,6 +2814,16 @@
 			mein schon eine halbe Stunde auf dem hohen Münsterthurm. <line type="empty"/>
 			
 			Lenz.</letterText>
+		
+		<letterText letter="56"><note>Katalogstext</note>
+			<line tab="1"/>Lenz empfiehlt Lindau die Nachbarschaft Lavaters auszunutzen, er erwähnt Goethe u. Schlosser, 
+			Goethes Schwager, die grüßen lassen, u. spricht von einer weiten Reise, die er vielleicht Ende des 
+			Winters vornehmen wird. <line type="empty"/>
+			
+			<note>Nachschrift Lavaters</note><hand ref="10">
+			<line tab="1"/>Zwei Dinge sind unter der Sonne, die du zu meiden hast – allzustille Einsamkeit u. 
+			allzulautes Geräusch – dass du in jener nicht dich selbst, in anderer nicht andre versehrest. d. 29. Jul. 75.</hand>
+		</letterText>
 
 	</document>
 </opus>
