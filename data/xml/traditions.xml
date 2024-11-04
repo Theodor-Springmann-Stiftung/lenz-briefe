@@ -367,6 +367,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="59">
+			<app ref="4">
+				Aus Herders Nachlaß: ungedruckte Briefe von Herder und dessen Gattin, Goethe, Schiller, Klopstock, 
+				Lenz, Jean Paul, Claudius, Lavater, Jacobi und andern bedeutenden Zeitgenossen. Band 1, Goethe, 
+				Schiller, Klopstock, Lenz, Jean Paul, Claudius, hrsg. von Heinrich Düntzer. Frankfurt am Main 1856, S. 225
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
