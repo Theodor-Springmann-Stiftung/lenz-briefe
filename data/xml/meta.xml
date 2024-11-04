@@ -1018,6 +1018,21 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="68">
+			<date value="Straßburg, September 1775" />
+			<sort value="1775-09-15" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="13" />
+			</receivers>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 		
 		
 	</descriptions>
