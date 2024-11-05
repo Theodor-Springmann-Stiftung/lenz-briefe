@@ -1108,6 +1108,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="74">
+			<date value="Kehl, 2. Oktober 1775" />
+			<sort value="1775-10-2" />
+			<location ref="9" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="20" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 		
