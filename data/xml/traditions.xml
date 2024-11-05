@@ -448,6 +448,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="72">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 15
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>

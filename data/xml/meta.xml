@@ -1078,6 +1078,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="72">
+			<date value="Straßburg, Ende September 1775" />
+			<sort value="1775-09-30" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
