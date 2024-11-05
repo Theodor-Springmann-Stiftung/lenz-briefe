@@ -468,6 +468,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="75">
+			<app ref="4">
+				Zürich, Zentralbibliothek, FA Lav. Ms. 572, Nr. 22, zg. Abschrift
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>

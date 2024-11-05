@@ -1123,6 +1123,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="75">
+			<date value="Zürich, Oktober 1775" />
+			<sort value="1775-10-05" />
+			<location ref="11" />
+			<senders>
+				<sender ref="10" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 		
 	</descriptions>
