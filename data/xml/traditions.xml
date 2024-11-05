@@ -481,6 +481,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="77">
+			<app ref="4">
+				Frankfurt/Main, Freies Deutsches Hochstift, Nr. 2467
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
