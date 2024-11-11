@@ -1183,6 +1183,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="79">
+			<date value="Ulm, 13. November 1775" />
+			<sort value="1775-11-13" />
+			<location ref="13" />
+			<senders>
+				<sender ref="22" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>
