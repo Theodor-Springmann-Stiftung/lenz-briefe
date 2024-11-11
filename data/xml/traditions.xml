@@ -499,6 +499,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="80">
+			<app ref="4">
+				Deutsches Museum 1777, Leipzig, 1. Bd., S. 283
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>

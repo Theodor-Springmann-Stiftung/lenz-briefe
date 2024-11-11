@@ -3609,8 +3609,14 @@
 			<align pos="right"><aq>Kaiser.</aq></align> <line type="empty"/>
 			<line type="empty"/>
 			
-			Hab Ordre von Klingern Dir ein Drama zu senden. Kommt nächstens. Lebe wohl Lieber!
-		</letterText>
+			Hab Ordre von Klingern Dir ein Drama zu senden. Kommt nächstens. Lebe wohl Lieber!</letterText>
+		
+		<letterText letter="80">Den 15ten Nov. 1775.<line type="break"/>
+			<line tab="1"/>….. Deutschland wird in wenigen Jahren erstaunliche, unglaubliche Revolutionen in Litteratur, 
+			Geschmack, Religion u.s. f. erfahren. Ich weis, daß in fünf Jahren, denke dran 1780, wenn ich vielleicht 
+			nicht mehr bin, Deutschland alle Nationen um sich her und alle Zeitalter vor sich verdunkeln und 
+			überfliegen wird. Dieß ist nicht Weissagung, oder Gesicht des Propheten; es ist Vermutung, auf Data 
+			gegründet, die wenige wissen. ……. <!-- Handelt es sich hier um eine horizontale Linie? --></letterText>
 
 	</document>
 </opus>
