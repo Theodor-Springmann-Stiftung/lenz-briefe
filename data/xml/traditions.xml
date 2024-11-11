@@ -553,6 +553,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="89">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 4
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
