@@ -3549,6 +3549,35 @@
 			
 			<note>linke Spalte</note>
 			Dem jungen kühnen Maler in <ul>Mannheim.</ul></letterText>
+		
+		<letterText letter="78"><line tab="1"/>Ich danke Ihnen für Ihre Freundschaft und Ihr Andenken. Mein Schicksal ist jetzt ein wenig hart. Ich 
+			gebe vom Morgen bis in die Nacht Informationen und habe Schulden. Alles was ich mit Schweiß 
+			erwerbe fällt in einen Brunnen, der fast keinen Boden mehr zu haben scheint. Mein Glück in meinem 
+			Vaterlande ist verdorben, weil es bekannt ist, daß ich Komödien geschrieben. <line type="empty"/>
+			
+			<line tab="1"/>Sehen Sie dies offenherzige Gemählde meines Zustandes als einen Beweiß meiner Freundschaft an 
+			und gehn behutsam damit an. Sie haben kein Herz, das eines unglücklichen Freundes Vertrauen zu 
+			mißbrauchen, achzehnjährhundrigt genug seyn könnte. Ich habe in der That ein kleines Stück in 
+			meinem Schrank liegen das allenfalls auch spielbar seyn würde. Fragen Sie Herrn Sei<del>del</del>ler, 
+			ob er mir sechs sieben Dukaten dafür geben möchte, ich bin nie gewohnt gewesen, meine Sachen 
+			zu verkauffen, die höchste Noth zwingt mich dazu. <line type="empty"/>
+			
+			<line tab="1"/>Doch hoff ich Herrn <del>Seidel</del> Seiler wird der Kauf nicht reuen. Es ist eine Nachahmung der <aq>captivei</aq> im 
+			Plautus. Noch einmal Gotter – Verschwiegenheit. So umarmet Sie <line type="empty"/>
+			
+			<align pos="right">Lenz.</align> <line type="break"/>
+			<align pos="center">Strasb. d. 23ten 8br. 1775.</align> <line type="empty"/>
+			
+			<sidenote pos="left" page="1" annotation="am linken Rand, vertikal">
+			Sie machen, höre ich, eine Sammlung von Ihren Gedichten. Das wird mich freuen. Auf Subskribenten 
+			könnten Sie hier zählen. Geben Sie mir allenfalls Nachricht davon. <line type="empty"/></sidenote>
+			
+			<page index="4"/> <!-- Handelt es sich hier um Seite 4? Zuvor wurden keine weiteren Seiten genannt -->
+			<note>Adresse</note>
+			Herrn<line type="break"/>
+			Herrn <ul>Gotter</ul><line type="break"/>
+			Archivarius<line type="break"/> 
+			in <ul>Gotha.</ul></letterText>
 
 	</document>
 </opus>
