@@ -541,6 +541,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="87">
+			<app ref="4">
+				Berlin, Staatsbibliothek zu Berlin – Preußischer Kulturbesitz, NL Lenz, Bd. 2, (Nr. 233), Bl. 60
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
