@@ -1170,10 +1170,10 @@
 			
 			<page index="4"/>
 			<note>Adresse</note>
-			A Monsieur
-			Monsieur J. M. R. Lenz.
-			Kandidat der Theologie, 
-			presentement a Fort Louis
+			A Monsieur <line type="break"/>
+			Monsieur J. M. R. Lenz. <line type="break"/>
+			Kandidat der Theologie, <line type="break"/>
+			presentement a Fort Louis <line type="break"/>
 			P. Cond. 
 			
 			<note>nicht identifizierte Hand</note> 
@@ -1328,7 +1328,7 @@
 			spartanischen Ephori an ihre Feldherrn schickten, die an einen gemeinschaftlichen Stab mußten 
 			gewickelt werden, wenn man sie lesen wollte.
 			Ich bin bis ins Grab<line type="break"/>
-			Ihr<line type="empty"/>
+			Ihr<line type="break"/>
 			Lenz.</letterText>
 		
 		<letterText letter="24">Mein – – <line type="empty"/> 
@@ -1643,8 +1643,8 @@
 			<page index="2"/>
 			Das ist gelallt. Uebersetzen Sie es in Männersprache. <line type="empty"/>
 			
-			Ich küsse Ihnen die Hand für den Februar und bitte um weiters. 
-			Adieu Adieu <line type="empty"/><line type="break"/>
+			Ich küsse Ihnen die Hand für den Februar und bitte um weiters. <line type="break"/>
+			Adieu Adieu <line type="empty"/>
 			
 			<align pos="right">JMR Lenz</align></letterText>
 		
@@ -1652,9 +1652,9 @@
 			April ist nich nicht gemacht. – Habt ihr <aq>Herders älteste Urkunde des Menschengeschlechts</aq>, so lest 
 			miteinander, und sättigt Euch, und wärmt euch an der Morgensonne.
 			Ach! daß er mir – mein tiefster Wunsch – so gut würde, dieß Jahr Euch auch nur eine Stunde zu sehn – 
-			Lebet und leidet, und liebt! – <line type="empty"/> <line type="break"/>
+			Lebet und leidet, und liebt! – <line type="empty"/> 
 			
-			L.
+			L.<line type="break"/>
 			Den 22. April 74.</letterText>
 		
 		<letterText letter="31"><line tab="1"/>O ihr gute Kinder – nicht <ul>meine</ul> – Gottes!! Kinder, denn wir alle sind <ul>Brüder</ul>, – wie gewinn’ ich euch so 
@@ -1763,8 +1763,8 @@
 			
 			<page index="4"/>
 			<note>Adresse</note>
-			An Herrn
-			Herrn Diaconus Lavater
+			An Herrn <line type="break"/>
+			Herrn Diaconus Lavater<line type="break"/>
 			zu Zürich</letterText>
 		
 		<letterText letter="34"><line tab="1"/>Morgen also, Sonntags den 12. und nicht Montags vereis ich auf Basel – bin ich nicht wenn ihr 
@@ -1812,7 +1812,7 @@
 			Bekommt am <note>Planetensymbol für Mittwoch</note> Ihr Billet in einem von Lenz und ein Paar Worte von mir 
 			laufen mit. Ihnen aber blick ich nach und bin <line type="break"/>
 			O mein Theuerster! <line type="break"/>
-			Ihr Röderer.
+			Ihr Röderer.<line type="break"/>
 			Straßburg d. 18. Junius 74.
 			
 			Physiognomik lehrt – Gott von Angesicht zu Angesicht schauen. Gott und Natur effervesciren mit 
@@ -1845,7 +1845,7 @@
 			Lies Röderers Gedanken und schreib ihm zurück drüber Meine Hausleute wollten ihren Augen nicht 
 			trauen daß Du sie grüßtest und danken mit Tränen u. Enthusiasmus. Mit Tränen haben manche Deine 
 			Klage wider den Landvogt schon angehört und Dich geseegnet.
-			Fleuch fort fleuch auf Deinem Wagen Lavater! und laß Dich von niemand überholen. 
+			Fleuch fort fleuch auf Deinem Wagen Lavater! und laß Dich von niemand überholen. <line type="break"/>
 			<align pos="right">Lenz</align> 
 			
 			<sidenote pos="top" page="1" annotation="am oberen Rand, horizontal gespiegelt">
@@ -1975,8 +1975,8 @@
 			gütigst verschont werde. Gott wird’s denen, die aus Liebe zu mir, mir diese Gefälligkeit 
 			erzeigen, gewiß nicht unvergolten lassen. <line type="empty"/>
 			
-			Zürich,
-			den 1. des Herbstmonats. 1774. 
+			Zürich,<line type="break"/>
+			den 1. des Herbstmonats. 1774. <line type="break"/>
 			<aq>Johann Caspar Lavater.</aq> <line type="empty"/>
 			
 			<note>Lavaters oder andere zg. Hand</note>
@@ -2064,7 +2064,7 @@
 			brüderlichen Seufzer auch für mich empor, daß auch mir es so gut werde – oder wenn ich dies Glück 
 			nicht verdiene daß ich müd von des Tages Hitze einst am Abend <insertion pos="left">meines Lebens</insertion> in euren Armen 
 			ausruhe und sterbe. Ich behalte mir den Platz aus mein Bruder! willigen Sie drin meine Schwester? So 
-			seegne sie Gott für den guten Willen Amen. 
+			seegne sie Gott für den guten Willen Amen. <line type="break"/>
 			<align pos="right">Jakob Michael Reinhold Lenz.</align></letterText>
 		
 		<letterText letter="41"><line tab="6"/>NachtSchwärmerey <line type="empty"/>
@@ -2177,8 +2177,8 @@
 			ist, die Erfolge wird die Zeit lehren. Und nun stürm ich mit Ossians Helden hinein das alte Erdengefühl 
 			in ihnen aufzuwecken, das ganz in französische <aq>Liqueurs evaporirt</aq> war. Daß wirs ausführen können was 
 			ich mit ganzer Seele strebe, auf Heid und Hügel Deine Helden wieder 
-			naturalisiren.
-				<align pos="center">Addio –</align></letterText>
+			naturalisiren. <line type="break"/>
+			<align pos="center">Addio –</align></letterText>
 		
 		<letterText letter="42"><align pos="right">D 8ten Aprill 1775.</align> <line type="empty"/>
 			
@@ -2599,7 +2599,7 @@
 			
 			<page index="4"/>
 			<note>Adresse</note> 
-			An Lavatern. 
+			An Lavatern. <line type="break"/>
 			in Zürich.</letterText>
 		
 		<letterText letter="49"><align pos="right">Strasb. den 10ten May 1775.</align> <line type="empty"/>
@@ -2869,7 +2869,7 @@
 			
 			Itzt mach ich ein Drama <it>Abraham</it> zurecht <line type="empty"/>
 			
-			adieu 
+			adieu <line type="break"/>
 			Lavater.</letterText>
 		
 		<letterText letter="59"><line tab="1"/>Hier, Hierophant! in Deinen heiligen Händen das Stück, das mein halbes Dasein mitnimmt. Es ist wahr 
@@ -3210,17 +3210,17 @@
 			scheuen zu ruffen? Wir uns irre machen lassen – Lavater, wenn sie nicht gedruckt werden, so hab ich 
 			kein Theil an Dir. In eine Wüsteney will ich gehn zweiffelhaft über wen ich seufzen soll. <line type="empty"/>
 			
-			Gute Nacht! Wie süß werde ich träumen! wie leicht morgen an meinen Frohndienst gehn 
-			<align pos="center">Donnerstags. 1775</align>
+			Gute Nacht! Wie süß werde ich träumen! wie leicht morgen an meinen Frohndienst gehn<line type="break"/> 
+			<align pos="center">Donnerstags. 1775</align><line type="break"/>
 			<align pos="right">J M. R. Lenz.</align> <line type="empty"/>
 			
 			<page index="4"/>
 			<note>Adresse</note>
-			Herrn 
-			Herrn Johann Caspar
-			<ul>Lavater,</ul> Pfarrer 
-			am Waysenhause 
-			in 
+			Herrn <line type="break"/>
+			Herrn Johann Caspar<line type="break"/>
+			<ul>Lavater,</ul> Pfarrer <line type="break"/>
+			am Waysenhause <line type="break"/>
+			in <line type="break"/>
 			<ul>Zürich.</ul></letterText>
 		
 		<letterText letter="67">Mein allerliebster Jacob
@@ -3242,8 +3242,8 @@
 			Brücke sind alle abgebrant. es ist alles wüste Die Frau Oberst Albedill ist noch in Curland, sie 
 			hat ihre älste Freilen Tochter, als Hoff Freilein bei der Alten Herzogin, hingebracht, wir warten 
 			sie täglig zurück. Ubrigens Grüße und Küsse ich Dich Zährtlig mein liebes Kind. Gott segne Dich und 
-			leite Dich auff seinen wegen. Verbleibe 
-			<align pos="right">Deine Zärtliche Mutter 
+			leite Dich auff seinen wegen. Verbleibe<line type="break"/> 
+			<align pos="right">Deine Zärtliche Mutter <line type="break"/>
 			<it>Dorothea Lenz</it></align></letterText>
 		
 		<letterText letter="68"><line tab="1"/>– – Indessen deucht mich, ist doch die Natur der meisten Leidenschaften gewöhnlicher Seelen, nur 
@@ -3291,7 +3291,7 @@
 			habe sie Dir schon seit acht Wochen unterm <aq>Couvert</aq> der Jungfer König über Darmstadt zugeschickt, 
 			wie das Pandemonium: es ist mein <ul>einzig Manuskript</ul> und wenn es verloren ist, so ist mein Leben mit 
 			verloren. Reiß mich aus diesem quälenden Zweiffel durch eine kleine Erkundigung bey Herrn Geh. 
-			Rath Heß und durch die geschwindeste Antwort, nur in zwey Zeilen. 
+			Rath Heß und durch die geschwindeste Antwort, nur in zwey Zeilen. <line type="break"/>
 			<align pos="right">Lenz.</align> <line type="empty"/>
 			
 			<line tab="1"/>Ich darf in dieser Gemüthslage keinen Menschen grüssen lassen. Ich rase nicht. In guter Prosa: Die 
@@ -3303,9 +3303,9 @@
 			
 			<page index="2"/>
 			<note>Adresse</note>
-			Herrn
-			Herrn Herder
-			Consistorialrath
+			Herrn<line type="break"/>
+			Herrn Herder<line type="break"/>
+			Consistorialrath<line type="break"/>
 			in Bückeburg</letterText>
 		
 		<letterText letter="70"><line tab="1"/>Hier ein Briefchen von Herder Lavater! Er ist gebeugt #. Gott zögert hinter der Wolke. Wenn wird er 
@@ -3344,7 +3344,7 @@
 			wird Freund werden . Ach ich darf nicht mehr schreiben, mein Herz schilt mich schon itzt. Aber gieb 
 			Deiner Frau einen Kuß wenn sie Dir die Soldaten gelesen hat. Unsere Seelen sind wahre 
 			Schwesterseelen. Und ich zittre vor Euer beyder erstem Anblick. Dann wird kein Wort gesprochen, 
-			keine Lippe muß das entheiligen. 
+			keine Lippe muß das entheiligen. <line type="break"/>
 			<align pos="right">J M R Lenz.</align>
 			
 			<page index="2"/>
