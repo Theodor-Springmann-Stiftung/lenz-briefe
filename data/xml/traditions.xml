@@ -577,6 +577,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="93">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 14
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>

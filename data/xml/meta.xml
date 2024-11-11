@@ -1395,6 +1395,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="93">
+			<date value="Gotha, 2. Januar 1776" />
+			<sort value="1776-01-02" />
+			<location ref="15" />
+			<senders>
+				<sender ref="14" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>
