@@ -523,6 +523,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="84">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 2
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
