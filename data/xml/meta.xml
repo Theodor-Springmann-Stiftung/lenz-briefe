@@ -1380,6 +1380,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="92">
+			<date value="Straßburg, 28. Dezember 1775" />
+			<sort value="1775-12-28" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="13" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
