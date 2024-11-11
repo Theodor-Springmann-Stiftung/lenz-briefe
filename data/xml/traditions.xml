@@ -505,6 +505,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="81">
+			<app ref="4">
+				Weimar, Goethe- und Schiller-Archiv, GSA 44/69, Bl. 6–7
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
