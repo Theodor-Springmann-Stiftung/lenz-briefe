@@ -565,6 +565,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="91">
+			<app ref="4">
+				Düsseldorf, Goethe-Museum, NW 992/1967
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
