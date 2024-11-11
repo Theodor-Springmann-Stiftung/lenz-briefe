@@ -511,6 +511,18 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="82">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 12, Abschrift (18. Jh.)
+			</app>
+		</letterTradition>
+		
+		<letterTradition letter="83">
+			<app ref="4">
+				Weimar, Goethe- und Schiller-Archiv, GSA 44/69, Bl. 8
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>

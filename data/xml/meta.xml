@@ -1243,6 +1243,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="83">
+			<date value="Straßburg, 20. November 1775" />
+			<sort value="1775-11-20" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="17" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>
