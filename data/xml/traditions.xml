@@ -559,6 +559,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="90">
+			<app ref="4">
+				Weimar, Goethe- und Schiller-Archiv, GSA 44/69, Bl. 9
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
