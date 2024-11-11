@@ -547,6 +547,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="88">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 3
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
