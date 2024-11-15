@@ -1455,6 +1455,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="97">
+			<date value="Emmendingen , 13. Januar 1776" />
+			<sort value="1776-01-13" />
+			<location ref="12" />
+			<senders>
+				<sender ref="18" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>
