@@ -1440,6 +1440,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="96">
+			<date value="Göttingen, 10. Januar 1776" />
+			<sort value="1776-01-10" />
+			<location ref="16" />
+			<senders>
+				<sender ref="20" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 		
