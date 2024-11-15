@@ -1412,7 +1412,7 @@
 		
 		<letterDesc letter="94">
 			<date value="Straßburg, 2. Januar 1776" />
-			<sort value="1776-02-1" />
+			<sort value="1776-01-02" />
 			<location ref="7" />
 			<senders>
 				<sender ref="1" />
@@ -1424,6 +1424,22 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
+		
+		<letterDesc letter="95">
+			<date value="Zürich, Januar 1776" />
+			<sort value="1776-01-09" />
+			<location ref="11" />
+			<senders>
+				<sender ref="22" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 		
 		
 		
