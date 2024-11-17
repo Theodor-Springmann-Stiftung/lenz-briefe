@@ -607,6 +607,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="98">
+			<app ref="4">
+				August Stöber: Johann Gottfried Röderer, von Straßburg, und seine Freunde. Colmar 1874, S. 93
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>

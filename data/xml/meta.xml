@@ -1470,6 +1470,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="98">
+			<date value="Zürich, 14. Januar 1776" />
+			<sort value="1776-14-01" />
+			<location ref="11" />
+			<senders>
+				<sender ref="10" /><!-- Dieser Brief ist von Lavaters Schreiber geschrieben worden. -->
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
