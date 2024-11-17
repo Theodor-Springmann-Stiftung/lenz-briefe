@@ -1515,6 +1515,20 @@
 			<isDraft value="false" /><!-- Teile des Briefs sind auf französisch geschrieben. -->
 		</letterDesc>
 		
+		<letterDesc letter="101">
+			<date value="Straßburg, Wahrscheinlich Januar 1776" />
+			<sort value="1776-01-16" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="11" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>
