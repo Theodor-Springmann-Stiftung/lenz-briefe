@@ -1500,6 +1500,22 @@
 			<isDraft value="true" />
 		</letterDesc>
 		
+		<letterDesc letter="100">
+			<date value="Kehl, Januar 1776" />
+			<sort value="1776-01-15" />
+			<location ref="9" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="19" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" /><!-- Teile des Briefs sind auf französisch geschrieben. -->
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
