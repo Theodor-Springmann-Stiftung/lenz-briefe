@@ -613,6 +613,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="99">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Krakau, Lenziana 5, Nr. 5
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>

@@ -1472,7 +1472,7 @@
 		
 		<letterDesc letter="98">
 			<date value="Zürich, 14. Januar 1776" />
-			<sort value="1776-14-01" />
+			<sort value="1776-01-14" />
 			<location ref="11" />
 			<senders>
 				<sender ref="10" /><!-- Dieser Brief ist von Lavaters Schreiber geschrieben worden. -->
@@ -1485,6 +1485,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="99">
+			<date value="Kehl, 14. Januar 1776" />
+			<sort value="1776-01-14" />
+			<location ref="9" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="14" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="true" />
+		</letterDesc>
 		
 		
 	</descriptions>
