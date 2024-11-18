@@ -721,6 +721,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="117">
+			<app ref="4">
+				Karl Buchner: Aus dem Verkehr einer deutschen Buchhandlung mit ihren Schriftstellern. Berlin 1873, S. 60
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
