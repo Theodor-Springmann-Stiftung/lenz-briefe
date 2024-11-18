@@ -1545,6 +1545,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="103">
+			<date value="Straßburg, 21./22. Januar 1776" />
+			<sort value="1776-01-21" notBefore="1776-01-21" notAfter="1776-01-22" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="20" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>

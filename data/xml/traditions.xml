@@ -637,6 +637,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="103">
+			<app ref="4">
+				Biberach, Wieland-Museum, Nr. 1002
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
