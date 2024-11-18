@@ -649,6 +649,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="105">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 21 
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
