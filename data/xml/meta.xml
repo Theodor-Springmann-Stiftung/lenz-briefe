@@ -1653,7 +1653,7 @@
 		<letterDesc letter="110">
 			<date value="Auf dem Weg von Hannover nach Kassel?, 9. Februar 1776" />
 			<sort value="1776-02-09" />
-			<location ref="NN" />
+			<location ref=""<!-- Der Ort kann nicht genau bestimmt werden --> />
 			<senders>
 				<sender ref="19" />
 			</senders>
@@ -1668,7 +1668,7 @@
 		<letterDesc letter="111">
 			<date value="Auf dem Weg von Hannover nach Kassel?, Februar 1776" />
 			<sort value="1776-02-12" />
-			<location ref="NN" />
+			<location ref="" <!-- Der Ort kann nicht genau bestimmt werden --> />
 			<senders>
 				<sender ref="19" />
 			</senders>
