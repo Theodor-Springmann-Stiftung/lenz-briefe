@@ -1530,6 +1530,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="102">
+			<date value="Straßburg, Januar 1776" />
+			<sort value="1776-01-17" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>

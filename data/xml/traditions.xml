@@ -631,6 +631,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="102">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 7
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
