@@ -703,6 +703,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="114">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 8
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
