@@ -1605,6 +1605,20 @@
 			<isDraft value="true" />
 		</letterDesc>
 		
+		<letterDesc letter="107">
+			<date value="Kopenhagen, 3. Februar 1776" />
+			<sort value="1776-02-03" />
+			<location ref="17" />
+			<senders>
+				<sender ref="27" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>
