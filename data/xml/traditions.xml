@@ -733,6 +733,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="119">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 13
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
