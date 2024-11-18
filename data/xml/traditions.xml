@@ -709,6 +709,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="115">
+			<app ref="4">
+				Weimar, Goethe- und Schiller-Archiv, GSA 56/I,6,1, Bl. 6r–7r; zg. Abschrift
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
