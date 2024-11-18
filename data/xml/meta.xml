@@ -1665,7 +1665,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
-		
+		<letterDesc letter="111">
+			<date value="Auf dem Weg von Hannover nach Kassel?, Februar 1776" />
+			<sort value="1776-02-12" />
+			<location ref="NN" />
+			<senders>
+				<sender ref="19" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 	</descriptions>
 </opus>
