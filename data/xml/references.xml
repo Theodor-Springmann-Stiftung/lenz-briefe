@@ -153,6 +153,9 @@
 			<personDef index="50" name="Isaak Haffner" ref="http://d-nb.info/gnd/116370238"
 				vorname="Isaak" nachname="Haffner" komm="haffner" />
 			
+			<personDef index="51" name="Johann Georg Zimmermann" ref="http://d-nb.info/gnd/1186369798"
+				vorname="Johann Georg" nachname="Zimmermann" komm="zimmermann" />
+			
 		</personDefs>
 
 

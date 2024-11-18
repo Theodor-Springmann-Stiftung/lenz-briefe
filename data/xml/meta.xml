@@ -1740,6 +1740,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="116">
+			<date value="Straßburg, Ende Februar 1776 (empfangen 6. März) " />
+			<sort value="1776-26" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="51" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>
