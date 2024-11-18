@@ -1560,6 +1560,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="104">
+			<date value="Zürich, 24. Januar 1776" />
+			<sort value="1776-01-24" />
+			<location ref="11" />
+			<senders>
+				<sender ref="10" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>

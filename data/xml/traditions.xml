@@ -643,6 +643,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="104">
+			<app ref="4">
+				Zürich, Zentralbibliothek, FA Lav. Ms. 572, Nr. 23, zg. Abschrift
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
