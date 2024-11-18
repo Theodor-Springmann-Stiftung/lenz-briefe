@@ -673,6 +673,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="109">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 6
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
