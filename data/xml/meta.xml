@@ -1695,6 +1695,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="113">
+			<date value="Kassel, 16. Februar 1776" />
+			<sort value="1776-02-16" />
+			<location ref="18" />
+			<senders>
+				<sender ref="19" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>

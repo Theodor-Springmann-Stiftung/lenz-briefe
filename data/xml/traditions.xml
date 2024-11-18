@@ -697,6 +697,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="113">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 36
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
