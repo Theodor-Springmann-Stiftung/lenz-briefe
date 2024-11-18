@@ -1770,6 +1770,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="118">
+			<date value="Zürich, 28. Februar 1776" />
+			<sort value="1776-02-28" />
+			<location ref="11" />
+			<senders>
+				<sender ref="10" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>

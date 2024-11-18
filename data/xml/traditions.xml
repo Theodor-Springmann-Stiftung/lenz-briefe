@@ -727,6 +727,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="118">
+			<app ref="4">
+				Zürich, Zentralbibliothek, FA Lav. Ms. 572, Nr. 24; zg. Abschrift
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
