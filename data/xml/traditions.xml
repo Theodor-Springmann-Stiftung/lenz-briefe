@@ -739,10 +739,18 @@
 			</app>
 		</letterTradition>
 		
-		<app ref="120">
-			Zürich, Zentralbibliothek, FA Lav. Ms. 594.12 (1), Exzerptheft von Lavaters Hand
-		</app>
+		<letterTradition letter="120">	
+		     <app ref="4">
+			     Zürich, Zentralbibliothek, FA Lav. Ms. 594.12 (1), Exzerptheft von Lavaters Hand
+		    </app>
 		</letterTradition>
+		
+		<letterTradition letter="121">
+			<app ref="4">
+				Weimar, Goethe- und Schiller-Archiv, GSA 44/69, Bl. 10–11
+			</app>
+		</letterTradition>
+		
 		
 		
 	</traditions>
