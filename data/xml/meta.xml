@@ -1860,6 +1860,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="124">
+			<date value="Straßburg, Vor 14. März 1776 (empfangen am 14. März)" />
+			<sort value="1776-03-07" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="51" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
