@@ -1830,6 +1830,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="122">
+			<date value="Zürich, 3. März 1776" />
+			<sort value="1776-03-03" />
+			<location ref="11" />
+			<senders>
+				<sender ref="22" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
