@@ -757,6 +757,14 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="123">
+			<app ref="4">
+				Heinrich Düntzer: Zur deutschen Literatur und Geschichte. Ungedruckte Briefe aus Knebels Nachlaß, 2 
+				Bde., Nürnberg 1858, Bd. 1, S. 56–59
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>

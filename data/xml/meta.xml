@@ -1845,6 +1845,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="123">
+			<date value="Straßburg, 6. März 1776" />
+			<sort value="1776-03-06" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="28" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>
