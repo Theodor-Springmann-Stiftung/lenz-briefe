@@ -1890,6 +1890,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="126">
+			<date value="Darmstadt, 8. März 1776" />
+			<sort value="1776-03-08" />
+			<location ref="20" />
+			<senders>
+				<sender ref="29" />
+			</senders>
+			<receivers>
+				<receiver ref="20" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
