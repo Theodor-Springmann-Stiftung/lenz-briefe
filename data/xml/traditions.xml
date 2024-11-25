@@ -875,6 +875,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="142">
+			<app ref="4">
+				Heidelberg, Theodor Springmann Stiftung, Lenziana, HI 
+			</app>
+		</letterTradition>
+		
 		
 		
 	</traditions>
