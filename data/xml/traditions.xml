@@ -826,6 +826,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="134">
+			<app ref="4">
+				Berlin, Archiv der Berlin-Brandenburgischen Akademie der Wissenschaft, Slg. Weinhold, Nr. 792
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
