@@ -2176,6 +2176,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="145">
+			<date value="Gießen, 27. März 1776" />
+			<sort value="1776-03-27" />
+			<location ref="23" />
+			<senders>
+				<sender ref="31" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>

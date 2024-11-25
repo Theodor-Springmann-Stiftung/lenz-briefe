@@ -893,6 +893,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="145">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 59
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
