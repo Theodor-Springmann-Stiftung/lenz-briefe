@@ -1905,6 +1905,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="127">
+			<date value="Bückeburg, 9. März 1776" />
+			<sort value="1776-03-09" />
+			<location ref="21" />
+			<senders>
+				<sender ref="17" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>

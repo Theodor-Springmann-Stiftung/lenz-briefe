@@ -783,6 +783,14 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="127">
+			<app ref="4">
+				1. Blatt: Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 15; 2. Blatt: Latvijas Valsts 
+				Vēstures Arhīvs, Riga: Fonda 7363, Aprakst 1, Lietas 734, Bl. 3
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
