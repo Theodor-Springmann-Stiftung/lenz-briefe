@@ -1950,6 +1950,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="130">
+			<date value="Straßburg, 11. März 1776" />
+			<sort value="1776-03-11" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="20" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>

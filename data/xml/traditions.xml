@@ -802,6 +802,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="130">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 9
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
