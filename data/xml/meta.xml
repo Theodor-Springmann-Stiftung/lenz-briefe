@@ -1995,6 +1995,20 @@
 			<isDraft value="true" />
 		</letterDesc>
 		
+		<letterDesc letter="133">
+			<date value="Straßburg, 14. März 1776" />
+			<sort value="1776-03-14" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="29" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>

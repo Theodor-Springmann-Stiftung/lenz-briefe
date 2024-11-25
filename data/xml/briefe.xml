@@ -3226,7 +3226,7 @@
 		<letterText letter="67">Mein allerliebster Jacob
 			<line tab="1"/>Wie vergeblig habe ich nun so viele Jahre auff Deine zu Hause Kunft gewartet, wie oft habe ich nicht 
 			umsonst aus dem Fenster gesehn, wenn nur ein Fragtwagen ankam, ob ich Dich nicht erblickte, allein 
-			vergebens. Wie manche Tränen und <del><nr>   </nr></del> Seufzer, habe ich nicht zu Gott geschickt, das er Dich führen 
+			vergebens. Wie manche Tränen und <er><nr>   </nr></er><!-- Ist das ein Anwendungsfall für <er>? --> Seufzer, habe ich nicht zu Gott geschickt, das er Dich führen 
 			und leiten mögte.
 			<line tab="1"/>Ach wenn ich Dich auch noch ein mahl sehen könte, vor meinem Ende, und Dich segnen, ehedenn ich 
 			sterbe, so wollte ich zufrieden sein. Wie lange wiltu so herum irren, und Dich in solche nichtswürdige, 
@@ -4821,7 +4821,7 @@
 			bestreiten willst. Ich werde Dich also noch vielleicht können umarmen, wenn mir möglich ist noch 3 
 			nach Frankfurt zu schicken Reiset von dort nicht nach Cassel sondern nach Wommen das bey Eisenach 
 			liegt und wo ich zwei liebe Schwestern habe, von dort würdest Du auch können nach Weimar Reisen. Du 
-			weißt doch daß <page index="2"/> Grewen in Hanau Hanöwrischer Fändrich ist. <del><nr>   </nr></del>
+			weißt doch daß <page index="2"/> Grewen in Hanau Hanöwrischer Fändrich ist. <er><nr>   </nr></er>
 		</letterText>
 		
 		<letterText letter="114"><align pos="right">Strasb. den 19ten Febr. 1776.</align> <line type="empty"/>
@@ -5443,6 +5443,58 @@
 			kann er künftiges Frühjahr ein wenig gescheuter mit den Schiffen zu euch kommen <line type="empty"/>
 			
 			Greven ist bey euch, grüßt ihn feurig wenn er mich gleich nicht leiden kann.</letterText>
+		
+		<letterText letter="133"><line tab="1"/>Ich bin in der größten Verbüsterung herzlich geliebter innig geschätzter Mann! – wegen einer Reise zu 
+			der ich mich über Hals und Kopf anschicken muß und auf der ich auch Sie zu sprechen und zu 
+			umarmen hoffe <line type="empty"/>
+			
+			<line tab="1"/>Daß mir Ihr Brief Vergnügen und welches er mir gemacht könnte ich Ihnen doch jetzt nicht gleich so 
+			sagen wie ich es wünsche. Bey meiner Jugend Schwachheit und Thorheit führt mir der Himmel doch 
+			immer weise reiffe und grosse Freunde zu die mich wieder auf die Beine bringen. <line type="empty"/>
+			
+			<line tab="1"/>Für all die Nachrichten die den Grund meines Herzens interessiren danke tausendfach. Wenn ich von 
+			heut über acht Tagen nicht bey Ihnen bin, so schicken Sie mir, ich bitte, nur unter Adresse der Jgfr. 
+			König die versprochenen Manuskripte auch wenn es seyn kann das Kupfer, es soll gleich wieder 
+			zurück. <line type="empty"/>
+			
+			<line tab="1"/>Mir gehts wie Ihnen, ich bin arm wie eine Kirchenmaus, von verschiedenen Sachen die theils unter 
+			der Presse theils noch in Goethens Händen sind, hab ich gar keine Abschrift; die andern sind noch 
+			nicht gestaltete Embryonen denen ich unterwegs Existenz geben will. <line type="empty"/>
+			<page index="2"/>
+			<line tab="1"/>Meine Gemählde sind alle noch ohne Styl sehr wild und nachlässig aufeinander gekleckt, haben 
+			bisher nur durch das Auge meiner Freunde gewonnen. Mir fehlt zum Dichter Musse und warme Luft 
+			und Glückseeligkeit des Herzens das bey mir tief auf den kalten Nesseln meines Schicksals halb im 
+			Schlamm versunken liegt und sich nur mit Verzweiflung emporarbeiten kann. <line type="empty"/>
+			
+			<line tab="1"/>Alles das muß gut seyn, weil es mir in jenem geheimen Rath oben so zugesprochen ward. Ich murre 
+			nicht, habe auch nicht Ursach, weil ich alles das mir selber zugezogen. Vielleicht schreibe ich in dem 
+			ersten Augenblick wahrer Erholung eine Catharina von Siena mit ganzem Herzen – die schon in 
+			meiner <aq>pia mater</aq> fertig, aber noch nicht geschrieben ist – <line type="empty"/>
+			<page index="3"/>
+			<line tab="1"/>Aber Sie Sie und alles was werth ist kann ich schätzen, kann ich mit ungeschwächten Nerven fühlen 
+			und das ist mein Vorzug mein Glück und mein Hochmuth. <line type="empty"/>
+			
+			<line tab="1"/>Mündlich ein mehrers. Dank für Herders Knittelverse, ich wünschte mehr in der Art von ihm zu lesen. 
+			Ihren fortgesetzten Reimhardt aber will und muß ich zu mir reissen denn auf die Art Verse bin ich nun 
+			einmahl bestürzt, da heurig die ganz ausgeglätteten neuitalienischen so Mode wurden, besonders im 
+			Merkur die mir das Herzweh machten, eine Krankheit die sonst nur Frauenzimmer haben wenn ein 
+			unausgefülltes Leere in ihrer Brust ist. Sonst liebe Wieland von Herzen wegen seiner Jugendsünden 
+			und bitte mir sein Drama aus. Wohl ihm wenn er mit Goethen zusammen schmilzt. <line type="empty"/>
+			
+			D. 14ten Merz. <line type="empty"/>
+			
+			<align pos="right">Lenz</align> <line type="empty"/>
+			
+			<sidenote pos="left" page="3" annotation="am linken Rand, vertikal">
+			<line tab="5"/>Der Dichter, verliebt.
+			<line tab="5"/>Ich <ul>dich</ul> besingen Phillis? – Nein
+			<line tab="5"/>Ich fühle dich zu sehr, um jetzt nicht stumm zu seyn.</sidenote>
+			
+			<page index="4"/>
+			<note>Adresse</note>
+			Herrn<line type="break"/> 
+			Herrn <dul>Merk</dul><line type="break"/> 
+			in <ul>Darmstadt.</ul></letterText>
 		
 
 	</document>
