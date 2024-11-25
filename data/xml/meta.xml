@@ -2191,6 +2191,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="146">
+			<date value="Darmstadt, Ende März 1776" />
+			<sort value="1776-03-28" />
+			<location ref="20" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="12" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
