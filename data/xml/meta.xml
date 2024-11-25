@@ -2085,6 +2085,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="139">
+			<date value="Straßburg, März 1776" />
+			<sort value="1776-03-20" />
+			<location ref="7" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 		
 		
 	</descriptions>

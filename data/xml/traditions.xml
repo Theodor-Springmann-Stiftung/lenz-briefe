@@ -856,6 +856,14 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="139">
+			<app ref="4">
+				Ulrich Hegner: Beiträge zur nähern Kenntniß und wahren Darstellung Johann Kaspar Lavater’s. Aus 
+				Briefen seiner Freunde an ihn, und nach persönlichem Umgang. Leipzig 1836, S. 236
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
