@@ -790,6 +790,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="128">
+			<app ref="4">
+				Weimar, Goethe- und Schiller-Archiv, GSA 44/69, Bl. 12–13
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>

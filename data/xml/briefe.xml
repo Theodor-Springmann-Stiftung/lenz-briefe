@@ -5265,6 +5265,41 @@
 			<align pos="right">H.</align> <line type="empty"/>
 			
 			9. Mz.</letterText>
+		
+		<letterText letter="128"><line tab="1"/>Es freut mich daß gegenwärtiger Brief den mir Lavater offen für Dich zugeschickt hat, mir Gelegenheit 
+			giebt bester Herder! Dir in die Arme zu fallen. Zwar ein wenig zerrissner noch als er zu seyn 
+			behauptet, aber doch – meines Zwecks gewiß. <line type="empty"/>
+			
+			<line tab="1"/>Ich danke Dir daß Du die Soldaten zum Druck befördert hast, ich habe nun alle dem Uebel das daraus 
+			hätte entstehen können, vorgebeugt – ich <ul>danke Dir</ul>  – und für den Weg den Du sie hast nehmen 
+			lassen. Reich wird sie hoffentlich vor Michaelis nicht bekannt machen und alsdenn wird das mit 
+			Fingern deutende Publikum auf nichts mehr zu deuten haben. Auch – wenn Gott mein Gebeth aus der 
+			Tieffe erhört, von mir eins und anderes geschehen seyn, das denen die ich geissele, weist wo 
+			<del>es</del> <insertion pos="top">ich</insertion> mit ihnen hinaus will. Ich habe eine Schrift über die <ul>Soldatenehen</ul> unter Händen, die 
+			ich einem Fürsten vorlesen möchte, und nach deren Vollendung und Durchtreibung ich – wahrscheinlichst 
+			wohl sterben werde. Gott laß mich mit Freudigkeit – Dein Wille – <line type="empty"/>
+			
+			Grüsse und umarme Dein Weib. Geseegnete unter den Weibern. Lange mit Dir geseegnet. <line type="empty"/> 
+			
+			Ich hoffe euch zu sehen, eh ich gehe. Lebt wohl! <line type="empty"/>
+			
+			<align pos="right">Lenz</align> <line type="empty"/>
+			
+			<sidenote pos="left" page="1" annotation="am linken Rand, vertikal">
+			<line tab="1"/>Weise niemand diesen Brief. Er ist für kein Auge das nicht durchdringt. Selbst für Deines <ul>müssen</ul> itzt 
+			noch Dunkelheilen bleiben.</sidenote> <line type="empty"/>
+			
+			<sidenote pos="top" page="1" annotation="am oberen Rand, spiegelverkehrt">
+			<line tab="1"/>Wegen der Soldaten sey ruhig! Ists wahr daß Du nach Weymar kommst so werde ich wieder einmal 
+			eine Freude haben. Eine.</sidenote> <line type="empty"/>
+			
+			<page index="4"/>
+			<note>Adresse</note>
+			Herrn<line type="break"/> 
+			Herrn Herder<line type="break"/> 
+			Oberkonsistoralrath<line type="break"/> 
+			in Bückeburg</letterText>
+		
 
 	</document>
 </opus>
