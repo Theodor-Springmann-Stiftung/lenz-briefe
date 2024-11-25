@@ -808,6 +808,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="131">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 10
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
