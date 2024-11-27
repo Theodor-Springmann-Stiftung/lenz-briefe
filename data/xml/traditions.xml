@@ -923,6 +923,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="150">
+			<app ref="4">
+				Hannover, Stadtarchiv, Autographen-Slg. Culemann, Nr. 1415
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>
