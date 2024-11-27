@@ -911,6 +911,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="148">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 10
+			</app>
+		</letterTradition>
+		
+		
 		
 	</traditions>
 </opus>

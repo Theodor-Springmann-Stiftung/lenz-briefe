@@ -2206,6 +2206,35 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="147">
+			<date value="Darmstadt, Ende März 1776" />
+			<sort value="1776-03-29" />
+			<location ref="20" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="15" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="true" />
+		</letterDesc>
+		
+		<letterDesc letter="148">
+			<date value="hinter Frankfurt, 1. April 1776" />
+			<sort value="1776-04-01" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 		
 		
 	</descriptions>
