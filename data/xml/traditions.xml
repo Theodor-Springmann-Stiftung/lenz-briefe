@@ -917,6 +917,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="149">
+			<app ref="4">
+				Nürnberg, Germanisches Nationalmuseum, Autographen K. 21 (Lenz)
+			</app>
+		</letterTradition>
 		
 		
 	</traditions>
