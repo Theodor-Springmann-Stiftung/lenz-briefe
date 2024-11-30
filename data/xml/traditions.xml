@@ -983,5 +983,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="160">
+			<app ref="4">
+				Düsseldorf, Goethe-Museum, 4356
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
