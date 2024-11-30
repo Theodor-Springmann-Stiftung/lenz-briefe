@@ -995,5 +995,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="162">
+			<app ref="4">
+				Frankfurt/Main, Freies Deutsches Hochstift, Nr. 569
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
