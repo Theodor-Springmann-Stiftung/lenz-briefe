@@ -953,6 +953,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="155">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 7
+			</app>
+		</letterTradition>
 		
 	</traditions>
 </opus>
