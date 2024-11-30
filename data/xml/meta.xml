@@ -2414,5 +2414,21 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="161">
+			<date value="Straßburg, 16. April 1776" />
+			<sort value="1776-04-16" />
+			<location ref="7" />
+			<senders>
+				<sender ref="9" />
+				<sender ref="11" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

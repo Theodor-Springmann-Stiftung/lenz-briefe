@@ -989,5 +989,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="161">
+			<app ref="4">
+				Berlin, Archiv der Berlin-Brandenburgischen Akademie der Wissenschaften, Slg. Weinhold, Nr. 1179
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
