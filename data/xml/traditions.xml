@@ -977,5 +977,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="159">
+			<app ref="4">
+				Zürich, Zentralbibliothek, FA Lav. Ms. 594.12 (1)
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
