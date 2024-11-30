@@ -2460,5 +2460,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="164">
+			<date value="Weimar, April 1776" />
+			<sort value="1776-04-19" />
+			<location ref="8" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="34" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
