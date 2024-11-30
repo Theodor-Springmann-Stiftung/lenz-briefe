@@ -2279,6 +2279,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="152">
+			<date value="Dessau, 4. April 1776" />
+			<sort value="1776-04-01" />
+			<location ref="25" />
+			<senders>
+				<sender ref="34" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		
 		
 	</descriptions>
 </opus>
