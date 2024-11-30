@@ -2295,7 +2295,7 @@
 		</letterDesc>
 		
 		<letterDesc letter="153">
-			<date value="Weimar, 5, April 1776" />
+			<date value="Weimar, 5. April 1776" />
 			<sort value="1776-04-05" />
 			<location ref="8" />
 			<senders>
@@ -2306,7 +2306,22 @@
 			</receivers>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
-			<isDraft value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="154">
+			<date value="Weimar, April 1776" />
+			<sort value="1776-04-06" />
+			<location ref="8" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="false" /><!-- Hier handelt es sich um das Exzerptheft von Lavaters Hand -->
+			<isProofread value="true" />
+			<isDraft value="false" />
 		</letterDesc>
 		
 		

@@ -947,6 +947,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="154">
+			<app ref="4">
+				Zürich, Zentralbibliothek, FA Lav. Ms. 594.12 (1), Exzerptheft von Lavaters Hand
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
