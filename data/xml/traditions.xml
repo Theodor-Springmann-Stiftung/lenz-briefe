@@ -1001,5 +1001,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="163">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Sammlung Autographa 1, Nr. 11
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
