@@ -1085,5 +1085,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="177">
+			<app ref="4">
+				Berlin, Archiv der Berlin-Brandenburgischen Akademie der Wissenschaften, Slg. Weinhold, Nr. 422
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
