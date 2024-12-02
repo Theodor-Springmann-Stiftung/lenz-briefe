@@ -1049,5 +1049,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="171">
+			<app ref="4">
+				Zürich, Zentralbibliothek, FA Lav. Ms. 586, Nr. 94, Zg. Abschrift. 
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>

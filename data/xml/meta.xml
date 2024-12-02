@@ -2565,5 +2565,22 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="171">
+			<date value="Zürich, 27. April 1776" />
+			<sort value="1776-04-27" />
+			<location ref="11" />
+			<senders>
+				<sender ref="11" />
+			</senders>
+			<receivers>
+				<receiver ref="26" />
+				<receiver ref="12" />
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
