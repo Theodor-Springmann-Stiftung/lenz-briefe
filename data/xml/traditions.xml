@@ -1067,5 +1067,17 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="174">
+			<app ref="4">
+				Basel, Öffentliche Bibliothek der Universität Basel, Autographen-Sammlung Geigy-Hagenbach, Nr. 1110
+			</app>
+		</letterTradition>
+		
+		<letterTradition letter="175">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 26
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
