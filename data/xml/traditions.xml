@@ -1103,5 +1103,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="180">
+			<app ref="4">
+				Reise des Herrn von Bretschneider nach London und Paris: nebst Auszügen aus seinen Briefen an 
+				Herrn Friedrich Nicolai. Hrsg. v. Leopold Friedrich Günther von Goeckingk. Berlin, Stettin 1817, S. 
+				273f.; Bretschneider an Christoph Friedrich Nicolai, 21. Mai 1776
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
