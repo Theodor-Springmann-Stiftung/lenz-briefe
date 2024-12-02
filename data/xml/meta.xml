@@ -2747,5 +2747,35 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="183">
+			<date value="Weimar, 20. Mai 1776" />
+			<sort value="1776-05-20" />
+			<location ref="8" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="14" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="184">
+			<date value="Straßburg, 23. Mai 1776" />
+			<sort value="1776-05-23" />
+			<location ref="7" />
+			<senders>
+				<sender ref="11" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
