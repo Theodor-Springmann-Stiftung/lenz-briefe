@@ -1061,5 +1061,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="173">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 12
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
