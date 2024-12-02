@@ -1136,5 +1136,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="185">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana 5, Zwei Briefe Ramond de Carbonnières an Lenz, Nr. 1
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
