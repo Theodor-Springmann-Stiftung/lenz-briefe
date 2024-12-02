@@ -2582,5 +2582,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="172">
+			<date value="Hannover, 30. April 1776" />
+			<sort value="1776-04-30" />
+			<location ref="19" />
+			<senders>
+				<sender ref="20" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
