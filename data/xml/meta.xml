@@ -2882,5 +2882,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="191">
+			<date value="Straßburg, 4. Juni 1776" />
+			<sort value="1776-06-04" />
+			<location ref="7" />
+			<senders>
+				<sender ref="11" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
