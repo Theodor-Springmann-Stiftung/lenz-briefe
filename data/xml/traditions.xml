@@ -1155,5 +1155,18 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="188">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 14
+			</app>
+		</letterTradition>
+		
+		<letterTradition letter="189">
+			<app ref="4">
+				(Entwurf: Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 9)
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 15; Entwurf
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
