@@ -1207,5 +1207,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="196">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 16; Entwurf
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>

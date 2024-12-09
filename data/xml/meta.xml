@@ -2942,5 +2942,21 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="196">
+			<date value="Weimar, Bald nach dem 17. Juni 1776" />
+			<sort value="1776-06-20" />
+			<location ref="8" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="42" />
+				<receiver ref="43" /><!-- Wie wird der Fall ausgezeichnet, dass unbestimmt ist, welche der beiden Personen als receiver in Frage kommt? -->
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="true" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
