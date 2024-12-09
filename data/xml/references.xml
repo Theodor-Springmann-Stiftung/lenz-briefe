@@ -156,6 +156,9 @@
 			<personDef index="51" name="Johann Georg Zimmermann" ref="http://d-nb.info/gnd/1186369798"
 				vorname="Johann Georg" nachname="Zimmermann" komm="zimmermann" />
 			
+			<personDef index="52" name="Herzogin Anna Amalia" ref="http://d-nb.info/gnd/118649485"
+				vorname="Anna Amalia" nachname="Amalia" komm="amalia" />
+			
 		</personDefs>
 
 
