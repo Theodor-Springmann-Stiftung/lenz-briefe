@@ -2807,5 +2807,20 @@
 			<isDraft value="true" />
 		</letterDesc>
 		
+		<letterDesc letter="187">
+			<date value="Leipzig, 26. Mai 1776" />
+			<sort value="1776-05-26" />
+			<location ref="27" />
+			<senders>
+				<sender ref="40" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
