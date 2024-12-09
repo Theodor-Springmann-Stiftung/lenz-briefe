@@ -1189,5 +1189,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="193">
+			<app ref="4">
+				Berlin, Staatsbibliothek zu Berlin – Preußischer Kulturbesitz, NL Lenz, Bd. 2, (Nr. 234), Bl. 61
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>

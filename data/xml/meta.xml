@@ -2882,7 +2882,7 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
-		<letterDesc letter="191">
+		<letterDesc letter="192">
 			<date value="Straßburg, 4. Juni 1776" />
 			<sort value="1776-06-04" />
 			<location ref="7" />
@@ -2891,6 +2891,21 @@
 			</senders>
 			<receivers>
 				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="193">
+			<date value="Weimar, 7. Juni 1776" />
+			<sort value="1776-06-07" />
+			<location ref="8" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="22" />
 			</receivers>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
