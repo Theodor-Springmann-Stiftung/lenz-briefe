@@ -1219,5 +1219,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="198">
+			<app ref="4">
+				Hamburg, Staats– und Universitätsbibliothek Carl von Ossietzky, CS 2: Klinger, Friedrich Maximilian
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>

@@ -2973,5 +2973,21 @@
 			<isDraft value="true" />
 		</letterDesc>
 		
+		<letterDesc letter="198">
+			<date value="Weimar, 26. Juni 1776" />
+			<sort value="1776-06-26" />
+			<location ref="8" />
+			<senders>
+				<sender ref="46" />
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="22" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
