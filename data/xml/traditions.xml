@@ -1232,5 +1232,16 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="200">
+			<app ref="4">
+				Sekundäre Überlieferung durch Brief von Anton Matthias Sprickmann an Heinrich Christian Boie vom 
+				18. Juli 1776: „Lenz habe ich nicht gefunden; er hatte den nämlichen Morgen ein Billet an Göthe 
+				(wirkl. Geheimenrath) hinterlassen: ich geh aufs Land, weil ich bey Euch nichts thun kann, und damit 
+				zum Thor hinaus, ohne zu sagen, wohin? Oder auf wie lange.“ (zitiert nach Anton Matthias 
+				Sprickmann und Heinrich Christian Boie, „… ewig in diesem Himmel die Hölle leiden“. Briefwechsel 
+				1775–1782, hg. v. Jochen Grywatsch, Bielefeld 2008, S. 13).
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
