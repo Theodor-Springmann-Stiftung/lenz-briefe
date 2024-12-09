@@ -1285,5 +1285,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="208">
+			<app ref="4">
+				Weimar, Goethe- und Schiller-Archiv, GSA 29/298,I
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
