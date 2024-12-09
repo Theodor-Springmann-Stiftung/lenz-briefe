@@ -3020,5 +3020,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="201">
+			<date value="Straßburg, Ende Juni 1776" />
+			<sort value="1776-06-28" />
+			<location ref="7" />
+			<senders>
+				<sender ref="11" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
