@@ -2852,5 +2852,20 @@
 			<isDraft value="true" />
 		</letterDesc>
 		
+		<letterDesc letter="190">
+			<date value="Weimar, Ende Mai 1776" />
+			<sort value="1776-05-31" />
+			<location ref="8" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="20" />
+			</receivers>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
