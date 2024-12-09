@@ -1279,5 +1279,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="207">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 29
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>

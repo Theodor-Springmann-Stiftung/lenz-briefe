@@ -3110,5 +3110,20 @@
 			<isDraft value="true" />
 		</letterDesc>
 		
+		<letterDesc letter="207">
+			<date value="Hegi, 10. Juli 1776" />
+			<sort value="1776-07-10" />
+			<location ref="28" />
+			<senders>
+				<sender ref="10" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
