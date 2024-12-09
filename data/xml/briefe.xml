@@ -7139,6 +7139,44 @@
 		
 		<letterText letter="185"><!-- französischer Brief --></letterText>
 		
+		<letterText letter="186"><line tab="1"/>Hier ist Lindaus Schwanengesang, den er sehr gern an Washington oder D. Franklin möchte gelangen 
+			lassen. Wie ist mir selber unbegreiflich. Vielleicht wissen Sie Auswege. Den Colonisten kann ein solch 
+			Produckt nicht anders als lieb seyn. Und Sie mein Freund, sind Freund der Freyheit – nur daß es nicht 
+			in unrechte Hände falle. <line type="empty"/>
+			
+			<line tab="1"/>Bode geht eben durch nach Frank<del>reich</del>furt und weiter. Herder und Stolberg sind noch nicht da, letzter wird 
+			den Sommer noch bey seinen Schwestern zubringen. <line type="empty"/>
+			
+			<note>Entwurf zu Catharina von Siena auf der Rückseite</note><!-- Handelt es sich hier um Verse? -->
+			<line tab="5"/>Bey einer alten Tante auf dem Lande
+			<line tab="5"/>Wo ich gehorsam mit Geduld und Tränen
+			<line tab="5"/>Und meinem Väterlichen Erb bezalen mußte
+			<line tab="5"/>Das sie verwaltete, wo keine Lust
+			<line tab="5"/>Auch nicht in Bäum’ und Blumen für mich blühte
+			<line tab="5"/>Weil überall mich Furcht begleitete.
+			<line tab="5"/>Und meine Seele die sich unaussprechlich
+			<line tab="5"/>Nach Menschen sehnte, nur von Heiligen
+			<line tab="5"/>Umgeben war die meine Schritte zählten
+			<line tab="5"/>Und Worte und Gebehrden folterten.
+			<line tab="5"/>Da kam er hin da sah da liebt er mich
+			<line tab="5"/>Da hatt ich auf der Stell nur ihn nur ihn –
+			<line tab="5"/>Ach wie viel Freuden hat er mir gemacht
+			<line tab="5"/>Und wie viel Leid, wie fühlt ich mich so anders
+			<line tab="5"/>So groß so herrlich da, so wohl so göttlich,
+			<line tab="5"/>Daß unter meinen Füssen oft die Erde
+			<line tab="5"/>Zu sinken schien, wo ich an seinem Arm hing 
+			<line tab="5"/>Und ich wie unter Stromen schwebte. Alles
+			<line tab="5"/>Vor und um meinetwillen da, der Wald, die Wiese
+			<line tab="5"/>Auf die ich mich ehmals kaum zu treten traute
+			<line tab="5"/>War nur für mich geschaffen und die Blumen
+			<line tab="5"/><insertion pos="top">Bey</insertion> <!-- Handelt es sich hier um eine weitere Einfügung? -->˕<er><nr>  </nr></er> denen ich wie vor dem Herrn vom Hause
+			<line tab="5"/>Sonst ehrfurchtsvoll vorbey schlich schienen nun
+			<line tab="5"/>Nur drauf zu harren <insertion pos="top">daß mein <er><nr>         </nr></er></insertion> <er><nr>         </nr></er> <insertion pos="bottom">daß mein Fuß sie knickten</insertion>
+			<line tab="5"/><er><nr>         </nr></er> – <del>wie <er><nr>   </nr></er> theilt ich ihr Schicksal</del> <line type="empty"/>
+			
+			<sidenote pos="left" page="1" annotation="am linken Rand, vertikal">
+			Dafür theil ich ihr Schicksal itzt.</sidenote></letterText>
+		
 
 	</document>
 </opus>

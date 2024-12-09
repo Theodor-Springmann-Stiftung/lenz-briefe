@@ -1142,5 +1142,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="186">
+			<app ref="4">
+				(Entwurf zu Ms. 1113, F. 25, V. 31, Nr. 15, Ende Mai 1776)
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 9
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
