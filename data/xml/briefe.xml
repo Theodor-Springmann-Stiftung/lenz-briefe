@@ -7899,6 +7899,28 @@
 			dienen –<line type="break"/>
 			<align pos="right"><aq>Schenck</aq></align></letterText>
 		
+		<letterText letter="210"><align pos="right">Verbrenne das Billet.</align><line type="break"/>
+			Wolltest Du doch das dem Herrn weisen, Liebgen, wenn Du meynest daß es ihm Spas machen kann. <line type="empty"/>
+			
+			<line tab="1"/>Sag mir doch, ob es ein Utopisches Projeckt wäre eine Handlung zwischen Frankreich und Weymar 
+			anzuspinnen. Wenn in W. eine Messe angelegt würde für französische Kaufleute, <ul>Manufaktürieurs</ul> – 
+			laß seyn daß im Anfang die Balanz auf ihrer Seite wäre, es liessen sich mit der Zeit wol einige 
+			hier nieder und die Gäste – sollten auch willkommen seyn. Ihr könntet ja um das zu erhalten, 
+			wenn sie erst im Train drin sind auf einmal die Einfuhr fremder Waren mit <insertion pos="top">höheren</insertion> <!-- Hier fehlt die linke Grenzmarkierung der Einfügung -->Zöllen belegen. 
+			Ihr seyd hier im Herzen von Deutschland und stoßt an viel Länder die noch ärmer an Industrie sind als Ihr. 
+			– Frankreich willig <sidenote pos="left" page="1" annotation="am linken Rand, vertikal">zu machen,</sidenote><!-- Auf welchen Textausschnitt bezieht sich die topographische Angabe? --> wäre dann wieder eine Sache für sich. Es ist 
+			freilich keine Nation in der Welt schwerer und leichter zu behandeln. – Auch hättet ihr Naturprodukte entgegen 
+			zu setzen, Bergwerk, Lein, Wolle u.s.w. Dies sind nur noch Träume Bruder. <line type="empty"/>
+			
+			<page index="2"/>
+			
+			<line tab="1"/>Ob der Herzog deswegen Verträge mit den übrigen Sächsischen Höfen besonders mit Chursachsen thun dürfe, geht mich 
+			nichts an. <line type="empty"/>
+			
+			<line tab="1"/>Das wird wenigstens keinem Vertrage zu wieder seyn daß er Manufakturisten ins Land zieht. Und von wem hat Deutschland 
+			die je erhalten als aus Fr. Auch können keine andere in ihren Preisen so mässig seyn, weil sie mit dem <aq>compendio virium</aq> 
+			nicht arbeiten.</letterText>
+		
 
 	</document>
 </opus>

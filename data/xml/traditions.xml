@@ -1297,5 +1297,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="210">
+			<app ref="4">
+				Tallinn, Eesti Ajaloomuuseum, Fondi 61, Nimistu 1, S/Ü 23, Bl. 36
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
