@@ -3547,7 +3547,7 @@
 		<letterDesc letter="236">
 			<date value="Straßburg, 22. September 1776" />
 			<sort value="1776-09-22" />
-			<location ref="8" />
+			<location ref="7" />
 			<senders>
 				<sender ref="25" />
 			</senders>
@@ -3562,12 +3562,27 @@
 		<letterDesc letter="237">
 			<date value="Straßburg, September 1776" />
 			<sort value="1776-09-23" />
-			<location ref="8" />
+			<location ref="7" />
 			<senders>
 				<sender ref="45" />
 			</senders>
 			<receivers>
 				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="238">
+			<date value="Kochberg, September 1776" />
+			<sort value="1776-09-25" />
+			<location ref="30" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="4" />
 			</receivers>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
