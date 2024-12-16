@@ -5847,7 +5847,7 @@
 			auch eine Anzeige von Herders Schrift über die G. d. M. unter der mein Name nicht steht, und 
 			die Sie überzeugen könnte, daß ich die Schrifft achte, wie sie es verdient. Desto frappanter 
 			war es, daß Ihr Aufsatz in ders. Z. mich beschuldigte, ich sehe Herder nicht über die Achsel 
-			an. Ueber den Aufsatz hätte ich ganz <nr>             </nr><!-- Werden unleserliche Zeichen aufgrund des Aptums besonders ausgezeichnet (rote Farbmarkierung in der Transkription --> können, ich wollte aber zeigen, daß ich 
+			an. Ueber den Aufsatz hätte ich ganz <nr>             </nr><!-- Werden die unleserlichen Zeichen hier besonders ausgezeichnet (rote Farbmarkierung in der Transkription)? --> können, ich wollte aber zeigen, daß ich 
 			mich von einer Zeitung nicht sogleich los sagte, deswegen weil sie etwas gegen mich enthielt. 
 			Das Gerede wegen des Merkurs rührte von dem Verfaßer eines elenden Dramas Wilhelmine von 
 			Blondheim her, der da glaubte, niemand könne ihn tadeln, als gerade ich. Daß Götze in Hamburg 
@@ -6043,7 +6043,7 @@
 			worden. – Was für große trefliche Leute kennen gelernt! All das dank ich Ihnen mein Vater! bethen Sie 
 			ferner für mich.</letterText>
 		
-		<letterText letter="154"><!-- Ist die Handschrift Lavaters in diesem Fall auszuzeichnen? --><hand ref="10"><line tab="1"/>Ja L.! sie hat Dir das Portrait zugedacht u: geschenkt, u: Du must Dich bey ihr dafür bedanken. Verzeih 
+		<letterText letter="154"><hand ref="10"><line tab="1"/>Ja L.! sie hat Dir das Portrait zugedacht u: geschenkt, u: Du must Dich bey ihr dafür bedanken. Verzeih 
 			mir m: Wildheit, u: Unbesonnenheit, daß ich Dir die Nachricht nicht eher gegeben. Auch verdien ich 
 			freylich das Portrait nicht, aber ich weiß Du schikst mirs aus Gnaden. <line type="empty"/>
 			
@@ -7089,7 +7089,7 @@
 			<line tab="5"/>Quisqui ubique habitat
 			<line tab="5"/>Maxime nusquam habitat</hand> <line type="empty"/>
 			
-			<hand ref="1"><pe><sidenote pos="left" page="4" annotation="am linken Rand, vertikal Notate mit Bleistift von Lenz’ Hand">
+			<hand ref="1"><pe><sidenote pos="left" page="4" annotation="am linken Rand, vertikal Notate mit Bleistift von Lenz’ Hand"><!-- Wichtig hier keine Verse -->
 			<line tab="5"/>schändliche kalte Tugend die uns
 			<line tab="5"/>zwingt Aufopferungen gegen einen Freund
 			<line tab="5"/>zu machen den wir hernach dafür nicht
@@ -7106,7 +7106,7 @@
 			<line type="empty"/>
 			<line type="empty"/>
 			
-			<page index="4"/> <!-- Die Seitenzahl 4 erscheint hier zum zweiten Mal -->
+			<page index="4"/> <!-- Die Seitenzahl 4 erscheint hier zum zweiten Mal --><!-- Wichtig: Seitenzahlen fortlaufend nummerieren -->
 			<hand ref="1">
 			<line tab="5"/>hat sie mich davon vorher warnen lassen ˕durch ihn˕
 			<line tab="5"/>und ich suchte das nicht zu hindern
@@ -7133,9 +7133,9 @@
 			1 Schnuptuch<line type="break"/>
 			2 Hemden<line type="break"/>
 			3 p. Strümpfe<line type="break"/>
-			3 Binden</hand> <line type="empty"/>
+			3 Binden <line type="empty"/>
 			
-			<note>zwei Profilskizzen</note></letterText>
+			<note>zwei Profilskizzen</note></hand></letterText>
 		
 		<letterText letter="185"><!-- französischer Brief --></letterText>
 		
