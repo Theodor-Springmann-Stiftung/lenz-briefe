@@ -3305,5 +3305,20 @@
 			<isDraft value="true" />
 		</letterDesc>
 		
+		<letterDesc letter="220">
+			<date value="wahrscheinlich Berka, Sommer 1776" />
+			<sort value="1776-07-23" />
+			<location ref="14" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="NN" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
