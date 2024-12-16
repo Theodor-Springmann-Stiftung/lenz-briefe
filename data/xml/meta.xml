@@ -3679,7 +3679,7 @@
 			<isDraft value="true" />
 		</letterDesc>
 		
-		<letterDesc letter="244">
+		<letterDesc letter="245">
 			<date value="Weimar, Oktober 1776" />
 			<sort value="1776-10-25" />
 			<location ref="8" />
@@ -3688,6 +3688,21 @@
 			</senders>
 			<receivers>
 				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="246">
+			<date value="Wohl Berka oder Kochberg, Oktober 1776" />
+			<sort value="1776-10-26" />
+			<location ref="14" /><!-- Oder Kochberg -->
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="17" />
 			</receivers>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
