@@ -3514,5 +3514,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="234">
+			<date value="Weimar [tatsächlich wohl aus Kochberg], 20. September 1776" />
+			<sort value="1776-09-20" />
+			<location ref="8" /><!-- Eigentlicher Ort? -->
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="49" /><!-- Wird sein Bruder auch genannt? -->
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
