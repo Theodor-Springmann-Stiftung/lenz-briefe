@@ -1426,5 +1426,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="231">
+			<app ref="4">
+				Weinhold, K.[arl]: Ein Brieflein Goethes an Lenz. In: Chronik des Wiener Goethe-Vereins, Jg. 2, Nr. 5, 
+				15. Februar 1887, S. 28; hier ein Teil des ersten Absatzes. Der Rest nach FSt II, 28f.
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
