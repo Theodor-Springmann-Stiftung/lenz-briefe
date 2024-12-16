@@ -8899,8 +8899,50 @@
 			
 			<page index="2"/><line type="break"/>
 			<note>Adresse, vertikal</note><line type="break"/> 
-			An Herdern!
-		</letterText>
+			An Herdern!</letterText>
+		
+		<letterText letter="248"><line tab="1"/>Mein allerbester alter Freund. Tausendmal dank ich dir für deinen Brief, oder will dir vielmehr 
+			danken, dann wie neu geschenket bist Du meiner alten Liebe und da magst du besser ahnden was 
+			mein Dank sey als Dirs meine Feder sagt. <line type="empty"/>
+			
+			<line tab="1"/>Meine Studien gehn hier besser als je in St. und ich finde hier mehr als ich vermuthete. Es 
+			sind Professoren hier die ich herzlich lieben muß, auch außer Ihnen ist der Kopf nicht allein 
+			der sich hier weyden kann <line type="empty"/>
+			
+			<line tab="1"/>Von altem schweige, liebstes großes Herz! um was ich dich bitte ist Glaube an meine starke 
+			unvermögende Liebe. <line type="empty"/> 
+			
+			<line tab="1"/>Wenn ich weiter nicht gehen kann, so komm ich doch nach Weimar, sollt ich auch zu Fuß gehen und mit 
+			Brod und Wasser mich nähren. Ich muß Luthers Bruder predigen hören, und die Männer sehen die mein 
+			Herz ehret, und dich umarmen zum lezten mal und dann will ich gern nach St. zurück und an den Pflug. <line type="empty"/>
+			
+			Lang kann ich ohn das zu W. nicht weilen. <line type="empty"/>
+			
+			<line tab="1"/>Soll ich dir sagen daß ich den Pack von Pirk nicht bekommen konnte, ob ich gleich viermal zu ihm 
+			gieng, ohn’ ihn anzutreffen, und allemal zur Zeit wo man mich kommen hieß. Ich will aber nach Straßb. 
+			schreiben daß du sie bekommen sollst, nur sag mir: was eigentlich? Deine Briefe hab ich alle zu Hauß 
+			in einen meiner <aq>Sécrétair</aq> Schränke gelegt und die Thüre davor versiegelt. Ich werd sie dir aber alle 
+			schicken wenn ich wieder zu Hauß bin. <line type="empty"/>
+			
+			<line tab="1"/>Das Gräfliche Hauß von  Stollberg unterhält hier eine Anzahl Pursche die Freitisch haben und der König 
+			auch. Könntest du wohl durch deine Vermittelung bey Erstern oder etwa bey Hr. Leibarzt Zimmermann <insertion pos="top">mir</insertion> 
+			zu einem Platz verhelfen? ich würde dadurch in Stand gesezt meinen mir sehr nützlichen Aufenthalt hier 
+			zu verlängern. <line type="empty"/>
+			
+			Deinen Petrarch hab ich hier du sollst ihn haben so bald du willst. Ich verbleibe ewig dein Treuer zärtlicher<line type="break"/> 
+			<align pos="right">Röderer</align> 
+			
+			<line tab="1"/>P. S. Kaufmann ist alles Lobs werth und mein inniggeliebter! Willstu Maler Müllers Schattenriß, ich hab 
+			herrliche Tage mit Ihm zu M. gehabt . O der Antiquiensaal!! <line type="empty"/>
+			
+			<sidenote pos="left" page="1" annotation="am linken Rand, vertikal"><line type="break"/>
+			Zu Frankfurt hab ich die Ehre gehabt die Frau Rath Goethe <del>aufzuwarten!</del> <insertion pos="bottom">zu bewundern.</insertion> Wagner ist verheyrathet.</sidenote> <line type="empty"/>
+			
+			<page index="2"/><line type="break"/>
+			<note>Adresse</note><line type="break"/>
+			Herrn<line type="break"/>
+			Herrn <aq>Lenz</aq> abzugeben bey<line type="break"/> 
+			Herrn <aq>Geheimen Legations-Rath Goethe</aq> zu <ul>Weimar</ul></letterText>
 		
 
 	</document>
