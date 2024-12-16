@@ -1390,15 +1390,21 @@
 			</app>
 		</letterTradition>
 		
-		<letterTradition letter="224">
+		<letterTradition letter="225">
 			<app ref="4">
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 30
 			</app>
 		</letterTradition>
 		
-		<letterTradition letter="225">
+		<letterTradition letter="226">
 			<app ref="4">
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 11
+			</app>
+		</letterTradition>
+		
+		<letterTradition letter="227">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 15
 			</app>
 		</letterTradition>
 		
