@@ -1518,5 +1518,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="245">
+			<app ref="4">
+				Johann Gottfried Röderer, von Straßburg und seine Freunde. [Hrsg. von August Stöber.] Nachtrag von 
+				Briefen an Röderer und Lenz: von Lavater, Schlosser, Blessig, Pfenninger und Wieland, nebst bisher 
+				ungedruckten Aufsätzen von Lenz. (Für die Besitzer der Alsatia vom J. 1873.) Colmar 1874, S. 170f.
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
