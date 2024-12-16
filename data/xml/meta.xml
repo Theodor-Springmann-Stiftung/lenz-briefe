@@ -3313,7 +3313,6 @@
 				<sender ref="1" />
 			</senders>
 			<receivers>
-				<receiver ref="NN" />
 			</receivers>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
@@ -3386,6 +3385,21 @@
 			<location ref="11" />
 			<senders>
 				<sender ref="10" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="226">
+			<date value="Halle, 3. August 1776" />
+			<sort value="1776-08-03" />
+			<location ref="29" />
+			<senders>
+				<sender ref="48" />
 			</senders>
 			<receivers>
 				<receiver ref="1" />
