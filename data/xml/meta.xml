@@ -3709,5 +3709,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="247">
+			<date value="Wohl Berka oder Kochberg, Oktober/November 1776" />
+			<sort value="1776-10-27" />
+			<location ref="14" /><!-- Oder Kochberg -->
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="17" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
