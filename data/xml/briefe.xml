@@ -7169,7 +7169,7 @@
 			<line tab="5"/>Vor und um meinetwillen da, der Wald, die Wiese
 			<line tab="5"/>Auf die ich mich ehmals kaum zu treten traute
 			<line tab="5"/>War nur für mich geschaffen und die Blumen
-			<line tab="5"/><insertion pos="top">Bey</insertion> <!-- Handelt es sich hier um eine weitere Einfügung? -->˕<er><nr>  </nr></er> denen ich wie vor dem Herrn vom Hause
+			<line tab="5"/><insertion pos="top">Bey</insertion> <!-- Handelt es sich hier um eine weitere Einfügung? -->˕<er><nr>  </nr></er>˕ denen ich wie vor dem Herrn vom Hause
 			<line tab="5"/>Sonst ehrfurchtsvoll vorbey schlich schienen nun
 			<line tab="5"/>Nur drauf zu harren <insertion pos="top">daß mein <er><nr>         </nr></er></insertion> <er><nr>         </nr></er> <insertion pos="bottom">daß mein Fuß sie knickten</insertion>
 			<line tab="5"/><er><nr>         </nr></er> – <del>wie <er><nr>   </nr></er> theilt ich ihr Schicksal</del> <line type="empty"/>
@@ -7607,7 +7607,7 @@
 			
 			<align pos="right">L.</align></hand></letterText>
 		
-		<letterText letter="199"><align pos="center">Sachen die hier bleiben</align> <!-- Wie werden Items einer Liste formatiert? --> <line type="empty"/>
+		<letterText letter="199"><!-- Hanschrift von Seidel mit Bleistift  --><align pos="center">Sachen die hier bleiben</align> <!-- Wie werden Items einer Liste formatiert? --> <line type="empty"/>
 			
 			Regenschirm (Philipp in die Post)<line type="break"/>
 			Instruktion des Königs v. Preussen<line type="break"/> 
@@ -7748,7 +7748,7 @@
 			auch Gott lob daß es doch geschieht, ich will für ihre glückliche Niederkunft Sonntag bitten. Um 
 			den Mann mögt ich eine kleine Weile einmal herum zappeln. Kannstu mir der Urkunde 4t. Teil hermachen? 
 			Her mit! <aq>portos</aq> hin, <aq>portos</aq> her, ich erhäng mich nicht drum, nur unter Rausch Adresse # <sidenote pos="left" page="1" annotation="am linken 
-			Rand, vertikal: # zu Kehl">ich mag den andern Hrn. nicht gern Obligation haben, da ich sie nie 
+			Rand, vertikal: # zu Kehl"><!-- Hier waren nur die Wörter zu Kehl gemeint -->ich mag den andern Hrn. nicht gern Obligation haben, da ich sie nie 
 			sprechen kann.</sidenote><!-- Auf welchen Textausschnitt bezieht sich die editorische Anmerkung? -->;  Her mit der Urkunde 4t. Teil, lieber Lenz! her mit! ich bitt Dich, ich flehe – u. Du 
 			kennst das infame Zögern unserer Buchhändler. – <line type="empty"/>
 			
@@ -7908,9 +7908,9 @@
 			hier nieder und die Gäste – sollten auch willkommen seyn. Ihr könntet ja um das zu erhalten, 
 			wenn sie erst im Train drin sind auf einmal die Einfuhr fremder Waren mit <insertion pos="top">höheren</insertion> <!-- Hier fehlt die linke Grenzmarkierung der Einfügung -->Zöllen belegen. 
 			Ihr seyd hier im Herzen von Deutschland und stoßt an viel Länder die noch ärmer an Industrie sind als Ihr. 
-			– Frankreich willig <sidenote pos="left" page="1" annotation="am linken Rand, vertikal">zu machen,</sidenote><!-- Auf welchen Textausschnitt bezieht sich die topographische Angabe? --> wäre dann wieder eine Sache für sich. Es ist 
+			– Frankreich willig <sidenote pos="left" page="1" annotation="am linken Rand, vertikal">zu machen,<!-- Auf welchen Textausschnitt bezieht sich die topographische Angabe? --> wäre dann wieder eine Sache für sich. Es ist 
 			freilich keine Nation in der Welt schwerer und leichter zu behandeln. – Auch hättet ihr Naturprodukte entgegen 
-			zu setzen, Bergwerk, Lein, Wolle u.s.w. Dies sind nur noch Träume Bruder. <line type="empty"/>
+			zu setzen, Bergwerk, Lein, Wolle u.s.w. Dies sind nur noch Träume Bruder.</sidenote> <line type="empty"/>
 			
 			<page index="2"/>
 			
@@ -7936,6 +7936,8 @@
 			IN SOZIALREFORMEN ENTHALTEN???
 			
 			<page index="3"/></letterText>
+		
+		<letterText letter="212"><!-- französischer Brief --></letterText>
 		
 
 	</document>

@@ -1653,7 +1653,7 @@
 		<letterDesc letter="110">
 			<date value="Auf dem Weg von Hannover nach Kassel?, 9. Februar 1776" />
 			<sort value="1776-02-09" />
-			<location ref="19" /><!-- Der Ort kann nicht genau bestimmt werden -->
+			<location ref="19" /><!-- Der Ort kann nicht genau bestimmt werden --><!-- Für die Strecke extra Ort -->
 			<senders>
 				<sender ref="19" />
 			</senders>
@@ -3183,6 +3183,21 @@
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="212">
+			<date value="Berka, 15. Juli 1776" />
+			<sort value="1776-07-15" />
+			<location ref="14" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="32" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="true" />
 		</letterDesc>
 		
 	</descriptions>
