@@ -3380,5 +3380,20 @@
 			<isDraft value="false" /><!-- Dieser Brief ist zugleich ein Entwurf -->
 		</letterDesc>
 		
+		<letterDesc letter="225">
+			<date value="Zürich, 31. Juli 1776" />
+			<sort value="1776-07-31" />
+			<location ref="11" />
+			<senders>
+				<sender ref="10" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
