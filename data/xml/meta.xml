@@ -3499,5 +3499,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="233">
+			<date value="Kochberg, Mitte September 1776" />
+			<sort value="1776-09-15" />
+			<location ref="14" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="12" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

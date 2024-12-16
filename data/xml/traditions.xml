@@ -1439,5 +1439,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="233">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 1; Bl. 2 Ausriß mit Textverlust; zu den 
+				Zeichnungen auf S. 4 vgl. Kapitel IV, Kochberg, in: Gregor Babelotzky, „Kann Er auch zeichnen?“ „Kann 
+				Er auch zeichnen?“ Skizzen aus dem Nachlass. Hannover 2021
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
