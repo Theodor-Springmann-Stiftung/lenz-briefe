@@ -3664,5 +3664,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="244">
+			<date value="Kochberg, 24. Oktober 1776" />
+			<sort value="1776-10-24" />
+			<location ref="30" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="52" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="true" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
