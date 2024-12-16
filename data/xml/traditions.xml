@@ -1503,5 +1503,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="243">
+			<app ref="4">
+				Der Dichter Lenz und Friedericke von Sesenheim. Aus Briefen und gleichzeitigen Quellen; nebst 
+				Gedichten und Anderm von Lenz und Goethe. Hrsg. von August Stöber. Basel 1842, S. 82–84
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
