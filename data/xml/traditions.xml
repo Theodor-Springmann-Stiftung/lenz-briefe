@@ -1316,5 +1316,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="213">
+			<app ref="4">
+				Krakau, Lenziana 3, Nr. 6, Catharina von Siena, 2. Bearbeitung, Bl. 4
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
