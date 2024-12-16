@@ -8830,7 +8830,7 @@
 			
 			<line tab="1"/>Grüßen Sie die <aq>deutsche Gesellschaft</aq> und melden Sie mir recht viel Neues aus Straßburg und Paris. Ist 
 			eine gewisse Exzellenz von <aq>Vietinghof</aq> durch Straßburg gegangen? Er ist ein Vetter von General bei 
-			Baviere. – Vielleicht sehen Sie mich einmal in herzoglich sächsischer Uniform wieder. Doch das unter uns. <line type="empty"7
+			Baviere. – Vielleicht sehen Sie mich einmal in herzoglich sächsischer Uniform wieder. Doch das unter uns. <line type="empty"/>
 			
 			<line tab="1"/>Melden Sie mir doch ob Herr <aq>Fries,</aq> mit dem ich nach Italien wollte, noch in Straßburg ist und grüßen ihn, 
 			wenn Sie ihn sehen. Sollte Röderer etwa gar das benannte Paket von Herrn von Kleist noch nicht erhalten 
@@ -8943,6 +8943,24 @@
 			Herrn<line type="break"/>
 			Herrn <aq>Lenz</aq> abzugeben bey<line type="break"/> 
 			Herrn <aq>Geheimen Legations-Rath Goethe</aq> zu <ul>Weimar</ul></letterText>
+		
+		<letterText letter="149"><pe><aq><line tab="1"/>you will perhaps wonder dearest lady <del>of</del> <insertion pos="top">at</insertion> my depart from W without taking my leave from you and 
+			repeating my thanks with all the warmth an human heart can bestow of, you would have permitted 
+			me to enjoy some months near your presence a manner of living almost unknown before to me enjoy 
+			that reason printed into mine heart with everlasting characters. <line type="empty"/>
+			
+			<line tab="1"/>I dare not make any excuses for it, for to say it i fear <del>to </del> <insertion pos="top">i would</insertion> find no words to that end 
+			<ul>or if i could find some prefer them with a manner</ul> <insertion pos="top">not becoming your delicacy</insertion>. you will not believe 
+			it and yet it is true therefore i undertake to write to you and in English flattering myself your 
+			application to that language with the help of all the witchcraft of your <insertion pos="top">charming</insertion> fancy will impart 
+			to my weak expressions all that can render them worthy to be read of you. If there be in words some pleasure 
+			as to vent the delights and the cares of the heart, i am certainly much to complain of, not having even 
+			the very consolation, if goods me are withdrawn to give words at my feelings, being overwhelmd from 
+			a sort of dullness attended by a whole oblivion of all the happiness i have been blessd of. Nothing 
+			will remain of it as how much is fit to make the present the more painful by the comparison of the past. <line type="empty"/>
+			
+			<page index="2"/><line type="break"/>
+			<note>französische Exzerpte Sozialreform</note>  @</aq></pe></letterText>
 		
 
 	</document>
