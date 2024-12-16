@@ -1322,5 +1322,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="214">
+			<app ref="4">
+				Max Rieger: Friedrich Maximilian Klinger: sein Leben und Werke, Darmstadt 1880, Bd. 1: Klinger in 
+				der Sturm- und Drangperiode: mit vielen Briefen, S. 260
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
