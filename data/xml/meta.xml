@@ -3230,5 +3230,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="214">
+			<date value="Weimar, Sommer 1776" />
+			<sort value="1776-07-18" />
+			<location ref="8" />
+			<senders>
+				<sender ref="47" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

@@ -1329,5 +1329,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="215">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 32
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
