@@ -8261,6 +8261,41 @@
 			
 			<aq>Strasb. Kalend. Julii 1776.</aq></letterText>
 		
+		<letterText letter="223"><pe>
+			Vom Lande</pe> <line type="empty"/>
+			<line type="empty"/>
+			
+			<line tab="1"/>Ich muß bitten lieber Freund! zu verhüten daß die Soldaten nicht etwa im Meßkatalogus unter 
+			meinem Namen angezeigt werden, da ich sonst nimmermehr mit Ihnen was zu theilen haben kann da 
+			sie ganz und gar <ul>wieder meinen Willen</ul> gedruckt worden sind und es die <ul>aller nachtheiligsten Folgen 
+			von der Welt</ul> für mich haben kann. Eben dadurch auch für den Verleger; der den Verfasser so 
+			wenig geschont hat. <pe>D. 26ten Julius 76</pe><line type="break"/>
+			<align pos="right">Lenz.</align> <line type="empty"/>
+			
+			
+			<line tab="1"/>Sie werden sich ohne Namen schon forthelfen. Mir gäben Sie einen wahren Beweiß der Freundschaft 
+			wenn Sie es noch un<insertion pos="top">an</insertion>gezeigt liessen, könnt’ es aber nicht anders seyn, dazu setzten, 
+			von Steenkerk. <line type="empty"/>
+			
+			<sidenote pos="left" page="1" annotation="am linken Rand, vertikal, in Bleistift"><line type="break"/>
+			<line tab="1"/><pe>Auch von dem andern Antrag bitte um Ihrer Freundschaft willen niemanden zu sagen. Die Sachen folgen 
+			so kurz aufeinander.</pe></sidenote> <line type="empty"/>
+			
+			<page index="2"/><line type="break"/>
+			<note>Adresse</note> <line type="empty"/>
+			
+			Herrn<line type="break"/>
+			Herrn <ul>Weidmanns</ul><line type="break"/> 
+			Erben und <ul>Reich,</ul> berühmten<line type="break"/> 
+			Buchhandlung<line type="break"/>
+			in<line type="break"/>
+			Leipzig. <line type="empty"/>
+			
+			<sidenote pos="top" page="2" annotation="am oberen Rand Empfangsnotiz Reichs"><line type="break"/>
+			<hand ref="33">1776. D. 2. Aug. Lenz.</hand></sidenote> <line type="empty"/>
+			
+			Vom Lande</letterText>
+		
 
 	</document>
 </opus>
