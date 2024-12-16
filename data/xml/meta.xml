@@ -3275,7 +3275,7 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
-		<letterDesc letter="217">
+		<letterDesc letter="218">
 			<date value="Berka, Mitte Juli 1776" />
 			<sort value="1776-07-21" />
 			<location ref="14" />
@@ -3288,6 +3288,21 @@
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="219">
+			<date value="Berka, Juli 1776" />
+			<sort value="1776-07-22" />
+			<location ref="14" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="34" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="true" />
 		</letterDesc>
 		
 	</descriptions>
