@@ -9020,12 +9020,31 @@
 			
 			<page index="2"/><line type="break"/>
 			<note>Adresse</note><line type="break"/> 
-			an Lenzn.</letterText>
+			<ul>an Lenzn.</ul></letterText>
 		
 		<letterText letter="252"><!-- französischer Brief --></letterText>
 		
 		<letterText letter="253"><line tab="1"/>Wenn Ihr nichts Beßers habt, und einmal Euer üppiges Fleisch  kreuzigen wollt, liebes Brüderlein, so 
 			kömmt heute auf den Mittag und eßt eine Suppe mit mir. Vielleicht kömmt Göthe auch.</letterText>
+		
+		<letterText letter="254">Hier haben Sie ein neues Stück von mir. <line type="empty"/>
+			
+			<line tab="1"/>Ich verlange fünf neue Louisd’or. Bitte um geschwinden aber <b>korreckten</b> Druck und gut Pappier. Es 
+			wäre mir sehr dran gelegen wenn Sie mir die Zeit bestimmen könnten wenn ich das erste Explar 
+			erwarten darf. <line type="empty"/>
+			
+			<line tab="1"/>Sollte Ihnen zu diesen Bedingungen das Stück zu theuer seyn so bitte mir das Manuscript ohne es weiter 
+			sehen zu lassen baldigst zurück. <line type="empty"/>
+			
+			Ich bin mit vieler Achtung Dero<line type="break"/>
+			<align pos="right">ergebenster<line type="break"/>
+			Lenz. <line type="empty"/>
+			
+			Weymar d.</align> <line type="empty"/>
+			<line type="empty"/>
+			
+			<note>Empfangsnotiz Reichs</note><line type="break"/>
+			<hand ref="33">1776 23 9bre Weymar Lenz.</hand></letterText>
 		
 
 	</document>

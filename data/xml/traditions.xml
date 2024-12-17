@@ -1576,5 +1576,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="254">
+			<app ref="4">
+				Dreihundert Briefe aus zwei Jahrhunderten, hrsg. von Karl von Holtei. (Die Orig. befinden sich in d. 
+				gemeinschaftl. Autographen-Sammlung d. Rob. Weigelt in Breslau u. d. Hrsg.), Bd. 1, Hannover 1872, 
+				S. 131f.; die Wiedergabe folgt FSt II, S. 51
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
