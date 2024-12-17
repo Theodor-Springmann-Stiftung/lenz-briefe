@@ -1551,5 +1551,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="250">
+			<app ref="4">
+				Düsseldorf, Goethe-Museum, NW 1472/1975. Entwurf: Kraków, Biblioteka Jagiellońska, Lenziana 5, 
+				Nr. 30
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
