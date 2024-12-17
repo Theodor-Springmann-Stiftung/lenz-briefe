@@ -3766,6 +3766,21 @@
 			</receivers>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
+			<isDraft value="true" />
+		</letterDesc>
+		
+		<letterDesc letter="251">
+			<date value="Berka, 13. November 1776" />
+			<sort value="1776-11-13" />
+			<location ref="11" />
+			<senders>
+				<sender ref="10" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
 		
