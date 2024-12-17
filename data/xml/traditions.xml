@@ -1584,5 +1584,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="255">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 17; wohl Entwurf
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>

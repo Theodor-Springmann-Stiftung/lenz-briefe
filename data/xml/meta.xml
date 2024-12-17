@@ -3829,5 +3829,21 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="255">
+			<date value="Weimar [wohl Berka], 23. November 1776" />
+			<sort value="1776-11-23" /><!-- Weimar [wohl Berka] -->
+			<location ref="8" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="42" /><!-- Unklar welche Laudth den Brief empfangen hat -->
+				<receiver ref="43" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="true" /><!-- Wohl Entwurf -->
+		</letterDesc>
+		
 	</descriptions>
 </opus>
