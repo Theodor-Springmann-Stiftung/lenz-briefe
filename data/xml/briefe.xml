@@ -9020,10 +9020,12 @@
 			
 			<page index="2"/><line type="break"/>
 			<note>Adresse</note><line type="break"/> 
-			an Lenzn.
-		</letterText>
+			an Lenzn.</letterText>
 		
 		<letterText letter="252"><!-- französischer Brief --></letterText>
+		
+		<letterText letter="253"><line tab="1"/>Wenn Ihr nichts Beßers habt, und einmal Euer üppiges Fleisch  kreuzigen wollt, liebes Brüderlein, so 
+			kömmt heute auf den Mittag und eßt eine Suppe mit mir. Vielleicht kömmt Göthe auch.</letterText>
 		
 
 	</document>

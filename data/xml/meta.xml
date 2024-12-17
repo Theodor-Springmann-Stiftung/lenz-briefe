@@ -3799,5 +3799,20 @@
 			<isDraft value="true" />
 		</letterDesc>
 		
+		<letterDesc letter="253">
+			<date value="Berka, 16. November 1776" />
+			<sort value="1776-11-16" />
+			<location ref="14" />
+			<senders>
+				<sender ref="26" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
