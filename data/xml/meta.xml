@@ -3845,5 +3845,20 @@
 			<isDraft value="true" /><!-- Wohl Entwurf -->
 		</letterDesc>
 		
+		<letterDesc letter="256">
+			<date value="Berka, 23. November 1776" />
+			<sort value="1776-11-23" />
+			<location ref="14" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="53" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

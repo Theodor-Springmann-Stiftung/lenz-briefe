@@ -1590,5 +1590,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="256">
+			<app ref="4">
+				Leipzig, Universitätsbibliothek, Slg. Hirzel, B 80
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
