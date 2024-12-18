@@ -3860,5 +3860,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="257">
+			<date value="Weimar, Zwischen 22. und 25. November 1776" />
+			<sort value="1776-11-24" />
+			<location ref="8" />
+			<senders>
+				<sender ref="25" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
