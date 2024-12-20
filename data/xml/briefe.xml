@@ -9219,6 +9219,30 @@
 		
 		<letterText letter="261"><!-- französischer Brief --></letterText>
 		
+		<letterText letter="262"><note>am linken oberen Rand eine Kalkulation, spiegelverkehrt</note> <line type="empty"/>
+			
+			<line tab="1"/>Ich danke Ihnen mein verehrungswürdiger Freund und Gönner für die unangenehme Bemühung die 
+			Sie meinethalben übernommen und versichere daß mir eine Ordre wie die auch wenn ich sie 
+			verdienet durch die Hand die sie mir überbrachte, versüßt worden wäre. Da ich aber nach 
+			meiner Ueberzeugung erst gehört werden müßte, ehe man mich verdammte und meine Ehre die mir 
+			lieber als tausend Leben <page index="2"/> ist, mich durch Annehmung dessen was Sie mir von 
+			unbekannter Hand hinzugelegt eines mir unbewußten Verbrechens schuldig zu bekennen, nimmermehr 
+			erlauben wird, so verzeyhen Sie daß ich diese beygefügte Gnade nicht annehmen sondern um 
+			Gerechtigkeit bitten darf. Es ist nicht seit heute, daß <page index="3"/> <line type="empty"/>
+			
+			<note>Textverlust durch Ausriss der rechten Hälfte</note><line type="break"/>
+			Eh<note>Textverlust</note><line type="break"/>
+			S<note>Textverlust</note><line type="break"/>
+			Au<note>Textverlust</note><line type="break"/>
+			Abgeh<note>Textverlust</note><line type="break"/>
+			Um G<note>Textverlust</note><line type="break"/>
+			Und Ge<note>Textverlust</note><line type="break"/>
+			Mit dies<note>Textverlust</note> <line type="empty"/>
+			
+			<sidenote pos="left" page="3" annotation="am linken Rand, vertikal"><line type="break"/>
+			<line tab="1"/>Hier ein kleines Pasquill das ich Goethen zuzustellen bitte, mit der Bitte, es von Anfang – bis zu Ende 
+			zu lesen.</sidenote></letterText>
+		
 
 	</document>
 </opus>

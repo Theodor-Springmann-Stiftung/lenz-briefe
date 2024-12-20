@@ -1627,5 +1627,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="262">
+			<app ref="4">
+				Weimar, Goethe- und Schiller-Archiv, GSA 44/69, Bl. 18–19
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
