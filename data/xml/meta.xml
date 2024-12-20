@@ -3980,5 +3980,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="265">
+			<date value="wohl auf der Reise nach Emmendingen, Anfang Dezember 1776" />
+			<sort value="1776-12-01" />
+			<location ref="33" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

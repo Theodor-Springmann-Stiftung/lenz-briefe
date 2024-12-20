@@ -233,6 +233,8 @@
 			
 			<locationDef index="32" name="Marbach" ref="http://d-nb.info/gnd/7658327-2" />
 			
+			<locationDef index="33" name="Wohl auf der Reise nach Emmendingen" />
+			
 		</locationDefs>
 		<appDefs>
 			<appDef index="-1" name="" category="Überlieferung &amp; Textkritik" />
