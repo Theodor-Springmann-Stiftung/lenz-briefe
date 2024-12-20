@@ -3890,5 +3890,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="259">
+			<date value="Göttingen, 26. November 1776" />
+			<sort value="1776-11-26" />
+			<location ref="16" />
+			<senders>
+				<sender ref="11" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
