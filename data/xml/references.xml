@@ -228,7 +228,7 @@
 			
 			<locationDef index="31" name="Mannheim" ref="http://d-nb.info/gnd/4037372-1" />
 			
-			<locationDef index="32" name="Marbach"ref="http://d-nb.info/gnd/7658327-2" />
+			<locationDef index="32" name="Marbach" ref="http://d-nb.info/gnd/7658327-2" />
 			
 		</locationDefs>
 		<appDefs>

@@ -1615,5 +1615,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="260">
+			<app ref="4">
+				Weimar, Goethe- und Schiller-Archiv, GSA 44/69, Bl. 20–21
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
