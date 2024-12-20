@@ -162,6 +162,9 @@
 			<personDef index="53" name="Philipp Erasmus Reich" ref="http://d-nb.info/gnd/118809334"
 				vorname="Philipp Eramus" nachname="Reich" komm="reich" />
 			
+			<personDef index="54" name="Herzog Karl August" ref="http://d-nb.info/gnd/118968173"
+				vorname="Karl" nachname="August" komm="august" />
+			
 		</personDefs>
 
 
