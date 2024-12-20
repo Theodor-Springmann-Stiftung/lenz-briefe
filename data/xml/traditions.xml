@@ -1651,5 +1651,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="266">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 48; oben links Ausriss
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
