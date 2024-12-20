@@ -1663,5 +1663,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="268">
+			<app ref="4">
+				Schmidt, Erich: Lenziana. In: Sitzungsberichte der Königlich Preußischen Akademie der 
+				Wissenschaften zu Berlin, Jg. 1901, 41. Stück: Gesammtsitzung, 24. October, S. 1008
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
