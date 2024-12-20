@@ -1602,5 +1602,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="258">
+			<app ref="4">
+				Marbach, Deutsches Literaturarchiv, A:Pfeffel, Gottlieb Konrad. Zugangsnummer 
+				HS.2005.0037.00004. Mediennummer HS001727339
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>

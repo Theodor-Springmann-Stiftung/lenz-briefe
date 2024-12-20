@@ -3875,5 +3875,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="258">
+			<date value="Marbach, Ende November 1776" /><!-- Ort fehlt im Transkript --><!-- Welches Marbach ist hier gemeint -->
+			<sort value="1776-11-25" />
+			<location ref="32" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="21" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
