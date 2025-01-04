@@ -235,6 +235,8 @@
 			
 			<locationDef index="33" name="Wohl auf der Reise nach Emmendingen" />
 			
+			<locationDef index="34" name="Auf dem Weg von Hannover nach Kassel?" />
+			
 		</locationDefs>
 		<appDefs>
 			<appDef index="-1" name="" category="Überlieferung &amp; Textkritik" />

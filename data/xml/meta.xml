@@ -1475,7 +1475,7 @@
 			<sort value="1776-01-14" />
 			<location ref="11" />
 			<senders>
-				<sender ref="10" /><!-- Dieser Brief ist von Lavaters Schreiber geschrieben worden. -->
+				<sender ref="10" />
 			</senders>
 			<receivers>
 				<receiver ref="1" />
@@ -1653,7 +1653,7 @@
 		<letterDesc letter="110">
 			<date value="Auf dem Weg von Hannover nach Kassel?, 9. Februar 1776" />
 			<sort value="1776-02-09" />
-			<location ref="19" /><!-- Der Ort kann nicht genau bestimmt werden --><!-- Für die Strecke extra Ort -->
+			<location ref="34" /><!-- Der Ort kann nicht genau bestimmt werden --><!-- Für die Strecke extra Ort -->
 			<senders>
 				<sender ref="19" />
 			</senders>
@@ -1668,7 +1668,7 @@
 		<letterDesc letter="111">
 			<date value="Auf dem Weg von Hannover nach Kassel?, Februar 1776" />
 			<sort value="1776-02-12" />
-			<location ref="19"  /><!-- Der Ort kann nicht genau bestimmt werden -->
+			<location ref="34"  /><!-- Der Ort kann nicht genau bestimmt werden -->
 			<senders>
 				<sender ref="19" />
 			</senders>
