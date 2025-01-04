@@ -165,6 +165,78 @@
 			<personDef index="54" name="Herzog Karl August" ref="http://d-nb.info/gnd/118968173"
 				vorname="Karl" nachname="August" komm="august" />
 			
+			<personDef index="55" name="Emanuel Friedrich Mayer" ref="http://d-nb.info/gnd/1203107382"
+				vorname="Emanuel Friedrich" nachname="Mayer" komm="mayer" />
+			
+			<personDef index="56" name="Johann Georg Neukirch" ref="http://d-nb.info/gnd/116956038"
+				vorname="Johann Georg" nachname="Neukirch" komm="neukirch" />
+			
+			<personDef index="57" name="Karl August Küttner" ref="http://d-nb.info/gnd/100615104"
+				vorname="Karl August" nachname="Küttner" komm="küttner" />
+			
+			<personDef index="58" name="Johann Heinrich Füssli" ref="http://d-nb.info/gnd/136012159"
+				vorname="Johann Heinrich" nachname="Füssli" komm="füssli" />
+			
+			<personDef index="59" name="Carl Ulysses von Salis-Marschlins" ref="http://d-nb.info/gnd/100263690"
+				vorname="Carl Ulysses" nachname="von Salis-Marschlins" komm="von salis-marschlin" />
+			
+			<personDef index="60" name="Johann Kaspar Hirzel" ref="http://d-nb.info/gnd/128695862"
+				vorname="Johann Kaspar" nachname="Hirzel" komm="hirzel" />
+			
+			<personDef index="61" name="Christina Margaretha Lenz"
+				vorname="Christina Margaretha" nachname="Lenz" komm="chrm-lenz" />
+			
+			<personDef index="62" name="George Behrens"
+				vorname="Behrens" nachname="George" komm="behrens" />
+			
+			<personDef index="63" name="Peuker" 
+				vorname="NN" nachname="Peuker" komm="peuker" />
+			
+			<personDef index="64" name="Friederike Brion" ref="http://d-nb.info/gnd/118515500"
+				vorname="Friederike" nachname="Brion" komm="brion" />
+			
+			<personDef index="65" name="Christian Brion" 
+				vorname="Christian" nachname="Brion" komm="ch-brion" />
+			
+			<personDef index="66" name="Carl Werner Curtius" ref="http://d-nb.info/gnd/102875030"
+				vorname="Carl Werner" nachname="Curtius" komm="curtius" />
+			
+			<personDef index="67" name="Friedrich Justin Bertuch" ref="http://d-nb.info/gnd/118510169"
+				vorname="Friedrich Justin" nachname="Bertuch" komm="bertuch" />
+			
+			<personDef index="68" name="Freifrau von Vietinghoff" ref="http://d-nb.info/gnd/1270847619"
+				vorname="NN" nachname="Freifrau von Vietinghoff" komm="von vietinghoff" />
+			
+			<personDef index="69" name="Lawrent Brouwer"
+				vorname="Lawrent" nachname="Brouwer" komm="brouwer" />
+			
+			<personDef index="70" name="Christian Adolf Ludwig Dingelstedt"
+				vorname="Christian Adolf Ludwig" nachname="Dingelstedt" komm="dingelstedt" />
+			
+			<personDef index="71" name="Johann Friedrich Hartknoch" ref="http://d-nb.info/gnd/7751283-2"
+				vorname="Johann Friedrich" nachname="Hartknoch" komm="hartknoch" />
+			
+			<personDef index="72" name="Graf Friedrich von Anhalt" ref="http://d-nb.info/gnd/102638403"
+				vorname="Friedrich" nachname="Graf von Anhalt" komm="von anhalt" />
+			
+			<personDef index="73" name="Anton Ivanovič Claude"
+				vorname="Anton Ivanovič" nachname="Claude" komm="claude" />
+			
+			<personDef index="74" name="Karl Iwanowitsch Burner"
+				vorname="Karl Iwanowitsch" nachname="Burner" komm="burner" />
+			
+			<personDef index="75" name="Salomon Brunner" ref="http://d-nb.info/gnd/134124006"
+				vorname="Salomon" nachname="Brunner" komm="brunner" />
+			
+			<personDef index="76" name="Schottländer"
+				vorname="NN" nachname="Schottländer" komm="schottländer" />
+			
+			<personDef index="77" name="Baron Otto Wilhelm v. Stiernhielm"
+				vorname="Otto Wilhelm" nachname="Baron v. Stiernhielm" komm="von stiernhielm" />
+			
+			<personDef index="78" name="Johann Christian Firnhaber" ref="http://d-nb.info/gnd/133223914"
+				vorname="Johann Christian" nachname="Firnhaber" komm="firnhaber" />
+			
 		</personDefs>
 
 
@@ -236,6 +308,44 @@
 			<locationDef index="33" name="Wohl auf der Reise nach Emmendingen" />
 			
 			<locationDef index="34" name="Auf dem Weg von Hannover nach Kassel?" />
+			
+			<locationDef index="35" name="Basel" ref="http://d-nb.info/gnd/4004617-5"  />
+			
+			<locationDef index="36" name="Schweiz" ref="http://d-nb.info/gnd/4053881-3"  />
+			
+			<locationDef index="37" name="Ursener Tal an der Matte"  />
+			
+			<locationDef index="38" name="Neuenburg" ref="http://d-nb.info/gnd/4075303-7"  />
+			
+			<locationDef index="39" name="Bern" ref="http://d-nb.info/gnd/4005762-8"  />
+			
+			<locationDef index="40" name="Castion" ref="http://d-nb.info/gnd/4742201-4"  />
+			
+			<locationDef index="41" name="Winterthur" ref="http://d-nb.info/gnd/4066337-1"  />
+			
+			<locationDef index="42" name="Waldersbach" ref="http://d-nb.info/gnd/10197465-6"  />
+			
+			<locationDef index="43" name="Weisweil" ref="http://d-nb.info/gnd/4417847-5"  />
+			
+			<locationDef index="44" name="Riga" ref="http://d-nb.info/gnd/4050042-1"  />
+			
+			<locationDef index="45" name="Jamburg (Kingissepp)" ref="http://d-nb.info/gnd/7853282-6"  />
+			
+			<locationDef index="46" name="St. Petersburg" ref="http://d-nb.info/gnd/4267026-3"  />
+			
+			<locationDef index="47" name="Cronstadt (Kronstadt)" ref="http://d-nb.info/gnd/7612964-0"  /><!-- Ist hier das Kronstadt in Rumänien gemeint? -->
+			
+			<locationDef index="48" name="Aya (Ahja)"  />
+			
+			<locationDef index="49" name="Ohlershoff (Oleri)"  />
+			
+			<locationDef index="50" name="Moskau" ref="http://d-nb.info/gnd/4074987-3"  />
+			
+			<locationDef index="51" name="unbekannter Ort"  />
+			
+			<locationDef index="52" name="auf der Reise"  />
+			
+			
 			
 		</locationDefs>
 		<appDefs>
