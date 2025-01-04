@@ -4026,7 +4026,7 @@
 		</letterDesc>
 		
 		<letterDesc letter="268">
-			<date value="Straßburg,20. Dezember 1776" />
+			<date value="Straßburg, 20. Dezember 1776" />
 			<sort value="1776-12-20" />
 			<location ref="7" />
 			<senders>
@@ -4034,6 +4034,21 @@
 			</senders>
 			<receivers>
 				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="269">
+			<date value="Emmendingen, 24. Dezember 1776" />
+			<sort value="1776-12-24" />
+			<location ref="12" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="17" />
 			</receivers>
 			<hasOriginal value="true" />
 			<isProofread value="true" />

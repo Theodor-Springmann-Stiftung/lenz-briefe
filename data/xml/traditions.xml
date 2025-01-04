@@ -1670,5 +1670,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="269">
+			<app ref="4">
+				Weimar, Goethe- und Schiller-Archiv, GSA 44/69, Bl. 26
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
