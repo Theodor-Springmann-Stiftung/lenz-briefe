@@ -4070,5 +4070,19 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="271">
+			<date value="Januar/Februar 1777" /><!-- Ort fehlt -->
+			<sort value="1777-01-31" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="26" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

@@ -1682,5 +1682,14 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="271">
+			<app ref="4">
+				Nürnberg, Germanisches Nationalmuseum, Autographen Böttiger K. 29 (Lenz); bei Freye/Stammler 
+				und Damm noch datiert auf Berka, Juli 1776; vgl. Wielands Briefwechsel. Bd. 5. Bearbeitet von Hans 
+				Werner Seiffert. Berlin: Akademie-Verlag 1983, S. 598 (nach dem o. g. Autograph); siehe auch ebd., 
+				Bd. 6, Tl. 3 (1995), S. 1627f.
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
