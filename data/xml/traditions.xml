@@ -1787,5 +1787,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="287">
+			<app ref="4">
+				Zürich, Zentralbibliothek, Ms. M 1.183, Nr. 2
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
