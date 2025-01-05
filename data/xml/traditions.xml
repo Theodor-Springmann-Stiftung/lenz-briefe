@@ -1703,5 +1703,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="274">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 17
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>

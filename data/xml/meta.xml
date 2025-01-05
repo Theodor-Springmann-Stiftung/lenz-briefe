@@ -4114,5 +4114,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="274">
+			<date value="Emmendingen, [vor 22. April 1777], warum nicht 9. April 1777" /><!-- Kommentar in der Datierung -->
+			<sort value="1777-04-09" />
+			<location ref="12" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="20" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
