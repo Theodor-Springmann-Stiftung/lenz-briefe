@@ -4249,5 +4249,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="283">
+			<date value="Zürich, 2. Juni 1777" />
+			<sort value="1777-06-02" />
+			<location ref="11" />
+			<senders>
+				<sender ref="58" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
