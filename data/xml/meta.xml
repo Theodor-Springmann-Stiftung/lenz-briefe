@@ -4144,5 +4144,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="276">
+			<date value="Schweiz, Wohl Frühjahr 1777" />
+			<sort value="1777-04-15" />
+			<location ref="36" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="56" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
