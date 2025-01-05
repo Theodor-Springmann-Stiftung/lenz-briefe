@@ -1676,5 +1676,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="270">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 16
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>

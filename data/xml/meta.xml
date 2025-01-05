@@ -4055,5 +4055,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="270">
+			<date value="Emmendingen, Wohl bald nach 24. Januar 1777" />
+			<sort value="1777-01-30" />
+			<location ref="12" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="20" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
