@@ -1750,5 +1750,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="281">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 18
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>

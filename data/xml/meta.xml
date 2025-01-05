@@ -4219,5 +4219,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="281">
+			<date value="Schweiz, 26. Mai 1777" />
+			<sort value="1777-05-26" />
+			<location ref="36" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="20" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
