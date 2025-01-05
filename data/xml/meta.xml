@@ -4099,5 +4099,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="273">
+			<date value="Colmar, 5. April 1777" />
+			<sort value="1777-04-05" />
+			<location ref="26" />
+			<senders>
+				<sender ref="39" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
