@@ -348,6 +348,8 @@
 			
 			<locationDef index="52" name="auf der Reise"  />
 			
+			<locationDef index="53" name="Schinznach" ref="http://d-nb.info/gnd/1104293412"  />
+			
 			
 			
 		</locationDefs>

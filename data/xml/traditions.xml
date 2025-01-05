@@ -1744,5 +1744,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="280">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana 2, Nr. 10f
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>

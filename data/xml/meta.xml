@@ -4204,5 +4204,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="280">
+			<date value="Schinznach, 12.–15. Mai 1777" />
+			<sort value="1777-05-13" />
+			<location ref="53" />
+			<senders>
+				<sender ref="57" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
