@@ -1781,5 +1781,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="286">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 5
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>

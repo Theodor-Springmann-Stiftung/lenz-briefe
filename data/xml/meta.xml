@@ -4296,5 +4296,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="286">
+			<date value="Ursener Tal an der Matte, 14. Juni 1777" />
+			<sort value="1777-06-14" />
+			<location ref="37" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
