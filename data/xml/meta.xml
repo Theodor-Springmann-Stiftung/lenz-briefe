@@ -4189,5 +4189,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="279">
+			<date value="Schinznach/Zürich, 12.-15. Mai 1777" />
+			<sort value="1777-05-12" />
+			<location ref="11" />
+			<senders>
+				<sender ref="10" /><!-- Wer ist Absender Br.? -->
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

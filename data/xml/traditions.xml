@@ -1736,5 +1736,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="279">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 31a; Zuschreibung und Datierung des 
+				Zettels unsicher: recto Notiz von Lenz (?) und Verse von Lavater (?); verso Notizen von anderer zg. 
+				Hand.
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>
