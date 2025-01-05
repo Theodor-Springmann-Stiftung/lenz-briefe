@@ -237,6 +237,9 @@
 			<personDef index="78" name="Johann Christian Firnhaber" ref="http://d-nb.info/gnd/133223914"
 				vorname="Johann Christian" nachname="Firnhaber" komm="firnhaber" />
 			
+			<personDef index="79" name="Getrud Sarasin" ref="http://d-nb.info/gnd/1117247015"
+				vorname="Gertrud" nachname="Sarasin" komm="sarasin" />
+			
 		</personDefs>
 
 
