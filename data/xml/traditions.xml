@@ -1841,6 +1841,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="296">
+			<app ref="4">
+				Schmidt, Lenziana, S. 1017 (Entwurf); FSt hat andere Lesarten
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>

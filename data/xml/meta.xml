@@ -4447,5 +4447,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="296">
+			<date value="Schweiz, Spätsommer 1777" />
+			<sort value="1777-08-15" />
+			<location ref="36" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="41" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="true" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
