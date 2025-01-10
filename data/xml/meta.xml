@@ -4462,5 +4462,21 @@
 			<isDraft value="true" />
 		</letterDesc>
 		
+		<letterDesc letter="297">
+			<date value="Zürich, August 1777" />
+			<sort value="1777-08-25" />
+			<location ref="11" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="79" />
+				<receiver ref="80" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

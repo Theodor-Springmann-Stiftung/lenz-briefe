@@ -1847,6 +1847,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="297">
+			<app ref="4">
+				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 7
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
