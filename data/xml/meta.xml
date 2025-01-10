@@ -4402,5 +4402,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="293">
+			<date value="Basel, 19.–22. Juli 1777, Basel" />
+			<sort value="1777-07-19" />
+			<location ref="35" />
+			<senders>
+				<sender ref="80" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
