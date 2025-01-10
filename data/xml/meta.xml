@@ -4386,5 +4386,21 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="292">
+			<date value="Neuenburg, 10. Juli 1777" />
+			<sort value="1777-07-10" />
+			<location ref="38" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="79" />
+				<receiver ref="80" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
