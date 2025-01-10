@@ -4326,5 +4326,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="288">
+			<date value="Emmendingen, 24. Juni 1777" />
+			<sort value="1777-06-24" />
+			<location ref="12" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
