@@ -240,7 +240,7 @@
 			<personDef index="79" name="Getrud Sarasin" ref="http://d-nb.info/gnd/1117247015"
 				vorname="Gertrud" nachname="Sarasin" komm="sarasin" />
 			
-			<personDef index="79" name="Jakob Sarasin" ref="http://d-nb.info/gnd/11947624X"
+			<personDef index="80" name="Jakob Sarasin" ref="http://d-nb.info/gnd/11947624X"
 				vorname="Jakob" nachname="Sarasin" komm="j-sarasin" />
 			
 		</personDefs>
