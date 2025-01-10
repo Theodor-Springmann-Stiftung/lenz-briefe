@@ -4356,5 +4356,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="290">
+			<date value="Basel, 4. Juli 1777" />
+			<sort value="1777-07-04" />
+			<location ref="35" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="58" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
