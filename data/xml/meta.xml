@@ -4403,7 +4403,7 @@
 		</letterDesc>
 		
 		<letterDesc letter="293">
-			<date value="Basel, 19.–22. Juli 1777, Basel" />
+			<date value="Basel, 19.–22. Juli 1777" />
 			<sort value="1777-07-19" />
 			<location ref="35" />
 			<senders>
@@ -4411,6 +4411,21 @@
 			</senders>
 			<receivers>
 				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="294">
+			<date value="Bern, 7. August 1777" />
+			<sort value="1777-08-07" />
+			<location ref="39" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
 			</receivers>
 			<hasOriginal value="true" />
 			<isProofread value="true" />

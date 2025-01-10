@@ -1829,5 +1829,11 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="294">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 25
+			</app>
+		</letterTradition>
+		
 	</traditions>
 </opus>

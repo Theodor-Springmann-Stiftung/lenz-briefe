@@ -8412,9 +8412,9 @@
 			<align pos="right">L.</align><line type="break"/>
 			nur daß dieser Brief nicht auch gedruckt wird. <line type="empty"/>
 			
-			<line tab="1"/>[am linken Rand, vertikal] Ich danke für die Liste: sie kam mir zwar ein wenig zu spät. Wissen Sie mir nicht 
+			<line tab="1"/><sidenote pos="left" page="3" annotation="am linken Rand, vertikal">Ich danke für die Liste: sie kam mir zwar ein wenig zu spät. Wissen Sie mir nicht 
 			zu sagen, wohin man Briefe an Hn. v. Lindau adressirt und wenn wieder ein Schiff abgeht auch ob stark 
-			geworben wird. <line type="empty"/>
+			geworben wird.</sidenote> <line type="empty"/>
 			
 			<page index="4"/><line type="break"/>
 			<note>Adresse</note><line type="break"/>
@@ -10480,6 +10480,33 @@
 			Schreiben Sie mir und solltens nur Zeilen seyn. <line type="empty"/>
 			
 			Villeicht finden Sie in Meyland noch einen Brief von mir.</letterText>
+		
+		<letterText letter="294"><align pos="right">Bern d. 7 August 1777<line type="break"/>
+			<gr>εν πιστει</gr>.</align> <line type="empty"/>
+			<line type="empty"/>
+			
+			<line tab="1"/>Lavater! ich bin hier in einem theuren Wirthshause und ohne Geld – und erwarte von Dir – daß Du mir 
+			gleich nach Ansicht dieses eine Louisd’or und einen Dukaten zuschickest Schiebst Dus einen Posttag 
+			auf, so gerath ich in Schulden und andern Händeln die noch schlimmer sind. Wie ich hie 
+			hergekommen, frag nicht, alles das läßt sich im Briefe nicht füglich sagen. – Ich hoffe Schlosser hat 
+			Dir für mich schon Geld von Weygandt zugeschickt; ists geschehn, so wieg ich Deinem Arm desto weniger, 
+			der mich in dem Fall in dem ich itzt bin, ganz allein stützen kann <line type="empty"/>
+			
+			<line tab="1"/>Ich werde nicht in Zürich bleiben können. Ausgenommen daß vor der Hand – meine Wirthschaftsumstände dort 
+			richten werde und mir deshalb ein acht Tage Aufenthalt in Deinem Hause ausbitten muß. Kanns aber nicht seyn 
+			so sags nur ohne Rückhalt, <ul>denn Du bist ohnehin geplagt genug.</ul> Deine jetzige Hülfe aber muß ich haben, weil 
+			auf die Schleunigkeit derselben eine unendliche Menge Nebenumstände beruhet, die für mich eben sowohl von den 
+			besten als von den entsetzlichsten Folgen seyn könnten <line type="empty"/>
+			
+			<align pos="right">Lenz.</align> <line type="empty"/>
+			
+			<sidenote pos="left" page="1" annotation="Am linken Rand, vertikal">Ich habe mich hinter Sitten von Hohenthal getrennt, von dem ich kein Geld habe nehmen wollen.</sidenote> <line type="empty"/>
+			
+			<line tab="1"/>Meine Adresse ist in der Krone zu Bern. Ich verlasse mich drauf, aufs späteste künftigen Donnerstag als den 14ten 
+			eine Antwort von Dir zu haben, wie mir Pestalotz der Jüngere, der diesen Brief mitnimmt, versichert hat. – <line type="empty"/>
+			
+			<line tab="1"/>Gegenwärtigen Zettel laß doch Bester – Kaisern – aber nicht dem Römischen – <ul>aufs geschwindeste</ul> zukommen. Vielleicht 
+			will er meine Adresse, die ich ihm zu geben vergessen, alsdenn bitte sie ihm zu sagen. <aq>a rivederti.</aq></letterText>
 		
 
 	</document>
