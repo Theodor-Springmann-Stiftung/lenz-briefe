@@ -7170,7 +7170,7 @@
 			<line tab="5"/>Vor und um meinetwillen da, der Wald, die Wiese
 			<line tab="5"/>Auf die ich mich ehmals kaum zu treten traute
 			<line tab="5"/>War nur für mich geschaffen und die Blumen
-			<line tab="5"/><insertion pos="top">Bey</insertion> <!-- Handelt es sich hier um eine weitere Einfügung? -->˕<del><nr>  </nr></del>˕ denen ich wie vor dem Herrn vom Hause
+			<line tab="5"/><insertion pos="top">Bey</insertion> <!-- Handelt es sich hier um eine weitere Einfügung? --><insertion pos="top"><del><nr>  </nr></del></insertion> denen ich wie vor dem Herrn vom Hause
 			<line tab="5"/>Sonst ehrfurchtsvoll vorbey schlich schienen nun
 			<line tab="5"/>Nur drauf zu harren <insertion pos="top">daß mein <del><nr>         </nr></del></insertion> <del><nr>         </nr></del> <insertion pos="bottom">daß mein Fuß sie knickten</insertion>
 			<line tab="5"/><del><nr>         </nr></del> – <del>wie <del><nr>   </nr></del> theilt ich ihr Schicksal</del> <line type="empty"/>
@@ -10209,6 +10209,57 @@
 			Herrn <ul>Füesli</ul><line type="break"/>
 			Professor der Geschichte<line type="break"/>
 			zu Zürich.</letterText>
+		
+		<letterText letter="291"><align pos="right">Neuenburg d. 10ten Julius 177<del>6</del><note>7</note>.</align> <line type="empty"/>
+			<line type="empty"/>
+			<line type="empty"/>
+			
+			<line tab="1"/>Noch einmal muß ich Ihnen mein theurester Freund und Gönner! mit einem Briefe und einigen 
+			Zumuthungen beschwerlich fallen, zu denen mir nur Ihre mir bisher erzeigten Gütigkeiten Muth genug 
+			einflössen. Ich habe bey Hn. Hofrath Schlosser einen seiner alten Bekannten, einen Baron v. Hohenthal, 
+			Sohn des Chursächsischen Ministers angetroffen, der sich längst vorgenommen eine Reise durch die 
+			ganze Schweitz zu machen und sich zu dem Ende schon mit den hinlänglichen Adressen versehen; dieser 
+			bewegte mich ihn auf derselbigen zu begleiten und die Hofnung einige der interessantesten Aussichten 
+			die ich in meinem Leben gehabt wieder zu sehen, hauptsächlich aber meine würdigen Bekanntschaften in 
+			Zürich wieder zu erneuren und gründlicher zu benutzen, machten mich bald einwilligen. Wir machten den 
+			Anfang mit der französischen Schweitz und schon im Wagen zwischen Solothurn und Neuburg, noch mehr aber 
+			hier, wo der Rath einiger Bekannten des Barons dazugekommen ist, haben <page index="2"/> wir unsern Entschluß 
+			nicht sowohl geändert als erweitert, das heißt uns vorgenommen, wenn wir über Genf Lausanne Vivis durch 
+			das Walliser Thal nach dem Furka gekommen, von dort über den Gotthard und von da – in das glückliche 
+			geliebte Italien zu gehen, dort so geschwind als möglich und als es uns die Jahreszeit die wir zur Rükkehr 
+			abpassen müssen, erlauben wird, alles zu sehen was sehenswerth ist und was wir erreichen können, das heißt 
+			zum allerwenigsten Mayland, Florenz, Rom – wo möglich auch Neapel – und wenn uns Zeit übrig bleibt 
+			Venedig u. Genua – doch die letztern Oerter stehen noch auf der <aq>terra incognita</aq> unserer Reisekarte, die drey 
+			erstem aber sehen wir <ul>gewiß</ul> und Neapel, wenn die Hitze uns nicht abhalten sollte, mit vieler Wahrscheinlichkeit. 
+			Der Baron hat schon Verfügungen in Ansehung seiner Geldremessen getroffen, das einzige was uns fehlte und womit 
+			er sich nicht versehen hat, sind anderweitige Empfehlungen an gute Häuser in diesen <page index="3"/> Hauptorten, weil 
+			wir schon auf dem kurzen Anfang dieser Reise erfahren gelernt, mit welchen unschätzbaren Vorzügen diese eine 
+			Reise auszeichnen, die nicht wie die meisten der Herrn Engländer und Franzosen ein bloßes Postlauffen und Begaffen, 
+			sondern eine Spekulation für unsere ganze Weltkenntniß und künftiges Leben seyn soll. Hier also mein würdiger 
+			Freund ist es, wo wir Ihrer Hülfe bedürfen. Sie haben Italien gesehen und kennen darum mehr als die <aq>Cicerone:</aq> nach 
+			Mayland haben wir von hier Kaufmannsadressen, aber die Wege zu Bekanntschaften von Leuten die Ihnen ähnlich sind 
+			in Mayland Rom Neapel, sind uns noch nicht geöfnet, zu Leuten auf deren Kenntnisse wir bauen, deren Herz uns ihre 
+			Gefühle für das was wir aus der Entfernung oft nur unter Nebeln erkannten, mitzutheilen, Liebhaber der Menschheit 
+			genug ist. Wir möchten gern auf unsere Reise stolz, wieder zurück in Ihre Arme fliegen und Ihnen mittheilen, was 
+			Sie jetzt durch unsere Augen, zwar wie durch schlechte Ferngläser, zum andernmal sehen sollen. Wollen Sie meine 
+			Bitte erhören, so schicken Sie <page index="4"/> uns einige Briefe nach Rom, Neapel <aq>etc.</aq> ins Urserental an Herrn <ul>Amman Meyer, </ul>der 
+			mich nun kennt, mit einigen Zeilen, sie uns aufzubewahren bis wir selbst abholen. Hoffentlich hat er meinen Namen 
+			nicht vergessen, wenigstens wird sich seine Tochter die ich abgezeichnet meiner erinnern. Sollten einige andere 
+			Ihrer u. meiner würdigen <insertion pos="top">Zürcher-</insertion>Freunde in Italien Bekanntschaften haben, und wollten ihre Gütigkeilen gegen 
+			mich bis dahin ausdehnen, so würd ich bey meiner Wiederkunft, wo ich meinen Reisegefährthen Ihnen bekannt zu machen 
+			hoffe, (er ist einer der gesetztesten jungen Edelleute die ich in meinem Leben gesehen, fast ein wenig zu ernst) 
+			Ihnen den empfindlichsten Dank dafür wissen. Wollten Sie so gütig seyn und noch eine kleine Instruktion, derjenigen 
+			ähnlich die Sie uns in die Berge mitgaben, von allen Merkwürdigkeiten und der Ordnung in welcher wir sie sehen sollen 
+			nebst anderweiten Aufträgen an verdienstvollen Leuten dieser Orte beylegen, und uns arme kaum flügge Reisende auf 
+			diese Art auf Ihren Flügeln über alle diese Wunder und Geheimnisse unterrichtend forttragen, wie Sie es schon in den 
+			Eißgebirgen gethan, so würde das Edle dieser That destomehr Genugthuung für Ihr Herz haben. <line type="empty"/>
+			
+			<line tab="1"/>Empfehlen Sie mich Ihrer liebenswürdigen Schweitzersängerinn aufs schönste, im gleichen Dero Hn. Vater u. sämtlichen 
+			Angehörigen und erfreuen mit einer Antwort Ihren ganz ergebenen Wanderer<line type="break"/>
+			<align pos="right">Lenz</align> <line type="empty"/>
+			
+			<line tab="1"/><sidenote pos="left" page="4" annotation="Am linken Rand, vertikal">Unbeschwert bitte doch Einlage Hn. Sarasin in Basel zukommen zu lassen und wenn er antworten sollte (worauf aber doch 
+			über 2 Posttage nicht zu warten bitte) seinen Brief gütigst dem Ihrigen an Landamman Meyer beyzuschliessen.</sidenote></letterText>
 		
 
 	</document>
