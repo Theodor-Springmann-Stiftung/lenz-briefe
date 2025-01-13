@@ -8526,7 +8526,7 @@
 			<aq><line tab="5"/>i beg thee to see frequently the spouse of
 			<line tab="5"/>the lady. I have a pressentiment thou willst
 			<line tab="5"/>thank me of having given thee a counsel
-			<line tab="5"/>needful. A[a]t least <note>Textverlust</note>
+				<line tab="5"/>needful. A<note>a</note>t least <note>Textverlust</note>
 			<line tab="5"/>it <del><nr> </nr></del> is only given <note>Textverlust</note>
 			<pe>
 			<line tab="5"/>thou kno<note>Textverlust</note>
@@ -10378,7 +10378,7 @@
 			
 			Aussert Mayland u. Parma nichts französisches: Ist überall verhasst. <line type="empty"/>
 			
-			<note>[rechte Spalte]</note><line type="break"/>
+			<note>rechte Spalte</note><line type="break"/>
 			<align pos="center"><aq>Weiber.</aq></align> <line type="empty"/>
 			
 			Hüten Sie sich vor genauer Bekandtschafft mit fürnehmen Weibern. <line type="empty"/>
@@ -10978,6 +10978,74 @@
 			<align pos="center">Ihr Freund</align><line type="break"/>
 			<align pos="right">Lenz.</align><line type="break"/>  
 			Zürich d. 29sten 7br.</letterText>
+		
+		<letterText letter="303"><align pos="right">Den 10. 8br. 1777.</align> <line type="empty"/> 
+			<line type="empty"/>
+			<line type="empty"/>
+			
+			<line tab="1"/>Ich befinde mich nicht wohl, lieber Freund! und will deßwegen Morgen eine kleine Reise zu Hn. von 
+			Salis thun. Füeßli war sehr gerührt über das Lob das Sie ihm beylegen. Herrn Rathschreiber Iselin 
+			bitte doch gelegentlich zu sagen, die Briefe die Herr v. Kleist empfangen haben könnte, würden mich 
+			eben so sehr interessiren, da überhaupt sein Leben selbst unter seinen Verwandten mit denen ich in 
+			Verbindung stehe viel zu wenig bekannt ist. Er wird mich dadurch ungemein verbinden. Was Küttner 
+			anbetrift, so muß ihm die Bekanntmachung eines Briefs aus seinem Portefeuille eben so unangenehm seyn, 
+			als mirs vorkommen würde, wenn man Particularbriefe von mir ohne mein Wissen drucken liesse. Er wird 
+			am besten thun, wenn er ganz stille dazu schweigt, es ist des Lärmens ohnehin genug. <line type="empty"/>
+			
+			<line tab="1"/>Hier folgen die verlangten Silhouetten mit den wärmsten Empfehlungen von dem mit Geschäften überladenen 
+			Lavater und seiner erst matt aufkriechenden Frau. Ihrer Frau Gemalinn aber in dem Zustande zu schreiben 
+			in dem ich bin, wage ich nicht. Dürft ich um Ihre beyden Silhouetten bitten, Lavater will sie mir nicht 
+			geben. <line type="empty"/>
+			
+			<line tab="1"/>Wohl Ihnen daß Sie mit Ihrer neuen Anstalt nicht so <page index="2"/> poetisch anfangen, wie der arme Salis den ich 
+			itzt besuchen will und der letzt hier war. Pfeffeln einen Kuß für mich, Herr Peil hat mir mit seinen 
+			Erzehlungen von Colmar viele Freude gemacht, besonders bey Geßnern wohin ich ihn führte u. wo er recht in 
+			der Laune war. <line type="empty"/>
+			
+			Ist Schlosser bei Pfeffeln gewesen und in welcher Laune? – Seyn Sie so gütig mich darüber zu berichten. <line type="empty"/>
+			
+			<line tab="1"/>Hier in Ermangelung eines Liedgens an <ul>„Ihr Weib und Schinznach“</ul> das ich schuldig bleibe bis Cörper und Gemüth 
+			bey mir in bessern Umständen sind – – (den Vornahmen der ersteren möchte’ ich mir doch ausbitten) ein Liedgen 
+			auf Schlossers jüngstes Kind. <line type="empty"/>
+			
+			Lassen Sie sichs wohl seyn, der Himmel hat noch viel für Sie aufgehoben. <line type="empty"/>
+			
+			<align pos="right">JMR Lenz.</align> <line type="empty"/>
+			
+			<line tab="1"/>Kaufmann muß allem Vermuthen nach hieher unterwegs seyn, es sind schon Briefe für ihn da. Er hat viel Ungemachs 
+			erlitten, Seesturm u. s. f. <line type="empty"/>
+			
+			<page index="3"/><line type="break"/>
+			<align pos="center"><line tab="5"/>Willkommen kleine Bürgerin
+			<line tab="5"/>Im bunten Thal der Lügen!
+			<line tab="5"/>Du gehst dahin, du Lächlerin!
+			<line tab="5"/>Dich ewig zu betrügen.
+			x<line type="break"/><!-- Besondere Formatierung? -->
+			<line tab="5"/>Was weinest Du? die Welt ist rund
+			<line tab="5"/>Und nichts darauf beständig.
+			<line tab="5"/>Das Weinen nur ist ungesund
+			<line tab="5"/>Und der Verlust nothwendig.
+			x<line type="break"/>
+			<line tab="5"/>Einst wirst du, kleine Lächlerin!
+			<line tab="5"/>Mit süsserm Schmerze weinen
+			<line tab="5"/>Wenn alle deinen treuen Sinn
+			<line tab="5"/>Gott! zu verkennen scheinen.
+			x<line type="break"/>
+			<line tab="5"/>Dann wirst du stehn auf deinem Werth
+			<line tab="5"/>Und blicken, wie die Sonne
+			<line tab="5"/>Von der ein jeder weg sich kehrt
+			<line tab="5"/>Zu blind für ihre Wonne.
+			x<line type="break"/>
+			<line tab="5"/>Bis daß der Adler kommen wird
+			<line tab="5"/>Aus fürchterlichen Büschen,
+			<line tab="5"/>Der Welten ohne Trost durchirrt –
+			<line tab="5"/>Wie wirst du ihn erfrischen!</align> <line type="empty"/>
+			
+			<note>Schnörkel</note> <line type="empty"/>
+			
+			Viel Empfehlungen Ihren kleinen Eydgenossen in Pumphosen. Auch deren Namen schreiben Sie mir doch einmahl auf. <line type="empty"/>
+			
+			Ich bitte die Verse nicht weiter zu weisen.</letterText>
 		
 
 	</document>
