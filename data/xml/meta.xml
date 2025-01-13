@@ -4628,5 +4628,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="308">
+			<date value="Winterthur, 12. Dezember 1777" />
+			<sort value="1777-12-12" />
+			<location ref="41" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="80" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
