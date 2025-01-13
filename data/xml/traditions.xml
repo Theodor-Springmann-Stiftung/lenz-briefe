@@ -1994,6 +1994,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="321">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 2
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>

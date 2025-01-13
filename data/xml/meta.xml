@@ -4824,5 +4824,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="321">
+			<date value="Riga, 13. Oktober 1779 (datiert nach dem Julianischen Kalender: 2. Oktober 1779)" />
+			<sort value="1779-10-13" />
+			<location ref="44" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="17" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
