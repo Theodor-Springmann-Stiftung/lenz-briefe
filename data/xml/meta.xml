@@ -4643,5 +4643,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="309">
+			<date value="Schloss Hegi, Zweite Dezemberhälfte 1777" />
+			<sort value="1777-12-15" />
+			<location ref="54" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="58" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

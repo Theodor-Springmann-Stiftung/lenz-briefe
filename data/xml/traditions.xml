@@ -1921,6 +1921,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="309">
+			<app ref="4">
+				Zürich, Zentralbibliothek, Ms. M 1.183, Nr. 1  
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
