@@ -16,9 +16,9 @@
 			<isDraft value="false" />
 		</letterDesc>
 		<letterDesc letter="2">
-			<date value="Tarwast (Tarvastu), 11. Oktober 1767" />
+			<date value="Dorpat (Tartu), 11. Oktober 1767" />
 			<sort value="1767-10-11" />
-			<location ref="2" />
+			<location ref="1" />
 			<senders>
 				<sender ref="1" />
 			</senders>
