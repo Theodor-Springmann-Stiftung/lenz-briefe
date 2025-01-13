@@ -1866,6 +1866,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="300">
+			<app ref="4">
+				Basel, Staatsarchiv, PA 98, 37, S. 221–224 
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
