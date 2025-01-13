@@ -4794,5 +4794,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="319">
+			<date value="Weisweil, 30. September 1778" />
+			<sort value="1778-09-30" />
+			<location ref="43" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="80" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
