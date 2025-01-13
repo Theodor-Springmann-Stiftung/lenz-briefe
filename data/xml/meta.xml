@@ -777,9 +777,9 @@
 		</letterDesc>
 		
 		<letterDesc letter="52">
-			<date value="Straßburg, Wahrscheinlich Anfang Juni 1775" />
+			<date value="vermutlich Emmendingen, wahrscheinlich Anfang Juni 1775" />
 			<sort value="1775-06-07" />
-			<location ref="7" />
+			<location ref="12" />
 			<senders>
 				<sender ref="1" />
 			</senders>
