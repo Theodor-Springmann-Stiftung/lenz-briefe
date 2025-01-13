@@ -4809,5 +4809,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="320">
+			<date value="Wohl auf der Reise nach Livland, Sommer 1779" />
+			<sort value="1779-07-01" />
+			<location ref="55" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="61" />
+			</receivers>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

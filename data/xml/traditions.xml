@@ -1988,6 +1988,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="320">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Krakau, Lenziana 5, Nr. 34 (Abschrift)
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
