@@ -4764,5 +4764,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="317">
+			<date value="Weisweil, 13. August 1778" />
+			<sort value="1778-08-13" />
+			<location ref="43" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="80" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
