@@ -4658,5 +4658,35 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="310">
+			<date value="Basel, 31. Dezember 1777" />
+			<sort value="1777-12-31" />
+			<location ref="35" />
+			<senders>
+				<sender ref="80" />
+			</senders>
+			<receivers>
+				<receiver ref="1" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="311">
+			<date value="Waldersbach, 22. Januar 1778" />
+			<sort value="1778-01-22" />
+			<location ref="42" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

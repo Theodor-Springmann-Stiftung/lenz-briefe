@@ -1927,6 +1927,18 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="310">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 54 
+			</app>
+		</letterTradition>
+		
+		<letterTradition letter="311">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 16
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
