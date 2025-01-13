@@ -1879,6 +1879,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="302">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 19  
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
