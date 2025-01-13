@@ -4734,5 +4734,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="315">
+			<date value="Emmendingen, Anfang August 1778" />
+			<sort value="1778-08-01" />
+			<location ref="12" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="80" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

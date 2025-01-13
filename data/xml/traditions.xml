@@ -1958,6 +1958,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="315">
+			<app ref="4">
+				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 17
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
