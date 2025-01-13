@@ -1859,6 +1859,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="299">
+			<app ref="4">
+				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 9; auf dem gleichen Bogen wie: Basel, Staatsarchiv, PA 
+				212 F 11, 27, 10, Nr. 10 (Brief gleichen Datums an Jacob Sarasin)
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
