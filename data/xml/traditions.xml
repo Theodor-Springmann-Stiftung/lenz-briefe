@@ -1853,6 +1853,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="298">
+			<app ref="4">
+				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 8
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
