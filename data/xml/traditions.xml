@@ -1909,6 +1909,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="307">
+			<app ref="4">
+				Zürich, Zentralbibliothek, FA Hirzel 232, Nr. 186  
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
