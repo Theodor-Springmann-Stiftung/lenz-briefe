@@ -4568,5 +4568,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="303">
+			<date value="Zürich, Anfang November 1777" />
+			<sort value="1777-11-05" />
+			<location ref="11" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="80" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
