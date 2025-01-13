@@ -4688,5 +4688,21 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="312">
+			<date value="Emmendingen, 9. März 1778" />
+			<sort value="1778-03-09" />
+			<location ref="12" />
+			<senders>
+				<sender ref="18" />
+				<sender ref="82" />
+			</senders>
+			<receivers>
+				<receiver ref="4" />
+			</receivers>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

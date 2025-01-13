@@ -243,8 +243,11 @@
 			<personDef index="80" name="Jakob Sarasin" ref="http://d-nb.info/gnd/11947624X"
 				vorname="Jakob" nachname="Sarasin" komm="j-sarasin" />
 			
-			<personDef index="81" name="Isaak Iselin " ref=" http://d-nb.info/gnd/118555952"
+			<personDef index="81" name="Isaak Iselin" ref="http://d-nb.info/gnd/118555952"
 				vorname="Isaak" nachname="Iselin" komm="iselin" />
+			
+			<personDef index="82" name="Jakob Lenz" ref="http://d-nb.info/gnd/130343900"
+				vorname="Jabok" nachname="Lenz" komm="j-lenz" />
 			
 		</personDefs>
 

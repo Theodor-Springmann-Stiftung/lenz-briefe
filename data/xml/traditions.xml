@@ -1939,6 +1939,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="312">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Krakau, Lenziana 5, Nr. 35 (Abschrift; „Copia  eines Briefes des 
+				Herrn Hofrath Schloßers aus Emmendingen an den Probst Lenz de dato den 9 Märtz. N. St. 1778.“)
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
