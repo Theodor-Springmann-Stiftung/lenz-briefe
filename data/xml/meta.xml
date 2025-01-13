@@ -4704,5 +4704,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="313">
+			<date value="Emmendingen, Kurz vor 24. Juni 1778" />
+			<sort value="1778-06-20" />
+			<location ref="12" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="80" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
