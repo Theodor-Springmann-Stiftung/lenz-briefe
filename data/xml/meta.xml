@@ -2131,9 +2131,9 @@
 		</letterDesc>
 		
 		<letterDesc letter="142">
-			<date value="Straßburg, Ende März 1776" />
+			<date value="Frankfurt am Main, Ende März 1776" />
 			<sort value="1776-03-24" />
-			<location ref="7" />
+			<location ref="56" />
 			<senders>
 				<sender ref="1" />
 			</senders>
