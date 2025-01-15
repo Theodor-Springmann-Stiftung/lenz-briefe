@@ -3876,9 +3876,9 @@
 		</letterDesc>
 		
 		<letterDesc letter="258">
-			<date value="Marbach, Ende November 1776" /><!-- Ort fehlt im Transkript --><!-- Welches Marbach ist hier gemeint -->
+			<date value="Berka, Ende November 1776" />
 			<sort value="1776-11-25" />
-			<location ref="32" />
+			<location ref="14" />
 			<senders>
 				<sender ref="1" />
 			</senders>
