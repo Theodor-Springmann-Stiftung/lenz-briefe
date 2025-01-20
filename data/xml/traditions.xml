@@ -2079,6 +2079,14 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="335">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 23. Der Br. an den Bruder steht am 
+				Rand der verso–Seite einer von Lenz selbst angefertigten Kopie seines Br. an Freifrau von 
+				Vietinghoff.
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>

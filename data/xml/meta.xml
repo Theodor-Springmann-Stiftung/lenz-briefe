@@ -5034,5 +5034,21 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="335">
+			<date value="St. Petersburg, April 1780" />
+			<sort value="1780-04-25" />
+			<location ref="46" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="3" />
+				<receiver ref="68" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
