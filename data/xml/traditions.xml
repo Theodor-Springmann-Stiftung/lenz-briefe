@@ -2024,6 +2024,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="326">
+			<app ref="4">
+				FSt II 149–151 (Der Brief erreicht Christian Brion nicht)
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
