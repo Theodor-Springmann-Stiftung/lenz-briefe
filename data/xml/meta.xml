@@ -5170,5 +5170,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="344">
+			<date value="Dorpat (Tartu)?, November 1780" />
+			<sort value="1780-10-30" />
+			<location ref="1" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="2" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

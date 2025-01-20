@@ -12852,7 +12852,7 @@
 			<line tab="5"/>Der keines Staubs darauf vergißt
 			<align pos="center"><note>Kringel</note></align> <line type="empty"/>
 			
-			Lenz.<line type="break"/>
+			<align pos="right">Lenz.</align><line type="break"/>
 			<page index="8"/><line type="break"/>
 			<line tab="1"/>Hier lieber Bruder sind die Verse wieder und tausend Dank für die Erinnerungen, die ich zwar nicht 
 			alle habe brauchen können, die aber bei so manchen Stellen dennoch die Feile mir geführt haben. Du 
@@ -12868,6 +12868,50 @@
 			
 			<line tab="1"/><sidenote pos="left" page="8" annotation="Am linken Rand, vertikal">Wirst Du nicht die Geduld verlieren, heut nichts als Verse zu lesen. Sei versichert, daß meine Ader Dir wieder 
 			sehr lange Ruhe lassen wird.</sidenote></letterText>
+		
+		<letterText letter="344">HochEdelgeborner Herr<line type="break"/>
+			Insonders hochzuverehrender Herr Justiz-Bürgermeister! <line type="empty"/>
+			<line type="empty"/>
+			<line type="empty"/>
+			
+			<line tab="1"/>Da ich den Brief des Herrn Cabinetssekretair Nicolai gewisser Angelegenheiten wegen, Hn. 
+			Hartknoch zuschicken müssen: so nehme mir die Freiheit, Ew. HochEdelgeboren, das was Dieselben 
+			angehet, Auszugsweise zuzuschicken. <line type="empty"/>
+			
+			Auszug aus dem Briefe des Hn. Nicolai.<line type="break"/>
+			<line tab="1"/>„Ich danke Ihnen recht sehr für die Mittheilung des Briefes von H. Gadebusch. Etliche Nachrichten 
+			aus seinem Briefe werde ich mir ausschreiben. Sie ziehen mich aus einer Verlegenheit, in welche mich 
+			die Ungewißheit des Schicksales gewisser Bücher versetzte, die ich für <aq>incomplet</aq> hielt und deren 
+			Fortsetzung ich begehren wollte, da ich nun sehe, daß sie niemalen geendiget oder fortgesetzt worden 
+			sind. Um meine Bekannt-<page index="2"/> schaft mit ihm zu eröfnen, so sagen Sie ihm, daß ich gleich jetzt an 
+			Verfertigung des <aq>Catalogi</aq> der Grosfürstlichen (ehemals Korfischen) Bibliothek arbeite, daß ich, sobald 
+			er fertig seyn wird, ihm diejenigen Artikel mittheilen werde, die für ihn interessant sein können. Ich 
+			denke, das wird insonderheit die Liefländische, Polnische, Schwedische und Russische Geschichte seyn. 
+			Und wirklich haben wir in jedem Fache ziemlich viel und seltene Bücher. Insonderheit aber kann ihm 
+			vielleicht angenehm seyn, wenn Sie ihm melden, daß wir auch einen artigen Vorrath von Manuscripten haben, 
+			von <aq>Livonicis, Curlandicis, Polonicis, Russicis, Suecicis</aq> und daß ich mich von Herzen anerbiete, ihm 
+			nicht allein ein vollständiges Verzeichniß von den darin enthaltenen Stücken zuzusenden, sondern auch 
+			ihm auf <page index="3"/> Begehren diejenigen Stücke abschreiben zu lassen, die etwa seine Neugier erregen könnten. 
+			Vermelden Sie ihm dabei meine Empfehlung und mein aufrichtiges Verlangen, mit ihm in nähere Bekanntschaft 
+			zu treten.<line type="break"/>
+			<line tab="1"/>Meine Familien-Umstände, so wenig <aq>interessant</aq> sie auch für andere ausser mir seyn mögen, will ich Ihnen bey 
+			erster Musse kürzlich zusammenfassen und übersenden.“ <line type="empty"/>
+			
+			Sobald ich den Brief wiederbekomme, werde ihn Ew. HochEdelgeb. in der Handschrift weisen. <line type="empty"/>
+			
+			Mich nach gehorsamer Empfehlung an Dero Frau Gemalinn nennend <line type="empty"/>
+			
+			HochEdelgeborner Herr<line type="break"/>
+			Hochmehrender Herr Justiz-Bürgermeister<line type="break"/>
+			Ew. HochEdelgeb. <line type="empty"/>
+			<line type="empty"/>
+			<line type="empty"/>
+			<line type="empty"/>
+			
+			<align pos="right">aufrichtig ergebensten Diener<line type="break"/>
+			J M R Lenz.</align> <line type="empty"/>
+			
+			Von Hause d. Novbr. 1780.</letterText>
 		
 
 	</document>

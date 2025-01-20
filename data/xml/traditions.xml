@@ -2139,6 +2139,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="344">
+			<app ref="4">
+				Riga, Latvijas Valsts Vēstures Arhīvs, Fonda 4038, Aprakst 2, Lietas 1642, (Nr. 199), S. 749–752
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
