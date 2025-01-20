@@ -5140,5 +5140,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="342">
+			<date value="unbekannter Ort, nach der Abreise aus Aya, wohl September/Oktober 1780" />
+			<sort value="1780-09-30" />
+			<location ref="51" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="83" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="true" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

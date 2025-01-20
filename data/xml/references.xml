@@ -249,6 +249,9 @@
 			<personDef index="82" name="Jakob Lenz" ref="http://d-nb.info/gnd/130343900"
 				vorname="Jabok" nachname="Lenz" komm="j-lenz" />
 			
+			<personDef index="83" name="Eina [Julie von Albedyll] " ref="http://d-nb.info/gnd/116275359"
+				vorname="Julie" nachname="von Albedyll" komm="albedyll" />
+			
 		</personDefs>
 
 
