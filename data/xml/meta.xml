@@ -4929,5 +4929,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="328">
+			<date value="St. Petersburg, 28. März 1780" />
+			<sort value="1780-03-28" />
+			<location ref="46" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="3" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
