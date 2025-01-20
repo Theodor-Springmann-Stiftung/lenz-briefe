@@ -2006,6 +2006,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="323">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 7
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
