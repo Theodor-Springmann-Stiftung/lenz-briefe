@@ -5110,5 +5110,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="340">
+			<date value="St. Petersburg, zwischen 5. Juli und Ende August 1780" />
+			<sort value="1780-07-30" />
+			<location ref="46" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

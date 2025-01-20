@@ -2114,6 +2114,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="340">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 17
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
