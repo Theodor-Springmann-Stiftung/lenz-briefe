@@ -5200,5 +5200,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="346">
+			<date value="26. November (oder Dezember?) 1780" />
+			<sort value="1780-11-26" />
+			<location ref="49" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="2" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
