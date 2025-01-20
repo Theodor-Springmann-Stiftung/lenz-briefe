@@ -2120,6 +2120,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="341">
+			<app ref="4">
+				Riga, Latvijas Valsts Vēstures Arhīvs, Fonda 4038, Aprakst 2, Lietas 1642, (Nr. 185), S. 703–704
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>

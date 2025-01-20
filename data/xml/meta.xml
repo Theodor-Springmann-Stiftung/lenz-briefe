@@ -5125,5 +5125,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="341">
+			<date value="Aya, 26. September 1780" />
+			<sort value="1780-09-26" />
+			<location ref="48" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="2" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
