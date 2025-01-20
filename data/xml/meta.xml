@@ -5172,13 +5172,28 @@
 		
 		<letterDesc letter="344">
 			<date value="Dorpat (Tartu)?, November 1780" />
-			<sort value="1780-10-30" />
+			<sort value="1780-11-05" />
 			<location ref="1" />
 			<senders>
 				<sender ref="1" />
 			</senders>
 			<receivers>
 				<receiver ref="2" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="345">
+			<date value="auf dem Weg nach Ohlershoff, November 1780" />
+			<sort value="1780-10-15" />
+			<location ref="52" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="3" />
 			</receivers>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
