@@ -2049,6 +2049,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="330">
+			<app ref="4">
+				Baltimore, Milton S. Eisenhower Library, Ms. 2, Kurrelmeyer Collection
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
