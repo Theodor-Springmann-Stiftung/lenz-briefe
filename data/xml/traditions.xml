@@ -2073,6 +2073,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="334">
+			<app ref="4">
+				Frankfurt/Main, Freies Deutsches Hochstift, Nr. 12229
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
