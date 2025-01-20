@@ -4869,5 +4869,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="324">
+			<date value="Jamburg, 30. Januar 1780" />
+			<sort value="1780-01-30" />
+			<location ref="45" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="3" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

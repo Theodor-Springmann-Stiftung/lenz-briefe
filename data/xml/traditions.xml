@@ -2012,6 +2012,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="324">
+			<app ref="4">
+				Frankfurt/Main, Freies Deutsches Hochstift, Nr. 25663
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
