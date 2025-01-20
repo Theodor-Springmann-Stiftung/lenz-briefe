@@ -5095,5 +5095,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="339">
+			<date value="St. Petersburg, 5. Juli 1780" />
+			<sort value="1780-07-05" />
+			<location ref="46" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="4" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>

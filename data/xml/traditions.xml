@@ -2108,6 +2108,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="339">
+			<app ref="4">
+				FSt II 178f.
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
