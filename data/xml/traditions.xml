@@ -2099,6 +2099,15 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="338">
+			<app ref="4">
+				In einem Schreiben an Petersen vom 2. November 1815 (Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 
+				1113, F. 25, V. 34, Nr. 15) zitiert Dumpf aus einem Brief von Lenz an seinen Bruder Friedrich David 
+				vom „3ten Pfingsttag 80“, dessen Handschrift verschollen ist. Lenz habe in dem Brief auch „einer 
+				Stelle erwähnt, die ihm Nicolay vorgeschlagen und durch die er an den Großfürsten gelangte“.
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
