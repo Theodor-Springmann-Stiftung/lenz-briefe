@@ -2061,6 +2061,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="332">
+			<app ref="4">
+				Frankfurt/Main, Freies Deutsches Hochstift, Nr. 25470
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>

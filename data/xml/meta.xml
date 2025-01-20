@@ -4989,5 +4989,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="332">
+			<date value="St. Petersburg, 8. April 1780" />
+			<sort value="1780-04-08" />
+			<location ref="46" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="66" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
