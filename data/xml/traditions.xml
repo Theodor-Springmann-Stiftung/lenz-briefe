@@ -2055,6 +2055,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="331">
+			<app ref="4">
+				Weimar, Goethe- und Schiller-Archiv, GSA 06/1126, Bl. 1–2
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
