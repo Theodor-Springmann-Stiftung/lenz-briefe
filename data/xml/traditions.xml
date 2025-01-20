@@ -2132,6 +2132,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="343">
+			<app ref="4">
+				Kraków, Biblioteka Jagiellońska, Lenziana 1, II, Nr. 1; das Manuskript enthält zunächst das Gedicht 
+				„Empfindungen eines jungen Russen“, auf der letzten Seite dann den Brief an Johann Christian Lenz
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>

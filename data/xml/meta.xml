@@ -5155,5 +5155,20 @@
 			<isDraft value="true" />
 		</letterDesc>
 		
+		<letterDesc letter="343">
+			<date value="unbekannter Ort, Mitte 1779 bis Ende 1780" />
+			<sort value="1780-10-30" />
+			<location ref="51" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="8" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
