@@ -2067,6 +2067,12 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="333">
+			<app ref="4">
+				Zürich, Zentralbibliothek, RP 20, Nr. 26
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
