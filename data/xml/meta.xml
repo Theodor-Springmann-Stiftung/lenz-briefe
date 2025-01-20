@@ -5065,5 +5065,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="337">
+			<date value="Cronstadt, 20. Mai 1780" />
+			<sort value="1780-05-20" />
+			<location ref="47" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="3" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
