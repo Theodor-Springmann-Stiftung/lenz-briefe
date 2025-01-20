@@ -5050,5 +5050,20 @@
 			<isDraft value="false" />
 		</letterDesc>
 		
+		<letterDesc letter="336">
+			<date value="St. Petersburg, Mai 1780" />
+			<sort value="1780-05-15" />
+			<location ref="46" />
+			<senders>
+				<sender ref="1" />
+			</senders>
+			<receivers>
+				<receiver ref="10" />
+			</receivers>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
 	</descriptions>
 </opus>
