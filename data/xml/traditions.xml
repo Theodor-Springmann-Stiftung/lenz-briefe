@@ -2030,6 +2030,13 @@
 			</app>
 		</letterTradition>
 		
+		<letterTradition letter="327">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 19 (Der Brief erreicht Friederike 
+				Brion nicht)
+			</app>
+		</letterTradition>
+		
 		
 	</traditions>
 </opus>
