@@ -10071,7 +10071,13 @@
 		
 		<letterText letter="285"><line tab="1"/>Lieber Lavater, lieber Lenz, lieber Pfenninger – unsre Hoffnung und Freude war umsonst. Mein armes 
 			Weib ist gestern gestorben! Ich kann euch die Geschichte ihres Leidens nicht erzäln! Es thut mir zu weh! Auf ein andermahl –<line type="break"/>
-			<align pos="right">Schlosser</align></letterText>
+			<align pos="right">Schlosser</align>
+			<page index="2"/>
+			An<line type="break"/>
+			Herrn Pfarrer Lavater<line type="break"/> 
+			in Zürch
+			</letterText>
+		
 		
 		<letterText letter="286"><align pos="right">Ursener Thal an der Matte d. 14ten Jun. Sonntags.</align> <line type="empty"/>
 			<line type="empty"/>
