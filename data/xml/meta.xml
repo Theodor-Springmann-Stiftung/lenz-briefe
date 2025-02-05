@@ -3522,7 +3522,7 @@
 				<sender ref="1" />
 			</senders>
 			<receivers>
-				<receiver ref="49" /><!-- Wird sein Bruder auch genannt? -->
+				<receiver ref="49" /><!-- Wird sein Bruder auch genannt? --><!-- Onkel von Jakob Lenz benennen? -->
 			</receivers>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
@@ -3697,7 +3697,7 @@
 		<letterDesc letter="246">
 			<date value="Wohl Berka oder Kochberg, Oktober 1776" />
 			<sort value="1776-10-26" />
-			<location ref="14" /><!-- Oder Kochberg -->
+			<location ref="14" /><!-- Oder Kochberg --><!-- Extra location für den Fall -->
 			<senders>
 				<sender ref="1" />
 			</senders>
@@ -4194,7 +4194,7 @@
 			<sort value="1777-05-12" />
 			<location ref="11" />
 			<senders>
-				<sender ref="10" /><!-- Wer ist Absender Br.? -->
+				<sender ref="10" /><!-- Wer ist Absender Br.? hier heißt das Brief. Der Brief ist von und an Lavater -->
 			</senders>
 			<receivers>
 				<receiver ref="10" />

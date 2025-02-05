@@ -1177,7 +1177,7 @@
 			P. Cond. 
 			
 			<note>nicht identifizierte Hand</note> 
-			Capitaine Lieutenant Salomon Bodmer in der Mühle zu Wölflingen im Canton Zürich.<!-- "<hand>" benötigt zwingend eine Referenz. Wie kann dabei in dem Fall vorgegangen werden, wenn keine Hand identifiziert wurde? --></letterText>
+			Capitaine Lieutenant Salomon Bodmer in der Mühle zu Wölflingen im Canton Zürich.<!-- "<hand>" benötigt zwingend eine Referenz. Wie kann dabei in dem Fall vorgegangen werden, wenn keine Hand identifiziert wurde? Eine unbekannte definieren?--></letterText>
 		
 		<letterText letter="21"> <line tab="1"/>Herr Simon kommt zurück eh’ ich ihn haben will: ich kann Ihnen also das Versprochene nicht 
 			zuschicken. Es war mein Trauerspiel, welches ich jetzt eben für Sie abschreibe. Ich werde schon eine 
@@ -8823,7 +8823,7 @@
 			Leben Sie wohl und grüßen alle guten Freunde, auch Jungfer Lauth. <line type="empty"/>
 			
 			<align pos="right">Lenz.</align><line type="break"/>
-			<sidenote pos="left" page="1" annotation="Am Rande"><!-- Welche Seite vom Rand? --><line type="break"/>
+			<sidenote pos="left" page="1" annotation="Am Rande"><!-- Welche Seite vom Rand? Wie Text behandeln, dann vielleicht in spitzen Klammern/andere Zeichen verwenden, um die Anmerkung vom Druck abzuheben. Lösung: Editorische Anmerkung machen, dass es sich um eine editorische Anmerkung im Druck handelt --><line type="break"/>
 			<line tab="1"/>Wäre es nicht möglich, daß ich, durch Ihre Vermittlung einige der neuesten Allemanden in Straßburg 
 			abgeschrieben herbekommen könnte. Was Sie dafür auslegen, will ich wieder erstatten. Die von Edelmann 
 			würde Ihnen hier ein ewiges Denkmal setzen.</sidenote> <line type="empty"/>
@@ -9179,7 +9179,7 @@
 			<sidenote pos="left" page="1" annotation="am linken Rand, vertikal"> ist alles Lobs werth und mein inniggeliebter! Willstu Maler Müllers Schattenriß, ich hab 
 			herrliche Tage mit Ihm zu M. gehabt . O der Antiquiensaal!!  Zu Frankfurt hab ich die Ehre gehabt die Frau Rath 
 			Goethegesehen. Wagner ist verheyrathet. <note>Ende der Abschrift</note> daselbst u. Advocat, <ul>von Schloßer sehr geliebt, war mit 
-			zu Emmendingen.</ul></sidenote><!-- Wann endet die sidenote? --></letterText>
+			zu Emmendingen.</ul></sidenote></letterText>
 		
 		<letterText letter="260"><line tab="1"/>Es freut mich bester Herder! daß ich eine Gelegenheit finde Abschied von Dir zu nehmen. Freilich 
 			traurig genug, kaum gesehen und gesprochen, ausgestoßen aus dem Himmel als ein Landläuffer, 
@@ -9484,15 +9484,15 @@
 			
 			<page index="2"/> <line type="empty"/>
 			
-			Emma und Eginhard<line type="break"/><!-- Bekommt die Überschrift der Romanze eine eigene Formatierung über <line tab="1">? -->
-			an Barthy <line type="empty"/>
+			<align pos="center">>Emma und Eginhard<line type="break"/><!-- Bekommt die Überschrift der Romanze eine eigene Formatierung über <line tab="1">? -->
+			an Barthy</align> <line type="empty"/>
 			
 			<line tab="5"/>Geh Betti schließ die Laube zu
 			<line tab="5"/>Und gieb die Harfe mir
 			<line tab="5"/>Von einem Fräulein schön wie Du
 			<line tab="5"/>Sing ich ein Liedgen Dir <line type="empty"/>
 			
-			X <line type="empty"/><!-- Bekommen die Grenzmarkierungen der Versabschnitte der Romanze eine eigene Formatierung über <line tab="1">? -->
+			<align pos="center">X</align> <line type="empty"/><!-- Bekommen die Grenzmarkierungen der Versabschnitte der Romanze eine eigene Formatierung über <line tab="1">? -->
 			
 			
 			<line tab="5"/>Der große Carl ein Teutscher Held
@@ -9500,14 +9500,14 @@
 			<line tab="5"/>Die Sachsen schlug er aus dem Feld
 			<line tab="5"/>Und manche Mauren Schaar <line type="empty"/>
 			
-			X <line type="empty"/>
+			<align pos="center">X</align> <line type="empty"/>
 			
 			<line tab="5"/>Doch Emma war so furchtbar nicht
 			<line tab="5"/>Mild heiter Minnereich
 			<line tab="5"/>Ein Rosenbeet war ihr Gesicht
 			<line tab="5"/>Ihr Aug dem Himmel gleich <line type="empty"/>
 			
-			X<line type="break"/>
+			<align pos="center">X</align><line type="break"/>
 			<line tab="5"/>Die schlaue Mutter hielt sie hart
 			<line tab="5"/>Kein Ritter kam ihr nah
 			<line tab="5"/>Bis auf den Junker Eginhard
@@ -9761,7 +9761,7 @@
 			
 			<align pos="right">Küttner.</align></letterText>
 		
-		<letterText letter="278"><align pos="right">Zürich. d. 11ten May 1777</align> <line type="empty"/><!-- Viel Abstand -->
+		<letterText letter="278"><align pos="right">Zürich. d. 11ten May 1777</align> <line type="empty"/><!-- Viel Abstand; vielleicht Obergrenze bei drei Zeilen? -->
 			<line type="empty"/>
 			<line type="empty"/>
 			<line type="empty"/>
@@ -9812,7 +9812,7 @@
 			<page index="2"/><line type="break"/>
 			H: Wegmeister Tobler in Zürich.<line type="break"/>
 			H Pfarrer Weber in Bubigheim<line type="break"/>
-			Zu Diener Stadthalter von Bubigheim.</hand> <!-- Bis wohin geht Lavaters Hand? --></letterText>
+			Zu Diener Stadthalter von Bubigheim.</hand> <!-- Bis wohin geht Lavaters Hand? Ab Seite zwei fremde Hand--></letterText>
 		
 		<letterText letter="280">
 			<pe><line tab="1"/>Lenz von deinem Auge kein Blick, du streckst nicht nach mir den Arm, reichst mir keine Hand! Doch 
@@ -9921,7 +9921,7 @@
 			
 			<align pos="center"><line tab="6"/>Zweyte Scene.
 			<line tab="6"/>Belmont kommt.</align>
-			<line tab="6"/><ul>Belmont.</ul> So ungelegen kam kein Mensch vielleicht als ich. <!-- Wie werden Sprecherrollen formatiert, an die sich Verse anschließen? -->
+			<line tab="6"/><ul>Belmont.</ul> So ungelegen kam kein Mensch vielleicht als ich. <!-- Wie werden Sprecherrollen formatiert, an die sich Verse anschließen? Erstmal standardmäßig-->
 			<line tab="5"/>Den Tag, der Sie gebar, im Stillen zu begehen
 			<line tab="5"/>Die feyrende Natur darüber froh zu sehen
 			<line tab="5"/>Begaben Sie sich her und ich –
@@ -10320,7 +10320,7 @@
 			Malta (denn das ist jezt Mode) und was hat Ihnen denn das Lieder und Mädgen reiche auf den Fluthen 
 			schwimmende Venedig zu Laide gethan daß Sie dahin nicht wollen? Und im September wieder in Zürich. 
 			Bravo! Da fährt mein Lenz immer zu einem Thor hinein u: zum andern gleich wied. hinaus, dann da ist 
-			keine Zeit z …..<!-- Handelt es sich hier um Auslassungen des Autors? --> Aufenthalt zu verliren u. doch mags füglich November werden biß wir uns sehen – 
+			keine Zeit zum Aufenthalt zu verliren u. doch mags füglich November werden biß wir uns sehen – 
 			u. zwar in Basel, nicht in Zürich. Der See-Wein zerfräße mir den Magen wann ich dort auf Sie warten 
 			müßte.<line type="break"/>
 			<page index="2"/><line type="break"/>
@@ -10834,7 +10834,7 @@
 			<line tab="1"/>Jetzt Theurester komm ich auf Ihre Frauenzimmerschule – der Himmel lasse Sie ganze glückliche Geschlechter aus 
 			dieser Pflanzung erleben und die schönsten Mädgen aus diesen müssen dereinst ihr Grab mit Rosen bestreuen – nur 
 			Freund! bedenken Sie daß ein Project die allerwichtigste – oder die allernichtswürdigste Sache auf Erden ist, wenn 
-			es ausgeführt wird – oder steken bleibt. Das war nun bey einem <aq>Sarasi</aq><!-- Andere Tinte? --> freylich eine sehr überflüssige Erinnerung 
+			es ausgeführt wird – oder steken bleibt. Das war nun bey einem <aq>Sarasi</aq> freylich eine sehr überflüssige Erinnerung 
 			und muß mir verziehen werden, so wie meine ganze Existenz. <line type="empty"/>
 			
 			<line tab="1"/>Ich Ihnen aber darüber eine Abhandlung schreiben Freund! wo denken Sie hin, ich, ein Mensch der weder <page index="7"/> Vater 
@@ -11022,22 +11022,22 @@
 			<line tab="5"/>Im bunten Thal der Lügen!
 			<line tab="5"/>Du gehst dahin, du Lächlerin!
 			<line tab="5"/>Dich ewig zu betrügen.
-			x<line type="break"/><!-- Besondere Formatierung? -->
+			<align pos="center">x</align><line type="break"/><!-- Besondere Formatierung? -->
 			<line tab="5"/>Was weinest Du? die Welt ist rund
 			<line tab="5"/>Und nichts darauf beständig.
 			<line tab="5"/>Das Weinen nur ist ungesund
 			<line tab="5"/>Und der Verlust nothwendig.
-			x<line type="break"/>
+			<align pos="center">x</align><line type="break"/>
 			<line tab="5"/>Einst wirst du, kleine Lächlerin!
 			<line tab="5"/>Mit süsserm Schmerze weinen
 			<line tab="5"/>Wenn alle deinen treuen Sinn
 			<line tab="5"/>Gott! zu verkennen scheinen.
-			x<line type="break"/>
+			<align pos="center">x</align><line type="break"/>
 			<line tab="5"/>Dann wirst du stehn auf deinem Werth
 			<line tab="5"/>Und blicken, wie die Sonne
 			<line tab="5"/>Von der ein jeder weg sich kehrt
 			<line tab="5"/>Zu blind für ihre Wonne.
-			x<line type="break"/>
+			<align pos="center">x</align><line type="break"/>
 			<line tab="5"/>Bis daß der Adler kommen wird
 			<line tab="5"/>Aus fürchterlichen Büschen,
 			<line tab="5"/>Der Welten ohne Trost durchirrt –
@@ -11250,7 +11250,7 @@
 			
 			<align pos="right">Lenz.</align></letterText>
 		
-		<letterText letter="312"><note>von Schlosser geschrieben</note><!-- Kann diese Notiz über <hand> gelöst werden? --><line type="break"/>
+		<letterText letter="312"><note>von Schlosser geschrieben</note><!-- Kann diese Notiz über <hand> gelöst werden? Wieder eine editorische Anmerkung über eine editorische Anmerkung  --><line type="break"/>
 			<hand ref="18"><align pos="center">P. T.</align><line type="break"/>
 			<line tab="1"/>Ihnen unbekandt war ich lange Ihr Freund, durch Ihren Herrn Sohn. Drey Jahre sinds, daß ich diesen 
 			kenne, und, ob gleich wir nur selten beysammen seyn konnten; so waren wir doch Freunde. Ich ehrte 
@@ -11279,7 +11279,7 @@
 			
 			Emmendingen in Breisgau bey Freyburg d. 9 Märtz 1778.</hand> <line type="empty"/>
 			
-			<note>auf der letzten Seite Lenz’ Hand</note><!-- Welcher Lenz? --><line type="break"/>
+			<note>auf der letzten Seite Lenz’ Hand</note><!-- Welcher Lenz? Jakob Lenz --><line type="break"/>
 			<hand ref="82">Vater! ich habe gesündigt im Himmel und vor Dir und bin fort nicht werth, daß ich Dein Kind heiße. <line type="empty"/>
 			
 			<align pos="right">Jacob. Lenz.</align></hand> <line type="empty"/>
@@ -12217,11 +12217,11 @@
 			ich mich erinnere hat sie – hat sie keinen Platz in der Physiognomik, kann auch nach den Carrikaturen von Kupferstich 
 			die von ihnen kursiren, keinen haben. Künftig mehr von diesem Punkt: er ist mir heilig – – <line type="empty"/>
 			
-			<sidenote pos="bottom" page="1" annotation="am unteren Rand der ersten Seite"><!-- Gehören die beiden Verweise zu der Randeinfügung? -->
+			<sidenote pos="bottom" page="1" annotation="am unteren Rand der ersten Seite"><!-- Gehören die beiden Verweise zu der Randeinfügung? Genauere Beschreibung: Erster Verweis beginnt linksbündig, setzt sich dann rechtsbündig fort-->
 			
-			<note>Verweiszeichen 1</note> eben höre von ihnen selbst, daß Sie sie schon haben <line type="empty"/>
+			<fn index="1"><anchor>F<note>Verweiszeichen 1</note></anchor></fn> eben höre von ihnen selbst, daß Sie sie schon haben <line type="empty"/>
 			
-			<note>Verweiszeichen 2</note> dem obersten Collegio nach dem Senat</sidenote> <line type="empty"/>
+			<fn index="2"><anchor>FF<note>Verweiszeichen 2</note></anchor></fn> dem obersten Collegio nach dem Senat</sidenote> <line type="empty"/>
 			
 			<line tab="1"/>Ich erinnere mich ein und des andern Mündlichen – – und daß Sie damals <ul>fehlten.</ul> Wie konnts auch anders, denn was ist 
 			aller Schatten, durch soviel Hindernisse zu Ihnen gelangend, gegen Wirklichkeit. <ul>Stärke</ul> z. B. mein Gönner! – wo Sie 
@@ -12737,7 +12737,7 @@
 			eines jungen Russen <line type="empty"/>
 			
 			der in der Fremde erzogen<line type="break"/>
-			seine allerhöchste Landesherrschaft wiedererblickte.</align> <line type="empty"/> <!-- Wird der Titel besonders formatiert? -->
+			seine allerhöchste Landesherrschaft wiedererblickte.</align> <line type="empty"/>
 			
 			<line tab="5"/>So ward ich denn noch dazu aufgehoben
 			<line tab="5"/>Das Angesicht zu sehn, das unter Still und Nacht
