@@ -99,7 +99,14 @@ def check_references(root, reference_data, filepath):
         if ref not in reference_data["personDef"]:
             add_error(person_elem, "person", ref)
 
-    # 5) Check <app ref="..."> (un-namespaced?), referencing appDef
+    # 5) Check <person ref="..."> in the lenz namespace, referencing personDef
+    #    e.g. <person ref="1" />
+    for person_elem in root.xpath("//hand", namespaces=NAMESPACE_MAP):
+        ref = person_elem.get("ref")
+        if ref not in reference_data["personDef"]:
+            add_error(person_elem, "person", ref)
+
+    # 6) Check <app ref="..."> (un-namespaced?), referencing appDef
     for app_elem in root.xpath("//app"):
         ref = app_elem.get("ref")
         if ref not in reference_data["appDef"]:
