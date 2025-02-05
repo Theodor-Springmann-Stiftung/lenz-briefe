@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<opus>
+<?xml version='1.0' encoding='UTF-8'?>
+<opus xmlns="https://lenz-archiv.de"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://lenz-archiv.de ../xsd/lenz.xsd">
 	<descriptions>
 		<letterDesc letter="1">
 			<sent>
-				<date value="Dorpat (Tartu), 2. Januar 1765" />
-				<sort value="1765-01-02" />
+				<date when="1765-01-02">Dorpat (Tartu), 2. Januar 1765</date>
 				<location ref="1" />
 				<person ref="1" />
 			</sent>
@@ -15,10 +16,10 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
+
 		<letterDesc letter="2">
 			<sent>
-				<date value="Dorpat (Tartu), 11. Oktober 1767" />
-				<sort value="1767-10-11" />
+				<date when="1767-10-11">Dorpat (Tartu), 11. Oktober 1767</date>
 				<location ref="1" />
 				<person ref="1" />
 			</sent>
@@ -32,8 +33,7 @@
 
 		<letterDesc letter="3">
 			<sent>
-				<date value="Tarwast (Tarvastu), 9. November 1767" />
-				<sort value="1767-11-09" />
+				<date when="1767-11-09">Tarwast (Tarvastu), 9. November 1767</date>
 				<location ref="2" />
 				<person ref="1" />
 			</sent>
@@ -48,8 +48,7 @@
 
 		<letterDesc letter="4">
 			<sent>
-				<date value="Tarwast (Tarvastu), 24. November 1767" />
-				<sort value="1767-11-24" />
+				<date when="1767-11-24">Tarwast (Tarvastu), 24. November 1767</date>
 				<location ref="2" />
 				<person ref="1" />
 				<person ref="3" />
@@ -64,8 +63,7 @@
 
 		<letterDesc letter="5">
 			<sent>
-				<date value="Tarwast (Tarvastu), nach 24. Januar 1768" />
-				<sort value="1767-11-24" notBefore="1767-11-24" />
+				<date when="1767-11-24" notBefore="1767-11-24">Tarwast (Tarvastu), nach 24. Januar 1768</date>
 				<location ref="1" />
 				<person ref="1" />
 				<person ref="7" />
@@ -81,8 +79,7 @@
 
 		<letterDesc letter="6">
 			<sent>
-				<date value="Königsberg (Kaliningrad), 14. Oktober 1769" />
-				<sort value="1769-10-14" />
+				<date when="1769-10-14">Königsberg (Kaliningrad), 14. Oktober 1769</date>
 				<location ref="3" />
 				<person ref="1" />
 			</sent>
@@ -96,8 +93,8 @@
 
 		<letterDesc letter="7">
 			<sent>
-				<date value="Dorpat (Tartu), wahrscheinlich Mitte 1770" />
-				<sort value="1770-06-15" notBefore="1770-06-01" notAfter="1770-07-01" />
+				<date when="1770-06-15" notBefore="1770-06-01" notAfter="1770-07-01">Dorpat (Tartu),
+					wahrscheinlich Mitte 1770</date>
 				<location ref="1" />
 				<person ref="5" />
 			</sent>
@@ -112,8 +109,8 @@
 
 		<letterDesc letter="8">
 			<sent>
-				<date value="Fort Louis, Ende Mai 1772" />
-				<sort value="1772-05-28" notBefore="1772-05-15" notAfter="1772-05-30" />
+				<date when="1772-05-28" notBefore="1772-05-15" notAfter="1772-05-30">Fort Louis, Ende Mai
+					1772</date>
 				<location ref="4" />
 				<person ref="1" />
 			</sent>
@@ -127,8 +124,7 @@
 
 		<letterDesc letter="9">
 			<sent>
-				<date value="Fort Louis, 3. Juni 1772" />
-				<sort value="1772-06-02" />
+				<date when="1772-06-02">Fort Louis, 3. Juni 1772</date>
 				<location ref="4" />
 				<person ref="1" />
 			</sent>
@@ -142,8 +138,7 @@
 
 		<letterDesc letter="10">
 			<sent>
-				<date value="Fort Louis, 10. Juni 1772" />
-				<sort value="1772-06-10" />
+				<date when="1772-06-10">Fort Louis, 10. Juni 1772</date>
 				<location ref="4" />
 				<person ref="1" />
 			</sent>
@@ -157,8 +152,7 @@
 
 		<letterDesc letter="11">
 			<sent>
-				<date value="Fort Louis, 15. Juni 1772" />
-				<sort value="1772-06-15" />
+				<date when="1772-06-15">Fort Louis, 15. Juni 1772</date>
 				<location ref="4" />
 				<person ref="1" />
 			</sent>
@@ -172,8 +166,7 @@
 
 		<letterDesc letter="12">
 			<sent>
-				<date value="Fort Louis, 28. Juni 1772" />
-				<sort value="1772-06-28" />
+				<date when="1772-06-28">Fort Louis, 28. Juni 1772</date>
 				<location ref="4" />
 				<person ref="1" />
 			</sent>
@@ -187,8 +180,7 @@
 
 		<letterDesc letter="13">
 			<sent>
-				<date value="Fort Louis, 13. Juli 1772" />
-				<sort value="1772-07-13" />
+				<date when="1772-07-13">Fort Louis, 13. Juli 1772</date>
 				<location ref="4" />
 				<person ref="1" />
 			</sent>
@@ -202,8 +194,7 @@
 
 		<letterDesc letter="14">
 			<sent>
-				<date value="Fort Louis, Anfang August 1772" />
-				<sort value="1772-08-01" />
+				<date when="1772-08-01">Fort Louis, Anfang August 1772</date>
 				<location ref="4" />
 				<person ref="1" />
 			</sent>
@@ -217,8 +208,7 @@
 
 		<letterDesc letter="15">
 			<sent>
-				<date value="Fort Louis, Mitte August 1772" />
-				<sort value="1772-08-15" />
+				<date when="1772-08-15">Fort Louis, Mitte August 1772</date>
 				<location ref="4" />
 				<person ref="1" />
 			</sent>
@@ -232,8 +222,7 @@
 
 		<letterDesc letter="16">
 			<sent>
-				<date value="Fort Louis, 31. August 1772" />
-				<sort value="1772-08-31" />
+				<date when="1772-08-31">Fort Louis, 31. August 1772</date>
 				<location ref="4" />
 				<person ref="1" />
 			</sent>
@@ -247,8 +236,7 @@
 
 		<letterDesc letter="17">
 			<sent>
-				<date value="Weisenburg, 2. September und 2. Oktober 1772" />
-				<sort value="1772-10-02" />
+				<date when="1772-10-02">Weisenburg, 2. September und 2. Oktober 1772</date>
 				<location ref="6" />
 				<person ref="1" />
 			</sent>
@@ -261,8 +249,7 @@
 		</letterDesc>
 		<letterDesc letter="18">
 			<sent>
-				<date value="Landau, 7. September 1772" />
-				<sort value="1772-09-07" />
+				<date when="1772-09-07">Landau, 7. September 1772</date>
 				<location ref="5" />
 				<person ref="1" />
 			</sent>
@@ -276,8 +263,7 @@
 
 		<letterDesc letter="19">
 			<sent>
-				<date value="Landau, 18. September 1772" />
-				<sort value="1772-09-18" />
+				<date when="1772-09-18">Landau, 18. September 1772</date>
 				<location ref="5" />
 				<person ref="1" />
 			</sent>
@@ -291,8 +277,7 @@
 
 		<letterDesc letter="20">
 			<sent>
-				<date value="Arensburg (Kuressaare), 24. September 1772" />
-				<sort value="1772-09-24" />
+				<date when="1772-09-24">Arensburg (Kuressaare), 24. September 1772</date>
 				<location ref="10" />
 				<person ref="8" />
 			</sent>
@@ -306,8 +291,7 @@
 
 		<letterDesc letter="21">
 			<sent>
-				<date value="Landau, Anfang Oktober 1772" />
-				<sort value="1772-10-05" />
+				<date when="1772-10-05">Landau, Anfang Oktober 1772</date>
 				<location ref="5" />
 				<person ref="1" />
 			</sent>
@@ -321,8 +305,7 @@
 
 		<letterDesc letter="22">
 			<sent>
-				<date value="Landau, vor Mitte Oktober 1772" />
-				<sort value="1772-10-10" />
+				<date when="1772-10-10">Landau, vor Mitte Oktober 1772</date>
 				<location ref="5" />
 				<person ref="1" />
 			</sent>
@@ -336,8 +319,7 @@
 
 		<letterDesc letter="23">
 			<sent>
-				<date value="Landau, Mitte Oktober 1772" />
-				<sort value="1772-10-15" />
+				<date when="1772-10-15">Landau, Mitte Oktober 1772</date>
 				<location ref="5" />
 				<person ref="1" />
 			</sent>
@@ -351,8 +333,7 @@
 
 		<letterDesc letter="24">
 			<sent>
-				<date value="Landau, Zweite Oktoberhälfte Oktober 1772" />
-				<sort value="1772-10-20" />
+				<date when="1772-10-20">Landau, Zweite Oktoberhälfte Oktober 1772</date>
 				<location ref="5" />
 				<person ref="1" />
 			</sent>
@@ -366,8 +347,7 @@
 
 		<letterDesc letter="25">
 			<sent>
-				<date value="Landau, Gegen Ende Oktober 1772" />
-				<sort value="1772-10-25" />
+				<date when="1772-10-25">Landau, Gegen Ende Oktober 1772</date>
 				<location ref="5" />
 				<person ref="1" />
 			</sent>
@@ -381,8 +361,7 @@
 
 		<letterDesc letter="26">
 			<sent>
-				<date value="Landau, Ende Oktober 1772" />
-				<sort value="1772-10-31" />
+				<date when="1772-10-31">Landau, Ende Oktober 1772</date>
 				<location ref="5" />
 				<person ref="1" />
 			</sent>
@@ -394,10 +373,9 @@
 			<isDraft value="false" />
 		</letterDesc>
 
-		<letterDesc letter="27">			<!-- Handelt es sich hier um einen Entwurf? -->
+		<letterDesc letter="27">
 			<sent>
-				<date value="Landau, 10. Dezember 1772" />
-				<sort value="1772-12-10" />
+				<date when="1772-12-10">Landau, 10. Dezember 1772</date>
 				<location ref="5" />
 				<person ref="1" />
 			</sent>
@@ -411,8 +389,7 @@
 
 		<letterDesc letter="28">
 			<sent>
-				<date value="Straßburg, Mitte März 1774" />
-				<sort value="1774-03-15" />
+				<date when="1774-03-15">Straßburg, Mitte März 1774</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -426,8 +403,7 @@
 
 		<letterDesc letter="29">
 			<sent>
-				<date value="Straßburg, Ende März 1774" />
-				<sort value="1774-03-31" />
+				<date when="1774-03-31">Straßburg, Ende März 1774</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -441,8 +417,7 @@
 
 		<letterDesc letter="30">
 			<sent>
-				<date value="Zürich, 22. April 1774" />
-				<sort value="1774-04-22" />
+				<date when="1774-04-22">Zürich, 22. April 1774</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -457,8 +432,7 @@
 
 		<letterDesc letter="31">
 			<sent>
-				<date value="Zürich, 10. Mai 1774" />
-				<sort value="1774-05-10" />
+				<date when="1774-05-10">Zürich, 10. Mai 1774</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -472,8 +446,7 @@
 
 		<letterDesc letter="32">
 			<sent>
-				<date value="Zürich, Ende Mai 1774" />
-				<sort value="1774-05-31" />
+				<date when="1774-05-31">Zürich, Ende Mai 1774</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -488,8 +461,7 @@
 
 		<letterDesc letter="33">
 			<sent>
-				<date value="Straßburg, Anfang Juni 1774" />
-				<sort value="1774-06-01" />
+				<date when="1774-06-01">Straßburg, Anfang Juni 1774</date>
 				<location ref="7" />
 				<person ref="1" />
 				<person ref="11" />
@@ -504,8 +476,7 @@
 
 		<letterDesc letter="34">
 			<sent>
-				<date value="Zürich, 11. Juni 1774" />
-				<sort value="1774-06-11" />
+				<date when="1774-06-11">Zürich, 11. Juni 1774</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -520,8 +491,7 @@
 
 		<letterDesc letter="35">
 			<sent>
-				<date value="Zürich, 14. Juni 1774" />
-				<sort value="1774-06-14" />
+				<date when="1774-06-14">Zürich, 14. Juni 1774</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -536,8 +506,7 @@
 
 		<letterDesc letter="36">
 			<sent>
-				<date value="Straßburg, 18. Juni 1774" />
-				<sort value="1774-06-18" />
+				<date when="1774-06-18">Straßburg, 18. Juni 1774</date>
 				<location ref="7" />
 				<person ref="1" />
 				<person ref="11" />
@@ -552,8 +521,7 @@
 
 		<letterDesc letter="37">
 			<sent>
-				<date value="Straßburg, Mitte Juli 1774" />
-				<sort value="1774-07-15" />
+				<date when="1774-07-15">Straßburg, Mitte Juli 1774</date>
 				<location ref="7" />
 				<person ref="10" />
 			</sent>
@@ -567,8 +535,7 @@
 
 		<letterDesc letter="38">
 			<sent>
-				<date value="Zürich, 31. August 1774" />
-				<sort value="1774-08-31" />
+				<date when="1774-08-31">Zürich, 31. August 1774</date>
 				<location ref="11" />
 				<person ref="23" />
 			</sent>
@@ -582,8 +549,7 @@
 
 		<letterDesc letter="39">
 			<sent>
-				<date value="Zürich, 2. September 1774" />
-				<sort value="1774-09-02" />
+				<date when="1774-09-02">Zürich, 2. September 1774</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -597,8 +563,7 @@
 
 		<letterDesc letter="40">
 			<sent>
-				<date value="Straßburg, 7. November 1774" />
-				<sort value="1774-11-04" />
+				<date when="1774-11-04">Straßburg, 7. November 1774</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -612,8 +577,7 @@
 
 		<letterDesc letter="41">
 			<sent>
-				<date value="Straßburg, Februar 1775" />
-				<sort value="1775-02-01" />
+				<date when="1775-02-01">Straßburg, Februar 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -627,8 +591,7 @@
 
 		<letterDesc letter="42">
 			<sent>
-				<date value="Straßburg, 8. April 1775" />
-				<sort value="1775-04-08" />
+				<date when="1775-04-08">Straßburg, 8. April 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -642,8 +605,7 @@
 
 		<letterDesc letter="43">
 			<sent>
-				<date value="Zürich, 14. April 1775" />
-				<sort value="1775-04-14" />
+				<date when="1775-04-14">Zürich, 14. April 1775</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -657,8 +619,7 @@
 
 		<letterDesc letter="44">
 			<sent>
-				<date value="Zürich, 20. April 1775" />
-				<sort value="1775-04-20" />
+				<date when="1775-04-20">Zürich, 20. April 1775</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -672,8 +633,7 @@
 
 		<letterDesc letter="45">
 			<sent>
-				<date value="Straßburg, Ende April 1775" />
-				<sort value="1775-04-30" />
+				<date when="1775-04-30">Straßburg, Ende April 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -687,8 +647,7 @@
 
 		<letterDesc letter="46">
 			<sent>
-				<date value="Straßburg, 1. Mai 1775" />
-				<sort value="1775-05-01" />
+				<date when="1775-05-01">Straßburg, 1. Mai 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -702,8 +661,7 @@
 
 		<letterDesc letter="47">
 			<sent>
-				<date value="Emmeningen, Anfang Mai 1775" />
-				<sort value="1775-05-03" />
+				<date when="1775-05-03">Emmeningen, Anfang Mai 1775</date>
 				<location ref="12" />
 				<person ref="18" />
 			</sent>
@@ -717,8 +675,7 @@
 
 		<letterDesc letter="48">
 			<sent>
-				<date value="Straßburg, Anfang Mai 1775" />
-				<sort value="1775-05-05" />
+				<date when="1775-05-05">Straßburg, Anfang Mai 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -732,8 +689,7 @@
 
 		<letterDesc letter="49">
 			<sent>
-				<date value="Straßburg, 10. Mai 1775" />
-				<sort value="1775-05-10" />
+				<date when="1775-05-10">Straßburg, 10. Mai 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -747,8 +703,7 @@
 
 		<letterDesc letter="50">
 			<sent>
-				<date value="Straßburg, 20. Mai 1775" />
-				<sort value="1775-05-20" />
+				<date when="1775-05-20">Straßburg, 20. Mai 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -762,8 +717,7 @@
 
 		<letterDesc letter="51">
 			<sent>
-				<date value="Straßburg, Wahrscheinlich Juni 1775" />
-				<sort value="1775-06-01" />
+				<date when="1775-06-01">Straßburg, Wahrscheinlich Juni 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -773,13 +727,12 @@
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
-			<!-- Handelt es sich hier um einen Entwurf? -->
+
 		</letterDesc>
 
 		<letterDesc letter="52">
 			<sent>
-				<date value="vermutlich Emmendingen, wahrscheinlich Anfang Juni 1775" />
-				<sort value="1775-06-07" />
+				<date when="1775-06-07">vermutlich Emmendingen, wahrscheinlich Anfang Juni 1775</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>
@@ -793,8 +746,7 @@
 
 		<letterDesc letter="53">
 			<sent>
-				<date value="Straßburg, Juni 1775" />
-				<sort value="1775-06-15" />
+				<date when="1775-06-15">Straßburg, Juni 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -806,10 +758,9 @@
 			<isDraft value="false" />
 		</letterDesc>
 
-		<letterDesc letter="54">			<!-- Französischer Brief -->
+		<letterDesc letter="54">
 			<sent>
-				<date value="Straßburg, Wahrscheinlich Juni 1775" />
-				<sort value="1775-06-20" />
+				<date when="1775-06-20">Straßburg, Wahrscheinlich Juni 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -823,8 +774,7 @@
 
 		<letterDesc letter="55">
 			<sent>
-				<date value="Straßburg, 13. Juli 1775" />
-				<sort value="1775-07-13" />
+				<date when="1775-07-13">Straßburg, 13. Juli 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 				<person ref="15" />
@@ -839,8 +789,7 @@
 
 		<letterDesc letter="56">
 			<sent>
-				<date value="Wahrscheinlich Straßburg, Juli 1775" />
-				<sort value="1775-07-15" />
+				<date when="1775-07-15">Wahrscheinlich Straßburg, Juli 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 				<person ref="10" />
@@ -855,8 +804,7 @@
 
 		<letterDesc letter="57">
 			<sent>
-				<date value="Straßburg, Juli 1775" />
-				<sort value="1775-07-17" />
+				<date when="1775-07-17">Straßburg, Juli 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -870,8 +818,7 @@
 
 		<letterDesc letter="58">
 			<sent>
-				<date value="Zürich, 22. Juli 1775" />
-				<sort value="1775-07-22" />
+				<date when="1775-07-22">Zürich, 22. Juli 1775</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -885,8 +832,7 @@
 
 		<letterDesc letter="59">
 			<sent>
-				<date value="Straßburg, 23. Juli 1775" />
-				<sort value="1775-07-23" />
+				<date when="1775-07-23">Straßburg, 23. Juli 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -900,8 +846,7 @@
 
 		<letterDesc letter="60">
 			<sent>
-				<date value="Straßburg, Juli 1775" />
-				<sort value="1775-07-25" />
+				<date when="1775-07-25">Straßburg, Juli 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -915,8 +860,7 @@
 
 		<letterDesc letter="61">
 			<sent>
-				<date value="Straßburg, Juli 1775" />
-				<sort value="1775-07-28" />
+				<date when="1775-07-28">Straßburg, Juli 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -930,8 +874,7 @@
 
 		<letterDesc letter="62">
 			<sent>
-				<date value="Straßburg, 29. Juli 1775" />
-				<sort value="1775-07-29" />
+				<date when="1775-07-29">Straßburg, 29. Juli 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -945,8 +888,7 @@
 
 		<letterDesc letter="63">
 			<sent>
-				<date value="Straßburg, 31. Juli 1775" />
-				<sort value="1775-07-31" />
+				<date when="1775-07-31">Straßburg, 31. Juli 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -960,8 +902,7 @@
 
 		<letterDesc letter="64">
 			<sent>
-				<date value="Straßburg, 28. August 1775" />
-				<sort value="1775-08-28" />
+				<date when="1775-08-28">Straßburg, 28. August 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -975,8 +916,7 @@
 
 		<letterDesc letter="65">
 			<sent>
-				<date value="Straßburg, 3. September 1775" />
-				<sort value="1775-09-03" />
+				<date when="1775-09-03">Straßburg, 3. September 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -990,8 +930,7 @@
 
 		<letterDesc letter="66">
 			<sent>
-				<date value="Straßburg, Mitte September 1775" />
-				<sort value="1775-09-10" />
+				<date when="1775-09-10">Straßburg, Mitte September 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1005,8 +944,7 @@
 
 		<letterDesc letter="67">
 			<sent>
-				<date value="Tartu, September 1775" />
-				<sort value="1775-09-14" />
+				<date when="1775-09-14">Tartu, September 1775</date>
 				<location ref="1" />
 				<person ref="5" />
 			</sent>
@@ -1020,8 +958,7 @@
 
 		<letterDesc letter="68">
 			<sent>
-				<date value="Straßburg, September 1775" />
-				<sort value="1775-09-15" />
+				<date when="1775-09-15">Straßburg, September 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1035,8 +972,7 @@
 
 		<letterDesc letter="69">
 			<sent>
-				<date value="Straßburg, 29. September 1775" />
-				<sort value="1775-09-29" />
+				<date when="1775-09-29">Straßburg, 29. September 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1050,8 +986,7 @@
 
 		<letterDesc letter="70">
 			<sent>
-				<date value="Straßburg, 29. September 1775" />
-				<sort value="1775-09-29" />
+				<date when="1775-09-29">Straßburg, 29. September 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1065,8 +1000,7 @@
 
 		<letterDesc letter="71">
 			<sent>
-				<date value="Straßburg, 30. September 1775" />
-				<sort value="1775-09-30" />
+				<date when="1775-09-30">Straßburg, 30. September 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1080,8 +1014,7 @@
 
 		<letterDesc letter="72">
 			<sent>
-				<date value="Straßburg, Ende September 1775" />
-				<sort value="1775-09-30" />
+				<date when="1775-09-30">Straßburg, Ende September 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1095,8 +1028,7 @@
 
 		<letterDesc letter="73">
 			<sent>
-				<date value="Straßburg, Wahrscheinlich Oktober 1775" />
-				<sort value="1775-10-01" />
+				<date when="1775-10-01">Straßburg, Wahrscheinlich Oktober 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1110,8 +1042,7 @@
 
 		<letterDesc letter="74">
 			<sent>
-				<date value="Kehl, 2. Oktober 1775" />
-				<sort value="1775-10-2" />
+				<date when="1775-10-2">Kehl, 2. Oktober 1775</date>
 				<location ref="9" />
 				<person ref="1" />
 			</sent>
@@ -1125,8 +1056,7 @@
 
 		<letterDesc letter="75">
 			<sent>
-				<date value="Zürich, Oktober 1775" />
-				<sort value="1775-10-05" />
+				<date when="1775-10-05">Zürich, Oktober 1775</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -1140,8 +1070,7 @@
 
 		<letterDesc letter="76">
 			<sent>
-				<date value="Straßburg, 13. Oktober 1775" />
-				<sort value="1775-10-13" />
+				<date when="1775-10-13">Straßburg, 13. Oktober 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1155,8 +1084,7 @@
 
 		<letterDesc letter="77">
 			<sent>
-				<date value="Straßburg, Oktober 1775" />
-				<sort value="1775-10-15" />
+				<date when="1775-10-15">Straßburg, Oktober 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1170,8 +1098,7 @@
 
 		<letterDesc letter="78">
 			<sent>
-				<date value="Straßburg, 23. Oktober 1775" />
-				<sort value="1775-10-23" />
+				<date when="1775-10-23">Straßburg, 23. Oktober 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1185,8 +1112,7 @@
 
 		<letterDesc letter="79">
 			<sent>
-				<date value="Ulm, 13. November 1775" />
-				<sort value="1775-11-13" />
+				<date when="1775-11-13">Ulm, 13. November 1775</date>
 				<location ref="13" />
 				<person ref="22" />
 			</sent>
@@ -1200,8 +1126,7 @@
 
 		<letterDesc letter="80">
 			<sent>
-				<date value="Straßburg, 15. November 1775" />
-				<sort value="1775-11-15" />
+				<date when="1775-11-15">Straßburg, 15. November 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1215,8 +1140,7 @@
 
 		<letterDesc letter="81">
 			<sent>
-				<date value="Straßburg, 18. November 1775" />
-				<sort value="1775-11-18" />
+				<date when="1775-11-18">Straßburg, 18. November 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1230,8 +1154,7 @@
 
 		<letterDesc letter="82">
 			<sent>
-				<date value="Straßburg, 18. November 1775" />
-				<sort value="1775-11-18" />
+				<date when="1775-11-18">Straßburg, 18. November 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1245,8 +1168,7 @@
 
 		<letterDesc letter="83">
 			<sent>
-				<date value="Straßburg, 20. November 1775" />
-				<sort value="1775-11-20" />
+				<date when="1775-11-20">Straßburg, 20. November 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1260,8 +1182,7 @@
 
 		<letterDesc letter="84">
 			<sent>
-				<date value="Straßburg, November 1775" />
-				<sort value="1775-11-25" />
+				<date when="1775-11-25">Straßburg, November 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1275,8 +1196,7 @@
 
 		<letterDesc letter="85">
 			<sent>
-				<date value="Straßburg, Ende November 1775" />
-				<sort value="1775-11-30" />
+				<date when="1775-11-30">Straßburg, Ende November 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1290,8 +1210,7 @@
 
 		<letterDesc letter="86">
 			<sent>
-				<date value="Straßburg, Dezember 1775" />
-				<sort value="1775-12-01" />
+				<date when="1775-12-01">Straßburg, Dezember 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1305,8 +1224,7 @@
 
 		<letterDesc letter="87">
 			<sent>
-				<date value="Straßburg, Dezember 1775" />
-				<sort value="1775-12-05" />
+				<date when="1775-12-05">Straßburg, Dezember 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1320,8 +1238,7 @@
 
 		<letterDesc letter="88">
 			<sent>
-				<date value="Straßburg, Dezember 1775" />
-				<sort value="1775-12-15" />
+				<date when="1775-12-15">Straßburg, Dezember 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1335,8 +1252,7 @@
 
 		<letterDesc letter="89">
 			<sent>
-				<date value="Straßburg, Dezember 1775" />
-				<sort value="1775-12-20" />
+				<date when="1775-12-20">Straßburg, Dezember 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1350,8 +1266,7 @@
 
 		<letterDesc letter="90">
 			<sent>
-				<date value="Straßburg, Dezember 1775" />
-				<sort value="1775-12-21" />
+				<date when="1775-12-21">Straßburg, Dezember 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1365,8 +1280,7 @@
 
 		<letterDesc letter="91">
 			<sent>
-				<date value="Straßburg, 25. Dezember 1775" />
-				<sort value="1775-12-25" />
+				<date when="1775-12-25">Straßburg, 25. Dezember 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 				<person ref="12" />
@@ -1382,8 +1296,7 @@
 
 		<letterDesc letter="92">
 			<sent>
-				<date value="Straßburg, 28. Dezember 1775" />
-				<sort value="1775-12-28" />
+				<date when="1775-12-28">Straßburg, 28. Dezember 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1397,8 +1310,7 @@
 
 		<letterDesc letter="93">
 			<sent>
-				<date value="Gotha, 2. Januar 1776" />
-				<sort value="1776-01-02" />
+				<date when="1776-01-02">Gotha, 2. Januar 1776</date>
 				<location ref="15" />
 				<person ref="14" />
 			</sent>
@@ -1412,8 +1324,7 @@
 
 		<letterDesc letter="94">
 			<sent>
-				<date value="Straßburg, 2. Januar 1776" />
-				<sort value="1776-01-02" />
+				<date when="1776-01-02">Straßburg, 2. Januar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1427,8 +1338,7 @@
 
 		<letterDesc letter="95">
 			<sent>
-				<date value="Zürich, Januar 1776" />
-				<sort value="1776-01-09" />
+				<date when="1776-01-09">Zürich, Januar 1776</date>
 				<location ref="11" />
 				<person ref="22" />
 			</sent>
@@ -1442,8 +1352,7 @@
 
 		<letterDesc letter="96">
 			<sent>
-				<date value="Göttingen, 10. Januar 1776" />
-				<sort value="1776-01-10" />
+				<date when="1776-01-10">Göttingen, 10. Januar 1776</date>
 				<location ref="16" />
 				<person ref="20" />
 			</sent>
@@ -1457,8 +1366,7 @@
 
 		<letterDesc letter="97">
 			<sent>
-				<date value="Emmendingen , 13. Januar 1776" />
-				<sort value="1776-01-13" />
+				<date when="1776-01-13">Emmendingen , 13. Januar 1776</date>
 				<location ref="12" />
 				<person ref="18" />
 			</sent>
@@ -1472,8 +1380,7 @@
 
 		<letterDesc letter="98">
 			<sent>
-				<date value="Zürich, 14. Januar 1776" />
-				<sort value="1776-01-14" />
+				<date when="1776-01-14">Zürich, 14. Januar 1776</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -1487,8 +1394,7 @@
 
 		<letterDesc letter="99">
 			<sent>
-				<date value="Kehl, 14. Januar 1776" />
-				<sort value="1776-01-14" />
+				<date when="1776-01-14">Kehl, 14. Januar 1776</date>
 				<location ref="9" />
 				<person ref="1" />
 			</sent>
@@ -1502,8 +1408,7 @@
 
 		<letterDesc letter="100">
 			<sent>
-				<date value="Kehl, Januar 1776" />
-				<sort value="1776-01-15" />
+				<date when="1776-01-15">Kehl, Januar 1776</date>
 				<location ref="9" />
 				<person ref="1" />
 			</sent>
@@ -1513,13 +1418,12 @@
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
-			<!-- Teile des Briefs sind auf französisch geschrieben. -->
+
 		</letterDesc>
 
 		<letterDesc letter="101">
 			<sent>
-				<date value="Straßburg, Wahrscheinlich Januar 1776" />
-				<sort value="1776-01-16" />
+				<date when="1776-01-16">Straßburg, Wahrscheinlich Januar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1533,8 +1437,7 @@
 
 		<letterDesc letter="102">
 			<sent>
-				<date value="Straßburg, Januar 1776" />
-				<sort value="1776-01-17" />
+				<date when="1776-01-17">Straßburg, Januar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1548,8 +1451,8 @@
 
 		<letterDesc letter="103">
 			<sent>
-				<date value="Straßburg, 21./22. Januar 1776" />
-				<sort value="1776-01-21" notBefore="1776-01-21" notAfter="1776-01-22" />
+				<date when="1776-01-21" notBefore="1776-01-21" notAfter="1776-01-22">Straßburg, 21./22.
+					Januar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1563,8 +1466,7 @@
 
 		<letterDesc letter="104">
 			<sent>
-				<date value="Zürich, 24. Januar 1776" />
-				<sort value="1776-01-24" />
+				<date when="1776-01-24">Zürich, 24. Januar 1776</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -1578,8 +1480,7 @@
 
 		<letterDesc letter="105">
 			<sent>
-				<date value="Straßburg, Januar 1776" />
-				<sort value="1776-01-30" />
+				<date when="1776-01-30">Straßburg, Januar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1593,8 +1494,7 @@
 
 		<letterDesc letter="106">
 			<sent>
-				<date value="Straßburg, Ende Januar 1776" />
-				<sort value="1776-01-31" />
+				<date when="1776-01-31">Straßburg, Ende Januar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1608,8 +1508,7 @@
 
 		<letterDesc letter="107">
 			<sent>
-				<date value="Kopenhagen, 3. Februar 1776" />
-				<sort value="1776-02-03" />
+				<date when="1776-02-03">Kopenhagen, 3. Februar 1776</date>
 				<location ref="17" />
 				<person ref="27" />
 			</sent>
@@ -1623,8 +1522,7 @@
 
 		<letterDesc letter="108">
 			<sent>
-				<date value="Straßburg, 12. Februar 1776" />
-				<sort value="1776-02-12" />
+				<date when="1776-02-12">Straßburg, 12. Februar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1638,8 +1536,7 @@
 
 		<letterDesc letter="109">
 			<sent>
-				<date value="Straßburg, Vor 15. Februar 1776" />
-				<sort value="1776-02-08" />
+				<date when="1776-02-08">Straßburg, Vor 15. Februar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1653,10 +1550,9 @@
 
 		<letterDesc letter="110">
 			<sent>
-				<date value="Auf dem Weg von Hannover nach Kassel?, 9. Februar 1776" />
-				<sort value="1776-02-09" />
+				<date when="1776-02-09">Auf dem Weg von Hannover nach Kassel?, 9. Februar 1776</date>
 				<location ref="34" />
-				<!-- Der Ort kann nicht genau bestimmt werden -->				<!-- Für die Strecke extra Ort -->
+
 				<person ref="19" />
 			</sent>
 			<received>
@@ -1669,10 +1565,9 @@
 
 		<letterDesc letter="111">
 			<sent>
-				<date value="Auf dem Weg von Hannover nach Kassel?, Februar 1776" />
-				<sort value="1776-02-12" />
+				<date when="1776-02-12">Auf dem Weg von Hannover nach Kassel?, Februar 1776</date>
 				<location ref="34" />
-				<!-- Der Ort kann nicht genau bestimmt werden -->
+
 				<person ref="19" />
 			</sent>
 			<received>
@@ -1685,8 +1580,7 @@
 
 		<letterDesc letter="112">
 			<sent>
-				<date value="Straßburg, 20. Februar 1776" />
-				<sort value="1776-02-20" />
+				<date when="1776-02-20">Straßburg, 20. Februar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1700,8 +1594,7 @@
 
 		<letterDesc letter="113">
 			<sent>
-				<date value="Kassel, 16. Februar 1776" />
-				<sort value="1776-02-16" />
+				<date when="1776-02-16">Kassel, 16. Februar 1776</date>
 				<location ref="18" />
 				<person ref="19" />
 			</sent>
@@ -1715,8 +1608,7 @@
 
 		<letterDesc letter="114">
 			<sent>
-				<date value="Straßburg, 19. Februar 1776" />
-				<sort value="1776-02-19" />
+				<date when="1776-02-19">Straßburg, 19. Februar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1730,8 +1622,7 @@
 
 		<letterDesc letter="115">
 			<sent>
-				<date value="Straßburg, Ende Februar 1776" />
-				<sort value="1776-02-25" />
+				<date when="1776-02-25">Straßburg, Ende Februar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1745,8 +1636,7 @@
 
 		<letterDesc letter="116">
 			<sent>
-				<date value="Straßburg, Ende Februar 1776 (empfangen 6. März) " />
-				<sort value="1776-02-26" />
+				<date when="1776-02-26">Straßburg, Ende Februar 1776 (empfangen 6. März) </date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1760,8 +1650,7 @@
 
 		<letterDesc letter="117">
 			<sent>
-				<date value="Straßburg, Ende Februar 1776 (empfangen 6. März)" />
-				<sort value="1776-02-27" />
+				<date when="1776-02-27">Straßburg, Ende Februar 1776 (empfangen 6. März)</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1775,8 +1664,7 @@
 
 		<letterDesc letter="118">
 			<sent>
-				<date value="Zürich, 28. Februar 1776" />
-				<sort value="1776-02-28" />
+				<date when="1776-02-28">Zürich, 28. Februar 1776</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -1790,8 +1678,7 @@
 
 		<letterDesc letter="119">
 			<sent>
-				<date value="Straßburg, Ende Februar 1776" />
-				<sort value="1776-02-29" />
+				<date when="1776-02-29">Straßburg, Ende Februar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1805,8 +1692,7 @@
 
 		<letterDesc letter="120">
 			<sent>
-				<date value="Straßburg, Ende Februar 1776" />
-				<sort value="1776-02-31" />
+				<date when="1776-02-31">Straßburg, Ende Februar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1820,8 +1706,7 @@
 
 		<letterDesc letter="121">
 			<sent>
-				<date value="Straßburg, Anfang März 1776" />
-				<sort value="1776-03-01" />
+				<date when="1776-03-01">Straßburg, Anfang März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1835,8 +1720,7 @@
 
 		<letterDesc letter="122">
 			<sent>
-				<date value="Zürich, 3. März 1776" />
-				<sort value="1776-03-03" />
+				<date when="1776-03-03">Zürich, 3. März 1776</date>
 				<location ref="11" />
 				<person ref="22" />
 			</sent>
@@ -1850,8 +1734,7 @@
 
 		<letterDesc letter="123">
 			<sent>
-				<date value="Straßburg, 6. März 1776" />
-				<sort value="1776-03-06" />
+				<date when="1776-03-06">Straßburg, 6. März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1865,8 +1748,7 @@
 
 		<letterDesc letter="124">
 			<sent>
-				<date value="Straßburg, Vor 14. März 1776 (empfangen am 14. März)" />
-				<sort value="1776-03-07" />
+				<date when="1776-03-07">Straßburg, Vor 14. März 1776 (empfangen am 14. März)</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1880,8 +1762,7 @@
 
 		<letterDesc letter="125">
 			<sent>
-				<date value="Hannover, 8. März 1776" />
-				<sort value="1776-03-08" />
+				<date when="1776-03-08">Hannover, 8. März 1776</date>
 				<location ref="19" />
 				<person ref="20" />
 			</sent>
@@ -1895,8 +1776,7 @@
 
 		<letterDesc letter="126">
 			<sent>
-				<date value="Darmstadt, 8. März 1776" />
-				<sort value="1776-03-08" />
+				<date when="1776-03-08">Darmstadt, 8. März 1776</date>
 				<location ref="20" />
 				<person ref="29" />
 			</sent>
@@ -1910,8 +1790,7 @@
 
 		<letterDesc letter="127">
 			<sent>
-				<date value="Bückeburg, 9. März 1776" />
-				<sort value="1776-03-09" />
+				<date when="1776-03-09">Bückeburg, 9. März 1776</date>
 				<location ref="21" />
 				<person ref="17" />
 			</sent>
@@ -1925,8 +1804,7 @@
 
 		<letterDesc letter="128">
 			<sent>
-				<date value="Straßburg, Anfang März 1776" />
-				<sort value="1776-03-10" />
+				<date when="1776-03-10">Straßburg, Anfang März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1940,8 +1818,7 @@
 
 		<letterDesc letter="129">
 			<sent>
-				<date value="Straßburg, Anfang März 1776" />
-				<sort value="1776-03-10" />
+				<date when="1776-03-10">Straßburg, Anfang März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1949,15 +1826,14 @@
 				<person ref="10" />
 			</received>
 			<hasOriginal value="false" />
-			<!-- Exzerptheft von Lavaters Hand; Abschrift? -->
+
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
 
 		<letterDesc letter="130">
 			<sent>
-				<date value="Straßburg, 11. März 1776" />
-				<sort value="1776-03-11" />
+				<date when="1776-03-11">Straßburg, 11. März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1971,8 +1847,7 @@
 
 		<letterDesc letter="131">
 			<sent>
-				<date value="Straßburg, 16. März 1776" />
-				<sort value="1776-03-16" />
+				<date when="1776-03-16">Straßburg, 16. März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1986,8 +1861,7 @@
 
 		<letterDesc letter="132">
 			<sent>
-				<date value="Straßburg, März 1776" />
-				<sort value="1776-03-13" />
+				<date when="1776-03-13">Straßburg, März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -2001,8 +1875,7 @@
 
 		<letterDesc letter="133">
 			<sent>
-				<date value="Straßburg, 14. März 1776" />
-				<sort value="1776-03-14" />
+				<date when="1776-03-14">Straßburg, 14. März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -2016,8 +1889,7 @@
 
 		<letterDesc letter="134">
 			<sent>
-				<date value="Straßburg, 15. März 1776" />
-				<sort value="1776-03-15" />
+				<date when="1776-03-15">Straßburg, 15. März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -2031,8 +1903,7 @@
 
 		<letterDesc letter="135">
 			<sent>
-				<date value="Gudensberg, 16. März 1776" />
-				<sort value="1776-03-16" />
+				<date when="1776-03-16">Gudensberg, 16. März 1776</date>
 				<location ref="22" />
 				<person ref="19" />
 			</sent>
@@ -2046,8 +1917,7 @@
 
 		<letterDesc letter="136">
 			<sent>
-				<date value="Darmstadt, 17. März 1776" />
-				<sort value="1776-03-17" />
+				<date when="1776-03-17">Darmstadt, 17. März 1776</date>
 				<location ref="20" />
 				<person ref="29" />
 			</sent>
@@ -2061,8 +1931,7 @@
 
 		<letterDesc letter="137">
 			<sent>
-				<date value="Bückeburg, März 1776" />
-				<sort value="1776-03-18" />
+				<date when="1776-03-18">Bückeburg, März 1776</date>
 				<location ref="21" />
 				<person ref="17" />
 			</sent>
@@ -2076,8 +1945,7 @@
 
 		<letterDesc letter="138">
 			<sent>
-				<date value="Zürich, 19. März 1776" />
-				<sort value="1776-03-19" />
+				<date when="1776-03-19">Zürich, 19. März 1776</date>
 				<location ref="11" />
 				<person ref="23" />
 			</sent>
@@ -2091,8 +1959,7 @@
 
 		<letterDesc letter="139">
 			<sent>
-				<date value="Straßburg, März 1776" />
-				<sort value="1776-03-20" />
+				<date when="1776-03-20">Straßburg, März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -2106,8 +1973,7 @@
 
 		<letterDesc letter="140">
 			<sent>
-				<date value="Hannover, 22. März 1776" />
-				<sort value="1776-03-22" />
+				<date when="1776-03-22">Hannover, 22. März 1776</date>
 				<location ref="19" />
 				<person ref="20" />
 			</sent>
@@ -2121,8 +1987,7 @@
 
 		<letterDesc letter="141">
 			<sent>
-				<date value="Zürich, 22. März 1776" />
-				<sort value="1776-03-22" />
+				<date when="1776-03-22">Zürich, 22. März 1776</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -2136,8 +2001,7 @@
 
 		<letterDesc letter="142">
 			<sent>
-				<date value="Frankfurt am Main, Ende März 1776" />
-				<sort value="1776-03-24" />
+				<date when="1776-03-24">Frankfurt am Main, Ende März 1776</date>
 				<location ref="56" />
 				<person ref="1" />
 			</sent>
@@ -2151,8 +2015,7 @@
 
 		<letterDesc letter="143">
 			<sent>
-				<date value="Straßburg, 25. März 1776" />
-				<sort value="1776-03-25" />
+				<date when="1776-03-25">Straßburg, 25. März 1776</date>
 				<location ref="7" />
 				<person ref="15" />
 			</sent>
@@ -2167,8 +2030,7 @@
 
 		<letterDesc letter="144">
 			<sent>
-				<date value="Darmstadt, Ende März 1776" />
-				<sort value="1776-03-26" />
+				<date when="1776-03-26">Darmstadt, Ende März 1776</date>
 				<location ref="20" />
 				<person ref="1" />
 			</sent>
@@ -2182,8 +2044,7 @@
 
 		<letterDesc letter="145">
 			<sent>
-				<date value="Gießen, 27. März 1776" />
-				<sort value="1776-03-27" />
+				<date when="1776-03-27">Gießen, 27. März 1776</date>
 				<location ref="23" />
 				<person ref="31" />
 			</sent>
@@ -2197,8 +2058,7 @@
 
 		<letterDesc letter="146">
 			<sent>
-				<date value="Darmstadt, Ende März 1776" />
-				<sort value="1776-03-28" />
+				<date when="1776-03-28">Darmstadt, Ende März 1776</date>
 				<location ref="20" />
 				<person ref="1" />
 			</sent>
@@ -2212,8 +2072,7 @@
 
 		<letterDesc letter="147">
 			<sent>
-				<date value="Darmstadt, Ende März 1776" />
-				<sort value="1776-03-29" />
+				<date when="1776-03-29">Darmstadt, Ende März 1776</date>
 				<location ref="20" />
 				<person ref="1" />
 			</sent>
@@ -2227,8 +2086,7 @@
 
 		<letterDesc letter="148">
 			<sent>
-				<date value="hinter Frankfurt, 1. April 1776" />
-				<sort value="1776-04-01" />
+				<date when="1776-04-01">hinter Frankfurt, 1. April 1776</date>
 				<person ref="1" />
 			</sent>
 			<received>
@@ -2241,8 +2099,7 @@
 
 		<letterDesc letter="149">
 			<sent>
-				<date value="Weimar, 1. April 1776" />
-				<sort value="1776-04-01" />
+				<date when="1776-04-01">Weimar, 1. April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2256,8 +2113,7 @@
 
 		<letterDesc letter="150">
 			<sent>
-				<date value="Weimar, 2. April 1776" />
-				<sort value="1776-04-02" />
+				<date when="1776-04-02">Weimar, 2. April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2271,8 +2127,7 @@
 
 		<letterDesc letter="151">
 			<sent>
-				<date value="hinter Frankfurt, Um 1. April 1776" />
-				<sort value="1776-04-03" />
+				<date when="1776-04-03">hinter Frankfurt, Um 1. April 1776</date>
 				<person ref="1" />
 			</sent>
 			<received>
@@ -2285,8 +2140,7 @@
 
 		<letterDesc letter="152">
 			<sent>
-				<date value="Dessau, 4. April 1776" />
-				<sort value="1776-04-01" />
+				<date when="1776-04-01">Dessau, 4. April 1776</date>
 				<location ref="25" />
 				<person ref="34" />
 			</sent>
@@ -2300,8 +2154,7 @@
 
 		<letterDesc letter="153">
 			<sent>
-				<date value="Weimar, 5. April 1776" />
-				<sort value="1776-04-05" />
+				<date when="1776-04-05">Weimar, 5. April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2315,8 +2168,7 @@
 
 		<letterDesc letter="154">
 			<sent>
-				<date value="Weimar, April 1776" />
-				<sort value="1776-04-06" />
+				<date when="1776-04-06">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2324,15 +2176,14 @@
 				<person ref="10" />
 			</received>
 			<hasOriginal value="false" />
-			<!-- Hier handelt es sich um das Exzerptheft von Lavaters Hand -->
+
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
 
 		<letterDesc letter="155">
 			<sent>
-				<date value="Weimar, April 1776" />
-				<sort value="1776-04-08" />
+				<date when="1776-04-08">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2346,8 +2197,7 @@
 
 		<letterDesc letter="156">
 			<sent>
-				<date value="Hannover, 11. April 1776" />
-				<sort value="1776-04-11" />
+				<date when="1776-04-11">Hannover, 11. April 1776</date>
 				<location ref="19" />
 				<person ref="20" />
 			</sent>
@@ -2361,8 +2211,7 @@
 
 		<letterDesc letter="157">
 			<sent>
-				<date value="Weimar, April 1776" />
-				<sort value="1776-04-12" />
+				<date when="1776-04-12">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2376,8 +2225,7 @@
 
 		<letterDesc letter="158">
 			<sent>
-				<date value="Weimar, 14. April 1776" />
-				<sort value="1776-04-14" />
+				<date when="1776-04-14">Weimar, 14. April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2391,8 +2239,7 @@
 
 		<letterDesc letter="159">
 			<sent>
-				<date value="Weimar, Mitte April 1776" />
-				<sort value="1776-04-15" />
+				<date when="1776-04-15">Weimar, Mitte April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2406,8 +2253,7 @@
 
 		<letterDesc letter="160">
 			<sent>
-				<date value="Weimar, 16. April 1776" />
-				<sort value="1776-04-16" />
+				<date when="1776-04-16">Weimar, 16. April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2421,8 +2267,7 @@
 
 		<letterDesc letter="161">
 			<sent>
-				<date value="Straßburg, 16. April 1776" />
-				<sort value="1776-04-16" />
+				<date when="1776-04-16">Straßburg, 16. April 1776</date>
 				<location ref="7" />
 				<person ref="9" />
 				<person ref="11" />
@@ -2437,8 +2282,7 @@
 
 		<letterDesc letter="162">
 			<sent>
-				<date value="Mannheim, April 1776" />
-				<sort value="1776-04-17" />
+				<date when="1776-04-17">Mannheim, April 1776</date>
 				<location ref="31" />
 				<person ref="35" />
 			</sent>
@@ -2452,8 +2296,7 @@
 
 		<letterDesc letter="163">
 			<sent>
-				<date value="Weimar, Vor 26. April 1776" />
-				<sort value="1776-04-18" />
+				<date when="1776-04-18">Weimar, Vor 26. April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2467,8 +2310,7 @@
 
 		<letterDesc letter="164">
 			<sent>
-				<date value="Weimar, April 1776" />
-				<sort value="1776-04-19" />
+				<date when="1776-04-19">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2482,8 +2324,7 @@
 
 		<letterDesc letter="165">
 			<sent>
-				<date value="Weimar, April 1776" />
-				<sort value="1776-04-20" />
+				<date when="1776-04-20">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2497,8 +2338,7 @@
 
 		<letterDesc letter="166">
 			<sent>
-				<date value="Weimar, April 1776" />
-				<sort value="1776-04-21" />
+				<date when="1776-04-21">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2512,8 +2352,7 @@
 
 		<letterDesc letter="167">
 			<sent>
-				<date value="Weimar, April 1776" />
-				<sort value="1776-04-22" />
+				<date when="1776-04-22">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2527,8 +2366,7 @@
 
 		<letterDesc letter="168">
 			<sent>
-				<date value="Weimar, Ende April 1776" />
-				<sort value="1776-04-24" />
+				<date when="1776-04-24">Weimar, Ende April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2542,8 +2380,7 @@
 
 		<letterDesc letter="169">
 			<sent>
-				<date value="Hannover, 25. April 1776" />
-				<sort value="1776-04-25" />
+				<date when="1776-04-25">Hannover, 25. April 1776</date>
 				<location ref="19" />
 				<person ref="20" />
 			</sent>
@@ -2557,8 +2394,7 @@
 
 		<letterDesc letter="170">
 			<sent>
-				<date value="Bückeburg, Ende April 1776" />
-				<sort value="1776-04-26" />
+				<date when="1776-04-26">Bückeburg, Ende April 1776</date>
 				<location ref="21" />
 				<person ref="16" />
 			</sent>
@@ -2572,8 +2408,7 @@
 
 		<letterDesc letter="171">
 			<sent>
-				<date value="Zürich, 27. April 1776" />
-				<sort value="1776-04-27" />
+				<date when="1776-04-27">Zürich, 27. April 1776</date>
 				<location ref="11" />
 				<person ref="11" />
 			</sent>
@@ -2589,8 +2424,7 @@
 
 		<letterDesc letter="172">
 			<sent>
-				<date value="Hannover, 30. April 1776" />
-				<sort value="1776-04-30" />
+				<date when="1776-04-30">Hannover, 30. April 1776</date>
 				<location ref="19" />
 				<person ref="20" />
 			</sent>
@@ -2604,8 +2438,7 @@
 
 		<letterDesc letter="173">
 			<sent>
-				<date value="Weimar, 30. April 1776" />
-				<sort value="1776-04-30" />
+				<date when="1776-04-30">Weimar, 30. April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2619,8 +2452,7 @@
 
 		<letterDesc letter="174">
 			<sent>
-				<date value="Weimar, 6. Mai 1776" />
-				<sort value="1776-05-06" />
+				<date when="1776-05-06">Weimar, 6. Mai 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2634,8 +2466,7 @@
 
 		<letterDesc letter="175">
 			<sent>
-				<date value="Weimar, 8. Mai 1776" />
-				<sort value="1776-05-08" />
+				<date when="1776-05-08">Weimar, 8. Mai 1776</date>
 				<location ref="8" />
 				<person ref="36" />
 			</sent>
@@ -2649,8 +2480,7 @@
 
 		<letterDesc letter="176">
 			<sent>
-				<date value="Weimar, Nach 3. April 1776" />
-				<sort value="1776-05-09" />
+				<date when="1776-05-09">Weimar, Nach 3. April 1776</date>
 				<location ref="8" />
 				<person ref="37" />
 			</sent>
@@ -2664,8 +2494,7 @@
 
 		<letterDesc letter="177">
 			<sent>
-				<date value="Weimar, Zwischen April und November 1776" />
-				<sort value="1776-05-10" />
+				<date when="1776-05-10">Weimar, Zwischen April und November 1776</date>
 				<location ref="8" />
 				<person ref="38" />
 			</sent>
@@ -2679,8 +2508,7 @@
 
 		<letterDesc letter="178">
 			<sent>
-				<date value="Weimar, 12. Mai 1776" />
-				<sort value="1776-05-12" />
+				<date when="1776-05-12">Weimar, 12. Mai 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2694,8 +2522,7 @@
 
 		<letterDesc letter="179">
 			<sent>
-				<date value="Zürich, Mai 1776" />
-				<sort value="1776-05-12" />
+				<date when="1776-05-12">Zürich, Mai 1776</date>
 				<location ref="8" />
 				<person ref="22" />
 			</sent>
@@ -2709,8 +2536,7 @@
 
 		<letterDesc letter="180">
 			<sent>
-				<date value="Weimar, Spätestens Mitte Mai 1776" />
-				<sort value="1776-05-15" />
+				<date when="1776-05-15">Weimar, Spätestens Mitte Mai 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2724,8 +2550,7 @@
 
 		<letterDesc letter="181">
 			<sent>
-				<date value="Weimar, Mitte Mai 1776" />
-				<sort value="1776-05-17" />
+				<date when="1776-05-17">Weimar, Mitte Mai 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2739,8 +2564,7 @@
 
 		<letterDesc letter="182">
 			<sent>
-				<date value="Hannover, 19. Mai 1776" />
-				<sort value="1776-05-19" />
+				<date when="1776-05-19">Hannover, 19. Mai 1776</date>
 				<location ref="19" />
 				<person ref="1" />
 			</sent>
@@ -2754,8 +2578,7 @@
 
 		<letterDesc letter="183">
 			<sent>
-				<date value="Weimar, 20. Mai 1776" />
-				<sort value="1776-05-20" />
+				<date when="1776-05-20">Weimar, 20. Mai 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2769,8 +2592,7 @@
 
 		<letterDesc letter="184">
 			<sent>
-				<date value="Straßburg, 23. Mai 1776" />
-				<sort value="1776-05-23" />
+				<date when="1776-05-23">Straßburg, 23. Mai 1776</date>
 				<location ref="7" />
 				<person ref="11" />
 			</sent>
@@ -2784,8 +2606,7 @@
 
 		<letterDesc letter="185">
 			<sent>
-				<date value="Colmar, 25. Mai 1776" />
-				<sort value="1776-05-25" />
+				<date when="1776-05-25">Colmar, 25. Mai 1776</date>
 				<location ref="26" />
 				<person ref="39" />
 			</sent>
@@ -2799,8 +2620,7 @@
 
 		<letterDesc letter="186">
 			<sent>
-				<date value="Weimaer, Vor 27. Mai 1776" />
-				<sort value="1776-05-26" />
+				<date when="1776-05-26">Weimaer, Vor 27. Mai 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2814,8 +2634,7 @@
 
 		<letterDesc letter="187">
 			<sent>
-				<date value="Leipzig, 26. Mai 1776" />
-				<sort value="1776-05-26" />
+				<date when="1776-05-26">Leipzig, 26. Mai 1776</date>
 				<location ref="27" />
 				<person ref="40" />
 			</sent>
@@ -2829,8 +2648,7 @@
 
 		<letterDesc letter="188">
 			<sent>
-				<date value="Weimar, Kurz nach dem 24. Mai 1776" />
-				<sort value="1776-05-27" />
+				<date when="1776-05-27">Weimar, Kurz nach dem 24. Mai 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2844,8 +2662,7 @@
 
 		<letterDesc letter="189">
 			<sent>
-				<date value="Weimar, Ende Mai 1776" />
-				<sort value="1776-05-30" />
+				<date when="1776-05-30">Weimar, Ende Mai 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2859,8 +2676,7 @@
 
 		<letterDesc letter="190">
 			<sent>
-				<date value="Weimar, Ende Mai 1776" />
-				<sort value="1776-05-31" />
+				<date when="1776-05-31">Weimar, Ende Mai 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2874,8 +2690,7 @@
 
 		<letterDesc letter="191">
 			<sent>
-				<date value="Weimar, Mitte 1776" />
-				<sort value="1776-06-01" />
+				<date when="1776-06-01">Weimar, Mitte 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2889,8 +2704,7 @@
 
 		<letterDesc letter="192">
 			<sent>
-				<date value="Straßburg, 4. Juni 1776" />
-				<sort value="1776-06-04" />
+				<date when="1776-06-04">Straßburg, 4. Juni 1776</date>
 				<location ref="7" />
 				<person ref="11" />
 			</sent>
@@ -2904,8 +2718,7 @@
 
 		<letterDesc letter="193">
 			<sent>
-				<date value="Weimar, 7. Juni 1776" />
-				<sort value="1776-06-07" />
+				<date when="1776-06-07">Weimar, 7. Juni 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2919,8 +2732,7 @@
 
 		<letterDesc letter="194">
 			<sent>
-				<date value="Weimar, 9. Juni 1776" />
-				<sort value="1776-06-09" />
+				<date when="1776-06-09">Weimar, 9. Juni 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2934,8 +2746,7 @@
 
 		<letterDesc letter="195">
 			<sent>
-				<date value="Hannover, 17. Juni 1776" />
-				<sort value="1776-06-17" />
+				<date when="1776-06-17">Hannover, 17. Juni 1776</date>
 				<location ref="19" />
 				<person ref="20" />
 			</sent>
@@ -2949,16 +2760,14 @@
 
 		<letterDesc letter="196">
 			<sent>
-				<date value="Weimar, Bald nach dem 17. Juni 1776" />
-				<sort value="1776-06-20" />
+				<date when="1776-06-20">Weimar, Bald nach dem 17. Juni 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
 			<received>
 				<person ref="42" />
 				<person ref="43" />
-				<!-- Wie wird der Fall ausgezeichnet, dass unbestimmt ist, welche der beiden Personen als
-				receiver in Frage kommt? -->
+
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
@@ -2967,8 +2776,7 @@
 
 		<letterDesc letter="197">
 			<sent>
-				<date value="Weimar, Sommer 1776" />
-				<sort value="1776-06-24" />
+				<date when="1776-06-24">Weimar, Sommer 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2982,8 +2790,7 @@
 
 		<letterDesc letter="198">
 			<sent>
-				<date value="Weimar, 26. Juni 1776" />
-				<sort value="1776-06-26" />
+				<date when="1776-06-26">Weimar, 26. Juni 1776</date>
 				<location ref="8" />
 				<person ref="46" />
 				<person ref="1" />
@@ -2998,8 +2805,7 @@
 
 		<letterDesc letter="199">
 			<sent>
-				<date value="Weimar, Um den 27. Juni 1776" />
-				<sort value="1776-06-27" />
+				<date when="1776-06-27">Weimar, Um den 27. Juni 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -3014,8 +2820,7 @@
 
 		<letterDesc letter="200">
 			<sent>
-				<date value="Weimar, 27. Juni 1776" />
-				<sort value="1776-06-27" />
+				<date when="1776-06-27">Weimar, 27. Juni 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -3029,8 +2834,7 @@
 
 		<letterDesc letter="201">
 			<sent>
-				<date value="Straßburg, Ende Juni 1776" />
-				<sort value="1776-06-28" />
+				<date when="1776-06-28">Straßburg, Ende Juni 1776</date>
 				<location ref="7" />
 				<person ref="11" />
 			</sent>
@@ -3044,8 +2848,7 @@
 
 		<letterDesc letter="202">
 			<sent>
-				<date value="Hannover, 2. Juli 1776" />
-				<sort value="1776-07-02" />
+				<date when="1776-07-02">Hannover, 2. Juli 1776</date>
 				<location ref="19" />
 				<person ref="20" />
 			</sent>
@@ -3059,8 +2862,7 @@
 
 		<letterDesc letter="203">
 			<sent>
-				<date value="Berka, Juli 1776" />
-				<sort value="1776-07-04" />
+				<date when="1776-07-04">Berka, Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3074,8 +2876,7 @@
 
 		<letterDesc letter="204">
 			<sent>
-				<date value="Berka, Anfang Juli 1776" />
-				<sort value="1776-07-05" />
+				<date when="1776-07-05">Berka, Anfang Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3089,8 +2890,7 @@
 
 		<letterDesc letter="205">
 			<sent>
-				<date value="Berka, Anfang Juli 1776" />
-				<sort value="1776-07-08" />
+				<date when="1776-07-08">Berka, Anfang Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3104,8 +2904,7 @@
 
 		<letterDesc letter="206">
 			<sent>
-				<date value="Berka, Nach dem 23. Mai 1776" />
-				<sort value="1776-07-09" />
+				<date when="1776-07-09">Berka, Nach dem 23. Mai 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3119,8 +2918,7 @@
 
 		<letterDesc letter="207">
 			<sent>
-				<date value="Hegi, 10. Juli 1776" />
-				<sort value="1776-07-10" />
+				<date when="1776-07-10">Hegi, 10. Juli 1776</date>
 				<location ref="28" />
 				<person ref="10" />
 			</sent>
@@ -3134,8 +2932,7 @@
 
 		<letterDesc letter="208">
 			<sent>
-				<date value="Weimar, Juli 1776" />
-				<sort value="1776-07-11" />
+				<date when="1776-07-11">Weimar, Juli 1776</date>
 				<location ref="8" />
 				<person ref="12" />
 			</sent>
@@ -3149,8 +2946,7 @@
 
 		<letterDesc letter="209">
 			<sent>
-				<date value="Weimar, Juli 1776" />
-				<sort value="1776-07-12" />
+				<date when="1776-07-12">Weimar, Juli 1776</date>
 				<location ref="8" />
 				<person ref="45" />
 			</sent>
@@ -3164,8 +2960,7 @@
 
 		<letterDesc letter="210">
 			<sent>
-				<date value="Berka, Juli 1776" />
-				<sort value="1776-07-13" />
+				<date when="1776-07-13">Berka, Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3179,8 +2974,7 @@
 
 		<letterDesc letter="211">
 			<sent>
-				<date value="Berka, Sommer 1776" />
-				<sort value="1776-07-14" />
+				<date when="1776-07-14">Berka, Sommer 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3194,8 +2988,7 @@
 
 		<letterDesc letter="212">
 			<sent>
-				<date value="Berka, 15. Juli 1776" />
-				<sort value="1776-07-15" />
+				<date when="1776-07-15">Berka, 15. Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3209,8 +3002,7 @@
 
 		<letterDesc letter="213">
 			<sent>
-				<date value="Berka, Sommer 1776" />
-				<sort value="1776-07-16" />
+				<date when="1776-07-16">Berka, Sommer 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3224,8 +3016,7 @@
 
 		<letterDesc letter="214">
 			<sent>
-				<date value="Berka, Juli 1776" />
-				<sort value="1776-07-17" />
+				<date when="1776-07-17">Berka, Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3239,8 +3030,7 @@
 
 		<letterDesc letter="215">
 			<sent>
-				<date value="Weimar, Sommer 1776" />
-				<sort value="1776-07-18" />
+				<date when="1776-07-18">Weimar, Sommer 1776</date>
 				<location ref="8" />
 				<person ref="47" />
 			</sent>
@@ -3254,8 +3044,7 @@
 
 		<letterDesc letter="216">
 			<sent>
-				<date value="Weimar, Juli 1776" />
-				<sort value="1776-07-19" />
+				<date when="1776-07-19">Weimar, Juli 1776</date>
 				<location ref="7" />
 				<person ref="11" />
 			</sent>
@@ -3269,8 +3058,7 @@
 
 		<letterDesc letter="217">
 			<sent>
-				<date value="Berka, Juli 1776" />
-				<sort value="1776-07-20" />
+				<date when="1776-07-20">Berka, Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3284,8 +3072,7 @@
 
 		<letterDesc letter="218">
 			<sent>
-				<date value="Berka, Mitte Juli 1776" />
-				<sort value="1776-07-21" />
+				<date when="1776-07-21">Berka, Mitte Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3299,8 +3086,7 @@
 
 		<letterDesc letter="219">
 			<sent>
-				<date value="Berka, Juli 1776" />
-				<sort value="1776-07-22" />
+				<date when="1776-07-22">Berka, Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3314,8 +3100,7 @@
 
 		<letterDesc letter="220">
 			<sent>
-				<date value="wahrscheinlich Berka, Sommer 1776" />
-				<sort value="1776-07-23" />
+				<date when="1776-07-23">wahrscheinlich Berka, Sommer 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3328,8 +3113,7 @@
 
 		<letterDesc letter="221">
 			<sent>
-				<date value="Zürich, 24. Juli 1776" />
-				<sort value="1776-07-24" />
+				<date when="1776-07-24">Zürich, 24. Juli 1776</date>
 				<location ref="11" />
 				<person ref="1" />
 			</sent>
@@ -3343,8 +3127,7 @@
 
 		<letterDesc letter="222">
 			<sent>
-				<date value="Straßburg, Juli 1776" />
-				<sort value="1776-07-25" />
+				<date when="1776-07-25">Straßburg, Juli 1776</date>
 				<location ref="7" />
 				<person ref="11" />
 			</sent>
@@ -3358,8 +3141,7 @@
 
 		<letterDesc letter="223">
 			<sent>
-				<date value="Berka, 26. Juli 1776" />
-				<sort value="1776-07-26" />
+				<date when="1776-07-26">Berka, 26. Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3373,8 +3155,7 @@
 
 		<letterDesc letter="224">
 			<sent>
-				<date value="Berka, Juli 1776" />
-				<sort value="1776-07-27" />
+				<date when="1776-07-27">Berka, Juli 1776</date>
 				<location ref="14" />
 				<person ref="25" />
 			</sent>
@@ -3384,13 +3165,12 @@
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
-			<!-- Dieser Brief ist zugleich ein Entwurf -->
+
 		</letterDesc>
 
 		<letterDesc letter="225">
 			<sent>
-				<date value="Zürich, 31. Juli 1776" />
-				<sort value="1776-07-31" />
+				<date when="1776-07-31">Zürich, 31. Juli 1776</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -3404,8 +3184,7 @@
 
 		<letterDesc letter="226">
 			<sent>
-				<date value="Halle, 3. August 1776" />
-				<sort value="1776-08-03" />
+				<date when="1776-08-03">Halle, 3. August 1776</date>
 				<location ref="29" />
 				<person ref="48" />
 			</sent>
@@ -3419,8 +3198,7 @@
 
 		<letterDesc letter="227">
 			<sent>
-				<date value="Berka, Vor 13. August 1776" />
-				<sort value="1776-08-05" />
+				<date when="1776-08-05">Berka, Vor 13. August 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3434,8 +3212,7 @@
 
 		<letterDesc letter="228">
 			<sent>
-				<date value="Straßburg, 8. August 1776" />
-				<sort value="1776-08-08" />
+				<date when="1776-08-08">Straßburg, 8. August 1776</date>
 				<location ref="7" />
 				<person ref="11" />
 			</sent>
@@ -3449,8 +3226,7 @@
 
 		<letterDesc letter="229">
 			<sent>
-				<date value="Weimar, 27. August 1776" />
-				<sort value="1776-08-27" />
+				<date when="1776-08-27">Weimar, 27. August 1776</date>
 				<location ref="8" />
 				<person ref="26" />
 			</sent>
@@ -3464,8 +3240,7 @@
 
 		<letterDesc letter="230">
 			<sent>
-				<date value="Weimar, 28. August 1776" />
-				<sort value="1776-08-28" />
+				<date when="1776-08-28">Weimar, 28. August 1776</date>
 				<location ref="8" />
 				<person ref="25" />
 			</sent>
@@ -3479,8 +3254,7 @@
 
 		<letterDesc letter="231">
 			<sent>
-				<date value="Weimar, 29. August 1776" />
-				<sort value="1776-08-29" />
+				<date when="1776-08-29">Weimar, 29. August 1776</date>
 				<location ref="8" />
 				<person ref="38" />
 			</sent>
@@ -3494,8 +3268,7 @@
 
 		<letterDesc letter="232">
 			<sent>
-				<date value="Berka, Anfang September 1776" />
-				<sort value="1776-09-02" />
+				<date when="1776-09-02">Berka, Anfang September 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3509,8 +3282,7 @@
 
 		<letterDesc letter="233">
 			<sent>
-				<date value="Kochberg, Mitte September 1776" />
-				<sort value="1776-09-15" />
+				<date when="1776-09-15">Kochberg, Mitte September 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3524,15 +3296,14 @@
 
 		<letterDesc letter="234">
 			<sent>
-				<date value="Weimar [tatsächlich wohl aus Kochberg], 20. September 1776" />
-				<sort value="1776-09-20" />
+				<date when="1776-09-20">Weimar [tatsächlich wohl aus Kochberg], 20. September 1776</date>
 				<location ref="8" />
-				<!-- Eigentlicher Ort? -->
+
 				<person ref="1" />
 			</sent>
 			<received>
 				<person ref="49" />
-				<!-- Wird sein Bruder auch genannt? -->				<!-- Onkel von Jakob Lenz benennen? -->
+
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
@@ -3541,8 +3312,7 @@
 
 		<letterDesc letter="235">
 			<sent>
-				<date value="Straßburg, 21. September 1776" />
-				<sort value="1776-09-21" />
+				<date when="1776-09-21">Straßburg, 21. September 1776</date>
 				<location ref="7" />
 				<person ref="9" />
 			</sent>
@@ -3556,8 +3326,7 @@
 
 		<letterDesc letter="236">
 			<sent>
-				<date value="Straßburg, 22. September 1776" />
-				<sort value="1776-09-22" />
+				<date when="1776-09-22">Straßburg, 22. September 1776</date>
 				<location ref="7" />
 				<person ref="25" />
 			</sent>
@@ -3571,8 +3340,7 @@
 
 		<letterDesc letter="237">
 			<sent>
-				<date value="Straßburg, September 1776" />
-				<sort value="1776-09-23" />
+				<date when="1776-09-23">Straßburg, September 1776</date>
 				<location ref="7" />
 				<person ref="45" />
 			</sent>
@@ -3586,8 +3354,7 @@
 
 		<letterDesc letter="238">
 			<sent>
-				<date value="Kochberg, September 1776" />
-				<sort value="1776-09-25" />
+				<date when="1776-09-25">Kochberg, September 1776</date>
 				<location ref="30" />
 				<person ref="1" />
 			</sent>
@@ -3601,8 +3368,7 @@
 
 		<letterDesc letter="239">
 			<sent>
-				<date value="Weimar, 8. Oktober 1776" />
-				<sort value="1776-10-08" />
+				<date when="1776-10-08">Weimar, 8. Oktober 1776</date>
 				<location ref="8" />
 				<person ref="17" />
 			</sent>
@@ -3616,8 +3382,7 @@
 
 		<letterDesc letter="240">
 			<sent>
-				<date value="Kochberg, 9. oder 10. Oktober 1776" />
-				<sort value="1776-10-09" />
+				<date when="1776-10-09">Kochberg, 9. oder 10. Oktober 1776</date>
 				<location ref="30" />
 				<person ref="1" />
 			</sent>
@@ -3631,8 +3396,7 @@
 
 		<letterDesc letter="241">
 			<sent>
-				<date value="Weimar, Oktober 1776" />
-				<sort value="1776-10-15" />
+				<date when="1776-10-15">Weimar, Oktober 1776</date>
 				<location ref="8" />
 				<person ref="45" />
 			</sent>
@@ -3646,8 +3410,7 @@
 
 		<letterDesc letter="242">
 			<sent>
-				<date value="Göttingen, Oktober 1776" />
-				<sort value="1776-10-20" />
+				<date when="1776-10-20">Göttingen, Oktober 1776</date>
 				<location ref="16" />
 				<person ref="11" />
 			</sent>
@@ -3661,8 +3424,7 @@
 
 		<letterDesc letter="243">
 			<sent>
-				<date value="Kochberg, 23. Oktober 1776" />
-				<sort value="1776-10-23" />
+				<date when="1776-10-23">Kochberg, 23. Oktober 1776</date>
 				<location ref="30" />
 				<person ref="1" />
 			</sent>
@@ -3676,8 +3438,7 @@
 
 		<letterDesc letter="244">
 			<sent>
-				<date value="Kochberg, 24. Oktober 1776" />
-				<sort value="1776-10-24" />
+				<date when="1776-10-24">Kochberg, 24. Oktober 1776</date>
 				<location ref="30" />
 				<person ref="1" />
 			</sent>
@@ -3691,8 +3452,7 @@
 
 		<letterDesc letter="245">
 			<sent>
-				<date value="Weimar, Oktober 1776" />
-				<sort value="1776-10-25" />
+				<date when="1776-10-25">Weimar, Oktober 1776</date>
 				<location ref="8" />
 				<person ref="26" />
 			</sent>
@@ -3706,10 +3466,9 @@
 
 		<letterDesc letter="246">
 			<sent>
-				<date value="Wohl Berka oder Kochberg, Oktober 1776" />
-				<sort value="1776-10-26" />
+				<date when="1776-10-26">Wohl Berka oder Kochberg, Oktober 1776</date>
 				<location ref="14" />
-				<!-- Oder Kochberg -->				<!-- Extra location für den Fall -->
+
 				<person ref="1" />
 			</sent>
 			<received>
@@ -3722,10 +3481,9 @@
 
 		<letterDesc letter="247">
 			<sent>
-				<date value="Wohl Berka oder Kochberg, Oktober/November 1776" />
-				<sort value="1776-10-27" />
+				<date when="1776-10-27">Wohl Berka oder Kochberg, Oktober/November 1776</date>
 				<location ref="14" />
-				<!-- Oder Kochberg -->
+
 				<person ref="1" />
 			</sent>
 			<received>
@@ -3738,8 +3496,7 @@
 
 		<letterDesc letter="248">
 			<sent>
-				<date value="Göttingen, Anfang November 1776" />
-				<sort value="1776-11-01" />
+				<date when="1776-11-01">Göttingen, Anfang November 1776</date>
 				<location ref="16" />
 				<person ref="11" />
 			</sent>
@@ -3753,8 +3510,7 @@
 
 		<letterDesc letter="249">
 			<sent>
-				<date value="Berka, Anfang November 1776" />
-				<sort value="1776-11-02" />
+				<date when="1776-11-02">Berka, Anfang November 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3768,8 +3524,7 @@
 
 		<letterDesc letter="250">
 			<sent>
-				<date value="Berka, 3. November 1775 [recte: 1776]" />
-				<sort value="1776-11-03" />
+				<date when="1776-11-03">Berka, 3. November 1775 [recte: 1776]</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3783,8 +3538,7 @@
 
 		<letterDesc letter="251">
 			<sent>
-				<date value="Berka, 13. November 1776" />
-				<sort value="1776-11-13" />
+				<date when="1776-11-13">Berka, 13. November 1776</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -3798,8 +3552,7 @@
 
 		<letterDesc letter="252">
 			<sent>
-				<date value="Berka?, 15. November 1776" />
-				<sort value="1776-11-15" />
+				<date when="1776-11-15">Berka?, 15. November 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3813,8 +3566,7 @@
 
 		<letterDesc letter="253">
 			<sent>
-				<date value="Berka, 16. November 1776" />
-				<sort value="1776-11-16" />
+				<date when="1776-11-16">Berka, 16. November 1776</date>
 				<location ref="14" />
 				<person ref="26" />
 			</sent>
@@ -3828,8 +3580,7 @@
 
 		<letterDesc letter="254">
 			<sent>
-				<date value="Berka, 23. November 1776" />
-				<sort value="1776-11-23" />
+				<date when="1776-11-23">Berka, 23. November 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -3843,27 +3594,25 @@
 
 		<letterDesc letter="255">
 			<sent>
-				<date value="Weimar [wohl Berka], 23. November 1776" />
-				<sort value="1776-11-23" />
-				<!-- Weimar [wohl Berka] -->
+				<date when="1776-11-23">Weimar [wohl Berka], 23. November 1776</date>
+
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
 			<received>
 				<person ref="42" />
-				<!-- Unklar welche Laudth den Brief empfangen hat -->
+
 				<person ref="43" />
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
-			<!-- Wohl Entwurf -->
+
 		</letterDesc>
 
 		<letterDesc letter="256">
 			<sent>
-				<date value="Berka, 23. November 1776" />
-				<sort value="1776-11-23" />
+				<date when="1776-11-23">Berka, 23. November 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3877,8 +3626,7 @@
 
 		<letterDesc letter="257">
 			<sent>
-				<date value="Weimar, Zwischen 22. und 25. November 1776" />
-				<sort value="1776-11-24" />
+				<date when="1776-11-24">Weimar, Zwischen 22. und 25. November 1776</date>
 				<location ref="8" />
 				<person ref="25" />
 			</sent>
@@ -3892,8 +3640,7 @@
 
 		<letterDesc letter="258">
 			<sent>
-				<date value="Berka, Ende November 1776" />
-				<sort value="1776-11-25" />
+				<date when="1776-11-25">Berka, Ende November 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3907,8 +3654,7 @@
 
 		<letterDesc letter="259">
 			<sent>
-				<date value="Göttingen, 26. November 1776" />
-				<sort value="1776-11-26" />
+				<date when="1776-11-26">Göttingen, 26. November 1776</date>
 				<location ref="16" />
 				<person ref="11" />
 			</sent>
@@ -3922,8 +3668,7 @@
 
 		<letterDesc letter="260">
 			<sent>
-				<date value="Weimar, 29. oder 30. November 1776" />
-				<sort value="1776-11-29" />
+				<date when="1776-11-29">Weimar, 29. oder 30. November 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -3937,8 +3682,7 @@
 
 		<letterDesc letter="261">
 			<sent>
-				<date value="Weimar, 29. November 1776" />
-				<sort value="1776-11-29" />
+				<date when="1776-11-29">Weimar, 29. November 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -3952,8 +3696,7 @@
 
 		<letterDesc letter="262">
 			<sent>
-				<date value="Weimar, 29. November 1776" />
-				<sort value="1776-11-29" />
+				<date when="1776-11-29">Weimar, 29. November 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -3967,8 +3710,7 @@
 
 		<letterDesc letter="263">
 			<sent>
-				<date value="Weimar, 30. November 1776" />
-				<sort value="1776-11-30" />
+				<date when="1776-11-30">Weimar, 30. November 1776</date>
 				<location ref="8" />
 				<person ref="17" />
 			</sent>
@@ -3982,8 +3724,7 @@
 
 		<letterDesc letter="264">
 			<sent>
-				<date value="Weimar, 30. November 1776" />
-				<sort value="1776-11-30" />
+				<date when="1776-11-30">Weimar, 30. November 1776</date>
 				<location ref="8" />
 				<person ref="25" />
 			</sent>
@@ -3997,8 +3738,7 @@
 
 		<letterDesc letter="265">
 			<sent>
-				<date value="wohl auf der Reise nach Emmendingen, Anfang Dezember 1776" />
-				<sort value="1776-12-01" />
+				<date when="1776-12-01">wohl auf der Reise nach Emmendingen, Anfang Dezember 1776</date>
 				<location ref="33" />
 				<person ref="1" />
 			</sent>
@@ -4012,8 +3752,7 @@
 
 		<letterDesc letter="266">
 			<sent>
-				<date value="Göttingen, 9. Dezember 1776" />
-				<sort value="1776-12-09" />
+				<date when="1776-12-09">Göttingen, 9. Dezember 1776</date>
 				<location ref="16" />
 				<person ref="11" />
 			</sent>
@@ -4027,8 +3766,7 @@
 
 		<letterDesc letter="267">
 			<sent>
-				<date value="Emmendingen, 13. Dezember 1776" />
-				<sort value="1776-12-13" />
+				<date when="1776-12-13">Emmendingen, 13. Dezember 1776</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>
@@ -4042,8 +3780,7 @@
 
 		<letterDesc letter="268">
 			<sent>
-				<date value="Straßburg, 20. Dezember 1776" />
-				<sort value="1776-12-20" />
+				<date when="1776-12-20">Straßburg, 20. Dezember 1776</date>
 				<location ref="7" />
 				<person ref="9" />
 			</sent>
@@ -4057,8 +3794,7 @@
 
 		<letterDesc letter="269">
 			<sent>
-				<date value="Emmendingen, 24. Dezember 1776" />
-				<sort value="1776-12-24" />
+				<date when="1776-12-24">Emmendingen, 24. Dezember 1776</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>
@@ -4072,8 +3808,7 @@
 
 		<letterDesc letter="270">
 			<sent>
-				<date value="Emmendingen, Wohl bald nach 24. Januar 1777" />
-				<sort value="1777-01-30" />
+				<date when="1777-01-30">Emmendingen, Wohl bald nach 24. Januar 1777</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>
@@ -4087,9 +3822,7 @@
 
 		<letterDesc letter="271">
 			<sent>
-				<date value="Januar/Februar 1777" />
-				<!-- Ort fehlt -->
-				<sort value="1777-01-31" />
+				<date when="1777-01-31">Januar/Februar 1777</date>
 				<person ref="1" />
 			</sent>
 			<received>
@@ -4102,8 +3835,7 @@
 
 		<letterDesc letter="272">
 			<sent>
-				<date value="Zürich, 20.–23. Februar 1777" />
-				<sort value="1777-02-20" />
+				<date when="1777-02-20">Zürich, 20.–23. Februar 1777</date>
 				<location ref="11" />
 				<person ref="22" />
 			</sent>
@@ -4117,8 +3849,7 @@
 
 		<letterDesc letter="273">
 			<sent>
-				<date value="Colmar, 5. April 1777" />
-				<sort value="1777-04-05" />
+				<date when="1777-04-05">Colmar, 5. April 1777</date>
 				<location ref="26" />
 				<person ref="39" />
 			</sent>
@@ -4132,9 +3863,7 @@
 
 		<letterDesc letter="274">
 			<sent>
-				<date value="Emmendingen, [vor 22. April 1777], warum nicht 9. April 1777" />
-				<!-- Kommentar in der Datierung -->
-				<sort value="1777-04-09" />
+				<date when="1777-04-09">Emmendingen, [vor 22. April 1777], warum nicht 9. April 1777</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>
@@ -4148,8 +3877,7 @@
 
 		<letterDesc letter="275">
 			<sent>
-				<date value="Basel, 9. April 1777" />
-				<sort value="1777-04-09" />
+				<date when="1777-04-09">Basel, 9. April 1777</date>
 				<location ref="35" />
 				<person ref="55" />
 			</sent>
@@ -4163,8 +3891,7 @@
 
 		<letterDesc letter="276">
 			<sent>
-				<date value="Schweiz, Wohl Frühjahr 1777" />
-				<sort value="1777-04-15" />
+				<date when="1777-04-15">Schweiz, Wohl Frühjahr 1777</date>
 				<location ref="36" />
 				<person ref="1" />
 			</sent>
@@ -4178,8 +3905,7 @@
 
 		<letterDesc letter="277">
 			<sent>
-				<date value="Basel, 28. April 1777" />
-				<sort value="1777-04-28" />
+				<date when="1777-04-28">Basel, 28. April 1777</date>
 				<location ref="35" />
 				<person ref="57" />
 			</sent>
@@ -4193,8 +3919,7 @@
 
 		<letterDesc letter="278">
 			<sent>
-				<date value="Zürich, 11. Mai 1777" />
-				<sort value="1777-05-11" />
+				<date when="1777-05-11">Zürich, 11. Mai 1777</date>
 				<location ref="35" />
 				<person ref="1" />
 			</sent>
@@ -4208,11 +3933,10 @@
 
 		<letterDesc letter="279">
 			<sent>
-				<date value="Schinznach/Zürich, 12.-15. Mai 1777" />
-				<sort value="1777-05-12" />
+				<date when="1777-05-12">Schinznach/Zürich, 12.-15. Mai 1777</date>
 				<location ref="11" />
 				<person ref="10" />
-				<!-- Wer ist Absender Br.? hier heißt das Brief. Der Brief ist von und an Lavater -->
+
 			</sent>
 			<received>
 				<person ref="10" />
@@ -4224,8 +3948,7 @@
 
 		<letterDesc letter="280">
 			<sent>
-				<date value="Schinznach, 12.–15. Mai 1777" />
-				<sort value="1777-05-13" />
+				<date when="1777-05-13">Schinznach, 12.–15. Mai 1777</date>
 				<location ref="53" />
 				<person ref="57" />
 			</sent>
@@ -4239,8 +3962,7 @@
 
 		<letterDesc letter="281">
 			<sent>
-				<date value="Schweiz, 26. Mai 1777" />
-				<sort value="1777-05-26" />
+				<date when="1777-05-26">Schweiz, 26. Mai 1777</date>
 				<location ref="36" />
 				<person ref="1" />
 			</sent>
@@ -4254,8 +3976,7 @@
 
 		<letterDesc letter="282">
 			<sent>
-				<date value="Zürich, 2. Juni 1777" />
-				<sort value="1777-06-02" />
+				<date when="1777-06-02">Zürich, 2. Juni 1777</date>
 				<location ref="11" />
 				<person ref="1" />
 			</sent>
@@ -4269,8 +3990,7 @@
 
 		<letterDesc letter="283">
 			<sent>
-				<date value="Zürich, 2. Juni 1777" />
-				<sort value="1777-06-02" />
+				<date when="1777-06-02">Zürich, 2. Juni 1777</date>
 				<location ref="11" />
 				<person ref="58" />
 			</sent>
@@ -4284,8 +4004,7 @@
 
 		<letterDesc letter="284">
 			<sent>
-				<date value="Zürich, 2. Juni 1777" />
-				<sort value="1777-06-02" />
+				<date when="1777-06-02">Zürich, 2. Juni 1777</date>
 				<location ref="11" />
 				<person ref="1" />
 			</sent>
@@ -4299,8 +4018,7 @@
 
 		<letterDesc letter="285">
 			<sent>
-				<date value="Emmendingen, 9. Juni 1777" />
-				<sort value="1777-06-09" />
+				<date when="1777-06-09">Emmendingen, 9. Juni 1777</date>
 				<location ref="12" />
 				<person ref="18" />
 			</sent>
@@ -4316,8 +4034,7 @@
 
 		<letterDesc letter="286">
 			<sent>
-				<date value="Ursener Tal an der Matte, 14. Juni 1777" />
-				<sort value="1777-06-14" />
+				<date when="1777-06-14">Ursener Tal an der Matte, 14. Juni 1777</date>
 				<location ref="37" />
 				<person ref="1" />
 			</sent>
@@ -4331,8 +4048,7 @@
 
 		<letterDesc letter="287">
 			<sent>
-				<date value="Zürich, Zwischen 14. und 24. Juni 1777" />
-				<sort value="1777-06-20" />
+				<date when="1777-06-20">Zürich, Zwischen 14. und 24. Juni 1777</date>
 				<location ref="11" />
 				<person ref="1" />
 			</sent>
@@ -4346,8 +4062,7 @@
 
 		<letterDesc letter="288">
 			<sent>
-				<date value="Emmendingen, 24. Juni 1777" />
-				<sort value="1777-06-24" />
+				<date when="1777-06-24">Emmendingen, 24. Juni 1777</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>
@@ -4361,8 +4076,7 @@
 
 		<letterDesc letter="289">
 			<sent>
-				<date value="Emmendingen, Ende Juni 1777" />
-				<sort value="1777-06-30" />
+				<date when="1777-06-30">Emmendingen, Ende Juni 1777</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>
@@ -4376,8 +4090,7 @@
 
 		<letterDesc letter="290">
 			<sent>
-				<date value="Basel, 4. Juli 1777" />
-				<sort value="1777-07-04" />
+				<date when="1777-07-04">Basel, 4. Juli 1777</date>
 				<location ref="35" />
 				<person ref="1" />
 			</sent>
@@ -4391,8 +4104,7 @@
 
 		<letterDesc letter="291">
 			<sent>
-				<date value="Neuenburg, 10. Juli 1777" />
-				<sort value="1777-07-10" />
+				<date when="1777-07-10">Neuenburg, 10. Juli 1777</date>
 				<location ref="38" />
 				<person ref="1" />
 			</sent>
@@ -4406,8 +4118,7 @@
 
 		<letterDesc letter="292">
 			<sent>
-				<date value="Neuenburg, 10. Juli 1777" />
-				<sort value="1777-07-10" />
+				<date when="1777-07-10">Neuenburg, 10. Juli 1777</date>
 				<location ref="38" />
 				<person ref="1" />
 			</sent>
@@ -4422,8 +4133,7 @@
 
 		<letterDesc letter="293">
 			<sent>
-				<date value="Basel, 19.–22. Juli 1777" />
-				<sort value="1777-07-19" />
+				<date when="1777-07-19">Basel, 19.–22. Juli 1777</date>
 				<location ref="35" />
 				<person ref="80" />
 			</sent>
@@ -4437,8 +4147,7 @@
 
 		<letterDesc letter="294">
 			<sent>
-				<date value="Bern, 7. August 1777" />
-				<sort value="1777-08-07" />
+				<date when="1777-08-07">Bern, 7. August 1777</date>
 				<location ref="39" />
 				<person ref="1" />
 			</sent>
@@ -4452,8 +4161,7 @@
 
 		<letterDesc letter="295">
 			<sent>
-				<date value="Bern, 9. August 1777" />
-				<sort value="1777-08-09" />
+				<date when="1777-08-09">Bern, 9. August 1777</date>
 				<location ref="39" />
 				<person ref="1" />
 			</sent>
@@ -4467,8 +4175,7 @@
 
 		<letterDesc letter="296">
 			<sent>
-				<date value="Schweiz, Spätsommer 1777" />
-				<sort value="1777-08-15" />
+				<date when="1777-08-15">Schweiz, Spätsommer 1777</date>
 				<location ref="36" />
 				<person ref="1" />
 			</sent>
@@ -4482,8 +4189,7 @@
 
 		<letterDesc letter="297">
 			<sent>
-				<date value="Zürich, August 1777" />
-				<sort value="1777-08-25" />
+				<date when="1777-08-25">Zürich, August 1777</date>
 				<location ref="11" />
 				<person ref="1" />
 			</sent>
@@ -4498,8 +4204,7 @@
 
 		<letterDesc letter="298">
 			<sent>
-				<date value="Zürich, 16. September 1777" />
-				<sort value="1777-09-19" />
+				<date when="1777-09-19">Zürich, 16. September 1777</date>
 				<location ref="11" />
 				<person ref="1" />
 			</sent>
@@ -4513,8 +4218,7 @@
 
 		<letterDesc letter="299">
 			<sent>
-				<date value="Zürich, 28. September 1777" />
-				<sort value="1777-09-28" />
+				<date when="1777-09-28">Zürich, 28. September 1777</date>
 				<location ref="11" />
 				<person ref="1" />
 			</sent>
@@ -4528,8 +4232,7 @@
 
 		<letterDesc letter="300">
 			<sent>
-				<date value="Zürich, 28. September 1777" />
-				<sort value="1777-09-28" />
+				<date when="1777-09-28">Zürich, 28. September 1777</date>
 				<location ref="11" />
 				<person ref="1" />
 			</sent>
@@ -4543,8 +4246,7 @@
 
 		<letterDesc letter="301">
 			<sent>
-				<date value="Zürich, 28. September 1777" />
-				<sort value="1777-09-28" />
+				<date when="1777-09-28">Zürich, 28. September 1777</date>
 				<location ref="11" />
 				<person ref="1" />
 			</sent>
@@ -4558,8 +4260,7 @@
 
 		<letterDesc letter="302">
 			<sent>
-				<date value="Zürich, 29. September 1777" />
-				<sort value="1777-09-29" />
+				<date when="1777-09-29">Zürich, 29. September 1777</date>
 				<location ref="11" />
 				<person ref="1" />
 			</sent>
@@ -4573,8 +4274,7 @@
 
 		<letterDesc letter="303">
 			<sent>
-				<date value="Zürich, 10. Oktober 1777" />
-				<sort value="1777-10-10" />
+				<date when="1777-10-10">Zürich, 10. Oktober 1777</date>
 				<location ref="11" />
 				<person ref="1" />
 			</sent>
@@ -4588,8 +4288,7 @@
 
 		<letterDesc letter="304">
 			<sent>
-				<date value="Zürich, Anfang November 1777" />
-				<sort value="1777-11-05" />
+				<date when="1777-11-05">Zürich, Anfang November 1777</date>
 				<location ref="11" />
 				<person ref="1" />
 			</sent>
@@ -4603,8 +4302,7 @@
 
 		<letterDesc letter="305">
 			<sent>
-				<date value="Castion, 11. November 1777" />
-				<sort value="1777-11-11" />
+				<date when="1777-11-11">Castion, 11. November 1777</date>
 				<location ref="40" />
 				<person ref="59" />
 			</sent>
@@ -4618,8 +4316,7 @@
 
 		<letterDesc letter="306">
 			<sent>
-				<date value="Schloss Hegi, 17. November 1777" />
-				<sort value="1777-11-17" />
+				<date when="1777-11-17">Schloss Hegi, 17. November 1777</date>
 				<location ref="54" />
 				<person ref="1" />
 			</sent>
@@ -4633,8 +4330,7 @@
 
 		<letterDesc letter="307">
 			<sent>
-				<date value="Schloss Hegi, 26. November 1777" />
-				<sort value="1777-11-26" />
+				<date when="1777-11-26">Schloss Hegi, 26. November 1777</date>
 				<location ref="54" />
 				<person ref="1" />
 			</sent>
@@ -4648,8 +4344,7 @@
 
 		<letterDesc letter="308">
 			<sent>
-				<date value="Winterthur, 12. Dezember 1777" />
-				<sort value="1777-12-12" />
+				<date when="1777-12-12">Winterthur, 12. Dezember 1777</date>
 				<location ref="41" />
 				<person ref="1" />
 			</sent>
@@ -4663,8 +4358,7 @@
 
 		<letterDesc letter="309">
 			<sent>
-				<date value="Schloss Hegi, Zweite Dezemberhälfte 1777" />
-				<sort value="1777-12-15" />
+				<date when="1777-12-15">Schloss Hegi, Zweite Dezemberhälfte 1777</date>
 				<location ref="54" />
 				<person ref="1" />
 			</sent>
@@ -4678,8 +4372,7 @@
 
 		<letterDesc letter="310">
 			<sent>
-				<date value="Basel, 31. Dezember 1777" />
-				<sort value="1777-12-31" />
+				<date when="1777-12-31">Basel, 31. Dezember 1777</date>
 				<location ref="35" />
 				<person ref="80" />
 			</sent>
@@ -4693,8 +4386,7 @@
 
 		<letterDesc letter="311">
 			<sent>
-				<date value="Waldersbach, 22. Januar 1778" />
-				<sort value="1778-01-22" />
+				<date when="1778-01-22">Waldersbach, 22. Januar 1778</date>
 				<location ref="42" />
 				<person ref="1" />
 			</sent>
@@ -4708,8 +4400,7 @@
 
 		<letterDesc letter="312">
 			<sent>
-				<date value="Emmendingen, 9. März 1778" />
-				<sort value="1778-03-09" />
+				<date when="1778-03-09">Emmendingen, 9. März 1778</date>
 				<location ref="12" />
 				<person ref="18" />
 				<person ref="82" />
@@ -4724,8 +4415,7 @@
 
 		<letterDesc letter="313">
 			<sent>
-				<date value="Emmendingen, Kurz vor 24. Juni 1778" />
-				<sort value="1778-06-20" />
+				<date when="1778-06-20">Emmendingen, Kurz vor 24. Juni 1778</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>
@@ -4739,8 +4429,7 @@
 
 		<letterDesc letter="314">
 			<sent>
-				<date value="Emmendingen, Juli 1778" />
-				<sort value="1778-07-15" />
+				<date when="1778-07-15">Emmendingen, Juli 1778</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>
@@ -4754,8 +4443,7 @@
 
 		<letterDesc letter="315">
 			<sent>
-				<date value="Emmendingen, Anfang August 1778" />
-				<sort value="1778-08-01" />
+				<date when="1778-08-01">Emmendingen, Anfang August 1778</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>
@@ -4769,8 +4457,7 @@
 
 		<letterDesc letter="316">
 			<sent>
-				<date value="Emmendingen, Wohl zwischen 1. und 12. August 1778" />
-				<sort value="1778-08-05" />
+				<date when="1778-08-05">Emmendingen, Wohl zwischen 1. und 12. August 1778</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>
@@ -4784,8 +4471,7 @@
 
 		<letterDesc letter="317">
 			<sent>
-				<date value="Weisweil, 13. August 1778" />
-				<sort value="1778-08-13" />
+				<date when="1778-08-13">Weisweil, 13. August 1778</date>
 				<location ref="43" />
 				<person ref="1" />
 			</sent>
@@ -4799,8 +4485,7 @@
 
 		<letterDesc letter="318">
 			<sent>
-				<date value="Weisweil, August/September 1778" />
-				<sort value="1778-09-01" />
+				<date when="1778-09-01">Weisweil, August/September 1778</date>
 				<location ref="43" />
 				<person ref="1" />
 			</sent>
@@ -4814,8 +4499,7 @@
 
 		<letterDesc letter="319">
 			<sent>
-				<date value="Weisweil, 30. September 1778" />
-				<sort value="1778-09-30" />
+				<date when="1778-09-30">Weisweil, 30. September 1778</date>
 				<location ref="43" />
 				<person ref="1" />
 			</sent>
@@ -4829,8 +4513,7 @@
 
 		<letterDesc letter="320">
 			<sent>
-				<date value="Wohl auf der Reise nach Livland, Sommer 1779" />
-				<sort value="1779-07-01" />
+				<date when="1779-07-01">Wohl auf der Reise nach Livland, Sommer 1779</date>
 				<location ref="55" />
 				<person ref="1" />
 			</sent>
@@ -4844,9 +4527,8 @@
 
 		<letterDesc letter="321">
 			<sent>
-				<date
-					value="Riga, 13. Oktober 1779 (datiert nach dem Julianischen Kalender: 2. Oktober 1779)" />
-				<sort value="1779-10-13" />
+				<date when="1779-10-13">Riga, 13. Oktober 1779 (datiert nach dem Julianischen Kalender: 2.
+					Oktober 1779)</date>
 				<location ref="44" />
 				<person ref="1" />
 			</sent>
@@ -4860,8 +4542,7 @@
 
 		<letterDesc letter="322">
 			<sent>
-				<date value="Dorpat (Tartu), 6. Januar 1780" />
-				<sort value="1780-01-06" />
+				<date when="1780-01-06">Dorpat (Tartu), 6. Januar 1780</date>
 				<location ref="1" />
 				<person ref="1" />
 			</sent>
@@ -4875,8 +4556,7 @@
 
 		<letterDesc letter="323">
 			<sent>
-				<date value="Dorpat (Tartu), 18. Januar 1780" />
-				<sort value="1780-01-18" />
+				<date when="1780-01-18">Dorpat (Tartu), 18. Januar 1780</date>
 				<location ref="1" />
 				<person ref="1" />
 			</sent>
@@ -4890,8 +4570,7 @@
 
 		<letterDesc letter="324">
 			<sent>
-				<date value="Jamburg, 30. Januar 1780" />
-				<sort value="1780-01-30" />
+				<date when="1780-01-30">Jamburg, 30. Januar 1780</date>
 				<location ref="45" />
 				<person ref="1" />
 			</sent>
@@ -4905,8 +4584,7 @@
 
 		<letterDesc letter="325">
 			<sent>
-				<date value="St. Petersburg, 11. Februar 1780" />
-				<sort value="1780-02-11" />
+				<date when="1780-02-11">St. Petersburg, 11. Februar 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -4920,8 +4598,7 @@
 
 		<letterDesc letter="326">
 			<sent>
-				<date value="St. Petersburg, 27. März 1780" />
-				<sort value="1780-03-27" />
+				<date when="1780-03-27">St. Petersburg, 27. März 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -4935,8 +4612,7 @@
 
 		<letterDesc letter="327">
 			<sent>
-				<date value="St. Petersburg, 27. März 1780" />
-				<sort value="1780-03-27" />
+				<date when="1780-03-27">St. Petersburg, 27. März 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -4950,8 +4626,7 @@
 
 		<letterDesc letter="328">
 			<sent>
-				<date value="St. Petersburg, 28. März 1780" />
-				<sort value="1780-03-28" />
+				<date when="1780-03-28">St. Petersburg, 28. März 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -4965,8 +4640,7 @@
 
 		<letterDesc letter="329">
 			<sent>
-				<date value="St. Petersburg, wohl Anfang April 1780" />
-				<sort value="1780-04-02" />
+				<date when="1780-04-02">St. Petersburg, wohl Anfang April 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -4980,8 +4654,7 @@
 
 		<letterDesc letter="330">
 			<sent>
-				<date value="St. Petersburg, 5. April 1780" />
-				<sort value="1780-04-05" />
+				<date when="1780-04-05">St. Petersburg, 5. April 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -4995,8 +4668,7 @@
 
 		<letterDesc letter="331">
 			<sent>
-				<date value="St. Petersburg, 6. April 1780" />
-				<sort value="1780-04-06" />
+				<date when="1780-04-06">St. Petersburg, 6. April 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -5010,8 +4682,7 @@
 
 		<letterDesc letter="332">
 			<sent>
-				<date value="St. Petersburg, 8. April 1780" />
-				<sort value="1780-04-08" />
+				<date when="1780-04-08">St. Petersburg, 8. April 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -5025,8 +4696,7 @@
 
 		<letterDesc letter="333">
 			<sent>
-				<date value="St. Petersburg, 15. April 1780" />
-				<sort value="1780-04-15" />
+				<date when="1780-04-15">St. Petersburg, 15. April 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -5040,8 +4710,7 @@
 
 		<letterDesc letter="334">
 			<sent>
-				<date value="St. Petersburg, Mitte April 1780" />
-				<sort value="1780-04-16" />
+				<date when="1780-04-16">St. Petersburg, Mitte April 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -5055,8 +4724,7 @@
 
 		<letterDesc letter="335">
 			<sent>
-				<date value="St. Petersburg, April 1780" />
-				<sort value="1780-04-25" />
+				<date when="1780-04-25">St. Petersburg, April 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -5071,8 +4739,7 @@
 
 		<letterDesc letter="336">
 			<sent>
-				<date value="St. Petersburg, Mai 1780" />
-				<sort value="1780-05-15" />
+				<date when="1780-05-15">St. Petersburg, Mai 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -5086,8 +4753,7 @@
 
 		<letterDesc letter="337">
 			<sent>
-				<date value="Cronstadt, 20. Mai 1780" />
-				<sort value="1780-05-20" />
+				<date when="1780-05-20">Cronstadt, 20. Mai 1780</date>
 				<location ref="47" />
 				<person ref="1" />
 			</sent>
@@ -5101,8 +4767,7 @@
 
 		<letterDesc letter="338">
 			<sent>
-				<date value="St. Petersburg, 9. Juni 1780" />
-				<sort value="1780-06-09" />
+				<date when="1780-06-09">St. Petersburg, 9. Juni 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -5116,8 +4781,7 @@
 
 		<letterDesc letter="339">
 			<sent>
-				<date value="St. Petersburg, 5. Juli 1780" />
-				<sort value="1780-07-05" />
+				<date when="1780-07-05">St. Petersburg, 5. Juli 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -5131,8 +4795,7 @@
 
 		<letterDesc letter="340">
 			<sent>
-				<date value="St. Petersburg, zwischen 5. Juli und Ende August 1780" />
-				<sort value="1780-07-30" />
+				<date when="1780-07-30">St. Petersburg, zwischen 5. Juli und Ende August 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -5146,8 +4809,7 @@
 
 		<letterDesc letter="341">
 			<sent>
-				<date value="Aya, 26. September 1780" />
-				<sort value="1780-09-26" />
+				<date when="1780-09-26">Aya, 26. September 1780</date>
 				<location ref="48" />
 				<person ref="1" />
 			</sent>
@@ -5161,8 +4823,8 @@
 
 		<letterDesc letter="342">
 			<sent>
-				<date value="unbekannter Ort, nach der Abreise aus Aya, wohl September/Oktober 1780" />
-				<sort value="1780-09-30" />
+				<date when="1780-09-30">unbekannter Ort, nach der Abreise aus Aya, wohl September/Oktober
+					1780</date>
 				<location ref="51" />
 				<person ref="1" />
 			</sent>
@@ -5176,8 +4838,7 @@
 
 		<letterDesc letter="343">
 			<sent>
-				<date value="unbekannter Ort, Mitte 1779 bis Ende 1780" />
-				<sort value="1780-10-30" />
+				<date when="1780-10-30">unbekannter Ort, Mitte 1779 bis Ende 1780</date>
 				<location ref="51" />
 				<person ref="1" />
 			</sent>
@@ -5191,8 +4852,7 @@
 
 		<letterDesc letter="344">
 			<sent>
-				<date value="Dorpat (Tartu)?, November 1780" />
-				<sort value="1780-11-05" />
+				<date when="1780-11-05">Dorpat (Tartu)?, November 1780</date>
 				<location ref="1" />
 				<person ref="1" />
 			</sent>
@@ -5206,8 +4866,7 @@
 
 		<letterDesc letter="345">
 			<sent>
-				<date value="auf dem Weg nach Ohlershoff, November 1780" />
-				<sort value="1780-10-15" />
+				<date when="1780-10-15">auf dem Weg nach Ohlershoff, November 1780</date>
 				<location ref="52" />
 				<person ref="1" />
 			</sent>
@@ -5221,8 +4880,7 @@
 
 		<letterDesc letter="346">
 			<sent>
-				<date value="Ohlershoff, 26. November (oder Dezember?) 1780" />
-				<sort value="1780-11-26" />
+				<date when="1780-11-26">Ohlershoff, 26. November (oder Dezember?) 1780</date>
 				<location ref="49" />
 				<person ref="1" />
 			</sent>
@@ -5236,8 +4894,7 @@
 
 		<letterDesc letter="347">
 			<sent>
-				<date value="Ohlershoff, 28. Dezember 1780" />
-				<sort value="1780-12-28" />
+				<date when="1780-12-28">Ohlershoff, 28. Dezember 1780</date>
 				<location ref="49" />
 				<person ref="1" />
 			</sent>

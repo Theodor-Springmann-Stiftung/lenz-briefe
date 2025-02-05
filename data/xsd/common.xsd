@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="https://lenz-archiv.de"
+	xmlns="https://lenz-archiv.de"
+	xmlns:lenz="https://lenz-archiv.de"
+	elementFormDefault="qualified">
+	<xsd:simpleType name="NonEmptyString">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="booleanvalue">
+		<xsd:complexContent>
+			<xsd:extension base="lenz:text">
+				<xsd:attribute name="value" use="required" type="xsd:boolean">
+					<xsd:annotation>
+						<xsd:documentation>Wert, erlaubt: true | false</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ref">
+		<xsd:annotation>
+			<xsd:documentation>Referenziert ein anderes Element.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="lenz:text">
+				<xsd:attribute name="ref" use="required" type="xsd:integer">
+					<xsd:annotation>
+						<xsd:documentation>Pflicht: Die ID des referenzierten Elements.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+
+				<xsd:attribute name="erschlossen" use="optional" default="false" type="xsd:boolean">
+					<xsd:annotation>
+						<xsd:documentation>Optional: Wurde die Referenz erschlossen? Erlaubt: true | false</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+
+				<xsd:attribute name="cert" use="optional" default="high">
+					<xsd:annotation>
+						<xsd:documentation>Optional: Wurde die Referenz erschlossen? Erlaubt: high | low</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="high" />
+							<xsd:enumeration value="low" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="personref">
+		<xsd:annotation>
+			<xsd:documentation> Bezieht sich auf einen Akteur und qualifiziert diese Beziehung. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="lenz:ref">
+				<xsd:attribute name="kat" use="optional" default="autor">
+					<xsd:annotation>
+						<xsd:documentation> Die Art der Beziehung zum Akteur. Werte: erwähnung, autor,
+							herausgeber, verleger, drucker, vertrieb, nachruf. </xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="autor" />
+							<xsd:enumeration value="herausgeber" />
+							<xsd:enumeration value="übersetzer" />
+							<xsd:enumeration value="verleger" />
+							<xsd:enumeration value="drucker" />
+							<xsd:enumeration value="vertrieb" />
+							<xsd:enumeration value="erwähnung" />
+							<xsd:enumeration value="nachruf" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ortref">
+		<xsd:annotation>
+			<xsd:documentation> Bezieht sich auf einen Ort und qualifiziert diese Beziehung. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="lenz:ref">
+				<xsd:attribute name="kat" use="optional" default="entstehungsort">
+					<xsd:annotation>
+						<xsd:documentation> Die Art der Beziehung zum Ort. Werte: entstehungsort </xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="entstehungsort" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="wwwlink">
+		<xsd:annotation>
+			<xsd:documentation>Link ins Internet</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="text">
+				<xsd:attribute name="address" use="required" type="xsd:anyURI">
+					<xsd:annotation>
+						<xsd:documentation>URL des Links</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="text" mixed="true">
+		<xsd:annotation>
+			<xsd:documentation>Elemente und Attribute zur Textauszeichnung im Volltext</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice maxOccurs="unbounded" minOccurs="0">
+			<xsd:element name="wwwlink" type="lenz:wwwlink" />
+		</xsd:choice>
+	</xsd:complexType>
+
+	<!-- This section is almost exactly as in TEI -->
+	<xsd:attributeGroup name="dateattributes">
+		<xsd:attributeGroup ref="lenz:when" />
+		<xsd:attributeGroup ref="lenz:notBefore" />
+		<xsd:attributeGroup ref="lenz:notAfter" />
+		<xsd:attributeGroup ref="lenz:from" />
+		<xsd:attributeGroup ref="lenz:to" />
+	</xsd:attributeGroup>
+
+	<xsd:complexType name="date">
+		<xsd:annotation>
+			<xsd:documentation>(date) contains a date in any format.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="lenz:text">
+				<xsd:attributeGroup ref="lenz:dateattributes" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:attributeGroup name="when">
+		<xsd:attribute name="when">
+			<xsd:annotation>
+				<xsd:documentation>supplies the value of the date or time in a standard form, e.g.
+					yyyy-mm-dd.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:union
+					memberTypes="xsd:date xsd:gYear xsd:gMonth xsd:gDay xsd:gYearMonth xsd:gMonthDay" />
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="notBefore">
+		<xsd:attribute name="notBefore">
+			<xsd:annotation>
+				<xsd:documentation>specifies the earliest possible date for the event in standard form, e.g.
+					yyyy-mm-dd.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:union
+					memberTypes="xsd:date xsd:gYear xsd:gMonth xsd:gDay xsd:gYearMonth xsd:gMonthDay" />
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="notAfter">
+		<xsd:attribute name="notAfter">
+			<xsd:annotation>
+				<xsd:documentation>specifies the latest possible date for the event in standard form, e.g.
+					yyyy-mm-dd.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:union
+					memberTypes="xsd:date xsd:gYear xsd:gMonth xsd:gDay xsd:gYearMonth xsd:gMonthDay" />
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="from">
+		<xsd:attribute name="from">
+			<xsd:annotation>
+				<xsd:documentation>indicates the starting point of the period in standard form, e.g.
+					yyyy-mm-dd.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:union
+					memberTypes="xsd:date xsd:gYear xsd:gMonth xsd:gDay xsd:gYearMonth xsd:gMonthDay" />
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="to">
+		<xsd:attribute name="to">
+			<xsd:annotation>
+				<xsd:documentation>indicates the ending point of the period in standard form, e.g.
+					yyyy-mm-dd.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:union
+					memberTypes="xsd:date xsd:gYear xsd:gMonth xsd:gDay xsd:gYearMonth xsd:gMonthDay" />
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+</xsd:schema>
