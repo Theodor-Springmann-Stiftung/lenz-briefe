@@ -58,9 +58,19 @@
 									</xsd:sequence>
 									<xsd:attribute name="letter" type="xsd:nonNegativeInteger" use="required" />
 								</xsd:complexType>
+
 							</xsd:element>
 						</xsd:sequence>
 					</xsd:complexType>
+					<xsd:unique name="uniqueIndexLetter">
+						<xsd:annotation>
+							<xsd:documentation>Pflicht: Jeder Akteur hat eine eindeutige ID.</xsd:documentation>
+						</xsd:annotation>
+
+						<xsd:selector xpath="lenz:letterDesc" />
+						<xsd:field xpath="@letter" />
+					</xsd:unique>
+
 				</xsd:element>
 			</xsd:sequence>
 		</xsd:complexType>

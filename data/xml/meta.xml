@@ -16,7 +16,6 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-
 		<letterDesc letter="2">
 			<sent>
 				<date when="1767-10-11">Dorpat (Tartu), 11. Oktober 1767</date>
@@ -63,7 +62,7 @@
 
 		<letterDesc letter="5">
 			<sent>
-				<date when="1767-11-24" notBefore="1767-11-24">Tarwast (Tarvastu), nach 24. Januar 1768</date>
+				<date notBefore="1767-11-24" when="1767-11-24">Tarwast (Tarvastu), nach 24. Januar 1768</date>
 				<location ref="1" />
 				<person ref="1" />
 				<person ref="7" />
@@ -93,7 +92,7 @@
 
 		<letterDesc letter="7">
 			<sent>
-				<date when="1770-06-15" notBefore="1770-06-01" notAfter="1770-07-01">Dorpat (Tartu),
+				<date notBefore="1770-06-01" notAfter="1770-07-01" when="1770-06-15">Dorpat (Tartu),
 					wahrscheinlich Mitte 1770</date>
 				<location ref="1" />
 				<person ref="5" />
@@ -109,7 +108,7 @@
 
 		<letterDesc letter="8">
 			<sent>
-				<date when="1772-05-28" notBefore="1772-05-15" notAfter="1772-05-30">Fort Louis, Ende Mai
+				<date notBefore="1772-05-15" notAfter="1772-05-30" when="1772-05-28">Fort Louis, Ende Mai
 					1772</date>
 				<location ref="4" />
 				<person ref="1" />
@@ -373,7 +372,7 @@
 			<isDraft value="false" />
 		</letterDesc>
 
-		<letterDesc letter="27">
+		<letterDesc letter="27">			<!-- Handelt es sich hier um einen Entwurf? -->
 			<sent>
 				<date when="1772-12-10">Landau, 10. Dezember 1772</date>
 				<location ref="5" />
@@ -727,7 +726,7 @@
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
-
+			<!-- Handelt es sich hier um einen Entwurf? -->
 		</letterDesc>
 
 		<letterDesc letter="52">
@@ -758,7 +757,7 @@
 			<isDraft value="false" />
 		</letterDesc>
 
-		<letterDesc letter="54">
+		<letterDesc letter="54">			<!-- Französischer Brief -->
 			<sent>
 				<date when="1775-06-20">Straßburg, Wahrscheinlich Juni 1775</date>
 				<location ref="7" />
@@ -1418,7 +1417,7 @@
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
-
+			<!-- Teile des Briefs sind auf französisch geschrieben. -->
 		</letterDesc>
 
 		<letterDesc letter="101">
@@ -1451,7 +1450,7 @@
 
 		<letterDesc letter="103">
 			<sent>
-				<date when="1776-01-21" notBefore="1776-01-21" notAfter="1776-01-22">Straßburg, 21./22.
+				<date notBefore="1776-01-21" notAfter="1776-01-22" when="1776-01-21">Straßburg, 21./22.
 					Januar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
@@ -1552,7 +1551,7 @@
 			<sent>
 				<date when="1776-02-09">Auf dem Weg von Hannover nach Kassel?, 9. Februar 1776</date>
 				<location ref="34" />
-
+				<!-- Der Ort kann nicht genau bestimmt werden -->				<!-- Für die Strecke extra Ort -->
 				<person ref="19" />
 			</sent>
 			<received>
@@ -1567,7 +1566,7 @@
 			<sent>
 				<date when="1776-02-12">Auf dem Weg von Hannover nach Kassel?, Februar 1776</date>
 				<location ref="34" />
-
+				<!-- Der Ort kann nicht genau bestimmt werden -->
 				<person ref="19" />
 			</sent>
 			<received>
@@ -1826,7 +1825,7 @@
 				<person ref="10" />
 			</received>
 			<hasOriginal value="false" />
-
+			<!-- Exzerptheft von Lavaters Hand; Abschrift? -->
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -2176,7 +2175,7 @@
 				<person ref="10" />
 			</received>
 			<hasOriginal value="false" />
-
+			<!-- Hier handelt es sich um das Exzerptheft von Lavaters Hand -->
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -2767,7 +2766,8 @@
 			<received>
 				<person ref="42" />
 				<person ref="43" />
-
+				<!-- Wie wird der Fall ausgezeichnet, dass unbestimmt ist, welche der beiden Personen als
+				receiver in Frage kommt? -->
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
@@ -3165,7 +3165,7 @@
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
-
+			<!-- Dieser Brief ist zugleich ein Entwurf -->
 		</letterDesc>
 
 		<letterDesc letter="225">
@@ -3298,12 +3298,12 @@
 			<sent>
 				<date when="1776-09-20">Weimar [tatsächlich wohl aus Kochberg], 20. September 1776</date>
 				<location ref="8" />
-
+				<!-- Eigentlicher Ort? -->
 				<person ref="1" />
 			</sent>
 			<received>
 				<person ref="49" />
-
+				<!-- Wird sein Bruder auch genannt? -->				<!-- Onkel von Jakob Lenz benennen? -->
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
@@ -3468,7 +3468,7 @@
 			<sent>
 				<date when="1776-10-26">Wohl Berka oder Kochberg, Oktober 1776</date>
 				<location ref="14" />
-
+				<!-- Oder Kochberg -->				<!-- Extra location für den Fall -->
 				<person ref="1" />
 			</sent>
 			<received>
@@ -3483,7 +3483,7 @@
 			<sent>
 				<date when="1776-10-27">Wohl Berka oder Kochberg, Oktober/November 1776</date>
 				<location ref="14" />
-
+				<!-- Oder Kochberg -->
 				<person ref="1" />
 			</sent>
 			<received>
@@ -3595,19 +3595,19 @@
 		<letterDesc letter="255">
 			<sent>
 				<date when="1776-11-23">Weimar [wohl Berka], 23. November 1776</date>
-
+				<!-- Weimar [wohl Berka] -->
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
 			<received>
 				<person ref="42" />
-
+				<!-- Unklar welche Laudth den Brief empfangen hat -->
 				<person ref="43" />
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
-
+			<!-- Wohl Entwurf -->
 		</letterDesc>
 
 		<letterDesc letter="256">
@@ -3822,6 +3822,7 @@
 
 		<letterDesc letter="271">
 			<sent>
+				<!-- Ort fehlt -->
 				<date when="1777-01-31">Januar/Februar 1777</date>
 				<person ref="1" />
 			</sent>
@@ -3863,6 +3864,7 @@
 
 		<letterDesc letter="274">
 			<sent>
+				<!-- Kommentar in der Datierung -->
 				<date when="1777-04-09">Emmendingen, [vor 22. April 1777], warum nicht 9. April 1777</date>
 				<location ref="12" />
 				<person ref="1" />
@@ -3936,7 +3938,7 @@
 				<date when="1777-05-12">Schinznach/Zürich, 12.-15. Mai 1777</date>
 				<location ref="11" />
 				<person ref="10" />
-
+				<!-- Wer ist Absender Br.? hier heißt das Brief. Der Brief ist von und an Lavater -->
 			</sent>
 			<received>
 				<person ref="10" />
