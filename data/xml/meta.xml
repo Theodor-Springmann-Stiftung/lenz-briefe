@@ -2,5233 +2,5252 @@
 <opus>
 	<descriptions>
 		<letterDesc letter="1">
-			<date value="Dorpat (Tartu), 2. Januar 1765" />
-			<sort value="1765-01-02" />
-			<location ref="1" />
-			<senders>
+			<sent>
+				<date value="Dorpat (Tartu), 2. Januar 1765" />
+				<sort value="1765-01-02" />
+				<location ref="1" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="2" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
 		<letterDesc letter="2">
-			<date value="Dorpat (Tartu), 11. Oktober 1767" />
-			<sort value="1767-10-11" />
-			<location ref="1" />
-			<senders>
+			<sent>
+				<date value="Dorpat (Tartu), 11. Oktober 1767" />
+				<sort value="1767-10-11" />
+				<location ref="1" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="3" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
 
 		<letterDesc letter="3">
-			<date value="Tarwast (Tarvastu), 9. November 1767" />
-			<sort value="1767-11-09" />
-			<location ref="2" />
-			<senders>
+			<sent>
+				<date value="Tarwast (Tarvastu), 9. November 1767" />
+				<sort value="1767-11-09" />
+				<location ref="2" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="4" />
 				<receiver ref="5" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
 
 		<letterDesc letter="4">
-			<date value="Tarwast (Tarvastu), 24. November 1767" />
-			<sort value="1767-11-24" />
-			<location ref="2" />
-			<senders>
+			<sent>
+				<date value="Tarwast (Tarvastu), 24. November 1767" />
+				<sort value="1767-11-24" />
+				<location ref="2" />
 				<sender ref="1" />
 				<sender ref="3" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="4" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
 
 		<letterDesc letter="5">
-			<date value="Tarwast (Tarvastu), nach 24. Januar 1768" />
-			<sort value="1767-11-24" notBefore="1767-11-24" />
-			<location ref="1" />
-			<senders>
+			<sent>
+				<date value="Tarwast (Tarvastu), nach 24. Januar 1768" />
+				<sort value="1767-11-24" notBefore="1767-11-24" />
+				<location ref="1" />
 				<sender ref="1" />
 				<sender ref="7" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="3" />
 				<receiver ref="6" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
 
 		<letterDesc letter="6">
-			<date value="Königsberg (Kaliningrad), 14. Oktober 1769" />
-			<sort value="1769-10-14" />
-			<location ref="3" />
-			<senders>
+			<sent>
+				<date value="Königsberg (Kaliningrad), 14. Oktober 1769" />
+				<sort value="1769-10-14" />
+				<location ref="3" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="5" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
 
 		<letterDesc letter="7">
-			<date value="Dorpat (Tartu), wahrscheinlich Mitte 1770" />
-			<sort value="1770-06-15" notBefore="1770-06-01" notAfter="1770-07-01" />
-			<location ref="1" />
-			<senders>
+			<sent>
+				<date value="Dorpat (Tartu), wahrscheinlich Mitte 1770" />
+				<sort value="1770-06-15" notBefore="1770-06-01" notAfter="1770-07-01" />
+				<location ref="1" />
 				<sender ref="5" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
 				<receiver ref="8" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
 
 		<letterDesc letter="8">
-			<date value="Fort Louis, Ende Mai 1772" />
-			<sort value="1772-05-28" notBefore="1772-05-15" notAfter="1772-05-30" />
-			<location ref="4" />
-			<senders>
+			<sent>
+				<date value="Fort Louis, Ende Mai 1772" />
+				<sort value="1772-05-28" notBefore="1772-05-15" notAfter="1772-05-30" />
+				<location ref="4" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="9" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
 
 		<letterDesc letter="9">
-			<date value="Fort Louis, 3. Juni 1772" />
-			<sort value="1772-06-02" />
-			<location ref="4" />
-			<senders>
+			<sent>
+				<date value="Fort Louis, 3. Juni 1772" />
+				<sort value="1772-06-02" />
+				<location ref="4" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="9" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
 
 		<letterDesc letter="10">
-			<date value="Fort Louis, 10. Juni 1772" />
-			<sort value="1772-06-10" />
-			<location ref="4" />
-			<senders>
+			<sent>
+				<date value="Fort Louis, 10. Juni 1772" />
+				<sort value="1772-06-10" />
+				<location ref="4" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="9" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
 
 		<letterDesc letter="11">
-			<date value="Fort Louis, 15. Juni 1772" />
-			<sort value="1772-06-15" />
-			<location ref="4" />
-			<senders>
+			<sent>
+				<date value="Fort Louis, 15. Juni 1772" />
+				<sort value="1772-06-15" />
+				<location ref="4" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="4" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="12">
-			<date value="Fort Louis, 28. Juni 1772" />
-			<sort value="1772-06-28" />
-			<location ref="4" />
-			<senders>
+			<sent>
+				<date value="Fort Louis, 28. Juni 1772" />
+				<sort value="1772-06-28" />
+				<location ref="4" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="9" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="13">
-			<date value="Fort Louis, 13. Juli 1772" />
-			<sort value="1772-07-13" />
-			<location ref="4" />
-			<senders>
+			<sent>
+				<date value="Fort Louis, 13. Juli 1772" />
+				<sort value="1772-07-13" />
+				<location ref="4" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="8" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="14">
-			<date value="Fort Louis, Anfang August 1772" />
-			<sort value="1772-08-01" />
-			<location ref="4" />
-			<senders>
+			<sent>
+				<date value="Fort Louis, Anfang August 1772" />
+				<sort value="1772-08-01" />
+				<location ref="4" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="9" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="15">
-			<date value="Fort Louis, Mitte August 1772" />
-			<sort value="1772-08-15" />
-			<location ref="4" />
-			<senders>
+			<sent>
+				<date value="Fort Louis, Mitte August 1772" />
+				<sort value="1772-08-15" />
+				<location ref="4" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="9" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="16">
-			<date value="Fort Louis, 31. August 1772" />
-			<sort value="1772-08-31" />
-			<location ref="4" />
-			<senders>
+			<sent>
+				<date value="Fort Louis, 31. August 1772" />
+				<sort value="1772-08-31" />
+				<location ref="4" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="9" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="17">
-			<date value="Weisenburg, 2. September und 2. Oktober 1772" />
-			<sort value="1772-09-02" />
-			<sort value="1772-10-02" />
-			<location ref="6" />
-			<senders>
+			<sent>
+				<date value="Weisenburg, 2. September und 2. Oktober 1772" />
+				<sort value="1772-10-02" />
+				<location ref="6" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="4" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
 		<letterDesc letter="18">
+			<sent>
 				<date value="Landau, 7. September 1772" />
 				<sort value="1772-09-07" />
 				<location ref="5" />
-				<senders>
-					<sender ref="1" />
-				</senders>
-				<receivers>
-					<receiver ref="9" />
-				</receivers>
-				<hasOriginal value="true" />
-				<isProofread value="true" />
-				<isDraft value="false" />
-			</letterDesc>
-			
+				<sender ref="1" />
+			</sent>
+			<received>
+				<receiver ref="9" />
+			</received>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+
 		<letterDesc letter="19">
+			<sent>
 				<date value="Landau, 18. September 1772" />
 				<sort value="1772-09-18" />
 				<location ref="5" />
-				<senders>
-					<sender ref="1" />
-				</senders>
-				<receivers>
-					<receiver ref="9" />
-				</receivers>
-				<hasOriginal value="true" />
-				<isProofread value="true" />
-				<isDraft value="false" />
+				<sender ref="1" />
+			</sent>
+			<received>
+				<receiver ref="9" />
+			</received>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
 		</letterDesc>
-			
+
 		<letterDesc letter="20">
+			<sent>
 				<date value="Arensburg (Kuressaare), 24. September 1772" />
 				<sort value="1772-09-24" />
 				<location ref="10" />
-				<senders>
-					<sender ref="8" />
-				</senders>
-				<receivers>
-					<receiver ref="1" />
-				</receivers>
-				<hasOriginal value="true" />
-				<isProofread value="true" />
-				<isDraft value="false" />
+				<sender ref="8" />
+			</sent>
+			<received>
+				<receiver ref="1" />
+			</received>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
 		</letterDesc>
-			
+
 		<letterDesc letter="21">
+			<sent>
 				<date value="Landau, Anfang Oktober 1772" />
 				<sort value="1772-10-05" />
 				<location ref="5" />
-				<senders>
-					<sender ref="1" />
-				</senders>
-				<receivers>
-					<receiver ref="9" />
-				</receivers>
-				<hasOriginal value="true" />
-				<isProofread value="true" />
-				<isDraft value="false" />
+				<sender ref="1" />
+			</sent>
+			<received>
+				<receiver ref="9" />
+			</received>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
 		</letterDesc>
-			
+
 		<letterDesc letter="22">
+			<sent>
 				<date value="Landau, vor Mitte Oktober 1772" />
 				<sort value="1772-10-10" />
 				<location ref="5" />
-				<senders>
-					<sender ref="1" />
-				</senders>
-				<receivers>
-					<receiver ref="9" />
-				</receivers>
-				<hasOriginal value="true" />
-				<isProofread value="true" />
-				<isDraft value="false" />
+				<sender ref="1" />
+			</sent>
+			<received>
+				<receiver ref="9" />
+			</received>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
 		</letterDesc>
-			
+
 		<letterDesc letter="23">
-			<date value="Landau, Mitte Oktober 1772" />
-			<sort value="1772-10-15" />
-			<location ref="5" />
-			<senders>
+			<sent>
+				<date value="Landau, Mitte Oktober 1772" />
+				<sort value="1772-10-15" />
+				<location ref="5" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="9" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="24">
-			<date value="Landau, Zweite Oktoberhälfte Oktober 1772" />
-			<sort value="1772-10-20" />
-			<location ref="5" />
-			<senders>
+			<sent>
+				<date value="Landau, Zweite Oktoberhälfte Oktober 1772" />
+				<sort value="1772-10-20" />
+				<location ref="5" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="9" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="25">
-			<date value="Landau, Gegen Ende Oktober 1772" />
-			<sort value="1772-10-25" />
-			<location ref="5" />
-			<senders>
+			<sent>
+				<date value="Landau, Gegen Ende Oktober 1772" />
+				<sort value="1772-10-25" />
+				<location ref="5" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="9" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="26">
-			<date value="Landau, Ende Oktober 1772" />
-			<sort value="1772-10-31" />
-			<location ref="5" />
-			<senders>
+			<sent>
+				<date value="Landau, Ende Oktober 1772" />
+				<sort value="1772-10-31" />
+				<location ref="5" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="9" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
-		<letterDesc letter="27"> <!-- Handelt es sich hier um einen Entwurf? -->
-			<date value="Landau, 10. Dezember 1772" />
-			<sort value="1772-12-10" />
-			<location ref="5" />
-			<senders>
+
+		<letterDesc letter="27">			<!-- Handelt es sich hier um einen Entwurf? -->
+			<sent>
+				<date value="Landau, 10. Dezember 1772" />
+				<sort value="1772-12-10" />
+				<location ref="5" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="4" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="28">
-			<date value="Straßburg, Mitte März 1774" />
-			<sort value="1774-03-15" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Mitte März 1774" />
+				<sort value="1774-03-15" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="29">
-			<date value="Straßburg, Ende März 1774" />
-			<sort value="1774-03-31" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Ende März 1774" />
+				<sort value="1774-03-31" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="30">
-			<date value="Zürich, 22. April 1774" />
-			<sort value="1774-04-22" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 22. April 1774" />
+				<sort value="1774-04-22" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
 				<receiver ref="11" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="31">
-			<date value="Zürich, 10. Mai 1774" />
-			<sort value="1774-05-10" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 10. Mai 1774" />
+				<sort value="1774-05-10" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="32">
-			<date value="Zürich, Ende Mai 1774" />
-			<sort value="1774-05-31" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, Ende Mai 1774" />
+				<sort value="1774-05-31" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
 				<receiver ref="11" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="33">
-			<date value="Straßburg, Anfang Juni 1774" />
-			<sort value="1774-06-01" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Anfang Juni 1774" />
+				<sort value="1774-06-01" />
+				<location ref="7" />
 				<sender ref="1" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="34">
-			<date value="Zürich, 11. Juni 1774" />
-			<sort value="1774-06-11" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 11. Juni 1774" />
+				<sort value="1774-06-11" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
 				<receiver ref="11" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="35">
-			<date value="Zürich, 14. Juni 1774" />
-			<sort value="1774-06-14" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 14. Juni 1774" />
+				<sort value="1774-06-14" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
 				<receiver ref="11" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="36">
-			<date value="Straßburg, 18. Juni 1774" />
-			<sort value="1774-06-18" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 18. Juni 1774" />
+				<sort value="1774-06-18" />
+				<location ref="7" />
 				<sender ref="1" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="37">
-			<date value="Straßburg, Mitte Juli 1774" />
-			<sort value="1774-07-15" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Mitte Juli 1774" />
+				<sort value="1774-07-15" />
+				<location ref="7" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="12" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="38">
-			<date value="Zürich, 31. August 1774" />
-			<sort value="1774-08-31" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 31. August 1774" />
+				<sort value="1774-08-31" />
+				<location ref="11" />
 				<sender ref="23" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="39">
-			<date value="Zürich, 2. September 1774" />
-			<sort value="1774-09-02" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 2. September 1774" />
+				<sort value="1774-09-02" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="40">
-			<date value="Straßburg, 7. November 1774" />
-			<sort value="1774-11-04" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 7. November 1774" />
+				<sort value="1774-11-04" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="8" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="41">
-			<date value="Straßburg, Februar 1775" />
-			<sort value="1775-02-01" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Februar 1775" />
+				<sort value="1775-02-01" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="12" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="42">
-			<date value="Straßburg, 8. April 1775" />
-			<sort value="1775-04-08" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 8. April 1775" />
+				<sort value="1775-04-08" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="43">
-			<date value="Zürich, 14. April 1775" />
-			<sort value="1775-04-14" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 14. April 1775" />
+				<sort value="1775-04-14" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="11" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="44">
-			<date value="Zürich, 20. April 1775" />
-			<sort value="1775-04-20" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 20. April 1775" />
+				<sort value="1775-04-20" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="45">
-			<date value="Straßburg, Ende April 1775" />
-			<sort value="1775-04-30" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Ende April 1775" />
+				<sort value="1775-04-30" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="46">
-			<date value="Straßburg, 1. Mai 1775" />
-			<sort value="1775-05-01" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 1. Mai 1775" />
+				<sort value="1775-05-01" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="13" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="47">
-			<date value="Emmeningen, Anfang Mai 1775" />
-			<sort value="1775-05-03" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmeningen, Anfang Mai 1775" />
+				<sort value="1775-05-03" />
+				<location ref="12" />
 				<sender ref="18" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="48">
-			<date value="Straßburg, Anfang Mai 1775" />
-			<sort value="1775-05-05" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Anfang Mai 1775" />
+				<sort value="1775-05-05" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="49">
-			<date value="Straßburg, 10. Mai 1775" />
-			<sort value="1775-05-10" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 10. Mai 1775" />
+				<sort value="1775-05-10" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="14" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="50">
-			<date value="Straßburg, 20. Mai 1775" />
-			<sort value="1775-05-20" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 20. Mai 1775" />
+				<sort value="1775-05-20" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="13" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="51">
-			<date value="Straßburg, Wahrscheinlich Juni 1775" />
-			<sort value="1775-06-01" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Wahrscheinlich Juni 1775" />
+				<sort value="1775-06-01" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
-			<isDraft value="false" /> <!-- Handelt es sich hier um einen Entwurf? -->
+			<isDraft value="false" />
+			<!-- Handelt es sich hier um einen Entwurf? -->
 		</letterDesc>
-		
+
 		<letterDesc letter="52">
-			<date value="vermutlich Emmendingen, wahrscheinlich Anfang Juni 1775" />
-			<sort value="1775-06-07" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="vermutlich Emmendingen, wahrscheinlich Anfang Juni 1775" />
+				<sort value="1775-06-07" />
+				<location ref="12" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="15" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="53">
-			<date value="Straßburg, Juni 1775" />
-			<sort value="1775-06-15" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Juni 1775" />
+				<sort value="1775-06-15" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="13" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
-		<letterDesc letter="54"> <!-- Französischer Brief -->
-			<date value="Straßburg, Wahrscheinlich Juni 1775" />
-			<sort value="1775-06-20" />
-			<location ref="7" />
-			<senders>
+
+		<letterDesc letter="54">			<!-- Französischer Brief -->
+			<sent>
+				<date value="Straßburg, Wahrscheinlich Juni 1775" />
+				<sort value="1775-06-20" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="12" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="55">
-			<date value="Straßburg, 13. Juli 1775" />
-			<sort value="1775-07-13" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 13. Juli 1775" />
+				<sort value="1775-07-13" />
+				<location ref="7" />
 				<sender ref="1" />
 				<sender ref="15" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="16" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="56">
-			<date value="Wahrscheinlich Straßburg, Juli 1775" />
-			<sort value="1775-07-15" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Wahrscheinlich Straßburg, Juli 1775" />
+				<sort value="1775-07-15" />
+				<location ref="7" />
 				<sender ref="1" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="19" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="57">
-			<date value="Straßburg, Juli 1775" />
-			<sort value="1775-07-17" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Juli 1775" />
+				<sort value="1775-07-17" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="13" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="58">
-			<date value="Zürich, 22. Juli 1775" />
-			<sort value="1775-07-22" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 22. Juli 1775" />
+				<sort value="1775-07-22" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="59">
-			<date value="Straßburg, 23. Juli 1775" />
-			<sort value="1775-07-23" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 23. Juli 1775" />
+				<sort value="1775-07-23" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="60">
-			<date value="Straßburg, Juli 1775" />
-			<sort value="1775-07-25" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Juli 1775" />
+				<sort value="1775-07-25" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="13" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="61">
-			<date value="Straßburg, Juli 1775" />
-			<sort value="1775-07-28" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Juli 1775" />
+				<sort value="1775-07-28" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="62">
-			<date value="Straßburg, 29. Juli 1775" />
-			<sort value="1775-07-29" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 29. Juli 1775" />
+				<sort value="1775-07-29" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="63">
-			<date value="Straßburg, 31. Juli 1775" />
-			<sort value="1775-07-31" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 31. Juli 1775" />
+				<sort value="1775-07-31" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="13" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="64">
-			<date value="Straßburg, 28. August 1775" />
-			<sort value="1775-08-28" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 28. August 1775" />
+				<sort value="1775-08-28" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="16" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="65">
-			<date value="Straßburg, 3. September 1775" />
-			<sort value="1775-09-03" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 3. September 1775" />
+				<sort value="1775-09-03" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="66">
-			<date value="Straßburg, Mitte September 1775" />
-			<sort value="1775-09-10" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Mitte September 1775" />
+				<sort value="1775-09-10" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="67">
-			<date value="Tartu, September 1775" />
-			<sort value="1775-09-14" />
-			<location ref="1" />
-			<senders>
+			<sent>
+				<date value="Tartu, September 1775" />
+				<sort value="1775-09-14" />
+				<location ref="1" />
 				<sender ref="5" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="68">
-			<date value="Straßburg, September 1775" />
-			<sort value="1775-09-15" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, September 1775" />
+				<sort value="1775-09-15" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="13" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="69">
-			<date value="Straßburg, 29. September 1775" />
-			<sort value="1775-09-29" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 29. September 1775" />
+				<sort value="1775-09-29" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="70">
-			<date value="Straßburg, 29. September 1775" />
-			<sort value="1775-09-29" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 29. September 1775" />
+				<sort value="1775-09-29" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="71">
-			<date value="Straßburg, 30. September 1775" />
-			<sort value="1775-09-30" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 30. September 1775" />
+				<sort value="1775-09-30" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="72">
-			<date value="Straßburg, Ende September 1775" />
-			<sort value="1775-09-30" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Ende September 1775" />
+				<sort value="1775-09-30" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="73">
-			<date value="Straßburg, Wahrscheinlich Oktober 1775" />
-			<sort value="1775-10-01" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Wahrscheinlich Oktober 1775" />
+				<sort value="1775-10-01" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="18" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="74">
-			<date value="Kehl, 2. Oktober 1775" />
-			<sort value="1775-10-2" />
-			<location ref="9" />
-			<senders>
+			<sent>
+				<date value="Kehl, 2. Oktober 1775" />
+				<sort value="1775-10-2" />
+				<location ref="9" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="75">
-			<date value="Zürich, Oktober 1775" />
-			<sort value="1775-10-05" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, Oktober 1775" />
+				<sort value="1775-10-05" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="76">
-			<date value="Straßburg, 13. Oktober 1775" />
-			<sort value="1775-10-13" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 13. Oktober 1775" />
+				<sort value="1775-10-13" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="21" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="77">
-			<date value="Straßburg, Oktober 1775" />
-			<sort value="1775-10-15" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Oktober 1775" />
+				<sort value="1775-10-15" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="35" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="78">
-			<date value="Straßburg, 23. Oktober 1775" />
-			<sort value="1775-10-23" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 23. Oktober 1775" />
+				<sort value="1775-10-23" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="14" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="79">
-			<date value="Ulm, 13. November 1775" />
-			<sort value="1775-11-13" />
-			<location ref="13" />
-			<senders>
+			<sent>
+				<date value="Ulm, 13. November 1775" />
+				<sort value="1775-11-13" />
+				<location ref="13" />
 				<sender ref="22" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="80">
-			<date value="Straßburg, 15. November 1775" />
-			<sort value="1775-11-15" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 15. November 1775" />
+				<sort value="1775-11-15" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="81">
-			<date value="Straßburg, 18. November 1775" />
-			<sort value="1775-11-18" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 18. November 1775" />
+				<sort value="1775-11-18" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="82">
-			<date value="Straßburg, 18. November 1775" />
-			<sort value="1775-11-18" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 18. November 1775" />
+				<sort value="1775-11-18" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="4" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="83">
-			<date value="Straßburg, 20. November 1775" />
-			<sort value="1775-11-20" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 20. November 1775" />
+				<sort value="1775-11-20" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="84">
-			<date value="Straßburg, November 1775" />
-			<sort value="1775-11-25" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, November 1775" />
+				<sort value="1775-11-25" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="85">
-			<date value="Straßburg, Ende November 1775" />
-			<sort value="1775-11-30" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Ende November 1775" />
+				<sort value="1775-11-30" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="14" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="86">
-			<date value="Straßburg, Dezember 1775" />
-			<sort value="1775-12-01" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Dezember 1775" />
+				<sort value="1775-12-01" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="14" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="87">
-			<date value="Straßburg, Dezember 1775" />
-			<sort value="1775-12-05" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Dezember 1775" />
+				<sort value="1775-12-05" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="22" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="88">
-			<date value="Straßburg, Dezember 1775" />
-			<sort value="1775-12-15" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Dezember 1775" />
+				<sort value="1775-12-15" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="89">
-			<date value="Straßburg, Dezember 1775" />
-			<sort value="1775-12-20" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Dezember 1775" />
+				<sort value="1775-12-20" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="90">
-			<date value="Straßburg, Dezember 1775" />
-			<sort value="1775-12-21" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Dezember 1775" />
+				<sort value="1775-12-21" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="91">
-			<date value="Straßburg, 25. Dezember 1775" />
-			<sort value="1775-12-25" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 25. Dezember 1775" />
+				<sort value="1775-12-25" />
+				<location ref="7" />
 				<sender ref="1" />
 				<sender ref="12" />
 				<sender ref="18" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="19" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="92">
-			<date value="Straßburg, 28. Dezember 1775" />
-			<sort value="1775-12-28" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 28. Dezember 1775" />
+				<sort value="1775-12-28" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="13" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="93">
-			<date value="Gotha, 2. Januar 1776" />
-			<sort value="1776-01-02" />
-			<location ref="15" />
-			<senders>
+			<sent>
+				<date value="Gotha, 2. Januar 1776" />
+				<sort value="1776-01-02" />
+				<location ref="15" />
 				<sender ref="14" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="94">
-			<date value="Straßburg, 2. Januar 1776" />
-			<sort value="1776-01-02" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 2. Januar 1776" />
+				<sort value="1776-01-02" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="35" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="95">
-			<date value="Zürich, Januar 1776" />
-			<sort value="1776-01-09" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, Januar 1776" />
+				<sort value="1776-01-09" />
+				<location ref="11" />
 				<sender ref="22" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="96">
-			<date value="Göttingen, 10. Januar 1776" />
-			<sort value="1776-01-10" />
-			<location ref="16" />
-			<senders>
+			<sent>
+				<date value="Göttingen, 10. Januar 1776" />
+				<sort value="1776-01-10" />
+				<location ref="16" />
 				<sender ref="20" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="97">
-			<date value="Emmendingen , 13. Januar 1776" />
-			<sort value="1776-01-13" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmendingen , 13. Januar 1776" />
+				<sort value="1776-01-13" />
+				<location ref="12" />
 				<sender ref="18" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="98">
-			<date value="Zürich, 14. Januar 1776" />
-			<sort value="1776-01-14" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 14. Januar 1776" />
+				<sort value="1776-01-14" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="99">
-			<date value="Kehl, 14. Januar 1776" />
-			<sort value="1776-01-14" />
-			<location ref="9" />
-			<senders>
+			<sent>
+				<date value="Kehl, 14. Januar 1776" />
+				<sort value="1776-01-14" />
+				<location ref="9" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="14" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="100">
-			<date value="Kehl, Januar 1776" />
-			<sort value="1776-01-15" />
-			<location ref="9" />
-			<senders>
+			<sent>
+				<date value="Kehl, Januar 1776" />
+				<sort value="1776-01-15" />
+				<location ref="9" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="19" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
-			<isDraft value="false" /><!-- Teile des Briefs sind auf französisch geschrieben. -->
+			<isDraft value="false" />
+			<!-- Teile des Briefs sind auf französisch geschrieben. -->
 		</letterDesc>
-		
+
 		<letterDesc letter="101">
-			<date value="Straßburg, Wahrscheinlich Januar 1776" />
-			<sort value="1776-01-16" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Wahrscheinlich Januar 1776" />
+				<sort value="1776-01-16" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="11" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="102">
-			<date value="Straßburg, Januar 1776" />
-			<sort value="1776-01-17" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Januar 1776" />
+				<sort value="1776-01-17" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="103">
-			<date value="Straßburg, 21./22. Januar 1776" />
-			<sort value="1776-01-21" notBefore="1776-01-21" notAfter="1776-01-22" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 21./22. Januar 1776" />
+				<sort value="1776-01-21" notBefore="1776-01-21" notAfter="1776-01-22" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="104">
-			<date value="Zürich, 24. Januar 1776" />
-			<sort value="1776-01-24" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 24. Januar 1776" />
+				<sort value="1776-01-24" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="105">
-			<date value="Straßburg, Januar 1776" />
-			<sort value="1776-01-30" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Januar 1776" />
+				<sort value="1776-01-30" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="26" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="106">
-			<date value="Straßburg, Ende Januar 1776" />
-			<sort value="1776-01-31" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Ende Januar 1776" />
+				<sort value="1776-01-31" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="107">
-			<date value="Kopenhagen, 3. Februar 1776" />
-			<sort value="1776-02-03" />
-			<location ref="17" />
-			<senders>
+			<sent>
+				<date value="Kopenhagen, 3. Februar 1776" />
+				<sort value="1776-02-03" />
+				<location ref="17" />
 				<sender ref="27" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="108">
-			<date value="Straßburg, 12. Februar 1776" />
-			<sort value="1776-02-12" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 12. Februar 1776" />
+				<sort value="1776-02-12" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="109">
-			<date value="Straßburg, Vor 15. Februar 1776" />
-			<sort value="1776-02-08" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Vor 15. Februar 1776" />
+				<sort value="1776-02-08" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="110">
-			<date value="Auf dem Weg von Hannover nach Kassel?, 9. Februar 1776" />
-			<sort value="1776-02-09" />
-			<location ref="34" /><!-- Der Ort kann nicht genau bestimmt werden --><!-- Für die Strecke extra Ort -->
-			<senders>
+			<sent>
+				<date value="Auf dem Weg von Hannover nach Kassel?, 9. Februar 1776" />
+				<sort value="1776-02-09" />
+				<location ref="34" />
+				<!-- Der Ort kann nicht genau bestimmt werden -->				<!-- Für die Strecke extra Ort -->
 				<sender ref="19" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="111">
-			<date value="Auf dem Weg von Hannover nach Kassel?, Februar 1776" />
-			<sort value="1776-02-12" />
-			<location ref="34"  /><!-- Der Ort kann nicht genau bestimmt werden -->
-			<senders>
+			<sent>
+				<date value="Auf dem Weg von Hannover nach Kassel?, Februar 1776" />
+				<sort value="1776-02-12" />
+				<location ref="34" />
+				<!-- Der Ort kann nicht genau bestimmt werden -->
 				<sender ref="19" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="112">
-			<date value="Straßburg, 20. Februar 1776" />
-			<sort value="1776-02-20" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 20. Februar 1776" />
+				<sort value="1776-02-20" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="113">
-			<date value="Kassel, 16. Februar 1776" />
-			<sort value="1776-02-16" />
-			<location ref="18" />
-			<senders>
+			<sent>
+				<date value="Kassel, 16. Februar 1776" />
+				<sort value="1776-02-16" />
+				<location ref="18" />
 				<sender ref="19" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="114">
-			<date value="Straßburg, 19. Februar 1776" />
-			<sort value="1776-02-19" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 19. Februar 1776" />
+				<sort value="1776-02-19" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="115">
-			<date value="Straßburg, Ende Februar 1776" />
-			<sort value="1776-02-25" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Ende Februar 1776" />
+				<sort value="1776-02-25" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="13" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="116">
-			<date value="Straßburg, Ende Februar 1776 (empfangen 6. März) " />
-			<sort value="1776-02-26" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Ende Februar 1776 (empfangen 6. März) " />
+				<sort value="1776-02-26" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="51" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="117">
-			<date value="Straßburg, Ende Februar 1776 (empfangen 6. März)" />
-			<sort value="1776-02-27" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Ende Februar 1776 (empfangen 6. März)" />
+				<sort value="1776-02-27" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="51" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="118">
-			<date value="Zürich, 28. Februar 1776" />
-			<sort value="1776-02-28" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 28. Februar 1776" />
+				<sort value="1776-02-28" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="119">
-			<date value="Straßburg, Ende Februar 1776" />
-			<sort value="1776-02-29" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Ende Februar 1776" />
+				<sort value="1776-02-29" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="120">
-			<date value="Straßburg, Ende Februar 1776" />
-			<sort value="1776-02-31" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Ende Februar 1776" />
+				<sort value="1776-02-31" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="121">
-			<date value="Straßburg, Anfang März 1776" />
-			<sort value="1776-03-01" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Anfang März 1776" />
+				<sort value="1776-03-01" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="122">
-			<date value="Zürich, 3. März 1776" />
-			<sort value="1776-03-03" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 3. März 1776" />
+				<sort value="1776-03-03" />
+				<location ref="11" />
 				<sender ref="22" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="123">
-			<date value="Straßburg, 6. März 1776" />
-			<sort value="1776-03-06" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 6. März 1776" />
+				<sort value="1776-03-06" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="28" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="124">
-			<date value="Straßburg, Vor 14. März 1776 (empfangen am 14. März)" />
-			<sort value="1776-03-07" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Vor 14. März 1776 (empfangen am 14. März)" />
+				<sort value="1776-03-07" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="51" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="125">
-			<date value="Hannover, 8. März 1776" />
-			<sort value="1776-03-08" />
-			<location ref="19" />
-			<senders>
+			<sent>
+				<date value="Hannover, 8. März 1776" />
+				<sort value="1776-03-08" />
+				<location ref="19" />
 				<sender ref="20" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="126">
-			<date value="Darmstadt, 8. März 1776" />
-			<sort value="1776-03-08" />
-			<location ref="20" />
-			<senders>
+			<sent>
+				<date value="Darmstadt, 8. März 1776" />
+				<sort value="1776-03-08" />
+				<location ref="20" />
 				<sender ref="29" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="127">
-			<date value="Bückeburg, 9. März 1776" />
-			<sort value="1776-03-09" />
-			<location ref="21" />
-			<senders>
+			<sent>
+				<date value="Bückeburg, 9. März 1776" />
+				<sort value="1776-03-09" />
+				<location ref="21" />
 				<sender ref="17" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="128">
-			<date value="Straßburg, Anfang März 1776" />
-			<sort value="1776-03-10" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Anfang März 1776" />
+				<sort value="1776-03-10" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="129">
-			<date value="Straßburg, Anfang März 1776" />
-			<sort value="1776-03-10" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Anfang März 1776" />
+				<sort value="1776-03-10" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
-			<hasOriginal value="false" /><!-- Exzerptheft von Lavaters Hand; Abschrift? -->
+			</received>
+			<hasOriginal value="false" />
+			<!-- Exzerptheft von Lavaters Hand; Abschrift? -->
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="130">
-			<date value="Straßburg, 11. März 1776" />
-			<sort value="1776-03-11" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 11. März 1776" />
+				<sort value="1776-03-11" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="131">
-			<date value="Straßburg, 16. März 1776" />
-			<sort value="1776-03-16" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 16. März 1776" />
+				<sort value="1776-03-16" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="132">
-			<date value="Straßburg, März 1776" />
-			<sort value="1776-03-13" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, März 1776" />
+				<sort value="1776-03-13" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="19" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="133">
-			<date value="Straßburg, 14. März 1776" />
-			<sort value="1776-03-14" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 14. März 1776" />
+				<sort value="1776-03-14" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="29" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="134">
-			<date value="Straßburg, 15. März 1776" />
-			<sort value="1776-03-15" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 15. März 1776" />
+				<sort value="1776-03-15" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="51" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="135">
-			<date value="Gudensberg, 16. März 1776" />
-			<sort value="1776-03-16" />
-			<location ref="22" />
-			<senders>
+			<sent>
+				<date value="Gudensberg, 16. März 1776" />
+				<sort value="1776-03-16" />
+				<location ref="22" />
 				<sender ref="19" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="136">
-			<date value="Darmstadt, 17. März 1776" />
-			<sort value="1776-03-17" />
-			<location ref="20" />
-			<senders>
+			<sent>
+				<date value="Darmstadt, 17. März 1776" />
+				<sort value="1776-03-17" />
+				<location ref="20" />
 				<sender ref="29" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="137">
-			<date value="Bückeburg, März 1776" />
-			<sort value="1776-03-18" />
-			<location ref="21" />
-			<senders>
+			<sent>
+				<date value="Bückeburg, März 1776" />
+				<sort value="1776-03-18" />
+				<location ref="21" />
 				<sender ref="17" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="138">
-			<date value="Zürich, 19. März 1776" />
-			<sort value="1776-03-19" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 19. März 1776" />
+				<sort value="1776-03-19" />
+				<location ref="11" />
 				<sender ref="23" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="139">
-			<date value="Straßburg, März 1776" />
-			<sort value="1776-03-20" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, März 1776" />
+				<sort value="1776-03-20" />
+				<location ref="7" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="140">
-			<date value="Hannover, 22. März 1776" />
-			<sort value="1776-03-22" />
-			<location ref="19" />
-			<senders>
+			<sent>
+				<date value="Hannover, 22. März 1776" />
+				<sort value="1776-03-22" />
+				<location ref="19" />
 				<sender ref="20" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="141">
-			<date value="Zürich, 22. März 1776" />
-			<sort value="1776-03-22" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 22. März 1776" />
+				<sort value="1776-03-22" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="142">
-			<date value="Frankfurt am Main, Ende März 1776" />
-			<sort value="1776-03-24" />
-			<location ref="56" />
-			<senders>
+			<sent>
+				<date value="Frankfurt am Main, Ende März 1776" />
+				<sort value="1776-03-24" />
+				<location ref="56" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="24" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="143">
-			<date value="Straßburg, 25. März 1776" />
-			<sort value="1776-03-25" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 25. März 1776" />
+				<sort value="1776-03-25" />
+				<location ref="7" />
 				<sender ref="15" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="30" />
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="144">
-			<date value="Darmstadt, Ende März 1776" />
-			<sort value="1776-03-26" />
-			<location ref="20" />
-			<senders>
+			<sent>
+				<date value="Darmstadt, Ende März 1776" />
+				<sort value="1776-03-26" />
+				<location ref="20" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="145">
-			<date value="Gießen, 27. März 1776" />
-			<sort value="1776-03-27" />
-			<location ref="23" />
-			<senders>
+			<sent>
+				<date value="Gießen, 27. März 1776" />
+				<sort value="1776-03-27" />
+				<location ref="23" />
 				<sender ref="31" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="146">
-			<date value="Darmstadt, Ende März 1776" />
-			<sort value="1776-03-28" />
-			<location ref="20" />
-			<senders>
+			<sent>
+				<date value="Darmstadt, Ende März 1776" />
+				<sort value="1776-03-28" />
+				<location ref="20" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="12" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="147">
-			<date value="Darmstadt, Ende März 1776" />
-			<sort value="1776-03-29" />
-			<location ref="20" />
-			<senders>
+			<sent>
+				<date value="Darmstadt, Ende März 1776" />
+				<sort value="1776-03-29" />
+				<location ref="20" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="15" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="148">
-			<date value="hinter Frankfurt, 1. April 1776" />
-			<sort value="1776-04-01" />
-			<senders>
+			<sent>
+				<date value="hinter Frankfurt, 1. April 1776" />
+				<sort value="1776-04-01" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="149">
-			<date value="Weimar, 1. April 1776" />
-			<sort value="1776-04-01" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 1. April 1776" />
+				<sort value="1776-04-01" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="33" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="150">
-			<date value="Weimar, 2. April 1776" />
-			<sort value="1776-04-02" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 2. April 1776" />
+				<sort value="1776-04-02" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="151">
-			<date value="hinter Frankfurt, Um 1. April 1776" />
-			<sort value="1776-04-03" />
-			<senders>
+			<sent>
+				<date value="hinter Frankfurt, Um 1. April 1776" />
+				<sort value="1776-04-03" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="32" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="152">
-			<date value="Dessau, 4. April 1776" />
-			<sort value="1776-04-01" />
-			<location ref="25" />
-			<senders>
+			<sent>
+				<date value="Dessau, 4. April 1776" />
+				<sort value="1776-04-01" />
+				<location ref="25" />
 				<sender ref="34" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="153">
-			<date value="Weimar, 5. April 1776" />
-			<sort value="1776-04-05" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 5. April 1776" />
+				<sort value="1776-04-05" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="5" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="154">
-			<date value="Weimar, April 1776" />
-			<sort value="1776-04-06" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, April 1776" />
+				<sort value="1776-04-06" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
-			<hasOriginal value="false" /><!-- Hier handelt es sich um das Exzerptheft von Lavaters Hand -->
+			</received>
+			<hasOriginal value="false" />
+			<!-- Hier handelt es sich um das Exzerptheft von Lavaters Hand -->
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="155">
-			<date value="Weimar, April 1776" />
-			<sort value="1776-04-08" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, April 1776" />
+				<sort value="1776-04-08" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="19" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="156">
-			<date value="Hannover, 11. April 1776" />
-			<sort value="1776-04-11" />
-			<location ref="19" />
-			<senders>
+			<sent>
+				<date value="Hannover, 11. April 1776" />
+				<sort value="1776-04-11" />
+				<location ref="19" />
 				<sender ref="20" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="157">
-			<date value="Weimar, April 1776" />
-			<sort value="1776-04-12" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, April 1776" />
+				<sort value="1776-04-12" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="15" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="158">
-			<date value="Weimar, 14. April 1776" />
-			<sort value="1776-04-14" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 14. April 1776" />
+				<sort value="1776-04-14" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="159">
-			<date value="Weimar, Mitte April 1776" />
-			<sort value="1776-04-15" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Mitte April 1776" />
+				<sort value="1776-04-15" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="160">
-			<date value="Weimar, 16. April 1776" />
-			<sort value="1776-04-16" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 16. April 1776" />
+				<sort value="1776-04-16" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="35" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="161">
-			<date value="Straßburg, 16. April 1776" />
-			<sort value="1776-04-16" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 16. April 1776" />
+				<sort value="1776-04-16" />
+				<location ref="7" />
 				<sender ref="9" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="162">
-			<date value="Mannheim, April 1776" />
-			<sort value="1776-04-17" />
-			<location ref="31" />
-			<senders>
+			<sent>
+				<date value="Mannheim, April 1776" />
+				<sort value="1776-04-17" />
+				<location ref="31" />
 				<sender ref="35" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="163">
-			<date value="Weimar, Vor 26. April 1776" />
-			<sort value="1776-04-18" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Vor 26. April 1776" />
+				<sort value="1776-04-18" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="164">
-			<date value="Weimar, April 1776" />
-			<sort value="1776-04-19" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, April 1776" />
+				<sort value="1776-04-19" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="34" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="165">
-			<date value="Weimar, April 1776" />
-			<sort value="1776-04-20" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, April 1776" />
+				<sort value="1776-04-20" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="27" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="166">
-			<date value="Weimar, April 1776" />
-			<sort value="1776-04-21" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, April 1776" />
+				<sort value="1776-04-21" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="27" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="167">
-			<date value="Weimar, April 1776" />
-			<sort value="1776-04-22" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, April 1776" />
+				<sort value="1776-04-22" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="27" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="168">
-			<date value="Weimar, Ende April 1776" />
-			<sort value="1776-04-24" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Ende April 1776" />
+				<sort value="1776-04-24" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="14" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="169">
-			<date value="Hannover, 25. April 1776" />
-			<sort value="1776-04-25" />
-			<location ref="19" />
-			<senders>
+			<sent>
+				<date value="Hannover, 25. April 1776" />
+				<sort value="1776-04-25" />
+				<location ref="19" />
 				<sender ref="20" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="170">
-			<date value="Bückeburg, Ende April 1776" />
-			<sort value="1776-04-26" />
-			<location ref="21" />
-			<senders>
+			<sent>
+				<date value="Bückeburg, Ende April 1776" />
+				<sort value="1776-04-26" />
+				<location ref="21" />
 				<sender ref="16" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="171">
-			<date value="Zürich, 27. April 1776" />
-			<sort value="1776-04-27" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 27. April 1776" />
+				<sort value="1776-04-27" />
+				<location ref="11" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="26" />
 				<receiver ref="12" />
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="172">
-			<date value="Hannover, 30. April 1776" />
-			<sort value="1776-04-30" />
-			<location ref="19" />
-			<senders>
+			<sent>
+				<date value="Hannover, 30. April 1776" />
+				<sort value="1776-04-30" />
+				<location ref="19" />
 				<sender ref="20" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="173">
-			<date value="Weimar, 30. April 1776" />
-			<sort value="1776-04-30" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 30. April 1776" />
+				<sort value="1776-04-30" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="174">
-			<date value="Weimar, 6. Mai 1776" />
-			<sort value="1776-05-06" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 6. Mai 1776" />
+				<sort value="1776-05-06" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="33" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="175">
-			<date value="Weimar, 8. Mai 1776" />
-			<sort value="1776-05-08" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 8. Mai 1776" />
+				<sort value="1776-05-08" />
+				<location ref="8" />
 				<sender ref="36" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="176">
-			<date value="Weimar, Nach 3. April 1776" />
-			<sort value="1776-05-09" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Nach 3. April 1776" />
+				<sort value="1776-05-09" />
+				<location ref="8" />
 				<sender ref="37" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="177">
-			<date value="Weimar, Zwischen April und November 1776" />
-			<sort value="1776-05-10" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Zwischen April und November 1776" />
+				<sort value="1776-05-10" />
+				<location ref="8" />
 				<sender ref="38" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="178">
-			<date value="Weimar, 12. Mai 1776" />
-			<sort value="1776-05-12" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 12. Mai 1776" />
+				<sort value="1776-05-12" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="179">
-			<date value="Zürich, Mai 1776" />
-			<sort value="1776-05-12" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Zürich, Mai 1776" />
+				<sort value="1776-05-12" />
+				<location ref="8" />
 				<sender ref="22" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="180">
-			<date value="Weimar, Spätestens Mitte Mai 1776" />
-			<sort value="1776-05-15" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Spätestens Mitte Mai 1776" />
+				<sort value="1776-05-15" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="13" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="181">
-			<date value="Weimar, Mitte Mai 1776" />
-			<sort value="1776-05-17" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Mitte Mai 1776" />
+				<sort value="1776-05-17" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="182">
-			<date value="Hannover, 19. Mai 1776" />
-			<sort value="1776-05-19" />
-			<location ref="19" />
-			<senders>
+			<sent>
+				<date value="Hannover, 19. Mai 1776" />
+				<sort value="1776-05-19" />
+				<location ref="19" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="183">
-			<date value="Weimar, 20. Mai 1776" />
-			<sort value="1776-05-20" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 20. Mai 1776" />
+				<sort value="1776-05-20" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="14" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="184">
-			<date value="Straßburg, 23. Mai 1776" />
-			<sort value="1776-05-23" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 23. Mai 1776" />
+				<sort value="1776-05-23" />
+				<location ref="7" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="185">
-			<date value="Colmar, 25. Mai 1776" />
-			<sort value="1776-05-25" />
-			<location ref="26" />
-			<senders>
+			<sent>
+				<date value="Colmar, 25. Mai 1776" />
+				<sort value="1776-05-25" />
+				<location ref="26" />
 				<sender ref="39" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="186">
-			<date value="Weimaer, Vor 27. Mai 1776" />
-			<sort value="1776-05-26" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimaer, Vor 27. Mai 1776" />
+				<sort value="1776-05-26" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="51" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="187">
-			<date value="Leipzig, 26. Mai 1776" />
-			<sort value="1776-05-26" />
-			<location ref="27" />
-			<senders>
+			<sent>
+				<date value="Leipzig, 26. Mai 1776" />
+				<sort value="1776-05-26" />
+				<location ref="27" />
 				<sender ref="40" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="188">
-			<date value="Weimar, Kurz nach dem 24. Mai 1776" />
-			<sort value="1776-05-27" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Kurz nach dem 24. Mai 1776" />
+				<sort value="1776-05-27" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="189">
-			<date value="Weimar, Ende Mai 1776" />
-			<sort value="1776-05-30" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Ende Mai 1776" />
+				<sort value="1776-05-30" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="51" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="190">
-			<date value="Weimar, Ende Mai 1776" />
-			<sort value="1776-05-31" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Ende Mai 1776" />
+				<sort value="1776-05-31" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="191">
-			<date value="Weimar, Mitte 1776" />
-			<sort value="1776-06-01" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Mitte 1776" />
+				<sort value="1776-06-01" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="41" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="192">
-			<date value="Straßburg, 4. Juni 1776" />
-			<sort value="1776-06-04" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 4. Juni 1776" />
+				<sort value="1776-06-04" />
+				<location ref="7" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="193">
-			<date value="Weimar, 7. Juni 1776" />
-			<sort value="1776-06-07" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 7. Juni 1776" />
+				<sort value="1776-06-07" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="22" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="194">
-			<date value="Weimar, 9. Juni 1776" />
-			<sort value="1776-06-09" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 9. Juni 1776" />
+				<sort value="1776-06-09" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="195">
-			<date value="Hannover, 17. Juni 1776" />
-			<sort value="1776-06-17" />
-			<location ref="19" />
-			<senders>
+			<sent>
+				<date value="Hannover, 17. Juni 1776" />
+				<sort value="1776-06-17" />
+				<location ref="19" />
 				<sender ref="20" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="196">
-			<date value="Weimar, Bald nach dem 17. Juni 1776" />
-			<sort value="1776-06-20" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Bald nach dem 17. Juni 1776" />
+				<sort value="1776-06-20" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="42" />
-				<receiver ref="43" /><!-- Wie wird der Fall ausgezeichnet, dass unbestimmt ist, welche der beiden Personen als receiver in Frage kommt? -->
-			</receivers>
+				<receiver ref="43" />
+				<!-- Wie wird der Fall ausgezeichnet, dass unbestimmt ist, welche der beiden Personen als
+				receiver in Frage kommt? -->
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="197">
-			<date value="Weimar, Sommer 1776" />
-			<sort value="1776-06-24" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Sommer 1776" />
+				<sort value="1776-06-24" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="44" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="198">
-			<date value="Weimar, 26. Juni 1776" />
-			<sort value="1776-06-26" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 26. Juni 1776" />
+				<sort value="1776-06-26" />
+				<location ref="8" />
 				<sender ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="22" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="199">
-			<date value="Weimar, Um den 27. Juni 1776" />
-			<sort value="1776-06-27" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Um den 27. Juni 1776" />
+				<sort value="1776-06-27" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="12" />
 				<receiver ref="25" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="200">
-			<date value="Weimar, 27. Juni 1776" />
-			<sort value="1776-06-27" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 27. Juni 1776" />
+				<sort value="1776-06-27" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="12" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="201">
-			<date value="Straßburg, Ende Juni 1776" />
-			<sort value="1776-06-28" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Ende Juni 1776" />
+				<sort value="1776-06-28" />
+				<location ref="7" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="202">
-			<date value="Hannover, 2. Juli 1776" />
-			<sort value="1776-07-02" />
-			<location ref="19" />
-			<senders>
+			<sent>
+				<date value="Hannover, 2. Juli 1776" />
+				<sort value="1776-07-02" />
+				<location ref="19" />
 				<sender ref="20" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="203">
-			<date value="Berka, Juli 1776" />
-			<sort value="1776-07-04" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Juli 1776" />
+				<sort value="1776-07-04" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="37" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="204">
-			<date value="Berka, Anfang Juli 1776" />
-			<sort value="1776-07-05" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Anfang Juli 1776" />
+				<sort value="1776-07-05" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="32" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="205">
-			<date value="Berka, Anfang Juli 1776" />
-			<sort value="1776-07-08" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Anfang Juli 1776" />
+				<sort value="1776-07-08" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="15" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="206">
-			<date value="Berka, Nach dem 23. Mai 1776" />
-			<sort value="1776-07-09" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Nach dem 23. Mai 1776" />
+				<sort value="1776-07-09" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="15" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="207">
-			<date value="Hegi, 10. Juli 1776" />
-			<sort value="1776-07-10" />
-			<location ref="28" />
-			<senders>
+			<sent>
+				<date value="Hegi, 10. Juli 1776" />
+				<sort value="1776-07-10" />
+				<location ref="28" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="208">
-			<date value="Weimar, Juli 1776" />
-			<sort value="1776-07-11" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Juli 1776" />
+				<sort value="1776-07-11" />
+				<location ref="8" />
 				<sender ref="12" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="209">
-			<date value="Weimar, Juli 1776" />
-			<sort value="1776-07-12" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Juli 1776" />
+				<sort value="1776-07-12" />
+				<location ref="8" />
 				<sender ref="45" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="210">
-			<date value="Berka, Juli 1776" />
-			<sort value="1776-07-13" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Juli 1776" />
+				<sort value="1776-07-13" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="12" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="211">
-			<date value="Berka, Sommer 1776" />
-			<sort value="1776-07-14" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Sommer 1776" />
+				<sort value="1776-07-14" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="52" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="212">
-			<date value="Berka, 15. Juli 1776" />
-			<sort value="1776-07-15" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, 15. Juli 1776" />
+				<sort value="1776-07-15" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="32" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="213">
-			<date value="Berka, Sommer 1776" />
-			<sort value="1776-07-16" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Sommer 1776" />
+				<sort value="1776-07-16" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="12" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="214">
-			<date value="Berka, Juli 1776" />
-			<sort value="1776-07-17" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Juli 1776" />
+				<sort value="1776-07-17" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="46" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="215">
-			<date value="Weimar, Sommer 1776" />
-			<sort value="1776-07-18" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Sommer 1776" />
+				<sort value="1776-07-18" />
+				<location ref="8" />
 				<sender ref="47" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="216">
-			<date value="Weimar, Juli 1776" />
-			<sort value="1776-07-19" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Weimar, Juli 1776" />
+				<sort value="1776-07-19" />
+				<location ref="7" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="217">
-			<date value="Berka, Juli 1776" />
-			<sort value="1776-07-20" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Juli 1776" />
+				<sort value="1776-07-20" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="51" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="218">
-			<date value="Berka, Mitte Juli 1776" />
-			<sort value="1776-07-21" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Mitte Juli 1776" />
+				<sort value="1776-07-21" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="21" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="219">
-			<date value="Berka, Juli 1776" />
-			<sort value="1776-07-22" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Juli 1776" />
+				<sort value="1776-07-22" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="34" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="220">
-			<date value="wahrscheinlich Berka, Sommer 1776" />
-			<sort value="1776-07-23" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="wahrscheinlich Berka, Sommer 1776" />
+				<sort value="1776-07-23" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
-			</receivers>
+			</sent>
+			<received>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="221">
-			<date value="Zürich, 24. Juli 1776" />
-			<sort value="1776-07-24" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 24. Juli 1776" />
+				<sort value="1776-07-24" />
+				<location ref="11" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="22" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="222">
-			<date value="Straßburg, Juli 1776" />
-			<sort value="1776-07-25" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, Juli 1776" />
+				<sort value="1776-07-25" />
+				<location ref="7" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="223">
-			<date value="Berka, 26. Juli 1776" />
-			<sort value="1776-07-26" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, 26. Juli 1776" />
+				<sort value="1776-07-26" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="33" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="224">
-			<date value="Berka, Juli 1776" />
-			<sort value="1776-07-27" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Juli 1776" />
+				<sort value="1776-07-27" />
+				<location ref="14" />
 				<sender ref="25" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
-			<isDraft value="false" /><!-- Dieser Brief ist zugleich ein Entwurf -->
+			<isDraft value="false" />
+			<!-- Dieser Brief ist zugleich ein Entwurf -->
 		</letterDesc>
-		
+
 		<letterDesc letter="225">
-			<date value="Zürich, 31. Juli 1776" />
-			<sort value="1776-07-31" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 31. Juli 1776" />
+				<sort value="1776-07-31" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="226">
-			<date value="Halle, 3. August 1776" />
-			<sort value="1776-08-03" />
-			<location ref="29" />
-			<senders>
+			<sent>
+				<date value="Halle, 3. August 1776" />
+				<sort value="1776-08-03" />
+				<location ref="29" />
 				<sender ref="48" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="227">
-			<date value="Berka, Vor 13. August 1776" />
-			<sort value="1776-08-05" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Vor 13. August 1776" />
+				<sort value="1776-08-05" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="228">
-			<date value="Straßburg, 8. August 1776" />
-			<sort value="1776-08-08" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 8. August 1776" />
+				<sort value="1776-08-08" />
+				<location ref="7" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="229">
-			<date value="Weimar, 27. August 1776" />
-			<sort value="1776-08-27" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 27. August 1776" />
+				<sort value="1776-08-27" />
+				<location ref="8" />
 				<sender ref="26" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="230">
-			<date value="Weimar, 28. August 1776" />
-			<sort value="1776-08-28" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 28. August 1776" />
+				<sort value="1776-08-28" />
+				<location ref="8" />
 				<sender ref="25" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="231">
-			<date value="Weimar, 29. August 1776" />
-			<sort value="1776-08-29" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 29. August 1776" />
+				<sort value="1776-08-29" />
+				<location ref="8" />
 				<sender ref="38" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="232">
-			<date value="Berka, Anfang September 1776" />
-			<sort value="1776-09-02" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Anfang September 1776" />
+				<sort value="1776-09-02" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="41" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="233">
-			<date value="Kochberg, Mitte September 1776" />
-			<sort value="1776-09-15" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Kochberg, Mitte September 1776" />
+				<sort value="1776-09-15" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="12" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="234">
-			<date value="Weimar [tatsächlich wohl aus Kochberg], 20. September 1776" />
-			<sort value="1776-09-20" />
-			<location ref="8" /><!-- Eigentlicher Ort? -->
-			<senders>
+			<sent>
+				<date value="Weimar [tatsächlich wohl aus Kochberg], 20. September 1776" />
+				<sort value="1776-09-20" />
+				<location ref="8" />
+				<!-- Eigentlicher Ort? -->
 				<sender ref="1" />
-			</senders>
-			<receivers>
-				<receiver ref="49" /><!-- Wird sein Bruder auch genannt? --><!-- Onkel von Jakob Lenz benennen? -->
-			</receivers>
+			</sent>
+			<received>
+				<receiver ref="49" />
+				<!-- Wird sein Bruder auch genannt? -->				<!-- Onkel von Jakob Lenz benennen? -->
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="235">
-			<date value="Straßburg, 21. September 1776" />
-			<sort value="1776-09-21" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 21. September 1776" />
+				<sort value="1776-09-21" />
+				<location ref="7" />
 				<sender ref="9" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="236">
-			<date value="Straßburg, 22. September 1776" />
-			<sort value="1776-09-22" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 22. September 1776" />
+				<sort value="1776-09-22" />
+				<location ref="7" />
 				<sender ref="25" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="237">
-			<date value="Straßburg, September 1776" />
-			<sort value="1776-09-23" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, September 1776" />
+				<sort value="1776-09-23" />
+				<location ref="7" />
 				<sender ref="45" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="238">
-			<date value="Kochberg, September 1776" />
-			<sort value="1776-09-25" />
-			<location ref="30" />
-			<senders>
+			<sent>
+				<date value="Kochberg, September 1776" />
+				<sort value="1776-09-25" />
+				<location ref="30" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="4" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="239">
-			<date value="Weimar, 8. Oktober 1776" />
-			<sort value="1776-10-08" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 8. Oktober 1776" />
+				<sort value="1776-10-08" />
+				<location ref="8" />
 				<sender ref="17" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="240">
-			<date value="Kochberg, 9. oder 10. Oktober 1776" />
-			<sort value="1776-10-09" />
-			<location ref="30" />
-			<senders>
+			<sent>
+				<date value="Kochberg, 9. oder 10. Oktober 1776" />
+				<sort value="1776-10-09" />
+				<location ref="30" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="241">
-			<date value="Weimar, Oktober 1776" />
-			<sort value="1776-10-15" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Oktober 1776" />
+				<sort value="1776-10-15" />
+				<location ref="8" />
 				<sender ref="45" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="242">
-			<date value="Göttingen, Oktober 1776" />
-			<sort value="1776-10-20" />
-			<location ref="16" />
-			<senders>
+			<sent>
+				<date value="Göttingen, Oktober 1776" />
+				<sort value="1776-10-20" />
+				<location ref="16" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="243">
-			<date value="Kochberg, 23. Oktober 1776" />
-			<sort value="1776-10-23" />
-			<location ref="30" />
-			<senders>
+			<sent>
+				<date value="Kochberg, 23. Oktober 1776" />
+				<sort value="1776-10-23" />
+				<location ref="30" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="9" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="244">
-			<date value="Kochberg, 24. Oktober 1776" />
-			<sort value="1776-10-24" />
-			<location ref="30" />
-			<senders>
+			<sent>
+				<date value="Kochberg, 24. Oktober 1776" />
+				<sort value="1776-10-24" />
+				<location ref="30" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="52" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="245">
-			<date value="Weimar, Oktober 1776" />
-			<sort value="1776-10-25" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Oktober 1776" />
+				<sort value="1776-10-25" />
+				<location ref="8" />
 				<sender ref="26" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="246">
-			<date value="Wohl Berka oder Kochberg, Oktober 1776" />
-			<sort value="1776-10-26" />
-			<location ref="14" /><!-- Oder Kochberg --><!-- Extra location für den Fall -->
-			<senders>
+			<sent>
+				<date value="Wohl Berka oder Kochberg, Oktober 1776" />
+				<sort value="1776-10-26" />
+				<location ref="14" />
+				<!-- Oder Kochberg -->				<!-- Extra location für den Fall -->
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="247">
-			<date value="Wohl Berka oder Kochberg, Oktober/November 1776" />
-			<sort value="1776-10-27" />
-			<location ref="14" /><!-- Oder Kochberg -->
-			<senders>
+			<sent>
+				<date value="Wohl Berka oder Kochberg, Oktober/November 1776" />
+				<sort value="1776-10-27" />
+				<location ref="14" />
+				<!-- Oder Kochberg -->
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="248">
-			<date value="Göttingen, Anfang November 1776" />
-			<sort value="1776-11-01" />
-			<location ref="16" />
-			<senders>
+			<sent>
+				<date value="Göttingen, Anfang November 1776" />
+				<sort value="1776-11-01" />
+				<location ref="16" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="249">
-			<date value="Berka, Anfang November 1776" />
-			<sort value="1776-11-02" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Anfang November 1776" />
+				<sort value="1776-11-02" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="41" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="250">
-			<date value="Berka, 3. November 1775 [recte: 1776]" />
-			<sort value="1776-11-03" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, 3. November 1775 [recte: 1776]" />
+				<sort value="1776-11-03" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="41" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="251">
-			<date value="Berka, 13. November 1776" />
-			<sort value="1776-11-13" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Berka, 13. November 1776" />
+				<sort value="1776-11-13" />
+				<location ref="11" />
 				<sender ref="10" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="252">
-			<date value="Berka?, 15. November 1776" />
-			<sort value="1776-11-15" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka?, 15. November 1776" />
+				<sort value="1776-11-15" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="32" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="253">
-			<date value="Berka, 16. November 1776" />
-			<sort value="1776-11-16" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, 16. November 1776" />
+				<sort value="1776-11-16" />
+				<location ref="14" />
 				<sender ref="26" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="254">
-			<date value="Berka, 23. November 1776" />
-			<sort value="1776-11-23" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Berka, 23. November 1776" />
+				<sort value="1776-11-23" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="33" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="255">
-			<date value="Weimar [wohl Berka], 23. November 1776" />
-			<sort value="1776-11-23" /><!-- Weimar [wohl Berka] -->
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar [wohl Berka], 23. November 1776" />
+				<sort value="1776-11-23" />
+				<!-- Weimar [wohl Berka] -->
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
-				<receiver ref="42" /><!-- Unklar welche Laudth den Brief empfangen hat -->
+			</sent>
+			<received>
+				<receiver ref="42" />
+				<!-- Unklar welche Laudth den Brief empfangen hat -->
 				<receiver ref="43" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
-			<isDraft value="true" /><!-- Wohl Entwurf -->
+			<isDraft value="true" />
+			<!-- Wohl Entwurf -->
 		</letterDesc>
-		
+
 		<letterDesc letter="256">
-			<date value="Berka, 23. November 1776" />
-			<sort value="1776-11-23" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, 23. November 1776" />
+				<sort value="1776-11-23" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="53" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="257">
-			<date value="Weimar, Zwischen 22. und 25. November 1776" />
-			<sort value="1776-11-24" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, Zwischen 22. und 25. November 1776" />
+				<sort value="1776-11-24" />
+				<location ref="8" />
 				<sender ref="25" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="258">
-			<date value="Berka, Ende November 1776" />
-			<sort value="1776-11-25" />
-			<location ref="14" />
-			<senders>
+			<sent>
+				<date value="Berka, Ende November 1776" />
+				<sort value="1776-11-25" />
+				<location ref="14" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="21" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="259">
-			<date value="Göttingen, 26. November 1776" />
-			<sort value="1776-11-26" />
-			<location ref="16" />
-			<senders>
+			<sent>
+				<date value="Göttingen, 26. November 1776" />
+				<sort value="1776-11-26" />
+				<location ref="16" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="260">
-			<date value="Weimar, 29. oder 30. November 1776" />
-			<sort value="1776-11-29" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 29. oder 30. November 1776" />
+				<sort value="1776-11-29" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="261">
-			<date value="Weimar, 29. November 1776" />
-			<sort value="1776-11-29" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 29. November 1776" />
+				<sort value="1776-11-29" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="54" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="262">
-			<date value="Weimar, 29. November 1776" />
-			<sort value="1776-11-29" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 29. November 1776" />
+				<sort value="1776-11-29" />
+				<location ref="8" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="36" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="263">
-			<date value="Weimar, 30. November 1776" />
-			<sort value="1776-11-30" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 30. November 1776" />
+				<sort value="1776-11-30" />
+				<location ref="8" />
 				<sender ref="17" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="264">
-			<date value="Weimar, 30. November 1776" />
-			<sort value="1776-11-30" />
-			<location ref="8" />
-			<senders>
+			<sent>
+				<date value="Weimar, 30. November 1776" />
+				<sort value="1776-11-30" />
+				<location ref="8" />
 				<sender ref="25" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="265">
-			<date value="wohl auf der Reise nach Emmendingen, Anfang Dezember 1776" />
-			<sort value="1776-12-01" />
-			<location ref="33" />
-			<senders>
+			<sent>
+				<date value="wohl auf der Reise nach Emmendingen, Anfang Dezember 1776" />
+				<sort value="1776-12-01" />
+				<location ref="33" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="266">
-			<date value="Göttingen, 9. Dezember 1776" />
-			<sort value="1776-12-09" />
-			<location ref="16" />
-			<senders>
+			<sent>
+				<date value="Göttingen, 9. Dezember 1776" />
+				<sort value="1776-12-09" />
+				<location ref="16" />
 				<sender ref="11" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="267">
-			<date value="Emmendingen, 13. Dezember 1776" />
-			<sort value="1776-12-13" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmendingen, 13. Dezember 1776" />
+				<sort value="1776-12-13" />
+				<location ref="12" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="50" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="268">
-			<date value="Straßburg, 20. Dezember 1776" />
-			<sort value="1776-12-20" />
-			<location ref="7" />
-			<senders>
+			<sent>
+				<date value="Straßburg, 20. Dezember 1776" />
+				<sort value="1776-12-20" />
+				<location ref="7" />
 				<sender ref="9" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="269">
-			<date value="Emmendingen, 24. Dezember 1776" />
-			<sort value="1776-12-24" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmendingen, 24. Dezember 1776" />
+				<sort value="1776-12-24" />
+				<location ref="12" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="270">
-			<date value="Emmendingen, Wohl bald nach 24. Januar 1777" />
-			<sort value="1777-01-30" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmendingen, Wohl bald nach 24. Januar 1777" />
+				<sort value="1777-01-30" />
+				<location ref="12" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="271">
-			<date value="Januar/Februar 1777" /><!-- Ort fehlt -->
-			<sort value="1777-01-31" />
-			<senders>
+			<sent>
+				<date value="Januar/Februar 1777" />
+				<!-- Ort fehlt -->
+				<sort value="1777-01-31" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="26" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="272">
-			<date value="Zürich, 20.–23. Februar 1777" />
-			<sort value="1777-02-20" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 20.–23. Februar 1777" />
+				<sort value="1777-02-20" />
+				<location ref="11" />
 				<sender ref="22" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="273">
-			<date value="Colmar, 5. April 1777" />
-			<sort value="1777-04-05" />
-			<location ref="26" />
-			<senders>
+			<sent>
+				<date value="Colmar, 5. April 1777" />
+				<sort value="1777-04-05" />
+				<location ref="26" />
 				<sender ref="39" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="274">
-			<date value="Emmendingen, [vor 22. April 1777], warum nicht 9. April 1777" /><!-- Kommentar in der Datierung -->
-			<sort value="1777-04-09" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmendingen, [vor 22. April 1777], warum nicht 9. April 1777" />
+				<!-- Kommentar in der Datierung -->
+				<sort value="1777-04-09" />
+				<location ref="12" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="275">
-			<date value="Basel, 9. April 1777" />
-			<sort value="1777-04-09" />
-			<location ref="35" />
-			<senders>
+			<sent>
+				<date value="Basel, 9. April 1777" />
+				<sort value="1777-04-09" />
+				<location ref="35" />
 				<sender ref="55" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="276">
-			<date value="Schweiz, Wohl Frühjahr 1777" />
-			<sort value="1777-04-15" />
-			<location ref="36" />
-			<senders>
+			<sent>
+				<date value="Schweiz, Wohl Frühjahr 1777" />
+				<sort value="1777-04-15" />
+				<location ref="36" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="56" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="277">
-			<date value="Basel, 28. April 1777" />
-			<sort value="1777-04-28" />
-			<location ref="35" />
-			<senders>
+			<sent>
+				<date value="Basel, 28. April 1777" />
+				<sort value="1777-04-28" />
+				<location ref="35" />
 				<sender ref="57" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="278">
-			<date value="Zürich, 11. Mai 1777" />
-			<sort value="1777-05-11" />
-			<location ref="35" />
-			<senders>
+			<sent>
+				<date value="Zürich, 11. Mai 1777" />
+				<sort value="1777-05-11" />
+				<location ref="35" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="79" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="279">
-			<date value="Schinznach/Zürich, 12.-15. Mai 1777" />
-			<sort value="1777-05-12" />
-			<location ref="11" />
-			<senders>
-				<sender ref="10" /><!-- Wer ist Absender Br.? hier heißt das Brief. Der Brief ist von und an Lavater -->
-			</senders>
-			<receivers>
+			<sent>
+				<date value="Schinznach/Zürich, 12.-15. Mai 1777" />
+				<sort value="1777-05-12" />
+				<location ref="11" />
+				<sender ref="10" />
+				<!-- Wer ist Absender Br.? hier heißt das Brief. Der Brief ist von und an Lavater -->
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="280">
-			<date value="Schinznach, 12.–15. Mai 1777" />
-			<sort value="1777-05-13" />
-			<location ref="53" />
-			<senders>
+			<sent>
+				<date value="Schinznach, 12.–15. Mai 1777" />
+				<sort value="1777-05-13" />
+				<location ref="53" />
 				<sender ref="57" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="281">
-			<date value="Schweiz, 26. Mai 1777" />
-			<sort value="1777-05-26" />
-			<location ref="36" />
-			<senders>
+			<sent>
+				<date value="Schweiz, 26. Mai 1777" />
+				<sort value="1777-05-26" />
+				<location ref="36" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="282">
-			<date value="Zürich, 2. Juni 1777" />
-			<sort value="1777-06-02" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 2. Juni 1777" />
+				<sort value="1777-06-02" />
+				<location ref="11" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="79" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="283">
-			<date value="Zürich, 2. Juni 1777" />
-			<sort value="1777-06-02" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 2. Juni 1777" />
+				<sort value="1777-06-02" />
+				<location ref="11" />
 				<sender ref="58" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="284">
-			<date value="Zürich, 2. Juni 1777" />
-			<sort value="1777-06-02" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 2. Juni 1777" />
+				<sort value="1777-06-02" />
+				<location ref="11" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="285">
-			<date value="Emmendingen, 9. Juni 1777" />
-			<sort value="1777-06-09" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmendingen, 9. Juni 1777" />
+				<sort value="1777-06-09" />
+				<location ref="12" />
 				<sender ref="18" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
 				<receiver ref="1" />
 				<receiver ref="23" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="286">
-			<date value="Ursener Tal an der Matte, 14. Juni 1777" />
-			<sort value="1777-06-14" />
-			<location ref="37" />
-			<senders>
+			<sent>
+				<date value="Ursener Tal an der Matte, 14. Juni 1777" />
+				<sort value="1777-06-14" />
+				<location ref="37" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="287">
-			<date value="Zürich, Zwischen 14. und 24. Juni 1777" />
-			<sort value="1777-06-20" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, Zwischen 14. und 24. Juni 1777" />
+				<sort value="1777-06-20" />
+				<location ref="11" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="58" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="288">
-			<date value="Emmendingen, 24. Juni 1777" />
-			<sort value="1777-06-24" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmendingen, 24. Juni 1777" />
+				<sort value="1777-06-24" />
+				<location ref="12" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="289">
-			<date value="Emmendingen, Ende Juni 1777" />
-			<sort value="1777-06-30" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmendingen, Ende Juni 1777" />
+				<sort value="1777-06-30" />
+				<location ref="12" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="290">
-			<date value="Basel, 4. Juli 1777" />
-			<sort value="1777-07-04" />
-			<location ref="35" />
-			<senders>
+			<sent>
+				<date value="Basel, 4. Juli 1777" />
+				<sort value="1777-07-04" />
+				<location ref="35" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="58" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="291">
-			<date value="Neuenburg, 10. Juli 1777" />
-			<sort value="1777-07-10" />
-			<location ref="38" />
-			<senders>
+			<sent>
+				<date value="Neuenburg, 10. Juli 1777" />
+				<sort value="1777-07-10" />
+				<location ref="38" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="58" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="292">
-			<date value="Neuenburg, 10. Juli 1777" />
-			<sort value="1777-07-10" />
-			<location ref="38" />
-			<senders>
+			<sent>
+				<date value="Neuenburg, 10. Juli 1777" />
+				<sort value="1777-07-10" />
+				<location ref="38" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="79" />
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="293">
-			<date value="Basel, 19.–22. Juli 1777" />
-			<sort value="1777-07-19" />
-			<location ref="35" />
-			<senders>
+			<sent>
+				<date value="Basel, 19.–22. Juli 1777" />
+				<sort value="1777-07-19" />
+				<location ref="35" />
 				<sender ref="80" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="294">
-			<date value="Bern, 7. August 1777" />
-			<sort value="1777-08-07" />
-			<location ref="39" />
-			<senders>
+			<sent>
+				<date value="Bern, 7. August 1777" />
+				<sort value="1777-08-07" />
+				<location ref="39" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="295">
-			<date value="Bern, 9. August 1777" />
-			<sort value="1777-08-09" />
-			<location ref="39" />
-			<senders>
+			<sent>
+				<date value="Bern, 9. August 1777" />
+				<sort value="1777-08-09" />
+				<location ref="39" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="296">
-			<date value="Schweiz, Spätsommer 1777" />
-			<sort value="1777-08-15" />
-			<location ref="36" />
-			<senders>
+			<sent>
+				<date value="Schweiz, Spätsommer 1777" />
+				<sort value="1777-08-15" />
+				<location ref="36" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="41" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="297">
-			<date value="Zürich, August 1777" />
-			<sort value="1777-08-25" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, August 1777" />
+				<sort value="1777-08-25" />
+				<location ref="11" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="79" />
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="298">
-			<date value="Zürich, 16. September 1777" />
-			<sort value="1777-09-19" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 16. September 1777" />
+				<sort value="1777-09-19" />
+				<location ref="11" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="299">
-			<date value="Zürich, 28. September 1777" />
-			<sort value="1777-09-28" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 28. September 1777" />
+				<sort value="1777-09-28" />
+				<location ref="11" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="79" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="300">
-			<date value="Zürich, 28. September 1777" />
-			<sort value="1777-09-28" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 28. September 1777" />
+				<sort value="1777-09-28" />
+				<location ref="11" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="81" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="301">
-			<date value="Zürich, 28. September 1777" />
-			<sort value="1777-09-28" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 28. September 1777" />
+				<sort value="1777-09-28" />
+				<location ref="11" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="302">
-			<date value="Zürich, 29. September 1777" />
-			<sort value="1777-09-29" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 29. September 1777" />
+				<sort value="1777-09-29" />
+				<location ref="11" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="303">
-			<date value="Zürich, 10. Oktober 1777" />
-			<sort value="1777-10-10" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, 10. Oktober 1777" />
+				<sort value="1777-10-10" />
+				<location ref="11" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="304">
-			<date value="Zürich, Anfang November 1777" />
-			<sort value="1777-11-05" />
-			<location ref="11" />
-			<senders>
+			<sent>
+				<date value="Zürich, Anfang November 1777" />
+				<sort value="1777-11-05" />
+				<location ref="11" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="305">
-			<date value="Castion, 11. November 1777" />
-			<sort value="1777-11-11" />
-			<location ref="40" />
-			<senders>
+			<sent>
+				<date value="Castion, 11. November 1777" />
+				<sort value="1777-11-11" />
+				<location ref="40" />
 				<sender ref="59" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="306">
-			<date value="Schloss Hegi, 17. November 1777" />
-			<sort value="1777-11-17" />
-			<location ref="54" />
-			<senders>
+			<sent>
+				<date value="Schloss Hegi, 17. November 1777" />
+				<sort value="1777-11-17" />
+				<location ref="54" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="307">
-			<date value="Schloss Hegi, 26. November 1777" />
-			<sort value="1777-11-26" />
-			<location ref="54" />
-			<senders>
+			<sent>
+				<date value="Schloss Hegi, 26. November 1777" />
+				<sort value="1777-11-26" />
+				<location ref="54" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="60" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="308">
-			<date value="Winterthur, 12. Dezember 1777" />
-			<sort value="1777-12-12" />
-			<location ref="41" />
-			<senders>
+			<sent>
+				<date value="Winterthur, 12. Dezember 1777" />
+				<sort value="1777-12-12" />
+				<location ref="41" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="309">
-			<date value="Schloss Hegi, Zweite Dezemberhälfte 1777" />
-			<sort value="1777-12-15" />
-			<location ref="54" />
-			<senders>
+			<sent>
+				<date value="Schloss Hegi, Zweite Dezemberhälfte 1777" />
+				<sort value="1777-12-15" />
+				<location ref="54" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="58" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="310">
-			<date value="Basel, 31. Dezember 1777" />
-			<sort value="1777-12-31" />
-			<location ref="35" />
-			<senders>
+			<sent>
+				<date value="Basel, 31. Dezember 1777" />
+				<sort value="1777-12-31" />
+				<location ref="35" />
 				<sender ref="80" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="1" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="311">
-			<date value="Waldersbach, 22. Januar 1778" />
-			<sort value="1778-01-22" />
-			<location ref="42" />
-			<senders>
+			<sent>
+				<date value="Waldersbach, 22. Januar 1778" />
+				<sort value="1778-01-22" />
+				<location ref="42" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="312">
-			<date value="Emmendingen, 9. März 1778" />
-			<sort value="1778-03-09" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmendingen, 9. März 1778" />
+				<sort value="1778-03-09" />
+				<location ref="12" />
 				<sender ref="18" />
 				<sender ref="82" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="4" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="313">
-			<date value="Emmendingen, Kurz vor 24. Juni 1778" />
-			<sort value="1778-06-20" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmendingen, Kurz vor 24. Juni 1778" />
+				<sort value="1778-06-20" />
+				<location ref="12" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="314">
-			<date value="Emmendingen, Juli 1778" />
-			<sort value="1778-07-15" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmendingen, Juli 1778" />
+				<sort value="1778-07-15" />
+				<location ref="12" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="315">
-			<date value="Emmendingen, Anfang August 1778" />
-			<sort value="1778-08-01" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmendingen, Anfang August 1778" />
+				<sort value="1778-08-01" />
+				<location ref="12" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="316">
-			<date value="Emmendingen, Wohl zwischen 1. und 12. August 1778" />
-			<sort value="1778-08-05" />
-			<location ref="12" />
-			<senders>
+			<sent>
+				<date value="Emmendingen, Wohl zwischen 1. und 12. August 1778" />
+				<sort value="1778-08-05" />
+				<location ref="12" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="317">
-			<date value="Weisweil, 13. August 1778" />
-			<sort value="1778-08-13" />
-			<location ref="43" />
-			<senders>
+			<sent>
+				<date value="Weisweil, 13. August 1778" />
+				<sort value="1778-08-13" />
+				<location ref="43" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="318">
-			<date value="Weisweil, August/September 1778" />
-			<sort value="1778-09-01" />
-			<location ref="43" />
-			<senders>
+			<sent>
+				<date value="Weisweil, August/September 1778" />
+				<sort value="1778-09-01" />
+				<location ref="43" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="319">
-			<date value="Weisweil, 30. September 1778" />
-			<sort value="1778-09-30" />
-			<location ref="43" />
-			<senders>
+			<sent>
+				<date value="Weisweil, 30. September 1778" />
+				<sort value="1778-09-30" />
+				<location ref="43" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="80" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="320">
-			<date value="Wohl auf der Reise nach Livland, Sommer 1779" />
-			<sort value="1779-07-01" />
-			<location ref="55" />
-			<senders>
+			<sent>
+				<date value="Wohl auf der Reise nach Livland, Sommer 1779" />
+				<sort value="1779-07-01" />
+				<location ref="55" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="61" />
-			</receivers>
+			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="321">
-			<date value="Riga, 13. Oktober 1779 (datiert nach dem Julianischen Kalender: 2. Oktober 1779)" />
-			<sort value="1779-10-13" />
-			<location ref="44" />
-			<senders>
+			<sent>
+				<date
+					value="Riga, 13. Oktober 1779 (datiert nach dem Julianischen Kalender: 2. Oktober 1779)" />
+				<sort value="1779-10-13" />
+				<location ref="44" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="17" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="322">
-			<date value="Dorpat (Tartu), 6. Januar 1780" />
-			<sort value="1780-01-06" />
-			<location ref="1" />
-			<senders>
+			<sent>
+				<date value="Dorpat (Tartu), 6. Januar 1780" />
+				<sort value="1780-01-06" />
+				<location ref="1" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="4" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="323">
-			<date value="Dorpat (Tartu), 18. Januar 1780" />
-			<sort value="1780-01-18" />
-			<location ref="1" />
-			<senders>
+			<sent>
+				<date value="Dorpat (Tartu), 18. Januar 1780" />
+				<sort value="1780-01-18" />
+				<location ref="1" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="62" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="324">
-			<date value="Jamburg, 30. Januar 1780" />
-			<sort value="1780-01-30" />
-			<location ref="45" />
-			<senders>
+			<sent>
+				<date value="Jamburg, 30. Januar 1780" />
+				<sort value="1780-01-30" />
+				<location ref="45" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="3" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="325">
-			<date value="St. Petersburg, 11. Februar 1780" />
-			<sort value="1780-02-11" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, 11. Februar 1780" />
+				<sort value="1780-02-11" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="63" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="326">
-			<date value="St. Petersburg, 27. März 1780" />
-			<sort value="1780-03-27" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, 27. März 1780" />
+				<sort value="1780-03-27" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="65" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="327">
-			<date value="St. Petersburg, 27. März 1780" />
-			<sort value="1780-03-27" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, 27. März 1780" />
+				<sort value="1780-03-27" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="64" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="328">
-			<date value="St. Petersburg, 28. März 1780" />
-			<sort value="1780-03-28" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, 28. März 1780" />
+				<sort value="1780-03-28" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="3" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="329">
-			<date value="St. Petersburg, wohl Anfang April 1780" />
-			<sort value="1780-04-02" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, wohl Anfang April 1780" />
+				<sort value="1780-04-02" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="3" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="330">
-			<date value="St. Petersburg, 5. April 1780" />
-			<sort value="1780-04-05" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, 5. April 1780" />
+				<sort value="1780-04-05" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="20" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="331">
-			<date value="St. Petersburg, 6. April 1780" />
-			<sort value="1780-04-06" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, 6. April 1780" />
+				<sort value="1780-04-06" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="67" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="332">
-			<date value="St. Petersburg, 8. April 1780" />
-			<sort value="1780-04-08" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, 8. April 1780" />
+				<sort value="1780-04-08" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="66" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="333">
-			<date value="St. Petersburg, 15. April 1780" />
-			<sort value="1780-04-15" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, 15. April 1780" />
+				<sort value="1780-04-15" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="334">
-			<date value="St. Petersburg, Mitte April 1780" />
-			<sort value="1780-04-16" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, Mitte April 1780" />
+				<sort value="1780-04-16" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="3" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="335">
-			<date value="St. Petersburg, April 1780" />
-			<sort value="1780-04-25" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, April 1780" />
+				<sort value="1780-04-25" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="3" />
 				<receiver ref="68" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="336">
-			<date value="St. Petersburg, Mai 1780" />
-			<sort value="1780-05-15" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, Mai 1780" />
+				<sort value="1780-05-15" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="337">
-			<date value="Cronstadt, 20. Mai 1780" />
-			<sort value="1780-05-20" />
-			<location ref="47" />
-			<senders>
+			<sent>
+				<date value="Cronstadt, 20. Mai 1780" />
+				<sort value="1780-05-20" />
+				<location ref="47" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="3" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="338">
-			<date value="St. Petersburg, 9. Juni 1780" />
-			<sort value="1780-06-09" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, 9. Juni 1780" />
+				<sort value="1780-06-09" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="3" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="339">
-			<date value="St. Petersburg, 5. Juli 1780" />
-			<sort value="1780-07-05" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, 5. Juli 1780" />
+				<sort value="1780-07-05" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="4" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="340">
-			<date value="St. Petersburg, zwischen 5. Juli und Ende August 1780" />
-			<sort value="1780-07-30" />
-			<location ref="46" />
-			<senders>
+			<sent>
+				<date value="St. Petersburg, zwischen 5. Juli und Ende August 1780" />
+				<sort value="1780-07-30" />
+				<location ref="46" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="10" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="341">
-			<date value="Aya, 26. September 1780" />
-			<sort value="1780-09-26" />
-			<location ref="48" />
-			<senders>
+			<sent>
+				<date value="Aya, 26. September 1780" />
+				<sort value="1780-09-26" />
+				<location ref="48" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="2" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="342">
-			<date value="unbekannter Ort, nach der Abreise aus Aya, wohl September/Oktober 1780" />
-			<sort value="1780-09-30" />
-			<location ref="51" />
-			<senders>
+			<sent>
+				<date value="unbekannter Ort, nach der Abreise aus Aya, wohl September/Oktober 1780" />
+				<sort value="1780-09-30" />
+				<location ref="51" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="83" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="true" />
 		</letterDesc>
-		
+
 		<letterDesc letter="343">
-			<date value="unbekannter Ort, Mitte 1779 bis Ende 1780" />
-			<sort value="1780-10-30" />
-			<location ref="51" />
-			<senders>
+			<sent>
+				<date value="unbekannter Ort, Mitte 1779 bis Ende 1780" />
+				<sort value="1780-10-30" />
+				<location ref="51" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="8" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="344">
-			<date value="Dorpat (Tartu)?, November 1780" />
-			<sort value="1780-11-05" />
-			<location ref="1" />
-			<senders>
+			<sent>
+				<date value="Dorpat (Tartu)?, November 1780" />
+				<sort value="1780-11-05" />
+				<location ref="1" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="2" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="345">
-			<date value="auf dem Weg nach Ohlershoff, November 1780" />
-			<sort value="1780-10-15" />
-			<location ref="52" />
-			<senders>
+			<sent>
+				<date value="auf dem Weg nach Ohlershoff, November 1780" />
+				<sort value="1780-10-15" />
+				<location ref="52" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="3" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="346">
-			<date value="Ohlershoff, 26. November (oder Dezember?) 1780" />
-			<sort value="1780-11-26" />
-			<location ref="49" />
-			<senders>
+			<sent>
+				<date value="Ohlershoff, 26. November (oder Dezember?) 1780" />
+				<sort value="1780-11-26" />
+				<location ref="49" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="2" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="347">
-			<date value="Ohlershoff, 28. Dezember 1780" />
-			<sort value="1780-12-28" />
-			<location ref="49" />
-			<senders>
+			<sent>
+				<date value="Ohlershoff, 28. Dezember 1780" />
+				<sort value="1780-12-28" />
+				<location ref="49" />
 				<sender ref="1" />
-			</senders>
-			<receivers>
+			</sent>
+			<received>
 				<receiver ref="2" />
-			</receivers>
+			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 	</descriptions>
 </opus>
