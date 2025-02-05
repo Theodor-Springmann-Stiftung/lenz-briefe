@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opus xmlns="https://lenz-archiv.de"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="https://lenz-archiv.de ../xsd/lenz.xsd">
+	xsi:schemaLocation="https://lenz-archiv.de ../xsd/meta.xsd">
 	<descriptions>
 		<letterDesc letter="1">
 			<sent>

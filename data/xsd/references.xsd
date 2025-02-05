@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="https://lenz-archiv.de"
+	xmlns="https://lenz-archiv.de"
+	xmlns:lenz="https://lenz-archiv.de"
+	elementFormDefault="qualified">
+
+	<xsd:include schemaLocation="common.xsd"></xsd:include>
+
+	<xsd:element name="opus">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="definitions">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="personDefs">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="personDef" minOccurs="0"
+											maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:attribute name="index" type="xsd:integer" use="required" />
+												<xsd:attribute name="name" type="lenz:NonEmptyString" use="required" />
+												<xsd:attribute name="nachname" type="lenz:NonEmptyString" use="optional" />
+												<xsd:attribute name="vorname" type="lenz:NonEmptyString" use="optional" />
+												<xsd:attribute name="komm" type="lenz:NonEmptyString" use="optional" />
+												<xsd:attribute name="ref" type="xsd:anyURI" use="optional" />
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="locationDefs">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="locationDef" minOccurs="0"
+											maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:attribute name="index" type="xsd:integer" use="required" />
+												<xsd:attribute name="name" type="lenz:NonEmptyString" use="required" />
+												<xsd:attribute name="ref" type="xsd:anyURI" use="optional" />
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="appDefs">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="appDef" minOccurs="0"
+											maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:attribute name="index" type="xsd:integer" use="required" />
+												<xsd:attribute name="name" type="lenz:NonEmptyString" use="required" />
+												<xsd:attribute name="category" type="lenz:NonEmptyString" use="required" />
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -6,4 +6,5 @@
 	elementFormDefault="qualified">
 
 	<xsd:include schemaLocation="meta.xsd" />
+	<xsd:include schemaLocation="references.xsd" />
 </xsd:schema>

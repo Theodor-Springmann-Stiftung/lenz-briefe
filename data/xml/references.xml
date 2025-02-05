@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<opus>
+<opus xmlns="https://lenz-archiv.de"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://lenz-archiv.de ../xsd/references.xsd">
 	<definitions>
 		<personDefs>
 			<personDef index="-1" name="Unbekannt" />
 			<personDef index="1" name="Jakob Michael Reinhold Lenz" ref="https://d-nb.info/gnd/118571656"
 				vorname="Jakob Michael Reinhold" nachname="Lenz" komm="jmr-lenz" />
 
-			<personDef index="2" name="Friedrich Konrad Gadebusch" 
+			<personDef index="2" name="Friedrich Konrad Gadebusch"
 				vorname="Friedrich Konrad" nachname="Gadebusch" komm="gadebusch" />
 
 			<personDef index="3" name="Friedrich David Lenz"
@@ -18,7 +20,7 @@
 			<personDef index="5" name="Dorothea Lenz"
 				vorname="Dorothea" nachname="Lenz" komm="d-lenz" />
 
-			<personDef index="6" name="Christine Margarethe Lenz" 
+			<personDef index="6" name="Christine Margarethe Lenz"
 				vorname="Christine Margarethe" nachname="Lenz" komm="chm-lenz" />
 
 			<personDef index="7" name="Obristin von Albedyll"
@@ -29,229 +31,235 @@
 
 			<personDef index="9" name="Johann Daniel Salzmann" ref="https://d-nb.info/gnd/116777265"
 				vorname="Johann Daniel" nachname="Salzmann " komm="salzmann" />
-			
+
 			<personDef index="10" name="Johann Caspar Lavater" ref="http://d-nb.info/gnd/118570293"
 				vorname="Johann Caspar" nachname="Lavater" komm="lavater" />
-			
+
 			<personDef index="11" name="Johann Gottfried Röderer" ref="http://d-nb.info/gnd/124456359"
 				vorname="Johann Gottfried" nachname="Röderer" komm="röderer" />
-			
+
 			<personDef index="12" name="Johann Wolfgang Goethe" ref="http://d-nb.info/gnd/118540238"
 				vorname="Johann Wolfgang" nachname="Goethe" komm="goethe" />
-			
+
 			<personDef index="13" name="Sophie von La Roche" ref="http://d-nb.info/gnd/118569767"
 				vorname="Sophie von" nachname="La Roche" komm="la roche" />
-			
+
 			<personDef index="14" name="Friedrich Wilhelm Gotter" ref="http://d-nb.info/gnd/118540939"
 				vorname="Friedrich Wilhelm" nachname="Gotter" komm="gotter" />
-			
+
 			<personDef index="15" name="Luise König"
 				vorname="Luise" nachname="König" komm="könig" />
-			
+
 			<personDef index="16" name="Karoline von Herder" ref="http://d-nb.info/gnd/118549561"
 				vorname="Karoline von" nachname="Herder" komm="herder" />
-			
+
 			<personDef index="17" name="Johann Gottfried von Herder" ref="http://d-nb.info/gnd/118549553"
 				vorname="Johann Gottfried von" nachname="Herder" komm="jg-herder" />
-			
+
 			<personDef index="18" name="Johann Georg Schlosser" ref="http://d-nb.info/gnd/118795163"
 				vorname="Johann Georg" nachname="Schlosser" komm="schlosser" />
-			
+
 			<personDef index="19" name="Heinrich Julius von Lindau" ref="http://d-nb.info/gnd/117014214"
 				vorname="Heinrich Julius von" nachname="Lindau" komm="lindau" />
-			
+
 			<personDef index="20" name="Heinrich Christian Boie" ref="http://d-nb.info/gnd/118661078"
 				vorname="Heinrich Christian" nachname="Boie" komm="boie" />
-			
+
 			<personDef index="21" name="Gottlieb Konrad Pfeffel" ref="http://d-nb.info/gnd/118740709"
 				vorname="Gottlieb Konrad" nachname="Pfeffel" komm="pfeffel" />
-			
+
 			<personDef index="22" name="Philipp Christoph Kayser" ref="http://d-nb.info/gnd/116090235"
 				vorname="Philipp Christoph" nachname="Kayser" komm="kayser" />
-			
+
 			<personDef index="23" name="Johann Konrad Pfenninger" ref="http://d-nb.info/gnd/104318112"
 				vorname="Johann Konrad" nachname="Pfenninger" komm="pfenninger" />
-			
+
 			<personDef index="24" name="Hieronymus Peter Schlosser" ref="http://d-nb.info/gnd/117330205"
 				vorname="Hieronymus Peter" nachname="Schlosser" komm="hp-schlosser" />
-			
+
 			<personDef index="25" name="Philipp Seidel" ref="http://d-nb.info/gnd/117463639"
 				vorname="Philipp" nachname="Seidel" komm="seidel" />
-			
+
 			<personDef index="26" name="Christoph Martin Wieland" ref="http://d-nb.info/gnd/118632477"
 				vorname="Christoph Martin" nachname="Wieland" komm="wieland" />
-			
-			<personDef index="27" name="Friedrich Leopold Graf Stolberg" ref="http://d-nb.info/gnd/1277071357"
+
+			<personDef index="27" name="Friedrich Leopold Graf Stolberg"
+				ref="http://d-nb.info/gnd/1277071357"
 				vorname="Friedrich Leopold" nachname="Graf Stolberg" komm="graf stolberg" />
-			
+
 			<personDef index="28" name="Karl Ludwig von Knebel" ref="http://d-nb.info/gnd/118777505"
 				vorname="Karl Ludwig von" nachname="Knebel" komm="knebel" />
-			
+
 			<personDef index="29" name="Johann Heinrich Merck" ref="http://d-nb.info/gnd/118581015"
 				vorname="Johann Heinrich" nachname="Merck" komm="merck" />
-			
+
 			<personDef index="30" name="Friederike Hesse" ref="http://d-nb.info/gnd/143459023"
 				vorname="Friederike" nachname="Hesse" komm="hesse" />
-			
+
 			<personDef index="31" name="Christian Heinrich Schmid" ref="http://d-nb.info/gnd/116697105"
 				vorname="Christian Heinrich" nachname="Schmid" komm="schmid" />
-			
-			<personDef index="32" name="Henriette von Oberkirch geb. Waldner von Freundstein" ref="http://d-nb.info/gnd/124494692"
+
+			<personDef index="32" name="Henriette von Oberkirch geb. Waldner von Freundstein"
+				ref="http://d-nb.info/gnd/124494692"
 				vorname="Henriette-Luise von" nachname="Oberkirch" komm="oberkirch" />
-			
-			<personDef index="33" name="Verlag Weidmanns Erben und Reich" ref="http://d-nb.info/gnd/6146596-3"
+
+			<personDef index="33" name="Verlag Weidmanns Erben und Reich"
+				ref="http://d-nb.info/gnd/6146596-3"
 				vorname="NN" nachname="NN" komm="verlag weidmanns erben und reich" />
-			
+
 			<personDef index="34" name="Johann Friedrich Simon" ref="http://d-nb.info/gnd/1076372430"
 				vorname="Johann Friedrich" nachname="Simon" komm="simon" />
-			
+
 			<personDef index="35" name="Friedrich Müller (Maler Müller)"
 				vorname="Friedrich" nachname="Müller" komm="müller" />
-			
+
 			<personDef index="36" name="Johann August von Kalb" ref="http://d-nb.info/gnd/11602898X"
 				vorname="Johann August von" nachname="Kalb" komm="kalb" />
-			
-			<personDef index="37" name="Friedrich Hildebrand von Einsiedel" ref="http://d-nb.info/gnd/118681818"
+
+			<personDef index="37" name="Friedrich Hildebrand von Einsiedel"
+				ref="http://d-nb.info/gnd/118681818"
 				vorname="Friedrich Hildebrand von" nachname="Einsiedel" komm="einsiedel" />
-			
+
 			<personDef index="38" name="Luise von Göchhausen"
 				vorname="Luise von" nachname="Göchhausen" komm="göchhausen" />
-			
+
 			<personDef index="39" name="Ramond de Carbonnières"
 				vorname="Ramond de" nachname="Carbonnières" komm="carbonnières" />
-			
+
 			<personDef index="40" name="Wilhelm Gottlieb Becker" ref="http://d-nb.info/gnd/115833706"
 				vorname="Wilhelm Gottlieb" nachname="Becker" komm="becker" />
-			
+
 			<personDef index="41" name="Charlotte von Stein" ref="http://d-nb.info/gnd/118617222"
 				vorname="Charlotte von" nachname="Stein" komm="stein" />
-			
+
 			<personDef index="42" name="Anna Marie Laudt"
 				vorname="Anna Marie" nachname="Laudt" komm="am-laudt" />
-			
+
 			<personDef index="43" name="Susanne Margareta Laudt"
 				vorname="Susanne Margareta" nachname="Laudt" komm="sm-laudt" />
-			
+
 			<personDef index="44" name="Marchand"
 				vorname="NN" nachname="Marchand" komm="marchand" />
-			
-			<personDef index="45" name="Johann Friedrich Wilhelm Christian Schenck" ref="http://d-nb.info/gnd/102948256X"
+
+			<personDef index="45" name="Johann Friedrich Wilhelm Christian Schenck"
+				ref="http://d-nb.info/gnd/102948256X"
 				vorname="Johann Friedrich Wilhelm Christian" nachname="Schenck" komm="schenck" />
-			
+
 			<personDef index="46" name="Friedrich Maximilian Klinger" ref="http://d-nb.info/gnd/118563319"
 				vorname="Friedrich Maximilian" nachname="Klinger" komm="klinger" />
-			
+
 			<personDef index="47" name="Christian Wilhelm Gottlob von Wilkau"
 				vorname="Christian Wilhelm Gottlob von" nachname="Wilkau" komm="wilkau" />
-			
+
 			<personDef index="48" name="Friedrich Philipp Eisenberg" ref="http://d-nb.info/gnd/1157686966"
 				vorname="Friedrich Philipp" nachname="Eisenberg" komm="eisenberg" />
-			
+
 			<personDef index="49" name="Heinrich Jakob Lenz und dessen Bruder"
 				vorname="Heinrich Jakob" nachname="Lenz" komm="hj-lenz" />
-			
+
 			<personDef index="50" name="Isaak Haffner" ref="http://d-nb.info/gnd/116370238"
 				vorname="Isaak" nachname="Haffner" komm="haffner" />
-			
+
 			<personDef index="51" name="Johann Georg Zimmermann" ref="http://d-nb.info/gnd/1186369798"
 				vorname="Johann Georg" nachname="Zimmermann" komm="zimmermann" />
-			
+
 			<personDef index="52" name="Herzogin Anna Amalia" ref="http://d-nb.info/gnd/118649485"
 				vorname="Anna" nachname="Amalia" komm="amalia" />
-			
+
 			<personDef index="53" name="Philipp Erasmus Reich" ref="http://d-nb.info/gnd/118809334"
 				vorname="Philipp Eramus" nachname="Reich" komm="reich" />
-			
+
 			<personDef index="54" name="Herzog Karl August" ref="http://d-nb.info/gnd/118968173"
 				vorname="Karl" nachname="August" komm="august" />
-			
+
 			<personDef index="55" name="Emanuel Friedrich Mayer" ref="http://d-nb.info/gnd/1203107382"
 				vorname="Emanuel Friedrich" nachname="Mayer" komm="mayer" />
-			
+
 			<personDef index="56" name="Johann Georg Neukirch" ref="http://d-nb.info/gnd/116956038"
 				vorname="Johann Georg" nachname="Neukirch" komm="neukirch" />
-			
+
 			<personDef index="57" name="Karl August Küttner" ref="http://d-nb.info/gnd/100615104"
 				vorname="Karl August" nachname="Küttner" komm="küttner" />
-			
+
 			<personDef index="58" name="Johann Heinrich Füssli" ref="http://d-nb.info/gnd/136012159"
 				vorname="Johann Heinrich" nachname="Füssli" komm="füssli" />
-			
-			<personDef index="59" name="Carl Ulysses von Salis-Marschlins" ref="http://d-nb.info/gnd/100263690"
+
+			<personDef index="59" name="Carl Ulysses von Salis-Marschlins"
+				ref="http://d-nb.info/gnd/100263690"
 				vorname="Carl Ulysses" nachname="von Salis-Marschlins" komm="von salis-marschlin" />
-			
+
 			<personDef index="60" name="Johann Kaspar Hirzel" ref="http://d-nb.info/gnd/128695862"
 				vorname="Johann Kaspar" nachname="Hirzel" komm="hirzel" />
-			
+
 			<personDef index="61" name="Christina Margaretha Lenz"
 				vorname="Christina Margaretha" nachname="Lenz" komm="chrm-lenz" />
-			
+
 			<personDef index="62" name="George Behrens"
 				vorname="Behrens" nachname="George" komm="behrens" />
-			
-			<personDef index="63" name="Peuker" 
+
+			<personDef index="63" name="Peuker"
 				vorname="NN" nachname="Peuker" komm="peuker" />
-			
+
 			<personDef index="64" name="Friederike Brion" ref="http://d-nb.info/gnd/118515500"
 				vorname="Friederike" nachname="Brion" komm="brion" />
-			
-			<personDef index="65" name="Christian Brion" 
+
+			<personDef index="65" name="Christian Brion"
 				vorname="Christian" nachname="Brion" komm="ch-brion" />
-			
+
 			<personDef index="66" name="Carl Werner Curtius" ref="http://d-nb.info/gnd/102875030"
 				vorname="Carl Werner" nachname="Curtius" komm="curtius" />
-			
+
 			<personDef index="67" name="Friedrich Justin Bertuch" ref="http://d-nb.info/gnd/118510169"
 				vorname="Friedrich Justin" nachname="Bertuch" komm="bertuch" />
-			
+
 			<personDef index="68" name="Freifrau von Vietinghoff" ref="http://d-nb.info/gnd/1270847619"
 				vorname="NN" nachname="Freifrau von Vietinghoff" komm="von vietinghoff" />
-			
+
 			<personDef index="69" name="Lawrent Brouwer"
 				vorname="Lawrent" nachname="Brouwer" komm="brouwer" />
-			
+
 			<personDef index="70" name="Christian Adolf Ludwig Dingelstedt"
 				vorname="Christian Adolf Ludwig" nachname="Dingelstedt" komm="dingelstedt" />
-			
+
 			<personDef index="71" name="Johann Friedrich Hartknoch" ref="http://d-nb.info/gnd/7751283-2"
 				vorname="Johann Friedrich" nachname="Hartknoch" komm="hartknoch" />
-			
+
 			<personDef index="72" name="Graf Friedrich von Anhalt" ref="http://d-nb.info/gnd/102638403"
 				vorname="Friedrich" nachname="Graf von Anhalt" komm="von anhalt" />
-			
+
 			<personDef index="73" name="Anton Ivanovič Claude"
 				vorname="Anton Ivanovič" nachname="Claude" komm="claude" />
-			
+
 			<personDef index="74" name="Karl Iwanowitsch Burner"
 				vorname="Karl Iwanowitsch" nachname="Burner" komm="burner" />
-			
+
 			<personDef index="75" name="Salomon Brunner" ref="http://d-nb.info/gnd/134124006"
 				vorname="Salomon" nachname="Brunner" komm="brunner" />
-			
+
 			<personDef index="76" name="Schottländer"
 				vorname="NN" nachname="Schottländer" komm="schottländer" />
-			
+
 			<personDef index="77" name="Baron Otto Wilhelm v. Stiernhielm"
 				vorname="Otto Wilhelm" nachname="Baron v. Stiernhielm" komm="von stiernhielm" />
-			
+
 			<personDef index="78" name="Johann Christian Firnhaber" ref="http://d-nb.info/gnd/133223914"
 				vorname="Johann Christian" nachname="Firnhaber" komm="firnhaber" />
-			
+
 			<personDef index="79" name="Getrud Sarasin" ref="http://d-nb.info/gnd/1117247015"
 				vorname="Gertrud" nachname="Sarasin" komm="sarasin" />
-			
+
 			<personDef index="80" name="Jakob Sarasin" ref="http://d-nb.info/gnd/11947624X"
 				vorname="Jakob" nachname="Sarasin" komm="j-sarasin" />
-			
+
 			<personDef index="81" name="Isaak Iselin" ref="http://d-nb.info/gnd/118555952"
 				vorname="Isaak" nachname="Iselin" komm="iselin" />
-			
+
 			<personDef index="82" name="Jakob Lenz" ref="http://d-nb.info/gnd/130343900"
 				vorname="Jabok" nachname="Lenz" komm="j-lenz" />
-			
+
 			<personDef index="83" name="Eina [Julie von Albedyll] " ref="http://d-nb.info/gnd/116275359"
 				vorname="Julie" nachname="von Albedyll" komm="albedyll" />
-			
+
 		</personDefs>
 
 
@@ -263,113 +271,114 @@
 			<locationDef index="3" name="Königsberg (Kaliningrad)" ref="https://d-nb.info/gnd/4031541-1" />
 
 			<locationDef index="4" name="Fort Louis" ref="https://d-nb.info/gnd/4762184-9" />
-			
-			<locationDef index="5" name="Landau" ref="" /><locationDef index="" name="" ref="http://d-nb.info/gnd/4034222-0" />
-			
-			<locationDef index="6" name="Weißenburg" ref="http://d-nb.info/gnd/4079134-8" />
-			
-			<locationDef index="7" name="Straßburg" ref="http://d-nb.info/gnd/4057878-1" />
-			
-			<locationDef index="8" name="Weimar" ref="http://d-nb.info/gnd/4065105-8" />
-			
-			<locationDef index="9" name="Kehl" ref="http://d-nb.info/gnd/4030137-0" />
-			
-			<locationDef index="10" name="Arensburg (Kuressaare)" ref="http://d-nb.info/gnd/4097908-8" />
-			
-			<locationDef index="11" name="Zürich" ref="http://d-nb.info/gnd/4068038-1" />
-			
-			<locationDef index="12" name="Emmendingen" ref="http://d-nb.info/gnd/4014586-4" />
-			
-			<locationDef index="13" name="Ulm" ref="http://d-nb.info/gnd/4061529-7" />
-			
-			<locationDef index="14" name="Berka" ref="http://d-nb.info/gnd/4087284-1" />
-			
-			<locationDef index="15" name="Gotha" ref="http://d-nb.info/gnd/4021652-4" />
-			
-			<locationDef index="16" name="Göttingen" ref="http://d-nb.info/gnd/4021477-1" />
-			
-			<locationDef index="17" name="Kopenhagen" ref="http://d-nb.info/gnd/4032399-7" />
-			
-			<locationDef index="18" name="Kassel" ref="http://d-nb.info/gnd/4029869-3" />
-			
-			<locationDef index="19" name="Hannover" ref="http://d-nb.info/gnd/4023349-2" />
-			
-			<locationDef index="20" name="Darmstadt" ref="http://d-nb.info/gnd/4011077-1" />
-			
-			<locationDef index="21" name="Bückeburg" ref="http://d-nb.info/gnd/4008715-3" />
-			
-			<locationDef index="22" name="Gudensberg" ref="http://d-nb.info/gnd/4094205-3" />
-			
-			<locationDef index="23" name="Gießen" ref="http://d-nb.info/gnd/4020989-1" />
-			
-			<locationDef index="24" name="hinter Frankfurt" />
-			
-			<locationDef index="25" name="Dessau" ref="http://d-nb.info/gnd/4011536-7" />
-			
-			<locationDef index="26" name="Colmar" ref="http://d-nb.info/gnd/4010401-1" />
-			
-			<locationDef index="27" name="Leipzig" ref="http://d-nb.info/gnd/4035206-7" />
-			
-			<locationDef index="28" name="Hegi" ref="http://d-nb.info/gnd/4668899-7" />
-			
-			<locationDef index="29" name="Halle" ref="http://d-nb.info/gnd/4023025-9" />
-			
-			<locationDef index="30" name="Kochberg" />
-			
-			<locationDef index="31" name="Mannheim" ref="http://d-nb.info/gnd/4037372-1" />
-			
-			<locationDef index="32" name="Marbach" ref="http://d-nb.info/gnd/7658327-2" />
-			
-			<locationDef index="33" name="Wohl auf der Reise nach Emmendingen" />
-			
-			<locationDef index="34" name="Auf dem Weg von Hannover nach Kassel?" />
-			
-			<locationDef index="35" name="Basel" ref="http://d-nb.info/gnd/4004617-5"  />
-			
-			<locationDef index="36" name="Schweiz" ref="http://d-nb.info/gnd/4053881-3"  />
-			
-			<locationDef index="37" name="Ursener Tal an der Matte"  />
-			
-			<locationDef index="38" name="Neuenburg" ref="http://d-nb.info/gnd/4075303-7"  />
-			
-			<locationDef index="39" name="Bern" ref="http://d-nb.info/gnd/4005762-8"  />
-			
-			<locationDef index="40" name="Castion" ref="http://d-nb.info/gnd/4742201-4"  />
-			
-			<locationDef index="41" name="Winterthur" ref="http://d-nb.info/gnd/4066337-1"  />
-			
-			<locationDef index="42" name="Waldersbach" ref="http://d-nb.info/gnd/10197465-6"  />
-			
-			<locationDef index="43" name="Weisweil" ref="http://d-nb.info/gnd/4417847-5"  />
-			
-			<locationDef index="44" name="Riga" ref="http://d-nb.info/gnd/4050042-1"  />
-			
-			<locationDef index="45" name="Jamburg (Kingissepp)" ref="http://d-nb.info/gnd/7853282-6"  />
-			
-			<locationDef index="46" name="St. Petersburg" ref="http://d-nb.info/gnd/4267026-3"  />
-			
-			<locationDef index="47" name="Cronstadt (Kronstadt)" ref="http://d-nb.info/gnd/7612964-0"  /><!-- Ist hier das Kronstadt in Rumänien gemeint? -->
-			
-			<locationDef index="48" name="Aya (Ahja)"  />
-			
-			<locationDef index="49" name="Ohlershoff (Oleri)"  />
-			
-			<locationDef index="50" name="Moskau" ref="http://d-nb.info/gnd/4074987-3"  />
-			
-			<locationDef index="51" name="unbekannter Ort"  />
-			
-			<locationDef index="52" name="auf der Reise"  />
-			
-			<locationDef index="53" name="Schinznach" ref="http://d-nb.info/gnd/1104293412"  />
-			
-			<locationDef index="54" name="Schloss Hegi" ref="http://d-nb.info/gnd/4089188-4"  />
-			
-			<locationDef index="55" name="Wohl auf der Reise nach Livland"  />
 
-			<locationDef index="56" name="Frankfurt am Main"  />
-			
-			
-			
+			<locationDef index="5" name="Landau" ref="" />
+			<locationDef index="" name="" ref="http://d-nb.info/gnd/4034222-0" />
+
+			<locationDef index="6" name="Weißenburg" ref="http://d-nb.info/gnd/4079134-8" />
+
+			<locationDef index="7" name="Straßburg" ref="http://d-nb.info/gnd/4057878-1" />
+
+			<locationDef index="8" name="Weimar" ref="http://d-nb.info/gnd/4065105-8" />
+
+			<locationDef index="9" name="Kehl" ref="http://d-nb.info/gnd/4030137-0" />
+
+			<locationDef index="10" name="Arensburg (Kuressaare)" ref="http://d-nb.info/gnd/4097908-8" />
+
+			<locationDef index="11" name="Zürich" ref="http://d-nb.info/gnd/4068038-1" />
+
+			<locationDef index="12" name="Emmendingen" ref="http://d-nb.info/gnd/4014586-4" />
+
+			<locationDef index="13" name="Ulm" ref="http://d-nb.info/gnd/4061529-7" />
+
+			<locationDef index="14" name="Berka" ref="http://d-nb.info/gnd/4087284-1" />
+
+			<locationDef index="15" name="Gotha" ref="http://d-nb.info/gnd/4021652-4" />
+
+			<locationDef index="16" name="Göttingen" ref="http://d-nb.info/gnd/4021477-1" />
+
+			<locationDef index="17" name="Kopenhagen" ref="http://d-nb.info/gnd/4032399-7" />
+
+			<locationDef index="18" name="Kassel" ref="http://d-nb.info/gnd/4029869-3" />
+
+			<locationDef index="19" name="Hannover" ref="http://d-nb.info/gnd/4023349-2" />
+
+			<locationDef index="20" name="Darmstadt" ref="http://d-nb.info/gnd/4011077-1" />
+
+			<locationDef index="21" name="Bückeburg" ref="http://d-nb.info/gnd/4008715-3" />
+
+			<locationDef index="22" name="Gudensberg" ref="http://d-nb.info/gnd/4094205-3" />
+
+			<locationDef index="23" name="Gießen" ref="http://d-nb.info/gnd/4020989-1" />
+
+			<locationDef index="24" name="hinter Frankfurt" />
+
+			<locationDef index="25" name="Dessau" ref="http://d-nb.info/gnd/4011536-7" />
+
+			<locationDef index="26" name="Colmar" ref="http://d-nb.info/gnd/4010401-1" />
+
+			<locationDef index="27" name="Leipzig" ref="http://d-nb.info/gnd/4035206-7" />
+
+			<locationDef index="28" name="Hegi" ref="http://d-nb.info/gnd/4668899-7" />
+
+			<locationDef index="29" name="Halle" ref="http://d-nb.info/gnd/4023025-9" />
+
+			<locationDef index="30" name="Kochberg" />
+
+			<locationDef index="31" name="Mannheim" ref="http://d-nb.info/gnd/4037372-1" />
+
+			<locationDef index="32" name="Marbach" ref="http://d-nb.info/gnd/7658327-2" />
+
+			<locationDef index="33" name="Wohl auf der Reise nach Emmendingen" />
+
+			<locationDef index="34" name="Auf dem Weg von Hannover nach Kassel?" />
+
+			<locationDef index="35" name="Basel" ref="http://d-nb.info/gnd/4004617-5" />
+
+			<locationDef index="36" name="Schweiz" ref="http://d-nb.info/gnd/4053881-3" />
+
+			<locationDef index="37" name="Ursener Tal an der Matte" />
+
+			<locationDef index="38" name="Neuenburg" ref="http://d-nb.info/gnd/4075303-7" />
+
+			<locationDef index="39" name="Bern" ref="http://d-nb.info/gnd/4005762-8" />
+
+			<locationDef index="40" name="Castion" ref="http://d-nb.info/gnd/4742201-4" />
+
+			<locationDef index="41" name="Winterthur" ref="http://d-nb.info/gnd/4066337-1" />
+
+			<locationDef index="42" name="Waldersbach" ref="http://d-nb.info/gnd/10197465-6" />
+
+			<locationDef index="43" name="Weisweil" ref="http://d-nb.info/gnd/4417847-5" />
+
+			<locationDef index="44" name="Riga" ref="http://d-nb.info/gnd/4050042-1" />
+
+			<locationDef index="45" name="Jamburg (Kingissepp)" ref="http://d-nb.info/gnd/7853282-6" />
+
+			<locationDef index="46" name="St. Petersburg" ref="http://d-nb.info/gnd/4267026-3" />
+
+			<locationDef index="47" name="Cronstadt (Kronstadt)" ref="http://d-nb.info/gnd/7612964-0" /><!--
+			Ist hier das Kronstadt in Rumänien gemeint? -->
+
+			<locationDef index="48" name="Aya (Ahja)" />
+
+			<locationDef index="49" name="Ohlershoff (Oleri)" />
+
+			<locationDef index="50" name="Moskau" ref="http://d-nb.info/gnd/4074987-3" />
+
+			<locationDef index="51" name="unbekannter Ort" />
+
+			<locationDef index="52" name="auf der Reise" />
+
+			<locationDef index="53" name="Schinznach" ref="http://d-nb.info/gnd/1104293412" />
+
+			<locationDef index="54" name="Schloss Hegi" ref="http://d-nb.info/gnd/4089188-4" />
+
+			<locationDef index="55" name="Wohl auf der Reise nach Livland" />
+
+			<locationDef index="56" name="Frankfurt am Main" />
+
+
 		</locationDefs>
 		<appDefs>
 			<appDef index="-1" name="" category="Überlieferung &amp; Textkritik" />
