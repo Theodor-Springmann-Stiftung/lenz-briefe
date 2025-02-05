@@ -42,7 +42,7 @@
 
 				<xsd:attribute name="cert" use="optional" default="high">
 					<xsd:annotation>
-						<xsd:documentation>Optional: Wurde die Referenz erschlossen? Erlaubt: high | low</xsd:documentation>
+						<xsd:documentation>Optional: Wie sicher ist die Referenz? Erlaubt: high | low</xsd:documentation>
 					</xsd:annotation>
 					<xsd:simpleType>
 						<xsd:restriction base="xsd:string">
@@ -57,14 +57,14 @@
 
 	<xsd:complexType name="personref">
 		<xsd:annotation>
-			<xsd:documentation> Bezieht sich auf einen Akteur und qualifiziert diese Beziehung. </xsd:documentation>
+			<xsd:documentation> Bezieht sich auf einen Akteur und qualifiziert diese Beziehung.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="lenz:ref">
 				<xsd:attribute name="kat" use="optional" default="autor">
 					<xsd:annotation>
-						<xsd:documentation> Die Art der Beziehung zum Akteur. Werte: erwähnung, autor,
-							herausgeber, verleger, drucker, vertrieb, nachruf. </xsd:documentation>
+						<xsd:documentation> Die Art der Beziehung zum Akteur. Standard: Autor, Werte: erwähnung,
+							autor, herausgeber, verleger, drucker, vertrieb, nachruf. </xsd:documentation>
 					</xsd:annotation>
 					<xsd:simpleType>
 						<xsd:restriction base="xsd:string">
@@ -85,13 +85,13 @@
 
 	<xsd:complexType name="ortref">
 		<xsd:annotation>
-			<xsd:documentation> Bezieht sich auf einen Ort und qualifiziert diese Beziehung. </xsd:documentation>
+			<xsd:documentation> Bezieht sich auf einen Ort und qualifiziert diese Beziehung.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="lenz:ref">
 				<xsd:attribute name="kat" use="optional" default="entstehungsort">
 					<xsd:annotation>
-						<xsd:documentation> Die Art der Beziehung zum Ort. Werte: entstehungsort </xsd:documentation>
+						<xsd:documentation> Die Art der Beziehung zum Ort. Werte: entstehungsort</xsd:documentation>
 					</xsd:annotation>
 					<xsd:simpleType>
 						<xsd:restriction base="xsd:string">

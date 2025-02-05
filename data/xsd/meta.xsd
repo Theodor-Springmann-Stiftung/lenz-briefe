@@ -30,12 +30,12 @@
 										<xsd:choice minOccurs="0" maxOccurs="unbounded">
 											<xsd:element name="sent" type="actionattributes">
 												<xsd:annotation>
-													<xsd:documentation> Pflicht: Wann wurde der Brief abgesendet? </xsd:documentation>
+													<xsd:documentation>Daten zu einem Absende-Event eines Briefes</xsd:documentation>
 												</xsd:annotation>
 											</xsd:element>
 											<xsd:element name="received" type="actionattributes">
 												<xsd:annotation>
-													<xsd:documentation> Pflicht: Wann wurde der Brief empfangen? </xsd:documentation>
+													<xsd:documentation>Daten zu einem Empfangs-Event eines Briefes</xsd:documentation>
 												</xsd:annotation>
 											</xsd:element>
 										</xsd:choice>
@@ -64,7 +64,7 @@
 					</xsd:complexType>
 					<xsd:unique name="uniqueIndexLetter">
 						<xsd:annotation>
-							<xsd:documentation>Pflicht: Jeder Akteur hat eine eindeutige ID.</xsd:documentation>
+							<xsd:documentation>Pflicht: Jeder Brief hat eine eindeutige ID.</xsd:documentation>
 						</xsd:annotation>
 
 						<xsd:selector xpath="lenz:letterDesc" />
