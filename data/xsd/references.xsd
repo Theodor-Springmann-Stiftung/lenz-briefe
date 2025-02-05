@@ -29,7 +29,26 @@
 										</xsd:element>
 									</xsd:sequence>
 								</xsd:complexType>
+
+								<xsd:unique name="uniqueIndexPerson">
+									<xsd:annotation>
+										<xsd:documentation>Pflicht: jede Person hat eine eindeutige ID.</xsd:documentation>
+									</xsd:annotation>
+
+									<xsd:selector xpath="lenz:personDef" />
+									<xsd:field xpath="@index" />
+								</xsd:unique>
+
+								<xsd:unique name="uniqueRefPerson">
+									<xsd:annotation>
+										<xsd:documentation>Pflicht: jede Person hat eine eindeutige GND-URL.</xsd:documentation>
+									</xsd:annotation>
+
+									<xsd:selector xpath="lenz:personDef" />
+									<xsd:field xpath="@ref" />
+								</xsd:unique>
 							</xsd:element>
+
 							<xsd:element name="locationDefs">
 								<xsd:complexType>
 									<xsd:sequence>
@@ -43,7 +62,27 @@
 										</xsd:element>
 									</xsd:sequence>
 								</xsd:complexType>
+
+								<xsd:unique name="uniqueIndexLocation">
+									<xsd:annotation>
+										<xsd:documentation>Pflicht: jeder Ort hat eine eindeutige ID.</xsd:documentation>
+									</xsd:annotation>
+
+									<xsd:selector xpath="lenz:locationDef" />
+									<xsd:field xpath="@index" />
+								</xsd:unique>
+
+
+								<xsd:unique name="uniqueRefLocation">
+									<xsd:annotation>
+										<xsd:documentation>Pflicht: jeder Ort hat eine eindeutige Geonmaes-URL.</xsd:documentation>
+									</xsd:annotation>
+
+									<xsd:selector xpath="lenz:locationDef" />
+									<xsd:field xpath="@ref" />
+								</xsd:unique>
 							</xsd:element>
+
 							<xsd:element name="appDefs">
 								<xsd:complexType>
 									<xsd:sequence>
@@ -51,13 +90,23 @@
 											maxOccurs="unbounded">
 											<xsd:complexType>
 												<xsd:attribute name="index" type="xsd:integer" use="required" />
-												<xsd:attribute name="name" type="lenz:NonEmptyString" use="required" />
+												<xsd:attribute name="name" type="xsd:string" use="required" />
 												<xsd:attribute name="category" type="lenz:NonEmptyString" use="required" />
 											</xsd:complexType>
 										</xsd:element>
 									</xsd:sequence>
 								</xsd:complexType>
+
+								<xsd:unique name="uniqueIndexAppDef">
+									<xsd:annotation>
+										<xsd:documentation>Pflicht: jede AppDef hat eine eindeutige ID.</xsd:documentation>
+									</xsd:annotation>
+
+									<xsd:selector xpath="lenz:appDef" />
+									<xsd:field xpath="@index" />
+								</xsd:unique>
 							</xsd:element>
+
 						</xsd:sequence>
 					</xsd:complexType>
 				</xsd:element>
