@@ -272,8 +272,7 @@
 
 			<locationDef index="4" name="Fort Louis" ref="https://d-nb.info/gnd/4762184-9" />
 
-			<locationDef index="5" name="Landau" ref="" />
-			<locationDef index="" name="" ref="http://d-nb.info/gnd/4034222-0" />
+			<locationDef index="5" name="Landau" ref="http://d-nb.info/gnd/4034222-0" />
 
 			<locationDef index="6" name="Weißenburg" ref="http://d-nb.info/gnd/4079134-8" />
 

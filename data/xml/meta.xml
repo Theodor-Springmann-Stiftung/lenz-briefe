@@ -1041,7 +1041,7 @@
 
 		<letterDesc letter="74">
 			<sent>
-				<date when="1775-10-2">Kehl, 2. Oktober 1775</date>
+				<date when="1775-10-02">Kehl, 2. Oktober 1775</date>
 				<location ref="9" />
 				<person ref="1" />
 			</sent>
@@ -1677,7 +1677,7 @@
 
 		<letterDesc letter="119">
 			<sent>
-				<date when="1776-02-29">Straßburg, Ende Februar 1776</date>
+				<date when="1776-02-28">Straßburg, Ende Februar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1691,7 +1691,7 @@
 
 		<letterDesc letter="120">
 			<sent>
-				<date when="1776-02-31">Straßburg, Ende Februar 1776</date>
+				<date when="1776-02-28">Straßburg, Ende Februar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -3902,7 +3902,7 @@
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
-			<isDraft value="false" />
+			<isDraft value="true" />
 		</letterDesc>
 
 		<letterDesc letter="277">
