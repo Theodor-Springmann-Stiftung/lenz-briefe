@@ -4907,6 +4907,20 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
+		
+		<letterDesc letter="348">
+			<sent>
+				<date when="1781-04-10">St. Petersburg, 10. April 1781</date>
+				<location ref="46" />
+				<person ref="1" />
+			</sent>
+			<received>
+				<person ref="3" />
+			</received>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 
 	</descriptions>
 </opus>
