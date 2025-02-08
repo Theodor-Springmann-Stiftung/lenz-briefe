@@ -2284,6 +2284,12 @@
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 25
 			</app>
 		</letterTradition>
+		
+		<letterTradition letter="355">
+			<app ref="4">
+				Zürich, Zentralbibliothek, FA Lav. Ms. 572, Nr. 26 (zeitgenössische Abschrift)
+			</app>
+		</letterTradition>
 
 
 	</traditions>

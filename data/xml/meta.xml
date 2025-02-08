@@ -5005,6 +5005,20 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
+		
+		<letterDesc letter="355">
+			<sent>
+				<date when="1787-03-30">Zürich, 30. März 1787</date>
+				<location ref="11" />
+				<person ref="10" />
+			</sent>
+			<received>
+				<person ref="1" />
+			</received>
+			<hasOriginal value="false" /><!-- Zeitgenössische Handschrift -->
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 
 	</descriptions>
 </opus>
