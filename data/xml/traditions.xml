@@ -2290,6 +2290,12 @@
 				Zürich, Zentralbibliothek, FA Lav. Ms. 572, Nr. 26 (zeitgenössische Abschrift)
 			</app>
 		</letterTradition>
+		
+		<letterTradition letter="356">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 26
+			</app>
+		</letterTradition>
 
 
 	</traditions>

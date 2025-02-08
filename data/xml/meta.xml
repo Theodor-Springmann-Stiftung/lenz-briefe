@@ -5015,7 +5015,21 @@
 			<received>
 				<person ref="1" />
 			</received>
-			<hasOriginal value="false" /><!-- Zeitgenössische Handschrift -->
+			<hasOriginal value="false" /><!-- Zeitgenössische Abschrift -->
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="356">
+			<sent>
+				<date when="1787-06-06">Moskau, 6. Juni 1787</date>
+				<location ref="50" />
+				<person ref="1" />
+			</sent>
+			<received>
+				<person ref="70" />
+			</received>
+			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
