@@ -262,6 +262,9 @@
 			
 			<personDef index="84" name="Gerhard Friedrich Müller" ref="http://d-nb.info/gnd/118953362"
 				vorname="Gerhard Friedrich" nachname="Müller" komm="gf-müller" />
+			
+			<personDef index="85" name="Carl Heinrich Gottlob Lenz" 
+				vorname="Carl Heinrich Gottlob" nachname="Lenz" komm="chg-lenz" />
 
 		</personDefs>
 
