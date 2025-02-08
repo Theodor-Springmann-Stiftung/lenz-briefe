@@ -265,6 +265,9 @@
 			
 			<personDef index="85" name="Carl Heinrich Gottlob Lenz" 
 				vorname="Carl Heinrich Gottlob" nachname="Lenz" komm="chg-lenz" />
+			
+			<personDef index="86" name="Unbekannter Freund" 
+				vorname="NN" nachname="NN" komm="freund" />
 
 		</personDefs>
 
