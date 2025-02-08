@@ -4949,6 +4949,20 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
+		
+		<letterDesc letter="351">
+			<sent>
+				<date when="1781-06-02">St. Petersburg, 2. Juni 1781</date>
+				<location ref="46" />
+				<person ref="1" />
+			</sent>
+			<received>
+				<person ref="4" />
+			</received>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 
 	</descriptions>
 </opus>
