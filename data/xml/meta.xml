@@ -4980,12 +4980,26 @@
 		
 		<letterDesc letter="353">
 			<sent>
-				<date when="1782-10-30">Moskau, 1782</date><!-- Abschrift? -->
+				<date when="1782-06-01">Moskau, 1782</date><!-- Abschrift? -->
 				<location ref="50" />
 				<person ref="1" />
 			</sent>
 			<received>
 				<person ref="10" />
+			</received>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="354">
+			<sent>
+				<date when="1785-11-18">Moskau, 18. November 1785</date>
+				<location ref="50" />
+				<person ref="1" />
+			</sent>
+			<received>
+				<person ref="4" />
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />

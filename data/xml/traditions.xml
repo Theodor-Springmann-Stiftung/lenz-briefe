@@ -2278,6 +2278,12 @@
 				Zürich, Zentralbibliothek, FA Lav. Ms. 594.12 (2), Exzerptheft
 			</app>
 		</letterTradition>
+		
+		<letterTradition letter="354">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 25
+			</app>
+		</letterTradition>
 
 
 	</traditions>
