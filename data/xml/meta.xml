@@ -4935,6 +4935,20 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
+		
+		<letterDesc letter="350">
+			<sent>
+				<date when="1781-05-28">St. Petersburg, 28. Mai 1781</date>
+				<location ref="46" />
+				<person ref="1" />
+			</sent>
+			<received>
+				<person ref="69" />
+			</received>
+			<hasOriginal value="false" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 
 	</descriptions>
 </opus>

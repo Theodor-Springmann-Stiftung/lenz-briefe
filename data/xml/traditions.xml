@@ -2254,6 +2254,12 @@
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 24
 			</app>
 		</letterTradition>
+		
+		<letterTradition letter="350">
+			<app ref="4">
+				Leipzig, Universitätsbibliothek, Slg. Nebauer, L 397 (Abschrift)
+			</app>
+		</letterTradition>
 
 
 	</traditions>
