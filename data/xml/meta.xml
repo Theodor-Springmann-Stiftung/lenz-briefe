@@ -4977,6 +4977,20 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
+		
+		<letterDesc letter="353">
+			<sent>
+				<date when="1782-10-30">Moskau, 1782</date><!-- Abschrift? -->
+				<location ref="50" />
+				<person ref="1" />
+			</sent>
+			<received>
+				<person ref="10" />
+			</received>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 
 	</descriptions>
 </opus>
