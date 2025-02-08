@@ -2308,6 +2308,12 @@
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 37
 			</app>
 		</letterTradition>
+		
+		<letterTradition letter="359">
+			<app ref="4">
+				Berlin, Staatsbibliothek zu Berlin – Preußischer Kulturbesitz, NL Lenz, Bd. 2, (Nr. 235), Bl. 62–63
+			</app>
+		</letterTradition>
 
 
 	</traditions>

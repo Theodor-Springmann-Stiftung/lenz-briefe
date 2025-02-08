@@ -5050,7 +5050,21 @@
 		
 		<letterDesc letter="358">
 			<sent>
-				<date when="1787-11-15">Moskau, nach dem 4. November 1788</date>
+				<date when="1788-11-15">Moskau, nach dem 4. November 1788</date>
+				<location ref="50" />
+				<person ref="1" />
+			</sent>
+			<received>
+				<person ref="69" />
+			</received>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
+		
+		<letterDesc letter="359">
+			<sent>
+				<date when="1788-12-01">Moskau, Wahrscheinlich Ende 1788</date>
 				<location ref="50" />
 				<person ref="1" />
 			</sent>
