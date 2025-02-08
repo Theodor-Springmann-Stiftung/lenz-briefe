@@ -5033,6 +5033,20 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
+		
+		<letterDesc letter="357">
+			<sent>
+				<date when="1787-09-15">Moskau, September 1787</date>
+				<location ref="50" />
+				<person ref="1" />
+			</sent>
+			<received>
+				<person ref="71" />
+			</received>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 
 	</descriptions>
 </opus>
