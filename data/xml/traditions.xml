@@ -2326,6 +2326,12 @@
 				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 46
 			</app>
 		</letterTradition>
+		
+		<letterTradition letter="362">
+			<app ref="4">
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 36
+			</app>
+		</letterTradition>
 
 
 	</traditions>
