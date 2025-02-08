@@ -259,6 +259,9 @@
 
 			<personDef index="83" name="Eina [Julie von Albedyll] " ref="http://d-nb.info/gnd/116275359"
 				vorname="Julie" nachname="von Albedyll" komm="albedyll" />
+			
+			<personDef index="84" name="Gerhard Friedrich Müller" ref="http://d-nb.info/gnd/118953362"
+				vorname="Gerhard Friedrich" nachname="Müller" komm="gf-müller" />
 
 		</personDefs>
 
