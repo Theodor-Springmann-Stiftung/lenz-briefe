@@ -5246,6 +5246,20 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
+		
+		<letterDesc letter="372">
+			<sent>
+				<date when="1791-06-11">Moskau, 11. Juni 1791</date>
+				<location ref="50" />
+				<person ref="1" />
+			</sent>
+			<received>
+				<person ref="8" />
+			</received>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 
 	</descriptions>
 </opus>
