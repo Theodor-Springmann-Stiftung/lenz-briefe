@@ -41,19 +41,19 @@ def get_person_def_ids(ref_root):
     If references.xml is un-namespaced, we can use a non-namespace XPath: //personDef
     Adjust if references.xml also has a namespace.
     """
-    return set(elem.get("index") for elem in ref_root.xpath("//personDef"))
+    return set(elem.get("index") for elem in ref_root.xpath("//lenz:personDef", namespaces=NAMESPACE_MAP))
 
 def get_location_def_ids(ref_root):
     """
     Retrieve all 'index' attributes from <locationDef index="..."> in references.xml.
     """
-    return set(elem.get("index") for elem in ref_root.xpath("//locationDef"))
+    return set(elem.get("index") for elem in ref_root.xpath("//lenz:locationDef", namespaces=NAMESPACE_MAP))
 
 def get_app_def_ids(ref_root):
     """
     Retrieve all 'index' attributes from <appDef index="..."> in references.xml.
     """
-    return set(elem.get("index") for elem in ref_root.xpath("//appDef"))
+    return set(elem.get("index") for elem in ref_root.xpath("//lenz:appDef", namespaces=NAMESPACE_MAP))
 
 def check_references(root, reference_data, filepath):
     """
