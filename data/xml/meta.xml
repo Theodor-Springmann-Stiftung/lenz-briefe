@@ -5274,6 +5274,20 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
+		
+		<letterDesc letter="374">
+			<sent>
+				<date when="1792-01-14">Moskau, 14. Januar 1792</date>
+				<location ref="50" />
+				<person ref="1" />
+			</sent>
+			<received>
+				<person ref="77" />
+			</received>
+			<hasOriginal value="true" />
+			<isProofread value="true" />
+			<isDraft value="false" />
+		</letterDesc>
 
 	</descriptions>
 </opus>
