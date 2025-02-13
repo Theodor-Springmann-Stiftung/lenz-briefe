@@ -4907,7 +4907,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="348">
 			<sent>
 				<date when="1781-03-25">St. Petersburg, 25. März 1781</date>
@@ -4921,7 +4921,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="349">
 			<sent>
 				<date when="1781-04-10">St. Petersburg, 10. April 1781</date>
@@ -4935,7 +4935,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="350">
 			<sent>
 				<date when="1781-05-28">St. Petersburg, 28. Mai 1781</date>
@@ -4949,7 +4949,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="351">
 			<sent>
 				<date when="1781-06-02">St. Petersburg, 2. Juni 1781</date>
@@ -4963,7 +4963,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="352">
 			<sent>
 				<date when="1781-10-30">Moskau, 30. Oktober 1781</date>
@@ -4977,7 +4977,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="353">
 			<sent>
 				<date when="1782-06-01">Moskau, 1782</date><!-- Abschrift? -->
@@ -4991,7 +4991,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="354">
 			<sent>
 				<date when="1785-11-18">Moskau, 18. November 1785</date>
@@ -5005,7 +5005,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="355">
 			<sent>
 				<date when="1787-03-30">Zürich, 30. März 1787</date>
@@ -5019,7 +5019,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="356">
 			<sent>
 				<date when="1787-06-06">Moskau, 6. Juni 1787</date>
@@ -5033,7 +5033,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="357">
 			<sent>
 				<date when="1787-09-15">Moskau, September 1787</date>
@@ -5047,7 +5047,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="358">
 			<sent>
 				<date when="1788-11-15">Moskau, nach dem 4. November 1788</date>
@@ -5061,7 +5061,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="359">
 			<sent>
 				<date when="1788-12-01">Moskau, wahrscheinlich Ende 1788</date>
@@ -5075,7 +5075,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="360">
 			<sent>
 				<date when="1788-12-15">Moskau, wahrscheinlich Ende 1788</date>
@@ -5089,7 +5089,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="361">
 			<sent>
 				<date when="1788-12-30">Moskau, 1788</date>
@@ -5105,7 +5105,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="362">
 			<sent>
 				<date when="1789-01-15">Moskau, 1789</date>
@@ -5119,7 +5119,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="363">
 			<sent>
 				<date when="1789-05-15">Moskau, ab Mai 1789</date>
@@ -5133,7 +5133,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="364">
 			<sent>
 				<date when="1789-06-01">Moskau, etwa 1789</date>
@@ -5147,7 +5147,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="365">
 			<sent>
 				<date when="1789-06-15">Moskau, nach dem 2. April 1789</date>
@@ -5161,7 +5161,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="366">
 			<sent>
 				<date when="1789-07-01">Moskau, um 1789</date>
@@ -5175,7 +5175,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="367">
 			<sent>
 				<date when="1790-06-15">Moskau, um 1790</date>
@@ -5189,7 +5189,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="368">
 			<sent>
 				<date when="1790-10-01">Moskau, etwa Herbst 1790</date>
@@ -5198,13 +5198,14 @@
 			</sent>
 			<received>
 				<person ref="4" />
-				<person ref="5" /><!-- Ist Dorothea Lenz die in diesem Brief angesprochene Schwester von Lenz? -->
+				<person ref="5" /><!-- Ist Dorothea Lenz die in diesem Brief angesprochene Schwester von
+				Lenz? -->
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="369">
 			<sent>
 				<date when="1790-11-01">Moskau, um 1790</date>
@@ -5218,7 +5219,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="370">
 			<sent>
 				<date when="1790-11-02">Moskau, wahrscheinlich November 1790</date>
@@ -5232,7 +5233,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="371">
 			<sent>
 				<date when="1790-11-09">Moskau, 9. November 1790</date>
@@ -5246,7 +5247,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="372">
 			<sent>
 				<date when="1791-06-11">Moskau, 11. Juni 1791</date>
@@ -5260,7 +5261,7 @@
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
-		
+
 		<letterDesc letter="373">
 			<sent>
 				<date when="1791-07-01">Moskau, ab März 1790</date>

@@ -8,14 +8,14 @@
 	<xsd:include schemaLocation="common.xsd"></xsd:include>
 
 	<xsd:complexType name="actionattributes">
-		<xsd:sequence>
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
 			<xsd:element name="date" type="lenz:date" minOccurs="0"
 				maxOccurs="unbounded" />
 			<xsd:element name="location" type="lenz:ortref" minOccurs="0"
 				maxOccurs="unbounded" />
 			<xsd:element name="person" type="lenz:personref" minOccurs="0"
 				maxOccurs="unbounded" />
-		</xsd:sequence>
+		</xsd:choice>
 	</xsd:complexType>
 
 	<xsd:element name="opus">
