@@ -2765,7 +2765,42 @@
 			Seyn Sie so gütig, und fahren fort. Ach welchen Tag, welche Sonne Sie in diesem 
 			Herzen ausbreiten. – Rosalia!</letterText>
 		
-		<letterText letter="54"><!-- französischer Brief --></letterText>
+		<letterText letter="54"><line tab="1"/><aq>vous pouvez vous fier a ma parole d’honneur que ladite feuille ne sera jamais publiée avec ma bonne 
+			volonté. Aussi n’etoit elle ecrite qu’ après le point de vue d’une grande partie de vos lecteurs, dont les caquets 
+			au sujet de vous et de vos ecrits ne parviennent jamais jusqu’a vous. Je n’aurois pas crú, que cela pourroit te faire 
+			quelque peine, je ne te l’ ai communiqué que pour sonder tes façons d’envisager ces choses lá, pour pouvoir a l’ 
+			avenir dire quelque chose de plus raisonnable la dessuzis. Voila mes intentions, j’ai tout employé de supprimer cela 
+			et je te puis assurer d’ avance qu’il ne verra jamais le jour. Nous en parlerons davantage.</aq><line type="break"/> 
+			<align pos="right">Le.</align>
+			 
+			<sidenote pos="left" page="1" annotation="Am linken Rande, vertikal">Remerciemens pour la peine que vous vous etes donnée avec les Lindaviana</sidenote> <line type="empty"/>
+			
+			<page index="2"/><line type="break"/>
+			<hand ref="12"><!-- Wie kann ich zwei Hände markieren, wenn das Element <hand> nur eine Referenz vorsieht? -->
+			
+			<pe><del>Eulenspiegel<line type="break"/>
+			Fotzenhut<line type="break"/>
+			Dreckfincke<line type="break"/>
+			Saumagen<line type="break"/>
+			Faselhans<line type="break"/>
+			Blaufincke – halb <nr> </nr></del><line type="break"/>
+			klein Hanswurst<line type="break"/>
+			beym Freyschmausen <nr> </nr><line type="break"/>
+			Hundsfut Gast Rolle<line type="break"/>
+			Ahlke Pöleke <nr> </nr> die dumm <nr> </nr> ist und war<line type="break"/>
+			n’a <nr> </nr> … <nr> </nr><line type="break"/>
+			Kropfliesgen. von Harz<line type="break"/>
+			Metze <nr> </nr> Dreyhaar Alte Hure Kupplerin<line type="break"/>
+			Schlinschlanschlodi, kommt von Akademien<line type="break"/>
+			Metze Magen Regenwurm<line type="break"/>
+			Ganz Magen<line type="break"/>
+			Wurstfresser aus dem Scheishaus.<line type="break"/>
+			<ul>Piphahn.</ul><line type="break"/>
+			Margaretlin Madre de tuti I Santi<line type="break"/>
+			<ul>Galloch Schalloch</ul><line type="break"/>
+			Leisekentritt. Schleicher.<line type="break"/>
+			Lasueangel. Laus. Angel.<line type="break"/>
+			Hengst mensch von einer Prinzeß</pe></hand></letterText>
 		
 		<letterText letter="55">Strass. d. 13t julii 75 <line type="empty"/>
 			
