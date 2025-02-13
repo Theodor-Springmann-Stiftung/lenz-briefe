@@ -1217,6 +1217,48 @@
 				Kraków, Biblioteka Jagiellońska, Lenziana 5, Zwei Briefe Ramond de Carbonnières an Lenz, Nr.
 				1
 			</app>
+			<app ref="11">
+				<!-- Wird die Datierung des Briefs in der Übersetzung ausgelassen oder fehlt diese im Dokument? -->
+				<align pos="center">Mein Herr und lieber Freund.</align> <line type="empty"/>
+				
+				<line tab="1"/>Da die Nachricht von Ihrer plötzlichen Abreise aus Straßburg mir sehr großen Kummer bereitet 
+				hatte, hörte ich mit größtem Interesse die Neuigkeiten von Ihnen; mein Freund hat mir recht 
+				zufriedenstellende überbracht. Sie sind mit Ihrem berühmten Freund Goethe vereinigt und 
+				befinden sich unter den Augen und dem Schutz eines Fürsten, der Talente zu schätzen weiß 
+				und der ein bedeutender Mann wäre, auch wenn er kein Fürst wäre. Ich vergleiche die Vorstellung, 
+				die ich mir von seinem Hof mache, mit meiner tristen Bleibe. Talente brauchen eine Bühne und 
+				ich befinde mich in einer Wüste inmitten meiner lieben Mitbürger.<line type="break"/>
+				Meiner kleinen Eigenliebe, mein lieber Freund, schmeichelt Ihre angenehme Art, sich an mich zu 
+				erinnern zu sehr, weswegen ich Ihrer Bitte sofort nachkomme; ich beauftrage meinen Freund, Ihnen 
+				mein Werk zu schicken; in vielerlei Hinsicht ist es das Ihrige, ich verdanke Ihnen Lektionen, ich 
+				hatte Ihnen schon welche zu verdanken, bevor ich Sie überhaupt persönlich kennengelernt habe; 
+				vergeben Sie dem Schüler seine Huldigung des Meisters. Wäre ich freier und glücklicher, wäre ich 
+				nicht unrettbar unterjocht, hätte ich vielleicht beschlossen, es Ihnen selbst zu bringen; ich hätte 
+				Sie gebeten, mich Herrn Goethe vorzustellen; man muss danach streben, die Bekanntschaft von Genies 
+				zu machen, die man bewundert, für den Geist ist der Umgang mit Ihnen gewinnbringend, noch mehr für 
+				das Herz. Ich wage es, Sie zu bitten, ihm meine Ehrerbietung zu überbringen und seine Schriften 
+				gebührend zu loben; aber ich fürchte sehr, dass er meinen Zuspruch geringschätzt; was ist denn meine 
+				Stimme gegen die Stimme von ganz Deutschland und den aller empfindsamer Herzen? <line type="empty"/>
+				
+				<line tab="1"/>Herr Spehner aus Berlin übernimmt den Druck meines Dramas; ich wage es. Sie waren so gütig, mich zu 
+				diesem Versuch zu ermutigen; ich habe mich allein auf Ihren Rat hin entschlossen; er wog alle anderen 
+				auf. <line type="empty"/>
+				
+				<line tab="1"/>Inzwischen habe ich eine neue Arbeit übernommen; sie wird kraftraubend werden. Und ich hielt sie für 
+				geeignet, ein wenig Aufmerksamkeit zu erregen, wenigstens durch das Genre. Aber aus tausend Gründen muss 
+				ich meine Arbeit ständig unterbrechen. Inmitten meines stürmischen Lebens habe ich nur kurze Hoffnungsschimmer; 
+				mal sind es die Leiden des Geistes, mal die des Herzens, mal sind es Überdruss und Mutlosigkeit, und dann 
+				heißt es Abschied nehmen von der Traumwelt, die man sich geschaffen hatte. <line type="empty"/>
+				
+				<line tab="1"/>Sie sind nun ruhiger und glücklicher als ich. Pflegen Sie die Muse , um die empfindsamen Herzen zu bezaubern; 
+				sie verdanken Ihnen schon viel. Geruhen Sie, sich meiner gelegentlich zu erinnern. Ich werde niemals die 
+				wenigen angenehmen Momente vergessen, die wir zusammen verbracht haben; damals glaubte ich nicht, dass es 
+				die letzten wären. <line type="empty"/>
+				
+				Ich verbleibe mit treuer und unerschütterlicher Verbundenheit, mein Herr und lieber Freund, <line type="empty"/>
+				
+				<align pos="right">Ihr untertäniger und gehorsamer Diener.<line type="break"/>
+				Ramond</align></app>
 		</letterTradition>
 
 		<letterTradition letter="186">

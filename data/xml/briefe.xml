@@ -7191,7 +7191,54 @@
 			
 			<note>zwei Profilskizzen</note></hand></letterText>
 		
-		<letterText letter="185"><!-- französischer Brief --></letterText>
+		<letterText letter="185"><aq><align pos="right">Colmar le 25 may 1776</align><line type="empty"/>
+			
+			<align pos="center">Monsieur et Cher ami.</align> <line type="empty"/>
+			<line type="empty"/>
+			
+			<line tab="1"/>J’avais appris avec trop de peine, votre départ 
+			subit de Strasbourg, pour ne pas recevoir avec le plus grand intérêt de 
+			vos nouvelles; mon ami m’en a donné de bien satisfaisantes. vous êtes 
+			réuni à votre illustre ami M. Goéthé, sous les yeux et la protection d’un 
+			prince qui sait estimer les talens, et qui serait un grand homme quand même 
+			il ne serait pas Prince. je compare l’idée que je me forme de sa cour, à celle 
+			de ma triste demeure. aux talens il faut un théatre et je suis dans un desèrt, 
+			au milieu de mes chers concytoyens. <line type="empty"/>
+			
+			<line tab="1"/>mon petit amourpropre est trop flatté, mon cher ami, de la manière agréable dont 
+			vous vous souvenéz de moi, pour ne pas accéder tout de Suite à votre demande; je 
+			charge mon ami, de vous <line type="break"/>
+			<sidenote pos="bottom left" page="1" annotation="unten links am Rand">M. Lenz à Weimar.</sidenote><line type="break"/>
+			<page index="2"/><line type="break"/>
+			<line tab="1"/>addresser mon ouvrage; il est à vous à plusieurs égards. je vous dois des leçons, 
+			je vous en ai dû, avant même de vous connaître personnellement; pardonnéz à l’écolier 
+			l’hommage rendû au maître. Si j’étais plus libre et plus heureux, si je n‘etais pas 
+			invinciblement assujétti, j’aurais peutêtre formé le projèt de vous le porter moi-même; 
+			je vous aurais prié de me présenter à M. Goéthé; on doit ambitionner la connaissanee des 
+			genies que l’on admire, on gagne à leur commerce pour l’ esprit. on y gagne encore plus du 
+			côté du cœur. j’ose vous prier de lui présenter mon hommage, et le tribùtde louanges que 
+			l’on doit à ses écrits; mais je crains bien qu’il ne dédaigne mon suffrage; qu’est ce en 
+			effet que ma voix, après la voix de toute l’ allemagne et de tous les cœurs sensibles? <line type="empty"/>
+			
+			<page index="3"/><line type="break"/> 
+			<line tab="1"/>M. Spehner de Berlin se charge de l’impression de mon drâme; je me hazarde. vous avéz bien 
+			voulû m’encourager à cet éssay; je me suis détérminé sur votre avis seul; il vaut tous les 
+			autres ensemble. <line type="empty"/>
+			
+			<line tab="1"/>Depuis, j’ay entrepris un nouvel ouvrage; il sera d’haleîne. et je le croyais fait pour fixer 
+			un peu l’attention, au moins par son genre. Mais mille obstacles me font à chaque instant 
+			intérrompre mon Travail. Au milieu des orages de ma vie je n’ai que des eclairs d’espérance; 
+			bientôt viennent les peines d’esprit, les peines du cœur, la lassitude et le découragement, 
+			et adieu au monde imaginaire que l’on s’ était créé. <line type="empty"/>
+			
+			<line tab="1"/>Vous êtes maintenant plus Tranquille, et plus heureux que moi. cultiviéz les muses pour le 
+			charme des cœurs sensibles; ils vous doivent déjà <page index="4"/> beaucoup. Daigneéz vous Souvenir 
+			quelquefois de moi. je n’oublierai jamais le peu d’Instans agréables que nous avons Passé 
+			ensemble; alors je ne croyais pas que ce Seraient les derniers. J’ay l’honneur d’ être avec 
+			le plus sincêre et inviolable attachement, Monsieur et cher ami <line type="empty"/>
+			
+			<align pos="right">Votre très humble et très obeïssant Serviteur.<line type="break"/>
+			Ramond</align></aq></letterText>
 		
 		<letterText letter="186"><line tab="1"/>Hier ist Lindaus Schwanengesang, den er sehr gern an Washington oder D. Franklin möchte gelangen 
 			lassen. Wie ist mir selber unbegreiflich. Vielleicht wissen Sie Auswege. Den Colonisten kann ein solch 
