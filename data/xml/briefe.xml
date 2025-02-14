@@ -8098,7 +8098,19 @@
 			
 			<page index="3"/></letterText>
 		
-		<letterText letter="212"><!-- französischer Brief --></letterText>
+		<letterText letter="212"><line tab="1"/><aq>Adieu belle Chanoinesse, car telle je Vous ai vúe la derniere fois, telle je Vous 
+			reverrai un jour si non dans ce monde pourtant dans un autre. Soyez toujours aussi 
+			parfaitement heureuse que Vous serez adorée de moi et n’allez pas Vous imaginer 
+			qu’on peut etre malheureux avec des sentimens pareils pour Vous.<line type="break"/>
+			Lenz<line type="break"/>
+			au jour de Votre nom le 15 de Juillet 1776. <line type="empty"/>
+			
+			<sidenote pos="left" page="1" annotation="am linken Rand, vertikal, Bleistift"><pe>j’espere de revenir</pe></sidenote></aq>
+			
+			<page index="2"/><line type="break"/>
+			<note>um 90 Grad gedreht</note><line type="break"/>
+			<line tab="1"/>Nimmermehr an sie <ul>zu schreiben</ul> wo möglich alle Gelegenheiten zu vermeiden <ul>sie zu sehen</ul> 
+			weil ich mir nicht trauen darf gelobe ich Gott.</letterText>
 		
 		<letterText letter="213">Hier Bruder eins und das andere. <line type="empty"/>
 			
