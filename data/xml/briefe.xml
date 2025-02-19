@@ -9536,7 +9536,10 @@
 			
 			Von einem armen Reisenden der sonst nichts zu geben hat.</letterText>
 		
-		<letterText letter="261"><!-- französischer Brief --></letterText>
+		<letterText letter="261"><aq><line tab="1"/>Votre Altesse dans sa derniere a parú vouloir m’exiler de Weymar pour un plus long tems encore. J’ ai 
+			obei. Je la remercie de la <page index="2"/> lettre dont Elle a daignée m’adoucir cette peine. J’y vois des lueurs 
+			d’esperance qu’Elle ne quittera pas un projet dont l’ execution fera le plus sensible charme de ma vie. 
+			Non obstant les doutes que Mr. de Ein-<page index="3"/>siedel m’ ait exites sur ce sujet; en regardant l’ adorable</aq></letterText>
 		
 		<letterText letter="262"><note>am linken oberen Rand eine Kalkulation, spiegelverkehrt</note> <line type="empty"/>
 			
@@ -14157,11 +14160,11 @@
 			projet ouvriroit peut être une nouvelle branche au Commerce Russe, et par cette raison n’ose pas être melé à cette 
 			supplique qui ne regarde que ma personne et comme je n’ai aucun fonds à presenter pour soutenir ses idées solides et 
 			qui ne laisseront pas de satisfaire la Cour même, je ne saurois l’assister que de mes conseils tout à fait désinteressés.<line type="break"/>
-			[Seite 3]<line type="break"/>
+			<page index="4"/><!-- Zählung fortlaufend ab Seite 4? --><line type="break"/></aq>
 			<line tab="1"/>Dieses bitte gehorsamst einem recht guten Freunde in Petersburg zu zeigen oder einem meiner Brüder Carl oder Christian 
 			nach Riga zuzusenden, damit sie die Gütigkeit haben einen kleinen – Nd. aber viel kürzeren Aufsatz darüber zu machen 
 			und solchem durch meinen edlen Freund Brauer wo möglich an Se. Excellenz den Herrn Grafen Besborodko selbst gelangen 
-			zu lassen, in dessen Gunst wenigstens empfolen zu seyn wünschte.</aq></letterText>
+			zu lassen, in dessen Gunst wenigstens empfolen zu seyn wünschte.</letterText>
 		
 		<letterText letter="362"><align pos="center">An den Fürsten, Graf <ul>Anhalt,</ul> <insertion pos="top">damals</insertion> General-Gouv. von Moskwa <line type="empty"/>
 			
@@ -14279,7 +14282,7 @@
 			Zaubereyen behütete, beschirmte, wovon auch das altdeutsche <ul>Hort,</ul> welches der Slawe, der alles mit der Kehle 
 			ausdrükt nachbethete <aq><ul>choronit,</ul> chranit, <ul><ru>xpaHUIIlb</ru></ul></aq> oder auch <aq><ul><ru>o6opmtumb</ru></ul> oboronit,</aq> wovon <aq>oborona,</aq> welches auch einen 
 			schattenden Fichtenbaum anzeigt, daher <aq>branny bor</aq> ein schützender Fichtenwald hieß.<line type="break"/> 
-			[Seite 7]<line type="break"/>
+			<page index="7"/><line type="break"/>
 			<line tab="1"/>Es ist bekannt, daß unbekannte Wohlthäter zu einem wohlfeilem Abdruk des Cansteinschen Bibelwerks 1200 Rth. 
 			beytrugen, die vielen Staatsausgaben lassen dieses in Rußland nicht hoffen, aber wir haben eine unnütze Gloke,
 			mit einer steinernen Einfassung aus welcher fast ohne alle Kosten eine Schmelzofen zu machen und das in der 

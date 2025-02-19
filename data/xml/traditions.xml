@@ -1481,7 +1481,7 @@
 				Ausdruck von Dankbarkeit ist, die, wie die Sache, die es hervorrief, über das Sprechen 
 				wohl erhaben ist. Kaum etwas kostet mich mehr Mühe, als einen Brief an Sie zu verfassen; 
 				mag Ihnen das Geständnis auch harmlos erscheinen, so ist es doch wohl überlegt, bedenkt 
-				man die Gefahr, in die ich mich begebe, Sie vielleicht zu kränken. </app>
+				man die Gefahr, in die ich mich begebe, Sie vielleicht zu kränken.</app><!-- Soll die Übersetzung ausschnitthaft sein? -->
 		</letterTradition>
 
 		<letterTradition letter="207">
@@ -1945,6 +1945,13 @@
 		<letterTradition letter="261">
 			<app ref="4">
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 33, Nr. 1; Entwurf
+			</app>
+			<app ref="11">
+				<line tab="1"/>Euer Gnaden verbannen mich durch Ihr letztes Schreiben wohl noch für einige Zeit aus Weimar. Dem 
+				habe ich gehorcht. Ich danke aber für den Brief, mit dem Sie mir den Kummer wenigstens  versüßt 
+				haben. Hoffnung sehe ich darin, dass Sie nicht den Plan aufgeben, dessen Verwirklichung den 
+				fühlbarsten Reiz meines Lebens ausmacht. Die Zweifel beiseite, die Herr von Einsiedel mir über 
+				diese Sache erweckt hat; in Anbetracht des verehrungswürdigen
 			</app>
 		</letterTradition>
 
