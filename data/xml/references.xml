@@ -384,7 +384,13 @@
 
 			<locationDef index="55" name="Wohl auf der Reise nach Livland" />
 
-			<locationDef index="56" name="Frankfurt am Main" />
+			<locationDef index="56" name="Frankfurt am Main" ref="http://d-nb.info/gnd/4018118-2" />
+			
+			<locationDef index="57" name="Pernau (Pärnu)" ref="http://d-nb.info/gnd/4045214-1" />
+			
+			<locationDef index="58" name="Koblenz-Ehrenbreitstein" ref="http://d-nb.info/gnd/4098580-5" />
+			
+			<locationDef index="59" name="Gegend um Kassel" />
 
 
 		</locationDefs>

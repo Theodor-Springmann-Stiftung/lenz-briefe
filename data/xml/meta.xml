@@ -562,6 +562,7 @@
 				<person ref="10" />
 			</sent>
 			<received>
+				<location ref="56" /><!-- Wahrscheinlich -->
 				<person ref="12" />
 			</received>
 			<hasOriginal value="false" />
@@ -576,6 +577,7 @@
 				<person ref="23" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -590,6 +592,7 @@
 				<person ref="10" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="false" />
@@ -604,6 +607,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="57" /><!-- Wahrscheinlich -->
 				<person ref="8" />
 			</received>
 			<hasOriginal value="true" />
@@ -618,6 +622,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="56" /><!-- Wahrscheinlich -->
 				<person ref="12" />
 			</received>
 			<hasOriginal value="true" />
@@ -632,6 +637,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="true" />
@@ -646,6 +652,7 @@
 				<person ref="10" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="11" />
 			</received>
 			<hasOriginal value="false" />
@@ -660,6 +667,7 @@
 				<person ref="10" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -674,6 +682,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="true" />
@@ -688,6 +697,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="58" />
 				<person ref="13" />
 			</received>
 			<hasOriginal value="true" />
@@ -702,6 +712,7 @@
 				<person ref="18" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -716,6 +727,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="true" />
@@ -730,6 +742,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="15" />
 				<person ref="14" />
 			</received>
 			<hasOriginal value="true" />
@@ -744,6 +757,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="58" />
 				<person ref="13" />
 			</received>
 			<hasOriginal value="false" />
@@ -758,6 +772,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="false" />
@@ -773,6 +788,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="15" />
 			</received>
 			<hasOriginal value="true" />
@@ -787,6 +803,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="58" />
 				<person ref="13" />
 			</received>
 			<hasOriginal value="true" />
@@ -801,6 +818,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="56" /><!-- Wahrscheinlich -->
 				<person ref="12" />
 			</received>
 			<hasOriginal value="true" />
@@ -816,6 +834,7 @@
 				<person ref="15" />
 			</sent>
 			<received>
+				<location ref="21" />
 				<person ref="16" />
 			</received>
 			<hasOriginal value="true" />
@@ -831,6 +850,7 @@
 				<person ref="10" />
 			</sent>
 			<received>
+				<location ref="11" /><!-- Wahrscheinlich -->
 				<person ref="19" />
 			</received>
 			<hasOriginal value="true" />
@@ -845,6 +865,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="58" />
 				<person ref="13" />
 			</received>
 			<hasOriginal value="false" />
@@ -859,6 +880,7 @@
 				<person ref="10" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -873,6 +895,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="21" />
 				<person ref="17" />
 			</received>
 			<hasOriginal value="true" />
@@ -887,6 +910,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="58" />
 				<person ref="13" />
 			</received>
 			<hasOriginal value="false" />
@@ -901,6 +925,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="true" />
@@ -915,6 +940,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="true" />
@@ -929,6 +955,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="58" />
 				<person ref="13" />
 			</received>
 			<hasOriginal value="false" />
@@ -943,6 +970,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="21" />
 				<person ref="16" />
 			</received>
 			<hasOriginal value="true" />
@@ -957,6 +985,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="true" />
@@ -971,6 +1000,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="true" />
@@ -985,6 +1015,7 @@
 				<person ref="5" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -999,6 +1030,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="58" />
 				<person ref="13" />
 			</received>
 			<hasOriginal value="false" />
@@ -1013,6 +1045,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="21" />
 				<person ref="17" />
 			</received>
 			<hasOriginal value="true" />
@@ -1027,6 +1060,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="true" />
@@ -1041,6 +1075,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="21" />
 				<person ref="17" />
 			</received>
 			<hasOriginal value="true" />
@@ -1055,6 +1090,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="true" />
@@ -1069,6 +1105,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="12" />
 				<person ref="18" />
 			</received>
 			<hasOriginal value="true" />
@@ -1083,6 +1120,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="16" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -1097,6 +1135,7 @@
 				<person ref="10" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1111,6 +1150,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="26" />
 				<person ref="21" />
 			</received>
 			<hasOriginal value="true" />
@@ -1125,6 +1165,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="31" />
 				<person ref="35" />
 			</received>
 			<hasOriginal value="true" />
@@ -1139,6 +1180,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="15" />
 				<person ref="14" />
 			</received>
 			<hasOriginal value="true" />
@@ -1153,6 +1195,7 @@
 				<person ref="22" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1167,6 +1210,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="16" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -1181,6 +1225,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="21" />
 				<person ref="17" />
 			</received>
 			<hasOriginal value="true" />
@@ -1195,6 +1240,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="1" />
 				<person ref="4" />
 			</received>
 			<hasOriginal value="false" />
@@ -1209,6 +1255,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="21" />
 				<person ref="17" />
 			</received>
 			<hasOriginal value="true" />
@@ -1223,6 +1270,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="16" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -1237,6 +1285,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="16" />
 				<person ref="14" />
 			</received>
 			<hasOriginal value="true" />
@@ -1251,6 +1300,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="16" />
 				<person ref="14" />
 			</received>
 			<hasOriginal value="true" />
@@ -1265,6 +1315,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="22" />
 			</received>
 			<hasOriginal value="true" />
@@ -1279,6 +1330,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="16" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -1293,6 +1345,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="16" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -1307,6 +1360,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="21" />
 				<person ref="17" />
 			</received>
 			<hasOriginal value="true" />
@@ -1323,6 +1377,7 @@
 				<person ref="18" />
 			</sent>
 			<received>
+				<location ref="56" /><!-- Oder Karlsruhe -->
 				<person ref="19" />
 			</received>
 			<hasOriginal value="true" />
@@ -1337,6 +1392,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="58" />
 				<person ref="13" />
 			</received>
 			<hasOriginal value="true" />
@@ -1351,6 +1407,7 @@
 				<person ref="14" />
 			</sent>
 			<received>
+				<location ref="93" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1365,6 +1422,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="31" />
 				<person ref="35" />
 			</received>
 			<hasOriginal value="true" />
@@ -1379,6 +1437,7 @@
 				<person ref="22" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1393,6 +1452,7 @@
 				<person ref="20" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1407,6 +1467,7 @@
 				<person ref="18" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1421,6 +1482,7 @@
 				<person ref="10" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1435,6 +1497,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="15" />
 				<person ref="14" />
 			</received>
 			<hasOriginal value="true" />
@@ -1449,6 +1512,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="18" />
 				<person ref="19" />
 			</received>
 			<hasOriginal value="true" />
@@ -1464,6 +1528,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="51" />
 				<person ref="11" />
 			</received>
 			<hasOriginal value="true" />
@@ -1478,6 +1543,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="true" />
@@ -1493,6 +1559,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="16" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -1507,6 +1574,7 @@
 				<person ref="10" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="false" />
@@ -1521,6 +1589,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="8" /><!-- vielleicht -->
 				<person ref="26" />
 			</received>
 			<hasOriginal value="true" />
@@ -1535,6 +1604,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="true" />
@@ -1549,6 +1619,7 @@
 				<person ref="27" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1563,6 +1634,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="16" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -1577,6 +1649,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="16" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -1592,6 +1665,7 @@
 				<person ref="19" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1607,6 +1681,7 @@
 				<person ref="19" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1621,6 +1696,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="16" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -1635,6 +1711,7 @@
 				<person ref="19" />
 			</sent>
 			<received>
+				<location ref="7" /><!-- Hier hat der Empfangsort im Dokument gefehlt -->
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1649,6 +1726,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="16" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -1663,6 +1741,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="58" />
 				<person ref="13" />
 			</received>
 			<hasOriginal value="false" />
@@ -1677,6 +1756,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="19" />
 				<person ref="51" />
 			</received>
 			<hasOriginal value="true" />
@@ -1691,6 +1771,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="19" />
 				<person ref="51" />
 			</received>
 			<hasOriginal value="true" />
@@ -1705,6 +1786,7 @@
 				<person ref="10" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="false" />
@@ -1719,6 +1801,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="true" />
@@ -1733,6 +1816,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="true" />
@@ -1747,6 +1831,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="21" />
 				<person ref="17" />
 			</received>
 			<hasOriginal value="true" />
@@ -1761,6 +1846,7 @@
 				<person ref="22" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1775,6 +1861,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="8" />
 				<person ref="28" />
 			</received>
 			<hasOriginal value="true" />
@@ -1789,6 +1876,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="19" />
 				<person ref="51" />
 			</received>
 			<hasOriginal value="true" />
@@ -1803,6 +1891,7 @@
 				<person ref="20" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1817,6 +1906,7 @@
 				<person ref="29" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -1831,6 +1921,7 @@
 				<person ref="17" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1845,6 +1936,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="21" />
 				<person ref="17" />
 			</received>
 			<hasOriginal value="true" />
@@ -1859,6 +1951,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="11" />
 				<person ref="10" />
 			</received>
 			<hasOriginal value="false" />
@@ -1874,6 +1967,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="19" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -1888,6 +1982,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="19" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -1902,6 +1997,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="59" /><!-- vielleicht -->
 				<person ref="19" />
 			</received>
 			<hasOriginal value="true" />
@@ -1916,6 +2012,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="20" />
 				<person ref="29" />
 			</received>
 			<hasOriginal value="true" />
@@ -1930,6 +2027,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
+				<location ref="19" />
 				<person ref="51" />
 			</received>
 			<hasOriginal value="true" />
@@ -1944,6 +2042,7 @@
 				<person ref="19" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -1958,6 +2057,7 @@
 				<person ref="29" />
 			</sent>
 			<received>
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
