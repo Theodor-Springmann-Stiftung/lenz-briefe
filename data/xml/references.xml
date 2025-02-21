@@ -394,6 +394,8 @@
 			<locationDef index="58" name="Koblenz-Ehrenbreitstein" ref="http://d-nb.info/gnd/4098580-5" />
 			
 			<locationDef index="59" name="Gegend um Kassel" />
+			
+			<locationDef index="60" name="Kolberg" ref="http://d-nb.info/gnd/4073614-3" />
 
 
 		</locationDefs>
