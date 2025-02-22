@@ -396,6 +396,10 @@
 			<locationDef index="59" name="Gegend um Kassel" />
 			
 			<locationDef index="60" name="Kolberg" ref="http://d-nb.info/gnd/4073614-3" />
+			
+			<locationDef index="61" name="Lübeck" ref="http://d-nb.info/gnd/4036483-5" />
+			
+			<locationDef index="62" name="Vasula (Wassula)" />
 
 
 		</locationDefs>
