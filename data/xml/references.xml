@@ -269,7 +269,7 @@
 			<personDef index="86" name="Unbekannter Freund"
 				vorname="NN" nachname="NN" komm="freund" />
 			
-			<personDef index="87" name="Unbekannter Empfänger"
+			<personDef index="87" name="Unbekannt"
 				vorname="NN" nachname="NN" komm="unbekannt"/>
 
 		</personDefs>

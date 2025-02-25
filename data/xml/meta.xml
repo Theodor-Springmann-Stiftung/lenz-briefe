@@ -4094,8 +4094,8 @@
 
 		<letterDesc letter="271">
 			<sent>
-				<!-- Ort fehlt -->
-				<date when="1777-01-31">Januar/Februar 1777</date>
+				<date when="1777-01-31">Berka, Januar/Februar 1777</date>
+				<location ref="14" />
 				<person ref="1" />
 			</sent>
 			<received>
