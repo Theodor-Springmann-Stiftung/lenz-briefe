@@ -1169,12 +1169,11 @@
 			wünschen. Laß mich bald in Dir meinen ersten und fast meinen eintzigen Freund wiederbekommen. 
 			
 			<page index="4"/>
-			<note>Adresse</note>
-			A Monsieur <line type="break"/>
+			<address>A Monsieur <line type="break"/>
 			Monsieur J. M. R. Lenz. <line type="break"/>
 			Kandidat der Theologie, <line type="break"/>
 			presentement a Fort Louis <line type="break"/>
-			P. Cond. 
+			P. Cond.</address> 
 			
 			<note>nicht identifizierte Hand</note> 
 			Capitaine Lieutenant Salomon Bodmer in der Mühle zu Wölflingen im Canton Zürich.<!-- "<hand>" benötigt zwingend eine Referenz. Wie kann dabei in dem Fall vorgegangen werden, wenn keine Hand identifiziert wurde? Eine unbekannte definieren?--></letterText>
@@ -1762,10 +1761,9 @@
 			
 			
 			<page index="4"/>
-			<note>Adresse</note>
-			An Herrn <line type="break"/>
+			<address>An Herrn <line type="break"/>
 			Herrn Diaconus Lavater<line type="break"/>
-			zu Zürich</letterText>
+			zu Zürich</address></letterText>
 		
 		<letterText letter="34"><line tab="1"/>Morgen also, Sonntags den 12. und nicht Montags vereis ich auf Basel – bin ich nicht wenn ihr 
 			kommt, Brüder, bey den 3. Königen, so bin ich bey Hrn. Wilhelm Brenner bey der <aq>St. Clara</aq> in Basel. <aq>Ihr</aq> 
@@ -1779,8 +1777,7 @@
 			
 			Lavater. <line type="empty"/>
 			
-			<note>Adresse</note>
-			An Herrn Röderer, Candidat, bey der neuen Kirche in Straßburg
+			<address>An Herrn Röderer, Candidat, bey der neuen Kirche in Straßburg</address>
 			
 			<note>Nach FSt I, S. 294, hat Lenz auf der Außenseite notiert: „Hofrath Deinet in Frkfurt am Mayn“</note></letterText>
 		
@@ -1956,8 +1953,7 @@
 			
 			Deine Schriften erwart’ ich mit Verlangen. Es ist kein Zürcher so verliebt darein, wie ich. <line type="empty"/> 
 			
-			<note>Adresse</note>
-			Herrn <aq>Lenz</aq> durch Herrn <aq>Candid. Röderer</aq>, neben der Neu Kirch in Straßburg.</letterText>
+			<address>Herrn <aq>Lenz</aq> durch Herrn <aq>Candid. Röderer</aq>, neben der Neu Kirch in Straßburg.</address></letterText>
 		
 		<letterText letter="39"><note>gedrucktes Rundschreiben</note>
 			<line tab="1"/>Ich muß, ich muß es allen meinen nahen und fernen  Freunden und Gönnern sagen, daß ich nicht 
@@ -1991,8 +1987,7 @@
 			
 			<aq>Z. den 2. Sept. 1774.</aq> <line type="empty"/>
 			
-			<note>Adresse</note>
-			An Herrn Lenze im Finkweiler, in <ul>Straßburg.</ul></letterText>
+			<address>An Herrn Lenze im Finkweiler, in <ul>Straßburg.</ul></address></letterText>
 		
 		<letterText letter="40"><align pos="center">Straßb. d. 7 Novbr. 1774.</align> <line type="empty"/>
 			
@@ -2305,8 +2300,8 @@
 			
 			Johann Caspar Lavater.</letterText>
 		
-		<letterText letter="44"><note>Adresse</note>
-			An den Verfasser der <ul>Meynungen eines Layen</ul> schleunigst – abzugeben. <line type="empty"/>
+		<letterText letter="44">
+			<address>An den Verfasser der <ul>Meynungen eines Layen</ul> schleunigst – abzugeben.</address> <line type="empty"/>
 			
 			<sidenote annotation="auf dem roten Lacksiegel">
 			panta dynata tō pisteuonti @<!-- Was bedeutet @? --> </sidenote><line type="empty"/>
@@ -2597,10 +2592,9 @@
 			
 			„Je kleiner der Mund, desto unschuldiger das Herz; je grösser, desto erfahrener. P <line type="empty"/>
 			
-			<page index="4"/>
-			<note>Adresse</note> 
-			An Lavatern. <line type="break"/>
-			in Zürich.</letterText>
+			<page index="4"/> 
+			<address>An Lavatern. <line type="break"/>
+			in Zürich.</address></letterText>
 		
 		<letterText letter="49"><align pos="right">Strasb. den 10ten May 1775.</align> <line type="empty"/>
 			
@@ -3250,13 +3244,12 @@
 			<align pos="right">J M. R. Lenz.</align> <line type="empty"/>
 			
 			<page index="4"/>
-			<note>Adresse</note>
-			Herrn <line type="break"/>
+			<address>Herrn <line type="break"/>
 			Herrn Johann Caspar<line type="break"/>
 			<ul>Lavater,</ul> Pfarrer <line type="break"/>
 			am Waysenhause <line type="break"/>
 			in <line type="break"/>
-			<ul>Zürich.</ul></letterText>
+			<ul>Zürich.</ul></address></letterText>
 		
 		<letterText letter="67">Mein allerliebster Jacob
 			<line tab="1"/>Wie vergeblig habe ich nun so viele Jahre auff Deine zu Hause Kunft gewartet, wie oft habe ich nicht 
@@ -3337,11 +3330,10 @@
 				Vor einem Jahr wenigstens darf sie aus tausend Ursachen nicht gedruckt werden. Mehr als ein Leben verlier ich damit –</sidenote>
 			
 			<page index="2"/>
-			<note>Adresse</note>
-			Herrn<line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn Herder<line type="break"/>
 			Consistorialrath<line type="break"/>
-			in Bückeburg</letterText>
+			in Bückeburg</address></letterText>
 		
 		<letterText letter="70"><line tab="1"/>Hier ein Briefchen von Herder Lavater! Er ist gebeugt #. Gott zögert hinter der Wolke. Wenn wird er 
 			wieder mild umfliessen die Seinen! Daß Du Welt kennetest Lavater – – <line type="empty"/>
@@ -3441,11 +3433,10 @@
 			
 			
 			<page index="4"/>
-			<note>Adresse</note>
-			Herrn <line type="break"/>
+			<address>Herrn <line type="break"/>
 			Herrn J. C. Lavater <line type="break"/>
 			Pfarrer am Waysenhause <line type="break"/>
-			zu Zürich.</letterText>
+			zu Zürich.</address></letterText>
 		
 		<letterText letter="73">Lies es durch beser Schlosser! Dann mach’ damit was du willst, aber nie, nie müsse es bekannt 
 			werden.</letterText>
@@ -3560,13 +3551,12 @@
 			J M R Lenz.<line type="break"/></align>
 			Strasb. den 13ten 8br 1775.<line type="empty"/>
 			
-			<page index="4"/>
-			<note>Adresse</note> <line type="empty"/>
+			<page index="4"/> <line type="empty"/>
 			
-			Herrn<line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn Hofrath<line type="break"/>
 			Pfeffel<line type="break"/>
-			in Colmar.<line type="empty"/>
+			in Colmar.</address><line type="empty"/>
 			
 			<note>Empfangsnotiz Pfeffels</note>
 			M. Lenz<line type="break"/>
@@ -3608,11 +3598,10 @@
 			könnten Sie hier zählen. Geben Sie mir allenfalls Nachricht davon. <line type="empty"/></sidenote>
 			
 			<page index="4"/> 
-			<note>Adresse</note>
-			Herrn<line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn <ul>Gotter</ul><line type="break"/>
 			Archivarius<line type="break"/> 
-			in <ul>Gotha.</ul></letterText>
+			in <ul>Gotha.</ul></address></letterText>
 		
 		<letterText letter="79">Ulm<line type="break"/>
 			Hier aus dem Zimmer des liebenden Millers muß ich Dir lieber was schreiben. <line type="empty"/>
@@ -3675,11 +3664,10 @@
 			sollte.</sidenote> <line type="empty"/>
 			
 			<page index="4"/>
-			<note>Adresse</note>
-			Herrn<line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn <ul>Herder</ul><line type="break"/>
 			Consistorialrath<line type="break"/>
-			in <ul>Bückeburg.</ul></letterText>
+			in <ul>Bückeburg.</ul></address></letterText>
 		
 		<letterText letter="82">Den 18ten November. 75. <line type="empty"/>
 			
@@ -4074,14 +4062,13 @@
 			<aq>A Messieurs Meuille et Perrin<line type="break"/> 
 			Marchands trés renommés<line type="break"/>
 			pour rendre a Mr. Lenz<line type="break"/>
-			a  Kehl</aq>
+			a  Kehl</aq> <line type="empty"/>
 			
-			<page index="4"/>
-			<note>Adresse</note>
+			<page index="4"/> <line type="empty"/>
 			
-			An die Frau<line type="break"/>
+			<address>An die Frau<line type="break"/>
 			Geheimde-Räthin von <ul>La Roche</ul><line type="break"/>
-			in Coblenz.</letterText>
+			in Coblenz.</address></letterText>
 		
 		<letterText letter="93"><align pos="right">G. den 2. Jenner. 76.</align> <line type="empty"/>
 			
@@ -4137,12 +4124,11 @@
 			<align pos="right">Ihr G.</align> <line type="empty"/>
 			
 			<page index="4"/>
-			<note>Adresse</note>
-			An Herrn<line type="break"/>
+			<address>An Herrn<line type="break"/>
 			Herrn <ul>Lenz</ul><line type="break"/> 
 			mit 4. Louis’dor<line type="break"/>
 			in  <ul>Strasbourg.</ul><line type="break"/>
-			abzugeben bey Jngfer <ul>Lutte</ul> in der Knoblochsgaße.</letterText>
+			abzugeben bey Jngfer <ul>Lutte</ul> in der Knoblochsgaße.</address></letterText>
 		
 		<letterText letter="94"><align pos="right">D. 2ten Jenner 76. Strabg</align> <line type="empty"/>
 			
@@ -4281,8 +4267,7 @@
 			
 			Zürich. d. 14. Jan. 76. <line type="empty"/>
 			
-			<note>Adresse</note>
-			An Hrn. <aq>Lenz</aq></letterText>
+			<address>An Hrn. <aq>Lenz</aq></address></letterText>
 		
 		<letterText letter="99"><align pos="right">Den 14ten Jenner</align> <line type="empty"/>
 			
@@ -4346,11 +4331,10 @@
 			dem ich hier bekannter werde. – Es wird Ihnen nicht besser gehn nur daß die Stadt so groß nicht ist.</sidenote> <line type="empty"/>
 			
 			<page index="4"/>
-			<note>Adresse</note>
-			Herrn<line type="break"/> 
+			<address>Herrn<line type="break"/> 
 			Herrn <ul>Gotter</ul><line type="break"/> 
 			Archivarius<line type="break"/> 
-			in Gotha.</letterText>
+			in Gotha.</address></letterText>
 		
 		<letterText letter="100"><line tab="1"/>Daß ich Deinem Peter viel sagen könnte ist wahr. Daß ich von ganzem Herzen gern seinem Genie den 
 			ersten Stoß und die erste Richtung geben, ihn bey seinem Eintritt in das was <ul>man WeIt</ul> nennt 
@@ -4386,13 +4370,12 @@
 			Seinen Egmond habe noch nicht bekommen. <line type="empty"/>
 			
 			<page index="4"/>
-			<note>Adresse</note>
-			<aq>A Monsieur
+			<address><aq>A Monsieur
 			Monsieur Henri Jules<line type="break"/> 
 			de <ul>Lindau,</ul> chez Monsieur<line type="break"/>
 			Logis Inspecteur des églises<line type="break"/> 
 			françoises de la Hesse<line type="break"/>
-			á Cassel.</aq></letterText>
+			á Cassel.</aq></address></letterText>
 		
 		<letterText letter="101"><line tab="1"/>Lieber Bruder! ich bin in grausamer Beklemmung. Es ist die Frage ob ich v lieben darf. Sie ist diesen 
 			Morgen so mächtig in meinem Herzen worden daß sie mir das innere Leben meines Geistes 
@@ -4472,10 +4455,9 @@
 			erzwingt Dirs gewiß. Immerweg und ewig Dein Lenz.</sidenote> <line type="empty"/>
 			
 			<page index="4"/>
-			<note>Adresse</note>
-			Herrn Herrn Joh. Casp. <ul>Lavater</ul><line type="break"/> 
+			<address>Herrn Herrn Joh. Casp. <ul>Lavater</ul><line type="break"/> 
 			Pfarrer am Waysenhause <ul>zu Zürich.</ul><line type="break"/>
-			Durch einen Freund.</letterText>
+			Durch einen Freund.</address></letterText>
 		
 		<letterText letter="103"><line tab="1"/>Hier haben Sie lieber Freund meine Aussöhnung mit Wielanden, die Sie sogleich Herrn Hellwing in 
 			Lemgo zuschicken werden, sie an die Wolken andrucken zu lassen. Sie ist zwar ein wenig 
@@ -4749,11 +4731,10 @@
 			haben, ihn in seinem Sohn zu geniessen.</sidenote> <line type="empty"/>
 			
 			<page index="4"/>
-			<note>Adresse</note>
-			Herrn<line type="break"/> 
+			<address>Herrn<line type="break"/> 
 			Herrn <ul>Boje</ul><line type="break"/> 
 			Gelehrten<line type="break"/>
-			in <ul>Göttingen</ul></letterText>
+			in <ul>Göttingen</ul></address></letterText>
 		
 		<letterText letter="110"><align pos="right">Den 9ten Februar</align> <line type="empty"/>
 			
@@ -4844,11 +4825,10 @@
 			<align pos="right">Lenz.</align> <line type="empty"/>
 			
 			<page index="4"/> 
-			<note>Adresse</note>
-			Herrn<line type="break"/> 
+			<address>Herrn<line type="break"/> 
 			Herrn <ul>Boje</ul><line type="break"/> 
 			Gelehrten in <del>G</del><line type="break"/> 
-			<ul>Göttingen</ul></letterText>
+			<ul>Göttingen</ul></address></letterText>
 		
 		<letterText letter="113"><align pos="right">Cassel den 16ten Feb.</align><line type="break"/> 
 			<line tab="1"/>Es hat so keine grosse Eile mit eurem Marsch; mein lieber <del>diese</del> <insertion pos="top">unsere</insertion> Truppen marschiren nur den 
@@ -5092,10 +5072,9 @@
 			<line type="empty"/>
 			
 			<page index="4"/>
-			<note>Adresse</note>
-			<ul>Herrn Lenz</ul><line type="break"/> 
+			<address><ul>Herrn Lenz</ul><line type="break"/> 
 			abzugeben bey M. Röderer an der neuen Kirch<line type="break"/> 
-			zu <ul>Strasburg</ul></letterText>
+			zu <ul>Strasburg</ul></address></letterText>
 		
 		<letterText letter="123">Straßburg, den 6. März <line type="empty"/>
 			
@@ -5202,10 +5181,9 @@
 			Herzen. Ewig der <line type="empty"/>
 			
 			<align pos="center">Ihrige Boie.</align> <line type="empty"/>
-			<page index="4"/>
-			<note>Adresse</note> 
-			Herrn Herrn <ul>Lenz,</ul> Gelehrten<line type="break"/> 
-			in <ul>Straßburg</ul></letterText>
+			<page index="4"/> 
+			<address>Herrn Herrn <ul>Lenz,</ul> Gelehrten<line type="break"/> 
+			in <ul>Straßburg</ul></address></letterText>
 		
 		<letterText letter="126"><line tab="1"/>Ich danke Ihnen lieber guter Mann für Ihren treugemeynten Brief herzlich. Wir wollen also mit 
 			einander beginnen, u. es soll uns beyde nicht reuen. Laßen Sie sichs nicht leid seyn, daß die<line type="break"/>
@@ -5329,11 +5307,10 @@
 			eine Freude haben. Eine.</sidenote> <line type="empty"/>
 			
 			<page index="4"/>
-			<note>Adresse</note>
-			Herrn<line type="break"/> 
+			<address>Herrn<line type="break"/> 
 			Herrn Herder<line type="break"/> 
 			Oberkonsistoralrath<line type="break"/> 
-			in Bückeburg</letterText>
+			in Bückeburg</address></letterText>
 		
 		<letterText letter="129"><line tab="1"/>Laß Dich umarmen – Es sey vergeßen das Unrecht das man meinem Gottheits Bilde anthat. Du hast 
 			mir das Leben wieder gegeben da Du ihr ihr Gesicht wiedergabst. So wie es sich m: Herzen auf  ewig 
@@ -5402,13 +5379,12 @@
 			geben dürfte. Doch ist alles dies nur noch Entwurf. Von Fremden aber hab ich manche interessante 
 			Aufsätze liegen. Melden Sie mir doch gütigst mehr literarische Neuigkeiten. <line type="empty"/>
 			
-			<page index="4"/>
-			<note>Adresse</note>
-			Herrn<line type="break"/>
+			<page index="4"/><line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn Staabssekretär<line type="break"/> 
 			<ul>Boje</ul><line type="break"/> 
 			in <ul>Hannover</ul><line type="break"/> 
-			abzugeben im <ul>Churhut</ul> bey der Post.</letterText>
+			abzugeben im <ul>Churhut</ul> bey der Post.</address></letterText>
 		
 		<letterText letter="131"><hand ref="20">
 			Empf. den 16ten März. 1776.</hand> <line type="empty"/>
@@ -5525,11 +5501,10 @@
 			<line tab="5"/>Ich <ul>dich</ul> besingen Phillis? – Nein
 			<line tab="5"/>Ich fühle dich zu sehr, um jetzt nicht stumm zu seyn.</sidenote>
 			
-			<page index="4"/>
-			<note>Adresse</note>
-			Herrn<line type="break"/> 
+			<page index="4"/><line type="break"/>
+			<address>Herrn<line type="break"/> 
 			Herrn <dul>Merk</dul><line type="break"/> 
-			in <ul>Darmstadt.</ul></letterText>
+			in <ul>Darmstadt.</ul></address></letterText>
 		
 		<letterText letter="134"><hand ref="51">
 			<align pos="right">Empf. 23. März 1776.</align></hand> <line type="empty"/>
@@ -5558,12 +5533,11 @@
 			<line tab="1"/>könnte es aufs späteste in 14 Tagen da seyn. Verzeyhen Sie das erste und letztemal daß mich die Noth 
 			zwingt in dem <ul>Grad unbescheiden</ul> zu seyn. Wie werd ichs in meinem ganzen Leben gut machen?</sidenote> <line type="empty"/>
 			
-			<page index="2"/>
-			<note>Adresse</note>
-			Herrn<line type="break"/>
+			<page index="2"/><line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn Leibarzt<line type="break"/> 
 			<ul>Zimmermann</ul><line type="break"/> 
-			in <ul>Hannover</ul></letterText>
+			in <ul>Hannover</ul></address></letterText>
 		
 		<letterText letter="134"><line tab="1"/>Ehe Du die Pap<note>h</note>piere lie<note>ß</note>st muß ich Dir sagen daß ich noch lebe und vors erste auch noch init dem 
 			Quartier in der Welt verliebt nehme. <line type="empty"/>
@@ -5680,12 +5654,11 @@
 			Zürich 19 März 1776. <line type="empty"/>
 			
 			<page index="2"/>
-			<note>Adresse</note>
-			Herrn Lenz.<line type="break"/> 
+			<address>Herrn Lenz.<line type="break"/> 
 			abzugeben<line type="break"/>
 			bey Herrn Mag. Röderer.<line type="break"/>
 			an d Neuen Kirche<line type="break"/>
-			in  Straßburg.</letterText>
+			in  Straßburg.</address></letterText>
 		
 		<letterText letter="139"><line tab="1"/>Dein Abraham hat mich unendlich erbaut. Freylich ist alles mehr religiös als poetisch. Das letzte 
 			Gebeth Abrahams vor der Opferung hat mir die größte Sensation gemacht.</letterText>
@@ -5780,10 +5753,9 @@
 			<ul>Kaufmann</ul> wird ein herrlicher Mensch <ul>werden.</ul><line type="break"/>
 			Alles was ich izt schreiben kann. <ul>Lebe</ul> u: <ul>Liebe.</ul> Amen! D 22 Mz 76. L.
 			
-			<page index="2"/>
-			<note>Adresse</note> 
-			<note>Textverlust</note>rn <ul>Lenz</ul> 
-			in <ul>Straßburg.</ul></letterText>
+			<page index="2"/><line type="break"/>
+			<address><note>Textverlust</note>rn <ul>Lenz</ul> 
+			in <ul>Straßburg.</ul></address></letterText>
 		
 		<letterText letter="142"><line tab="1"/>Ew. Hoch Edelgebohren werden gehorsamst ersucht gegenwärtiges Päckgen gedruckter Sachen mit 
 			eilf Dukaten beschwert an Dero Herrn Bruder Hn. Hofrath Schlosser in Emmedingen aufs 
@@ -5862,12 +5834,11 @@
 			<sidenote pos="top" page="3" annotation="am oberen Rand, horizontal gespiegelt">
 			Die Meynungen – sind von mir.</sidenote> <line type="empty"/>
 			
-			<page index="4"/>
-			<note>Adresse</note>
+			<page index="4"/><line type="empty"/>
 			
-			Herrn<line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn Oberkonsistorialrath <dul>Herder</dul><line type="break"/>
-			in Bückeburg. <line type="empty"/>
+			in Bückeburg.</address> <line type="empty"/>
 			
 			durch Einschlag</letterText>
 		
@@ -6181,13 +6152,12 @@
 				
 			Schreiben Sie mir künftig lieber über Braunschweig. <line type="empty"/>
 				
-			<page index="4"/> 
+			<page index="4"/> <line type="empty"/>
 					<!-- Wie viele Leerzeilen können hier ausgezeichnet werden? -->
-			<note>Adresse</note> 
 					
-			Herrn Herrn <ul>Lenz,</ul> Gelehrten<line type="break"/>
+			<address>Herrn Herrn <ul>Lenz,</ul> Gelehrten<line type="break"/>
 			bey Dr. Göthen zu erfragen.<line type="break"/>
-			<ul>Weymar.</ul></letterText>
+			<ul>Weymar.</ul></address></letterText>
 		
 		<letterText letter="157"><line tab="1"/>Wie steht es liebe Freundin? Wollen Sie mir denn kein einig Wort schreiben? Ich hätte Ihnen tagelang 
 			zu erzehlen von alledem was ich gesehen und gehört und was seit der Zeit mit mir vorgegangen. Ich 
@@ -6264,12 +6234,11 @@
 			<line tab="1"/>Melde mir doch Bester! wenns möglich, was Lindaus Peter in Marschlins macht. Und was Herr v. Salis für ein Jahr 
 			zu seiner Erziehung braucht. <line type="empty"/>
 			
-			<note>Adresse</note> 
-			Herrn<line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn <ul>Lavater.</ul><line type="break"/>
 			Pfarrer am Waysenhause<line type="break"/>
 			zu<line type="break"/> 
-			Zürch</letterText>
+			Zürch</address></letterText>
 		
 		<letterText letter="159"><hand ref="20"><line tab="1"/>L! Verzeihe m: Leidenschaft alle thörichten Ausbrüche m: vorigen  Briefe, u: laß es um des Himmels 
 			willen die nicht entgelten die die unschuldige gar zu edle Veranlaßung dazu ist. Laß es doch ich flehe 
@@ -6632,14 +6601,13 @@
 			<line tab="1"/>Sollten Sie ein Exemplar des <aq>barbier de Seville</aq> besitzen so bitt ich Sie doch sehr es mir gütigst 
 			auf 8 Tage zu leyhen. Die Herzoginn Mutter ist sehr verliebt drinn und ich hab ihrs zu übersetzen 
 			versprochen damit wirs hier aufführen können. <line type="empty"/>
+			<line type="empty"/>
 			
-			<note>Adresse</note>
-			
-			Herrn<line type="break"/> 
+			<address>Herrn<line type="break"/> 
 			Herrn <ul>Gotter</ul><line type="break"/>
 			Archivarius<line type="break"/>
 			in<line type="break"/> 
-			<ul>Gotha.</ul></letterText>
+			<ul>Gotha.</ul></address></letterText>
 		
 		<letterText letter="169">Hannov. 25sten Apr. 76.<line type="break"/>
 			<line tab="1"/>Mattei, der Ihnen diesen Brief giebt, ist mein Freund, und wünscht Sie kennen zu lernen. Ich hoffe, es 
@@ -6652,11 +6620,10 @@
 			<line tab="1"/>Grüßen Sie Göthe. Vielleicht sind Sie nicht mehr in Weymar. So überschreib ich diesen Brief auch an Göthe, 
 			damit er wenisten Einen von Ihnen sehe. Mich verlangt nach Nachricht von Ihnen. <line type="empty"/>
 			
-			<page index="2"/>
-			<note>Adresse</note>
+			<page index="2"/> <line type="empty"/>
 			
-			An Lenz oder Göthe<line type="break"/>
-			Weymar.</letterText>
+			<address>An Lenz oder Göthe<line type="break"/>
+			Weymar.</address></letterText>
 		
 		<letterText letter="170"><line tab="1"/>Hier, liebster Lenz, hast Du einige Flicke in den Merkur. Verrathe mich nicht oder entschuldige mich 
 			wenigstens bei Wieland, daß ich an Ihn nicht schreibe, u. wähle vorsichtig aus – Eins oder Keins. Ich 
@@ -6968,11 +6935,10 @@
 			
 			Ich hoffe daß Bodens Bekanntschaft Sie so freuen wird als sie uns Freude gemacht hat <line type="empty"/>
 			
-			<page index="4"/>
-			<note>Adresse</note> 
-			Herrn<line type="break"/> 
+			<page index="4"/><line type="break"/> 
+			<address>Herrn<line type="break"/> 
 			Herrn Archivarius <ul>Gotter</ul><line type="break"/>
-			in Gotha.</letterText>
+			in Gotha.</address></letterText>
 		
 		<letterText letter="184"><line tab="1"/>Liebster Bruder. Was denkst Du über mein Zögern? Es konnte aber alles auch Deinetwegen nicht eher 
 			geschehen, und wann ich den Pack von Zürich abwarten wollte so könnt ich so wenig den <del>diesen</del> 
@@ -7168,10 +7134,9 @@
 			<line tab="5"/>um ihr sagen daß ich sie erwarte <line type="empty"/></hand>
 			
 			<note>Röderers Hand</note><hand ref="11"> <!-- Ist es hier sinnvoll den Wechsel der Hand über <hand> auszuzeichnen? -->
-			<note>Adresse</note><line type="break"/>
-			An Herrn <aq>Lentz</aq><line type="break"/> 
+			<address>An Herrn <aq>Lentz</aq><line type="break"/> 
 			bey Herrn <aq>Doctor Goethe</aq><line type="break"/>
-			zu Weimar.</hand> <line type="empty"/>
+			zu Weimar.</address></hand> <line type="empty"/>
 			
 			<hand ref="1"> 
 			
@@ -7210,7 +7175,7 @@
 			charge mon ami, de vous <line type="break"/>
 			<sidenote pos="bottom left" page="1" annotation="unten links am Rand">M. Lenz à Weimar.</sidenote><line type="break"/>
 			<page index="2"/><line type="break"/>
-			<line tab="1"/>addresser mon ouvrage; il est à vous à plusieurs égards. je vous dois des leçons, 
+			<line tab="1"/>r mon ouvrage; il est à vous à plusieurs égards. je vous dois des leçons, 
 			je vous en ai dû, avant même de vous connaître personnellement; pardonnéz à l’écolier 
 			l’hommage rendû au maître. Si j’étais plus libre et plus heureux, si je n‘etais pas 
 			invinciblement assujétti, j’aurais peutêtre formé le projèt de vous le porter moi-même; 
@@ -7348,13 +7313,12 @@
 			
 			L. <line type="empty"/>
 			
-			<page index="4"/>
-			<note>Adresse</note>
+			<page index="4"/> <line type="empty"/>
 			
-			Herrn<line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn <dul>JC. Lavater</dul><line type="break"/>
 			Pfarrer am Waysenhause<line type="break"/>
-			zu <ul>Zürich</ul></letterText>
+			zu <ul>Zürich</ul></address></letterText>
 		
 		<letterText letter="189"><line tab="1"/>Hier mein treflicher Freund und Gönner die gedruckte Kopey eines Gedichts das der von Seiten seines 
 			Herzens wahrhaftig liebenswürdige Lindau kurz vor seinem Abmarsch nach Amerika (der nun 
@@ -7551,12 +7515,11 @@
 			<line tab="1"/>Dürft ich doch fragen ob Zimmermann oder Merck die Exemplare von den Soldaten bekommen hat. Ich selbst habe keins, 
 			auch niemand schicken können und hier sind sie im Buchladen nicht. Nach Strasb. dürfen sie nicht gehen. <line type="empty"/>
 			
-			<note>Adresse</note>
-			Herrn<line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn <dul>Herder</dul><line type="break"/>
 			Consistorialrath<line type="break"/>
 			in<line type="break"/>
-			<ul>Bückeburg.</ul></letterText>
+			<ul>Bückeburg.</ul></address></letterText>
 		
 		<letterText letter="195"><align pos="center">Den 17. Jun. 1776.</align> <line type="empty"/>
 			
@@ -7581,12 +7544,11 @@
 			
 			<note>Rückseite</note>
 			
-			<note>Adresse</note> 
-			Herrn <ul>Lenz</ul><line type="break"/>
+			<address>Herrn <ul>Lenz</ul><line type="break"/>
 			Gelehrten <line type="empty"/>
 			
 			Bey Herrn D. Göthe.<line type="break"/>
-			Weym<note>Textverlust</note> <line type="empty"/>
+			Weym<note>Textverlust</note></address> <line type="empty"/>
 			
 			<note>Lenz’ Hand, Entwurf zu Brief an Lauth vom 17. Juni 1776</note><hand ref="1">
 			
@@ -7825,10 +7787,10 @@
 			<line tab="1"/>Wenn ein Vorhängeschloß vor meinen Coffre hättest wegen der Papiere wäre mirs sehr lieb. Dies 
 			schließt nicht ich habe den Schlüssel verloren <line type="empty"/>
 			
-			<note>Adresse mittig</note>
-			Herrn<line type="break"/>
+			<note>mittig</note>
+			<address>Herrn<line type="break"/>
 			Geh. Leg. Rath<line type="break"/>
-			Goethe <line type="empty"/>
+			Goethe</address> <line type="empty"/>
 			
 			<note>mit Bleistift, heute stark verwischt, zitiert nach FSt II, S. 5</note>
 			<pe>Vor allen Dingen bitte Wieland die […] sobald er sie missen</pe> <line type="empty"/>
@@ -8292,11 +8254,10 @@
 			R.</align> <line type="empty"/>
 			
 			<page index="2"/><line type="break"/>
-			<note>Adresse</note><line type="break"/>
-			An <line type="break"/>
+			<address>An <line type="break"/>
 			Herrn <ul>Lenz</ul> abzugeben bey<line type="break"/>
 			Herrn Legationsrath <aq>Göthe</aq><line type="break"/>
-			zu Weimar <line type="empty"/>
+			zu Weimar</address> <line type="empty"/>
 			<line type="empty"/>
 			
 			<note>aufgeklebter Ausriss der Vorderseite</note> <line type="empty"/>
@@ -8515,15 +8476,14 @@
 			<line tab="1"/><pe>Auch von dem andern Antrag bitte um Ihrer Freundschaft willen niemanden zu sagen. Die Sachen folgen 
 			so kurz aufeinander.</pe></sidenote> <line type="empty"/>
 			
-			<page index="2"/><line type="break"/>
-			<note>Adresse</note> <line type="empty"/>
+			<page index="2"/> <line type="empty"/>
 			
-			Herrn<line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn <ul>Weidmanns</ul><line type="break"/> 
 			Erben und <ul>Reich,</ul> berühmten<line type="break"/> 
 			Buchhandlung<line type="break"/>
 			in<line type="break"/>
-			Leipzig. <line type="empty"/>
+			Leipzig.</address> <line type="empty"/>
 			
 			<sidenote pos="top" page="2" annotation="am oberen Rand Empfangsnotiz Reichs"><line type="break"/>
 			<hand ref="33">1776. D. 2. Aug. Lenz.</hand></sidenote> <line type="empty"/>
@@ -8650,12 +8610,11 @@
 			geworben wird.</sidenote> <line type="empty"/>
 			
 			<page index="4"/><line type="break"/>
-			<note>Adresse</note><line type="break"/>
-			Herrn<line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn Stabsekretär<line type="break"/>
 			<ul>Boje</ul><line type="break"/> 
 			in <ul>Hannover</ul><line type="break"/>
-			abzugeben im Churhut bey der Post.</letterText>
+			abzugeben im Churhut bey der Post.</address></letterText>
 		
 		<letterText letter="228"><line tab="1"/>Auf Deinen letzten Brief lieber Bruder weiß ich Dir weiter nichts zu antworten. Nur daß ich ihn mit 
 			keinem Pack von <aq>Göthe</aq> wie Du sagtest erhalten habe. Vor oder nach dem Empfang dieses Briefs, den 
@@ -8687,11 +8646,10 @@
 			wohl weiters weiß ich nichts. <line type="empty"/>
 			
 			<page index="2"/><line type="break"/>
-			<note>Adresse</note><line type="break"/>
-			An <line type="break"/>
+			<address>An <line type="break"/>
 			Herrn <ul>Lenz</ul> beim<line type="break"/>
 			Herrn Legations Rath Goethe<line type="break"/> 
-			zu Weymar<line type="break"/></letterText>
+			zu Weymar<line type="break"/></address></letterText>
 		
 		<letterText letter="229"><line tab="1"/>Lieber Schaz, was Du gern hättest kan ich Dir izt nicht schicken. Dafür schick ich Dir den <aq>Etat de france</aq> 
 			in 4. Oktavbänden, woraus Du viel <aq>detail</aq> lernen kannst. Hab Sorge zu den Büchern! Das <aq>Siecle de 
@@ -8863,13 +8821,12 @@
 			Lenz.</align><line type="empty"/>
 			
 			<page index="4"/><line type="break"/>
-			<note>Adresse</note><line type="break"/> 
-			Herrn<line type="break"/> 
+			<address>Herrn<line type="break"/> 
 			Herrn Heinrich<line type="break"/> 
 			Jakob Lenz<line type="break"/>
 			berühmten Handelsmann<line type="break"/>
 			zu<line type="break"/> 
-			Colberg in Pommern</letterText>
+			Colberg in Pommern</address></letterText>
 		
 		<letterText letter="235"><line tab="1"/>Mir ist sehr lieb bester Lenz dass Sie mein Schuldner sind ich finde meine Rechnung dabei. Bleiben Sie 
 			es immer so lange Sie wollen, so bekomm’ ich doch noch bisweilen ein Vertröstungsbriefgen. Ich 
@@ -8894,10 +8851,9 @@
 			Der junge Bernhard von <note>Textverlust</note> hat <aq>banqueroute</aq> gemacht und davon geloffen sagen S ie das Göthe.<line type="break"/>
 			<align pos="right">D. 21. 7br.</align> <line type="empty"/>
 			
-			<note>Adresse</note><line type="break"/> 
-			Herrn<line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn Lenz bei H. Legations Rath Göthe<line type="break"/>
-			In Weimar.</letterText>
+			In Weimar.</address></letterText>
 		
 		<letterText letter="236"><line tab="1"/>Hier Herr Lenz schicke Ihnen etwas Wäsche von Schenck wo ich iezo bin, Ich bin in einem grimmigen 
 			Zorn über die Wäschern die mich so herum zieht.<line type="break"/>
@@ -9084,12 +9040,11 @@
 			<align pos="center">bey Fr. <aq>Profeßor</aq> Hambergerin an der Allee zu Göttingen.</align> <line type="empty"/>
 			<line type="empty"/>
 			
-			<page index="2"/><line type="break"/>
-			<note>Adresse</note><line type="break"/> 
-			An Herrn<line type="break"/> 
+			<page index="2"/><line type="break"/> 
+			<address>An Herrn<line type="break"/> 
 			Herrn <aq>Lenz</aq> abzugeben bey<line type="break"/>
 			Herrn GeheimLegationsrath <aq>Goethe</aq><line type="break"/>
-			zu <note>Textverlust</note></letterText>
+			zu <note>Textverlust</note></address></letterText>
 		
 		<letterText letter="243"><align pos="right">Kochberg, den 23sten Oktober 1776.</align><line type="break"/>
 			<line tab="1"/>Wollten Sie so freundschaftlich seyn, lieber Aktuarius, Röderern, falls er noch in Straßburg ist, zu 
@@ -9171,10 +9126,10 @@
 			Empfiel mich Deiner Frau und Kleinen nebst Schwägerlein. <line type="empty"/>
 			
 			<align pos="right">L.</align><line type="break"/>
-			<note>Adresse</note><line type="break"/> 
+			<address><line type="break"/> 
 			Herrn<line type="break"/> 
 			Herrn Generalsuperintendenten <dul>Herder</dul><line type="break"/>
-			in dessen Behausung.</letterText>
+			in dessen Behausung.</address></letterText>
 		
 		<letterText letter="247">Zwey Stücke Herr bitt ich von Dir <line type="empty"/>
 			
@@ -9189,8 +9144,8 @@
 			<align pos="right">Lenz</align> <line type="empty"/>
 			
 			<page index="2"/><line type="break"/>
-			<note>Adresse, vertikal</note><line type="break"/> 
-			An Herdern!</letterText>
+			<note>vertikal</note><line type="break"/> 
+			<address>An Herdern!</address></letterText>
 		
 		<letterText letter="248"><line tab="1"/>Mein allerbester alter Freund. Tausendmal dank ich dir für deinen Brief, oder will dir vielmehr 
 			danken, dann wie neu geschenket bist Du meiner alten Liebe und da magst du besser ahnden was 
@@ -9230,10 +9185,10 @@
 			Zu Frankfurt hab ich die Ehre gehabt die Frau Rath Goethe <del>aufzuwarten!</del> <insertion pos="bottom">zu bewundern.</insertion> Wagner ist verheyrathet.</sidenote> <line type="empty"/>
 			
 			<page index="2"/><line type="break"/>
-			<note>Adresse</note><line type="break"/>
+			<address><line type="break"/>
 			Herrn<line type="break"/>
 			Herrn <aq>Lenz</aq> abzugeben bey<line type="break"/> 
-			Herrn <aq>Geheimen Legations-Rath Goethe</aq> zu <ul>Weimar</ul></letterText>
+				Herrn <aq>Geheimen Legations-Rath Goethe</aq> zu <ul>Weimar</ul></address></letterText>
 		
 		<letterText letter="249"><pe><aq><line tab="1"/>you will perhaps wonder dearest lady <del>of</del> <insertion pos="top">at</insertion> my depart from W without taking my leave from you and 
 			repeating my thanks with all the warmth an human heart can bestow of, you would have permitted 
@@ -9310,8 +9265,8 @@
 			<sidenote pos="right" page="1" annotation="am rechten Rand, vertikal"> Deine Briefe. Adieu. Den 13. Nov. 76 am Krankenbette meines Weibchens. L.</sidenote> <line type="empty"/>
 			
 			<page index="2"/><line type="break"/>
-			<note>Adresse</note><line type="break"/> 
-			<ul>an Lenzn.</ul></letterText>
+			<address>
+			<ul>an Lenzn.</ul></address></letterText>
 		
 		<letterText letter="252"><aq><line tab="1"/>Oserois je enfin Madame accompagner l’incluse du Sieur Wieland de quelques lignes 
 			seulement pour vous temoigner l’excès de joie et de satisfaction que j’ai du ressentir 
@@ -9383,8 +9338,8 @@
 			
 			Weymar d. 23ten Novbr. 1776.</letterText>
 		
-		<letterText letter="256"><note>Adresse</note><line type="break"/> 
-			<align pos="right">Herrn <ul>Reich</ul></align><line type="empty"/>
+		<letterText letter="256"> 
+			<address><align pos="right">Herrn <ul>Reich</ul></align></address><line type="empty"/>
 			<line type="empty"/>
 			
 			<line tab="1"/>Ich habe mich vergriffen werthester Herr als ich unter andern Geschäften und Zerstreuungen unter 
@@ -9438,10 +9393,9 @@
 			Lenz <line type="empty"/>
 			
 			<page index="4"/><line type="break"/>
-			<note>Adresse</note><line type="break"/>
-			Herrn<line type="break"/>
+			<address>Herrn<line type="break"/>
 			Herrn Hofrath <dul>Pfeffel</dul><line type="break"/>
-			zu <ul>Colmar.</ul> <line type="empty"/>
+			zu <ul>Colmar.</ul></address> <line type="empty"/>
 			
 			<sidenote pos="right" page="4" annotation="Empfangsnotiz Pfeffels am rechten Rand, vertikal"><line type="break"/>
 			<hand ref="21"><aq>De Mr. Lenz.<line type="break"/>
@@ -9643,14 +9597,13 @@
 			ansuchen. Gieb mir nur auch bald Nachricht von dir mein allertheuerster liebster Freund. <line type="empty"/>
 			<line type="empty"/>
 			
-			<page index="2"/><line type="break"/>
-			<note>Adresse</note> <line type="empty"/>
+			<page index="2"/><line type="empty"/>
 			
-			An Herrn<line type="break"/>
+			<address>An Herrn<line type="break"/>
 			<note>Textverlust</note>rn <ul><aq>Lenz</aq></ul> abzugeben bey<line type="break"/> 
 			Herrn <aq>Hofrath Wieland</aq><line type="break"/> 
 			<ul>zu Weimar</ul><line type="break"/> 
-			<aq>mit 1 Ducaten</aq></letterText>
+			<aq>mit 1 Ducaten</aq></address></letterText>
 		
 		<letterText letter="267"><line tab="1"/>Lieber Hafner! wenn Du oder Herr Otto unter Euren Pappieren etwas habt, dessen Bekanntmachung 
 			ihr wünschtet (vorausgesetzt daß es eurem eigenen höchsten Ideal von dem entspricht, was über die 
@@ -9703,13 +9656,12 @@
 			<line tab="1"/>Es steht bei Euch, Eure Namen zu Euren Ausarbeitungen herzugeben, oder vorher zu versuchen welch ein Glück sie 
 			bei Kennern machen. Der Himmel walte über Euch und regiere Euch.</sidenote> <line type="empty"/>
 			
-			<page index="4"/><line type="break"/>
-			<note>Adresse</note><line type="break"/> 
-			Herrn<line type="break"/>
+			<page index="4"/><line type="break"/> 
+			<address>Herrn<line type="break"/>
 			Herrn <ul>Hafner</ul><line type="break"/> 
 			Candidaten der Theologie<line type="break"/>
 			zu Strasburg<line type="break"/>
-			gegenüber der neuen Kirche</letterText>
+			gegenüber der neuen Kirche</address></letterText>
 		
 		<letterText letter="268">Strasburg d. 20. Dezbr. 1776.<line type="break"/>
 			<line tab="1"/>Ihr Brief kam zuspäth lieber guter Lenz um weder Röderer noch Hrn. v. Kleist anzutreffen, der erste ist 
@@ -9992,13 +9944,12 @@
 			<line tab="5"/>Und soll mir doch kein Schicksal nehmen. <line type="empty"/>
 			
 			<page index="4"/> <line type="empty"/>
+			<line type="empty"/>
 			
-			<note>Adresse</note> <line type="empty"/>
-			
-			Herrn<line type="break"/> 
+			<address>Herrn<line type="break"/> 
 			Herrn Staabssekretär<line type="break"/>  
 			<ul>Boje</ul><line type="break"/>  
-			zu Hannover <line type="empty"/>
+			zu Hannover</address> <line type="empty"/>
 			
 			baldmöglichst.</letterText>
 		
@@ -10051,15 +10002,14 @@
 			Basel, 9. April <ul>1777.</ul> <line type="empty"/>
 			
 			<page index="4"/> <line type="empty"/>
+			<line type="empty"/>
 			
-			<note>Adresse</note> <line type="empty"/>
-			
-			Monsieur<line type="break"/>
+			<address>Monsieur<line type="break"/>
 			Monsieur Lenz<line type="break"/>
 			Pascus chez Monsieur Schloßer.<line type="break"/>
 			Conseiller de S. a S. Monseigh. le<line type="break"/>
 			Margrave de Bade Durlac.<line type="break"/>
-			<ul>Emmedingen</ul></letterText>
+			<ul>Emmedingen</ul></address></letterText>
 		
 		<letterText letter="276"><line tab="1"/><del>Lieber Neukirch wenn Sie den Alessandro mit sich in Freyburg haben, so schicken Sie mir ihn doch 
 			gleich zu. Das übrige werden wir mündlich sprechen. <line type="empty"/>
@@ -10231,12 +10181,11 @@
 			<align pos="right">Lenz</align> <line type="empty"/>
 			
 			<page index="4"/><line type="break"/>
-			<note>Adresse</note><line type="break"/> 
-			Herrn<line type="break"/> 
+			<address>Herrn<line type="break"/> 
 			Herrn Stabssekretär<line type="break"/>
 			<ul>Boje</ul><line type="break"/> 
 			abzugeben im Churhut bey der Post.<line type="break"/>
-			in <ul>Hannover.</ul></letterText>
+			in <ul>Hannover.</ul></address></letterText>
 		
 		<letterText letter="282"><line tab="1"/>Hier theureste Freundinn die ersten zwey Scenen des ersten Akts. Ich sollte mich zu Tode schämen daß 
 			ich auf Ihren küssenswerthen Brief so eilfertig antworten muß und noch nicht mehr von unserm Stück 
@@ -10595,11 +10544,10 @@
 			Lenz.</align> <line type="empty"/>
 			<line type="empty"/>
 			
-			<note>Adresse</note><line type="break"/>
-			Herrn<line type="break"/> 
+			<address>Herrn<line type="break"/> 
 			Herrn <ul>Füesli</ul><line type="break"/>
 			Professor der Geschichte<line type="break"/>
-			zu Zürich.</letterText>
+			zu Zürich.</address></letterText>
 		
 		<letterText letter="291"><align pos="right">Neuenburg d. 10ten Julius 177<del>6</del><note>7</note>.</align> <line type="empty"/>
 			<line type="empty"/>
@@ -10690,11 +10638,10 @@
 			<line tab="1"/>Sie können sich vorstellen wie viel Ursach wir haben unsere Reise zu beschleunigen. Wenn sonst noch ein Freund von Ihnen uns 
 			Bestellungen an gute Leute mitgeben wollte, würd er uns sehr verbinden. aber bald! –<line type="break"/>
 			<page index="4"/><line type="break"/>
-			<note>Adresse</note><line type="break"/> 
-			Herrn<line type="break"/> 
+			<address>Herrn<line type="break"/> 
 			Herrn Gerichtsherr<line type="break"/> 
 			<ul>Sarasi</ul><line type="break"/>
-			zu <ul>Basel.</ul> <line type="empty"/>
+			zu <ul>Basel.</ul></address> <line type="empty"/>
 			
 			durch Einschlag mit Bitte gütigstbaldiger Beförderung</letterText>
 		
@@ -11488,12 +11435,11 @@
 			
 			Castion den 11 9bris 1777<line type="break"/>
 			<page index="4"/><line type="break"/>
-			<note>Adresse</note><line type="break"/> 
-			An Herrn<line type="break"/> 
+			<address>An Herrn<line type="break"/> 
 			Herrn Lenz<line type="break"/> 
 			bey Herrn Lavater<line type="break"/>
 			in<line type="break"/>
-			<ul>Zürich.</ul></letterText>
+			<ul>Zürich.</ul></address></letterText>
 		
 		<letterText letter="306"><align pos="right">Schloß Hegi d. 17ten 9br. 1777.</align> <line type="empty"/>
 			<line type="empty"/>
@@ -11743,10 +11689,9 @@
 			<line tab="1"/>Ich trage Ihren Brief immer bey mir und überlese ihn offt er hat mir eine grosse Freude gemacht und daß Sie sich auch 
 			meines Conrads so annehmen.<line type="break"/>
 			<page index="4"/><line type="break"/>
-			<note>Adresse</note><line type="break"/> 
-			An Herrn<line type="break"/>
+			<address>An Herrn<line type="break"/>
 			Herrn <ul>Jakob</ul> <dul>Sarasi.</dul><line type="break"/>
-			Gerichtsherrn in Basel.</letterText>
+			Gerichtsherrn in Basel.</address></letterText>
 		
 		<letterText letter="315"><line tab="1"/>Ich kann in der Eile Ihnen theurester Herr und Gönner nichts schreiben als hunderttausendfältigen 
 			Dank für die Freundschaft und Güte, die Sie für mich und meinen lieben Conrad haben, an dem ich 
@@ -12109,10 +12054,9 @@
 			J M R Lenz</align> <line type="empty"/>
 			
 			<page index="3"/><line type="break"/>
-			<note>Adresse</note><line type="break"/>
-			Herrn Herrn Oberpastor <ul>Lenz</ul><line type="break"/>
+			<address>Herrn Herrn Oberpastor <ul>Lenz</ul><line type="break"/>
 			Assessor des Consistoriums und Inspekter der Schulen<line type="break"/>
-			zu <ul>Dörpat.</ul></letterText>
+			zu <ul>Dörpat.</ul></address></letterText>
 		
 		<letterText letter="325"><align pos="right">St Petersburg. D. 11 Febr 80</align> <line type="empty"/>
 			<line type="empty"/>
@@ -12161,11 +12105,10 @@
 			<line type="empty"/>
 			
 			<page index="4"/><line type="break"/>
-			<note>Adresse</note><line type="break"/> 
-			<aq>A Monsieur<line type="break"/>
+			<address><aq>A Monsieur<line type="break"/>
 			Monsieur Peuker<line type="break"/>
 			Translateur du College des Affaires Etrangers – Maitre des Postes.<line type="break"/>
-			<ul>Dorpat</ul></aq></letterText>
+			<ul>Dorpat</ul></aq></address></letterText>
 		
 		<letterText letter="326"><align pos="right">St. Petersb. d. 27sten Merz</align><line type="empty"/>
 			
@@ -12420,12 +12363,11 @@
 			
 			<sidenote pos="left" page="1" annotation="Am linken Rand, vertikal">Hunderttausend Grüsse und Küsse Deinem lieben <aq>Nekasaika</aq> und sämtlichen Angehörigen.</sidenote> <line type="empty"/>
 			
-			<page index="2"/><line type="break"/>
-			<note>Adresse</note><line type="break"/> 
-			Herrn<line type="break"/>
+			<page index="2"/><line type="break"/> 
+			<address>Herrn<line type="break"/>
 			Herrn F. D. Lenz<line type="break"/>
 			Oberpastor und Assessor des Consistoriums<line type="break"/>
-			zu <ul>Dörpat.</ul></letterText>
+			zu <ul>Dörpat.</ul></address></letterText>
 		
 		<letterText letter="330"><align pos="center">S. T.<line type="break"/>
 			Schätzbarster Freund!</align> <line type="empty"/>
@@ -12672,11 +12614,10 @@
 			Oekonomischen Gesellschaft, bey der Herr Prof. Güldenstedt präsidirt. Wenn er nicht etwa bis zur neuen Errichtung 
 			der Statthalterschaften warten will<line type="break"/>
 			<page index="2"/><line type="break"/>
-			<note>Adresse</note><line type="break"/> 
-			<aq>Monsieur<line type="break"/>
+			<address><aq>Monsieur<line type="break"/>
 			Monsieur <ul>F. D. Lenz.</ul><line type="break"/>
 			Premier pasteur et Assesseur au Consistoire de &amp;<line type="break"/>
-			á <ul>Doerpat</ul></aq></letterText>
+			á <ul>Doerpat</ul></aq></address></letterText>
 		
 		<letterText letter="335"><align pos="center">Hochwolgeborne Freyfrau<line type="break"/>
 			Gnädige Frau!</align> <line type="empty"/>
@@ -13404,11 +13345,10 @@
 			<line type="empty"/>
 			
 			<page index="4"/><line type="break"/>
-			<note>Adresse</note><line type="break"/>
-			Sr. HochEdelgebornen<line type="break"/>
+			<address>Sr. HochEdelgebornen<line type="break"/>
 			dem Herrn Herrn K. F. Gadebusch<line type="break"/>
 			Hochachtbaren Justiz-Bürgermeister der Kaiserlichen Stadt Derpt<line type="break"/>
-			in Dero Behausung.</letterText>
+			in Dero Behausung.</address></letterText>
 		
 		<letterText letter="348">Wohlgeborner Herr<line type="empty"/>
 			
