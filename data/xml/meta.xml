@@ -1711,7 +1711,7 @@
 				<person ref="19" />
 			</sent>
 			<received>
-				<location ref="7" /><!-- Hier hat der Empfangsort im Dokument gefehlt -->
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -2463,7 +2463,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
-				<location ref="19" /><!-- Empfangsort fehlt in der Transkription -->
+				<location ref="19" />
 				<person ref="20" />
 			</received>
 			<hasOriginal value="true" />
@@ -3795,7 +3795,7 @@
 				<person ref="10" />
 			</sent>
 			<received>
-				<location ref="30" /><!-- Empfangsort fehlt in der Transkription -->
+				<location ref="8" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />

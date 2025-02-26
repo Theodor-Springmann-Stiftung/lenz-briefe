@@ -7910,10 +7910,10 @@
 			<page index="2"/>
 			
 			<sidenote page="2" annotation="vertikal mit dunklerer Tinte">
-			Die Gleichen 2 mal abmalen eines für W.<line type="break"/>
+			<ink ref="2">Die Gleichen 2 mal abmalen eines für W.<line type="break"/>
 			<ul>Sonntag.</ul><line type="break"/>
 			Wielandias Jacobi schicken<line type="break"/>
-			Montag zum Amtsschreiber</sidenote> <line type="empty"/>
+			Montag zum Amtsschreiber</ink></sidenote> <line type="empty"/>
 			
 			
 			<line tab="1"/>Welche Geduld das ganze Ding abzuschreiben und wie lebhaft muß es auf ihre Imagination gewirkt 
@@ -11533,7 +11533,7 @@
 			<align pos="right">Lenz</align> <line type="empty"/>
 			
 			<note>Mit anderer Tinte hinzugefügt</note><line type="break"/>
-			wenn Sie etwa kein Plagiat – – –</letterText>
+			<ink ref="2">wenn Sie etwa kein Plagiat – – –</ink></letterText>
 		
 		<letterText letter="310"><align pos="right">777. 31. Xbr. in Basel</align><line type="break"/> 
 			<line tab="1"/>Nun da der ganze stürmische Xbr. zu Ende ist u. ich ein ganzes Jahr Geschäffte ab mir geladen habe, 
@@ -13782,7 +13782,7 @@
 			setzen. – Gott schenke Ihnen und mir weniger schmarrende Lobeserheber und seltnere standhafte und aufrichtige 
 			Freunde! – d. 6te Jun. 87.<line type="break"/>
 			<note>andere Tinte</note><line type="break"/><!-- Tinte -->
-			Mosco.</letterText>
+			<ink ref="2">Mosco.</ink></letterText>
 		
 		<letterText letter="357"><align pos="right">In grosser Zerstreuung<line type="break"/>
 			d Septbr. 1787.</align> <line type="empty"/>
@@ -14201,26 +14201,26 @@
 			
 			<line tab="1"/>Ich that dar daß die Bezeichnungen des Teufels oder bösen <aq>principii</aq> in den mehresten Sprachen vom Zaubern oder der Alt 
 			emblematischen Phrygischen Sprache abgeleitet worden, als <aq>tscharowat</aq> (<gr>лапобамб</gr>) im altceltischen und Neu oder Hoch- 
-			(das ist <aq>Goth</aq> Slavisch <gr>роеб</gr> <ul>Teutschen</ul>) wovon auch Hofteutsch kommt, zaubern, zaabern, im Russischen <aq><ru>tshrt, tshart, 
-			<ul>epmb</ul></ru></aq> Teuffel, vom Griechischen <aq><gr>διαβαλλω</gr>,</aq> ich zaubere, verleumde unterjoche, wovon <aq>diabolus</aq> ein Wiedersacher, Verläumder, 
-			Feind und das Hofteutsche <aq>Tiefel, Teuffel, Satan,</aq> griechisch <aq><gr>σαταν</gr></aq>, in den wilden Sprachen <aq>wailmaHb, Schaitan</aq> vom 
+			(das ist <aq>Goth</aq> Slavisch <gr>роеб</gr> <ul>Teutschen</ul>) wovon auch Hofteutsch kommt, zaubern, zaabern, im Russischen <aq><ru>тюгт, tshart, 
+			<ul>чермъ</ul></ru></aq> Teuffel, vom Griechischen <aq><gr>διαβαλλω</gr>,</aq> ich zaubere, verleumde unterjoche, wovon <aq>diabolus</aq> ein Wiedersacher, Verläumder, 
+			Feind und das Hofteutsche <aq>Tiefel, Teuffel, Satan,</aq> griechisch <aq><gr>σαταν</gr></aq>, in den wilden Sprachen <aq><ru>шайманъ</ru>, Schaitan</aq> vom 
 			Griechischen <aq><gr>εαζω</gr></aq> ich unterjoche, mache zum Sklaven, bezaubre Sogar das Lettische oder Litthauische (denn es waren 
 			Phrygier die sich am Meerufer niederließen, das <aq>littus</aq> heißt) <aq>Kurrad</aq> vom Griechischen <aq><gr>κορουιαw</gr>,</aq> ich bestreite, 
-			unterwerfe bezwinge im Russischen <aq><ru>noKopHmb</ru> pocorat</aq> unterjochen, wovon <aq>pocornoi</aq> <page index="7"/> unterworfen, herkommt und 
-			<aq><ru>Κοποne</ru></aq> eine Erhebung der Spitze, daher auch die alten Slawen nichts von Kronen wissen wollten und lieber <aq><ru>61telfb</ru> Wenez</aq> 
-			Kranz brauchten, wie aus dem alten Namen von Kronstadt erhellet, das <aq><ru>6~Helfb 3e.MJIU</ru> <ul>wenez semli,</ul></aq> der Kranz, das 
+			unterwerfe bezwinge im Russischen <aq><ru>иокорямъ</ru> pocorat</aq> unterjochen, wovon <aq>pocornoi</aq> <page index="7"/> unterworfen, herkommt und 
+			<aq><ru>короцп</ru></aq> eine Erhebung der Spitze, daher auch die alten Slawen nichts von Kronen wissen wollten und lieber <aq><ru>бБнечъ</ru> Wenez</aq> 
+			Kranz brauchten, wie aus dem alten Namen von Kronstadt erhellet, das <aq><ru>бБнечъ землц</ru> <ul>wenez semli,</ul></aq> der Kranz, das 
 			Äusserste des Russischen Reichs hieß. Von diesem <aq>pocorat,</aq> kam <aq>kurit</aq> räuchern, weil wahrscheinlich die Christen die 
 			heydnischen Zaubereyen abzuwenden, <ul>räucherten,</ul> auch mögen die Heyden geräuchert haben, denn Curland und <aq>Semigallien</aq> 
 			oder das Land der Gallen, der Phrygischen Priester war eins und es ist aus dem <aq>Livius</aq> bekannt, wie fürchterlich der 
 			Einfall dieser alten <ul>Gallen</ul> in Italien und Rom war. Sie überschwemmten alle Länder und Küsten wie wir aus den Namen 
 			<aq>portus gallorzm Galiccien,</aq> den vielen <aq>Wallis, Cornugallia, Semigallia</aq> u. s. f. sehen: <aq>vuehen</aq> heißt fürchten, Englisch 
 			<aq>fear</aq>, Furcht, in der mehr <aq>articulirten</aq> Lateinischen Aussprache der Bachuspriester oder <aq>Sabiner</aq> und <aq>Sobier, Sabaer, 
-			<ul>pavor,</ul></aq> wovon das Russische <aq><ru>6omnea</ru> expaver fere</aq> und von diesem der Name <aq><ul><ru>6ozb</ru></ul></aq> Gott kommt der sich vor diesen Phrygischen 
+				<ul>pavor,</ul></aq> wovon das Russische <aq><ru>боямся ехpацеr юе<!-- Diakritisches Zeichen über dem e -->rе</ru></aq> und von diesem der Name <aq><ul><ru>бо<!-- Zeichen ist nicht im kyrillischen Alphabet enthalten -->ъ</ru></ul></aq> Gott kommt der sich vor diesen Phrygischen 
 			Zaubereyen fürchtete. Das deutsche oder guthisehe Gott aber kommt von <ul>Hüten,</ul> im Esthnischen (denn die <aq>Aesthii</aq> nach 
 			dem <aq>Tacitus</aq> kamen auch aus der Gegend des schwarzen Meers) <ul><aq>hoja,</aq> behueten,</ul> <ul>Huet</ul> in der Schweitzer mundart, in der 
 			Holländischen oder Niederteutschen <aq>good,</aq> denn <aq>goold</aq> Gold heißt auch Gut und im Hofteutschen <ul>Gott</ul> der vor den 
 			Zaubereyen behütete, beschirmte, wovon auch das altdeutsche <ul>Hort,</ul> welches der Slawe, der alles mit der Kehle 
-			ausdrükt nachbethete <aq><ul>choronit,</ul> chranit, <ul><ru>xpaHUIIlb</ru></ul></aq> oder auch <aq><ul><ru>o6opmtumb</ru></ul> oboronit,</aq> wovon <aq>oborona,</aq> welches auch einen 
+			ausdrükt nachbethete <aq><ul>choronit,</ul> chranit, <ul><ru>хpанцмъ</ru></ul></aq> oder auch <aq><ul><ru>обоpнцмъ</ru></ul> oboronit,</aq> wovon <aq>oborona,</aq> welches auch einen 
 			schattenden Fichtenbaum anzeigt, daher <aq>branny bor</aq> ein schützender Fichtenwald hieß.<line type="break"/> 
 			<page index="7"/><line type="break"/>
 			<line tab="1"/>Es ist bekannt, daß unbekannte Wohlthäter zu einem wohlfeilem Abdruk des Cansteinschen Bibelwerks 1200 Rth. 
