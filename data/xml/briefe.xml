@@ -14607,7 +14607,7 @@
 			
 			an das Damen Bureau für 2 Bräute im – –  – Garten denen die übrigen schon nachfolgen werden</letterText>
 		
-		<letterText letter="366"><note>linke Spalte</note><line type="break"/><!-- Tabelle? -->
+		<letterText letter="366"><note>linke Spalte</note><line type="break"/><!-- Tabelle -->
 			kin burn ein Kind brannte !!!!!! aber wie und wofür? <line type="empty"/>
 			
 			<note>rechte Spalte</note><line type="break"/>
@@ -14619,7 +14619,7 @@
 			<line tab="1"/>Ueberbringer dieses möchte gern Ihre Kirche besehen, auch wohl wenn Herrn Bergwitz ihn seiner 
 			Schwester empfelen will mit jungen Herrn in Dienste treten, ist aber seines Gewerks ein Schneider, 
 			wenn er schon auch frisirt und vielleicht auf Kundschaft spekuliert. Wenn Sie ihm erlauben wollen mit 
-			Ihrem <aq><ru>uaiJJucpamellb</ru></aq> oder Aufseher der Knaben die Kirche (die aber keinen Lehrstul hat) zu besehen würde 
+			Ihrem <aq><ru>нaб<!-- Im Dokument ist dieses Zeichen spiegelverkehrt -->зцсpaмeль</ru></aq> oder Aufseher der Knaben die Kirche (die aber keinen Lehrstul hat) zu besehen würde 
 			dieses als einen Beweis Ihrer noch nicht erloschenen Freundschaft für mich ansehen. <line type="empty"/>
 			
 			<line tab="1"/>Man verwirrt in Moskau immer den Grafen Münnich der den Ladogaschen Canal anlegte und dessen Sohn im 
@@ -14631,7 +14631,7 @@
 			zwischen dem Dnepr und der Düna würde durch junge Herrn und Fräulein oder ihre Schulmeister (wie man sie sich vorstellt) 
 			allein in Gang gebracht werden, welches eine Verblendung ist. <line type="empty"/>
 			
-			<line tab="1"/><sidenote pos="left" page="1" annotation="am linken Rand, vertikal">Die Deutschen verwechseln immer das Wort <aq><ru>RCJ/11</ru></aq> welches eine Krippe mit <aq><ru>cKpunKa</ru></aq> eine Geige – und thun sich selbst 
+			<line tab="1"/><sidenote pos="left" page="1" annotation="am linken Rand, vertikal">Die Deutschen verwechseln immer das Wort <aq><ru>яслц</ru></aq> welches eine Krippe mit <aq><ru>cкpцикa</ru></aq> eine Geige – und thun sich selbst 
 			damit den grössesten Schaden</sidenote> <line type="empty"/>
 			
 			<line tab="1"/><sidenote pos="bottom" page="1" annotation="am unteren Rand">Herr P. Bause möchte Vorlesungen über allgemeine Erziehung und deren <ul>Zweke</ul> eröfnen, wozu ihm Frau E– immer einen Saal 
@@ -14690,11 +14690,11 @@
 			Bey den Bezkischen Anstalten<line type="break"/>
 			zur Erziehung des Mittelstandes zu  treuen Händen</adress> <line type="empty"/>
 			
-			<ru>fOCllOW1HY MOeMy ilypHepb Bb ,D,OMt llOKOHHaro IIITaTCKaro COBi>THHKa<line type="break"/>
-			.lJ:eMi.nona ,D,JUI yqpe)!()J,eHiH KoMMep4eCbKaro cocTOHHi'H npn niaBHOMb<line type="break"/>
-			ua,D,3HpaTene 17 Cb 18 .noMa</ru> <line type="empty"/>
+			<line tab="1"/><ru>ГOCПOДИНУ<!-- Groß geschrieben? --> мoeму Пуpнepъ въ дoмБ пoкoйнaгo штaтcкaгo coвътникa<line type="break"/>
+			Дeмi<!-- i im Dokument -->дoвa для учpeждeнiг Кoммepчecькaгo coктoянi<!-- Doppelter Punkt -->я пpи глaвнoмъ<line type="break"/>
+			нaдзиpaгeлe<insertion pos="top">17</insertion> <!-- Hochgestellte 17 -->cъ<insertion pos="top">18</insertion><!-- Hochgestellte 18 --> дoмa</ru> <line type="empty"/>
 			
-			<sidenote pos="left" page="4" annotation="am linken Rand, vertikal"><ru>Kapny IfnaHOBH'Ib r Eypuepb</ru></sidenote></letterText>
+			<sidenote pos="left" page="4" annotation="am linken Rand, vertikal"><ru>Кapлу Ивaнoвичь г Буpнepъ</ru></sidenote></letterText>
 		
 		<letterText letter="367"><align pos="center">P.p. Werthgeschätzter lieber Kranker</align> <line type="empty"/>
 			
@@ -14706,8 +14706,8 @@
 			Diener JMRLenz</align> <line type="empty"/>
 			
 			<adress>
-			<aq><ru>Bb ,D,Bopt HHKI!Ta nannona I focnO,D,IIHY 8npura6epb I y<line type="break"/>
-			focno.nHna En6epa I .na peMaHb</ru></aq></adress> <line type="empty"/>
+			<aq><ru>въ двopБ Никитa Пaвлoвa / Гocпoдину θиpнгaбepъ / у<line type="break"/>
+			Гocпoдинa Бибepa / дa peмaнъ</ru></aq></adress> <line type="empty"/>
 			
 			<note>Seite 2 und 3, Sprachenklaviatur ABBILDUNG</note> <line type="empty"/>
 			
@@ -14993,7 +14993,7 @@
 			Seide und Leinwand Weber u. Stricker in Gold Posumentirer Dratzieher in Holz verschiedner Gattung Tischer 
 			Kanzelbauer Orgelbauer in Eisen Pferdärzte Schmiede für Küchengeräth und Schlosser. Die sich hier versammlen 
 			und Sonntags eine russische Predigt des Schwarzischen Seminarii hören. Zur Aufname neuer Städter. 
-			<ru>o;w <aq>cmpoeHZIRJIOBblXb zopodoeo</aq></ru></sidenote> <line type="empty"/>
+			<ru>δ<!-- sieht im Dokument wie ein griechisches Delta aus -->лa <aq>cмpoeния нoвыхъ <ul>г<!-- Im Dokument anders -->opoδoвъ</ul></aq></ru></sidenote> <line type="empty"/>
 			<line type="empty"/>
 			
 			<line tab="1"/>Nun fand ich daß das Lehngut dieser Dame nach der gnädigen Verordnung der Käiserin für Staatsoffizierenwittwen 
@@ -15157,10 +15157,10 @@
 			Jacob Michael Reinhold Lenz.</align> <line type="empty"/>
 			<line type="empty"/>
 			
-			<line tab="1"/>[am linken Rand, vertikal]Der Buchhandel würde auch bey Pieskau gewinnen, so wie die Bankgeschäfte, da diese Stadt mit allen Städten an der 
+			<line tab="1"/><sidenote pos="left" page="1" annotation="am linken Rand, vertikal">Der Buchhandel würde auch bey Pieskau gewinnen, so wie die Bankgeschäfte, da diese Stadt mit allen Städten an der 
 			Düna durch die Polota, Ewst u. s. f. und durch den Urnensee mit dem Kanal und der Schifflände Gschat zusammenhängt, 
 			wo ein starker Handel von Moskau auch nach Liefland ist. Amnestie aller meiner alten Thorheiten in Liefland und ein 
-			neues Jahr. <line type="empty"/>
+			neues Jahr.</sidenote> <line type="empty"/>
 			
 			<page index="2"/> <line type="empty"/>
 			
@@ -15243,7 +15243,7 @@
 			letzten Briefes zu urtheilen, überhaupt es rathsam wäre, Feuer zu Pulver zu thun, so wenig scheint 
 			er mich – und ich ihn zu verstehen. Vielleicht wenn Personen aus den Gegenden wo ich gelebt und
 			bekannt und unbekannt war, durch Ehre und Schande, gute und böse Gerüchte gieng, öffterer mit 
-			ihm zusammen kämen, würde er, so wie vielleicht alle seine Freunde und Bekannten mich zu <ul>miß</ul>kennen 
+			ihm zusammen kämen, würde er, so wie vielleicht alle seine Freunde und Bekannten mich zu <dul>miß</dul><!-- Im Dokument doppelt unterstrichen? -->kennen 
 			aufhören. Was man schrieb und drukte war nicht immer das was an der Sache selbst war. Ich habe 
 			ihn nie zu lieben und zu schätzen aufgehört – allein es dünkte mich, Haussorgen machten ihn ein 
 			wenig zu mißmuthig und heftig in allen seinen Briefen und andern Äusserungen gegen mich und 
@@ -15268,7 +15268,7 @@
 			besuchen ob du offt bey ihnen bist, ob unsere Schwester Elisabeth nicht wieder an eine Heurath denkt und das 
 			dasige <aq>Liceum</aq> noch keinen neuen Regenten erhalten? <line type="empty"/>
 			
-			<line tab="1"/>Ich bitte knieend alle lieben Geschwister, <ul><ru>xpncTa pa.un</ru>,</ul> mich mit allem was Schulen und <ul>Erziehung</ul> betrift zu 
+			<line tab="1"/>Ich bitte knieend alle lieben Geschwister, <ul><ru>хpиcтa paди</ru>, mich</ul> mit allem was Schulen und <ul>Erziehung</ul> betrift zu 
 			verschonen.*<!-- Verweiszeichen --> <line type="empty"/>
 			
 			<line tab="1"/><sidenote pos="left" page="3" annotation="am linken Rand, vertikal">*<!-- Verweiszeichen -->Ist dir niemals eine Familie Grefnitz aus Oesel bekannt geworden. Es war hier ein Obristl. von diesem Namen, 
