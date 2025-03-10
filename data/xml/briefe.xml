@@ -5590,7 +5590,7 @@
 			mißvergnügt zu seyn, machte Sie doch mit zum Dichter, der sich Drang fühlte, Menschen zu bilden, u. 
 			mit Geistern, mit Unbekannten zu reden, weil alles um Ihn her tod war. <line type="empty"/>
 			
-			<line tab="1"/>7Jezo hab ich keine Zeit was abzuschreiben, kaum noch so viel Ihnen <isnertion pos="top">zu sagen daß ich Sie</isnertion> mit der 
+			<line tab="1"/>7Jezo hab ich keine Zeit was abzuschreiben, kaum noch so viel Ihnen <insertion pos="top">zu sagen daß ich Sie</insertion> mit der 
 			wärmsten Umarmung erwarte. Mein Haus ist der nächste Nachbar am PostHaus, also sehn Sie’s ganz 
 			als das Ihrige, u. Gott gebe, auf etwas mehr, als kurze Zeit an. <line type="empty"/>
 			<line type="empty"/>
@@ -5879,9 +5879,9 @@
 			<line type="empty"/>
 			<line type="empty"/>
 			
-			<algin pos="center">Ihr<line type="break"/>
+			<align pos="center">Ihr<line type="break"/>
 			Verehrer<line type="break"/>
-			Christian Heinrich Schmid.</algin></letterText>
+			Christian Heinrich Schmid.</align></letterText>
 		
 		<letterText letter="146"><line tab="1"/>Als ich den Antikensaal in Mannheim sah Bruder Goethe so durchdrung durchbebte überfiel mich 
 			Dein Geist, der Geist alles Deines Thuns und aller Deiner Schöpfungen mit einem Entzücken dem sich 
@@ -8233,7 +8233,7 @@
 			ersten Jahre. <line type="empty"/>
 			
 			<line tab="1"/>Deinen Herder hab ich der Mamsell Kg überbracht samt dem Brief sie läßt Dich sehr grüßen. Sie sagte 
-			mir daß <isnertion pos="top">Du</isnertion> die folgenden Theile vom deutschen Merkur <del>nach</del> für die <note>Textverlust</note>rau v. O. geschickt 
+			mir daß <insertion pos="top">Du</insertion> die folgenden Theile vom deutschen Merkur <del>nach</del> für die <note>Textverlust</note>rau v. O. geschickt 
 			habest und ich schließe die ersten hast Du für sie bestimmt <note>Textverlust</note> ich werd sie also hingeben. <line type="empty"/>
 			
 			<line tab="1"/><note>Textverlust</note> Besatzung ist hier 11000 Mann stark. 350 ziehen täglich auf die Wache von der 
@@ -13642,13 +13642,13 @@
 			Jacob Michael Reinhold Lenz.</align> <line type="empty"/>
 			
 			<page index="4"/><line type="break"/>
-			<adress><line type="break"/>
+			<address><line type="break"/>
 			Sr. Magnifizenz<line type="break"/> 
 			Herrn Herrn Christian David Lenz.<line type="break"/> 
 			Generalsuperintendenten des Herzogthums Liefland, und geistlichem Präsidenten im Käiserlichen<line type="break"/> 
 			Ober-Consistorium.<line type="break"/>
 			zu Riga in Liefland.<line type="break"/>
-			unter gütigem Einschluß.</adress></letterText>
+			unter gütigem Einschluß.</address></letterText>
 		
 		<letterText letter="355">Lieber Lenz, <line type="empty"/>
 			
@@ -14685,10 +14685,10 @@
 			<line type="empty"/>
 			
 			<page index="4"/><line type="break"/>
-			<adress><line type="break"/> 
+			<address><line type="break"/> 
 			Herrn Burner<line type="break"/> 
 			Bey den Bezkischen Anstalten<line type="break"/>
-			zur Erziehung des Mittelstandes zu  treuen Händen</adress> <line type="empty"/>
+			zur Erziehung des Mittelstandes zu  treuen Händen</address> <line type="empty"/>
 			
 			<line tab="1"/><ru>ГOCПOДИНУ<!-- Groß geschrieben? --> мoeму Пуpнepъ въ дoмБ пoкoйнaгo штaтcкaгo coвътникa<line type="break"/>
 			Дeмi<!-- i im Dokument -->дoвa для учpeждeнiг Кoммepчecькaгo coктoянi<!-- Doppelter Punkt -->я пpи глaвнoмъ<line type="break"/>
@@ -14705,9 +14705,9 @@
 			<align pos="right">allezeitergebenster<line type="break"/>
 			Diener JMRLenz</align> <line type="empty"/>
 			
-			<adress>
+			<address>
 			<aq><ru>въ двopБ Никитa Пaвлoвa / Гocпoдину θиpнгaбepъ / у<line type="break"/>
-			Гocпoдинa Бибepa / дa peмaнъ</ru></aq></adress> <line type="empty"/>
+			Гocпoдинa Бибepa / дa peмaнъ</ru></aq></address> <line type="empty"/>
 			
 			<note>Seite 2 und 3, Sprachenklaviatur ABBILDUNG</note> <line type="empty"/>
 			
