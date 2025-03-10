@@ -10,7 +10,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
-				<location ref="1" /><!-- Oder Arensburg -->
+				<location ref="1" cert="low"  /><!-- Oder Arensburg -->
 				<person ref="2" />
 			</received>
 			<hasOriginal value="true" />
@@ -562,7 +562,7 @@
 				<person ref="10" />
 			</sent>
 			<received>
-				<location ref="56" /><!-- Wahrscheinlich -->
+				<location ref="56" cert="low" /><!-- Wahrscheinlich -->
 				<person ref="12" />
 			</received>
 			<hasOriginal value="false" />
@@ -607,7 +607,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
-				<location ref="57" /><!-- Wahrscheinlich -->
+				<location ref="57" cert="low" /><!-- Wahrscheinlich -->
 				<person ref="8" />
 			</received>
 			<hasOriginal value="true" />
@@ -622,7 +622,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
-				<location ref="56" /><!-- Wahrscheinlich -->
+				<location ref="56" cert="low" /><!-- Wahrscheinlich -->
 				<person ref="12" />
 			</received>
 			<hasOriginal value="true" />
@@ -784,7 +784,7 @@
 		<letterDesc letter="52">
 			<sent>
 				<date when="1775-06-07">vermutlich Emmendingen, wahrscheinlich Anfang Juni 1775</date>
-				<location ref="12" />
+				<location ref="12" cert="low" />
 				<person ref="1" />
 			</sent>
 			<received>
@@ -818,7 +818,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
-				<location ref="56" /><!-- Wahrscheinlich -->
+				<location ref="56" cert="low" /><!-- Wahrscheinlich -->
 				<person ref="12" />
 			</received>
 			<hasOriginal value="true" />
@@ -845,12 +845,12 @@
 		<letterDesc letter="56">
 			<sent>
 				<date when="1775-07-15">Wahrscheinlich Straßburg, Juli 1775</date>
-				<location ref="7" />
+				<location ref="7" cert="low" />
 				<person ref="1" />
 				<person ref="10" />
 			</sent>
 			<received>
-				<location ref="11" /><!-- Wahrscheinlich -->
+				<location ref="11" cert="low" /><!-- Wahrscheinlich -->
 				<person ref="19" />
 			</received>
 			<hasOriginal value="true" />
@@ -1377,7 +1377,7 @@
 				<person ref="18" />
 			</sent>
 			<received>
-				<location ref="56" /><!-- Oder Karlsruhe -->
+				<location ref="56" cert="low" /><!-- Oder Karlsruhe -->
 				<person ref="19" />
 			</received>
 			<hasOriginal value="true" />
@@ -1589,7 +1589,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
-				<location ref="8" /><!-- vielleicht -->
+				<location ref="8" cert="low" /><!-- vielleicht -->
 				<person ref="26" />
 			</received>
 			<hasOriginal value="true" />
@@ -1660,7 +1660,7 @@
 		<letterDesc letter="110">
 			<sent>
 				<date when="1776-02-09">Auf dem Weg von Hannover nach Kassel?, 9. Februar 1776</date>
-				<location ref="34" />
+				<location ref="34" cert="low" />
 				<!-- Der Ort kann nicht genau bestimmt werden -->				<!-- Für die Strecke extra Ort -->
 				<person ref="19" />
 			</sent>
@@ -1676,7 +1676,7 @@
 		<letterDesc letter="111">
 			<sent>
 				<date when="1776-02-12">Auf dem Weg von Hannover nach Kassel?, Februar 1776</date>
-				<location ref="34" />
+				<location ref="34" cert="low" />
 				<!-- Der Ort kann nicht genau bestimmt werden -->
 				<person ref="19" />
 			</sent>
@@ -1997,7 +1997,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
-				<location ref="59" /><!-- vielleicht -->
+				<location ref="59" cert="low" /><!-- vielleicht -->
 				<person ref="19" />
 			</received>
 			<hasOriginal value="true" />
@@ -2342,7 +2342,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
-				<location ref="59" /><!-- Wahrscheinlich -->
+				<location ref="59" cert="low" /><!-- Wahrscheinlich -->
 				<person ref="19" />
 			</received>
 			<hasOriginal value="true" />
@@ -2978,7 +2978,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
-				<location ref="31" /><!-- wahrscheinlich -->
+				<location ref="31" cert="low" /><!-- wahrscheinlich -->
 				<person ref="44" />
 			</received>
 			<hasOriginal value="true" />
@@ -3321,7 +3321,7 @@
 		<letterDesc letter="220">
 			<sent>
 				<date when="1776-07-23">wahrscheinlich Berka, Sommer 1776</date>
-				<location ref="14" />
+				<location ref="14" cert="low" />
 				<person ref="1" />
 			</sent>
 			<received>
@@ -3532,7 +3532,7 @@
 		<letterDesc letter="234">
 			<sent>
 				<date when="1776-09-20">Weimar [tatsächlich wohl aus Kochberg], 20. September 1776</date>
-				<location ref="8" />
+				<location ref="8" cert="low" />
 				<!-- Eigentlicher Ort? -->
 				<person ref="1" />
 			</sent>
@@ -3583,7 +3583,7 @@
 				<person ref="45" />
 			</sent>
 			<received>
-				<location ref="30" /><!-- Wahrscheinlich -->
+				<location ref="30" cert="low" /><!-- Wahrscheinlich -->
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -3714,7 +3714,7 @@
 		<letterDesc letter="246">
 			<sent>
 				<date when="1776-10-26">Wohl Berka oder Kochberg, Oktober 1776</date>
-				<location ref="14" />
+				<location ref="14" cert="low" />
 				<!-- Oder Kochberg -->				<!-- Extra location für den Fall -->
 				<person ref="1" />
 			</sent>
@@ -3730,7 +3730,7 @@
 		<letterDesc letter="247">
 			<sent>
 				<date when="1776-10-27">Wohl Berka oder Kochberg, Oktober/November 1776</date>
-				<location ref="14" />
+				<location ref="14" cert="low" />
 				<!-- Oder Kochberg -->
 				<person ref="1" />
 			</sent>
@@ -3852,7 +3852,7 @@
 			<sent>
 				<date when="1776-11-23">Weimar [wohl Berka], 23. November 1776</date>
 				<!-- Weimar [wohl Berka] -->
-				<location ref="8" />
+				<location ref="8" cert="low" />
 				<person ref="1" />
 			</sent>
 			<received>
@@ -4005,7 +4005,7 @@
 		<letterDesc letter="265">
 			<sent>
 				<date when="1776-12-01">wohl auf der Reise nach Emmendingen, Anfang Dezember 1776</date>
-				<location ref="33" />
+				<location ref="33" cert="low" />
 				<person ref="1" />
 			</sent>
 			<received>
@@ -4218,7 +4218,6 @@
 				<date when="1777-05-12">Schinznach/Zürich, 12.-15. Mai 1777</date>
 				<location ref="11" />
 				<person ref="10" />
-				<!-- Wer ist Absender Br.? hier heißt das Brief. Der Brief ist von und an Lavater -->
 			</sent>
 			<received>
 				<location ref="11" />
@@ -4434,7 +4433,7 @@
 				<person ref="80" />
 			</sent>
 			<received>
-				<location ref="11" /><!-- wahrscheinlich -->
+				<location ref="11" cert="low" /><!-- wahrscheinlich -->
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -4837,7 +4836,7 @@
 		<letterDesc letter="320">
 			<sent>
 				<date when="1779-07-01">Wohl auf der Reise nach Livland, Sommer 1779</date>
-				<location ref="55" />
+				<location ref="55" cert="low" />
 				<person ref="1" />
 			</sent>
 			<received>
@@ -5170,7 +5169,7 @@
 			<sent>
 				<date when="1780-09-30">unbekannter Ort, nach der Abreise aus Aya, wohl September/Oktober
 					1780</date>
-				<location ref="51" />
+				<location ref="51" cert="low" />
 				<person ref="1" />
 			</sent>
 			<received>
@@ -5185,7 +5184,7 @@
 		<letterDesc letter="343">
 			<sent>
 				<date when="1780-10-30">unbekannter Ort, Mitte 1779 bis Ende 1780</date>
-				<location ref="51" />
+				<location ref="51" cert="low" />
 				<person ref="1" />
 			</sent>
 			<received>
@@ -5200,7 +5199,7 @@
 		<letterDesc letter="344">
 			<sent>
 				<date when="1780-11-05">Dorpat (Tartu)?, November 1780</date>
-				<location ref="1" />
+				<location ref="1" cert="low" />
 				<person ref="1" />
 			</sent>
 			<received>
