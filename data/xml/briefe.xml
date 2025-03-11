@@ -2304,7 +2304,7 @@
 			<address>An den Verfasser der <ul>Meynungen eines Layen</ul> schleunigst – abzugeben.</address> <line type="empty"/>
 			
 			<sidenote annotation="auf dem roten Lacksiegel">
-			panta dynata tō pisteuonti @<!-- Was bedeutet @? --> </sidenote><line type="empty"/>
+			<gr>παντα δυνατα τῳ πιστευοντι</gr></sidenote><line type="empty"/>
 			
 			<line tab="1"/>Eine und viele der seeligsten Stunden meines Daseyns hab’ ich Ihnen, sey Sie wer Sie wollen, zu 
 			danken. In einer Lage, wie’s wenige giebt – am Sterbebeth einer nahen, eben nicht warm doch redlich 
@@ -8169,7 +8169,7 @@
 			
 			<note>Zeichnung eines liegenden Soldaten</note> <line type="empty"/>
 			
-			des puvroient reviediques leues droste premisioss evac main forte@ </letterText>
+			des pouvraint revendiquent leurs droit pretensions avec main forte</letterText>
 		
 		<letterText letter="214"><line tab="1"/>ich hab’ Euch versprochen es Euch sauer zu machen, Klinger, ja Maler Müller und Wagner selbst, den 
 			recht sehr schätze. Nehmt Euch also in Acht vor mir, parirt ja wohl und wenn Ihr Blöße findet, so stoßt 
@@ -8668,13 +8668,13 @@
 			Ich rekommandire mich. <line type="empty"/>
 			
 			<hand ref="1"><pe><line type="break"/>
-			Dem alten @ ein Explar <ul>meiner Sold.</ul> schicken sauber gebunden<line type="break"/>
+			Dem alten Vt. ein Explar <ul>meiner Sold.</ul> schicken sauber gebunden<line type="break"/>
 			Auch <del>m</del> 2 <ul>Fam. gemählde</ul> –</pe></hand><line type="empty"/>
 			
-			@ eines S. G. zu überwachen @ <line type="empty"/>
+			Pack eines S. G. zu übermachen<line type="empty"/>
 			
 			<page index="2"/><line type="break"/>
-			Begreiflich machen daß er wohl noch mächtiger wäre@ als zu @ main forte</letterText>
+			Begreiflich machen daß er wohl noch mächtiger wäre durch Allianzen als zu ¿¿¿ ¿ main forte</letterText>
 		
 		<letterText letter="231"><aq><line tab="1"/>Je Vous ai mille obligations du dessin parfaitement bienfait que Vous avez bien 
 			voullus joindre à la Lettre polie dont Vous m’avez honoré. Croyez moi Monsieur que 
@@ -9206,7 +9206,7 @@
 			will remain of it as how much is fit to make the present the more painful by the comparison of the past. <line type="empty"/>
 			
 			<page index="2"/><line type="break"/>
-			<note>französische Exzerpte Sozialreform</note>  @</aq></pe></letterText>
+			<note>Kalkulationen im Kontext der Sozialreform, vgl. Schriften zur Sozialreform, S. 397f.</note> </aq></pe></letterText>
 		
 		<letterText letter="250"><aq><line tab="1"/>I beg a thousand times your pardon, dear Madam! for having leav’d Weym without taking leave from 
 			your grace and repeating you the thanks which i can never pay sufficients to all the obliging civilities 
@@ -9428,8 +9428,8 @@
 			durchdringenden Scharfsinn. <line type="empty"/>
 			
 			<ul>Nun die Abschrifft.</ul><line type="break"/>
-			<note>Abschrift des Briefes von Röderer vom Anfang November 1776; noch korrigieren @</note><line type="break"/>
-			<line tab="1"/>Tausendmal dank ich dir für deinen Brief, oder will dir vielmehr danken, dann wie neu geschenket bist Du 
+			<note>Abschrift des Briefes von Röderer vom Anfang November 1776</note><line type="break"/>
+			<line tab="1"/>Tausendmal dank ich dir für deinen Brief mein allerbester alter Freund, oder will dir vielmehr danken, dann wie neu geschenket bist Du 
 			meiner alten Liebe und da magst du besser ahnden was mein Dank sey als Dirs meine Feder sagt. Meine Studien 
 			gehn hier besser als je in St. und ich finde hier mehr als ich vermuthete. Es sind Professoren hier die ich 
 			herzlich lieben muß auch außer Ihnen ist der Kopf nicht allein der sich hier weyden kann <line type="empty"/>
