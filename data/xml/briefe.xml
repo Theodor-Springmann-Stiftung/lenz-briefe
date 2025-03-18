@@ -2439,7 +2439,7 @@
 			weit stärker gebraucht haben würde wenn ich in einer andern Himmelsgegend und Zeitraum <ul>von Ihnen</ul> 
 			gesprochen hätte <line type="empty"/></sidenote>
 			
-			<align pos="right">x x x</align><!-- Was bedeutet "x x x" -->
+			<align pos="right">x x x</align>
 			
 			
 			<sidenote pos="left" page="4" annotation="am linken Rand, vertikal">
@@ -3254,7 +3254,7 @@
 		<letterText letter="67">Mein allerliebster Jacob
 			<line tab="1"/>Wie vergeblig habe ich nun so viele Jahre auff Deine zu Hause Kunft gewartet, wie oft habe ich nicht 
 			umsonst aus dem Fenster gesehn, wenn nur ein Fragtwagen ankam, ob ich Dich nicht erblickte, allein 
-			vergebens. Wie manche Tränen und <del><nr>   </nr></del><!-- Ist das ein Anwendungsfall für <er>? --> Seufzer, habe ich nicht zu Gott geschickt, das er Dich führen 
+			vergebens. Wie manche Tränen und <del><nr>   </nr></del> Seufzer, habe ich nicht zu Gott geschickt, das er Dich führen 
 			und leiten mögte.
 			<line tab="1"/>Ach wenn ich Dich auch noch ein mahl sehen könte, vor meinem Ende, und Dich segnen, ehedenn ich 
 			sterbe, so wollte ich zufrieden sein. Wie lange wiltu so herum irren, und Dich in solche nichtswürdige, 
@@ -5051,7 +5051,7 @@
 			Dir genügen an uns Deinen Treuen! O unser hiesiger kleiner Hauf, der <ul>Gott in Menschengestalt unser 
 			Lavater</ul> – da bist Du oft mitten inne. Wir wißen was Du bist! Amen! <line type="empty"/>
 			
-			<align pos="center">×<!-- Markiert dieses Zeichen einen bestimmten Auszeichnungsfall? --> <ul>Klinger</ul></align> <line type="empty"/>
+			<align pos="center"><fn index="8"><anchor>×</anchor></fn><!-- Verweiszeichen? --> <ul>Klinger</ul></align> <line type="empty"/>
 			
 			<page index="3"/>
 			<line tab="1"/>Das Drama ist ein Meisterstück. Aber die Musik war nicht dabey. Sende sie mir lieber – ob ich gleich 
@@ -5060,7 +5060,7 @@
 			herrlich wahr! Darf ich mich unterstehen Dir aufzutragen eine Empfehl. vor meines Goethes herrliche 
 			Schwester zu bringen. O! o! Kl. dankt Dir 1000 mal für <note>Textverlust</note> Petrarch. Er hat an Petrarch 
 			diesen <note>Textverlust</note> ter sein ganzes Labsal gefunden <note>Textverlust</note> die <aq>Canzonette sorella</aq> übersetzt 
-			die Du einmal sehen sollst. Steiner wird Dir Expl. zugeschickt haben. Er <insertion pos="top">×</insertion> grüßt Dich und ist Dein 
+			die Du einmal sehen sollst. Steiner wird Dir Expl. zugeschickt haben. Er <insertion pos="top"><fn index="8"><anchor>×</anchor></fn></insertion> grüßt Dich und ist Dein 
 			wie ich! Kaufm. macht mir viel Freude denn er ist eine kostbare Seele. Lavater wird immer mehr mein! O 
 			was er von seinen Feinden gepeinigt wird! Gut u. wohl Dir daß Du’s nicht so weißt. Du würdest Höllenangst 
 			für ihn leiden wie wir alle. Ich will was für ihn thun u. wär’s mein Blut und Leben, das ich ihm willig 
@@ -5761,7 +5761,7 @@
 			eilf Dukaten beschwert an Dero Herrn Bruder Hn. Hofrath Schlosser in Emmedingen aufs 
 			geschwindemöglichste gütigst zu befördern<line type="break"/>
 			L.<line type="break"/> 
-			Lenz.<!-- Lenz ist hier in der Transkription in größerer Schrift. Wie kann dieser Fall ausgezeichnet werden? --></letterText>
+			Lenz.</letterText>
 		
 		<letterText letter="143">D 25 Mertz <line type="empty"/>
 			
@@ -6153,7 +6153,6 @@
 			Schreiben Sie mir künftig lieber über Braunschweig. <line type="empty"/>
 				
 			<page index="4"/> <line type="empty"/>
-					<!-- Wie viele Leerzeilen können hier ausgezeichnet werden? -->
 					
 			<address>Herrn Herrn <ul>Lenz,</ul> Gelehrten<line type="break"/>
 			bey Dr. Göthen zu erfragen.<line type="break"/>
@@ -6268,7 +6267,7 @@
 			<sidenote pos="right" page="1" annotation="am rechten Rand, vertikal">
 			Mit Ekhof ist nichts, er befindt sich allzu wohl in Gotha. Von Wieland ein andermahl.</sidenote> <line type="empty"/>
 			
-			<page index="2"/> <!-- Wie viele Leerzeilen können hier ausgezeichnet werden? -->
+			<page index="2"/> <line type="empty"/>
 			
 			grüßt Herrn und Madame Schwan <line type="empty"/>
 			
@@ -6688,7 +6687,7 @@
 			
 			Laßt uns würken, weils Tag ist! Es kommt die Nacht, da niemand würken kann. Amen. Den 27. Apr. 76. J. C. <ul>Lavat.</ul> <line type="empty"/>
 			
-			<line/> <!-- Ist ein doppelter waagrechter Strich mit <line/> auszuzeichnen? -->
+			<line/> 
 			<line/>
 			
 			<line tab="1"/>Der Wielandin Kuß für mein Weibchen hab ich noch in <aq>Petto</aq> – wollen erst eine Menge andre einziehen. 
@@ -6714,7 +6713,7 @@
 			
 			Auf den <ul>Mist</ul> mit, wenn’s nicht gefällt.
 			
-			<line/> <!-- Ist ein einfacher waagrechter Strich mit <line/> auszuzeichnen? --></letterText>
+			<line/> </letterText>
 		
 		<letterText letter="172">Den 30sten Apr. 76. <line type="empty"/>
 			
@@ -6972,8 +6971,8 @@
 			<line tab="1"/>Beym Franzosen bin ich gewesen und hab die Interessen mit 24 Sous besorgt, so bald es sein kann will ich der 
 			Relation ein Ende machen, seh aber noch nicht wann. <line type="empty"/>
 			
-			<tabs><!-- Bezieht sich die Tabelle auf die Auflistung mitsamt dem Abschluss der Rechnung? -->
-			<line index="1"/><tab value="1-8">Unsere Besatzung. 1 Regiment schwere <aq>Kavalerie</aq> von 350 Mann.</tab><!-- Welche Formatierung kann für die folgenden Zeilen gewählt werden? -->
+			<tabs>
+			<line index="1"/><tab value="1-8">Unsere Besatzung. 1 Regiment schwere <aq>Kavalerie</aq> von 350 Mann.</tab>
 			<line index="2"/><tab value="3-8">1</tab> – <tab value="4-8">Dragoner</tab><tab value="7-8">350.</tab>
 			<line index="3"/><tab value="3-8">1 Regiment Schweitzer-Salis</tab> <tab value="7-8">1032.</tab>
 			<line index="4"/><tab value="4-8">Elsaß</tab> <tab value="7-8">1032.</tab>
@@ -7041,7 +7040,7 @@
 			ist Bauer &amp; Treitel. Kann also nichts mit machen, nicht Dir zeigen daß Du nicht schreiben sollst <ul>„was du draus 
 			hebst nimmst du zu erst für dich, denn</ul> etc“ Lenz laß mich machen so lang ich machen kann <line type="empty"/>
 			
-			<page index="3"/> <!-- Die dritte Seite taucht hier ein zweites Mal auf. Soll hier fortlaufend mit der vierten Seite weitergezählt werden? -->
+			<page index="4"/> 
 			
 			<line tab="1"/>Wohl bekomm Dir Dein <aq>Bucephalus!</aq> Bücher schick ich Dir keine, der Porto kommt Dich höher als sie werth sind. 
 			Shakespear und mein Homer sind hier geblieben, ich hab dem Hr. Schlosser geschrieben daß er sie haben kann, 
@@ -7084,7 +7083,7 @@
 			wie ich eine Seite Deiner lieben Briefe nach der andern wie sie mir vorfielen beantwortete. Vergieb das lange Zaudern 
 			und Zögern, wann ich Dich nicht kennte so würde ich glauben, daß deswegen ein fulminanter Brief auf dem Weg sey, aber 
 			liebe mich und glaube daß ich nicht sowohl Deine Freundschaft zu verdienen mit bestem Vermögen strebe als vielmehr 
-			meiner eigenen Liebe zu Dir Satisfaction zu geben bemüht bin Dein alter Röderer. <ul>Strasb. d. 23  May 1776.</ul><!-- Ist der Zeilenumbruch der Transkription zu übernehmen? --> <line type="empty"/>
+			meiner eigenen Liebe zu Dir Satisfaction zu geben bemüht bin Dein alter Röderer. <ul>Strasb. d. 23  May 1776.</ul> <line type="empty"/>
 			
 			<line tab="1"/>Den Pack den ich Dir senden werde wird erst über 8 Tage von hier abgehen können, es mag alsdann das Paket aus der 
 			Schweitz da seyn oder nicht. <line type="empty"/>
@@ -7095,7 +7094,7 @@
 			<line tab="5"/>Quisqui ubique habitat
 			<line tab="5"/>Maxime nusquam habitat</hand> <line type="empty"/>
 			
-			<hand ref="1"><pe><sidenote pos="left" page="4" annotation="am linken Rand, vertikal Notate mit Bleistift von Lenz’ Hand"><!-- Wichtig hier keine Verse -->
+			<hand ref="1"><pe><sidenote pos="left" page="4" annotation="am linken Rand, vertikal Notate mit Bleistift von Lenz’ Hand">
 			schändliche kalte Tugend die uns<line type="break"/>
 			zwingt Aufopferungen gegen einen Freund<line type="break"/>
 			zu machen den wir hernach dafür nicht<line type="break"/>
@@ -7107,19 +7106,19 @@
 			Einer der alles hingiebt zuletzt das Leben und nichts thut weil er<line type="break"/>
 			nicht das Herz hat<line type="break"/>
 			eines <nr> </nr> X stumm  der<line type="break"/>
-			Weg zum <ul>Vater.</ul></hand> <line type="empty"/><!-- Wie viele Freizeilen können hier ausgezeichnet werden? -->
+			Weg zum <ul>Vater.</ul></hand> <line type="empty"/>
 			<line type="empty"/>
 			<line type="empty"/>
 			<line type="empty"/>
 			
-			<page index="4"/> <!-- Die Seitenzahl 4 erscheint hier zum zweiten Mal --><!-- Wichtig: Seitenzahlen fortlaufend nummerieren -->
+			<page index="5"/> 
 			<hand ref="1">
 			<line tab="5"/>hat sie mich davon vorher warnen lassen <insertion pos="top">durch ihn</insertion>
 			<line tab="5"/>und ich suchte das nicht zu hindern
 			<line tab="5"/>nur wenn alles gethan ist den letzten Genuß
 			<line tab="5"/>um ihr sagen daß ich sie erwarte <line type="empty"/></hand>
 			
-			<note>Röderers Hand</note><hand ref="11"> <!-- Ist es hier sinnvoll den Wechsel der Hand über <hand> auszuzeichnen? -->
+			<note>Röderers Hand</note><hand ref="11"> 
 			<address>An Herrn <aq>Lentz</aq><line type="break"/> 
 			bey Herrn <aq>Doctor Goethe</aq><line type="break"/>
 			zu Weimar.</address></hand> <line type="empty"/>
@@ -7130,7 +7129,7 @@
 			Joka<line type="break"/>
 			J <line type="empty"/>
 			
-			Sobald <ul>meinen Platz ein anderer</ul><line type="break"/><!-- Handelt es sich hier um Verse? -->
+			Sobald <ul>meinen Platz ein anderer</ul><line type="break"/>
 			Ausfüllen kann, warum ihn nicht verlassen?<line type="break"/>
 			Sobald also dies gethan ist – geh ich. Es ist Gott der mich ruft.<line type="break"/>
 			Im Frieden ist auch im Mil. nichts zu thun für mich.
@@ -7199,7 +7198,7 @@
 			<line tab="1"/>Bode geht eben durch nach Frank<del>reich</del>furt und weiter. Herder und Stolberg sind noch nicht da, letzter wird 
 			den Sommer noch bey seinen Schwestern zubringen. <line type="empty"/>
 			
-			<note>Entwurf zu Catharina von Siena auf der Rückseite</note><!-- Handelt es sich hier um Verse? -->
+			<note>Entwurf zu Catharina von Siena auf der Rückseite</note>
 			<line tab="5"/>Bey einer alten Tante auf dem Lande
 			<line tab="5"/>Wo ich gehorsam mit Geduld und Tränen
 			<line tab="5"/>Und meinem Väterlichen Erb bezalen mußte
@@ -7221,7 +7220,7 @@
 			<line tab="5"/>Vor und um meinetwillen da, der Wald, die Wiese
 			<line tab="5"/>Auf die ich mich ehmals kaum zu treten traute
 			<line tab="5"/>War nur für mich geschaffen und die Blumen
-			<line tab="5"/><insertion pos="top">Bey</insertion> <!-- Handelt es sich hier um eine weitere Einfügung? --><insertion pos="top"><del><nr>  </nr></del></insertion> denen ich wie vor dem Herrn vom Hause
+			<line tab="5"/><insertion pos="top">Bey</insertion> <insertion pos="top"><del><nr>  </nr></del></insertion> denen ich wie vor dem Herrn vom Hause
 			<line tab="5"/>Sonst ehrfurchtsvoll vorbey schlich schienen nun
 			<line tab="5"/>Nur drauf zu harren <insertion pos="top">daß mein <del><nr>         </nr></del></insertion> <del><nr>         </nr></del> <insertion pos="bottom">daß mein Fuß sie knickten</insertion>
 			<line tab="5"/><del><nr>         </nr></del> – <del>wie <del><nr>   </nr></del> theilt ich ihr Schicksal</del> <line type="empty"/>
@@ -7423,7 +7422,7 @@
 			nicht unglücklich? Und meine von Schulden u. Elend gedrückte Mutter, meine leidende Schwestern wovon die eine 
 			ein herrliches Geschöpf ist, die alle auf mich warten <aq>etc.</aq> <line type="empty"/>
 			
-			<align pos="center"><line/><line/></align><!-- Querstrich -->
+			<align pos="center"><line/><line/></align>
 			
 			Lassen Sie Goethen nicht merken gnädige Frau! daß ich Ihnen das verrathen habe.<line type="break"/> 
 			L.<line type="break"/>
@@ -7658,7 +7657,7 @@
 			
 			<align pos="right">L.</align></hand></letterText>
 		
-		<letterText letter="199"><!-- Hanschrift von Seidel mit Bleistift  --><align pos="center">Sachen die hier bleiben</align> <!-- Wie werden Items einer Liste formatiert? --> <line type="empty"/>
+		<letterText letter="199"><align pos="center">Sachen die hier bleiben</align> <line type="empty"/>
 			
 			Regenschirm (Philipp in die Post)<line type="break"/>
 			Instruktion des Königs v. Preussen<line type="break"/> 
@@ -7675,7 +7674,7 @@
 			
 			<align pos="center">Sachen die ich mir ausbitte</align><line type="break"/>
 			Alle Bücher auf dem Stuhl<line type="break"/>
-			<tabs><note>zweispaltige Tabelle, zunächst die rechte Spalte</note><!-- Tabelle -->
+			<tabs><note>zweispaltige Tabelle, zunächst die rechte Spalte</note>
 				<line index="1"/><tab value="1-12">Polyb</tab> <tab value="5-12"><aq>vies des peintres</aq></tab>
 				<line index="2"/><tab value="1-12">Stuart</tab> <tab value="5-12">Büschings Geographie der Theil v. Frankreich</tab>
 				<line index="3"/><tab value="1-12"><aq>Comte de Saxe</aq></tab> <tab value="5-12">Einige Karten</tab><note>geschweifte Klammer für die obigen beiden Einträge</note> <tab value="10-12">die mir Bertuch</tab> 
@@ -7690,7 +7689,7 @@
 				<line index="12"/><tab value="1-12"><ul>Homer.</ul></tab></tabs> <line type="empty"/>
 			
 			<hand ref="25">
-			<aq>Julius Caesar</aq></hand><!-- Besteht hier eine Kursivierung im Druck? -->
+			<pe><aq>Julius Caesar</aq></pe></hand>
 			
 			<ul>Das Pack mit meinen 2 Brieftaschen</ul> (unaufgemacht)<line type="break"/>
 			<ul>Das Päckgen Catharina</ul> v. Siena vor allen Dingen und unaufgemacht. <line type="empty"/>
@@ -7715,7 +7714,7 @@
 			Siegellack</pe></hand><line type="break"/>
 			<line/>
 			<hand ref="25">
-			Seife</hand> <line type="empty"/>
+			<pe>Seife</pe></hand> <line type="empty"/>
 			
 			Einen Haarkamm hätte noch nöthig und ein Scheermesser, weil ich mich sonst vor mir selber fürchten muß.<line type="break"/>
 			<hand ref="25"><pe>
@@ -8561,7 +8560,7 @@
 			
 			<sidenote pos="left" page="1" annotation="am Rand der ersten Seite, vertikal"><line type="break"/>
 			<line tab="1"/>Verzeyhen Sie meine Länge über einen so uninteressanten Punkt für Sie. Es liegt mir zu sehr am 
-			Herzen als daß ich nicht bitten und geilen sollte um Stillschweigen.<!-- Auf welcher Seite der Seite? --></sidenote> <line type="empty"/>
+			Herzen als daß ich nicht bitten und geilen sollte um Stillschweigen.</sidenote> <line type="empty"/>
 			
 			<line tab="1"/>Verzeyhen Sie mein langes Stillschweigen, ich habe viel sehr viel zu thun und mich deswegen von aller 
 			menschlichen Gesellschaft abgesondert. Schloßer wird Ihnen vielleicht den Engländer schicken; aber 
@@ -8571,7 +8570,7 @@
 			<sidenote pos="left" page="2" annotation="am Rand der zweiten Seite, vertikal"><line type="break"/>
 			<line tab="1"/>Der Verf. der Soldaten <ul>heißt Steenkerk,</ul> <insertion pos="top">soll und muß so heißen</insertion> ich darf auch <ul>meinen</ul> Namen nicht länger 
 			hergeben da ich in zuviel Verdrüßlichkeiten dadurch gerathen würde und man von mir auf ihn rathen könnte. 
-			nur eine Scene ist von mir.<!-- Auf welcher Seite der Seite? --></sidenote> <line type="empty"/>
+			nur eine Scene ist von mir.</sidenote> <line type="empty"/>
 			
 			<sidenote pos="bottom" page="2" annotation="am unteren Rand der zweiten Seite"><line type="break"/>
 			<line tab="1"/>Thun Sie mir die Liebe und hindern die Publizität der Soldaten soviel an Ihnen ist, bitten auch Zimmermann 
@@ -8692,7 +8691,7 @@
 			en fournis des armes <page index="4"/> je Vous ouvre mon coeur. Je me declare coupable de tous 
 			ces petits tours, de toutes ces ruses dont Vous me fites le dernier soir d’aussi vives 
 			reproches, je vous declarerai même que <del>je ne</del> <insertion pos="top">rien moins que de</insertion> changer <del>si pas</del> de 
-			conduite <insertion pos="left">je la soutiendrai avec de la fermeté</insertion><!-- Einfügung links --> tant que les raisons qui m’y forcent 
+			conduite <insertion pos="left">je la soutiendrai avec de la fermeté</insertion> tant que les raisons qui m’y forcent 
 			ne <insertion pos="top">voudront pas</insertion> <del>ont pas</del> cesser. Vous deviez donc prendre garde a me fournir d’occasions 
 			de faire du mal sous les dehors de l’innocence et de la probité. Pourquoi, je Vous en 
 			supplie, me produire a la cour? Pourquoi m’ouvrir des vues aussi pleines de charmes lorsque 
@@ -9046,7 +9045,7 @@
 			Leben Sie wohl und grüßen alle guten Freunde, auch Jungfer Lauth. <line type="empty"/>
 			
 			<align pos="right">Lenz.</align><line type="break"/>
-			<sidenote pos="left" page="1" annotation="Am Rande"><!-- Welche Seite vom Rand? Wie Text behandeln, dann vielleicht in spitzen Klammern/andere Zeichen verwenden, um die Anmerkung vom Druck abzuheben. Lösung: Editorische Anmerkung machen, dass es sich um eine editorische Anmerkung im Druck handelt --><line type="break"/>
+			<note>Die folgende topographische Angabe ist eine Anmerkung der Edition</note><sidenote pos="left" page="1" annotation="Am Rande"><line type="break"/>
 			<line tab="1"/>Wäre es nicht möglich, daß ich, durch Ihre Vermittlung einige der neuesten Allemanden in Straßburg 
 			abgeschrieben herbekommen könnte. Was Sie dafür auslegen, will ich wieder erstatten. Die von Edelmann 
 			würde Ihnen hier ein ewiges Denkmal setzen.</sidenote> <line type="empty"/>
@@ -9234,7 +9233,7 @@
 			weiß, einzele werden drunter leiden. Ich will’s denen zu vergüten trachten.  Aber, wer mich liebt, und sich 
 			in meine Lage denkt, der wird die Sache  äusserst billig finden.<line type="break"/>
 			Zürich, den 7ten Novembr. 1776.<line type="empty"/> 
-			[Lavaters Hand]<!-- Gibt es zuvor einen Teil, der von fremder Hand geschrieben wurde? -->
+			<hand ref="10">
 			<line tab="1"/>Mein lieber Lenz, mit einem Schwall unzähliger Briefe flog ich vor ein paar Tagen auf Baden u: las auch 
 			alle Deine wied. durch. Ach! wie wenig hab ich Dir geantwortet u. Zeit zu antworten … Könntest Du nicht 
 			zu uns kommen? wenig könntest Du mich, wenig könnt ich Dich genießen. Doch mehr wie so. Vielleicht hättst 
@@ -9246,7 +9245,7 @@
 			
 			<page index="2"/><line type="break"/>
 			<address>
-			<ul>an Lenzn.</ul></address></letterText>
+			<ul>an Lenzn.</ul></address></hand></letterText>
 		
 		<letterText letter="252"><aq><line tab="1"/>Oserois je enfin Madame accompagner l’incluse du Sieur Wieland de quelques lignes 
 			seulement pour vous temoigner l’excès de joie et de satisfaction que j’ai du ressentir 
@@ -9452,7 +9451,7 @@
 			gethan,</ul> wofür ich tausendmal danke. Er wird mir diese letzte Gnade nicht abschlagen, wenn ihm Goethe für 
 			die Reinheit meiner Absichten Bürge ist. Und der wird es seyn, so sehr ich ihn beleidigt habe. Ich dachte 
 			nicht daß es so plötzlich aus seyn sollte und hatte mir meine süssesten Arbeiten aufgespahrt. Diese 
-			Gelegenheit ist hernach aufimmer für mich verloren.<ul>Nur ein einziger Tag –</ul></sidenote><!-- Geht die sidenote zum Ende des Absatzes? --> <line type="empty"/>
+			Gelegenheit ist hernach aufimmer für mich verloren.<ul>Nur ein einziger Tag –</ul></sidenote> <line type="empty"/>
 			
 			<line tab="1"/>Umarme und seegne Deine Gattin; Seyd unbegrenzt glücklich – vergeßt mich. Lebt wohl! <line type="empty"/>
 			
@@ -9735,7 +9734,7 @@
 			
 			<page index="2"/> <line type="empty"/>
 			
-			<align pos="center">>Emma und Eginhard<line type="break"/><!-- Bekommt die Überschrift der Romanze eine eigene Formatierung über <line tab="1">? -->
+			<align pos="center">>Emma und Eginhard<line type="break"/>
 			an Barthy</align> <line type="empty"/>
 			
 			<line tab="5"/>Geh Betti schließ die Laube zu
@@ -9743,7 +9742,7 @@
 			<line tab="5"/>Von einem Fräulein schön wie Du
 			<line tab="5"/>Sing ich ein Liedgen Dir <line type="empty"/>
 			
-			<align pos="center">X</align> <line type="empty"/><!-- Bekommen die Grenzmarkierungen der Versabschnitte der Romanze eine eigene Formatierung über <line tab="1">? -->
+			<align pos="center">X</align> <line type="empty"/>
 			
 			
 			<line tab="5"/>Der große Carl ein Teutscher Held
@@ -10000,7 +9999,7 @@
 		
 		<letterText letter="277"><align pos="center">An Lenzen zum Abschied.</align> <line type="empty"/>
 			
-			<line tab="5"/>Edler! Du gehst dahin <!-- Handelt sich hier um Verse? -->
+			<line tab="5"/>Edler! Du gehst dahin 
 			<line tab="5"/>Und mein tränendes Aug sieht Dir nach.
 			<line tab="5"/>Genoßen und genoßen gehst Du nur halbgenoßen
 			<line tab="5"/>Diesem unersättlichen, allaufzehrenden Herzen.
@@ -10075,7 +10074,7 @@
 			
 			<align pos="right">Küttner.</align></letterText>
 		
-		<letterText letter="278"><align pos="right">Zürich. d. 11ten May 1777</align> <line type="empty"/><!-- Viel Abstand; vielleicht Obergrenze bei drei Zeilen? -->
+		<letterText letter="278"><align pos="right">Zürich. d. 11ten May 1777</align> <line type="empty"/>
 			<line type="empty"/>
 			<line type="empty"/>
 			<line type="empty"/>
@@ -10126,7 +10125,7 @@
 			<page index="2"/><line type="break"/>
 			H: Wegmeister Tobler in Zürich.<line type="break"/>
 			H Pfarrer Weber in Bubigheim<line type="break"/>
-			Zu Diener Stadthalter von Bubigheim.</hand> <!-- Bis wohin geht Lavaters Hand? Ab Seite zwei fremde Hand--></letterText>
+			Zu Diener Stadthalter von Bubigheim.</hand></letterText>
 		
 		<letterText letter="280">
 			<pe><line tab="1"/>Lenz von deinem Auge kein Blick, du streckst nicht nach mir den Arm, reichst mir keine Hand! Doch 
@@ -10678,7 +10677,7 @@
 			<align pos="center"><aq>Pro Memoria</aq> <line type="empty"/>
 			
 			Zu einer Reiße nach Italien von Sarasin an Lenz</align><line type="empty"/>
-			<!-- Tabelle? -->
+			
 			<tabs><line index="1"/><tab value="1-2"><aq>Haupt Züge</aq></tab> <line type="empty"/>
 			<line index="2"/><line tab="1"/><tab value="1-2">Beym Italiäner gewinnen Sie viel wann Sie geschwind u. feurig sind. Dauerhafftes erwarten Sie nichts, aber in 
 			der Hize bekommt man alles von ihm.</tab> <tab value="2-2"><align pos="center"><aq>Weiber.</aq></align></tab> <line type="empty"/>
@@ -11315,7 +11314,7 @@
 			<line tab="5"/>Im bunten Thal der Lügen!
 			<line tab="5"/>Du gehst dahin, du Lächlerin!
 			<line tab="5"/>Dich ewig zu betrügen.
-			<align pos="center">x</align><line type="break"/><!-- Besondere Formatierung? -->
+			<align pos="center">x</align><line type="break"/>
 			<line tab="5"/>Was weinest Du? die Welt ist rund
 			<line tab="5"/>Und nichts darauf beständig.
 			<line tab="5"/>Das Weinen nur ist ungesund
@@ -12505,7 +12504,7 @@
 			ich mich erinnere hat sie – hat sie keinen Platz in der Physiognomik, kann auch nach den Carrikaturen von Kupferstich 
 			die von ihnen kursiren, keinen haben. Künftig mehr von diesem Punkt: er ist mir heilig – – <line type="empty"/>
 			
-			<sidenote pos="bottom" page="1" annotation="am unteren Rand der ersten Seite"><!-- Gehören die beiden Verweise zu der Randeinfügung? Genauere Beschreibung: Erster Verweis beginnt linksbündig, setzt sich dann rechtsbündig fort-->
+			<sidenote pos="bottom" page="1" annotation="am unteren Rand der ersten Seite">
 			
 			<fn index="1"><anchor>F<note>Verweiszeichen 1</note></anchor></fn> eben höre von ihnen selbst, daß Sie sie schon haben <line type="empty"/>
 			
@@ -13367,7 +13366,7 @@
 			
 			Dank also mit mir der Vorsicht für die Gnade der besten Fürstin, <insertion pos="top">die</insertion> wenn sie gleich so unendlich über mich erhaben ist <line type="empty"/>
 			
-			<line tab="5"/>sich in den Flüssen mahlt, die sie<!-- Verse? -->
+			<line tab="5"/>sich in den Flüssen mahlt, die sie
 			<line tab="5"/>mit Glanz erfüllt
 			<align pos="right">Shsp.</align><line  type="break"/>
 			<line tab="1"/>und hilf mir bethen, daß meine Führung derselben nicht ganz unwürdig sey. Uebrigens wünsche Deinem und Hr. Past. Oldekopps 
@@ -13738,7 +13737,7 @@
 			vielleicht stehen einmal Geistliche auf, die das <ul>Ehre von einander</ul> nehmen ein wenig besser auseinander 
 			setzen. – Gott schenke Ihnen und mir weniger schmarrende Lobeserheber und seltnere standhafte und aufrichtige 
 			Freunde! – d. 6te Jun. 87.<line type="break"/>
-			<note>andere Tinte</note><line type="break"/><!-- Tinte -->
+			<note>andere Tinte</note><line type="break"/>
 			<ink ref="2">Mosco.</ink></letterText>
 		
 		<letterText letter="357"><align pos="right">In grosser Zerstreuung<line type="break"/>
@@ -14365,7 +14364,7 @@
 			<aq>Samsummien, Raphaim</aq> von den Ryphäischen Gebirgen hiessen und durch ihren blassen Anblik ohnmächtig machten, weil 
 			der Aufgenommene oder <aq>Delinquent</aq> viele Tage vorher durch Hunger und dazu bereitete eigne bittere Speisen 
 			<aq>praeparirt</aq> das heißt fast um die menschliche Besinnung und Vernunft gebracht war. Das hieß in der Sprache 
-			des Phrats und Thraziens <aq><ul><ru>фpуpa</ru></ul></aq> und <aq><ul><ru>фJpaммы<!-- Vermutlich ist ein Teil vom Buchstaben verblasst? -->ц<!-- Im Dokument eher "v" --></ru></ul></aq> Frura und <ul>frattin</ul> itzt im Slawischen <aq><ru>бopoчaмъ</ru></aq>, wovon auch 
+			des Phrats und Thraziens <aq><ul><ru>фpуpa</ru></ul></aq> und <aq><ul><ru>фJpaммыц</ru></ul></aq> Frura und <ul>frattin</ul> itzt im Slawischen <aq><ru>бopoчaмъ</ru></aq>, wovon auch 
 			Pforten kommen das heißt befestigen und alsdenn drehen und wenden wie einen Selawen oder noch weniger wie 
 			einen Automaten, denn auf diesen <aq><ul>Telegi</ul></aq> oder <aq><ul>Schaukeln</ul></aq> wurden Menschen wie das Vieh verkauft und verhandelt, 
 			nach Pfunden und Gewicht, nach denen ihnen auch die Speisen <ul>zugewogen</ul> wurden. Nun bitte ich diese Späsgen 
@@ -14555,7 +14554,7 @@
 			Bibel in den Schulen aus mehreren Sprachen zur Aufmunterung der Schüler und Erleichterung der Geistlichen die auch zugleich 
 			Lehrer sind der Anfang gemacht werden. <line type="empty"/>
 			
-			<sidenote pos="left" page="2" annotation="am linken Rand, vertikal">(Loge)<!-- Wort im Text? --> auch Börsen u Versammlungssörter von Kaufleuten.</sidenote> <line type="empty"/>
+			<sidenote pos="left" page="2" annotation="am linken Rand, vertikal">(Loge) auch Börsen u Versammlungssörter von Kaufleuten.</sidenote> <line type="empty"/>
 			
 			<line tab="1"/>Bey der Bibliothek wäre aber mehr auf Alte – mit und ohne sichtbaren Bart – als auf Kinder Rüksicht zu nehmen die immer 
 			beym Buch aller Bücher bleiben und langsam zu andrer Lektüre fortschreiten. Hier würde also der Uebersetzungscommission 
@@ -14564,7 +14563,7 @@
 			
 			an das Damen Bureau für 2 Bräute im – –  – Garten denen die übrigen schon nachfolgen werden</letterText>
 		
-		<letterText letter="366"><tabs><note>linke Spalte</note><line type="break"/><!-- Tabelle -->
+		<letterText letter="366"><tabs><note>linke Spalte</note><line type="break"/>
 			<line index="1"/><tab value="1-2"><aq>kin burn</aq></tab> <tab value="2-2"><aq>Kin burn</aq></tab>
 			<line index="2"/><tab value="1-2">ein Kind brannte !!!!!!</tab> <tab value="2-2">aber, aber <aq>Kin</aq> und <aq>burn</aq> nicht <aq>Kil</aq></tab>
 			<line index="3"/><tab value="1-2">aber wie und wofür?</tab> <tab value="2-2"><aq>burn</aq> denn das heißt auf Englisch</tab> <line type="empty"/>
@@ -14575,7 +14574,7 @@
 			<line tab="1"/>Ueberbringer dieses möchte gern Ihre Kirche besehen, auch wohl wenn Herrn Bergwitz ihn seiner 
 			Schwester empfelen will mit jungen Herrn in Dienste treten, ist aber seines Gewerks ein Schneider, 
 			wenn er schon auch frisirt und vielleicht auf Kundschaft spekuliert. Wenn Sie ihm erlauben wollen mit 
-			Ihrem <aq><ru>нaб<!-- Im Dokument ist dieses Zeichen spiegelverkehrt -->зцсpaмeль</ru></aq> oder Aufseher der Knaben die Kirche (die aber keinen Lehrstul hat) zu besehen würde 
+			Ihrem <aq><ru>нaбзцсpaмeль</ru></aq> oder Aufseher der Knaben die Kirche (die aber keinen Lehrstul hat) zu besehen würde 
 			dieses als einen Beweis Ihrer noch nicht erloschenen Freundschaft für mich ansehen. <line type="empty"/>
 			
 			<line tab="1"/>Man verwirrt in Moskau immer den Grafen Münnich der den Ladogaschen Canal anlegte und dessen Sohn im 
@@ -14647,7 +14646,7 @@
 			zur Erziehung des Mittelstandes zu  treuen Händen</address> <line type="empty"/>
 			
 			<line tab="1"/><ru>ГOCПOДИНУ<!-- Groß geschrieben? --> мoeму Пуpнepъ въ дoмБ пoкoйнaгo штaтcкaгo coвътникa<line type="break"/>
-			Дeмi<!-- i im Dokument -->дoвa для учpeждeнг Кoммepчecькaгo coктoянг<!-- Doppelter Punkt -->я пpи глaвнoмъ<line type="break"/>
+			Дeмгдoвa для учpeждeнг Кoммepчecькaгo coктoянгя пpи глaвнoмъ<line type="break"/>
 			нaдзиpaгeлecъ дoмa</ru> <line type="empty"/>
 			
 			<sidenote pos="left" page="4" annotation="am linken Rand, vertikal"><ru>Кapлу Ивaнoвичь г Буpнepъ</ru></sidenote></letterText>
@@ -14752,7 +14751,7 @@
 			<line tab="5"/>Aber bester König Ponto
 			<line tab="5"/>Und so wird der Talosmonto
 			<line tab="5"/>Mit Satyren abgespeist.
-			<line tab="5"/>Leib und Seele wird zum Geist.</insertion> <!-- Einfügung rechts? -->
+			<line tab="5"/>Leib und Seele wird zum Geist.</insertion> 
 			<line tab="5"/>Witz ist wie ein scharfes Messer
 			<line tab="5"/>Ey je schärfer desto besser
 			<line tab="5"/>Doch der Teuffel hattauch Witz
@@ -14760,7 +14759,7 @@
 			<line tab="5"/>Machen, würde der nicht weinen
 			<line tab="5"/>Den er ohne Noth versucht
 			<line tab="5"/>Ohne Witz giebts keine Kunst
-			<line tab="5"/><insertion pos="left">Ohne Witz giebts keine Frucht</insertion> <!-- Einfügung links? -->
+			<line tab="5"/><insertion pos="left">Ohne Witz giebts keine Frucht</insertion> 
 			<line tab="5"/><insertion pos="right">Ohne Witz geht alles unter
 			<line tab="5"/>Das Geschik erhält er munter
 			<line tab="5"/>Aber böser Witz ist Dunst</insertion>
@@ -14820,7 +14819,7 @@
 			angebetheten Julie welche denen Frauenzimmern Lieflandes ein Collegium von den Sitten der alten Teutschen 
 			aus dem Tacitus mit einigen teutschen und esthnischen Reimen unter meinem Fürsitze zu eröfnen nach 
 			Maurerischen Zeichen und Regeln sich endlich rühmlich entschlossen mich den Gebeinen des verewigten 
-			Zingischans und Tamerlans schwören lassen müssen und demzufolge alle die[sje<!-- Befindet sich die eckige öffnende Klammer im Text? --> unterirrdischen Geister 
+			Zingischans und Tamerlans schwören lassen müssen und demzufolge alle die[sje unterirrdischen Geister 
 			in Anspruch und Einspruch genommen <line type="empty"/>
 			
 			<line tab="1"/>Es wird in diesem Collegio ein Oratorium vorkommen welches Medea heißt die den Jason verjüngerte und 
@@ -14949,7 +14948,7 @@
 			Seide und Leinwand Weber u. Stricker in Gold Posumentirer Dratzieher in Holz verschiedner Gattung Tischer 
 			Kanzelbauer Orgelbauer in Eisen Pferdärzte Schmiede für Küchengeräth und Schlosser. Die sich hier versammlen 
 			und Sonntags eine russische Predigt des Schwarzischen Seminarii hören. Zur Aufname neuer Städter. 
-			<ru>блa <aq>cмpoeния нoвыхъ <ul>г<!-- Im Dokument anders -->opoбoвъ</ul></aq></ru></sidenote> <line type="empty"/>
+			<ru>блa <aq>cмpoeния нoвыхъ <ul>гopoбoвъ</ul></aq></ru></sidenote> <line type="empty"/>
 			<line type="empty"/>
 			
 			<line tab="1"/>Nun fand ich daß das Lehngut dieser Dame nach der gnädigen Verordnung der Käiserin für Staatsoffizierenwittwen 
@@ -15199,7 +15198,7 @@
 			letzten Briefes zu urtheilen, überhaupt es rathsam wäre, Feuer zu Pulver zu thun, so wenig scheint 
 			er mich – und ich ihn zu verstehen. Vielleicht wenn Personen aus den Gegenden wo ich gelebt und
 			bekannt und unbekannt war, durch Ehre und Schande, gute und böse Gerüchte gieng, öffterer mit 
-			ihm zusammen kämen, würde er, so wie vielleicht alle seine Freunde und Bekannten mich zu <dul>miß</dul><!-- Im Dokument doppelt unterstrichen? -->kennen 
+			ihm zusammen kämen, würde er, so wie vielleicht alle seine Freunde und Bekannten mich zu <ul>miß</ul>kennen 
 			aufhören. Was man schrieb und drukte war nicht immer das was an der Sache selbst war. Ich habe 
 			ihn nie zu lieben und zu schätzen aufgehört – allein es dünkte mich, Haussorgen machten ihn ein 
 			wenig zu mißmuthig und heftig in allen seinen Briefen und andern Äusserungen gegen mich und 
@@ -15219,7 +15218,7 @@
 			man den Justinian gelesen. Ich kann vor Gott bezeugen daß ich an nichts arges gedacht habe; ausser meinem 
 			Freunde Vergnügen zu machen <line type="empty"/>
 			
-			<line tab="1"/>Doch genug davon und von der Art wie in Rußland <insertion pos="right">(Liefland)</insertion><!-- Einfügung rechts? --> gelesen wird. Habe die Gutheit mir nur recht 
+			<line tab="1"/>Doch genug davon und von der Art wie in Rußland <insertion pos="right">(Liefland)</insertion> gelesen wird. Habe die Gutheit mir nur recht 
 			umständlich zu melden, was unser lieber Vater macht, ob Mama noch munter ist, ob sie Freunde haben die sie 
 			besuchen ob du offt bey ihnen bist, ob unsere Schwester Elisabeth nicht wieder an eine Heurath denkt und das 
 			dasige <aq>Liceum</aq> noch keinen neuen Regenten erhalten? <line type="empty"/>
