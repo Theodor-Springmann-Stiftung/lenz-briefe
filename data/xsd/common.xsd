@@ -143,6 +143,18 @@
 		<xsd:complexContent>
 			<xsd:extension base="lenz:text">
 				<xsd:attributeGroup ref="lenz:dateattributes" />
+
+				<xsd:attribute name="cert" use="optional" default="high">
+					<xsd:annotation>
+						<xsd:documentation>Optional: Wie sicher ist die Referenz? Erlaubt: high | low</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="high" />
+							<xsd:enumeration value="low" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
