@@ -1187,14 +1187,14 @@
 			meine Freunde sind, u. sich meiner noch erinnern. – Sey glücklich! mein Bruder. – Von der Seite der 
 			Freunde bist Du es mehr als ich. Traurig genung, daß ich keinen eintzigen Busenfreund habe. Und was 
 			ist ein Leben ohne Freundschaft? Du hast es nie empfunden, ich liebe Dich auch zu sehr, um es zu 
-			wünschen. Laß mich bald in Dir meinen ersten und fast meinen eintzigen Freund wiederbekommen. 
+			wünschen. Laß mich bald in Dir meinen ersten und fast meinen eintzigen Freund wiederbekommen. <line type="empty"/>
 			
-			<page index="4"/>
+			<page index="4"/><line type="break"/>
 			<address>A Monsieur <line type="break"/>
 			Monsieur J. M. R. Lenz. <line type="break"/>
 			Kandidat der Theologie, <line type="break"/>
 			presentement a Fort Louis <line type="break"/>
-			P. Cond.</address> 
+				P. Cond.</address> <line type="empty"/>
 			
 			<note>nicht identifizierte Hand</note> 
 			Capitaine Lieutenant Salomon Bodmer in der Mühle zu Wölflingen im Canton Zürich.<!-- "<hand>" benötigt zwingend eine Referenz. Wie kann dabei in dem Fall vorgegangen werden, wenn keine Hand identifiziert wurde? Eine unbekannte definieren?--></letterText>
@@ -1778,10 +1778,10 @@
 			
 			<hand ref="11"><line tab="1"/>Ich Röderer umarme Sie tausendmal und will auch itzt lernen zufrieden seyn in mancherley Fügungen – 
 				Es genese Ihr Knabe! Guter Gott erfreue einen Vater der schon manche Freude manchen denen 
-				Kindern gemacht hat. </hand>
+				Kindern gemacht hat. </hand> <line type="empty"/>
+			<line type="empty"/>
 			
-			
-			<page index="4"/>
+			<page index="4"/><line type="break"/>
 			<address>An Herrn <line type="break"/>
 			Herrn Diaconus Lavater<line type="break"/>
 			zu Zürich</address></letterText>
@@ -1798,7 +1798,7 @@
 			
 			Lavater. <line type="empty"/>
 			
-			<address>An Herrn Röderer, Candidat, bey der neuen Kirche in Straßburg</address>
+			<address>An Herrn Röderer, Candidat, bey der neuen Kirche in Straßburg</address> <line type="empty"/>
 			
 			<note>Nach FSt I, S. 294, hat Lenz auf der Außenseite notiert: „Hofrath Deinet in Frkfurt am Mayn“</note></letterText>
 		
@@ -2613,7 +2613,7 @@
 			
 			„Je kleiner der Mund, desto unschuldiger das Herz; je grösser, desto erfahrener. P <line type="empty"/>
 			
-			<page index="4"/> 
+			<page index="4"/><line type="break"/> 
 			<address>An Lavatern. <line type="break"/>
 			in Zürich.</address></letterText>
 		
@@ -3264,7 +3264,7 @@
 			<align pos="center">Donnerstags. 1775</align><line type="break"/>
 			<align pos="right">J M. R. Lenz.</align> <line type="empty"/>
 			
-			<page index="4"/>
+			<page index="4"/><line type="break"/>
 			<address>Herrn <line type="break"/>
 			Herrn Johann Caspar<line type="break"/>
 			<ul>Lavater,</ul> Pfarrer <line type="break"/>
@@ -3349,8 +3349,8 @@
 			
 			<sidenote pos="left" page="1" annotation="am linken Rand, vertikal">
 				Vor einem Jahr wenigstens darf sie aus tausend Ursachen nicht gedruckt werden. Mehr als ein Leben verlier ich damit –</sidenote>
-			
-			<page index="2"/>
+			<line type="empty"/>
+			<page index="2"/><line type="break"/>
 			<address>Herrn<line type="break"/>
 			Herrn Herder<line type="break"/>
 			Consistorialrath<line type="break"/>
@@ -3451,9 +3451,9 @@
 			<line tab="1"/>Daß ich Dein <aq>admonitorium</aq> einst Gottern zuschicken wollte, war nicht, um ihn zu bekehren, sondern, 
 			um ihm zu weisen, wie sehr ich ihn mit samt seinen Lobeserhebungen und Autoreinfluß und Macht 
 			verachte. – Er sollte widerrufen – das <ul>kann</ul> aber W. nicht.</sidenote> <line type="empty"/>
+			<line type="empty"/>
 			
-			
-			<page index="4"/>
+			<page index="4"/><line type="break"/>
 			<address>Herrn <line type="break"/>
 			Herrn J. C. Lavater <line type="break"/>
 			Pfarrer am Waysenhause <line type="break"/>
@@ -3618,7 +3618,7 @@
 			Sie machen, höre ich, eine Sammlung von Ihren Gedichten. Das wird mich freuen. Auf Subskribenten 
 			könnten Sie hier zählen. Geben Sie mir allenfalls Nachricht davon. <line type="empty"/></sidenote>
 			
-			<page index="4"/> 
+			<page index="4"/><line type="break"/>
 			<address>Herrn<line type="break"/>
 			Herrn <ul>Gotter</ul><line type="break"/>
 			Archivarius<line type="break"/> 
@@ -3684,7 +3684,7 @@
 			verschwiegen bleiben. Ich sag es Dir hier voraus, falls ich es etwa alsdann zu erinnern vergessen 
 			sollte.</sidenote> <line type="empty"/>
 			
-			<page index="4"/>
+			<page index="4"/><line type="break"/>
 			<address>Herrn<line type="break"/>
 			Herrn <ul>Herder</ul><line type="break"/>
 			Consistorialrath<line type="break"/>
@@ -4351,7 +4351,7 @@
 			gesellschaftliche Freunde und keinen fürs Bedürfniß. Und beydes nimmt nach dem Maaß zu nach 
 			dem ich hier bekannter werde. – Es wird Ihnen nicht besser gehn nur daß die Stadt so groß nicht ist.</sidenote> <line type="empty"/>
 			
-			<page index="4"/>
+			<page index="4"/><line type="break"/>
 			<address>Herrn<line type="break"/> 
 			Herrn <ul>Gotter</ul><line type="break"/> 
 			Archivarius<line type="break"/> 
@@ -4390,7 +4390,7 @@
 			
 			Seinen Egmond habe noch nicht bekommen. <line type="empty"/>
 			
-			<page index="4"/>
+			<page index="4"/><line type="break"/>
 			<address><aq>A Monsieur
 			Monsieur Henri Jules<line type="break"/> 
 			de <ul>Lindau,</ul> chez Monsieur<line type="break"/>
@@ -5092,7 +5092,7 @@
 			Zürch 3 Merz 76.</align> <line type="empty"/>
 			<line type="empty"/>
 			
-			<page index="4"/>
+			<page index="4"/><line type="break"/>
 			<address><ul>Herrn Lenz</ul><line type="break"/> 
 			abzugeben bey M. Röderer an der neuen Kirch<line type="break"/> 
 			zu <ul>Strasburg</ul></address></letterText>
@@ -5201,8 +5201,8 @@
 			<line tab="1"/>Ihr Brief findet mich hier, unter der Adreße an den Stabs Sekretair Boie. Ich umarme Sie mit vollem 
 			Herzen. Ewig der <line type="empty"/>
 			
-			<align pos="center">Ihrige Boie.</align> <line type="empty"/>
-			<page index="4"/> 
+			<align pos="center">Ihrige Boie.</align><line type="break"/> 
+			<page index="4"/><line type="break"/> 
 			<address>Herrn Herrn <ul>Lenz,</ul> Gelehrten<line type="break"/> 
 			in <ul>Straßburg</ul></address></letterText>
 		
@@ -5327,7 +5327,7 @@
 			<line tab="1"/>Wegen der Soldaten sey ruhig! Ists wahr daß Du nach Weymar kommst so werde ich wieder einmal 
 			eine Freude haben. Eine.</sidenote> <line type="empty"/>
 			
-			<page index="4"/>
+			<page index="4"/><line type="break"/>
 			<address>Herrn<line type="break"/> 
 			Herrn Herder<line type="break"/> 
 			Oberkonsistoralrath<line type="break"/> 
@@ -5520,7 +5520,7 @@
 			<sidenote pos="left" page="3" annotation="am linken Rand, vertikal">
 			<line tab="5"/>Der Dichter, verliebt.
 			<line tab="5"/>Ich <ul>dich</ul> besingen Phillis? – Nein
-			<line tab="5"/>Ich fühle dich zu sehr, um jetzt nicht stumm zu seyn.</sidenote>
+			<line tab="5"/>Ich fühle dich zu sehr, um jetzt nicht stumm zu seyn.</sidenote> <line type="empty"/>
 			
 			<page index="4"/><line type="break"/>
 			<address>Herrn<line type="break"/> 
@@ -5674,7 +5674,7 @@
 			
 			Zürich 19 März 1776. <line type="empty"/>
 			
-			<page index="2"/>
+			<page index="2"/><line type="break"/>
 			<address>Herrn Lenz.<line type="break"/> 
 			abzugeben<line type="break"/>
 			bey Herrn Mag. Röderer.<line type="break"/>
@@ -5772,7 +5772,7 @@
 			
 			Kayser wünscht zu wissen, wo Du bist. Ich bin ruhig. Er nicht so.<line type="break"/> 
 			<ul>Kaufmann</ul> wird ein herrlicher Mensch <ul>werden.</ul><line type="break"/>
-			Alles was ich izt schreiben kann. <ul>Lebe</ul> u: <ul>Liebe.</ul> Amen! D 22 Mz 76. L.
+			Alles was ich izt schreiben kann. <ul>Lebe</ul> u: <ul>Liebe.</ul> Amen! D 22 Mz 76. L. <line type="empty"/>
 			
 			<page index="2"/><line type="break"/>
 			<address><note>Textverlust</note>rn <ul>Lenz</ul> 
@@ -7137,7 +7137,7 @@
 			<line tab="5"/>hat sie mich davon vorher warnen lassen <insertion pos="top">durch ihn</insertion>
 			<line tab="5"/>und ich suchte das nicht zu hindern
 			<line tab="5"/>nur wenn alles gethan ist den letzten Genuß
-			<line tab="5"/>um ihr sagen daß ich sie erwarte <line type="empty"/></hand>
+			<line tab="5"/>um ihr sagen daß ich sie erwarte</hand> <line type="empty"/>
 			
 			<note>Röderers Hand</note><hand ref="11"> 
 			<address>An Herrn <aq>Lentz</aq><line type="break"/> 
@@ -7548,7 +7548,7 @@
 			<line tab="1"/>Z. hat alle 12 Ex. der Soldaten gleich an Herder geschickt, u. keines mehr. Haben Sie sie von H. nicht 
 			bekommen? Sagen Sie mir, kömmt der vortrefliche Mann nach W. oder nicht?</sidenote> <line type="empty"/>
 			
-			<note>Rückseite</note>
+			<note>Rückseite</note> <line type="empty"/>
 			
 			<address>Herrn <ul>Lenz</ul><line type="break"/>
 			Gelehrten <line type="empty"/>
@@ -7787,7 +7787,7 @@
 			<line tab="1"/>Wenn ein Vorhängeschloß vor meinen Coffre hättest wegen der Papiere wäre mirs sehr lieb. Dies 
 			schließt nicht ich habe den Schlüssel verloren <line type="empty"/>
 			
-			<note>mittig</note>
+			<note>mittig</note><line type="break"/>
 			<address>Herrn<line type="break"/>
 			Geh. Leg. Rath<line type="break"/>
 			Goethe</address> <line type="empty"/>
