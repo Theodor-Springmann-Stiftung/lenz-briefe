@@ -400,6 +400,8 @@
 			<locationDef index="61" name="Lübeck" ref="http://d-nb.info/gnd/4036483-5" />
 			
 			<locationDef index="62" name="Vasula (Wassula)" />
+			
+			<locationDef index="63" name="Karlsruhe" ref="http://d-nb.info/gnd/4029713-5" />
 
 
 		</locationDefs>
