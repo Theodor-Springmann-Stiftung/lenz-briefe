@@ -2,3 +2,7 @@
 - Zeilenumbrüche sind nicht semantisch bedeutscam, sondern imitieren die Word-Vorlage
 - page index="1" fehlt meistens
 - nach <page> ist ein semantisch bedeutsamer Zeilenumbruch oft nicht markiert
+- Oftmals sind die Reihenfolge von tags vertauscht: beispielsweise <note>, dann viele Zeilenumbrüche, dann der angemerkte Text
+- Hand muss nicht extra mit <note> angemerkt werden
+- Brief 122: Textverlust hat bei uns den nr und nicht den <note> tag, ebens. 130
+- Brief 135 fehlt
