@@ -1,0 +1,4 @@
+- Die Semantik der Fußnoten stimmt nicht
+- Zeilenumbrüche sind nicht semantisch bedeutscam, sondern imitieren die Word-Vorlage
+- page index="1" fehlt meistens
+- nach <page> ist ein semantisch bedeutsamer Zeilenumbruch oft nicht markiert
