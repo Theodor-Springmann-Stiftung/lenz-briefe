@@ -1242,7 +1242,7 @@
 
 <letterText letter="55">Strass. d. 13t julii 75
 <line type="empty" />
-<line type="break" /><hand ref="15"><note>Königs Hand</note>
+<line type="break" /><hand ref="15">
 <line tab="1"/>Eben komme ich von Buchsweiler zurück. desswegen eine so späte Antwort auf Ihr liebes herrliches Briefehen – ja wohl Briefchen! – aber liegt nicht Dein gantzes, liebendes Herz darinne dies ersetzt mir alles – meine ganze Seele umfaßt Dich dafür, u. seegnet laut – Amen Amen! – ich habe Freunde in Buchs. verlassen – den würdigen Rathsemhausen verlassen, ländliche Freuden – u doch ist mir wohl daß ich hier bin – ich bin in, <it>meinem Eigenthum</it>. diess geht mir über alles– Raths. will ich soll ihn in Ihr Andenken zurückrufen, es ist ihm kostbar, er verehrt Sie, dann er kennt Ihren ganzen Wert – er hat es mir oft wiederholt ihn nicht bei Ihnen zu vergessen – dieser liebe Mann! warum kann ich nicht immer um ihn leben! so einen Mann – u ich heurate noch – unsre Rehfeldin ist noch immer das muntre schwindliche Weib, aber dabei redlich u gut – ich habe ihr die Stelle aus Ihrem Brief für sie gelesen u es hat ihr wohl gethan – sie wollte mir einen Brief für Sie mitgeben, aber unter den Freuden u Herrlichkeiten des Lebens, vergass sie ihn. unsre beyden jüngern Printzen waren da, die haben alles froh gemacht – hat Ihnen unsre Hessin die Stelle aus Lentzens Brief an mich, ausgeschrieben? hier ist noch einmahl „ich bitte sie sagen Sie doch der theuren Herderin viel Gutes von mir, u welche Aufmunterung u Erquickung mir ihr Beyfall ist. ich wünschte ich kennete ihren Geschmack u könnte für sie allein ein Stück schreiben, sie sollte mir so viel werth seyn als das ganze Publicum. sagen Sie ihr ich habe eine Lucretia geschrieben, vieleicht daß Götte sie drucken läßt, sie möge alsdann auf die Sceenen acht haben in welchen Flavia vorkommt, u mir ihre Meinung drüber wissen lassen. ihr Gefühl allein soll mir der Probierstein all der weiblichen Characktere sein die ich mir vorzüglich geglückt glaube“ – u dencken Sie diessen neuen lieben Freund verliehre ich vielleicht bald – u auf lange – hier fühle ich mich wieder in der Welt, ob ich schon in Augenblicken von oben herunter auf sie blicke – ich soll eine Fürbitte bey Ihnen für ihn einlegen – Eurer beyden Schattenriß soll ihm Stärkung Trost u Freude auf seiner langen Reise seyn – wären sie auch nur halb gut – er will das übrige hinzusetzen u glücklich dabey seyn – doch hier kommt er selbst, zu bitten – zu flehen – ich will ihm noch einmahl die Conditionen weisen unter welchen er sie haben soll – aber dafür will <it>ich</it> davon frey sein – selbst mein Gesicht das <it>Sie kennen,</it> sagt Ihnen warum – u dazu – habe ich es unsrer Fridericke abgeschlagen, sie hat die Ursachen gebilligt, sie mag sie Ihnen sagen – kriechet immer mit Eurem Buben auf Teppichen herum – da wo Agesilaus unter seinen Kindern auf einem Steckenpferde herum reitet, ist er mir am grössten Luise.
 <line type="empty" />
 <line type="break" />Das Geld ist ganz recht, noch rechter daß <it>Sie</it> mit mir zufrieden sind.
@@ -1861,7 +1861,7 @@
 </letterText> 
 
 <letterText letter="91"><hand ref="18">
-<line tab="1"/>Mein lieber Lindau <note>Textverlust</note> zu Herrn v. Kniestätt. Er ist der einzige am Hof den ich kenne, und der wird Sie mit allen ehrlichen Leuten bekannt machen! – Ich küße Sie herzlich; hier haben Sie einen Brief für ihn. – Leben Sie wohl. Schl.
+<line tab="1"/>Mein lieber Lindau <tl></tl> zu Herrn v. Kniestätt. Er ist der einzige am Hof den ich kenne, und der wird Sie mit allen ehrlichen Leuten bekannt machen! – Ich küße Sie herzlich; hier haben Sie einen Brief für ihn. – Leben Sie wohl. Schl.
 <line type="break"/>E. d 23 Dec. 1775.</hand>
 <line type="empty" />
 <line type="break" /><hand ref="1">
@@ -1930,7 +1930,7 @@
 <line type="empty" />
 <line type="break" />Mein Freund Sulzer ist auf einer Reise ins Hannöverische, um die Beschaffenheit der dortigen Viehseuche zu untersuchen.
 <line type="empty"/>
-<line tab="1"/>Und meine Schwester in Lion – bald hätt’ ich Ihre ver<note>Textverlust</note>liche Nachfrage nicht beantwortet – befindet sich wo<note>Textverlust</note> wünscht aber sehnlich, künftiges Frühja<note>Textverlust</note> land zurückzukommen. Es wäre freylich <note>Textverlust</note> ich ihr bis Straßburg entgegen reisen kön<note>Textverlust</note> Die Stollberge sind schon vor einigen Woch<note>Textverlust</note> gereist und haben sich nur zwey Tage a<note>Textverlust</note> Fahren Sie fort mein Freund und von der Red<note>Textverlust</note> meines Herzens überzeugt zu seyn! Der Himmel laß es Ihnen sowohl gehen, als es Ihnen wünscht
+<line tab="1"/>Und meine Schwester in Lion – bald hätt’ ich Ihre ver<tl></tl>liche Nachfrage nicht beantwortet – befindet sich wo<tl></tl> wünscht aber sehnlich, künftiges Frühja<tl></tl> land zurückzukommen. Es wäre freylich <tl></tl> ich ihr bis Straßburg entgegen reisen kön<tl></tl> Die Stollberge sind schon vor einigen Woch<tl></tl> gereist und haben sich nur zwey Tage a<tl></tl> Fahren Sie fort mein Freund und von der Red<tl></tl> meines Herzens überzeugt zu seyn! Der Himmel laß es Ihnen sowohl gehen, als es Ihnen wünscht
 <line type="empty" />
 <line type="break" /><align pos="right">Ihr G.</align>
 <page index="4"/><address>An Herrn
@@ -1952,7 +1952,7 @@
 </letterText> 
 
 <letterText letter="95">
-<line tab="1"/>Lieber Bruder ich trag etwas im Sinn das ich Dir sagen will und wozu ich all Deine Liebe und Theilnehmung auffordre mir beyzustehn! Ich habe Bedürfniss nach einem Stück dramatischer Poesie, das ich ganz nach meinen Ideen und Phantasien voll und prächtig componieren mögte. Und lass Dir jezt klagen liebster Junge daß unter dem hellen Haufen gedrukten Wesens nicht ein Blatt für mich ist! Da bin ich drauf gefallen mich an Dich zu wenden und Dir mit allem trauen und wähnen die Grille zu entdecken, ob Du was machen willst. Es wär ein schönes Ding drum wann Du mir und Dir und allen die Du liebst, so was gäbst und ich drinn auch das treiben meines Geists da abreiben könnte. Ich mag für diessmal nicht lang von reden, denn alles beruht nur für erst darauf ob ich Dir so was zumuthen darf und wie sich Dein inneres darzu geberdet wann Du’s überdenkst. Es b<note>Textverlust</note> nicht Cantate nicht Lied nicht <note>Textverlust</note>rium und all das Ge<note>Textverlust</note> solte würkliche <aq>Opera</aq> <note>Textverlust</note> <aq>Drame heroique</aq> der <note>Textverlust</note> Fühle hier meinen <note>Textverlust</note> fürchte mich nicht mehr z<note>Textverlust</note> wie ihr Leute seyd <note>Textverlust</note> was das heißt: <note>Textverlust</note>
+<line tab="1"/>Lieber Bruder ich trag etwas im Sinn das ich Dir sagen will und wozu ich all Deine Liebe und Theilnehmung auffordre mir beyzustehn! Ich habe Bedürfniss nach einem Stück dramatischer Poesie, das ich ganz nach meinen Ideen und Phantasien voll und prächtig componieren mögte. Und lass Dir jezt klagen liebster Junge daß unter dem hellen Haufen gedrukten Wesens nicht ein Blatt für mich ist! Da bin ich drauf gefallen mich an Dich zu wenden und Dir mit allem trauen und wähnen die Grille zu entdecken, ob Du was machen willst. Es wär ein schönes Ding drum wann Du mir und Dir und allen die Du liebst, so was gäbst und ich drinn auch das treiben meines Geists da abreiben könnte. Ich mag für diessmal nicht lang von reden, denn alles beruht nur für erst darauf ob ich Dir so was zumuthen darf und wie sich Dein inneres darzu geberdet wann Du’s überdenkst. Es b<tl></tl> nicht Cantate nicht Lied nicht <tl></tl>rium und all das Ge<tl></tl> solte würkliche <aq>Opera</aq> <tl></tl> <aq>Drame heroique</aq> der <tl></tl> Fühle hier meinen <tl></tl> fürchte mich nicht mehr z<tl></tl> wie ihr Leute seyd <tl></tl> was das heißt: <tl></tl>
 <page index="2"/>
 <line tab="1"/>Vielleicht begegnet Dein Geist hier unmittelbar dem meinen und Du verstehst mich dann gleich. Könt ich Dir so sagen wie das doch Verdruss ist wann man so was braucht und nichts hat. Siehe das schöne heroisch, simple, verliebte Zeitalter der Griechen, und was so ein Süjet da heruasgenommen für liebe Reize darböte – Ich will nur schweigen! Bitte Dich antworte mir gleich auf meine Idee und lass es gut aus fallen. Wilst Du Dich mit einlassen so reden mehr, und wilst Du noch etwas weiter fragen wie ichs für die Macht der Darstellung der Musik am besten halte – so rede und ich antworte. Nur schlag mir wenigstens den Zunder nicht aus der so gut gefangen hat, und lass es dann während so langs will biss Feuer gibt. Adieu. Adieu.
 <line type="empty" />
@@ -2023,7 +2023,7 @@
 <line tab="1"/>Und weiter unten etwa in der zweyten Scene zweyten Ackts, wo die Verwechslung der Kleider
 <page index="3"/>geschieht, als Osmann Pietro fragt: Und was soll aus dir werden? und dieser antwortet: Kümmerts mich doch nicht„ – könnte er frostig lachend hinzusetzen, „ich hab’ ja auch noch Verwandte in Spanien die ich aufsuchen kann wenns aufs höchste kommt“
 <line type="empty"/>
-<line tab="1"/>Sie sehen daß dies die Folgen von Ihren Anmerkungen sind, für die ich Ihnen herzlichst danke. <del>Doch</del> Man arbeitet bisweilen so flüchtig weg, ohne sich genug umzusehen nach Lesern und Zuschauern und nach ihren Ideefolgen. Doch fällt Ihre Beschuldigung Plautussen unendlich mehr zur Last als mir, der <insertion pos="top">ich</insertion> durch die Veränderung des Au<note>textverlust</note>halts des alten Alonzo, durch die lange Zeit des Ausbleibens, durch die türkische Kleidung, am meisten aber durch den alle andere Erinnerungen verschlingenden Enthusiasmus der Freundschaft in der Seele Pietros (wohin auch die Aufschrift des Stücks weiset) allen Störungen der Illusion wie mich deucht itzt wohl hinlänglich ausgebeugt habe.
+<line tab="1"/>Sie sehen daß dies die Folgen von Ihren Anmerkungen sind, für die ich Ihnen herzlichst danke. <del>Doch</del> Man arbeitet bisweilen so flüchtig weg, ohne sich genug umzusehen nach Lesern und Zuschauern und nach ihren Ideefolgen. Doch fällt Ihre Beschuldigung Plautussen unendlich mehr zur Last als mir, der <insertion pos="top">ich</insertion> durch die Veränderung des Au<tl></tl>halts des alten Alonzo, durch die lange Zeit des Ausbleibens, durch die türkische Kleidung, am meisten aber durch den alle andere Erinnerungen verschlingenden Enthusiasmus der Freundschaft in der Seele Pietros (wohin auch die Aufschrift des Stücks weiset) allen Störungen der Illusion wie mich deucht itzt wohl hinlänglich ausgebeugt habe.
 <line type="empty"/>
 <line tab="1"/>Für die Nachrichten von Goethen, Wieland, danke ich zärtlichst. Die von Ihnen bitte aber sobald es seyn kann mit Urkunden zu belegen, damit ich sie hier meinen Freunden mittheilen kann. Fahren Sie fort mir Ihren schätzbaren Briefwechsel zu gönnen, und von Zeit zu Zeit was von Ihrer Fräulein Schwester was einzumischen die ich dem leichtsinnigen Gallien mißgönne. Ich lebe hier ziemlich wohl und <ul>ausgebreitet,</ul> nur muß ich alles was mich etwas preßt sehr sorgfältig verstecken. Meine
 <line type="empty" />
@@ -2045,7 +2045,7 @@
 <page index="3"/>
 <line tab="1"/>Ihr geht also sicher nach Amerika. Auch darüber hätt ich viel mit euch zu reden. NB. das läßt sich nur reden. Wenn ihr nach Amerika geht, müßt Ihr nicht <ul>umsonst dagewesen</ul> seyn, so wenig als euer Peter der euch in allem unterstützen wird. Mein Rath soll Euch bis dahin begleiten
 <line type="empty"/>
-<line tab="1"/>Kennt Ihr Gaudi Anweisung für Offiziers von der Infanterie Feldschanzen anzulegen p. Schafft euch das an, es kann euch brauchbar seyn und ist nicht schwer. Hier ists nicht zu h<note>Textverlust</note> sonst schickt’ ichs euch.
+<line tab="1"/>Kennt Ihr Gaudi Anweisung für Offiziers von der Infanterie Feldschanzen anzulegen p. Schafft euch das an, es kann euch brauchbar seyn und ist nicht schwer. Hier ists nicht zu h<tl></tl> sonst schickt’ ichs euch.
 <line type="empty"/>
 <line tab="1"/>Meldt mir wenigstens was aus eurem Projekt und aus eurem Peter wird und wenn ihr nach Weymar kommt, grüßt Goethen. Ists wahr daß er ganz dableibt? Sagt ihm ich könnte ihm noch nicht schreiben. Ihn mündlich zu sprechen wünschte sehr. Auch soll er Wieland grüssen von mir.
 <line type="empty" />
@@ -2085,7 +2085,7 @@
 <line tab="1"/>Lavater! möchtest Du ein Bild in Deine Physiognomik, mit dem Du das Ideal weiblicher Vollkommenheit ausgedruckt bekommst. Von einem erhabenen Stande, durch persöhnliche Eigenschaften unendlich weit über denselben erhaben, die Gelassenheit, die Bescheidenheit, die Aquieszenz in alles was die ihr gewiß innig vertraute Gottheit über sie verhängt – mit allem Feuer des ungewöhnlichsten erhabensten Genies, den scharfen Blick durch das Innerste aller Sachen, das Eigentümliche, das unumstößlich Feste, das Weitumfassende aller ihrer Urtheile, die Kenntniß der Welt die sich nicht allein auf die Denkungsart der Grossen deren Herzen sie alle wie in Händen hat, sondern bis auf das Fassungs- und Empfindungsvermögen des Allergeringsten ausdehnt, so daß alle ihre Befehle und Aufträge
 <page index="3"/>an ihre Untergebenen aus den Wünschen derselben hervorgeholt scheinen, so daß sie eine Welt regieren könnte ohne daß sie es inne würde – alles dieses, alles alles – und mehr – willst Du sie – bethe –
 <line type="empty"/>
-<line tab="1"/>Durch verborgene Wirkungen höherer Mächte muß sie dazu gebracht werden – denn es ist nicht falsche Bescheidenheit – es ist das zärteste Gefühl weiblicher Schüchternheit, das sie so gänzlich abgeneigt macht, irgend einem Menschlichen Anhalten ihren Schattenr<note>Textverlust</note> mitzutheilen. Gott welche Seele mahlt sich in dem Profile – welch ein Meisterstück von edler Erziehung unter den Grossen, mit alledem verbunden was ein unauslöschlicher Durst nach allem was vollkommen ist, was Kenntniß heißt und das Herz eröfnet, aus uns selber machen kann. Und denn alle die Hülfsmittel, die Constellation aller äußern Umstände – auf dem Lande gepflanzt, erzogen, an einem Hofe zur Reiffe gebracht und jetzt in seiner ganzen Liebenswürdigkeit vollendet um Tausend Elend und Einen zu einem Gott zu machen –
+<line tab="1"/>Durch verborgene Wirkungen höherer Mächte muß sie dazu gebracht werden – denn es ist nicht falsche Bescheidenheit – es ist das zärteste Gefühl weiblicher Schüchternheit, das sie so gänzlich abgeneigt macht, irgend einem Menschlichen Anhalten ihren Schattenr<tl></tl> mitzutheilen. Gott welche Seele mahlt sich in dem Profile – welch ein Meisterstück von edler Erziehung unter den Grossen, mit alledem verbunden was ein unauslöschlicher Durst nach allem was vollkommen ist, was Kenntniß heißt und das Herz eröfnet, aus uns selber machen kann. Und denn alle die Hülfsmittel, die Constellation aller äußern Umstände – auf dem Lande gepflanzt, erzogen, an einem Hofe zur Reiffe gebracht und jetzt in seiner ganzen Liebenswürdigkeit vollendet um Tausend Elend und Einen zu einem Gott zu machen –
 <line type="empty"/>
 <line tab="1"/>Verzeyh mir Lavater! die Romantische Sprache. lsts Idololatrie so kann sie mir Gott nicht zurechnen, es ist sein Geschöpf: sein Bild. In einem Jahr reis’ ich wohl nach Italien um alles das an den todten Werken der Kunst zu vergessen zu suchen. Noch ist mein Reisegefährt zu sehr an Strasbg. geheftet.
 <line type="empty" />
@@ -2409,7 +2409,7 @@
 <line type="empty" />
 <line type="break" /><align pos="center"><fn index="8"><anchor>×</anchor></fn><!-- Verweiszeichen? --> <ul>Klinger</ul></align>
 <page index="3"/>
-<line tab="1"/>Das Drama ist ein Meisterstück. Aber die Musik war nicht dabey. Sende sie mir lieber – ob ich gleich nicht weiß ob sie mit darzu kan gedruckt werden. Die Vertheidigung der Wolken wird hier unter uns circulieren. Schloßer schrieb drunter: <aq>Helas tais toi Jean Jaq. ils ne t’entendront pas</aq> – und das ist herrlich wahr! Darf ich mich unterstehen Dir aufzutragen eine Empfehl. vor meines Goethes herrliche Schwester zu bringen. O! o! Kl. dankt Dir 1000 mal für <note>Textverlust</note> Petrarch. Er hat an Petrarch diesen <note>Textverlust</note> ter sein ganzes Labsal gefunden <note>Textverlust</note> die <aq>Canzonette sorella</aq> übersetzt die Du einmal sehen sollst. Steiner wird Dir Expl. zugeschickt haben. Er <insertion pos="top"><fn index="8"><anchor>×</anchor></fn></insertion> grüßt Dich und ist Dein wie ich! Kaufm. macht mir viel Freude denn er ist eine kostbare Seele. Lavater wird immer mehr mein! O was er von seinen Feinden gepeinigt wird! Gut u. wohl Dir daß Du’s nicht so weißt. Du würdest Höllenangst für ihn leiden wie wir alle. Ich will was für ihn thun u. wär’s mein Blut und Leben, das ich ihm willig darbringe weil er ein <ul>Heiliger</ul> ist. Harre es wird werden!!!
+<line tab="1"/>Das Drama ist ein Meisterstück. Aber die Musik war nicht dabey. Sende sie mir lieber – ob ich gleich nicht weiß ob sie mit darzu kan gedruckt werden. Die Vertheidigung der Wolken wird hier unter uns circulieren. Schloßer schrieb drunter: <aq>Helas tais toi Jean Jaq. ils ne t’entendront pas</aq> – und das ist herrlich wahr! Darf ich mich unterstehen Dir aufzutragen eine Empfehl. vor meines Goethes herrliche Schwester zu bringen. O! o! Kl. dankt Dir 1000 mal für <tl></tl> Petrarch. Er hat an Petrarch diesen <tl></tl> ter sein ganzes Labsal gefunden <tl></tl> die <aq>Canzonette sorella</aq> übersetzt die Du einmal sehen sollst. Steiner wird Dir Expl. zugeschickt haben. Er <insertion pos="top"><fn index="8"><anchor>×</anchor></fn></insertion> grüßt Dich und ist Dein wie ich! Kaufm. macht mir viel Freude denn er ist eine kostbare Seele. Lavater wird immer mehr mein! O was er von seinen Feinden gepeinigt wird! Gut u. wohl Dir daß Du’s nicht so weißt. Du würdest Höllenangst für ihn leiden wie wir alle. Ich will was für ihn thun u. wär’s mein Blut und Leben, das ich ihm willig darbringe weil er ein <ul>Heiliger</ul> ist. Harre es wird werden!!!
 <line type="empty" />
 <line type="break" /><align pos="center">Leb wohl ewiglieber Bruder. K
 <line type="empty" />
@@ -2566,7 +2566,7 @@
 <line tab="1"/>Womit habe ich es bey Ihnen verdient Sie so dreist mit meinen Commissionen zu beschweren. Sie einen Mann im Amt,
 <page index="3"/>ein wirksames Glied des Staats mit den Commissionen eines Ebentheurers. Doch hoffe ich wird es Sie <ul>am Ende</ul> nicht gereuen, sich mit mir abgegeben zu haben.
 <line type="empty"/>
-<line tab="1"/>Ihr Musäum dürfen Sie nur dem ersten besten Buchhändler herschicken, für den Abg<note>Textverlust</note> stehe ich Ihnen. Etwa Herrn <ul>Stein</ul> oder Herrn <ul>Bauer</ul> oder beyden, zugleich legen Sie noch einige Anzeigen für die auf dem Lande und in den andern Städten von Elsaß befindliche dabey, auch für Mümpelgard die Schweitz hinunter wo ich überall Zusammenhang habe.
+<line tab="1"/>Ihr Musäum dürfen Sie nur dem ersten besten Buchhändler herschicken, für den Abg<tl></tl> stehe ich Ihnen. Etwa Herrn <ul>Stein</ul> oder Herrn <ul>Bauer</ul> oder beyden, zugleich legen Sie noch einige Anzeigen für die auf dem Lande und in den andern Städten von Elsaß befindliche dabey, auch für Mümpelgard die Schweitz hinunter wo ich überall Zusammenhang habe.
 <line type="empty"/>
 <line tab="1"/>Auch dafür werde ich Sie künftig schon mit mehrerem versorgen. Keine Erzehlung wie Zerbin aber ein kleiner Roman in Briefen von mehreren Personen, der einen wunderbaren Pendant zum Werther geben dürfte. Doch ist alles dies nur noch Entwurf. Von Fremden aber hab ich manche interessante Aufsätze liegen. Melden Sie mir doch gütigst mehr literarische Neuigkeiten.
 <page index="4"/>
@@ -2665,7 +2665,7 @@
 </letterText> 
 
 <letterText letter="135">
-<line tab="1"/>Ehe Du die Pap<note>h</note>piere lie<note>ß</note>st muß ich Dir sagen daß ich noch lebe und vors erste auch noch init dem Quartier in der Welt verliebt nehme.
+<line tab="1"/>Ehe Du die <subst><del><nr extent="4"></nr></del><insertion>Papp</insertion>iere</subst> lie<subst><del>ß</del><insertion>st</insertion></subst> muß ich Dir sagen daß ich noch lebe und vors erste auch noch init dem Quartier in der Welt verliebt nehme.
 <line type="empty" />
 <line type="break" />Nun kannst Du lesen.
 <line type="empty"/>
@@ -2763,7 +2763,7 @@
 <line type="break"/><ul>Kaufmann</ul> wird ein herrlicher Mensch <ul>werden.</ul>
 <line type="break"/>Alles was ich izt schreiben kann. <ul>Lebe</ul> u: <ul>Liebe.</ul> Amen! D 22 Mz 76. L.
 <page index="2"/>
-<line type="break"/><address><note>Textverlust</note>rn <ul>Lenz</ul> in <ul>Straßburg.</ul></address>
+<line type="break"/><address><tl></tl>rn <ul>Lenz</ul> in <ul>Straßburg.</ul></address>
 </letterText> 
 
 <letterText letter="142">
@@ -2977,9 +2977,9 @@
 <line type="empty"/>
 <line tab="1"/>Sie sind also nicht nach Darmstadt gekommen, liebster Freund? Dahin haben sowohl H. Zimmermann als ich Briefe und Geld geschickt. Beides wird hoff ich nun in Ihren Händen seyn. Sagen Sie mir doch bald, wie’s Ihnen in Weymar geht, und ob Sie sich da fixiren. Herr Steenkerk gilt hier, durch seine Soldaten, allethalben für einen sehr glücklichen Nachahmer von Lenz. Wir haben jetzt die Schrödersche Gesellschaft von Hamburg hier, und ich habe schon einige herrliche Abende in der Comödi zugebracht. Warum haben Sie nicht ein ungedrucktes Stück in Schröders Hände zu spielen gesucht? Er spielt künftige Woche eins von Klingern, das ich sehr neugierig bin zu sehen. Ich wollte, Sie ließen sich einmal verführen, uns hier zu besuchen. Herr Zimmermann wenigstens und ich würden Sie mit offnen Armen empfangen, und ich könnte Ihnen bey mir ein recht artiges Gartenstübchen anbieten, das Ihnen schon ge
 <page index="2"/>fallen sollte. Von Ihren beyden Sachen, die Helw. hat, hab ich noch keine Bogen. Das andre ist von unsrer Seite völlig unterdrückt. Mein Verleger Weygand schickte mir vor einigen Tagen Anekdoten zu Werthers Freuden von Göthens Hand geschrieben fürs Museum zu, die ich wieder zurückgeschickt, weil ich sie Seinet- und Meinetwegen nicht drucken lassen möchte. Auch weiß G. vielleicht nichts davon, daß ich sie gehabt. Sagen Sie’s ihm, und bitten Sie ihn, sie wo möglich wegen hiesiger Freunde zu unterdrücken. Wider N. jetzt auch noch was zu sagen, da die Freuden längst vergessen sind, wäre ja zu spät. Grüßen Sie Göthen, und machen Sie, daß er mir ein paar Blättchen für Mus. gibt. Werden Sie ihm in W. auch nicht ganz ungetreu. Wenn Sie eine Woche später nach Darmstadt gekommen wären, hätten Sie Claudius da getroffen. Wir haben einen herrlichen Abend hier gelebt. Lindau ist Lieutenant im Wutgenauischen Regiment, das, so viel ich
-<page index="3"/>weiß, noch nicht in Marsch ist. Ein Brief, an seinen Vetter Lindau, Lieutenant in der Garde zu Kassel adressirt, kömmt gewiß in seine Hände. Künftig, wenn er in Amerika, können S<note>Textverlust</note> durch mich so oft schreiben, als Sie wollen, ohne daß <note>Textverlust</note> Ihnen was kostet. Schreiben Sie mir doch ein bischen v<note>Textverlust</note> Ihrer Reise und Weymar, u. vergessen nicht ganz
+<page index="3"/>weiß, noch nicht in Marsch ist. Ein Brief, an seinen Vetter Lindau, Lieutenant in der Garde zu Kassel adressirt, kömmt gewiß in seine Hände. Künftig, wenn er in Amerika, können S<tl></tl> durch mich so oft schreiben, als Sie wollen, ohne daß <tl></tl> Ihnen was kostet. Schreiben Sie mir doch ein bischen v<tl></tl> Ihrer Reise und Weymar, u. vergessen nicht ganz
 <line type="empty" />
-<line type="break" />Ihres ergebensten <note>Textverlust</note>
+<line type="break" />Ihres ergebensten <tl></tl>
 <line type="empty" />
 <line type="break" />Schreiben Sie mir künftig lieber über Braunschweig.
 <page index="4"/>
@@ -3027,7 +3027,7 @@
 <line type="empty"/>
 <line tab="1"/>Allenfalls kann er noch ein Exemplar für den Minister beischließen, das ich den jungen Herrn v. Hompesch ersuchte in meinem Namen seinem Herrn Vater zuzuschicken. Übrigens würde es mich sehr freuen von Werthes ein Briefchen hieher zu erhalten.
 <line type="empty"/>
-<line tab="1"/>Meine Soldaten müßt’ Ihr jetzt schon haben. Sie sind bey Weidmanns Erben gedruckt. Wo nicht so schick ich Euch bald einige Exemplare hinü<note>Textverlust</note>
+<line tab="1"/>Meine Soldaten müßt’ Ihr jetzt schon haben. Sie sind bey Weidmanns Erben gedruckt. Wo nicht so schick ich Euch bald einige Exemplare hinü<tl></tl>
 <line type="empty" />
 <line type="break" />Grüß den guten Kaiser.
 <line type="empty" />
@@ -3533,7 +3533,7 @@
 <line tab="5"/>nur wenn alles gethan ist den letzten Genuß
 <line tab="5"/>um ihr sagen daß ich sie erwarte</hand>
 <line type="empty" />
-<line type="break" /><note>Röderers Hand</note><hand ref="11"> <address>An Herrn <aq>Lentz</aq>
+<line type="break" /><hand ref="11"> <address>An Herrn <aq>Lentz</aq>
 <line type="break"/>bey Herrn <aq>Doctor Goethe</aq>
 <line type="break"/>zu Weimar.</address></hand>
 <line type="empty" />
@@ -3758,7 +3758,7 @@
 
 <letterText letter="195"><align pos="center">Den 17. Jun. 1776.</align>
 <line type="empty"/>
-<line tab="1"/>Ich schreibe, daß Sie mein Stillschweigen nicht andem Ursachen beymeßen, lieber L. Die Krankheit und izt der Tod meines Chefs des alten Feldmarschalls, der mich hieher gezogen, und viel guten Willen u. Freundschaft für mich hatte, hat mich sehr zerrüttet und verwirrt mich noch. Ich habe sehr viel zu arbeiten, u. kann nichts für mich thun, bis das Departement wieder einen Vorgesetzten hat. Gewinnen kann ich wenig dabey; verlieren viel <note>Textverlust durch ausgeschnittenes Papier</note> ten Sie doch Lindaus unbesonnenes Blatt nicht drucken lassen! Es kann ihm so leicht schaden, wenn’s bekannt wird. H. hat mir noch nicht geantwortet, aber seyn Sie ruhig. Sobald ich Antwort habe, schick ich sie Ihnen wenigstens gleich zu, wenn ich auch nicht dabei sollte schreiben können. Leben Sie wohl
+<line tab="1"/>Ich schreibe, daß Sie mein Stillschweigen nicht andem Ursachen beymeßen, lieber L. Die Krankheit und izt der Tod meines Chefs des alten Feldmarschalls, der mich hieher gezogen, und viel guten Willen u. Freundschaft für mich hatte, hat mich sehr zerrüttet und verwirrt mich noch. Ich habe sehr viel zu arbeiten, u. kann nichts für mich thun, bis das Departement wieder einen Vorgesetzten hat. Gewinnen kann ich wenig dabey; verlieren viel <tl></tl> ten Sie doch Lindaus unbesonnenes Blatt nicht drucken lassen! Es kann ihm so leicht schaden, wenn’s bekannt wird. H. hat mir noch nicht geantwortet, aber seyn Sie ruhig. Sobald ich Antwort habe, schick ich sie Ihnen wenigstens gleich zu, wenn ich auch nicht dabei sollte schreiben können. Leben Sie wohl
 <line type="empty" />
 <line type="break" />Boie.
 <line type="empty"/>
@@ -3774,7 +3774,7 @@
 <line type="break"/>Gelehrten
 <line type="empty" />
 <line type="break" />Bey Herrn D. Göthe.
-<line type="break"/>Weym<note>Textverlust</note></address>
+<line type="break"/>Weym<tl></tl></address>
 <line type="empty" />
 <line type="break" /><note>Lenz’ Hand, Entwurf zu Brief an Lauth vom 17. Juni 1776</note><hand ref="1">
 <line tab="1"/>1) nicht ein Wort teutsch reden in Lyvrey gehen aufwärts bey Zürch kriegst 20 bis 25 <fn index="5"><anchor>#</anchor></fn> eine Livrey Obristen Kleidungsstücke an Wäsche Schuhe u. Strümpfen nicht sich wenigstens auf 3 Jahr engagiren läßt er sich ihrer uberwendig macht so wird ihm das Reisegeld vom Gehalt abgezogen Reisegeld von Strasb. nach Lübeck von da geht er zu Wasser nach Pernau.
@@ -3811,7 +3811,7 @@
 <line type="empty" />
 <line type="break" /><note>spätere Notizen</note> Daß alle Bürger itzt drauf rechen könenn daß die herzen ihrer Weiber an den Soldaten hängen die ledig sind.
 <line type="empty"/>
-<line tab="1"/>Ich habe Eckhafen hier auf einem Conzert bey Hofe gesprochen und viel von Mannheim mit ihm ger<note>Textverlust</note> Er ist wohl zu alt und zu wohl in Gotha, als daß e<note>Textverlust</note> ausserordentlich vortheilhafte Bedingungen zu Ihne<note>Textverlust</note> translocirt werden könnte. Er erbietet sich aber g<note>Textverlust</note> wenn Sie ihm junge Mannheimer zuschicken wollen, sie auf alle mögliche Weise zuzustutzen und er ist in der That der Mann dazu. Wie sehr wünschte ich unserm Freunde Müller eine Unterredung mit ihm. Es freute mich wie ein Geschenk, daß er über unsere gewöhnlichen Schauspieler und ihre Gebärdungen mit mir auf ein Haar zusammentraf. Sagen Sie doch das wenn es seyn kann einmal dem Graf Portia. Hier ist ein Liebhabertheater für Adel und Bürger, wo alle elende Schauspielerregeln verbannt sind. Ueberhaupt interessirt sich der Herzog und beide Herzoginnen ungemein für deutsche Litteratur, mehr als ich sagen darf.
+<line tab="1"/>Ich habe Eckhafen hier auf einem Conzert bey Hofe gesprochen und viel von Mannheim mit ihm ger<tl></tl> Er ist wohl zu alt und zu wohl in Gotha, als daß e<tl></tl> ausserordentlich vortheilhafte Bedingungen zu Ihne<tl></tl> translocirt werden könnte. Er erbietet sich aber g<tl></tl> wenn Sie ihm junge Mannheimer zuschicken wollen, sie auf alle mögliche Weise zuzustutzen und er ist in der That der Mann dazu. Wie sehr wünschte ich unserm Freunde Müller eine Unterredung mit ihm. Es freute mich wie ein Geschenk, daß er über unsere gewöhnlichen Schauspieler und ihre Gebärdungen mit mir auf ein Haar zusammentraf. Sagen Sie doch das wenn es seyn kann einmal dem Graf Portia. Hier ist ein Liebhabertheater für Adel und Bürger, wo alle elende Schauspielerregeln verbannt sind. Ueberhaupt interessirt sich der Herzog und beide Herzoginnen ungemein für deutsche Litteratur, mehr als ich sagen darf.
 <line type="empty"/>
 <line tab="1"/>Daß es mir wohl geht brauch ich Ihnen nicht zu sagen, sonst blieb’ ich nicht so lange. Grüssen Sie doch alle guten Freunde und behalten mich lieb.
 <line type="break"/>Lenz
@@ -3917,13 +3917,13 @@
 <line type="break"/>1 Antolagenhemde
 <line type="break"/>Schnallen
 <line type="break"/>Sporen
-<line type="break"/>Ein Pack Pappier im Boden des Coffers der nicht e<note>Textverlust</note> wird – Widderhörner
+<line type="break"/>Ein Pack Pappier im Boden des Coffers der nicht e<tl></tl> wird – Widderhörner
 <line type="empty"/>
 <line/> 1 Degen
 <line type="break"/>1 Klinge vom Herzog
 <line type="break"/>1 <insertion pos="top">silberne</insertion> Uhr mit Berlok
 <line type="break"/>1 Paar Ueberschuh (bey Kalb stehende)
-<page index="4"/><note>links</note> <pe> grüß Klinger vielmalen</pe>
+<page index="4"/><note>links</note> <pe>grüß Klinger vielmalen</pe>
 <line type="empty"/>
 <line tab="1"/>Wenn ein Vorhängeschloß vor meinen Coffre hättest wegen der Papiere wäre mirs sehr lieb. Dies schließt nicht ich habe den Schlüssel verloren
 <line type="empty" />
@@ -4195,11 +4195,11 @@
 <line type="empty"/>
 <line tab="1"/>Die Silhouette ist mit Deines Engels Wissen an Dich kommen und so gut <del>als</del> Deinetwegen gemacht worden als Lavaters halben. Lese dies beygefügte <aq>Billett</aq> v. <aq>Mslle</aq> K.
 <line type="empty"/>
-<line tab="1"/>Nachricht von <ul>Deiner W:</ul> Sie ist noch immer zu Schweighusen bey ihrem Vater auf seinen Gütern. Der von O–ch hat sie besucht auf ein paar Tage, ist itzt wieder zurück, eine Stunde weit von da ist vor 14 Tagen in einem Dorf ein Brand gewesen <note>Textverlust</note> 60 Häuser und 52 volle Scheunen wegbrannte. Einige Personen Weiber und <note>Textverlust</note> werden gemißt, eine Strecke vom Ort weg kam eine Bauersfrau auf der <note>Textverlust</note>ße nieder. Die <ul>W.</ul> ließ ein paar Viertel Frucht ma<del>h</del>len und das Brod unter die Verunglückten austheilen. Wie sie an <insertion pos="top">Mslle K.</insertion> schreibt, so kommt sie den Leuten dort <note>Textverlust</note>mer dicker vor, sie freut sich da zu seyn und erinnert sich in diesen Gegenden <note>Textverlust</note> ihre ersten Jahre.
+<line tab="1"/>Nachricht von <ul>Deiner W:</ul> Sie ist noch immer zu Schweighusen bey ihrem Vater auf seinen Gütern. Der von O–ch hat sie besucht auf ein paar Tage, ist itzt wieder zurück, eine Stunde weit von da ist vor 14 Tagen in einem Dorf ein Brand gewesen <tl></tl> 60 Häuser und 52 volle Scheunen wegbrannte. Einige Personen Weiber und <tl></tl> werden gemißt, eine Strecke vom Ort weg kam eine Bauersfrau auf der <tl></tl>ße nieder. Die <ul>W.</ul> ließ ein paar Viertel Frucht ma<del>h</del>len und das Brod unter die Verunglückten austheilen. Wie sie an <insertion pos="top">Mslle K.</insertion> schreibt, so kommt sie den Leuten dort <tl></tl>mer dicker vor, sie freut sich da zu seyn und erinnert sich in diesen Gegenden <tl></tl> ihre ersten Jahre.
 <line type="empty"/>
-<line tab="1"/>Deinen Herder hab ich der Mamsell Kg überbracht samt dem Brief sie läßt Dich sehr grüßen. Sie sagte mir daß <insertion pos="top">Du</insertion> die folgenden Theile vom deutschen Merkur <del>nach</del> für die <note>Textverlust</note>rau v. O. geschickt habest und ich schließe die ersten hast Du für sie bestimmt <note>Textverlust</note> ich werd sie also hingeben.
+<line tab="1"/>Deinen Herder hab ich der Mamsell Kg überbracht samt dem Brief sie läßt Dich sehr grüßen. Sie sagte mir daß <insertion pos="top">Du</insertion> die folgenden Theile vom deutschen Merkur <del>nach</del> für die <tl></tl>rau v. O. geschickt habest und ich schließe die ersten hast Du für sie bestimmt <tl></tl> ich werd sie also hingeben.
 <line type="empty"/>
-<line tab="1"/><note>Textverlust</note> Besatzung ist hier 11000 Mann stark. 350 ziehen täglich auf die Wache von der Infanterie 26 von der Reuterey und 24 Dragoner. In der Citadell 36. Jedes Regiment giebt 80 Mann alle Tage. <insertion pos="top">alle</insertion> 6 Tage kommts an einen.
+<line tab="1"/><tl></tl> Besatzung ist hier 11000 Mann stark. 350 ziehen täglich auf die Wache von der Infanterie 26 von der Reuterey und 24 Dragoner. In der Citadell 36. Jedes Regiment giebt 80 Mann alle Tage. <insertion pos="top">alle</insertion> 6 Tage kommts an einen.
 <line type="empty"/>
 <line tab="1"/>Der Hr. v. Birch wird noch einige Ordonanzen erwarten und wann sie complet sind werd ich sie bekommen und mitnehmen.
 <line type="empty"/>
@@ -4583,14 +4583,14 @@
 <line tab="5"/>i beg thee to see frequently the spouse of
 <line tab="5"/>the lady. I have a pressentiment thou willst
 <line tab="5"/>thank me of having given thee a counsel
-<line tab="5"/>needful. A<note>a</note>t least <note>Textverlust</note>
-<line tab="5"/>it <del><nr> </nr></del> is only given <note>Textverlust</note> <pe>
-<line tab="5"/>thou kno<note>Textverlust</note>
-<line tab="5"/>imagine all <note>Textverlust</note>
-<line tab="5"/>suffers constantly <note>Textverlust</note>
-<line tab="5"/>She must hea<note>Textverlust</note>
-<line tab="5"/>much deli<note>Textverlust</note>
-<line tab="5"/>tranquillity of mind <note>Textverlust</note>
+<line tab="5"/>needful. A<note>a</note>t least <tl></tl>
+<line tab="5"/>it <del><nr> </nr></del> is only given <tl></tl> <pe>
+<line tab="5"/>thou kno<tl></tl>
+<line tab="5"/>imagine all <tl></tl>
+<line tab="5"/>suffers constantly <tl></tl>
+<line tab="5"/>She must hea<tl></tl>
+<line tab="5"/>much deli<tl></tl>
+<line tab="5"/>tranquillity of mind <tl></tl>
 <page index="4"/><note>Zeichnungen</note></pe></aq>
 </letterText> 
 
@@ -4623,9 +4623,9 @@
 <line tab="1"/>Mir ist sehr lieb bester Lenz dass Sie mein Schuldner sind ich finde meine Rechnung dabei. Bleiben Sie es immer so lange Sie wollen, so bekomm’ ich doch noch bisweilen ein Vertröstungsbriefgen. Ich denke wann das nicht wäre Sie würden mich gar vergessen.
 <line type="empty"/>
 <line tab="1"/>Was machen Sie und was macht Göthe? Ihr affengesichter! warum erfahr ich nichts was Ihr thut was Ihr schreibt was Ihr herausgebt? Die Soldaten hab ich gelesen und für Ihr Kind erkannt der gute Hauptmann B. ist auch drinn, alles sehr gut. Claudine hab ich auch gedruckt gelesen. Aber die neue Arria und der Sechste Act von Stella, sagen Sie mir doch ob die auch von Göthe sind, so will ichs zu seinen sachen binden lassen. Ihr Auftrag wieviel Bürger und Handwerker in Strasburg sind ist ein bisgen Schwer zu beantworten. Es sind 5300 Bürger ohne die Wittiben deren etwa 5 bis 600 seyn können, aber die anzal der Handwerker ist sehr weitläufig ausfindig zu machen dann es sind auch viele Weiber und viele ohnverburgerte lnnwohner die professionen Treiben jedoch die letzteren ohne Knecht oder gesellen. Ich glaube ihr Leute arbeitet an politischen <aq>projecten</aq> um den Türken aus Europa zu vertreiben oder gar den Mogol vom Thron zu stossen. Wir Strasburger Iassens gern beim alten wie Sie wissen. Da ist man ruhiger dabei. Doch ist meine leztere ohngedruckte Abhandlung über allgemeine oder gesellschaftliche glückseligkeit unvergleichlich gerathen und wenn Ihr mir gut wort gebt so schick ich’s euch Sie ist in der Gesellschaft gelesen und sehr approbirt worden. <aq>Ramond</aq> hat angefangen den Werther zu übersezen – ich glaube er wirds besser machen als alle andere. Ich küsse Sie liebster Lenz.
-<line type="break"/>Küssen Sie Goethe für mich <note>Textverlust</note>
+<line type="break"/>Küssen Sie Goethe für mich <tl></tl>
 <line type="break"/><align pos="right">Salzmann Act.</align>
-<line type="break"/>Der junge Bernhard von <note>Textverlust</note> hat <aq>banqueroute</aq> gemacht und davon geloffen sagen S ie das Göthe.
+<line type="break"/>Der junge Bernhard von <tl></tl> hat <aq>banqueroute</aq> gemacht und davon geloffen sagen S ie das Göthe.
 <line type="break"/><align pos="right">D. 21. 7br.</align>
 <line type="empty" />
 <line type="break" /><address>Herrn
@@ -4777,7 +4777,7 @@
 <line type="break"/><address>An Herrn
 <line type="break"/>Herrn <aq>Lenz</aq> abzugeben bey
 <line type="break"/>Herrn GeheimLegationsrath <aq>Goethe</aq>
-<line type="break"/>zu <note>Textverlust</note></address>
+<line type="break"/>zu <tl></tl></address>
 </letterText> 
 
 <letterText letter="243"><align pos="right">Kochberg, den 23sten Oktober 1776.</align>
@@ -5058,14 +5058,14 @@
 <page index="2"/>ist, mich durch Annehmung dessen was Sie mir von unbekannter Hand hinzugelegt eines mir unbewußten Verbrechens schuldig zu bekennen, nimmermehr erlauben wird, so verzeyhen Sie daß ich diese beygefügte Gnade nicht annehmen sondern um Gerechtigkeit bitten darf. Es ist nicht seit heute, daß
 <page index="3"/>
 <line type="empty" />
-<line type="break" /><note>Textverlust durch Ausriss der rechten Hälfte</note>
-<line type="break"/>Eh<note>Textverlust</note>
-<line type="break"/>S<note>Textverlust</note>
-<line type="break"/>Au<note>Textverlust</note>
-<line type="break"/>Abgeh<note>Textverlust</note>
-<line type="break"/>Um G<note>Textverlust</note>
-<line type="break"/>Und Ge<note>Textverlust</note>
-<line type="break"/>Mit dies<note>Textverlust</note>
+<line type="break" /><tl></tl>
+<line type="break"/>Eh<tl></tl>
+<line type="break"/>S<tl></tl>
+<line type="break"/>Au<tl></tl>
+<line type="break"/>Abgeh<tl></tl>
+<line type="break"/>Um G<tl></tl>
+<line type="break"/>Und Ge<tl></tl>
+<line type="break"/>Mit dies<tl></tl>
 <line type="empty" />
 <line type="break" />
 <sidenote pos="left" page="3" annotation="am linken Rand, vertikal">
@@ -5098,7 +5098,7 @@
 </letterText> 
 
 <letterText letter="266">
-<line tab="1"/><note>Textverlust</note>rzlichen Dank sag ich dir Liebster für deinen Dukat, er gefällt <note>Textverlust</note> und dann ist er von Dir! Liebes Denkmal mir Mönchlein, und in <note>Textverlust</note> mich daß du mich mißverstundst, mich in Mangel glaubtest und mir <note>Textverlust</note>, vielleicht nicht von des reichen Mannes Tisch zu werfen wolltest, <note>Textverlust</note>ster Freund, mein Bester den ich je hatte und haben werde, mich <note>Textverlust</note> er nie noch das mindeste so daß es gedrückt heisse. Hast mich auch <note>Textverlust</note>s Freytisches mißverstanden, ich käme in gar keine Relation <note>Textverlust</note>rscher dann ich könnte mir’s Essen immer auf meine Stube bringen <note>Textverlust</note> keiner an, hätte auch derwegen niemand <insertion pos="top">hier</insertion> die geringste <note>Textverlust</note> d da ich nur bis Ostern bleibe so laß es wann du bisher <note>Textverlust</note> schritt gethan hast, ist’s aber , so nehm ichs mit Dank an, und <note>Textverlust</note> r aus Strasburg kann continuiren und hieher kommen, <note>Textverlust</note> gehe. Ich kann die Pursche hier nicht gar wohl dulden und <note>Textverlust</note> weder an mir noch ich an ihnen was finden konnten, waren <note>Textverlust</note> gs, <aq>á charge.</aq> Sie schreyen immer <gr>ανтos εpa</gr> und – <note>Textverlust</note> hab keiner Seel von dir weder geschrieben noch gesagt, als einen Gruß an die Gesellschaft, und wann du willst eine Abschrift deiner Epistel. Die hab ich auch Boje geschickt mit ein paar Zeilen von mir, vielleicht antwortet Er. <fn index="5"><anchor>#</anchor></fn>
+<line tab="1"/><tl></tl>rzlichen Dank sag ich dir Liebster für deinen Dukat, er gefällt <tl></tl> und dann ist er von Dir! Liebes Denkmal mir Mönchlein, und in <tl></tl> mich daß du mich mißverstundst, mich in Mangel glaubtest und mir <tl></tl>, vielleicht nicht von des reichen Mannes Tisch zu werfen wolltest, <tl></tl>ster Freund, mein Bester den ich je hatte und haben werde, mich <tl></tl> er nie noch das mindeste so daß es gedrückt heisse. Hast mich auch <tl></tl>s Freytisches mißverstanden, ich käme in gar keine Relation <tl></tl>rscher dann ich könnte mir’s Essen immer auf meine Stube bringen <tl></tl> keiner an, hätte auch derwegen niemand <insertion pos="top">hier</insertion> die geringste <tl></tl> d da ich nur bis Ostern bleibe so laß es wann du bisher <tl></tl> schritt gethan hast, ist’s aber , so nehm ichs mit Dank an, und <tl></tl> r aus Strasburg kann continuiren und hieher kommen, <tl></tl> gehe. Ich kann die Pursche hier nicht gar wohl dulden und <tl></tl> weder an mir noch ich an ihnen was finden konnten, waren <tl></tl> gs, <aq>á charge.</aq> Sie schreyen immer <gr>ανтos εpa</gr> und – <tl></tl> hab keiner Seel von dir weder geschrieben noch gesagt, als einen Gruß an die Gesellschaft, und wann du willst eine Abschrift deiner Epistel. Die hab ich auch Boje geschickt mit ein paar Zeilen von mir, vielleicht antwortet Er. <fn index="5"><anchor>#</anchor></fn>
 <line type="empty"/>
 <line type="empty"/>
 <line tab="1"/>Dem kernhaften Müller werd ich erst noch schreiben, ich warte auf Antwort von Ihm. Aber sein Doktor wird sobald nicht gedruckt er arbeitet noch dran. Schade daß zwei <insertion pos="top">Strasb.</insertion> Theologen fast immer um uns waren, die schwer verdauen. Einen gräßlich schönen Hexenauftritt hat er mir draus gelesen.
@@ -5116,7 +5116,7 @@
 <page index="2"/>
 <line type="empty" />
 <line type="break" /><address>An Herrn
-<line type="break"/><note>Textverlust</note>rn <ul><aq>Lenz</aq></ul> abzugeben bey
+<line type="break"/><tl></tl>rn <ul><aq>Lenz</aq></ul> abzugeben bey
 <line type="break"/>Herrn <aq>Hofrath Wieland</aq>
 <line type="break"/><ul>zu Weimar</ul>
 <line type="break"/><aq>mit 1 Ducaten</aq></address>
@@ -5381,7 +5381,7 @@
 <line tab="1"/>Wie Lebten Sie dann, seit deme das lezte mahl die Ehre hatte sie zu sehen? Vermuthl. gut, gesund und vergnügt, Ich wünsche das wenigstens von grund meiner Seele. für' s vergangene und für' s zukünftige. Ich, meinerseits, bin, Gott sey’s gedankt seit meiner Abreiße von Strasburg – glücklicher geweßen, als verdiente, – habe die Bergwercke meinem Bruder in Lotharing. <aq>endossirt,</aq> und mich gäntzl. der Handlung gewiedmet.
 <page index="3"/>Stehe auch von da an allhier in Basel, in einer berühmtesten Band <aq>fabriquen</aq>, als bedienter unter den schönsten Bedingnießen in <aq>Condition</aq>. und bleibe vom Höchsten erwartend, wie mich seine Güte, den rest meiner Jahre, mit – vernunft vollends ausleben laßen wird –.
 <line type="empty"/>
-<line tab="1"/>Solte, wie Ich hofe, Ihre Freundschaft noch einen Funcken Herz zu mir haben. so machen sie mir das vergnügen. mich deßen schriftlich zu versichern; kann ich hingegen mich deren aufs neue würdig zu machen Ihnen viel angenehmes, in hiesigen gegenden erweißen, so befehlen sie über denjenigen der mit besonderer Hochachtung, Aufriebt<note>Textverlust</note> Gesinnungen, und mit vollem warmen Hertzen, die Ehre hatt, sich ewig zu nennen
+<line tab="1"/>Solte, wie Ich hofe, Ihre Freundschaft noch einen Funcken Herz zu mir haben. so machen sie mir das vergnügen. mich deßen schriftlich zu versichern; kann ich hingegen mich deren aufs neue würdig zu machen Ihnen viel angenehmes, in hiesigen gegenden erweißen, so befehlen sie über denjenigen der mit besonderer Hochachtung, Aufriebt<tl></tl> Gesinnungen, und mit vollem warmen Hertzen, die Ehre hatt, sich ewig zu nennen
 <line type="empty" />
 <line type="break" /><align pos="right">Dero Gehorsamster und bereitwilligster Freund und Diener
 <line type="break"/>Emanuel Friederich Mayer
@@ -6627,7 +6627,7 @@
 <page index="3"/>überlegte Antwort: es sey deswegen an auswärtige Gelehrte geschrieben worden, von denen zwey abgesagt, itzt steh man mit einem dritten in Traktaten habe aber auch zugleich an Sie – geschrieben und wolle in dem Stück ganz und gar auf Ihre Empfehlung fussen. Itzt hätte mir wohl werden sollen, und mir wards – aber nicht so ganz – ich gehe zu einem Freunde wo ich von andern in das Fach hin einschlagenden Dingen sehr beunruhigt, aber ohne daß sie mich selbst angiengen, zu sprechen hatte, komme zurück und will sehen, was unsers Hartknochs sehr üble Brust heute macht und – find ihn an einer Post nach Leipzig die er expedirt, und mir Pappier und Feder hinlegt, wenn ich auch an jemand schreiben wollte. – An wen anders als an Sie – – mich zu empfehlen? nicht doch – Ihre Empfehlung zu erbitten, zu verbitten – auch nicht, kurz ich weiß selbst nicht was ich will, was ich soll – – aber an wen anders kann, darf ich das schreiben als an Sie – Freund Goethe – hat mich wohl vergessen – mag will wie ich sehe sich in keins meiner Angelegenheiten mehr mischen, wird vielleicht durch jede Art meiner Zuschriften selber soll ich sagen beleidigt? – – doch gewiß beunruhigt – und soll ich empfolen sein – wär ichs am liebsten von Ihnen. Guter Gott, aber Sie kennen, wenn Sie mein Herz ja kennen, weder mein Geschick überhaupt noch zu einer solchen Stelle in sonderheit. Soviel sag ich Ihnen frey und wills druken lassen, daß in <ul>meinem Vaterlande</ul> mir eine solche Stelle die wünschenswertheste wäre. Und wem sollte sie es nicht seyn. Ich wollte solang wenigstens an mir pressen
 <page index="4"/>bis das was ich gutes und vortheilhaftes draussen eingesogen, ausgedrükt wäre, mögte man hernach mit dem löchrichten Herzen machen was man wollte. Bey alledem aber habe ich die Theologie – nicht gründlich studirt, kann auch keine grosse Theologen auf die grosse Bühne der Welt schicken. Dafür aber hab ich mich ein wenig in der Geschichte und Gesetzen meines Vaterlands umgesehen, die ich immer fleissiger mit Zuziehung der erfahrensten Männer zu studieren gedenke, will dabey gern in dem bißgen Griechisch und modernen Sprachen, was ich weiß, auch in der sogenannten schönen Kenntniß von Kunstwerken und Kunstsachen, auch wenn der Adel, der fast den zahlreichsten Theil unsers Landes ausmacht und um Unterricht verlegen ist, mit zu unsrer Bürgerschule gezogen werden soll, in besondern Stunden in dem historischen Theil der alten und neuen Taktik Fortifikation u. s. f. soweit Unterricht geben, daß er hernach praktischem Unterricht schneller nutzen kann, so auch in Staatsgeschichte und <ul>Staatswirtschaft</ul> welches mir ein Hauptbedürfniß meines Vaterlands scheint – auch lateinische Autoren lesen, und Redübungen mitbetreiben helfen, nach meinen Kräften –
 <line type="empty"/>
-<line tab="1"/>Wissen Sie ein redlicheres, stärkeres und ausdaurenderes Subjekt für diese Anstalt deren Einrichtung so wie die Stärke und Umfang seiner Nerven, Kräfte und erworbenen Anlagen Sie kennen, so bezeuge ich hiemit vor Gott – den ich nicht leichtsinnig zum Zeugen nehmen mag – daß ich der Anstalt Glük wünschen und mit dem Schmerz hier nicht haben nützen zu können mich auch a<note>Textverlust</note>hnen lernen werde ohne einen Gedanken von <note>Textverlust</note>le den, Ihnen und Ihnen ähnlichen, mit voller warmer Hochachtung gewiedmeten wegzugeben oder ärmer an <note>Textverlust</note>m Gefühl zu 
+<line tab="1"/>Wissen Sie ein redlicheres, stärkeres und ausdaurenderes Subjekt für diese Anstalt deren Einrichtung so wie die Stärke und Umfang seiner Nerven, Kräfte und erworbenen Anlagen Sie kennen, so bezeuge ich hiemit vor Gott – den ich nicht leichtsinnig zum Zeugen nehmen mag – daß ich der Anstalt Glük wünschen und mit dem Schmerz hier nicht haben nützen zu können mich auch a<tl></tl>hnen lernen werde ohne einen Gedanken von <tl></tl>le den, Ihnen und Ihnen ähnlichen, mit voller warmer Hochachtung gewiedmeten wegzugeben oder ärmer an <tl></tl>m Gefühl zu 
 <sidenote pos="left" page="4" annotation="am linken Rand, vertikal"> werden, mit dem ich auch schweigend mich jederzeit und überall nennen werde</sidenote>
 <line type="break"/><align pos="right">Ihren
 <line type="break"/>gehorsamstergebensten
@@ -7541,7 +7541,7 @@
 <line tab="1"/>Ist es wahr, theurester Vater! daß Sie die Güte für mich gehabt, durch Herrn Hartknoch von hier eine Russische Bibel nach Riga zu verschreiben. Ich hatte eine herzliche Freude darüber, weil ich überzeugt war, daß Sie in derselben Ihr Bild finden würden; so wie es so viele ädle Russen, die auch an meinem Schiksal einen Menschenfreundlichen Anteil zu nehmen würdigen, darinne finden. Darf ich doch bitten Herrn Hartknoch gelegentlich gütigst
 <page index="3"/>zu fragen, ob er nicht einen Herrn von Töllner, Preußischer Offizier, kennt, welcher mir von Ihnen und dem Bruder in Dörpt zu meinem Troste sehr vieles erzehlt hat. Er rühmte mir ein gewisses Buch, dessen ich hier habhaft zu werden wünschte. Es heißt: Lebensläuffe in auf und absteigender Linie, von einem deutschen Plutarch, der aller Aufmerksamkeit und Nacheiferung würdig ist. Ein solcher Maler der Seelen und Sitten wäre hier am rechten Ort, wo sich <ul>täglich</ul> in der Nähe und Ferne sovieler Stoff dazu anbietet. Ein Moralischer Chevalier <aq>de Luc</aq> würde den Reichtum der Karaktere allhier, mit dem Geschmak und der Kürze behandeln müssen, mit welcher jener den Reichtum der Schöpfung in den Schweizergebirgen behandelt hat.
 <line type="empty"/>
-<line tab="1"/>Wollte Gott, theurester Vater! ich könnte Ihren Seegen zu irgend einer Art von <ul>fixer</ul> Existenz in dieser Mütterlichen Stadt herüberholen! Die Würde welche Sie bekleiden, wird durch Ihre Person erst interessant und erregt die sympathetischen Empfindungen aller derer, so sich in ähnlichen Verhältnissen befinden. Sprechen Sie wenigstens schriftlich ein Wort des Trostes über mich, werden Sie zum andemmal ein schöpferischer Vater meiner Ruhe und meines Glüks, zu dem ich in der Güte so vieler um mich verdient<note>Textverlust</note> Edlen einige Anstalten zu entdecken hoffe. Ich habe das Glük gehabt, Sr. Excellenz dem <ul>Herrn Curator Cheraskoff</ul> besonders empfolen zu seyn und beschäftige mich gegenwärtig mit einem Aufsatz über einige Schönheiten seiner Gedichte, insofern sie auf die Erziehung der russischen Jugend Einflüsse haben. Herr Hofrath <ul>Schade,</ul> der bey der Kaiserl. Commission zur Untersuchung hiesiger Schulanstalten war, ein Mann von lebenslänglicher Erfahrung über diesen Gegenstand, hat mich dazu gütigst aufgemuntert. Vielleicht bin ich so glüklich, da die hiesige Käis. Universität sich unsrer Anstalt mit besonderm Eiffer annimmt, wenigstens dem Namen nach mit einige Ansprüche auf ein Art von Bürgerrecht bei derselben zu erhalten. Was meinen Muth und Zutrauen auf die allesbelebende Vorsicht unaussprechlich stärkt, ist der huldreiche Blick den der oberste Befehlshaber unserer Stadt auch auf unsere Anstalt zu werfen scheint. Soll ich Ihnen sagen, daß ich das Glük gehabt vor Sr. Durchl. dem Grafen Anhalt selbst vorgelassen zu werden und daß dieser herablassende Menschenfreundliche Herr sich fast eine Viertelstunde mit mir zu unterhalten die Gnade für uns hatte? Welch ein Gemählde in einer solchen Gallerie als sich mir hier von allen Seiten aufthut um mein Auge – und vielleicht bald – auch meinen furchtsamen Pinsel zu üben! –
+<line tab="1"/>Wollte Gott, theurester Vater! ich könnte Ihren Seegen zu irgend einer Art von <ul>fixer</ul> Existenz in dieser Mütterlichen Stadt herüberholen! Die Würde welche Sie bekleiden, wird durch Ihre Person erst interessant und erregt die sympathetischen Empfindungen aller derer, so sich in ähnlichen Verhältnissen befinden. Sprechen Sie wenigstens schriftlich ein Wort des Trostes über mich, werden Sie zum andemmal ein schöpferischer Vater meiner Ruhe und meines Glüks, zu dem ich in der Güte so vieler um mich verdient<tl></tl> Edlen einige Anstalten zu entdecken hoffe. Ich habe das Glük gehabt, Sr. Excellenz dem <ul>Herrn Curator Cheraskoff</ul> besonders empfolen zu seyn und beschäftige mich gegenwärtig mit einem Aufsatz über einige Schönheiten seiner Gedichte, insofern sie auf die Erziehung der russischen Jugend Einflüsse haben. Herr Hofrath <ul>Schade,</ul> der bey der Kaiserl. Commission zur Untersuchung hiesiger Schulanstalten war, ein Mann von lebenslänglicher Erfahrung über diesen Gegenstand, hat mich dazu gütigst aufgemuntert. Vielleicht bin ich so glüklich, da die hiesige Käis. Universität sich unsrer Anstalt mit besonderm Eiffer annimmt, wenigstens dem Namen nach mit einige Ansprüche auf ein Art von Bürgerrecht bei derselben zu erhalten. Was meinen Muth und Zutrauen auf die allesbelebende Vorsicht unaussprechlich stärkt, ist der huldreiche Blick den der oberste Befehlshaber unserer Stadt auch auf unsere Anstalt zu werfen scheint. Soll ich Ihnen sagen, daß ich das Glük gehabt vor Sr. Durchl. dem Grafen Anhalt selbst vorgelassen zu werden und daß dieser herablassende Menschenfreundliche Herr sich fast eine Viertelstunde mit mir zu unterhalten die Gnade für uns hatte? Welch ein Gemählde in einer solchen Gallerie als sich mir hier von allen Seiten aufthut um mein Auge – und vielleicht bald – auch meinen furchtsamen Pinsel zu üben! –
 <line type="empty"/>
 <line tab="1"/>Herr Major Hüne – und andere Freunde, denen mich der Bruder aus Derpt empföhlen, befinden sich gesund und munter. Darf ich bitten, meiner theuresten Frau Mutter und sämtlichen geliebtesten Geschwistern und Freunden tausend warme Grüsse zum Neuen-Jahr zu sagen, Zeit, Raum und Umstände erlauben mir diesesmahl nicht ein mehreres. Ihrer geneigten Fürbitte bey dem höchsten Geber aller Weißheit und Gaben, den ich für die Erhaltung Ihrer uns allen so theuren Gesundheit, Ruhe und Zufriedenheit unablässig anflehe, empfehle auch in diesem Jahr meines theuresten und verehrungswürdigsten Vaters Moskau den 18ten November 1785.
 <line type="empty" />
@@ -8072,7 +8072,7 @@
 <line tab="5"/>An dem Hiob? Rezensire!
 <line tab="5"/>Wenn der Märtrer scherzen muß
 <line tab="5"/>Ihn befragt’ ein Weib sehr witzig
-<line tab="5"/>Trägt man <note>Textverlust</note> das Haupt die Magd
+<line tab="5"/>Trägt man <tl></tl> das Haupt die Magd
 <line tab="5"/>Oder auf dem Haupt und hitzig
 <line tab="5"/>Frägt er: Hab ich was gesagt?
 <line type="empty"/>
