@@ -2,7 +2,7 @@
 <opus> <document> 
 
 <letterText letter="1">
-<page index="1" /><align pos="right">Hoch Edelgeborner Hochgelahrter Herr <aq>Secretair</aq></align>
+<page index="1" /><align pos="right">HochEdelgeborner Hochgelahrter Herr <aq>Secretair</aq></align>
 <line type="break" tab="7" /><align pos="right">Verehrungswürdigster Gönner!</align>
 <line type="empty" />
 <line type="empty" />
@@ -12,12 +12,12 @@ Ew. HochEdelgebh: haben mich durch die neue Probe von Dero schätzbaren Gewogenh
 <line type="empty" />
 <line type="break" /><align pos="right">Hoch Edelgeborner Hochgelahrter Herr <aq>Secretair</aq>
 <line type="break" tab="7" />Verehrungswürdigster Gönner
-<line type="break" tab="7" />Ew. Hoch Edelgebh:
+<line type="break" tab="7" />Ew. HochEdelgebh:
 <line type="empty" />
 <line type="empty" />
 <line type="empty" />
 <line type="empty" />
-Von Hause, d. 2 Jenner, 1765.
+<line type="break" tab="7" />Von Hause, d. 2 Jenner, 1765.
 <line type="empty" />
 <line type="empty" />
 <align pos="right"></align>gehorsamsten Diener
