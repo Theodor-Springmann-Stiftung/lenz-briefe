@@ -2,25 +2,26 @@
 <opus> <document> 
 
 <letterText letter="1">
-<page index="1" />Hoch Edelgeborner Hochgelahrter Herr <aq>Secretair</aq>
-<line type="break" tab="7" />Verehrungswürdigster Gönner!
+<page index="1" /><align pos="right">Hoch Edelgeborner Hochgelahrter Herr <aq>Secretair</aq></align>
+<line type="break" tab="7" /><align pos="right">Verehrungswürdigster Gönner!</align>
 <line type="empty" />
-<line tab="7" />Ew. HochEdelgebh: haben mich durch die neue Probe von Dero schätzbaren Gewogenheit ausserorndtlich beschämt. Meine Feder ist zu schwach, Denenselben die regen Empfindungen meines Herzens darüber zu schildern. Ich weiß Ew. HochEdelgebh: meine Dankbegierde auf keine andere Art an den Tag zu legen, als daß ich meine gestrigen Wünsche für Dero Wohlseyn wiederhole, und die gütige Vorsicht um die Erhörung derselben anflehe. Der Herr überschütte Dieselben und Dero wertes Haus im künftigen Jahr mit tausend Seegen und Heil. Er erhalte Ew. Hoch Edelgebh: bis zu den spätesten Zeiten im ersprießlichsten Wohlergehen. Er bewahre Ew. HochEdelgebh: für alle widrige Zufälle in den künftigen Jahren, und
+<line type="empty" />
+Ew. HochEdelgebh: haben mich durch die neue Probe von Dero schätzbaren Gewogenheit ausserorndtlich beschämt. Meine Feder ist zu schwach, Denenselben die regen Empfindungen meines Herzens darüber zu schildern. Ich weiß Ew. HochEdelgebh: meine Dankbegierde auf keine andere Art an den Tag zu legen, als daß ich meine gestrigen Wünsche für Dero Wohlseyn wiederhole, und die gütige Vorsicht um die Erhörung derselben anflehe. Der Herr überschütte Dieselben und Dero wertes Haus im künftigen Jahr mit tausend Seegen und Heil. Er erhalte Ew. Hoch Edelgebh: bis zu den spätesten Zeiten im ersprießlichsten Wohlergehen. Er bewahre Ew. HochEdelgebh: für alle wiedrige Zufälle in den künftigen Jahren, und
 <page index="2" />lasse mich noch lange das Glück genießen, Dieselben in dem blühendsten Wohlstande zu sehen, und mich mit dem erkenntlichsten Herzen nennen zu dürfen
 <line type="empty" />
-<line type="break" />Hoch Edelgeborner Hochgelahrter Herr <aq>Secretair</aq>
+<line type="break" /><align pos="right">Hoch Edelgeborner Hochgelahrter Herr <aq>Secretair</aq>
 <line type="break" tab="7" />Verehrungswürdigster Gönner
 <line type="break" tab="7" />Ew. Hoch Edelgebh:
 <line type="empty" />
-<line tab="7" />gehorsamsten Diener
-<line type="break" tab="7" />Landau, den 7. September.
-<line tab="1"/>So wenig Zeit mir auch übrig ist, so muß ich Ihnen doch sagen, daß ich Sie in Landau noch eben so hoch schätze, ebenso liebe, als in Fort-Louis. Unser Marsch war angenehm genug: vor Tage zu Pferde, und vom Mittag, bis in die Nacht gerastet. Ich möchte so durch die Welt reisen. Weißenburg hat mir gefallen, die dortige Schweizergarnison glich den Priestern der Cybele, so erfreute sie die Ankunft eines deutschen Regiments. Landau kann in der That das Schlüsselloch von Frankreich heißen, da es nur zween Thore hat, eins nach vorne, das andere nach hinten. Unsern Ausgang segne Gott, unsern Eingang – – Ich wohne bei einem Herrn Schuch, der ein naher Verwandter vom Herrn Türkheim seyn will. Seine Frau und er spielen mir alle Abende Komödie, wobei mein Herz mehr lacht, als bei allen Farcen des Herrn Montval und Ribou. Er ist ein gutwilliger Schwätzer, gegen seine Frau, ein rechter Adventsesel und auch gegen die Füllen bei ihr. Sie trägt Hosen und Zepter, eine Teintüre von Andacht und koketter Prüderie – in der That, meinen kleinen Plautus hinterdrein gelesen und ich brauche kein Theater. Melden Sie mir doch, was das Ihrige in Straßburg macht und ob dort kein deutsches zu erwarten sei. Beim Herrn Senior, der fast die alleinige Materie des Gesprächs meiner Wirthsleute ist (ausgenommen den gestrigen vortrefflichen Abend, wo wir lauter Haupt- und Staatsaktionen ausmachten) bin ich noch nicht gewesen. Der Bürgermeister Schademann soll schon seit geraumer Zeit todt seyn. Vielleicht erlange ich die Bekanntschaft seines Sohnes, der sehr reich sein soll. Ein Rektor bei der hiesigen Schule, der im Kloster einen Sohn hat, der schon Magister ist (wo mir recht ist, hab ich ihn dort gesehen) soll eine gute Bibliothek haben: da muß ich suchen unterzukommen. Seyen Sie doch so gütig und schreiben mir in Ihrem nächsten Briefe den Namen des Churfürsten von der Pfalz; wie auch den Charakter und die Adresse des Herrn Lamey, ein Name, den ich in Straßburg oft gehört. Sie lachen – wozu das? Nun, nun, es hat nichts zu bedeuten, ein guter Freund hat mich um beide in einem Briefe ersucht. Einen Nachmittagsprediger habe ich hier gehört, der keine Pfeife Toback werth vorgebracht. Ich ging nach Hause und las Spalding, vom Werth der Gefühle im Christentum. Welch ein Kontrast! Dieses Buch müssen Sie auch lesen, mein Sokrates! es macht wenigstens Vergnügen zu finden, daß Andere mit uns nach demselben Punkt visiren. Ich freue mich, daß man in einem Tage von hier nach Straßburg kommen kann, wer weiß wenn ich Sie überrasche. Fahren Sie fort mit Ihrer Gewohnheit für mich. –
-<line type="break"/>Lenz.
-<line type="empty"/>
 <line type="empty" />
-<line type="break" />Jacob Michael Reinhold Lenz
 <line type="empty" />
-<line tab="7" />Von Hause, d. 2 Jenner, 1765. 
+<line type="empty" />
+<align pos="left">Von Hause, d. 2 Jenner, 1765.</align>
+<line type="empty" />
+<align pos="right"></align>gehorsamsten Diener
+Jacob Michael Reinhold Lenz</align>
+
+
 </letterText> 
 
 <letterText letter="2">
