@@ -830,9 +830,11 @@ Tarwast den 9ten November 1767.
 <letterText letter="42"><align pos="right">D 8ten Aprill 1775.</align>
 <line type="break" />Hier mein theurer Eifferer für unser Haus einige Versgen die ich dies Jahr in Calender setzen lasse.
 <align pos="center">Ueber die kritischen Nachrichten vom Zustand des deutschen Parnasses (der Verf. ist Gotter der bey Dir war</align>
+<line type="empty" />
 <line tab="6"/><ul>Gotter.</ul> Es wimmelt heut zu Tag von Sekten
 <line tab="6"/>Auf dem Parnaß
-<line tab="6"/><ul>Lenz</ul>Und von Insekten.
+<line tab="6"/><ul>Lenz</ul> Und von Insekten.
+<line type="empty"/>
 <line type="empty"/>
 <align pos="center">Ueber die Dunkelheiten im Klopstock und andern</align>
 <line tab="6"/><ul>Der Schmecker.</ul>
@@ -842,12 +844,14 @@ Tarwast den 9ten November 1767.
 <line tab="5"/>Sobald <ul>ihr</ul> mich versteht
 <line tab="5"/>Herr, bin ich ein schlechter Poet.
 <line type="empty"/>
+<line type="empty"/>
 <align pos="center">Klopstocks Gelehrten Republick</align>
 <line tab="5"/>Ein götterhaft Gerüst
 <line tab="5"/>Der Menschen Thun zu adeln
 <line tab="5"/>Wer darf, wer mag da tadeln?
 <line tab="6"/>Antwort
 <line tab="5"/>Wems unersteiglich ist.
+<line type="empty"/>
 <page index="2"/>
 <line tab="1"/>Nichtsdestoweniger aber wünscht’ ich, daß Deine herzhafte Prügelsuppe den Leuten ganz warm über die Schultern regnete und will deshalb eine Abschrift dieser Rezension Gottern grad zuschicken sie in den deutschen Merkur zu rücken – Wielanden vielmehr, mögen die es verdauen so gut sie können und zu ihrer Besserung anwenden denn es ist unerträglicher Leichtsinn daß ein solcher Schmecker sich untersteht von solchen Sachen auch nur einmal zu reden, geschweige so abzuweisen.
 <line type="break" />
@@ -855,28 +859,29 @@ Tarwast den 9ten November 1767.
 <line tab="1"/><fn index="5"><anchor>#</anchor></fn> Ich schick es Gottern nicht eher als bis Du mir die Erlaubnis gegeben hast. Sonst wollt ich schon für ein <aq>vehiculum</aq> sorgen ihm die Medicin beyzubringen</sidenote>
 <line tab="1"/>Hier noch was von Goethe über diese Abgeschmacktheiten in seiner neusten Satyre, die ich zugleich die glücklichste nennen möchte: „Prometheus Deukalion und seine Rezensenten“ bey Gelegenheit der Deraisonnements in Deutschland über seinen Werther
 <line type="break" />
-<line tab="6"/>Plötzlich erscheint Herr Merkurius pp
+<line tab="5"/>Plötzlich erscheint Herr Merkurius pp
 <line tab="5"/>Wirst hier kritische Nachrichten hören
 <line tab="5"/>Kannst dich wahrhaftig des Lachens nicht wehren
 <line tab="5"/>Sehn aus als wärens im hitzigen Fieber gemacht
 <line tab="5"/>Haben hübsch alles in Klassen gebracht –
 <line tab="5"/>Aufgeschaut und nit gelacht.
 <line type="empty"/>
-<line tab="6"/>Merkur
+<align pos="center">Merkur</align>
 <line tab="5"/>Sieh da ihr Diener Herr Prometheus
 <line tab="5"/>Seit Ihrer letzten M – Reis
 <line tab="5"/>Sind wir ja Freunde so viel ich weiß
 <line tab="5"/>Ist mirs vergönnt den Sporn zu küssen
 <line type="empty"/>
-<line tab="6"/>Prometheus (Verf. des Werthers
+<align pos="center">Prometheus (Verf. des Werthers</align>
 <line tab="5"/>Werd euch zur Zeit damit zu dienen wissen
 <line tab="5"/>Wie stehts um d. Fenster die ich eingeschmissen
 <page index="3"/>
-<line tab="6"/>Merk.
+<align pos="center">Merk.</align>
 <line tab="5"/>Mein Herr wird sie halt machen lassen müssen
 <line tab="5"/>Waren ja über das nur von Pappier <aq>etc.</aq>
 <line type="empty" />
 <line type="break" /><align pos="center">– –</align>
+<line type="empty" />
 <line tab="1"/>Seegen Gottes über Dein Amt! Wer bin ich, daß ich Dir Glück wünsche? Dich, Deinen Standpunkt, Deinen Wirkungskreiß nach Würden erkenne und ausmesse. Wirkt miteinander Du und Dein Pfenninger und betet für einen betrübten Verlassenen
 <line type="break" />
 <sidenote pos="left" page="3" annotation="am linken Rand, vertikal">
@@ -886,7 +891,7 @@ Tarwast den 9ten November 1767.
 <page index="4"/>
 <line tab="1"/>Wie sehr wünscht’ ich nur einen Tag bey Dir zu seyn, wenn Du Physiognomik arbeitest. Ich freute mich schon im Geist Dich vielleicht mit einem Exemplar hier zu sehen, doch werd ich das Buch wohl zu sehen bekommen, nur des Verf. Erläuterungen fehlen. Klopstock ist auch wieder nach Hause gekehrt zu seinen alten Freunden, ich hatt ihn so nahe und sah ihn nicht. So waltet ein uns unbekanntes Schicksal über unsre liebsten heiligsten Wünsche und Neigungen und leitet sie nach seinen Absichten. Goethe schweigt auch gegen mich, vermutlich weil ihn Geschäfte überwältigen. Nächstens sollst Du eine Künstlerromanze von ihm lesen, die ich seiner Schwester zugeschickt.
 <line tab="1"/>Melde mir doch aufs eheste ob der Herzog von Weymar mit unter den Subskribenten auf Deine Physiognomik ist. Und für wieviel Exemplare? – Und denn ob ich die Wielandias dem Gotter schicken darf, dem ich eine Antwort schuldig bin.
-<line tab="1"/>Grüß den edlen Passavant und dank ihm mit der heissesten Umarmung für all seine Freundschaft für mich. Die Lieder von denen er mir schrieb sind meistens nicht von mir, sondern von einem jungen Schweighäuser einem Jüngling von vollem Herzen. Dank ihm noch mehr für seine schönen Mühwaltungen für meine Kosakin, die ihm selbst auf einem Zettel ihren Dank stammeln wollte, aber jetzt krank zu Bette liegt. Sie hat von dem bewußten Freunde nun auch schon selbst seine <it>Adresse</it> in London erhalten, indessen bittet sie Passavanten doch gütigst fortzufahren, und sobald er Neuigkeiten erfährt, sie ihr mitzutheilen.
+<line tab="1"/>Grüß den edlen Passavant und dank ihm mit der heissesten Umarmung für all seine Freundschaft für mich. Die Lieder von denen er mir schrieb sind meistens nicht von mir, sondern von einem jungen Schweighäuser einem Jüngling von vollem Herzen. Dank ihm noch mehr für seine schönen Mühwaltungen für meine Kosakin, die ihm selbst auf einem Zettel ihren Dank stammeln wollte, aber jetzt krank zu Bette liegt. Sie hat von dem bewußten Freunde nun auch schon selbst seine <aq>Adresse</aq> in London erhalten, indessen bittet sie Passavanten doch gütigst fortzufahren, und sobald er Neuigkeiten erfährt, sie ihr mitzutheilen.
 <line tab="1"/>Grüß den theuren Pfenninger und sag ihm, ich arbeite gegenwärtig an einer neuen Auflage meines Menoza mit sehr wesentlichen Verbesserungen, der liebe Kritiker soll ihn zuerst haben. Überhaupt bitte ich meine Freunde mir ungeheuchelt und strenge ihre Meinung, ihr wahres uneingenommenes Gefühl über alle Stücke die ich künftig dem Publikum vorlegen werde zu schreiben. Es ist der gröste, der einzige Liebesdienst, den sie einem Künstler erweisen können. Und wißt Ihr lieben Brüder, daß der Tadel des Publikums auch auf Euch zurückfällt? „Hat er denn nicht Freunde?“
 <line tab="1"/>Und nun, Lavater, laß mich Dich an mein Herz drücken, solang ich noch nahe bey Dir bin und Dir ein Wörtgen über die Schweitzerlieder zurufen, von denen ich neulich wieder gesprochen. Mit dem Büchlein in der Tasche komm’ ich einmal in eure Gebirge. Tausend Grüße Deiner verehrungswürdigen Gehülfin. Daß doch das Blatt schon zu Ende ist
 <line type="break" /><align pos="right">Lenz.</align> 
