@@ -346,7 +346,7 @@
 
 		<letterTradition letter="54">
 			<app ref="4">
-				Weimar, Goethe- und Schiller-Archiv, GSA 25/XXXIV,9,4, Bl. 4–6
+				Weimar, Goethe- und Schiller-Archiv, GSA 25/XXXIV,9,4, Bl. 4–6. Die Außenseiten des gefalteten Quartblattes wurden von Goethe und Johann Heinrich Merck für ein Personenregister zu „Hanswursts Hochzeit“ verwendet.
 			</app>
 			<app ref="11">
 				<line tab="1"/>Sie können sich auf mein Ehrenwort verlassen, dass besagtes Blatt niemals mit meiner Zustimmung 
@@ -356,7 +356,7 @@
 				wie Du zu diesen Dingen stehst, um in Zukunft etwas Vernünftigeres darüber sagen zu können. Das sind 
 				meine Absichten, ich habe alles getan, um es zu unterdrücken und kann Dir im Voraus versichern, 
 				dass es niemals das Licht der Welt erblicken wird. Wir werden noch darüber sprechen.<line type="break"/>
-				Le. <line type="empty"/>
+				<align pos="right">Le.</align><line type="empty"/>
 				
 				Vielen Dank für die Mühe, die Sie sich mit den Lindaviana gegeben haben</app>
 		</letterTradition>
