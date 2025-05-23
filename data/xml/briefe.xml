@@ -827,7 +827,7 @@ Tarwast den 9ten November 1767.
 <line type="break"/><align pos="center">Addio –</align>
 </letterText> 
 
-<letterText letter="42"><align pos="right">D 8ten Aprill 1775.</align>
+<letterText letter="42"><page index="1"/><align pos="right">D 8ten Aprill 1775.</align>
 <line type="break" />Hier mein theurer Eifferer für unser Haus einige Versgen die ich dies Jahr in Calender setzen lasse.
 <line type="empty" />
 <line type="empty" />
@@ -901,48 +901,39 @@ Tarwast den 9ten November 1767.
 <sidenote pos="left" page="4" annotation="am linken Rand, vertikal">Der gute Röderer Nathanael empfiehlt sich euch allen aufs zärtlichste. Adieu! Adieu!</sidenote>
 </letterText> 
 
-<letterText letter="43"><aq>Den 14. Aprilis 75.</aq>
+<letterText letter="43"><align pos="right"><aq>Den 14. Aprilis 75.</aq></align>
 <line type="break"/>An Lenze.
 <line tab="1"/>Grüße <ul>Röderern</ul>, den edeln! – Dank für <ul>Zimmermann,</ul> daß Du ihn besuchtest; Laß ihn Dir sehr empfohlen seyn! Prometheus kennen wir. Mir gefällt er nicht. Was soll ein <it>Autor,</it> der so gelesen wird, spotten?
-<line type="empty"/>
 <line tab="1"/>Sende <ul>Gottern</ul> meinen Aufsatz, <ul>nicht zum Druck,</ul> aber sonst als eine unterdrückte Effusion des Herzens – dann in die Flamme! So eben ist ein <ul>Sendschreiben</ul> herausgekommen wider mich von einem geistlichen Mitbürger. Ein Denkmal des rasendsten Neides vollgestopft von Lügen, die mich der ganzen Welt lächerlich machen sollen. Soll ich schweigen? Soll ich reden? Noch will ich schweigen und warten. aber, das heißt doch wirklich rasen! – doch wieder wen? – wider sich selbst!
 <line type="break"/>adieu!
 <line type="break"/>
-<line type="empty" />
-<line type="break" />Johann Caspar Lavater.
+<line type="break" /><align pos="right">Johann Caspar Lavater.</align>
 </letterText> 
 
-<letterText letter="44"> <address>An den Verfasser der <ul>Meynungen eines Layen</ul> schleunigst – abzugeben.</address>
+<letterText letter="44"> <address>An den Verfasser der <it>Meynungen eines Layen</it> schleunigst – abzugeben.</address>
 <line type="empty" />
 <line type="break" />
 <sidenote annotation="auf dem roten Lacksiegel"> <gr>παντα δυνατα τῳ πιστευοντι</gr></sidenote>
-<line type="empty"/>
-<line tab="1"/>Eine und viele der seeligsten Stunden meines Daseyns hab’ ich Ihnen, sey Sie wer Sie wollen, zu danken. In einer Lage, wie’s wenige giebt – am Sterbebeth einer nahen, eben nicht warm doch redlich geliebten Schwägerinn – fieng ich an, Ihre wolerhaltnen <aq>Meynungen eines Layen</aq>, zu lesen, mit inniger Freud’ in der Stille der Mitternacht – – Meine Schwägerinn entschlummerte sanft – Ich ging schnell nach Hause; an einem hellen doch kühlen Frühlingsmorgen – fuhr sogleich, morgens vor 5 Uhr fort zu lesen; vor Freude zu zittern, vor Freude zu weynen, bald eine Zeile draus an meinen Bruder <aq>Pfenninger,</aq> der auf dem Lande ist, zu schreiben!
-<line type="empty"/>
-<line tab="1"/>Sturm von Seite der Cabale, <ul>die das Sendschreiben eines zürcherschen Geistlichen</ul> geboren hat – stürmte dazwischen! aber Ihre prophetische Geisteskraft trug mich. – Nun hab’ ich’s vollendet; – nun liest’s neben mir <ul>Passavant</ul> – und den Abend noch – (warum ich nicht an seiner Seite) <ul>Pfenninger?</ul> – Ich kann nichts, nichts sagen, als – Sie <ul>sind</ul> mein Freund, ich bin der Ihrige. Nicht bitt’ ich Sie um Ihre Freundschaft; nicht trag ich Ihnen die meinige an – wir sind schon Freunde. Lichtstral darf nicht Lichtstral bitten: „Fließe mit mir zusammen.“ Das geschieht, in dem sie einander begegnen – aber <ul>das</ul> ist ein Ziel meiner Bitte, daß Sie mir bäldest eine Zeile schreiben und zu mir sagen: „Lavater! hier und dort hast du geirrt; das Ziel nicht erreicht, vorbey geflogen – bist angeprallt. Vor dem hüte dich! da ist Quell deines Irrthums! da Fallstrick für deine Imagination, deinen Verstand, dein Herz –“ Dann will ich auch sagen, welche <ul>Zeilen</ul> Ihrer Schrift unter die Gottesgeistigkeit herabsinken, hinausgleiten, nach meinem Sinn. Den 20 April 75.
-<line type="break"/>Lavater
-<line type="break"/>Zürich, Donnerstags, Abends nach 3 uhr.
+<line tab="1"/>Eine und viele der seeligsten Stunden meines Daseyns hab’ ich Ihnen, sey Sie wer Sie wollen, zu danken. In einer Lage, wie’s wenige giebt – am Sterbebeth einer nahen, eben nicht warm doch redlich geliebten Schwägerinn – fieng ich an, Ihre wolerhaltnen <it>Meynungen eines Layen</it>, zu lesen, mit inniger Freud’ in der Stille der Mitternacht – – Meine Schwägerinn entschlummerte sanft – Ich ging schnell nach Hause; an einem hellen doch kühlen Frühlingsmorgen – fuhr sogleich, morgens vor 5 Uhr fort zu lesen; vor Freude zu zittern, vor Freude zu weynen, bald eine Zeile draus an meinen Bruder <it>Pfenninger,</it> der auf dem Lande ist, zu schreiben!
+<line tab="1"/>Sturm von Seite der Cabale, <it>die das Sendschreiben eines zürcherschen Geistlichen</it> geboren hat – stürmte dazwischen! aber Ihre prophetische Geisteskraft trug mich. – Nun hab’ ich’s vollendet; – nun liest’s neben mir <it>Passavant</it> – und den Abend noch – (warum ich nicht an seiner Seite) <it>Pfenninger?</it> – Ich kann nichts, nichts sagen, als – Sie <it>sind</it> mein Freund, ich bin der Ihrige. Nicht bitt’ ich Sie um Ihre Freundschaft; nicht trag ich Ihnen die meinige an – wir sind schon Freunde. Lichtstral darf nicht Lichtstral bitten: „Fließe mit mir zusammen.“ Das geschieht, in dem sie einander begegnen – aber <it>das</it> ist ein Ziel meiner Bitte, daß Sie mir bäldest eine Zeile schreiben und zu mir sagen: „Lavater! hier und dort hast du geirrt; das Ziel nicht erreicht, vorbey geflogen – bist angeprallt. Vor dem hüte dich! da ist Quell deines Irrthums! da Fallstrick für deine Imagination, deinen Verstand, dein Herz –“ Dann will ich auch sagen, welche <it>Zeilen</it> Ihrer Schrift unter die Gottesgeistigkeit herabsinken, hinausgleiten, nach meinem Sinn. 
+<line type="break"/><align pos="center">Den 20 April 75.
+<line type="break"/><it>Lavater</it>
+<line type="break"/>Zürich, Donnerstags, Abends nach 3 uhr.</align>
 </letterText> 
 
-<letterText letter="45">
+<letterText letter="45"><page index="1"/>
 <line tab="1"/>Dein kostbares Briefgen habe erhalten ist mir ein theures theures Zeugniß der Güte und innern standhaften Grösse Deines Herzens die keiner falschen Bescheidenheit braucht um damit Cabale zu machen. Lache doch Lavater der Wolken die Freunde und Feinde an Dir vorbeyziehen lassen, Du wirst immer durchscheinen. Durchscheinen durchscheinen mein lieber Getreuer bis auf lange Nachwelt hinunter. Mich freut der Eiffer Deiner jungen Freunde. Fürchte nichts von mir, ich konnte und kann Dich nie kompromittieren, mein Blut ist kalt, aber mein Herz fühlt warm.
-<line type="empty"/>
 <line tab="1"/>Alles das was Du mir schreibst hat mein Herz grade so geahndet, das war mir ein Siegel, daß auch ich Dein oder Deines Gottes bin. Ich konnte aber – und werde nun keinen üblen Gebrauch davon machen, dessen sey sicher.
-<line type="empty"/>
 <line tab="1"/>Laß Deine Freunde machen was sie wollen und für gut und nöthig finden, ich mische mich nicht darunter, gewiß nicht aus Menschenfurcht, denn was können mir Deine Menschen helfen oder schaden.
-<line type="empty"/>
 <line tab="1"/>Aber was ich in einer Entfernung für Dich hinaus thun kann, das thu ich – und nichts kann mich abhalten. Ich kenne Deine Sphäre nicht, aber ich
 <page index="2"/>kenne die Fassungsart und Gesinnungen der meinigen, in die ich freilich sehr langsamen und halb imperceptiblen Einfluß habe. Also hast Du nichts von mir zu hoffen noch zu fürchten gegenwärtig.
-<line type="empty"/>
 <line tab="1"/>Deine Physiognomik – lieber der Wunsch mir ein Exemplar geben zu können, was geb’ ich Dir dafür? Mein ganzes Herz – mehr hat mir der Himmel nicht gelassen. Ich glaube aber dennoch, ich glaube, ich werde sobald es heraus ist, hier eines zu Gesicht bekommen und das ist ja <ul>aIIes</ul> was ich wünsche.
-<line type="empty"/>
 <line tab="1"/>Lebe wohl mein lieber Leidender! Meine Freunde werden mir denn erst recht theuer, wenn sie ein wenig dulden und schweigen müssen und das ist das Gefühl aller honetten Leute. Also nutzen Dir Deine Feinde bei der honetten Welt – und bey der erleuchteten können sie Dir auch nicht schaden. Was bleibt ihnen denn übrig, als ein halbgelehrter schaler feindseliger Anhang, den <ul>ich Dir</ul> nicht wünschen möchte.
 <page index="3"/>
 <line tab="1"/>Leb wohl hier ist ein physiognomischer Gedanke der mir durch den Kopf gezogen ist und über den ich Deine Meynung zu hören wünschte. Es ist manchmal gut allerley <ul>anzuhören,</ul> wenn man über gewisse Sachen nachdenkt – also wirst Du mir mein Gelall und Gestammel nicht übel nehmen.
-<line type="empty"/>
 <line tab="1"/>Grüsse Passavant (dessen Enthusiasmus für Dich mich entzückt), Pfenninger, das Kind Gottes in Blumen spielend und Kaysern. Ich erwarte von den beyden ersten die nächsten Briefe mit vieler Sehnsucht.
-<line type="empty" />
 <line type="break" /><align pos="right">Lenz.</align>
+<line type="empty"/>
 <page index="4"/>
 <line tab="1"/>In unsern Tagen ist eine gewisse Faulheit und Niedergeschlagenheit besonders in monarchischen Ländern so <ul>häuffig</ul> anzutreffen, daß die Gesichtszüge daher fast alle auf eins hinauslauffen und von keiner Bedeutung sind. Die zu geläuterten Religionsbegriffe, die übermässige Verfeinerung in den Künsten und Zweiffel und Ungewißheit in den Wissenschaften geben ganz andere Gesichter und ganz andern Ausdruck der Empfindungen als ehemals. Das Feuer sitzt bey uns nur in den Augen, bey den Alten aber in allen Mienen und der Stellung derselben. Ueberhaupt scheinen mir alle heutige <ul>bedeutende</ul> Gesichter nur <ul>aufgeschürzt</ul>, das heißt die <ul>herunter</ul>gesunkenen Lineamenten mit Mühe wieder <ul>empor</ul>gearbeitet – da die Alten das zu wilde Emporsteigen der Mienen vielmehr zu hemmen und zu mässigen suchen mußten. Das waren <ul>gesammlete Gesichter</ul>, bey uns sind es <ul>angestrengte.</ul> Derselbe Unterscheid, der zwischen einem <ul>berittenen</ul> wilden Hengst und einem mit <ul>Sporn und Kourierpeitsche in Galopp</ul> gebrachten Karrengaul ist.
 </letterText> 
