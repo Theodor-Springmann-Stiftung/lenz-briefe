@@ -560,9 +560,9 @@
 
 		<letterDesc letter="37">
 			<sent>
-				<date notBefore="1774-07-10" notAfter="1774-07-20">Straßburg, Mitte Juli 1774</date>
+				<date notBefore="1774-07-10" notAfter="1774-07-20">Straßburg, vor Mitte Juli 1774</date>
 				<location ref="7" />
-				<person ref="10" />
+				<person ref="1" />
 			</sent>
 			<received>
 				<location ref="56" cert="low">vmtl.</location>
