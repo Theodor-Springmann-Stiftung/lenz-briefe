@@ -1911,7 +1911,7 @@
 			</sent>
 			<received>
 				<location ref="1" />
-				<person ref="20" />
+				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
