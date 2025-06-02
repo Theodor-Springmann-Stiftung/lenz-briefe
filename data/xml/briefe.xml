@@ -1888,7 +1888,7 @@ Tarwast den 9ten November 1767.
 <page index="2"/>
 <line tab="1"/>Schreiben Sie mir auf das geschwindeste Bester, o nun mein entscheidender Freund – ob das hintertrieben werden kann. Ich will gern alle Kosten tragen. Und verzeyhen Sie mir meine häuffigen Briefe und wie ich Sie mit alle den Aufträgen mißhandele. Ich hoffe daß einmal gut zu machen.
 <line tab="1"/>Und schicken Sie mir, ich bitte das Mskpt der Wolken zu, damit es in keine andere Hände durch Zufall jemahls gerathen könne. Es verwölkt und umnebelt meine ganze Bestimmung <insertion pos="left">alle meine Entwürfe</insertion> auf immer.
-<line type="break" /><note>am rechten Rand aller Zeilen des direkt folgenden Absatzes wohl irrtümlich Anführungszeichen; sie sind wahrscheinloch erst für den darauf folgenden Absatz gedacht:</note>
+<line type="break" /><note>am rechten Rand aller Zeilen des direkt folgenden Absatzes wohl irrtümlich Anführungszeichen; sie sind wahrscheinlich erst für den darauf folgenden Absatz gedacht:</note>
 <line tab="1"/>Nichts destoweniger können und sollen die Blätter gedruckt werden die den Wolken als Anhang bestimmt <insertion pos="left">waren:</insertion> sie sind fürtrefflich und für unsere Zeiten, für Wieland, für die Kunstrichter und das Publikum nothwendig. Mit denen biete ich allen Gefahren die meinem Namen daraus entstehen <insertion pos="top">könne</insertion> frölich Trotz, von meinem eigenen Herzen gerechtfertigt. Wenn Sie doch Herrn Helwig bereden könnten die Wolken dagegen auszuwechseln und sie ungefähr mit folgendem Vorbericht drucken zu lassen.
 <page index="3"/>
 <line tab="1"/>Der Verfasser dieser kleinen Schrift hatte mir ein Manuskript zugesandt, dessen Druck er aus wichtigen Gründen zu hintertreiben <del>und es der <nr extent="4"></nr></del> für <ul>nöthig</ul> <insertion pos="top">gut</insertion> fand. Da dieses Mskpt. aber doch durch verschiedene Hände gegangen war, fürchtete er es könnte bey einigen seiner Leser nicht nur wiedrige Eindrücke gegen die darin <del>vorgestellten</del> <insertion pos="top">vorkommenden</insertion> Personen sondern auch wieder den Verfasser selbst, der in dem Augenblick als ers schrieb seiner Einbildungskraft und seinen Leidenschaften Zügel anzulegen nicht im Stande war, zurückgelassen haben. Diese auszulöschen schrieb er folgende Vertheidigung der in den Wolken <del>geschilderten</del> <insertion pos="top">vorgestellten</insertion> Personen und seiner selbst, weil er einen Schritt den er in Aristophanischem Spleen zu weit gethan auf keine andere Art gut zu machen wuste, um zugleich durch sein Exempel allen seinen jungen Landsleuten die in ähnliche Umstände kommen könnten, einen Wink der Warnung zu <del>geben.</del> hinterlassen.
@@ -1933,34 +1933,25 @@ Tarwast den 9ten November 1767.
 </letterText> 
 
 <letterText letter="118">Liebster Lenz!
-<line type="empty"/>
 <line tab="1"/>Weiß gar nicht, was Dich ankommt, Lärm von mir zumachen. Bin so’n armer Tropf, als Einer seyn kann – Du kaum seyn kannst.
-<line type="empty"/>
 <line tab="1"/>Ich erwart’ also die <aq>Silhouette.</aq> Bitte Dich, n<ul>icht</ul> Kaufmanns <ul>Nachricht,</ul> d. i. von seiner Hand, an R. gesandt, sondern <ul>diese</ul> hier zu verbreiten. Die erstere zerreiße.
-<line type="empty"/>
 <line tab="1"/>Diesen Brief, den Du, damit Du nicht nichts habest, lesen kannst, bitte Dich schleunigst, franco zu spediren, und Dir das Port von Emmerich bezahlen zu lassen. Verzeihe.
-<line type="empty"/>
 <line tab="1"/>Ich bin itzt ganz zerrißen. Also nichts von Deinen That-Entwürfen. Der erste Abend an meinem Arm – wollen wir Thaten bestimmen. D 28. Febr. 76.
-<line type="empty" />
-<line type="break" />L.
+<line type="break" /><align pos="right">L.</align>
 </letterText> 
 
-<letterText letter="119"><note>am oberen Rand</note> <align pos="center">Weise diesen Brief nicht Bester, wie alle meine Briefe.</align>
+<letterText letter="119"><page index="1"/> <sidenote pos="top" page="1" annotation="am oberen Rand">Weise diesen Brief nicht Bester, wie alle meine Briefe.</sidenote> 
+<line type="empty"/>
 <line type="empty"/>
 <line tab="1"/>Lieber Lavater! mein Kopf ist eingenommen von tausend Dingen und ich kann Dir nichts weiter sagen, als ich liebe Dich, ich danke Dir. Hier ist der Brief von der C. Waldner<fn index="5"><anchor>#</anchor></fn> <insertion pos="top">(ihr Onkel ist Graf, sie nur Baronesse.)</insertion> kannst Du mirs verzeyhen daß ich, der vielleicht bald von hier reist, ihn erbrochen und mit meinem Siegel wieder zugesiegelt. Ich weiß wie innig sie Dich hochschätzt und ich wollte doch gern den Ausdruck davon lesen. Du mußt wissen, daß sie alle ihre Briefe französisch schreibt und ihr daher ein deutscher Brief an Dich nicht wenig Müh gekostet. Doch auch hier wirst Du ihre ganze schöne Seele finden die eben durch die für Dich so mühsam aufgesuchten Ausdrücke durchscheint, es ist die Sprache die nicht mit Worten redt Lavater, die Sprache die zwey befreundte Seelen stammeln die nicht von einer Nation sind. Ach wenn Du sie kenntest
-<line type="empty"/>
 <line tab="1"/>Ich gehe wohin mich Wink der Vorsicht ruft, mein Ziel kann ich Dir noch nicht bestimmen. Ich kenne es und der Tod soll mir Bruder seyn, wenn er mich dahin führt. Grüß Kaysern, sag ihm, es ist mir unerträglich daß ich an ihn nicht schreiben kann, nicht kann, so wenig als an den redlichen Kaufmann. Ich habe keinen Augenblick zu feyren.
-<line type="empty" />
-<line type="break" /><fn index="5"><anchor>#</anchor></fn> sie hat ein Canonikat von dem sie sich schreibt. Sey vorsichtig.
-<line type="empty" />
-<line type="break" />
+<line type="break" /><align pos="right"><fn index="5"><anchor>#</anchor></fn> sie hat ein Canonikat von dem sie sich schreibt. Sey vorsichtig.</align>
 <sidenote pos="left" page="1" annotation="am linken Rand, vertikal">
 <line tab="1"/>Doch beschwör ich den ersten bey Dir <insertion pos="top">bey dem lebendigen Gott:</insertion> und allem was ihm heilig ist, alles zu thun, was ich ihm gesagt habe. Stollberg schreibt mir aus Koppenhagen, schmachtet nach Nachrichten aus dem <ul>„Gotteslande Schweitz und vom Gottesmann Lavater“.</ul> Ganz Dein Lenz</sidenote> 
 </letterText> 
 
 <letterText letter="120">
 <line tab="1"/>Hier ist die erwünschte Silhouette. Ich meyne in dem Leben u: der Blüthe der Farben wird sie Dir beßer gefallen; könntest Du das alles in die Physiog: übertragen. Mache doch beßer verehrungswürdiger, einziger – gemeinschaftlicher Freünd unserer Seelen, daß ihr Gesicht von niemand geringerm als <aq>Chodowieki</aq> gestochen wird. Wer sonst könnte ihre Seele auf diesen meinen faßen.
-<line type="empty"/>
 <line tab="1"/>Wenn der Große Schlüßel der Natur zu allem was hier eingewirkt u: für die Zukunft verborgen liegt gefunden werden könnte – so ahnde – weiß ich Dein Urtheil zum Voraus. Schreib es mir heimlich – zu gleicher Zeit ihr wen Du es für gut findest – mir aber ohne Zurükhaltung. Noch einmal bitt ich Dich beherzige alle die Data die ich Dir in m: vorigen Briefen geben. Ich kann nicht anders als immer zu wenig schreiben. Dein übrigens sehr gedrükter L. 
 </letterText> 
 
