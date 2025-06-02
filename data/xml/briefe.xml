@@ -1574,7 +1574,7 @@ Tarwast den 9ten November 1767.
 </letterText> 
 
 <letterText letter="91"><page index="1"/><hand ref="18">
-<line tab="1"/>Mein lieber Lindau <tl>Ausriss</tl> zu Herrn v. Kniestätt. Er ist der einzige am Hof den ich kenne, und der wird Sie mit allen ehrlichen Leuten bekannt machen! – Ich küße Sie herzlich; hier haben Sie einen Brief für ihn. – Leben Sie wohl. Schl.
+<line tab="1"/>Mein lieber Lindau <tl></tl> zu Herrn v. Kniestätt. Er ist der einzige am Hof den ich kenne, und der wird Sie mit allen ehrlichen Leuten bekannt machen! – Ich küße Sie herzlich; hier haben Sie einen Brief für ihn. – Leben Sie wohl. Schl.
 <line type="break"/>E. d 23 Dec. 1775.</hand>
 <line tab="1"/>Den Einschluß gieb doch Zuckerpüppgen unserm Goethe ab. Sollt er noch nicht da seyn, laß es nur seinen Eltern
 <line type="empty" />
@@ -1877,71 +1877,52 @@ Tarwast den 9ten November 1767.
 <line type="break" />In Frankfurt <del>addres</del> meldet Ihr euch gleich bey dem Herrn Rath Göthe. Ist Peter allein so wird er wohl bey ihm logieren
 </letterText> 
 
-<letterText letter="111">Habe ich Zeit so will ich noch heute an Salis schreiben daß er Dir Nachricht von Peter giebt.
-<line type="empty" />
-<line type="break" />Deine Ungewisheit thut mir Weh.
+<letterText letter="111"><page index="1"/><line tab="1"/>Habe ich Zeit so will ich noch heute an Salis schreiben daß er Dir Nachricht von Peter giebt.
+    <line tab="1"/>Deine Ungewisheit thut mir Weh.
 </letterText> 
 
-<letterText letter="112"><hand ref="20"> <align pos="right">Den 20 Febr. 76.</align></hand>
+<letterText letter="112"><page index="1"/><hand ref="20"> <align pos="right">Den 20 Febr. 76.</align></hand>
 <line type="empty"/>
 <line tab="1"/>Ich muß Ihnen bekennen, daß ich sehr mit den Wolken gefehlt habe. Ich habe an hunderttausend Sachen nicht gedacht die mir aus denselben auf ewig zur Last gelegt werden könnten und ich sehe jetzt nur zu sehr ein, wie gefährlich die Lesung eines Alten einem Jüngling werden kann der den Sturm der Leidenschaft im Busen hat. Seine Vernunft die ihm alle Gegenstände beleuchtete, verdunkelt sich, er sieht sich und seinen Feind allein und die ganze Welt nimmt eine andere Gestalt vor ihm an.
-<line type="empty"/>
 <line tab="1"/>Wenn Sie noch mein Freund sind Boje, wenn Sie noch Freund des Guten sind das ich aus allen Kräften zu befordern wünsche, hindern Sie noch den Druck dieser Mißgeburt meiner Galle. Warum mußte ich doch in dem Augenblicke überm Aristophanes sitzen, als Wiel. mich beleidigte. Wenn sie gedruckt wird, wünschte ich nicht mehr zu leben. Nicht wegen der Gefahr der ich mich aussetze, sondern wegen des Guten das ich sonst ausrichten könnte und das sie auf ewig verhindert.
 <page index="2"/>
 <line tab="1"/>Schreiben Sie mir auf das geschwindeste Bester, o nun mein entscheidender Freund – ob das hintertrieben werden kann. Ich will gern alle Kosten tragen. Und verzeyhen Sie mir meine häuffigen Briefe und wie ich Sie mit alle den Aufträgen mißhandele. Ich hoffe daß einmal gut zu machen.
-<line type="empty"/>
 <line tab="1"/>Und schicken Sie mir, ich bitte das Mskpt der Wolken zu, damit es in keine andere Hände durch Zufall jemahls gerathen könne. Es verwölkt und umnebelt meine ganze Bestimmung <insertion pos="left">alle meine Entwürfe</insertion> auf immer.
-<line type="empty" />
-<line type="break" /><note>am rechten Rand aller Zeilen des Absatzes Anführungszeichen; wohl irrtümlich und für den darauf folgenden Absatz gedacht</note>
+<line type="break" /><note>am rechten Rand aller Zeilen des direkt folgenden Absatzes wohl irrtümlich Anführungszeichen; sie sind wahrscheinloch erst für den darauf folgenden Absatz gedacht:</note>
 <line tab="1"/>Nichts destoweniger können und sollen die Blätter gedruckt werden die den Wolken als Anhang bestimmt <insertion pos="left">waren:</insertion> sie sind fürtrefflich und für unsere Zeiten, für Wieland, für die Kunstrichter und das Publikum nothwendig. Mit denen biete ich allen Gefahren die meinem Namen daraus entstehen <insertion pos="top">könne</insertion> frölich Trotz, von meinem eigenen Herzen gerechtfertigt. Wenn Sie doch Herrn Helwig bereden könnten die Wolken dagegen auszuwechseln und sie ungefähr mit folgendem Vorbericht drucken zu lassen.
 <page index="3"/>
-<line type="empty"/>
-<line type="empty"/>
-<line tab="1"/>Der Verfasser dieser kleinen Schrift hatte mir ein Manuskript zugesandt, dessen Druck er aus wichtigen Gründen zu hintertreiben <del>und es der <nr> </nr></del> für nöthig <insertion pos="top">gut</insertion> fand. Da dieses Mskpt. aber doch durch verschiedene Hände gegangen war, fürchtete er es könnte bey einigen seiner Leser nicht nur wiedrige Eindrücke gegen die darin <del>vorgestellten</del> <insertion pos="top">vorkommenden</insertion> Personen sondern auch wieder den Verfasser selbst, der in dem Augenblick als ers schrieb seiner Einbildungskraft und seinen Leidenschaften Zügel anzulegen nicht im Stande war, zurückgelassen haben. Diese auszulöschen schrieb er folgende Vertheidigung der in den Wolken <del>geschilderten</del> <insertion pos="top">vorgestellten</insertion> Personen und seiner selbst, weil er einen Schritt den er in Aristophanischem Spleen zu weit gethan auf keine andere Art gut zu machen wuste, um zugleich durch sein Exempel allen seinen jungen Landsleuten die in ähnliche Umstände kommen könnten, einen Wink der Warnung zu <del>geben.</del> hinterlassen.
-<line type="empty"/>
+<line tab="1"/>Der Verfasser dieser kleinen Schrift hatte mir ein Manuskript zugesandt, dessen Druck er aus wichtigen Gründen zu hintertreiben <del>und es der <nr extent="4"></nr></del> für <ul>nöthig</ul> <insertion pos="top">gut</insertion> fand. Da dieses Mskpt. aber doch durch verschiedene Hände gegangen war, fürchtete er es könnte bey einigen seiner Leser nicht nur wiedrige Eindrücke gegen die darin <del>vorgestellten</del> <insertion pos="top">vorkommenden</insertion> Personen sondern auch wieder den Verfasser selbst, der in dem Augenblick als ers schrieb seiner Einbildungskraft und seinen Leidenschaften Zügel anzulegen nicht im Stande war, zurückgelassen haben. Diese auszulöschen schrieb er folgende Vertheidigung der in den Wolken <del>geschilderten</del> <insertion pos="top">vorgestellten</insertion> Personen und seiner selbst, weil er einen Schritt den er in Aristophanischem Spleen zu weit gethan auf keine andere Art gut zu machen wuste, um zugleich durch sein Exempel allen seinen jungen Landsleuten die in ähnliche Umstände kommen könnten, einen Wink der Warnung zu <del>geben.</del> hinterlassen.
 <line tab="1"/>Ich bitte Sie um baldige Antwort Boje, weil eine mir sehr wichtige Reise davon abhängt. Unterdessen umarmet Sie aufs zärtlichste
-<line type="empty" />
 <line type="break" /><align pos="right">Lenz.</align>
-<page index="4"/><address>Herrn
+<page index="4"/>
+<line type="empty"/><address>Herrn
 <line type="break"/>Herrn <ul>Boje</ul>
 <line type="break"/>Gelehrten in <del>G</del>
 <line type="break"/><ul>Göttingen</ul></address>
 </letterText> 
 
-<letterText letter="113"><align pos="right">Cassel den 16ten Feb.</align>
+<letterText letter="113"><page index="1"/><align pos="right">Cassel den 16ten Feb.</align>
 <line type="break"/>
 <line tab="1"/>Es hat so keine grosse Eile mit eurem Marsch; mein lieber <del>diese</del> <insertion pos="top">unsere</insertion> Truppen marschiren nur den 15ten Merz zum frühesten Mit Erstaunen habe ich gesehen das Du die ganze Reise mit 12 Louisdór bestreiten willst. Ich werde Dich also noch vielleicht können umarmen, wenn mir möglich ist noch 3 nach Frankfurt zu schicken Reiset von dort nicht nach Cassel sondern nach Wommen das bey Eisenach liegt und wo ich zwei liebe Schwestern habe, von dort würdest Du auch können nach Weimar Reisen. Du weißt doch daß
-<page index="2"/>Grewen in Hanau Hanöwrischer Fändrich ist. <del><nr> </nr></del> 
+<page index="2"/>Grewen in Hanau Hanöwrischer Fändrich ist. <del><nr extent="3"> </nr></del> 
 </letterText> 
 
-<letterText letter="114"><align pos="right">Strasb. den 19ten Febr. 1776.</align>
+<letterText letter="114"><page index="1"/><align pos="right">Strasb. den 19ten Febr. 1776.</align>
 <line type="empty"/>
-<line tab="1"/>
 <line tab="1"/>Hier haben Sie etwas lieber Freund das Sie unserm Hellwieg für die unterdrückten Wolken anbieten können, die er denke ich nicht sehr bedauern wird. Ich habe deßwegen mit einem andern Buchhändler in Unterhandlungen gestanden der sich über 10 neue Louisd’or nicht mit mir einigen wollte, Herr Hellwieg aber als Freund soll es für den Dukaten den Bogen haben.
-<line type="empty"/>
-<line tab="1"/>Ich habe nicht Zeit gehabt, es abschreiben zu lassen, die kleinen Aenderungen aber die ich in dem Ausdruck hie und da gemacht sind deutlich genug als daß <note>S</note>sie hoffentlich den Korrecktor verwirren könnten. Für Druck und Pappier lasse ich die Freundschaft sorgen. Ich wünscht es sobald als möglich gedruckt weil es schon in manchen Händen gewesen die sehr begierig auf die Bekanntmachung sind.
-<line type="empty"/>
+<line tab="1"/>Ich habe nicht Zeit gehabt, es abschreiben zu lassen, die kleinen Aenderungen aber die ich in dem Ausdruck hie und da gemacht sind deutlich genug als daß <del>S</del>sie hoffentlich den Korrecktor verwirren könnten. Für Druck und Pappier lasse ich die Freundschaft sorgen. Ich wünscht es sobald als möglich gedruckt weil es schon in manchen Händen gewesen die sehr begierig auf die Bekanntmachung sind.
 <line tab="1"/>Schreiben auch Sie mir Ihre Sensation. Ich umarme Sie vom ganzen Herzen u. ganzer Seele <align pos="right">Lenz.</align>
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="1" annotation="am linken Rand, vertikal">
 <line tab="1"/>Die Wolken bitte ich mir doch zurück. Vielleicht komm ich noch dieses Jahr in Ihre Gegenden. Mein Name wird nicht genannt.</sidenote>
 </letterText> 
 
 <letterText letter="115">
 <line tab="1"/>Daß mich Ihr gütiges, mehr als mütterlich herablassendes Zutrauen, gnädige Frau! bis zu Thränen gerührt hat, – warum muß ich es Ihnen so spät sagen? Anstatt meine fürwitzigen Erkundigungen mit dem Ernst der Weisheit abzuweisen, geben Sie Ihnen mütterlich gütig nach, und beschämen auf die Art meine Dreistigkeit bis zum Verstummen. Indessen war mir alles auf der Welt an diesen Nachrichten gelegen, und ich bedaure nichts weiter, als daß ich mit Einziehung derselben bisher so saumselig gewesen. Die geringste Kleinigkeit von Ihnen und Ihrer würdigen Familie Umständen, ist mir von jeher äußerst wichtig gewesen; nur waren die Nachrichten, die ich, als ein in diesen Gegenden völlig fremder, halber Lapländer, bisher davon hatte einsammlen können, alle so mangelhaft, so wiedersprechend, in einem so hohen Grade wiedersprechend gewesen, daß dieses Bedürfniß meines Herzens auf keine andre Art befriediget werden konnte, als von Ihnen selbst. Wollte Gott, ich hätte eher so glücklich seyn können! Werden Sie es einem Kopf, der von hundert nothwendigen, und zehn Tausend unwichtigen Dingen gezerrt wird, verzeihen, daß ich mit meinem Dank so spät komme? Und dennoch Keckheit genug habe, so viel es möglich, und so weit eine solche Bitte von mir, ohne unbescheiden zu werden, geschehen kann, Sie um nähere Aufhellungen einiger Stellen Ihres lezten Briefes anzuflehen? Wer war der Hohepriester, der bey dem Schicksal der liebenswürdigsten Person Ihres Geschlechts eine so unliebenswürdige Rolle spielte? Und war die Leidenschaft des Andern edel, die, wie ich aus allem ahne, unglückliche Folgen hatte? Ich las alle diese Worte, wie die Passionsgeschichte unsers Heilandes.
-<line type="empty"/>
 <line tab="1"/>Wie entzückt bin ich über die Familienportraite, die Sie mir aufgestellt haben. Noch oft spaziere ich in Gedanken in dieser Gallerie herum, und freue mich über die mannigfaltigen, und doch einartigen Abdrücke des treflichsten Vaters, (den ich zwar nur von der Seite seiner Erholungen und Vergnügungen, ich meyne die Briefe über das Mönchswesen, kenne, dessen ganzen Werth ich aber, nach Maaßgabe dieser, mit einem angenehmen Schaudern ahne,) und der fühlbarsten, weisesten und aller Verehrung würdigsten Mutter.
-<line type="empty"/>
 <line tab="1"/>Könnte ich Ihnen doch alles sagen, was mir auf dem Herzen liegt. So viel müssen Sie wissen, daß Ihre Nachrichten mir in einem Augenblicke kamen, wo sie mich fast zu Boden schlugen. Ich wußte nie, daß Sie einen Sohn hatten, geschweige einen würdigen Sohn, der bey Wieland im Hause gewesen, und also auch ihm manches zu danken hat.
-<line type="empty"/>
 <line tab="1"/>Mein Wiederwillen gegen W., schrieb sich bloß aus einigen seiner Schriften her; seine Privatverhältnisse habe ich nie gewußt, mich freilich mit großen Unrecht zu wenig darum bekümmert. Erst jezt geht mir über viele Stellen in Ihrer unsterblichen Sternheim ein Licht auf, das mich in einen wunderbaren Zustand versetzt, den ich Ihnen lieber, vielleicht sehr dunkel und unvollkommen, zu ahnen überlassen, als beschreiben will. Auch wären vielleicht noch viel fatalere Sachen erfolgt, wenn ich nicht, (ich denke, aus Fügung der Providenz,) noch im kritischen Augenblicke, diese Winke erhalten, die mir nun, von Ihnen, um so viel heiliger sind. Nehmen Sie mehr als wörtlichen Dank, würdige Frau!
-<line type="empty"/>
 <line tab="1"/>Ich hoffe, daß auch ich Wieland kennen lernen, und mit ihm, zwar zu seinem Vorteil, werde ausgesöhnt werden. Indessen hat doch alles das zu manchem gut seyn müssen.
-<line type="empty"/>
 <line tab="1"/>Gegenwärtig gehe ich mit einer kleinen Reise nach Deutschland um, die die nach Italien wohl noch vorher kreuzen, vielleicht ganz auf eine andre Zeit aussetzen könnte. Ich bin nicht so ganz Dichter allein, als Sie wohl glauben werden, und fühle es wenigstens sehr lebhaft, daß zum gut und artig seyn, auch nothwendig das <ul>seyn</ul> gehöre.
-<line type="empty" />
-<line type="break" />
 </letterText> 
 
 <letterText letter="116">Es hat mich gefreuet und geschreckt, daß die Soldaten bereits gedruckt werden. Indessen da es so ist, so hat es wohl so seyn müssen. Nur hab’ ich höchst wichtige Ursachen (nicht des Eigennutzes allein, sondern etwas mehrern) meinen Namen nicht bekannt werden zu lassen. Wollten Sie also die einzige Gewogenheit für mich haben, Herrn Reich zu bitten, daß er, um alles desto besser zu maskiren, auf den Titel setze: eine Komödie von Steenkerk aus Amsterdam; der drolligte Name wird nichts zu sagen haben, er hebt alle meine Privatbesorgnisse alIein. In der Folge wird es sich erweisen, warum diese Vorsicht nöthig war, und jeder Menschenfreund wird mir Recht geben. Auch bitte ich Herrn Reich meinen Namen nie zu nennen, denn Buchhändler schweigen nicht gerne, mag ihr persönlicher Charakter noch so edel sein. Wie können sie’s auch wissen oder ahnden, was für Wunden sie oft dem Verfasser schlagen.

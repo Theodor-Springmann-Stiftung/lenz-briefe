@@ -1677,7 +1677,7 @@
 
 		<letterDesc letter="111">
 			<sent>
-				<date notBefore="1776-02-01" notAfter="1776-02-28">Auf dem Weg von Hannover nach Kassel?,
+				<date notBefore="1776-02-01" notAfter="1776-02-28">Wahrscheinlich auf dem Weg von Hannover nach Kassel,
 					Februar 1776</date>
 				<location ref="34" cert="low">vmtl.</location>
 				<person ref="19" />
