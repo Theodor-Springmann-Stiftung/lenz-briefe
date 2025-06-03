@@ -2280,7 +2280,7 @@
 
 		<letterDesc letter="151">
 			<sent>
-				<date notBefore="1776-03-28" notAfter="1776-04-05">hinter Frankfurt, Um 1. April 1776</date> <!--
+				<date notBefore="1776-03-28" notAfter="1776-04-05">Hinter Frankfurt, Um 1. April 1776</date> <!--
 				Was ist hier die konventionalisierte Zeitspannne? -->
 				<person ref="1" />
 			</sent>
@@ -2290,7 +2290,7 @@
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
-			<isDraft value="false" />
+			<isDraft value="true" />
 		</letterDesc>
 
 		<letterDesc letter="152">

@@ -2357,7 +2357,8 @@ Doch muß ich auch Straßburg Gerechtigkeit widerfahren lassen. Ich habe hier ne
 <line type="empty" />
 <line type="break" />Weimar. Den 1. Aprill.          Lenz Verf. der Soldaten.
 <line type="empty" />
-<page index="2"/>1776. 22. Aug. Weimar
+<page index="2"/>
+<line type="empty" />1776. 22. Aug. Weimar
 <line type="empty" />
 <line type="break" />Lenz
 </letterText> 
@@ -2376,72 +2377,59 @@ Doch muß ich auch Straßburg Gerechtigkeit widerfahren lassen. Ich habe hier ne
 <line type="break" />Nochmals daß doch die Wolken in keines Menschen Hände kommen mag darnach fragen <dul>wer </dul>da will. Sie sehen selbst die Nothwendigkeit davon ein lieber Freund.
 </letterText> 
 
-<letterText letter="151">
+<letterText letter="151"><page index="1"/> <pe>
 <line tab="1"/><aq>Un inconnu Vous ecrit ceci, prenez cela plutot pour un avertissement du ciel. Je n’y peux pas avoir d’interet, parce que je ne me nomme pas. Qu’allez Vous faire trop aimable et charmante Baronne! epouser un homme qui n’est pas a portee de Vous, qui n’est pas en etat de Vous apprecier sacrifier jeunesse beaute graces talens richesses tout tout a une ame qui peut etre ne sait estimer que le dernier et le plus vil de ces rares avantages. Dieu ou en estes
 <page index="2"/>Vous, si spirituelle si penetrante que Vous etes de Vous laisser aller de la sorte a un sort aveugle cruel et injuste a un sort qui tôt ou tard coutera la vie a vos veritables amis parce qu’ils Vous voyent perdue sans ressource oui perdue adorable que Vous etes d’etre tombée dans les mains d’un homme ordinaire et consequemment froid et inconsequent,
 <page index="3"/>Vous femme extraordinaire en tout point. Ecoutez moi ecoutez moi, ne vous abandonnez pas si legerement, attendez au moins, eprouvez le, qu’ avez Vous a risquer: Voyez par mille experiences s’il peut un jour meriter Votre main pensez que c’est un pas pour Ia <del>pas </del>vie, un pas qu’on ne peut plus retracter Croyez moi, tout amour de
-<page index="4"/>la vertu commence de soi même, on ne peut plus se plaindre du sort, apres s’etre rendu malheureuse soi même Et quel malheur quel crime plus grand que de Vous donner Vous meme a des intentions douteuses, frivoles au moins a un cœur qui ne sait pas mourir de joie d’ avoir remporté un triomphe sans pareille, un cœur qui ne mette pas toute sa felicité a Vous adorer</aq>
+<page index="4"/>la vertu commence de soi même, on ne peut plus se plaindre du sort, apres s’etre rendu malheureuse soi même Et quel malheur quel crime plus grand que de Vous donner Vous meme a des intentions douteuses, frivoles au moins a un cœur qui ne sait pas mourir de joie d’ avoir remporté un triomphe sans pareille, un cœur qui ne mette pas toute sa felicité a Vous adorer</aq></pe>
 </letterText> 
 
-<letterText letter="152">Mein Theurer, Lieber Lenz!
+<letterText letter="152"><page index="1"/>Mein Theurer, Lieber Lenz!
 <line type="empty"/>
 <line type="empty"/>
 <line type="empty"/>
 <line tab="1"/>Unser Philanthropin braucht itzt unumgänglich nothwendig einen besonderen Mann, als teutschen Schriftsteller. Da wir Ihre Talente und Ihr Herz kennen, glauben wir nirgends beßer, als an Sie uns wenden zu können. Helfen Sie mit ein Institut befördern, das das Wohl der Menschheit zum einzigen Gegenstand hat.
-<line type="empty"/>
 <line tab="1"/>Die Bedingungen sind: Mit uns glücklich zu leben, Ihre Kräfte zum allgemeinen Wohl mit den unsrigen zu vereinigen, und alle Vortheile mit uns zu theilen, die wir geniesen. Die Reiskosten sind frey,
 <page index="2"/>versuchen Sie ein bis zwey Jahre bei uns zu sein, sollten Sie alsdenn (wofür mir nicht bange ist) mit Ihrem Aufenthalt allhier nicht zufrieden seyn, so sollen Sie kostfrei hingeliefert werden, wohin Sie wollen. Alle Bedingungen, die Sie noch machen wollen, – da Sie keine andere als billige machen können, sollen erfüllt werden.
-<line type="empty"/>
 <line tab="1"/>Laßen Sie uns so bald als möglich wißen, ob und wann Sie kommen wollen. Werden Sie mit ein Vater des Philanthropins, lieben Sie dasselbe, und denjenigen, der im Namen desselben schreibt
 <line type="empty" />
-<line type="break" />Ihren
+<line type="break" /><align pos="center">Ihren</align>
 <line type="empty" />
-<line type="break" />Simon
+<line type="empty" />
+<line type="break" /><align pos="right">Simon
 <line type="break"/>Professor am Philanthropin
-<line type="break"/><ul>zu Deßau.</ul>
+<line type="break"/><ul>zu Deßau.</ul></align>
 <line type="empty" />
 <line type="break" />Deßau d: 4ten Aprill <ul>1776.</ul>
 </letterText> 
 
 <letterText letter="153">am Karfreytage 1776.
-<line type="empty"/>
 <line tab="1"/>In diesem Augenblick, meine theureste Mutter! da ich der Mutter meines Goethe schreibe, in seinen Armen in seinem Schooß, schreib ich auch Ihnen, sag Ihnen, daß ich jetzt in Weymar bin, wo Goethe mich heut dem Herzoge vorstellen wird.
-<line type="empty"/>
 <line tab="1"/>Laßen Sie sichs nicht reuen daß ich immer noch so herumschweiffe. Gott führt jeden seinen Weg, es bleibt dabey daß ich Sie u. meinen lieben Vater überall im Herzen herumführe und Ihnen keine Schande machen will.
-<line type="empty"/>
 <line tab="1"/>Sagen Sie unserm lieben Vater, er soll alle unsere Geschwister und Freunde an einem Sonntage zusammenbitten und meines Bruders Goethe Gesundheit trinken. Alsdenn seiner Mutter, seiner Schwester, seines Vaters und dann meine. Die Rangordnung hat ihre Ursachen.
-<line type="empty"/>
 <line tab="1"/>Ich werde Papaen schreiben eh ich von hier wegreise, bitten Sie ihn daß er immer gleich zärtlich gleich gütig gegen mich bleibt. Küßen Sie alle meine Geschwister von mir. Und all unsere Freunde.
-<line type="empty" />
 <line type="break" />Jakob M R Lenz.
 <line type="empty" />
-<line type="break" />Was macht Schwester Liesgen?
-<line type="empty"/>
+<line tab="1"/>Was macht Schwester Liesgen?
 <line tab="1"/><ul>Abends.</ul> Ich bin 2 Stunden beym Herzoge gewesen und werde Morgen Mittag bey ihm essen. Sehr gnädig empfangen worden. – Was für große trefliche Leute kennen gelernt! All das dank ich Ihnen mein Vater! bethen Sie ferner für mich.
 </letterText> 
 
-<letterText letter="154"><hand ref="10">
+<letterText letter="154">
 <line tab="1"/>Ja L.! sie hat Dir das Portrait zugedacht u: geschenkt, u: Du must Dich bey ihr dafür bedanken. Verzeih mir m: Wildheit, u: Unbesonnenheit, daß ich Dir die Nachricht nicht eher gegeben. Auch verdien ich freylich das Portrait nicht, aber ich weiß Du schikst mirs aus Gnaden.
-<line type="empty"/>
-<line tab="1"/>Ich werde täglich inniger u: vertrauter mit dem Herzog der einer der besten Menschen auf unserm Leidenshügel ist. Aber was hilfts mir? desto weher thut die Trennung. Und getrennt muß es seyn. Verzeih mir mein öfteres Schreiben. Du wird die Ursache leicht begreifen – Auch das ist Menschheit. Sonst dacht ich freylich lieber an Dich als ich Dir schrieb.</hand>
+<line tab="1"/>Ich werde täglich inniger u: vertrauter mit dem Herzog der einer der besten Menschen auf unserm Leidenshügel ist. Aber was hilfts mir? desto weher thut die Trennung. Und getrennt muß es seyn. Verzeih mir mein öfteres Schreiben. Du wird die Ursache leicht begreifen – Auch das ist Menschheit. Sonst dacht ich freylich lieber an Dich als ich Dir schrieb.
 </letterText> 
 
-<letterText letter="155">
+<letterText letter="155"><page index="1"/>
 <line tab="1"/>Wie Lindau ihr wollt in den Lehrjahren Eures Lebens da Ihr auf alles das was groß und edel ist Ansprüche habt euch hinlegen und sterben? Warum nicht lieber ausschlaffen? Pfuy schämt euch solchen Entschluß weise zu nennen. Wißt Ihr denn nicht daß die Natur alles langsam reift, daß alles seine Stuffen u. Grade hinaufgehen muß also auch ihr. Die Schnecke kriecht und kommt endlich zum Ziel der Löwe läuft und kommt nicht weiter und nur auf das Auge kommt es an, so scheint euch der Löwe eine Schnecke. Wollt ihr übereilen was seiner Natur nach nicht übereilt werden kann? Wollt ihr im Alter von achtzehn jahren ein Greiß seyn? Wollt ihr Thaten gethan haben eh andere noch den Gedanken dazu fassen und wenn sie noch nicht gethan sind verzweiffeln?
-<line type="empty"/>
 <line tab="1"/>Verzweiffelt daß die Erde 365 Tage braucht eh sie um die Sonne geht, verzweiffelt an ihren Kräften. Eure Kräfte wirken unmerklich, aber eure abgeschmackte Phantasie macht Euch weis daß Ihr keine habt weil Ihr kein Atlas seyd.
 <page index="2"/>
 <line tab="1"/>Wollt ihr euch todtschiessen lassen oder juckt euch die Haut so das Leben zu verlieren so geht nach Amerika und verliert es auf eine edle Art. Wollt ihr alles verlieren so setzt das Leben doch wenigstens auf die Karte und versucht ob ihr damit nicht alles gewinnen könnt. Verwünscht sey der Thomas wenn er euch nichts anders lehren kann als deklamiren und Testamenter machen.
-<line type="empty"/>
 <line tab="1"/>Ihr Testamenter machen in einem Alter von 18, 19 Jahren? Die Idee ist so kindisch als wenn die Mädchen die mit Puppen spielen sich verheurathen. Wer hat euch das Recht gegeben zu sterben da ihr noch nicht gelebt habt. Wer das Recht euer Vermögen zu testiren und wegzuwerfen, da ihrs noch nicht selber gebraucht habt. Wer das Recht fremde Kinder anzunehmen da ihr aus euch selbst noch alles mögliche zu machen habt. Ich hasse die Leute die andere
 <page index="3"/>erziehen wollen, jeder hat mit sich selbst genug zu thun.
-<line type="empty"/>
 <line tab="1"/>Das Schweben ist Mangel des Muths euch zu etwas zu bestimmen, seyd etwas oder seyd nichts. Geht nach Amerika oder bleibt zu Hause und baut euer Landgut bis euch was Besseres einfällt. Mich deucht aber euer Geist muß durchaus Beschäftigung haben, macht also meinthalben Projekte nur macht sie nicht so ungeheuer daß sie Traum bleiben müssen ihr macht euch und eure Freunde lächerlich dadurch. Fangt an auszuführen und solltet ihr auch zu Nicht gehen drüber, ein Tag giebt den andern.
-<line type="empty"/>
 <line tab="1"/>Euch ermorden und wißt Ihr mein Freund daß jedermann drüber lacht und wenns geschieht noch ärger lachen wird. Euch ermorden aus langer Weile wie der Engländer der sich vor den Kopf schoß weil er nichts neues in der Zeitung fand. So schlägt man Flöhe todt aber keine Menschen. So geht denn mit und macht die Expedition u. bedenkt daß die Natur es ist die Kräfte giebt nicht wir selber, daß sie sie im Augenblick der höchsten
 <page index="4"/>Ohnmacht giebt wenn wir uns nur in die Nothwendigkeit setzen welche zu haben u. dem Gott glauben der in ihr arbeitet. Ihr aber wollt Wasser auf den Berg leiten ohne zu pumpen und wenn es sich nicht von selber hinaufbegiebt verzweifeln und sterben u. Testamenter machen. Euer Peter ist ein Schurke wenn er euch feig oder mißtrauisch gegen euch selbst macht. Eure Imagination trägt das in den Jungen hinein was in eurer Seele liegt, ihr seyd der Peter u. eure Momentane Existenz wird erst unterm Gewehr in Amerika angehn. – Laßt was für den Peter zurück zur Erziehung u. denkt weiter nicht an ihn: wenn es euch wohl geht überm Jahr etwa oder in einigen Jahren könnt ihr ihn ja nachkommen lassen. Setzt eure Existenz nun einmal dran, im erheischenden Fall wird euch der Verstand u. die Gegenwart des Geistes schon kommen, euch herauszuhelfen das ist nun aber freilich das Kind das oft mit vieler Angst geboren wird
-<line type="empty"/>
-<line tab="1"/>Das ist mein Rath u. Goethens u. Wielands u. Salis und aller Menschen Thiere Engel Götter u. Halbgötter. Sterbt aber sterbt als Mann Lenz
+<line tab="1"/>Das ist mein Rath u. Goethens u. Wielands u. Salis und aller Menschen Thiere Engel Götter u. Halbgötter. Sterbt aber sterbt als Mann          Lenz
 </letterText> 
 
 <letterText letter="156">Hannover. Den 11ten Apr. 1776.
