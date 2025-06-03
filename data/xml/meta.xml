@@ -583,7 +583,7 @@
 				<location ref="7" />
 				<person ref="1" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -1127,7 +1127,7 @@
 				<location ref="16" />
 				<person ref="20" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -1142,7 +1142,7 @@
 				<location ref="7" />
 				<person ref="1" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -1762,7 +1762,7 @@
 				<location ref="19" />
 				<person ref="51" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -1823,7 +1823,7 @@
 				<location ref="11" />
 				<person ref="10" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -1883,7 +1883,7 @@
 				<location ref="19" />
 				<person ref="51" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -2108,7 +2108,7 @@
 				<location ref="11" />
 				<person ref="10" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -2350,7 +2350,7 @@
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
-			<isDraft value="false" />
+			<isDraft value="true" />
 		</letterDesc>
 
 		<letterDesc letter="156">
