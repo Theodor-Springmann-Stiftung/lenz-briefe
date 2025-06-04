@@ -2461,7 +2461,7 @@
 
 		<letterDesc letter="163">
 			<sent>
-				<date notAfter="1776-04-26">Weimar, Vor 26. April 1776</date>
+				<date notAfter="1776-04-26">Weimar, vor 26. April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2486,7 +2486,7 @@
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
-			<isDraft value="false" />
+			<isDraft value="true" />
 		</letterDesc>
 
 		<letterDesc letter="165">

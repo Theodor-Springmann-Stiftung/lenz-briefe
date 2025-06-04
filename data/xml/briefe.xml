@@ -2509,36 +2509,33 @@ Doch muß ich auch Straßburg Gerechtigkeit widerfahren lassen. Ich habe hier ne
 <line tab="1"/>Meine Soldaten werdt Ihr jetzt schon haben. Vielleicht seht ihr das nächste Vierteljahr was im Merkur von mir wenn ich soviel Zeit habe.
 </letterText> 
 
-<letterText letter="161"><hand ref="9">
+<letterText letter="161"><page index="1"/><hand ref="9">
 <line tab="1"/>Mich freut’s liebster Mann wenn es Ihnen wohl gehet. Ihr Briefgen habe erhalten und ihre aufträge sind besorgt bis auf H: Fibich den ich noch nicht gesehen habe. Herr Prof. Koch sagt mir Sie hätten ein Buch von der Bibliothek, ich dachte Sie hätten alle nach Hause geschickt: Er hat es aber doch nicht zurück begehrt. Ich denke Sie kommen bald wieder wann nicht allenfalls eine beßere <aq>vocation</aq> Sie uns weg kapert. Viele<del>n</del> Empfehlungen an meinen Liebsten Goethe, H. V. Knebel, Graf Stollberg und unbekannter weis an Hn. Hofrath Wieland. Hetzler hat mir den 1ten Bogen von meinen Abhandlungen zugeschickt Sie werden auf die Meße fertig. Lieben Sie mich
-<line type="break"/>Saltzmann
+<line type="break"/><align pos="right">Saltzmann</align>
 <line type="empty" />
 <line type="break" />Strasburg den 16ten Apr: <ul>1776.</ul></hand>
-<page index="2"/><hand ref="11"> D 16. Apr. 76.
+<page index="2"/>
+<line type="empty"/>
+<line type="break"/><hand ref="11">D 16. Apr. 76.
 <line type="empty"/>
 <line tab="1"/>Laß mich mit ein paar Worten dieß Blatt profaniren, meine Liebe zu Dir mag's wieder heiligen. Meine Seele frohlockt drob daß Dirs wohl geht. Deine Grüße sind ausgericht. Alle grüßen Dich wieder und sind herzlich froh daß sie drüber in die Höh springen möchten wann sie hören daß Du glücklich bist. <aq>Mslle.</aq> König. Lauthin. Fibich. Zimmermann. Mechel. <aq>Spener. Sano.</aq> Prinz grüßen Dich.
-<line type="empty"/>
 <line tab="1"/>Hier ist ein Brief aus dem Philanthr. von Simon und Schweigh: es soll eine <aq>Vocation</aq> drinn seyn für Herrn Lentz den man zum Schriftsteller fürs <aq>Philanth.</aq> wünscht. Schreibst Du ihnen Antwort, so gieb ihnen meinen Gruß ich werd ihnen bald auch schreiben.
-<line type="empty"/>
 <line tab="1"/>Wann ich die Woche das Pack aus Zürich nicht bekommen werde, so schick ich Dir Deine verlangten Strasb. Manuscripte und machs mit den Briefen wie Du verlangst.
-<line type="break"/>
 <line tab="1"/>Nicht mit meinem Namen aber desto mehr mit meinem Herzen ehre und liebe ich alle verdienstvollen Männer. Insonders sag Dir wieder mit der wärmsten und immerbleibenden Zärtlichkeit daß ich bin Dein Röderer.
-<line type="empty"/>
 <line tab="1"/>Hastu noch nicht 2 Briefe von mir kriegt, der eine auf Darmstadt an Hn. Merk, der andere nach Weimar, in dem ich Dir sage daß Fräulein von Waldner mit Herrn von Oberkirch den 1sten April um 12 Uhr in der Neuen Kirch <aq>copulirt</aq> worden sind.</hand>
 </letterText> 
 
-<letterText letter="162"><align pos="right">Manheim</align>
+<letterText letter="162"><page index="1"/><align pos="right">Manheim</align>
+<line type="empty" />
 <line type="empty" />
 <line type="break" />Lieber Lenz
 <line type="break"/>
 <line tab="1"/>daß Du mir noch nicht geschrieben – eine gewaltige Unart – so viele vortrefliche liebe Freunde fragen, wollen wißen was Lenz macht – Kann weiter nichts drauf antworten als – ich weiß nichts – Liederlicher Teufel entweder Du liegst an Zaubrer Göthes Busen sinnlos in süßen Phantasien verwickelt und verstrickt – denkst im Wiegen und Liegen und Vergnügen aller Welt Freunde zum Guckguck hin – oder eine listige Hexe mit <ul>grün</ul> schwarzen <insertion pos="top">dämmernden</insertion> Augen und einem erwärmenden seeligen <insertion pos="top">Madonna</insertion>Blick, da für sie Gott seegnen wolle, hält meinen loßen Flattrer irgendwo gefangen – – aber närrisch daß ich eben Dir drum vorpredigen will – das arme Herz Bruder Lenz wie Kletten wirft sichs überall an – und ein Mädchen Gesicht – Gott sey bey uns bin auch seit Deiner Abreise wieder geschmolzen – ein Mädchen – o! ein Engel Lenz
 <page index="2"/>– ein Teufel von einem lieben Mädchen führt mich am Seile gefangen – schwärmen möcht ich gerne und arbeithen soll ich – o! Frühling und Liebe und jugend! – ich kreutzig und segne mich über und über und lese meinen Morgen- und Abend Seegen im Werther.
-<line type="empty"/>
 <line tab="1"/><aq>Apropo</aq> mit dem National Teater wirds hier zu Stand kommen – habe einen Plan zur Anlegung einer Teater Schule machen müßen den ich Dir zuschicken will wenn Dus begehrst der Grund zu einem weitläuftigen prächtichen Schauspiel Hause wird in aller Hastigkeit gelegt diesen Sommer noch solls fertig seyn und zukünftigen January schon drauf gespielt werden.
-<line type="empty"/>
 <line tab="1"/>Sag kannstu mir nicht <aq>Adreße</aq> geben wo ich indessen einige guthe brauchbare acteurs und actrißen anwerben könnte, je geschickter je beßer für uns – zum Exempel für folgende Rollen
 <line type="empty" />
-<line type="break" /><tabs>
+<line type="break" /><note>Tabelle</note><tabs>
 <line index="1"/><tab value="1-1"><ul>Mannspersohnen</ul></tab><tab value="2-2"><ul>Frauenzimmer</ul></tab>
 <line index="2"/><tab value="1-1">Erster Liebhaber</tab><tab value="2-2">Erste Liebhabrin</tab>
 <line index="3"/><tab value="1-1">Bediente</tab><tab value="2-2">Subrette</tab>
@@ -2547,61 +2544,49 @@ Doch muß ich auch Straßburg Gerechtigkeit widerfahren lassen. Ich habe hier ne
 <line index="6"/><tab value="1-1"><aq>oncle.</aq></tab></tabs>
 <line type="empty"/>
 <line tab="1"/>Da ich den Auftrag vom Hofe habe, würd ich gleich mit ihnen unterhandlen können, könnte mich auch dabey um so viel sichrer <del>sagen</del> <insertion pos="top">einlaßen</insertion>, da <del>ich</del> immer Deine Auswahl hierin die beste seyn wird – ein jeder der sich für hier <del>her</del> anwerben läßt soll nicht allein seine rechnung in ansehung der Besoldung finden, sondern auch, darauf hab ich in meinem Plane Hauptsächlich loßgedrungen, erhält einen rang, der ihm bey einer guten Lebensarth erlaubt, die besten Gesellschaften zu besuchen.
-<line type="empty"/>
 <line tab="1"/>Ich bitt Dich drum wenn Du kannst lieber sey nicht nachläßig – arbeithe mit es geht ja für die gemeine Sache – Schreib mir gleich wenn Du mir einige Schauspieler ausfündig gemacht die sich für mich schicken, daß ich mit Dir gleich unterhandle, oder sag ihnen daß sie mir selbst schreiben
 <page index="3"/>– findet noch Auswahl statt lieber Lenz so schicke mir diejenige, die am wenigsten Manier <del>an sich</del> angenommen wenn <del>Sie</del> <insertion pos="top">Ihnen</insertion> nur Feuer und natürliche Wärme vom Himmels Papa im Busen angezündet ist –
-<line type="empty" />
-<line type="break" />An Eckhoff schreib ich so eben auch.
-<line type="empty"/>
+<line tab="1"/>An Eckhoff schreib ich so eben auch.
 <line tab="1"/>Den anticken Saal hastu doch der Zeit nicht vergeßen Lieber – Du bist zu ehrlich und ich traue Dir viel zu viel Gewißen zu, als daß Du nicht manches Stündchen meinem <del>L<nr> </nr></del> armen <aq>Laocon</aq> meiner lieben Niobe und meinem <del>arme</del> guten Glatiator widmen solltest – Sie sind mir gar zu lieb und ich könnte Dir drum feind werden wenn ich je so was von Dir erführe – pfuy das wär auch zu undankbar für einen Lenz der süßen Augen Blicke so zu vergessen, eher solltestu ein hundert von dem <insertion pos="top">viel tausend</insertion> Grüßen und Küßen an meine Liebe Wieland und Göthe vergeßen die ich Dir mitgegeben und beym Himmel das ist doch arg genug
-<line type="empty" />
-<line type="break" />Frid. <ul>Müller</ul>
+<line type="break" /><align pos="right">Frid. <ul>Müller</ul></align>
 </letterText> 
 
-<letterText letter="163"><note>Empfangsnotiz Boies</note><hand ref="20"> Den 26 Apr. 76.</hand>
+<letterText letter="163"><page index="1"/><note>Empfangsnotiz Boies:</note><align pos="right"><hand ref="20">Den 26 Apr. 76.</hand></align>
 <line type="empty"/>
 <line tab="1"/>Vernichten Sie die Wolken Boje und wenn Sie ein oder zwey Exemplare übrig behalten so lassen Sie sie keinem menschlichen Geschöpf zu Augen kommen weil sie mir zur Schande gereichen.
-<line type="empty"/>
 <line tab="1"/>Ich bin hier unendlich wohl. Die vorzügliche Gnade des Hofes und die Freundschaft so vieler herrlichen Geschöpfe Gottes beysammen machen mich in einem gewissen Grade seelig den nur mein eigen Herz mir verderben kann.
-<line type="empty"/>
 <line tab="1"/>Machen Sie doch daß ich die Freunde p. bald bekomme. Ich hoffe Helwig wird daraus zuviel lösen als daß er es übers Herz bringen kann mir nur 6 Dukaten dafür gegeben zu haben
-<line type="empty" />
 <line type="break" />Lenz.
 <page index="2"/>
+<line type="empty" />
 <line tab="1"/>Grüssen Sie unsern fürtreflichen Hn. Leibarzt Zimmermann und sagen ihm daß es mir wehe thut nicht gegenwärtig bey seinem Hn. Sohn in Strasb. seyn und ihm seinen Brief vorlesen zu können. Es geht Goethen freilich sehr wohl hier wie auch mir jetzt. Sobald ich aus dem lieben Strudel der mich fast bis zur Betäubung umdreht zu mir selber kommen kann, schreibe ich ihm. Unterdessen dank ich für all seine gütigen Mühwaltungen innigst. Das mehrere behalt ich mir vor.
-<line type="empty" />
-<line type="break" />L.
-<line type="empty" />
-<line type="break" />
-<sidenote pos="left" page="2" annotation="am linken Rand, vertikal"> Der Herzog und der ganze Hof lesen Ihr Musäum mit vieler Liebe.</sidenote>
+<line type="break" /><align pos="right">L.</align>
+<sidenote pos="left" page="2" annotation="am linken Rand der zweiten Seite, vertikal"> Der Herzog und der ganze Hof lesen Ihr Musäum mit vieler Liebe.</sidenote>
 </letterText> 
 
-<letterText letter="164"><note>Anfang nicht überliefert</note>
+<letterText letter="164"><page index="1"/><note>Anfang nicht überliefert</note>
 <line tab="1"/>und gemeinschaftlich für ihr ganzes zukünftiges Leben zubereitet würden, so daß Gottes Namen dadurch verherrlicht und seine Liebe in aller Herzen gepflanzt würde – sehen Sie das schmeckt allen, Pietisten und Katholiken und Jansenisten und der Freygeist hat auch nichts dagegen einzuwenden. So machte es Zinzendorf und Sie müssen eine Kopfhängersprache reden und <dul>von Herzen</dul> oder ich prophezeye Ihrer Anstalt den Untergang. Wozu bekehren, wozu Erbauungen? Ist es nicht genug, nicht <ul>übererbaulich</ul> genug, daß alle bey einander wohnen und bey einander <ul>wohnen lernen</ul> wie in Gottes Welt. Gemeinschaftliche Geschäfte treiben, gemeinschaftliche Ergötzungen haben, laß sie doch meinthalben die Egyptische Katze anbeten. Ihre Tugend, Ihre Providenz richtet Sie zu Grunde Herr Professor, diese Namen sind <aq>odiosa</aq> obschon kein Mensch ist, der sie nicht im Herzen glaubt nur immer unter anderer Gestalt und anderen Benennungen. Also still davon. Und negotiiren Sie bey Pastor Götzen in Hamburg und bey allen Pietisten im Römischen und Russischen Reich, sie thun tausend mal mehr als die Großen, sie reißen die Großen mit fort. Sagen Sie, Sie hätten mit Ihren Schriften (denn auch die sind den meisten verhaßt) sich nur bei den Freygeistern den Weg bahnen wollen, auch sie in Ihre Parthey zu ziehen, damit wenigstens ihre
 <page index="2"/><ul>Jugend nicht verloren gienge,</ul> daher bäten Sie, dieß Geständniß nicht <ul>laut werden zu lassen</ul> und ihnen <ul>ingeheim</ul> mit ihrer Hülfe beyzustehn und alsdann, Herr Professor, <ul>alsdann</ul> werden Sie Wunder sehen. Die Pietisten sind keine Spitzbuben, ich kenne sie besser. Sie <ul>thun alles</ul> wenn man in ihre Ideen hineinzugehen weiß und sich nicht offenbar wieder sie erklärt. Nur die widrigen Gesinnungen der Herren <ul>Denker,</ul> ihr Stolz, der Hohn die Geringschätzung mit der sie ihnen begegnen, erbittern sie und wen sollten sie nicht? Ich habe einen Vater der Pietist ist, er ist der treflichste Mann unter der Sonne. Schreiben Sie ihm, er wohnt zu Dörpt in Liefland, aber ich bitte, geben Sie ihm diesen Schlüssel zu Ihren Schriften und ganzem bisherigen Betragen und er, wie alle guten Pietisten, springen über die Mauer für Sie und Sie werden die Folgen sehen. Wenn die Leute irren, wenn ihr Kopf zu leicht und dafür ihr Herz desto voller, ihre Thätigkeit desto nachdrucksvoller und uneigennütziger ist, wollt Ihr Herren sie darum auslachen. Sollt Ihr nicht vielmehr diese höchst brauchbaren Leute suchen in Eure Parthey zu ziehn. Und was ist denn eure Tugend anders als die ihrige, nur daß eure Vorstellungskraft anders ist? Laßt doch den Leuten ihre verschobene Einbildungskraft, wie dem Kinde seine Puppe, und beweißt eure richtigere dadurch, daß ihr euch in sie hineinzusetzen wißt, ohne sie <ul>verändern zu wollen.</ul>
-<page index="2"/>
 <line tab="1"/>Eben die Ahndung die die Leute haben, daß sie sich durch ihre vorsetzliche <ul>Unvernunft</ul> bey den Weltleuten verächtlich machen, welches sie als ein Leiden um Jesu willen ansehen, macht sie desto empfindlicher, desto argwöhnischer. Der geringste Ausdruck, der eine Bekehrungssucht verräth beleidigt sie, weil sie sich nicht bekehren wollen, bekehren können, so wenig als Ihr. Redt <ul>ihre Sprache</ul> mit ihnen wenn Ihr beweisen wollt, daß Ihr mehr Vernunft und ein grösseres Herz habt. Nehmt sie in euer Herz auf und tragt sie, wenn ihr stärker seyn wollt als sie die euch zu tragen meynen. Nennt’s Busse und Glauben und Wiedergeburt, was ihr itzt Tugend u. Providenz nennt, sind es denn nicht nur Namen und für dieselbe Sache. Wenn die Engländer den Franzosen den Krieg angekündigt hätten und ein französischer Kaufmann hätte einen großen Handel in England zu machen, wär’ er nicht ein Thor, wenn er nicht mit den Engländern in ihrer Sprache redte, wenn er auch nur durch einen französischen Laut verriethe von welcher Nation er sey. Sind bey Ihrer Art Unternehmungen müssen Ihnen nicht alle <ul>Menschen gleich seyn.</ul> Eben so müßten Sie es mit den Katholiken machen, eben so mit den andern, wie die Apostel jedem in seiner Sprache. Und in ihren öffentlichen Conspeckten von nun an versprechen alles was Tugend und Herz angeht (und was ist denn die Religion anders?) den Lehrern jeder Parthey zu überlassen.
 <page index="3"/>
 <line tab="1"/>Die andere Erinnerung ist, daß nicht alle Sacherkenntniß der noch unreiffen Jugend heilsam ist. Gewiß lieber Herr Professor das schröckt eine Menge Eltern ab, würde mich selber abschröcken. Das Moralische darf eben so wenig übertrieben werden als das Physische. <ul>Anatomie</ul> Kenntnis <ul>von</ul> <ul>Erzeugung der Thiere</ul> und Pflanzen sind nicht für das Knabenalter. Eine glückliche Unwissenheit, bis Körper und Moralität zur Festigkeit und Stärke gelangt sind. Giebt es denn nicht andere Sachkenntnisse die diesen vorangehen können, giebt es denn nicht andere Motive der kindlichen Liebe? Liegen die stärksten nicht in <ul>der</ul> <ul>Natur?</ul> Macht es denn die Natur selbst anders, hat sie nicht den Schleyer des Geheimnisses weißlich über die Sachen gebreitet. Laß es seyn daß auch der stärkere Geschlechterreitz in diesem Geheimniß liegt, auch <ul>der</ul> muß Ihnen <ul>heilig seyn.</ul> Lassen Sie den Kindern die wohlthätigen Alberkeiten der Ammen, klären Sie nur sonst ihre Phantasey auf. Laß sie sich immer über den Punkt zerrathen und die Köpfe zerbrechen, aber die <ul>starre Verweigerung aller möglichen Antwort darüber</ul> die vorsetzliche Unwissenheit in der Sie sie darüber lassen, giebt diesem Triebe das <ul>heilige,</ul> das mysterieuse das er haben muß, wenn ihre Kinder nicht Liliputmenschen werden sollen. Verspahren Sie alle Aufklärung hierüber und über alle Geheimnisse des Naturreichs, bis auf die letzten Wochen wenn sie auf die hohe Schule gehen, da Sie sie ihnen mit <ul>grosser Feyerlichkeit</ul> eröfnen können. Mit Freymäurer-
 <page index="4"/>feierlichkeit und vorhergegangenem <ul>Schwur nichts auszuplaudern,</ul> wenn ich was zu rathen hätte. Das wären Eleusina, die selbst bey verdorbenen Sitten das einzige Mittel zu ihrer Wiederherstellung wären. Denn laß es seyn, daß der Knabe selbst es bey unglücklichen Gelegenheiten schon früher erführe, es bliebe seiner Neugier doch immer noch was zu vermuthen, doch immer noch Zweiffel übrig, wenn man standhaft darauf bestünde, ihm vorher nichts davon zu verrathen. Uebrigens aber auf sein äusserliches Betragen die schärfste Aufmerksamkeit hätte und seine Phantasey mit andren Dingen auch mit Ergötzlichkeiten gehörig unterhielt und beschäftigte. – Bey der Entdeckung aber müßt’ er Ihnen einen Freymäurereid unter den fürchterlichsten äusserlichen Zurüstungen thun, nicht allein den jüngeren von dem was er erfahren würde nichts zu sagen, sondern auch keinen <ul>unrechten</ul> Gebrauch davon zu machen. In weiterem Detail lassen Sie sich· alsdenn nicht ein, um keine
 <page index="5"/>Meineidige zu machen, sondern weisen ihm nur <ul>anatomisc</ul>h die schädlichen Folgen der Debauche und überlassen das übrige seinem Gewissen. So werden Sie nicht allein aufgeklärte und liebenswürdige sondern auch gesunde und starke Weltbürger ziehen, deren glückliches Alter sie von selbst bewegt, ihre Kinder niemand als ihnen anzuvertrauen. Das ist von wichtigem Folgen für Ihre Anstalt, würdigster Mann! als Sie glauben werden. Ich kenne einen grossen Theil der Eltern auch in meinem Vaterlande. Ich weiß welch ein wichtiger Punkt einem zärtlichen väterlichen Herzen die Gesundheit seiner Kinder ist. Ich weiß fürchterliche Exempel vom Gegentheil, die den Eltern unaussprechlichen Gram gemacht haben.
-<line type="empty"/>
 <line tab="1"/>Ich bitte meine wortreichen Erinnerungen mit der Liebe aufzunehmen mit der sie geschrieben sind und diese nicht sowohl in meinen Ausdrücken als in dem Herzen zu suchen aus welchem sie kamen und das mit der wärmsten Ehrerbietung ganz Ihre ist.
-<line type="empty" />
-<line type="break" />Lenz.
+<line type="break" /><align pos="right">Lenz.</align>
 </letterText> 
 
-<letterText letter="165">Brief
+<letterText letter="165"><page index="1"/><align pos="center">Brief
 <line type="break"/>über Wielanden
 <line type="break"/>und einige seiner Gedichte
 <line type="break"/>Hauptsächlich über <del>Aga</del> den
-<line type="break"/>neuen Amadis.
+<line type="break"/>neuen Amadis.</align>
 <line type="empty"/>
-<line tab="1"/>Endlich hab ich den Mann kennen lernen der allen jungen Leuten in seinen Schriften sowohl als in seinen Handlungen ein wahrer Probierstein der Gesundheit ihrer Einbildungskraft so <del>wohl als</del>
-<line type="break"/><insertion pos="top">wie der Stärke</insertion> ihrer Urtheilskraft seyn kann. Jene kann unersetzlichen Schaden an den ersteren nehmen, wenn sie schwach, kränkelnd, oder noch nicht zu ihrer gehörigen Reiffe gekommen ist, so wie diese wenn sie sich zu frühzeitig vermißt mit ihm fertig zu werden, erbärmlich scheitern und die ganze traurige Schule der Selbsterkenntniß zurückzumachen gezwungen seyn w<note>e</note><aq>i</aq>r<del>den kann</del>. Dagegen kann jene unendlich an den erstem gestärkt werden und gewinnen, wenn sie sich gewöhnt gefährliche und reizvolle Gegenstände die ihr in der Welt so oft vorkommen aus ihrem rechten Licht und nicht mit der unreiffen Hitze und verstohlnern Kützel eines Knaben, sondern mit dem Ernst und der Kälte eines Kenners anzusehen, der nur denn warm wird wenn die Magie des allgewaltigen Spottes der aus der tiefsten Philosophie seine Bevollmächtigung und von dem schwelgerischsten Witz seinen Zauberstab erhielt, ihn mit zum Sokratisch mitleidigen Lächeln über die Thorheiten und Schwachheiten der Menschen dahin reißt So wie auch die Urtheilskraft an ihm und seinen Handlungen lernen soll sich nicht in ihren Schlüssen von Personen zu übereilen bevor sie uns in allen ihren Verhältnissen bekannt geworden sind. Wie oft verwandelt sich dann Nebel in Sonnenschein, Feindschaft in Uebereinstimmung der Gesinnungen, Haß in Liebe?
-<line type="empty"/>
+<line tab="1"/>Endlich hab ich den Mann kennen lernen der allen jungen Leuten in seinen Schriften sowohl als in seinen Handlungen ein wahrer Probierstein der Gesundheit ihrer Einbildungskraft so <del>wohl als</del><insertion pos="top">wie der Stärke</insertion> ihrer Urtheilskraft seyn kann. Jene kann unersetzlichen Schaden an den ersteren nehmen, wenn sie schwach, kränkelnd, oder noch nicht zu ihrer gehörigen Reiffe gekommen ist, so wie diese wenn sie sich zu frühzeitig vermißt mit ihm fertig zu werden, erbärmlich scheitern und die ganze traurige Schule der Selbsterkenntniß zurückzumachen gezwungen seyn w<subst>i<del>e</del></subst><del>den kann</del>. Dagegen kann jene unendlich an den erstem gestärkt werden und gewinnen, wenn sie sich gewöhnt gefährliche und reizvolle Gegenstände die ihr in der Welt so oft vorkommen aus ihrem rechten Licht und nicht mit der unreiffen Hitze und verstohlnern Kützel eines Knaben, sondern mit dem Ernst und der Kälte eines Kenners anzusehen, der nur denn warm wird wenn die Magie des allgewaltigen Spottes der aus der tiefsten Philosophie seine Bevollmächtigung und von dem schwelgerischsten Witz seinen Zauberstab erhielt, ihn mit zum Sokratisch mitleidigen Lächeln über die Thorheiten und Schwachheiten der Menschen dahin reißt So wie auch die Urtheilskraft an ihm und seinen Handlungen lernen soll sich nicht in ihren Schlüssen von Personen zu übereilen bevor sie uns in allen ihren Verhältnissen bekannt geworden sind. Wie oft verwandelt sich dann Nebel in Sonnenschein, Feindschaft in Uebereinstimmung der Gesinnungen, Haß in Liebe?
 <line tab="1"/>Ich fange so ziemlich in dem Ton eines Schulmonarchen oder Professors der Moral an lieber Freund! aber ich finde ihn für nothwendig Ihnen meine wahre Meynung von diesem treflichen Mann ein für allemal aufzuklären und darzustellen.
-<page index="2"/><del>M<nr> </nr>z</del>
+<page index="2"/>
+<line type="empty"/>
+<del>M<nr extent="2"></nr>z</del>
 </letterText> 
 
 <letterText letter="166">Ich freue mich bester Graf daß ich Ihnen aus We. schreiben kann
