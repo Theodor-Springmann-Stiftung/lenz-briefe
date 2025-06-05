@@ -2583,7 +2583,7 @@
 			<sent>
 				<date when="1776-04-27">Zürich, 27. April 1776</date>
 				<location ref="11" />
-				<person ref="11" />
+				<person ref="10" />
 			</sent>
 			<received>
 				<location ref="8" />
