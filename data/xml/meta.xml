@@ -2742,7 +2742,7 @@
 				<location ref="11" />
 				<person ref="10" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -2751,11 +2751,11 @@
 			<sent>
 				<date when="1776-05-19">Hannover, 19. Mai 1776</date>
 				<location ref="19" />
-				<person ref="1" />
+				<person ref="20" />
 			</sent>
 			<received>
 				<location ref="8" />
-				<person ref="20" />
+				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
