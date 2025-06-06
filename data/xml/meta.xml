@@ -2718,7 +2718,7 @@
 
 		<letterDesc letter="180">
 			<sent>
-				<date notAfter="1776-05-15">Weimar, Spätestens Mitte Mai 1776</date><!-- Also über
+				<date notAfter="1776-05-15">Weimar, spätestens Mitte Mai 1776</date><!-- Also über
 				@notAfter? -->
 				<location ref="8" />
 				<person ref="1" />
@@ -2727,7 +2727,7 @@
 				<location ref="58" />
 				<person ref="13" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
