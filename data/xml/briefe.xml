@@ -2746,8 +2746,9 @@ Doch muß ich auch Straßburg Gerechtigkeit widerfahren lassen. Ich habe hier ne
 <line type="break" /><align pos="center">Einsiedel</align>
 <page index="2"/>
 <line type="empty" />
+<line type="empty" />
 <align pos="center"><note>vertikal geschriebene, unlesbar gemachte Zeile von Lenz’ Hand:</note></align>
-<hand ref="1"><del><nr extent="30"></nr></del></hand>
+<line type="break" /><hand ref="1"><del><nr extent="30"></nr></del></hand>
 </letterText> 
 
 <letterText letter="177"><page index="1"/>
