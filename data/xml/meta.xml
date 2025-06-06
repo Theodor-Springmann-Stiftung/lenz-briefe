@@ -2658,7 +2658,7 @@
 
 		<letterDesc letter="176">
 			<sent>
-				<date notBefore="1776-04-03">Weimar, Nach 3. April 1776</date>
+				<date notBefore="1776-04-03">Weimar, nach 3. April 1776</date>
 				<location ref="8" />
 				<person ref="37" />
 			</sent>
@@ -2673,7 +2673,7 @@
 
 		<letterDesc letter="177">
 			<sent>
-				<date notBefore="1776-04-01" notAfter="1776-11-30">Weimar, Zwischen April und November 1776</date>
+				<date notBefore="1776-04-01" notAfter="1776-11-30">Weimar, zwischen April und November 1776</date>
 				<location ref="8" />
 				<person ref="38" />
 			</sent>
