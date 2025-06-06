@@ -2809,7 +2809,7 @@
 
 		<letterDesc letter="186">
 			<sent>
-				<date notAfter="1776-05-27">Weimar, Vor 27. Mai 1776</date>
+				<date notAfter="1776-05-27">Weimar, vor 27. Mai 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2839,7 +2839,7 @@
 
 		<letterDesc letter="188">
 			<sent>
-				<date notBefore="1776-05-24">Weimar, Kurz nach dem 24. Mai 1776</date>
+				<date notBefore="1776-05-24">Weimar, kurz nach dem 24. Mai 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2877,7 +2877,7 @@
 				<location ref="19" />
 				<person ref="20" />
 			</received>
-			<hasOriginal value="false" />
+			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
