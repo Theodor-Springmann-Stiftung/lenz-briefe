@@ -3339,11 +3339,11 @@
 			<sent>
 				<date when="1776-07-24">Zürich, 24. Juli 1776</date>
 				<location ref="11" />
-				<person ref="1" />
+				<person ref="22" />
 			</sent>
 			<received>
 				<location ref="8" />
-				<person ref="22" />
+				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
