@@ -3510,7 +3510,6 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <letterText letter="222"><page index="1"/>
 <line tab="1"/>Liebster! Hier nur ein paar Worte mit dem Brief der vermuthlich Deines lieben Papas. Die O. ist wieder vom Lande zurück, hat die Claudine gelesen und an Deinen Goethe geschrieben, also darüber nichts mehr. Aufm Lande wann <aq>Mslle Kg</aq> was lesen wollte, so wollte die O. immer sprachen und so kamen sie in der Lecture des Mekrurs u Herders nicht weit. Außer de<del>m</del><insertion pos="top">n</insertion> angezeigten Capitels die sie durchlaßen. Nu weiter! Beym zurück kommen gieng auch die von Mömpelgart hier durch nach P. und nahm auf ein Stück wegs die v. O. mit die vermuthlich gestern zurück kam.
 <line tab="1"/>Die Amerikaner treiben ihr Sach gut, sollen verwichen 4 Deputirte derselben am Spanischen Hof gewesen seyn die <del>ihr</del> ein Kriegsschif wieder zurückführte. Schreibst Du mir wieder, so sey doch so gut u antwort mir auf die Frage von Claudine ob Musik dazu da sey u. was die Composition von Schönfeld über die beyden Alten mache und wo diese gedruckt werden oder worden sind.
-<line type="empty"/>
 <line tab="1"/>Da ist auch eine Abschrift von den Versen die ich Esel lezt vergaß Dir zu schicken. (Apropos weistu daß Pfenninger droben beym Hofrath ist? Nicht einen <aq>Sous</aq> hab ich itzt Geld im Sack sonst gieng ich den Augenblick einen Gaul zu leihen um hinzutrotten.)
 <line type="empty"/>
 <line tab="5"/>Ach du um die die Blumen sich
@@ -3576,22 +3575,19 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/><hand ref="1">Amalia sucht im Nebel die beyden Prinzen die aus diese zu erhaschen + die aus <insertion pos="top">die fr. zu <nr> </nr> </insertion> gradwegs waren gestürzt In dem Augenblick zertheilt sich der Nebel und sie stehen vor ihr
 <line type="break"/>+ die sie für ein Bauernmädchen hielten, weil sie eben zu Kn. gekommen was der nun erfährt keuchend und schwitzend seine letzten Statuen zum Fenster hinaus warf.</hand>
 <line type="empty"/>
-<line tab="1"/>Ach meine Kinder sagt sie. Du führst sie zu Knebel den sie alle bedauern, dem die Weiber alle abschwörten in dem Augenblick <del><nr> </nr></del>
-<line type="empty"/>
-<line tab="1"/>Die wohlthätige Frau sie hat ihm eine ausgesucht, deren Gestalt die fürstliche Urganda es auf sich genommen um Knebel zu schwärmen sie gibt sie ihm und zwar eben deswegen wird sie nichts weniger als Statue ihn <nr> </nr> sie auf greif ists Pandolfo <nr> </nr>nde. Die wächst dich<nr> </nr>Weib. Ge<nr> </nr> an ihn will auch ein lang den<nr> </nr> und d<nr> </nr> de. Die
+<line tab="1"/><hand ref="1">Ach meine Kinder sagt sie. Du führst sie zu Knebel den sie alle bedauern, dem die Weiber alle abschwörten in dem Augenblick <del><nr> </nr></del>
+<line tab="1"/>Die wohlthätige Frau sie hat ihm eine ausgesucht, deren Gestalt die fürstliche Urganda es auf sich genommen um Knebel zu schwärmen sie gibt sie ihm und zwar eben deswegen wird sie nichts weniger als Statue ihn <nr> </nr> sie auf greif ists Pandolfo <nr> </nr>nde. Die wächst dich<nr> </nr>Weib. Ge<nr> </nr> an ihn will auch ein lang den<nr> </nr> und d<nr> </nr> de. Die</hand>
 <line type="empty" />
 <line type="break" />
+<note>nicht horizontal gespiegelt, rechte Spalte</note>
+<line tab="1"/><hand ref="1">Sobald ich nach Weymar komme mein Ding für die Herzogin ausmachen sehr vortheilhaft für Pandp. und für sie</hand>
+<line type="empty" />
 <note>horizontal gespiegelt, rechte Spalte</note>
-<line type="break"/><hand ref="1">Sobald ich nach Weymar komme mein Ding für die Herzogin ausmachen sehr vortheilhaft für Pandp. und für sie</hand>
-<line type="empty" />
-<line type="break" />
-<sidenote pos="right" page="1" annotation="rechte Spalte, nicht horizontal gespiegelt">
-<line type="break"/><hand ref="1">Das von der Deutschen Gesellschaft im Merkur.</hand></sidenote>
+<line tab="1"/><hand ref="1">Das von der Deutschen Gesellschaft im Merkur.</hand>
 <line type="empty"/>
-<line tab="1"/><hand ref="1">Bitten Sie doch lieber Philipp daß H. Doktor in seinem Manuscript anstatt Henriette von Waldek schreibt H. von Warbek, Baron v. Warbek, und schreiben Sie es auch so ab. Es hat seine grossen Ursachen.
+<line tab="1"/><hand ref="1"><del>Bitten Sie doch lieber Philipp daß H. Doktor in seinem Manuscript anstatt Henriette von Waldek schreibt H. von Warbek, Baron v. Warbek, und schreiben Sie es auch so ab. Es hat seine grossen Ursachen.</del>
 <line type="empty" />
-<line type="break" /><del>Diese <nr> </nr> sollte der</del>
-<line type="break"/>
+<line tab="1"/><del>Diese <nr> </nr> sollte der</del>
 <line tab="1"/>Milton war nun auch einmal gefallen, Newton lag auf dem Bauch als ob er noch in einer Berechnung der Geschwindigkeit der Centralkraft begriffen wäre und Locke schien sehr nachdenklich im Koth zu sitzen wie er wol zu dieser Begegnung könne gekommen seyn</hand>
 </letterText> 
 
@@ -3605,6 +3601,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break" /><align pos="center"><aq>adieu</aq> L.</align>
 <line type="break" /><align pos="right">D. 31 Jul. 76.</align>
 <page index="2"/>
+<line type="empty"/>
 <line type="break"/><align pos="center"><note>Mitteilung Lavaters für Christoph Kaufmann:</note></align>
 <line type="break"/>L. Kaufmann,
 <line type="break"/>d. Brief blieb zurück. <aq>adieu.</aq> bezahle d. Port u. bleibe Lavatern.
