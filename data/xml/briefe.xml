@@ -3099,14 +3099,11 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>Soldatenweiber nähren sich mit ihrer Arbeit
 <line type="break"/>Offiziers von ihren Männern trennen
 <line type="break"/>Alle Anstalten wegen der Deserteurs fallen weg, Kinder zu hause
-<line type="empty" />
 <line type="break" /><aq>Tout ou rien.</aq>
-<line type="empty" />
 <line type="break" />Soldatenweiber machen die Marquatete
-<line type="empty" />
 <line type="break" />Ich sah Weiber als Amazonen im Nothfall mitfechten und das stärkste corps de reserve machen</sidenote> 
 <line tab="1"/>Hier schick ich Ihnen mein schätzbarer Freund ein Exemplar von meinen Soldaten zur schuldigen Danksagung für alle mir in Mannheim erzeigte Liebe. Es sollte mich freuen, wenn es von Ihrer Schauspielerbaumschule als Uebungsstück deklamirt werden könnte.
-<line type="break" /><align pos="center"><note>spätere Notiz:</note></align> Daß alle Bürger itzt drauf rechen können daß die herzen ihrer Weiber an den Soldaten hängen die ledig sind.
+<sidenote pos="right" page="1" annotation="über dem zweiten Absatz">Daß alle Bürger itzt drauf rechen können daß die herzen ihrer Weiber an den Soldaten hängen die ledig sind.</sidenote>
 <line tab="1"/>Ich habe Eckhafen hier auf einem Conzert bey Hofe gesprochen und viel von Mannheim mit ihm ger<tl></tl> Er ist wohl zu alt und zu wohl in Gotha, als daß e<tl></tl> ausserordentlich vortheilhafte Bedingungen zu Ihne<tl></tl> translocirt werden könnte. Er erbietet sich aber g<tl></tl> wenn Sie ihm junge Mannheimer zuschicken wollen, sie auf alle mögliche Weise zuzustutzen und er ist in der That der Mann dazu. Wie sehr wünschte ich unserm Freunde Müller eine Unterredung mit ihm. Es freute mich wie ein Geschenk, daß er über unsere gewöhnlichen Schauspieler und ihre Gebärdungen mit mir auf ein Haar zusammentraf. Sagen Sie doch das wenn es seyn kann einmal dem Graf Portia. Hier ist ein Liebhabertheater für Adel und Bürger, wo alle elende Schauspielerregeln verbannt sind. Ueberhaupt interessirt sich der Herzog und beide Herzoginnen ungemein für deutsche Litteratur, mehr als ich sagen darf.
 <line tab="1"/>Daß es mir wohl geht brauch ich Ihnen nicht zu sagen, sonst blieb’ ich nicht so lange. Grüssen Sie doch alle guten Freunde und behalten mich lieb.
 <line type="break"/><align pos="right">Lenz</align>
@@ -3197,6 +3194,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>Frisirkam von mir
 <line type="break"/>Federmeßer und Rasierpulver von mir.</pe></hand>
 <line type="empty"/>
+<line type="empty" />
 <page index="3"/><align pos="center">Was ich da lasse und nicht zu eröffnen bitte
 <line type="empty"/>
 <line type="break" />Im Coffer.</align>
@@ -3224,13 +3222,8 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/><address>Herrn
 <line type="break"/>Geh. Leg. Rath
 <line type="break"/>Goethe</address>
-<line type="empty" />
-<line type="break" /><note>mit Bleistift, heute stark verwischt, zitiert nach FSt II, S. 5</note> <pe>Vor allen Dingen bitte Wieland die […] sobald er sie missen</pe>
-<line type="empty" />
-<line type="break" />
-<sidenote pos="right" page="4" annotation="rechts, um 90 Grad zur Adresse gedreht"> Bitte mir alles aufs bäldeste zu schicken</sidenote>
-<line type="empty" />
-<line type="break" />Um die Wäsche bitte aufs eheste
+<sidenote pos="top" page="4" annotation="oberhalb der Adresse">Bleistift heute stark verwischt, zitiert nach FSt II, S. 5: <pe>Vor allen Dingen bitte Wieland die […] sobald er sie missen</pe></sidenote>
+<sidenote pos="right" page="4" annotation="rechts, um 90 Grad zur Adresse gedreht">Bitte mir alles aufs bäldeste zu schicken <line type="break" />Um die Wäsche bitte aufs eheste</sidenote>
 </letterText> 
 
 <letterText letter="200">ich geh aufs Land, weil ich bey Euch nichts thun kann
