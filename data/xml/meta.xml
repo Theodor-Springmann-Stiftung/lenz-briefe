@@ -3118,7 +3118,7 @@
 			</sent>
 			<received>
 				<location ref="7" />
-				<person ref="15" />
+				<person ref="32" />
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
@@ -3195,9 +3195,9 @@
 				<location ref="8" />
 				<person ref="52" />
 			</received>
-			<hasOriginal value="false" />
+			<hasOriginal value="true" />
 			<isProofread value="true" />
-			<isDraft value="false" />
+			<isDraft value="true" />
 		</letterDesc>
 
 		<letterDesc letter="212">

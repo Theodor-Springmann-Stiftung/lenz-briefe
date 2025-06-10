@@ -1459,10 +1459,12 @@
 
 		<letterTradition letter="206">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 23; Entwurf.
+				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 23; Entwurf. 
 			</app>
 			<app ref="11">
-				<line tab="1"/>Übersetzung fehlt noch?, Schriften Sozialreform 1,394</app><!-- Soll die Übersetzung ausschnitthaft sein? -->
+				<line tab="1"/>Darf ich, gnädige Frau, Sie zu bitten wagen, die Fortsetzung des Teutschen Merkur entgegenzunehmen, mit tiefstem Respekt und der ausgezeichneten Hochachtung des Autors, Herrn Wieland.
+				Sollte ich mit Ihrer Erlaubnis, was ich anzweifle, die Kopie einer gewissen Silhouette erhalten haben, so kann ich nicht um Verzeihung bitten für mein Schweigen, das nur ein Ausdruck von Dankbarkeit ist, die, wie die Sache, die es hervorrief, über das Sprechen wohl erhaben ist. Kaum etwas kostet mich mehr Mühe, als einen Brief an Sie zu verfassen; mag Ihnen das Geständnis auch harmlos erscheinen, so ist es doch wohl überlegt, bedenkt man die Gefahr, in die ich mich begebe, Sie vielleicht zu kränken. 
+				4</app>
 		</letterTradition>
 
 		<letterTradition letter="207">
@@ -1491,9 +1493,7 @@
 
 		<letterTradition letter="211">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 26; Abschrift (?); verso Exzerpte aus
-				Stuart, Über das
-				System und Frankreichs Bankrut, 3. Buch, Einl. p. 546.
+				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 26. Entwurf.
 			</app>
 		</letterTradition>
 
