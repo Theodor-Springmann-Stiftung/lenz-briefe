@@ -138,8 +138,8 @@
 			<personDef index="43" name="Susanne Margareta Laudt"
 				vorname="Susanne Margareta" nachname="Laudt" komm="sm-laudt" />
 
-			<personDef index="44" name="Marchand"
-				vorname="NN" nachname="Marchand" komm="marchand" />
+			<personDef index="44" name="Theobald Marchand"
+				vorname="Theobald" nachname="Marchand" komm="marchand" />
 
 			<personDef index="45" name="Johann Friedrich Wilhelm Christian Schenck"
 				ref="http://d-nb.info/gnd/102948256X"

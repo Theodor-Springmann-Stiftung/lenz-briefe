@@ -2959,7 +2959,7 @@
 
 		<letterDesc letter="196">
 			<sent>
-				<date notBefore="1776-06-17">Weimar, Bald nach dem 17. Juni 1776</date>
+				<date notBefore="1776-06-17">Weimar, bald nach dem 17. Juni 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -3006,7 +3006,7 @@
 
 		<letterDesc letter="199">
 			<sent>
-				<date notBefore="1776-06-23" notAfter="1776-07-01">Weimar, Um den 27. Juni 1776</date>
+				<date notBefore="1776-06-23" notAfter="1776-07-01">Weimar, um den 27. Juni 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -3112,7 +3112,7 @@
 
 		<letterDesc letter="206">
 			<sent>
-				<date notBefore="1776-05-23">Berka, Nach dem 23. Mai 1776</date>
+				<date notBefore="1776-05-23">Berka, nach dem 23. Mai 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>

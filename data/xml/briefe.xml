@@ -3087,14 +3087,15 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>1 <nr></nr></hand>
 </letterText> 
 
-<letterText letter="196">
+<letterText letter="196"><page index="1"/>
 <line tab="1"/>Wenn Sie beste Jungfer Laudt mir in Strasb. oder der Gegend herum doch einen französischen Bedienten zuzurekommandiren wüßten, würden Sie mich außerordentlich verbinden. Er darf kein Wort Teutsch können und wird bloß dazu angenommen mit den Kindern meines Bruders in Liefl. französisch zu schwatzen. Er bekommt seine Liverey, alle kleinen Kleidungsstücke, ganz freye Station und die freye Reise von Strasb. nach Lübek zu Lande und sodann zu Wasser nach Pernau. Er darf selbst fadem wieviel er 'bis Lübeck verlangt, muß aber freilich mir Sicherheit stellen daß er das Geld nicht sonst verthut. Zudem giebt ihm mein Bruder 20 bis 25 Rubel jährlich Gehalt, welches in Liefland, wo man fast gar kein Geld braucht, viel sagen will
 <page index="2"/>
-<line type="break"/>
 <line tab="1"/>Dagegen engagirt er sich 3 Jahr bey ihm zu bleiben, weil mein Bruder die Kosten nicht gern umsonst tragen will. Widrigenfalls ihm das Reisegeld am Gehalt abgezogen wird. Er hat dafür auf der Gotteswelt nichts zu thun als die Kinderchen ein bisgen zu frisieren mit ihnen zu schwatzen und bey Tisch aufzuwarten. Vielleicht wissen Sie oder Herr Salzm. oder einer von den andem Herrn bey Tisch einen solchen Menschen, besonders unter den abgedankten Soldaten oder sonst. Am besten ist wenn er kein Wort Teutsch kann. Seyn Sie so gütig wenn sich ein solcher findt und melden mir ob er sich dazu versteht und was er noch sonst zu fodern haben könnte. Vielleicht werden der Herr Notär am ersten in dem Stück mir einen gütigen Bericht ertheilen können, wofür meine Verbindlichkeit gegen ihn desto größer seyn wird.
 </letterText> 
 
-<letterText letter="197"><note>spätere Notizen</note> Im Kriege können die Weiber auf und mitgehn, die Kinder den Eltern lassen
+<letterText letter="197"><page index="1"/>
+    <sidenote pos="top" page="1" annotation="Am oberen Rand">
+    <line type="break"/>Im Kriege können die Weiber auf und mitgehn, die Kinder den Eltern lassen
 <line type="break"/>Soldatenweiber nähren sich mit ihrer Arbeit
 <line type="break"/>Offiziers von ihren Männern trennen
 <line type="break"/>Alle Anstalten wegen der Deserteurs fallen weg, Kinder zu hause
@@ -3103,42 +3104,37 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="empty" />
 <line type="break" />Soldatenweiber machen die Marquatete
 <line type="empty" />
-<line type="break" />Ich sah Weiber als Amazonen im Nothfall mitfechten und das stärkste corps de reserve machen
-<line type="empty"/>
+<line type="break" />Ich sah Weiber als Amazonen im Nothfall mitfechten und das stärkste corps de reserve machen</sidenote> 
 <line tab="1"/>Hier schick ich Ihnen mein schätzbarer Freund ein Exemplar von meinen Soldaten zur schuldigen Danksagung für alle mir in Mannheim erzeigte Liebe. Es sollte mich freuen, wenn es von Ihrer Schauspielerbaumschule als Uebungsstück deklamirt werden könnte.
-<line type="empty" />
-<line type="break" /><note>spätere Notizen</note> Daß alle Bürger itzt drauf rechen könenn daß die herzen ihrer Weiber an den Soldaten hängen die ledig sind.
-<line type="empty"/>
+<line type="break" /><align pos="center"><note>spätere Notiz:</note></align> Daß alle Bürger itzt drauf rechen können daß die herzen ihrer Weiber an den Soldaten hängen die ledig sind.
 <line tab="1"/>Ich habe Eckhafen hier auf einem Conzert bey Hofe gesprochen und viel von Mannheim mit ihm ger<tl></tl> Er ist wohl zu alt und zu wohl in Gotha, als daß e<tl></tl> ausserordentlich vortheilhafte Bedingungen zu Ihne<tl></tl> translocirt werden könnte. Er erbietet sich aber g<tl></tl> wenn Sie ihm junge Mannheimer zuschicken wollen, sie auf alle mögliche Weise zuzustutzen und er ist in der That der Mann dazu. Wie sehr wünschte ich unserm Freunde Müller eine Unterredung mit ihm. Es freute mich wie ein Geschenk, daß er über unsere gewöhnlichen Schauspieler und ihre Gebärdungen mit mir auf ein Haar zusammentraf. Sagen Sie doch das wenn es seyn kann einmal dem Graf Portia. Hier ist ein Liebhabertheater für Adel und Bürger, wo alle elende Schauspielerregeln verbannt sind. Ueberhaupt interessirt sich der Herzog und beide Herzoginnen ungemein für deutsche Litteratur, mehr als ich sagen darf.
-<line type="empty"/>
 <line tab="1"/>Daß es mir wohl geht brauch ich Ihnen nicht zu sagen, sonst blieb’ ich nicht so lange. Grüssen Sie doch alle guten Freunde und behalten mich lieb.
-<line type="break"/>Lenz
-<line type="empty" />
-<line type="break" />
+<line type="break"/><align pos="right">Lenz</align>
 <sidenote pos="left" page="1" annotation="Am linken Rande, vertikal">
 <line tab="1"/>Wieland ist ein herzguter Mann mit dem ich gleich zusammen geschmolzen bin. – – Auch sind sonst viel trefliche Menschen hier und die Liebhaberei allgemein weil der Hof das Exempel giebt. Grüssen Sie unsern lieben Müller doch.</sidenote>
-<page index="2"/>2ter Theil wo die bürgerlichen Einrichtungen
-<line type="break"/>
+<page index="2"/>
+<line tab="1"/>2ter Theil wo die bürgerlichen Einrichtungen
 <line tab="1"/>Alles kommt auf einen Numerische Eintheilung in Klassen an die durch die Feudalverfassung zu Grund gegangen, daß alle Classen sich die Hände bieten u. so allw Kräfte in Bewegung gesetzt werden Stuart schlägt vor.
 <line type="empty" />
 <line type="break" /><align pos="center"><aq>Ddd.</aq></align>
 </letterText> 
 
-<letterText letter="198"><hand ref="46"> Mittwoch. Weimar.
+<letterText letter="198"><page index="1"/><hand ref="46"><align pos="right">Mittwoch. Weimar.</align>
 <line type="empty"/>
 <line tab="1"/>Lieber Bruder! hier bin ich seit zwey Tagen unter den großen Himmels Göttern und kann Dir fast nichts reden, so reich, so voll, so leer bin ich an Worten – an Gefühl. Ich pakte auf einmal zusammen und machte mich fort, und bin iezt hier gehalten. Was soll ich Dir sagen, von Goethe, von Wieland? Am Montag kam ich hier an – lag an Goethes Hals u. er umfaßte mich innig mit aller Liebe „Närrischer Junge! und kriegte Küße von ihm. „Toller Junge! und immer mehr Liebe. Denn er wußte kein Wort von meinem Kommen, so kannst Du denken wie ich ihn überraschte. O was von Goethe ist zu sagen! ich wollte eher Sonn und Meer verschlingen! Gestern brachte ich den ganzen Tag mit Wielanden zu. Er ist der gröste Mensch den ich nach Goethe gesehen habe, den Du nie imaginieren kannst als von Angesicht zu Angesicht. Größe, Liebe, Güte, Bescheidenheit – Steinige den Kerl der ihn verkennt wenn er ihn gesehen, an seiner Brust geliegen hat, sein Geist um faßte u. ihn begriff. Hier sind die Götter! Hier ist der Siz des Großen! <del>Goethe ist Geheimer Legations Rath mit 2000 <nr> </nr></del> Auch hab ich einen großen Menschen am Presidenten von Kalb gefunden – Lenz wohnt unter mir u. ist in ewiger Dämmerung. Der Herzog ist vortreflich u. werd ihn bald sehen. Glaub von allem nichts was über das Leben hier geredet wird, es ist kein wahres Wort dran. Es geht alles den großen, simplen Gang u. Goethe ist so groß in seinem politschen Leben daß wirs nicht begreifen – u. Wieland! glaub nicht daß ich überspannt bin – ich häng an dem Menschen so stark daß ichs nie möglich hielt an einem Menschen so zu hängen, er will mich nicht mehr fortlaßen. Weiß viel von Dir u. liebt Dich – Laß Dich von nichts drücken u. quälen – sie werden mich hier ruhig machen. Wo ich hin seh ist Heilbalsam für meinen Geist u. Herz – Adieu! KI.</hand>
-<page index="2"/><hand ref="1">
-<line tab="1"/>Entschuldige mich doch guter Kaiser bey unserm theuren Lavater, von dem ich durch Ehrmann viel erfreuliches gehört, daß ich in einer Seelenlage bin, in der ich ihm lange nichts werde schreiben können, wo michs aber immer stärken und aufmuntern wird, von andern gute Nachrichten von seinem Befinden zu hören. Ich danke ihm tausendmal für alle Proben seiner Güte gegen mich, die sichtbaren und unsichtbaren, bitte nochmals <ul>sobald es möglich seyn wird</ul> um das ihm bewußte Päckgen dessen Adresse er nur an Goethen macht (weil ich aufs Land gehe) und mir zur Stärkung ein Paar Worte von sich und seinem Befinden beylegt. Gleicherweise empfiehl mich Pfenningern. Und behalt auch Du mich lieb
+<page index="2"/>
 <line type="empty" />
-<line type="break" /><align pos="right">L.</align></hand>
+<line tab="1"/>Entschuldige mich doch guter Kaiser bey unserm theuren Lavater, von dem ich durch Ehrmann viel erfreuliches gehört, daß ich in einer Seelenlage bin, in der ich ihm lange nichts werde schreiben können, wo michs aber immer stärken und aufmuntern wird, von andern gute Nachrichten von seinem Befinden zu hören. Ich danke ihm tausendmal für alle Proben seiner Güte gegen mich, die sichtbaren und unsichtbaren, bitte nochmals <ul>sobald es möglich seyn wird</ul> um das ihm bewußte Päckgen dessen Adresse er nur an Goethen macht (weil ich aufs Land gehe) und mir zur Stärkung ein Paar Worte von sich und seinem Befinden beylegt. Gleicherweise empfiehl mich Pfenningern. Und behalt auch Du mich lieb
+<line type="break" /><align pos="right">L.</align>
 </letterText> 
 
-<letterText letter="199"><align pos="center">Sachen die hier bleiben</align>
+<letterText letter="199"><page index="1"/><align pos="center">Sachen die hier bleiben</align>
 <line type="empty" />
 <line type="break" />Regenschirm (Philipp in die Post)
 <line type="break"/>Instruktion des Königs v. Preussen
 <line type="break"/>Ray de St. Genie
-<line type="break"/><note>geschweifte Klammer für die obigen beiden Einträge</note> schickst du an Mühlgau.
+<line type="break"/><note>geschweifte Klammer für die obigen beiden Einträge, daneben folgender Text</note> schickst du an Mühlgau.
+<line type="empty" />
 <line type="break"/>Theuerdank (Bertuchen)
 <line type="break"/><ul>Die Zigeuner</ul> (dem Herzog)
 <line type="break"/><ul>Herders Fabeln</ul> (Goethen zur Auswahl im Merkur)
@@ -3146,6 +3142,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/><ul>Der Hut u. die Strumpfbänder</ul> (an Goethen)
 <line type="break"/><ul>Yärros Ufer</ul> (Goethen, dem Herzog vorzulesen)
 <line type="break"/><aq>Ramonds Drame</aq> und den <aq>Soulier mordoré</aq> (den Herzoginn Mutter hat, der regierenden Herzoginn zu bringen)
+<line type="empty" />
 <line type="empty" />
 <line type="break" /><align pos="center">Sachen die ich mir ausbitte</align>
 <line type="break"/>Alle Bücher auf dem Stuhl
@@ -3199,10 +3196,9 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>Scheermeßer Puder Pomade
 <line type="break"/>Frisirkam von mir
 <line type="break"/>Federmeßer und Rasierpulver von mir.</pe></hand>
+<line type="empty"/>
 <page index="3"/><align pos="center">Was ich da lasse und nicht zu eröffnen bitte
 <line type="empty"/>
-<line type="empty"/>
-<line type="empty" />
 <line type="break" />Im Coffer.</align>
 <line type="empty" />
 <line type="break" />Briefe
@@ -3221,11 +3217,10 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>1 Klinge vom Herzog
 <line type="break"/>1 <insertion pos="top">silberne</insertion> Uhr mit Berlok
 <line type="break"/>1 Paar Ueberschuh (bey Kalb stehende)
-<page index="4"/><note>links</note> <pe>grüß Klinger vielmalen</pe>
-<line type="empty"/>
+<page index="4"/><line type="empty" />
+<sidenote pos="left" page="1" annotation="links, vertikal"><pe>grüß Klinger vielmalen</pe>
 <line tab="1"/>Wenn ein Vorhängeschloß vor meinen Coffre hättest wegen der Papiere wäre mirs sehr lieb. Dies schließt nicht ich habe den Schlüssel verloren
-<line type="empty" />
-<line type="break" /><note>mittig</note>
+</sidenote><line type="empty" />
 <line type="break"/><address>Herrn
 <line type="break"/>Geh. Leg. Rath
 <line type="break"/>Goethe</address>
@@ -3233,12 +3228,12 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break" /><note>mit Bleistift, heute stark verwischt, zitiert nach FSt II, S. 5</note> <pe>Vor allen Dingen bitte Wieland die […] sobald er sie missen</pe>
 <line type="empty" />
 <line type="break" />
-<sidenote pos="right" page="4" annotation="rechts, vertikal"> Bitte mir alles aufs bäldeste zu schicken</sidenote>
+<sidenote pos="right" page="4" annotation="rechts, um 90 Grad zur Adresse gedreht"> Bitte mir alles aufs bäldeste zu schicken</sidenote>
 <line type="empty" />
 <line type="break" />Um die Wäsche bitte aufs eheste
 </letterText> 
 
-<letterText letter="200">ich geh aufs Land, weil ich bey Euch nichts thun kann.
+<letterText letter="200">ich geh aufs Land, weil ich bey Euch nichts thun kann
 </letterText> 
 
 <letterText letter="201">
