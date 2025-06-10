@@ -3322,7 +3322,7 @@
 
 		<letterDesc letter="220">
 			<sent>
-				<date notBefore="1776-06-01" notAfter="1776-08-31">wahrscheinlich Berka, Sommer 1776</date>
+				<date notBefore="1776-06-01" notAfter="1776-08-31">Wahrscheinlich Berka, Sommer 1776</date>
 				<location ref="14" cert="low" />
 				<person ref="1" />
 			</sent>
@@ -3332,7 +3332,7 @@
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
-			<isDraft value="false" />
+			<isDraft value="true" />
 		</letterDesc>
 
 		<letterDesc letter="221">
