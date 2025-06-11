@@ -3707,7 +3707,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <page index="3"/>
 <line tab="1"/>Dein Bote gieng obschon er alle Kräfte anwandte die ihm Weib und Kinder übrig gelassen mit der Geschwindigkeit eines Mauleseltreibers; ich wäre eben so geschwind und ungefähr in eben der Gemüthsfassung mit blossen Knieen auf Erbsen nach K– gerutscht; Und doch war eben der Merkurius den andern Morgen als ich ihn wollte ruffen lassen, Dir Frau v. Stein Brief und Zeichnungen zuzuschicken, (obschon ichs ihm Abends vorher hatte notifiziren lassen) über alle Berge. Wofür Du ihn sermoniren kannst, damit ers ein andernmal in ähnlichen Fällen nicht wieder so macht.
 <line tab="1"/><aq>i beg thee to see frequently the spouse of the lady. I have a pressentiment thou willst thank me of having given thee a counsel needful. <del>a</del>At least <tl></tl> it <del><nr> </nr></del> is only given <tl></tl> <pe> thou kno<tl></tl> imagine all <tl></tl> suffers constantly <tl></tl> She must hea<tl></tl> much deli<tl></tl> tranquillity of mind <tl></tl>
-<page index="4"/><align pos="center"><note>Zeichnungen</note></align></pe></aq>
+<page index="4"/><line type="empty" /><line type="break"/><align pos="center"><note>Zeichnungen</note></align></pe></aq>
 </letterText> 
 
 <letterText letter="234"><page index="1"/><align pos="right">Weymar d. 20sten Sept. 1776.</align>
@@ -3740,11 +3740,12 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="empty" />
 <line type="break" /><address>Herrn
 <line type="break"/>Herrn Lenz bei H. Legations Rath Göthe
-<line type="break"/>In Weimar.</address>
+<line type="break"/>in Weimar.</address>
 </letterText> 
 
-<letterText letter="236">
+<letterText letter="236"><page index="1"/>
 <line tab="1"/>Hier Herr Lenz schicke Ihnen etwas Wäsche von Schenck wo ich iezo bin, Ich bin in einem grimmigen Zorn über die Wäschern die mich so herum zieht.
+<line type="empty" />
 <line type="break"/>1 Hemd.
 <line type="break"/>2 Halsbinden
 <line type="break"/>1 P. Strümpf
@@ -3754,25 +3755,16 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>
 <line tab="1"/>Ihre Paar Sporen. und da schicken Sie doch mit dem nächsten dann Hr. G. L. R. seine Sporen wieder zurück.
 <line type="empty" />
-<line type="break" /><note>in Bleistift, spiegelverkehrt</note>
+<line type="break" /><align pos="center"><note>spiegelverkehrt</note></align>
 <line type="break"/><pe> D 22 Septbr.</pe>
 <page index="2"/>
 <line type="empty" />
-<line type="break" /> <note>nicht entzifferte Notizen unbekannter Hand</note> 
-<line type="break"/>6
-<line type="break"/>5. 6. 3.
-<line type="break"/>2 15
-<line type="empty"/>
-<line type="empty" />
-<line type="break" />2 Div
-<line type="break"/>u. Caffe
+<line type="break" /> <align pos="center"><note>Rechnung unbekannter Hand</note></align>
 </letterText> 
 
-<letterText letter="237">Von dreien Antwort.
-<line type="break"/>
+<letterText letter="237"><page index="1"/><line tab="1"/>Von dreien Antwort.
 <line tab="1"/>Den an Philipen habe durch die Boten Frau überbringen laßen. welche auch Antwort von demselben bringen wird.
-<line type="break"/>inliegend 1 gr. übrig gebliebenes Brief Porto.
-<line type="break"/>
+<line tab="1"/>inliegend 1 gr. übrig gebliebenes Brief Porto.
 <line tab="1"/>Ich fahre fort zu dienen mit dem unendlichsten Vergnügen und verharre Zeitlebens mit der grösten Hochachtung
 <line type="empty" />
 <line type="break" /><align pos="right">Ihr
@@ -3780,76 +3772,50 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>Schenk</align>
 </letterText> 
 
-<letterText letter="238"><align pos="center">Bester Vater!</align>
+<letterText letter="238"><page index="1"/><align pos="center">Bester Vater!</align>
 <line type="empty"/>
 <line tab="1"/>Es war die Mutter vom nunmehrigen geheimen Legationsrath Goethe, die ich in · Frankfurt auf der Durchreise das erstenmal kennen gelernet, von der ich Mamaen das schrieb. Seine Schwester, eine gleichfalls sehr würdige Dame ist lange verheurathet mit einem Manne der ihrer werth ist.
-<line type="empty"/>
 <line tab="1"/>Ich Ihrer spotten – das ist ein Gedanke, der mich tödten würde, wenn ich nicht hoffen dürfte, daß er nur aus Ihrer Feder, nicht aus Ihrem Herzen gekommen ist. Ich sehe mein Vater! daß es ein Schicksal ist, das ich nicht ändern kann, wegen Entfernungen der Zeit und des Orts von Ihnen und allen den Meinigen mißverstanden zu werden. Wie heilig mir Ihre Briefe sind, mag Gott Ihnen durch einen andern Weg als durch meine Feder künftig bekannt machen, oder auch nur ahnden lassen. Fahren Sie fort mir diese <ul>höchsten</ul> Beweise Ihrer Güte noch zuzuschicken wenn Sie mich dessen werth glauben.
-<line type="empty" />
-<line type="break" />
-<sidenote pos="left" page="1" annotation="am linken Rand, vertikal">
-<line type="break"/>
+<sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal">
 <line tab="1"/>Wie <dul>Goethe</dul> und die Seinigen sich zu allen Zeiten gegen mich bewiesen und wieviel ich ihnen schuldig bin, kann ich nie genug erkennen und rühmen.</sidenote>
-<line type="break"/>
 <page index="2"/>
-<line type="empty"/>
 <line tab="1"/>Goethe ehrt Sie wie ich. Die Welt ist groß mein Vater, die Wirkungskreise verschieden. Alle Menschen können nicht einerley Meynungen oder vielleicht nur einerley <ul>Art sie auszudrücken</ul> haben. So unvollkommen das was man in jedem Fach der menschlichen Erkenntniß <ul>modern</ul> nennt, seyn mag, so ist es, wie Sie selbst mir nicht ganz absprechen werden, jungen Leuten doch nothwendig, sich hinein zu schicken, wenn sie der Weit brauchbar werden wollen. Glücklich sind sie wenn sie Väter haben wie ich, deren Beyspiel auch bey veränderten Umständen und Zeiten immer und ewig ihnen Muster bleiben muß. Das sage ich weder aus Heucheley noch aus Schmeicheley, denn <ul>was für Vortheile könnte mir beydes bringen,</ul> sondern aus Erkenntniß der Wahrheit, aus
 <page index="3"/>inniger Verehrung und Anbetung des Geists der in Ihnen webt und würket.
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="2" annotation="am linken Rand der zweiten Seite, vertikal">
-<line type="break"/>
 <line tab="1"/>Bitten Sie doch Bruder Carl um die <ul>einzige Freundschaft</ul> mir in einer guten Stunde aus Ihrem und meiner Mutter Munde historische Nachrichten von meinen Großeltern <fn index="5"><anchor>#</anchor></fn> sowohl von <ul>Ihrer</ul> als von mütterlicher Seite aufzuschreiben und zuzu<del>setzen</del>senden, er wird <ul>unserm Herzog</ul> damit <ul>Freude</ul> machen. Die Gnade dieses Fürsten für mich ist Gottes Werk.</sidenote>
-<line type="empty" />
-<line type="break" />
 <sidenote pos="top" page="2" annotation="am oberen Rand der zweiten Seite, spiegelverkehrt">
-<line type="break"/>
 <line tab="1"/>NB. <fn index="5"><anchor>#</anchor></fn> Wollten Sie mich <ul>würdigen,</ul> etwas von Ihrer eigenen Lebensgeschichte dazuzuthun, würd ichs mit dem <dul>höchsten</dul> Dank erkennen.</sidenote>
-<line type="empty"/>
 <line tab="1"/>Die Briefe meiner Geschwister stärkten mich gleichfalls. Sagen Sie Fritzen ich werde Sorge für seinen Auftrag haben, fürchte aber, er werde ein wenig unthulich seyn, falls nicht etwa ein Landsmann nach Lief- oder Curland hineingeht, der einen Burschen mitnimmt. Mein Bruder Christian ist immer der einzige Mensch der mich noch am besten verstehen kann; sein Glück, seine Zufriedenheit sind die meinigen. Schwester Lottgen und Liesgen bitte ihre Munterkeit nicht zu verlieren, das Leben wird heutzutage immer bitterer – und immer süßer. Ein Augenblick – ersetzt Jahre voll Kummer – auch ein Augenblick wie der wenn ich Nachrichten von Ihnen erhalte. Schwester Norgen möchte ich sehen, Bruder Carl wird die Hofnungen seines Vaters nicht so grausam hintergehen als ich. Dürft ich bitten alle ihre Schattenbilder zu nehmen, und sie mir verkleinert mit einem Instrument das man Storchenschnabel nennt, im Briefe zuzuschicken.
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="3" annotation="am linken Rand der dritten Seite, vertikal">
-<line type="break"/>
 <line tab="1"/>ich küsse Schwester Norchen und bitte sie das Glück ganz zu fühlen und zu schätzen, der letzte Trost ihrer Eltern zu seyn.</sidenote>
 <page index="4"/>
-<line type="break"/>
 <line tab="1"/>Ich muß noch hinzusetzen, daß ich jetzt durch die Bekanntschaft Wielands eines der grössesten Menschen unsers Jahrhunderts, dessen Werth aber freilich nur erst die Nachwelt ganz schätzen wird – und ich darf sagen durch sein Herz und seine Freundschaft eine der glücklichsten Aquisitionen meines Lebens gemacht.
-<line type="empty"/>
 <line tab="1"/>Darf ich nochmals um Ihre Lebensgeschichte flehen. Nur auf einem Blättgen, wenns Ihre Zeit nicht erlauben will. Ich küsse Mama und Ihnen die Hand und alle Geschwister tausendmal. Ihr gehorsamster Sohn
-<line type="empty" />
 <line type="break" /><align pos="right">JMR Lenz.</align>
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite, vertikal">
 <line type="break"/>im Merkur werden Sie mich bisweilen auch finden.</sidenote>
 </letterText> 
 
-<letterText letter="239">Lieber Lenz,
+<letterText letter="239"><page index="1"/>Lieber Lenz,
 <line type="empty"/>
 <line tab="1"/>Da bin ich hier u. freue mich Dich zu sehen. Sonntag über 8 Tage werde ich vermuthlich, was Du zu wißen verlangst, zuerst predigen.
 <line type="empty"/>
 <line tab="1"/>Den Engländer gab mir Boje: „er könne es wegen des Endes nicht einrücken“. Vorigen Sommer hatte sich in Bückeburg die Kehle jemand abgeschnitten, daß nur noch einige Fasern hingen: sie wurde zugenäht: er riß sie sich 2 mal auf: es wurde eine Maschine gemacht, daß er den Kopf nicht regen konnte, u. in 4. Tagen war der Mensch besser. Er lebt noch u. befindet sich wohl u. freut sich, daß ihm das Kehlabschneiden nicht geglückt sei: so hätts <ul>Tot</ul> auch werden sollen. Aber er ist tot wie sein Name anzeigt.
-<line type="empty"/>
 <line tab="1"/>Den Engel von dem Du schreibst u. <insertion pos="top">um</insertion> den Du lebst, habe ich nur eine Viertheilstunde, zerstreut u. verwirrt, gesehen – Diana im Chor der Nymphen u. Dryaden.
-<line type="empty"/>
 <line tab="1"/>Lebe wohl. Weib u. Kinder grüßen Dich. Mir ist wie allen Neuangekommenen, selbst im Elysium seyn muß. Ich habe Kaufmann hier gefunden, der morgen reist u. Dich sehr grüßet.
 <line type="empty" />
-<line type="break" />H.
-<line type="break"/>Dienstag.
+<line type="break" /><align pos="right">H.</align>
+<line type="break"/>Die<tl></tl>
 </letterText> 
 
-<letterText letter="240"><pe>
-<line tab="1"/>Es ist eines der merkwürdigsten Jahrhunderte in welchem wir leben. Generalsuperintendent Herder in der tiefsinnigsten aller Theologischen Schriften seiner Zeit citirt einen Komödianten. Was wird die Nachwelt von seiner Aeltesten Urkunde – oder von meiner Komödie denken? So lieb es mir übrigens seyn muß, daß die homogenen Teile zu ihrem Ursprunge sublimert werden und dadurch die Streitschrift ihren wahren Stempel wiederbekommen hat.
-<line type="empty"/>
-<line tab="1"/>Der Engländer ward in ganz andrer Stimmung und aus ganz anderer Rücksicht geschrieben. Und ist das lustigste Nachspiel das ich zu diesen <ul>willkührlichen</ul> Ausschweiffungen der Phantasey hätte erfinden können Herrn Bojens marktschreyerisches Benehmen, der <ul>Deine</ul>
+<letterText letter="240"><page index="1"/><pe>
+<line tab="1"/>Es ist eines der merkwürdigsten Jahrhunderte in welchem wir leben. Generalsuperintendent Herder in der tiefsinnigsten aller Theologischen Schriften seiner Zeit citirt einen Komödianten. Was wird die Nachwelt von seiner Aeltesten Urkunde – oder von meiner Komödie denken? So lieb es mir übrigens seyn muß, daß die homogenen Teile <del>wieder</del> zu ihrem Ursprunge sublimert werden und dadurch die Streitschrift ihren wahren Stempel wiederbekommen hat.
+<line tab="1"/>Der Engländer ward in ganz andrer Stimmung und aus ganz anderer Rücksicht geschrieben. Und ist das lustigste Nachspiel das ich zu diesen <ul>willkührlichen</ul> Ausschweiffungen der Phantasey hätte erfinden können Herrn Bojens marktschreyerisches Benehmen, der <dul>Deine</dul>
 <page index="2"/>Ankunft <ul>abwartet</ul> um sich über das zu entschuldigen, worum ich ihn in zwey Briefen mit vielem Ungestüm und vieler Höflichkeit gebethen. Ich wußte daß es ihm Schlosser schicken würde und bat ihn demzufolge sehr dringend, es <ul>nicht einzurücken,</ul> versprach ihm auch sogar etwas anders in die Stelle – und das alles nicht wegen des <ul>Schlusses</ul> sondern wegen der <ul>Prinzessin von Carignan,</ul> welche Unschicklichkeit noch lebende fürstliche Personen aufs Theater zu bringen, Herr Boje einzusehen nicht im Stande war.
-<line type="break"/>
 <page index="3"/>
-<line type="break"/>
 <line tab="1"/>Unsere Herzogin hat mir befohlen, ihr ein Briefgen an Dich mitzugeben. Ich bitte dabey von der Fürstinn zu abstrahiren und mit Deiner durchschauenden Phantasie aus diesem Zuge Dir das Gesicht <ul>der Frau</ul> abzubilden die das, als <ul>Fürstinn,</ul> verlangen konnte.
-<line type="empty"/>
-<line tab="1"/>Ich wünschte überhaupt Du suchtest die nähere Bekanntschaft dieser Dame, und ich habe das Herz ohne Augur oder Druide zu seyn beyden Teilen sehr viel Genugthuung davon zu versprechen. Soviel Großes habe ich nicht leicht in einem Karackter vereinigt gefunden, der ganz und gar auf sich selber ruht. Doch ich sollte mich billig nie unterstehen etwas auf der Welt zu loben. Le.
+<line tab="1"/>Ich wünschte überhaupt Du suchtest die nähere Bekanntschaft dieser Dame, und ich habe das Herz ohne Augur oder Druide zu seyn beyden Teilen sehr viel Genugthuung davon zu versprechen. Soviel Großes habe ich nicht leicht in einem Karackter vereinigt gefunden, der ganz und gar auf sich selber ruht. Doch ich sollte mich billig nie unterstehen etwas auf der Welt zu loben. 
+<line type="break" /><align pos="right">Le.</align>
 <page index="4"/>
 <line type="empty" />
 <line type="break" /><nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr></pe>
