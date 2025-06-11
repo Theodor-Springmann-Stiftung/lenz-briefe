@@ -3872,7 +3872,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Melden Sie mir doch ob Herr <aq>Fries,</aq> mit dem ich nach Italien wollte, noch in Straßburg ist und grüßen ihn, wenn Sie ihn sehen. Sollte Röderer etwa gar das benannte Paket von Herrn von Kleist noch nicht erhalten haben, so seyen Sie doch so gütig und begrüßen ihn selbst darum. Er weiß schon wovon die Rede ist. Und versichern ihm von mir viele Empfehlungen.
 </letterText> 
 
-<letterText letter="244">
+<letterText letter="244"><page index="1"/>
 <line tab="1"/>Da meine Muse ein für allemal an Geburts- und Namenstägen hartnäckig stumm ist, so habe Ew. Durchlaucht Geburtsfest wenigstens durch Darstellung des Felsen, vor dem Sie bey Ihrem Aufenthalt in Kochberg selbst bewunderungsvoll gestanden, zu feyern versucht. Sollte diese Sysiphusarbeit auch nur so weit gelungen seyn, daß sie Ew. Durchl. die Vorstellung des Felsen in der Natur, erleichterte, so wäre sie mir unendlich theuer, wenn ich auch nicht rechne, daß sie mich einige glückliche Tage im Anschauen der unerreichbaren Originalitäten der Natur hat zubringen lassen. Wenn ich diesen Namen von einem wahren Tempel brauchen darf, in dessen Schatten man ohne heiligen Schauer nicht stehen kann.
 </letterText> 
 
@@ -3886,79 +3886,64 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Ich weiß nicht wieviel Merkure Dir fehlen – komm und hole sie selbst – und den Brief Deiner französischen Dame, die soviel Lerms um Nichts macht.
 </letterText> 
 
-<letterText letter="246">
+<letterText letter="246"><page index="1"/>
 <line tab="1"/>Verzeih mir lieber Herder, daß ich Deiner Frau eine Unschicklichkeit zumuthete. Bey uns <aq>magistris artium</aq> sind Kopf und Hand nicht immer beysammen.
-<line type="empty"/>
 <line tab="1"/>Es war mir wahre Belohnung daß der alte Vater Gevatter Bruder und Schwester Joseph Maria Herzens Wieland meinen Pietisten nicht unter die Bank geworfen. Denn er freute mich als ich ihn schrieb.
-<line type="empty"/>
 <line tab="1"/>Darf ich zum voraus anfragen lieber Episkopus, ob Du einem <aq>maitre de langues</aq> ein Paar Englische Bücher leyhen kannst, etwa auch eine Grammatik <aq>etc.</aq> Die Herzoginnen wollen den Winter Englisch lernen
-<line type="empty" />
 <line type="break" />Empfiel mich Deiner Frau und Kleinen nebst Schwägerlein.
-<line type="empty" />
 <line type="break" /><align pos="right">L.</align>
+<page index="2"/>
+<line type="empty" />
 <line type="break"/><address>
 <line type="break"/>Herrn
 <line type="break"/>Herrn Generalsuperintendenten <dul>Herder</dul>
 <line type="break"/>in dessen Behausung.</address>
 </letterText> 
 
-<letterText letter="247">Zwey Stücke Herr bitt ich von Dir
-<line type="empty" />
-<line type="break" />In dem Merkur ein Ehrendenkmal für <ul>Luthern.</ul>
-<line type="empty" />
-<line type="break" />Beantwortung folgender Preißfrage
-<line type="break"/>
-<line tab="1"/>„Wie weit der Zweiffel gehen dürfe bey Untersuchung der Wahrheit und was eigentlich Moralische Gewißheit seiý. Das heißt die Grenzen des Verstandes und des Herzens zu ziehen und zu bestimmen, welche von beyden in <ul>Collisionen</ul> am meisten gehört werden müssen, das heißt ob eine Evidenz imn Verstande durch <ul>das Gefühl allein</ul> hervorgebracht werden könne – müsse? –
-<line type="break"/>Der Preiß wird das ganze Publikum seyn.
+<letterText letter="247"><page index="1"/><line tab="1"/>Zwey Stücke Herr bitt ich von Dir
+    <line tab="1"/>In dem Merkur ein Ehrendenkmal für <ul>Luthern.</ul>
+    <line tab="1"/>Beantwortung folgender Preißfrage
+    <line tab="1"/>„Wie weit der Zweiffel gehen dürfe bey Untersuchung der Wahrheit und was eigentlich Moralische Gewißheit sey. Das heißt die Grenzen des Verstandes und des Herzens zu ziehen und zu bestimmen, welche von beyden in <ul>Collisionen</ul> am meisten gehört werden müssen, das heißt ob eine Evidenz imn Verstande durch <ul>das Gefühl allein</ul> hervorgebracht werden könne – müsse? –
+    <line tab="1"/>Der Preiß wird das ganze Publikum seyn.
 <line type="break"/><align pos="right">Lenz</align>
 <page index="2"/>
-<line type="break"/><note>vertikal</note>
+<line type="break"/><align pos="center"><note>vertikal:</note></align>
 <line type="break"/><address>An Herdern!</address>
 </letterText> 
 
-<letterText letter="248">
+<letterText letter="248"><page index="1"/>
 <line tab="1"/>Mein allerbester alter Freund. Tausendmal dank ich dir für deinen Brief, oder will dir vielmehr danken, dann wie neu geschenket bist Du meiner alten Liebe und da magst du besser ahnden was mein Dank sey als Dirs meine Feder sagt.
-<line type="empty"/>
 <line tab="1"/>Meine Studien gehn hier besser als je in St. und ich finde hier mehr als ich vermuthete. Es sind Professoren hier die ich herzlich lieben muß, auch außer Ihnen ist der Kopf nicht allein der sich hier weyden kann
-<line type="empty"/>
 <line tab="1"/>Von altem schweige, liebstes großes Herz! um was ich dich bitte ist Glaube an meine starke unvermögende Liebe.
-<line type="empty"/>
 <line tab="1"/>Wenn ich weiter nicht gehen kann, so komm ich doch nach Weimar, sollt ich auch zu Fuß gehen und mit Brod und Wasser mich nähren. Ich muß Luthers Bruder predigen hören, und die Männer sehen die mein Herz ehret, und dich umarmen zum lezten mal und dann will ich gern nach St. zurück und an den Pflug.
-<line type="empty" />
-<line type="break" />Lang kann ich ohn das zu W. nicht weilen.
-<line type="empty"/>
+<line tab="1"/>Lang kann ich ohn das zu W. nicht weilen.
 <line tab="1"/>Soll ich dir sagen daß ich den Pack von Pirk nicht bekommen konnte, ob ich gleich viermal zu ihm gieng, ohn’ ihn anzutreffen, und allemal zur Zeit wo man mich kommen hieß. Ich will aber nach Straßb. schreiben daß du sie bekommen sollst, nur sag mir: was eigentlich? Deine Briefe hab ich alle zu Hauß in einen meiner <aq>Sécrétair</aq> Schränke gelegt und die Thüre davor versiegelt. Ich werd sie dir aber alle schicken wenn ich wieder zu Hauß bin.
-<line type="empty"/>
 <line tab="1"/>Das Gräfliche Hauß von Stollberg unterhält hier eine Anzahl Pursche die Freitisch haben und der König auch. Könntest du wohl durch deine Vermittelung bey Erstern oder etwa bey Hr. Leibarzt Zimmermann <insertion pos="top">mir</insertion> zu einem Platz verhelfen? ich würde dadurch in Stand gesezt meinen mir sehr nützlichen Aufenthalt hier zu verlängern.
-<line type="empty" />
-<line type="break" />Deinen Petrarch hab ich hier du sollst ihn haben so bald du willst. Ich verbleibe ewig dein Treuer zärtlicher
+<line tab="1"/>Deinen Petrarch hab ich hier du sollst ihn haben so bald du willst. Ich verbleibe ewig dein Treuer zärtlicher
 <line type="break"/><align pos="right">Röderer</align>
-<line tab="1"/>P. S. Kaufmann ist alles Lobs werth und mein inniggeliebter! Willstu Maler Müllers Schattenriß, ich hab herrliche Tage mit Ihm zu M. gehabt . O der Antiquiensaal!!
-<line type="empty" />
-<line type="break" />
+<line tab="1"/>P. S. Kaufmann ist alles Lobs werth und mein inniggeliebter! Willstu Maler Müllers Schattenriß, ich hab herrliche Tage mit Ihm zu M. gehabt. O der Antiquiensaal!!
 <sidenote pos="left" page="1" annotation="am linken Rand, vertikal">
 <line type="break"/>Zu Frankfurt hab ich die Ehre gehabt die Frau Rath Goethe <del>aufzuwarten!</del> <insertion pos="bottom">zu bewundern.</insertion> Wagner ist verheyrathet.</sidenote>
 <page index="2"/>
+<line type="empty" />
 <line type="break"/><address>
 <line type="break"/>Herrn
 <line type="break"/>Herrn <aq>Lenz</aq> abzugeben bey
 <line type="break"/>Herrn <aq>Geheimen Legations-Rath Goethe</aq> zu <ul>Weimar</ul></address>
 </letterText> 
 
-<letterText letter="249"><pe><aq>
+<letterText letter="249"><page index="1"/><pe><aq>
 <line tab="1"/>you will perhaps wonder dearest lady <del>of</del> <insertion pos="top">at</insertion> my depart from W without taking my leave from you and repeating my thanks with all the warmth an human heart can bestow of, you would have permitted me to enjoy some months near your presence a manner of living almost unknown before to me enjoy that reason printed into mine heart with everlasting characters.
-<line type="empty"/>
-<line tab="1"/>I dare not make any excuses for it, for to say it i fear <del>to </del> <insertion pos="top">i would</insertion> find no words to that end <ul>or if i could find some prefer them with a manner</ul> <insertion pos="top">not becoming your delicacy</insertion>. you will not believe it and yet it is true therefore i undertake to write to you and in English flattering myself your application to that language with the help of all the witchcraft of your <insertion pos="top">charming</insertion> fancy will impart to my weak expressions all that can render them worthy to be read of you. If there be in words some pleasure as to vent the delights and the cares of the heart, i am certainly much to complain of, not having even the very consolation, if goods me are withdrawn to give words at my feelings, being overwhelmd from a sort of dullness attended by a whole oblivion of all the happiness i have been blessd of. Nothing will remain of it as how much is fit to make the present the more painful by the comparison of the past.
+<line tab="1"/>I dare not make any excuses for it, for to say it i fear <del>to </del> <insertion pos="top">i would</insertion> find no words to that end <ul>or if i could find some prefer them with a manner</ul> <insertion pos="top">not becoming your delicacy</insertion>. you will not believe it and yet it is true therefore i undertake to write to you and in English flattering myself your application to that language with the help of all the witchcraft of your <insertion pos="top">charming</insertion> fancy will impart to my weak expressions all that can render them worthy to be read of you. If there be in words some pleasure as to vent the delights and the cares of the heart, i am certainly much to complain of, not having even the very consolation, if goods me are withdrawn to give words at my feelings, being overwhelmd from a sort of dullness attended by a whole oblivion of all the happiness i have been blessd of. Nothing will remain of it as how much is fit to make the present the more painful by the comparison of the past.</aq></pe>
 <page index="2"/>
-<line type="break"/><note>Kalkulationen im Kontext der Sozialreform, vgl. Schriften zur Sozialreform, S. 397f.</note> </aq></pe>
+<line type="break"/><align pos="center"><note>Kalkulationen im Kontext der Sozialreform, vgl. Schriften zur Sozialreform, S. 397f.</note></align> 
 </letterText> 
 
-<letterText letter="250"><aq>
+<letterText letter="250"><page index="1"/><aq>
 <line tab="1"/>I beg a thousand times your pardon, dear Madam! for having leav’d Weym without taking leave from your grace and repeating you the thanks which i can never pay sufficients to all the obliging civilities shown to me at my stay at Kochberg and engrav’d into my heart with everlasting characters. ‘Tis most true i could but once in my life be bless’ d in such an enchanting manner,
 <page index="2"/>which if the charm of it had lasted some days longer, would have make forget me all my relations and put me in the most doubtless persuasion, that i was in another world. I feal’d all my faculties hightend by your presence and thought myself a superior being, as i was sure to prove so, near the influences of your genius in all that i did undertake of. Therefore do not wonder at the roughness and infirmity of the very expressions of my letter, having even forgot
 <page index="3"/>all my English, by being no more inspired from as gracious a Scolar, of whom the very presence and her application to that tongue did improve me of all that i could teach her and to speak truly, have been much more profitable to me than all my instructions could have proued to her. I intreat you to remember the passage in Master Goethe’s Goetz from Berlichingen that there is something of divinity in the conversation of a Carrictura. I hope you will not need an explanation of this name nothing than your heart the bettest could make it, having so often
 <page index="4"/>put into shame Master Theobald’s and Warburtons learning in the explanation of great Shakespeare.
-<line type="empty"/>
 <line tab="1"/>I pray you to commend my respects to your most honorable husband and the whole family and flattering myself with some lines answer as you have given me the permission to do so, i am with the most sincere veneration
 <line type="break"/><align pos="center">Madam
 <line type="break"/>Your</align>
@@ -3966,7 +3951,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>obedient servant
 <line type="break"/>Lenz.
 <line type="empty" />
-<line type="break" />Berka the third of Obr. 1775.</align></aq>
+<line type="break" />Berka the third of 9br. 1775.</align></aq>
 </letterText> 
 
 <letterText letter="251"><note>Gedruckter Text</note>
