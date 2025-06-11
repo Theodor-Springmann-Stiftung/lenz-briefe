@@ -3428,7 +3428,7 @@
 
 		<letterDesc letter="227">
 			<sent>
-				<date notAfter="1776-08-13">Berka, Vor 13. August 1776</date>
+				<date notAfter="1776-08-13">Berka, vor dem 13. August 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>

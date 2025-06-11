@@ -3607,45 +3607,33 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>d. Brief blieb zurück. <aq>adieu.</aq> bezahle d. Port u. bleibe Lavatern.
 </letterText> 
 
-<letterText letter="226">Halle den 3ten Aug. 1776.
+<letterText letter="226"><page index="1"/><align pos="right">Halle den 3ten Aug. 1776.</align>
 <line type="break"/>
 <line tab="1"/>Ich hoffte selbst das Vergnügen zu haben, Sie , theuerster Freund, persönlich zu sprechen, verschiedene Umstände haben es aber nöthig gemacht, gerade nach Berlin und von da wieder hieher zu gehen; ich schike Ihnen also hier die Briefe, so mir Röderer mit gegeben; sollten Sie mich für würdig halten Ihre Briefe zu bekommen, wiewohl die fehlgeschlagenen Hoffnung einer Antwort auf meinem ersten, mich es fast nicht zu hoffen läßt, so bitte ich solche nur nach Halle zu adreßiren. Ich wünsche Ihnen alles mögliche WohlErgehn und Vergnügen und bin
 <line type="empty" />
-<line type="break" />Ihr gehorsamter Diener
+<line type="break" /><align pos="right">Ihr gehorsamter Diener
 <line type="break"/><aq>Eisenberg
-<line type="break"/>Candidat en Droits.</aq>
+<line type="break"/>Candidat en Droits.</aq></align>
 </letterText> 
 
-<letterText letter="227"><hand ref="20">Empf. den 13ten Aug. 1776.</hand>
+<letterText letter="227"><page index="1"/><align pos="right"><hand ref="20">Empf. den 13ten Aug. 1776.</hand></align>
 <line type="empty"/>
 <line tab="1"/>Lieber Freund Boje! Die Soldaten sind nicht von mir, ich bleibe dabey, mögen die Herren die so geschwind mit dem Druckenlassen fertig waren, auch den Namen auf sich nehmen. Der Verf. des Hofmeisters darf Sie nicht irre machen, es ist nichts leichter geschrieben als eine Komödie von der Art, aber nichts schwerer verantwortet. Auch dächt ich hätten wir itzt Produkte in der vorgeblichen Manier die Menge als daß dieses itzt ganz nothwendig sollte und müßte auf den Verf. des Hofmeisters schliessen machen. Kurz ich habe selbst bey dem der es zuerst Hn. Leibarzt zugeschickt, meinen Namen nur für einen andern hergegeben der verborgen bleiben <ul>mußte.</ul> Und den die
 <page index="2"/>Bekanntmachung dieser Rhapsodie über kurz oder lang zu Grunde richten wird, da all seine Verhältnisse drüber zum Teuffel gehen. Es thut mir weh genug und ich habe mir alle Mühe gegeben vorzubiegen. Vielleicht hilft dies noch.
-<line type="empty" />
-<line type="break" />
-<sidenote pos="left" page="1" annotation="am Rand der ersten Seite, vertikal">
-<line type="break"/>
+<sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal">
 <line tab="1"/>Verzeyhen Sie meine Länge über einen so uninteressanten Punkt für Sie. Es liegt mir zu sehr am Herzen als daß ich nicht bitten und geilen sollte um Stillschweigen.</sidenote>
-<line type="empty"/>
 <line tab="1"/>Verzeyhen Sie mein langes Stillschweigen, ich habe viel sehr viel zu thun und mich deswegen von aller menschlichen Gesellschaft abgesondert. Schloßer wird Ihnen vielleicht den Engländer schicken; aber unter angehängter Bedingung nicht meinen Namen zu nennen, denn auch ich will und darf nicht überall genannt werden. Wenn das
 <page index="3"/>Ding ohne Namen nichts nutz ist, so werfen Sies ins Sekret.
-<line type="empty" />
-<line type="break" />
-<sidenote pos="left" page="2" annotation="am Rand der zweiten Seite, vertikal">
-<line type="break"/>
+<sidenote pos="left" page="2" annotation="am linken Rand der zweiten Seite, vertikal">
 <line tab="1"/>Der Verf. der Soldaten <ul>heißt Steenkerk,</ul> <insertion pos="top">soll und muß so heißen</insertion> ich darf auch <ul>meinen</ul> Namen nicht länger hergeben da ich in zuviel Verdrüßlichkeiten dadurch gerathen würde und man von mir auf ihn rathen könnte. nur eine Scene ist von mir.</sidenote>
-<line type="empty" />
-<line type="break" />
 <sidenote pos="bottom" page="2" annotation="am unteren Rand der zweiten Seite">
-<line type="break"/>
 <line tab="1"/>Thun Sie mir die Liebe und hindern die Publizität der Soldaten soviel an Ihnen ist, bitten auch Zimmermann drum. Nur nicht viel davon geredt, ich bitte, noch weniger geschrieben</sidenote>
-<line type="empty"/>
 <line tab="1"/>Es ist eine grosse Sache Lieber! andere Leute nie als lndividua sondern in und mit ihren Verbindungen zu behandeln. So wird einem oft ein Dolch ins Herz gedrückt und man weiß nicht über wen man sich beklagen soll. Ich rede hier nicht von <ul>mir;</ul> aber der Verf. der Soldaten der Soldaten – wenn er weniger jung, weniger Hoffnungen gebend, mir weniger anhänglich gewesen wäre, welches Sie auch aus dem Styl sehen können, würde ich kein Wort sagen. Hätt er doch nie meine Bekanntschaft gesucht und das unglückliche Talent noch ein wenig ruhen lassen.
 <line type="break"/><align pos="right">L.</align>
-<line type="break"/>nur daß dieser Brief nicht auch gedruckt wird.
-<line type="empty"/>
-<line tab="1"/>
-<sidenote pos="left" page="3" annotation="am linken Rand, vertikal">Ich danke für die Liste: sie kam mir zwar ein wenig zu spät. Wissen Sie mir nicht zu sagen, wohin man Briefe an Hn. v. Lindau adressirt und wenn wieder ein Schiff abgeht auch ob stark geworben wird.</sidenote>
+<sidenote pos="bottom" page="3" annotation="am unteren Rand der dritten Seite">nur daß dieser Brief nicht auch gedruckt wird.</sidenote>
+<sidenote pos="left" page="3" annotation="am linken Rand der dritten Seite, vertikal">Ich danke für die Liste: sie kam mir zwar ein wenig zu spät. Wissen Sie mir nicht zu sagen, wohin man Briefe an Hn. v. Lindau adressirt und wenn wieder ein Schiff abgeht auch ob stark geworben wird.</sidenote>
 <page index="4"/>
+<line type="empty"/>
 <line type="break"/><address>Herrn
 <line type="break"/>Herrn Stabsekretär
 <line type="break"/><ul>Boje</ul>
@@ -3653,50 +3641,44 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>abzugeben im Churhut bey der Post.</address>
 </letterText> 
 
-<letterText letter="228">
+<letterText letter="228"><page index="1"/>
 <line tab="1"/>Auf Deinen letzten Brief lieber Bruder weiß ich Dir weiter nichts zu antworten. Nur daß ich ihn mit keinem Pack von <aq>Göthe</aq> wie Du sagtest erhalten habe. Vor oder nach dem Empfang dieses Briefs, den Du durch den nach Dessau reisenden Kaufmann erhältst, wirst Du auch 8 Exemplare von Deinen flüchtigen Aufsätzen erhalten. Die <aq>Mademoiselle de Muralt</aq> eine liebenswürdige Dame von Zürich brachte mir sie mit und ersuchte mich um ein Exemplar. 2 davon behalte ich zurück und frag Dich wo ich mit hin soll, mir und Wagnern der mein lieber Freund ist hat Kayser eines geschickt.
-<line type="empty"/>
 <line tab="1"/>Auch fragt <aq>M Leypold,</aq> der Deinen Brief erhalten hat, u Dich grüßt: ob Du Geißlers Geschichte von Teutschland in 2 Quartbänden mitgenommen oder hier wo <del>in</del> andern geliehen hast?
-<line type="empty" />
-<line type="break" />Salzmann schreibt Dir, Deine übrigen Freunde grüßen Dich, die Sozietät und H. v. Kleist.
-<line type="empty"/>
+<line tab="1"/>Salzmann schreibt Dir, Deine übrigen Freunde grüßen Dich, die Sozietät und H. v. Kleist.
 <line tab="1"/>Vor 14 Tagen hab ich Pfenninger bey mir gehabt und bin mit ihm samt Blessig und Wagner nach Emmendingen wo wir <aq>Lavater</aq> antrafen und 2 Tage sehr vergnügt bey einander blieben. Hr Hofrat und seine Frau grüßen Dich herzlich, Du hättest wieder dabey seyn sollen als sie uns alte Romanzen sang und besonders die aus dem Faust. Pf. konnts kaum tragen in Strasburg Dich nicht zu sehen.
-<line type="empty"/>
 <line tab="1"/>Wann Du mir was zu schicken hast, so schicks bald wenigstens doch ein Briefchen, dann ich geh nach 6 Wochen aufs aller spätste von hier nach Göttingen, und bald drauf ohne lang da zu weilen werd ich durch Leipzig nach Dessau gehn wanns meine Finanzen zu lassen. Die Adresse ist (Du hattest es Iezt vergessen) bey Rausch zu Kehl.
-<line type="empty" />
 <line type="break" /><align pos="right">Lieb mich noch immer und sey glücklich.
 <line type="break"/>Dein Röderer.</align>
 <line type="break"/>Strasb. den 8 Augst. 1776.
 <line type="empty"/>
 <line tab="1"/>P. S. Die gnädige Frau ist zu Schweighusen im Obern Elsaß auf ihres Papas Landgütern, befindt sich wohl weiters weiß ich nichts.
 <page index="2"/>
-<line type="break"/><address>An
-<line type="break"/>Herrn <ul>Lenz</ul> beim
-<line type="break"/>Herrn Legations Rath Goethe
-<line type="break"/>zu Weymar
-<line type="break"/></address>
+<line type="empty"/>
+<line type="break"/><address>A<tl></tl>
+<line type="break"/>Herrn <ul>Lenz</ul>
+<line type="break"/>Herrn Legations<tl></tl></address>
 </letterText> 
 
-<letterText letter="229">
+<letterText letter="229"><page index="1"/>
 <line tab="1"/>Lieber Schaz, was Du gern hättest kan ich Dir izt nicht schicken. Dafür schick ich Dir den <aq>Etat de france</aq> in 4. Oktavbänden, woraus Du viel <aq>detail</aq> lernen kannst. Hab Sorge zu den Büchern! Das <aq>Siecle de Louis XIV.</aq> verlang von der Herzogin-Mutter; sie wird Dirs gerne geben; oder von <ul>Kalb.</ul> <aq><dul>Cura ut valeas.</dul></aq> Hab uns lieb, und mach daß Du bald wieder hier existirst. Du kannst hier so gut einsam leben als in Berka, wenn Du nur ein für allemal ein wenig arrangirt bist – Wozu alles was Dich lieb hat, herzl. gern behülflich seyn wird. Adieu.
 <line type="break"/><align pos="right">Wieland.</align>
 <line type="empty" />
 <line type="break" /><ul>27. August</ul>
 </letterText> 
 
-<letterText letter="230">Heute ist dem Hrn. G. Leg-Rath sein 27ter Geburtstag.
-<line type="break"/>Der alte Herr v. Kalb ist hier.
-<line type="break"/>
+<letterText letter="230"><page index="1"/><line tab="1"/>Heute ist dem Hrn. G. Leg-Rath sein 27ter Geburtstag.
+    <line tab="1"/>Der alte Herr v. Kalb ist hier.
 <line tab="1"/>Anbei <insertion pos="top">Papier und</insertion> ein Paket <del>mit</del> von H. HofRat Wieland und einen Billett von ihm nebst einem angekommenen Brief.
-<line type="break"/>Ich rekommandire mich.
+<line type="break"/><align pos="right">Ich rekommandire mich.</align>
 <line type="empty" />
 <line type="break" /><hand ref="1"><pe>
 <line type="break"/>Dem alten Vt. ein Explar <ul>meiner Sold.</ul> schicken sauber gebunden
-<line type="break"/>Auch <del>m</del> 2 <ul>Fam. gemählde</ul> –</pe></hand>
+<line type="break"/>Auch <del>m</del> 2 <ul>Fam. gemählde</ul> –
 <line type="empty" />
-<line type="break" />Pack eines S. G. zu übermachen
+<line type="break" />Pack eines S. G. zu übermachen</pe></hand>
 <page index="2"/>
-<line type="break"/>Begreiflich machen daß er wohl noch mächtiger wäre durch Allianzen als zu ¿¿¿ ¿ main forte
+<line type="empty" />
+<line type="break"/>Begreiflich machen daß er wohl noch mächtiger wäre durch Allianzen als zu <nr extent="8"></nr> main forte
 </letterText> 
 
 <letterText letter="231"><aq>
