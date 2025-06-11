@@ -3821,7 +3821,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break" /><nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr></pe>
 </letterText> 
 
-<letterText letter="241">An keinem Orte keine Antwort.
+<letterText letter="241"><page index="1"/>An keinem Orte keine Antwort.
 <line type="empty" />
 <line type="break" />Herr Cästner mündliche Antwort, viele <aq>Compli.</aq> nebst Versicherung der besten Besorgung.
 <line type="empty" />
@@ -3831,11 +3831,11 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="empty" />
 <line type="break" />Philip habe auf 3 mal nicht angetrofen und Bothenfrau, will – oder kann nicht länger warten.
 <line type="empty"/>
-<line tab="1"/>innliegend etwas, u. da es ein Hofbedienter gebracht. <insertion pos="top">vermuthe</insertion> daß solches von Herrn Göthe sei u etwan bei Durchl. Herzog geschrieben ist.
+<line type="break" />innliegend etwas, u. da es ein Hofbedienter gebracht. <insertion pos="top">vermuthe</insertion> daß solches von Herrn Göthe sei u etwan bei Durchl. Herzog geschrieben ist.
 <line type="empty" />
 <line type="break" />Der Schneider ist nicht fertig. Philip hat es vielleicht vergessen Dürfte ich Ihnen ersuchen, alle Ihre Commiss. ohne <aq>Compliments</aq>
 <line type="break"/>
-<line tab="1"/>an mich zu schicken. Jeder Tag da ich die Bothenfrau vermuthe ist vor mich ein Freuden Tag. Seyn Sie deß versichert. Leben Sie wohl.
+<line type="break" />an mich zu schicken. Jeder Tag da ich die Bothenfrau vermuthe ist vor mich ein Freuden Tag. Seyn Sie deß versichert. Leben Sie wohl.
 <page index="2"/>
 <line type="empty" />
 <line type="break" />Der Brief ist nach Göttingen <aq>francirt</aq> kostet aber nur 3 g. also 1 g. zurück.
@@ -3845,11 +3845,11 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break" /><align pos="right"><aq>Schenck</aq></align>
 </letterText> 
 
-<letterText letter="242">
+<letterText letter="242"><page index="1"/>
 <line tab="1"/>Liebster Bruder! So eben komm ich zu Göttingen an. Um Dir nicht länger das kleinere Briefgen vor zu enthalten das zu lang schon bey mir zögerte, schreib ich nur wenig. Laß mich bald doch wißen ob Du mich noch liebst, ich glaubs zwar aber hilf meinem Unglauben. Dein Röderer
-<line type="empty" />
 <line type="break" /><align pos="center">bey Fr. <aq>Profeßor</aq> Hambergerin an der Allee zu Göttingen.</align>
 <page index="2"/>
+<line type="empty" />
 <line type="break"/><address>An Herrn
 <line type="break"/>Herrn <aq>Lenz</aq> abzugeben bey
 <line type="break"/>Herrn GeheimLegationsrath <aq>Goethe</aq>
@@ -3859,28 +3859,16 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <letterText letter="243"><align pos="right">Kochberg, den 23sten Oktober 1776.</align>
 <line type="break"/>
 <line tab="1"/>Wollten Sie so freundschaftlich seyn, lieber Aktuarius, Röderern, falls er noch in Straßburg ist, zu sagen, er möchte mir das Paket von Herrn von Kleist, nur mit der Post zuschicken, weil ich sehr ungeduldig darauf bin; die Briefe könnt’ er mir selbst mitbringen.
-<line type="empty"/>
 <line tab="1"/>Ich bin in Kochberg bei der liebenswürdigsten und geistreichsten Dame, die ich kenne, mit der ich seit vier, fünf Wochen den englischen Shakspeare lese. Künftige Woche gehts leider schon wieder nach Weimar.
-<line type="empty"/>
 <line tab="1"/>Der Herzog hat neulich hier einen sonderbaren Zufall gehabt: er fiel von einem Floß im Schloßgraben ins Wasser, ich sprang nach und hatte das Glück ihn, ohne Schaden, heraus zu ziehen. Herder ist mit ihm hier gewesen und find't allgemeinen Beifall. Wer sollte ihm auch den streitig machen können? Er und <aq>Wieland</aq> sind, wie der Letzte es von Jedem seyn muß, Freunde und werden es noch immer mehr werden.
-<line type="empty"/>
 <line tab="1"/><aq>Göthe</aq> hab ich nun lang nicht gesehen; er ist so von Geschäften absorbiert in W., daß er den Herzog nicht einmal hat herbegleiten können.
-<line type="empty" />
-<line type="break" />Leben Sie wohl und grüßen alle guten Freunde, auch Jungfer Lauth.
-<line type="empty" />
+<line tab="1"/>Leben Sie wohl und grüßen alle guten Freunde, auch Jungfer Lauth.
 <line type="break" /><align pos="right">Lenz.</align>
-<line type="break"/><note>Die folgende topographische Angabe ist eine Anmerkung der Edition</note>
-<sidenote pos="left" page="1" annotation="Am Rande">
-<line type="break"/>
-<line tab="1"/>Wäre es nicht möglich, daß ich, durch Ihre Vermittlung einige der neuesten Allemanden in Straßburg abgeschrieben herbekommen könnte. Was Sie dafür auslegen, will ich wieder erstatten. Die von Edelmann würde Ihnen hier ein ewiges Denkmal setzen.</sidenote>
-<line type="empty"/>
-<line tab="1"/><pe>Kennen Sie <aq>Kaufmann?</aq> Er ist, wie mir die Herzogin Mutter gesagt, durch Weimar gegangen und hat sehr gefallen. Auch ist er im Merkur.</pe>
-<line type="empty"/>
+<line type="break"/><align pos="center"><note>Am Rande:</note></align>
+<line tab="1"/>Wäre es nicht möglich, daß ich, durch Ihre Vermittlung einige der neuesten Allemanden in Straßburg abgeschrieben herbekommen könnte. Was Sie dafür auslegen, will ich wieder erstatten. Die von Edelmann würde Ihnen hier ein ewiges Denkmal setzen.
+<line tab="1"/>Kennen Sie <aq>Kaufmann?</aq> Er ist, wie mir die Herzogin Mutter gesagt, durch Weimar gegangen und hat sehr gefallen. Auch ist er im Merkur.
 <line tab="1"/>Grüßen Sie die <aq>deutsche Gesellschaft</aq> und melden Sie mir recht viel Neues aus Straßburg und Paris. Ist eine gewisse Exzellenz von <aq>Vietinghof</aq> durch Straßburg gegangen? Er ist ein Vetter von General bei Baviere. – Vielleicht sehen Sie mich einmal in herzoglich sächsischer Uniform wieder. Doch das unter uns.
-<line type="empty"/>
 <line tab="1"/>Melden Sie mir doch ob Herr <aq>Fries,</aq> mit dem ich nach Italien wollte, noch in Straßburg ist und grüßen ihn, wenn Sie ihn sehen. Sollte Röderer etwa gar das benannte Paket von Herrn von Kleist noch nicht erhalten haben, so seyen Sie doch so gütig und begrüßen ihn selbst darum. Er weiß schon wovon die Rede ist. Und versichern ihm von mir viele Empfehlungen.
-<line type="empty" />
-<line type="break" />
 </letterText> 
 
 <letterText letter="244">
@@ -3889,13 +3877,9 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 
 <letterText letter="245">
 <line tab="1"/>Lieber Engel, da hast Du die Offenbarung Seb. <aq>Merciers</aq> – Deinem Vater – ach! lieber <aq>Lenz!</aq> Mein Gedächtnis! Meine ewigen Zerstreuungen! – Ich hab ihm nicht geschrieben – Es kam mir ganz aus dem Sinne – Schreib Du ihm etliche Zeilen und schick sie mir, mit seiner Addresse: ich will ein Brieflein von meiner Hand dazulegen, und so wirds am besten seyn.
-<line type="empty" />
-<line type="break" /><aq>Herder</aq> ist ein Mann Gottes!
-<line type="empty"/>
+<line tab="1"/><aq>Herder</aq> ist ein Mann Gottes!
 <line tab="1"/><aq>Kaufmann</aq> ist ein edler, großer, guter Mensch. Er hat das Ding im Merkur das wir ihm zuschrieben, nicht gemacht, hat auch keinen Antheil dran.
-<line type="empty"/>
 <line tab="1"/>Meine Frau, ich selbst und alle unsre Kinder bevollmächtigen Dich, Lieber, unsrer liebsten Frau <aq>von Stein</aq> das Schönste was Du sagen kannst, in unserm Nahmen zu sagen. Wir lieben sie allesammt von Grund der Seele – auch wenn sie uns keine Biskuits geschickt hätte. Doch ist natürlich, daß die Biskuits nichts dran verderben.
-<line type="empty"/>
 <line tab="1"/>Dein Brief an <aq>Bode</aq> soll bestellt werden. Komm doch bald wieder, und bleibe bei uns! Denn es will Abend werden – Laß uns des Lebens genießen so lang es uns gegönnt ist. Ade.
 <line type="break"/><align pos="right">W.</align>
 <line tab="1"/>Ich weiß nicht wieviel Merkure Dir fehlen – komm und hole sie selbst – und den Brief Deiner französischen Dame, die soviel Lerms um Nichts macht.

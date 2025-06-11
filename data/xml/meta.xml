@@ -3678,7 +3678,7 @@
 				<location ref="7" />
 				<person ref="9" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -3708,7 +3708,7 @@
 				<location ref="30" />
 				<person ref="1" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
