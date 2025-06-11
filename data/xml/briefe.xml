@@ -3955,10 +3955,10 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break" />Berka the third of 9br. 1775.</align></aq>
 </letterText> 
 
-<letterText letter="251"><note>Gedruckter Text</note>
-<line type="break"/>
+<letterText letter="251"><page index="1"/><align pos="center"><note>Gedruckter Text:</note></align>
 <line tab="1"/>Ich befinde mich abermal in der mir unangenehmen Nothwendigkeit, gegen alle und jede, welche die Gütigkeit hatten, mich mit Zuschriften zu beehhren, mich schlechterdings insolvendo zu erklären. So viel ich mich auch befließ, die eingehenden Briefe sogleich zu beantworten – Hundertmal war’s nicht möglich. Unterdeß haben sich nur im Laufe dieses Jahres die unbeantwortet gebliebenen Briefe dergestalt gehäuft, daß ich gewiß 3. volle Tage brauchte, sie alle nur wieder zu lesen – wie schlechterdings unmöglich in meiner Lage – wo ich kaum eine Stunde mir allein versichern kann, nur diese 3. Tage zu finden, wie vielweniger, Wochen zur Antwort. Also, bitt’ ich alle meine Freunde und Freundinnen, Gönner und Gönnerinnen in der Nähe und Ferne – mich gütigst zu entschuldigen und zu entschlagen. Ich darf und will keiner Seele verbieten an mich zu schreiben; aber alle bitten, ohne Drang des Herzens und des Bedürfnißes nicht zu schreiben, und, (aüsserste Nothfälle ausgenommen,) keine Antwort zu erwarten – und dann auch noch bitten, die Briefe bis <b>Schafhausen</b> oder <b>Basel</b> zu frankiren. Man kann leicht denken, Einer kann nicht so leicht tragen, was 300. bis 400. tragen können. Man kann sich vorstellen, wie sich das Postgeld in einem Jahre häufen, und wie’s mir schwer fallen muß, für so manchen oft äusserst unbedeutenden Brief 30 bis 40 kr. zu bezahlen; oft Pakete mit 1, 2, 3. fl. einzulösen. Man verzeihe; aber ich bin genöthigt, und es ist meine Pflicht – hierüber Maaßregeln zu nehmen, und alle Briefe, die nicht bis Schafhausen oder Basel frankirt sind, uneröffnet zurückzuschicken. Ich weiß, einzele werden drunter leiden. Ich will’s denen zu vergüten trachten. Aber, wer mich liebt, und sich in meine Lage denkt, der wird die Sache äusserst billig finden.
-<line type="break"/>Zürich, den 7ten Novembr. 1776.
+<line type="empty" />
+<line type="break"/><align pos="center">Zürich, den 7ten Novembr. 1776.</align>
 <line type="empty" />
 <line type="break" /><hand ref="10">
 <line tab="1"/>Mein lieber Lenz, mit einem Schwall unzähliger Briefe flog ich vor ein paar Tagen auf Baden u: las auch alle Deine wied. durch. Ach! wie wenig hab ich Dir geantwortet u. Zeit zu antworten … Könntest Du nicht zu uns kommen? wenig könntest Du mich, wenig könnt ich Dich genießen. Doch mehr wie so. Vielleicht hättst Du Quartier bei Statth. Kaufm. in Winterthur. Vielleicht hättst Du Ruhe u: Genuß. viel kann ich Dir nicht versprechen. Ich versprech überall nichts mehr. Geld hab ich keins. Ich bin arm in einem schönen reichen Hause – wo Du etwa auch Tage u: Nächte ruhen u: mir helfen kannst. Du kämst über Emmendingen. Wir alle haben Augenblicke zu wägen – doch Freundesanblick trägt uns. Komm u. siehe. So antwort ich auf alle 
@@ -3967,130 +3967,104 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/><address> <ul>an Lenzn.</ul></address></hand>
 </letterText> 
 
-<letterText letter="252"><aq>
+<letterText letter="252"><page index="1"/><aq>
 <line tab="1"/>Oserois je enfin Madame accompagner l’incluse du Sieur Wieland de quelques lignes seulement pour vous temoigner l’excès de joie et de satisfaction que j’ai du ressentir en Vous voyant assez de confiance en moi de me faire le porteur de la lettre que Vous aviez la bonté de lui envoyer. Jamais je ne vis un homme etonné comme il le fut de ce que Vous aviez <del>voulu</del> faire tant de cas d’un rien come il s’exprimoit et il vous prie d’agreer la continuation de ce petit poëme que votre approbation <insertion pos="left">que reellement sa modestie l’a jusqu’ici empeché d’en sentir tout le prix</insertion> lui rend d’autant plus cher a lui même. En vain j’ai <del><nr> </nr></del> l’assurer que j’etois <insertion pos="top">en cela parfaitement</insertion> de Votre avis et que je le prenois tout de bon pour son chef d’oeuvre, il s’obstina <del>d’autant</del> plus <insertion pos="top">toujours</insertion> que ce n’etait qu’indulgence de votre part qui <del><nr> </nr></del> Vous en fit juger si <del><nr> </nr></del> preferablement. Je pense que le meilleur moyen de le tirer de son aimable erreur sera de vouloir bien me permettre que je continuasse de Vous envoyer tous les suites du Mercure; <del>en même temps</del> <insertion pos="left">et quoiqu’</insertion> il m’ait defendu de Vous <insertion pos="top">dire</insertion> qu’ils viennent de lui <insertion pos="top">afin que Vous ne</insertion> les critiquiez <insertion pos="left">plus</insertion> trop favorablement, <insertion pos="left">je ne saurois Vous le</insertion> deguiser, mais je Vous supplie en meme tems au grace <insertion pos="left">de vouloir bien</insertion> m’instruire <insertion pos="top">par complaisance</insertion> avec le <del><nr> </nr></del> moins de <del><nr> </nr></del> <insertion pos="top">circonspection</insertion> possible <del>sans la moindre circonspection</del> <insertion pos="top">et sans aucun</insertion> egard pour lui vous fiant tout a ma discretion, de <insertion pos="top">tout</insertion> ce que peut-etre Vous pourriez trouver a desirer en quelques endroits de son poëme, je ne manquerai pas de lui donner la dessus des avis dont il profitera. Pardonnez Madame cet enthousiasme pour mon ami et pour cet art <del><nr> </nr></del> <insertion pos="top">ou</insertion> de jour en jour il fait de nouveaux progres, quoique on auroit cru qu’il en avoit deja atteint le sommet <insertion pos="top">plus haut degré</insertion> de perfection. Plut a Dieu que dans le siecle ou nous sommes Vous ne voudriez pas etre inexorable d’accorder a l’Enthousiaste le plus desinteressé et le plus circonspect le bonheur de Vous admirer autant dans Vos lettres qu’il a fait jusqu’ici dans une Silhouette quoique mal copiée cependant suffisante a rapeller a son imagination les momens adorables ou il a joui du bonheur de Vous voir et de Vous entendre Mr. Lav. m’a depuis ce tems envoyé une autre de sa physiognomie, dont je ne suis pas non plus satisfait. Et quel artiste pourroit rendre ces traits qui a la verité ne sont que pour la pensée. J’ose esperer que Vous ne voudriez pas Vous facher de la delicatesse de mon ami W. que je viens de trahir en le decouvrant, ayez la grace de ne pas me rendre la pareille et d’agreer ce que je viens proposer de sa part desus</aq>
 </letterText> 
 
-<letterText letter="253">
+<letterText letter="253"><page index="1"/>
 <line tab="1"/>Wenn Ihr nichts Beßers habt, und einmal Euer üppiges Fleisch kreuzigen wollt, liebes Brüderlein, so kömmt heute auf den Mittag und eßt eine Suppe mit mir. Vielleicht kömmt Göthe auch.
 </letterText> 
 
-<letterText letter="254">Hier haben Sie ein neues Stück von mir.
-<line type="empty"/>
-<line tab="1"/>Ich verlange fünf neue Louisd’or. Bitte um geschwinden aber <b>korreckten</b> Druck und gut Pappier. Es wäre mir sehr dran gelegen wenn Sie mir die Zeit bestimmen könnten wenn ich das erste Explar erwarten darf.
-<line type="empty"/>
+<letterText letter="254"><line tab="1"/>Hier haben Sie ein neues Stück von mir.
+<line tab="1"/>Ich verlange fünf neue Louisd’or. Bitte um geschwinden aber <it>korreckten</it> Druck und gut Pappier. Es wäre mir sehr dran gelegen wenn Sie mir die Zeit bestimmen könnten wenn ich das erste Explar erwarten darf.
 <line tab="1"/>Sollte Ihnen zu diesen Bedingungen das Stück zu theuer seyn so bitte mir das Manuscript ohne es weiter sehen zu lassen baldigst zurück.
-<line type="empty" />
-<line type="break" />Ich bin mit vieler Achtung Dero
+<line tab="1"/>Ich bin mit vieler Achtung Dero
 <line type="break"/><align pos="right">ergebenster
 <line type="break"/>Lenz.
 <line type="empty" />
 <line type="break" />Weymar d.</align>
 <line type="empty"/>
 <line type="empty" />
-<line type="break" /><note>Empfangsnotiz Reichs</note>
-<line type="break"/><hand ref="33">1776 23 9bre Weymar Lenz.</hand>
+<line type="break" /><align pos="center"><note>Empfangsnotiz Reichs:</note></align>
+<line type="break"/>1776 23 9bre Weymar Lenz.
 </letterText> 
 
-<letterText letter="255">
+<letterText letter="255"><page index="1"/>
 <line tab="1"/>Verzeyhen Sie meine wertheste Mademoiselle! daß ich so lange angestanden Ihnen schriftlich zu sagen mit welchem Vergnügen ich mich auch hier bey Hofe noch der angenehmen Stunden erinnere, die ich in Ihrem Hause zugebracht. Die beständigen Zerstreuungen in denen ich bisher gelebt und die Ungewißheit, ob ich
 <page index="2"/>hier bleiben oder mich auf den Weg nach Strasb. zurückmachen würde, haben mich bisher abgehalten es zu thun. Da aber gegenwärtig sich meine Aussichten verändert haben und die Gnade des Fürsten und des ganzen Hofes, für die
 <page index="3"/>ich der Fürsehung Gottes Dank schuldig bin, mir allzuschmeichelhafte Fesseln anleget, so habe wenigstens schriftlich Ihnen für alle mir in Ihrem Hause erzeigte Freundschaft und Höflichkeit danken und Ihnen zugleich versichern wollen daß der kleine Rest den Ihnen noch für
 <page index="4"/>das letzte halbe oder ganze Jahr zu entrichten habe, sobald ich mit meiner Einrichtung ein wenig in Ordnung bin, ein sehr gut bey mir angelegtes Capital seyn soll. Haben Sie die Gefälligkeit für mich, mich Dero schätzbarsten Herrn Bruder und Demois. Schwester, sowie der ganzen Tischgesellschaft auf das verbindlichste zu empfehlen und seyn versichert, daß ich jede Gelegenheit aufs begierigste ergreifen werde Ihnen mit der Tat zu beweisen mit wie vieler Hochachtung und Ergebenheit ich sey
-<line type="break"/>Dero ganz verbundenster Diener Lenz.
-<line type="empty" />
+<line type="break"/><align pos="right">Dero ganz verbundenster Diener Lenz.</align>
 <line type="break" />Weymar d. 23ten Novbr. 1776.
 </letterText> 
 
-<letterText letter="256"> <address><align pos="right">Herrn <ul>Reich</ul></align></address>
+<letterText letter="256"><page index="1"/> <address><align pos="right">Herrn <ul>Reich</ul></align></address>
 <line type="empty"/>
 <line type="empty"/>
 <line tab="1"/>Ich habe mich vergriffen werthester Herr als ich unter andern Geschäften und Zerstreuungen unter meinen Pappieren etwas für Sie suchte. Es war nicht der Engländer, eine unvollendete Skizze, sondern gegenwärtiges Manuscript das ich für Sie bestimmt hatte. Sollte es Ihnen zu dem Preise nicht gefallen, so lege hier noch ein anderes bey: sollten aber beyde Ihnen kein Aequivalent scheinen, so bitte es mir zu melden und der Zurücksendung Ihrer Remesse versichert zu seyn. Vor der Hand bitte also noch mit dem Druck inne zu halten
 <line type="break"/><align pos="center">Ihr</align>
 <line type="break"/><align pos="right">ergebenster Lenz.</align>
 <line type="empty" />
-<line type="break" />Berka d. 23sten Obr. 1776.
+<line type="break" />Berka d. 23sten 9br. 1776.
 </letterText> 
 
-<letterText letter="257">
+<letterText letter="257"><page index="1"/>
 <line tab="1"/>Hier schick ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nicht gar gut, probieren sie sie. Auch ein Brief kommt anbei.
-<line type="empty"/>
 <line tab="1"/>Am Donnerstag wurden Erw. u. Elmire und die Geschwister aufgeführt, es wäre mir unendlich leid wenn Sies nicht sollten gewußt haben und ich also Schuld dran wäre weil ichs Ihnen <del>nicht</del> am Mitwoch nicht sagen ließ. Ich habe, Fabricens Rolle ausgenommen die sehr elend war, nochnichts so Liebes gesehen. Das Maidel ich hätte sie nun auffreßen können. Sie war eben ganz Marianne und der Hr. Geh. Leg. Rath ganz Wilhelm. Ich kanns ihnen nicht sagen was es auch vor einen Eindruck auf <del><nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr></del> <er></er><!-- Ist die unleserlich machende Streichung hier ein Sonderfall? --> <insertion pos="top">alle Leute</insertion> machte. Leben Sie recht wohl. Hr. Lenz. Das andere besorge ich richtig.
 </letterText> 
 
-<letterText letter="258">
+<letterText letter="258"><page index="1"/>
 <line tab="1"/>Ich habe Ihren Brief und Nachricht einer Dame vom Hofe gegeben die ihn einer treflichen Dame von ihrer Bekanntschaft die eben mit ihrem Sohne zwischen Dessau und Salis unschlüssig war, zugeschickt hat. Verzeyhen Sie, daß ich in diesem Stück Ihre freundschaftliche Ordre überschritten, es war mein Herz das mir dazu rieth und dieses sündigt nie.
-<line type="empty"/>
 <line tab="1"/>Ich bin der Jahreszeit ungeachtet noch immer auf dem Lande weil man mich in W. nicht brauchen kann. Neulich glaubte sich ein Franzose der sich <ul>einen Zögling des grossen</ul> <ul>Voltaire</ul> sagte, seiner Sache schon gewiß, als er mit einem großen Empfehlungsschreiben vom Prinzen <del><nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr></del> <er></er><!-- Bezieht sich die unleserlich gemachte Streichung auf die Streichung zuvor? --> aus Berlin, einem Verwandten unsers Hauses, worin derselbe den Geh. Legationsrath Goethe den deutschen Shakesp. und den teutschen Voltäre nannte und gegenwärtigen Fremden wegen
 <page index="2"/>seiner guten Sitten und Talente und Verse empfahl, sich meinem Freunde Goethe vorstellen ließ; weil unsere Einrichtungen aber nicht für Fremde sind, mußte der Zögling des grossen Voltaire mit Schimpf und Schande abziehn. Ich bitte diese Geschichte bekannt zu machen.
-<line type="empty"/>
 <line tab="1"/>Meine wärmste Empfehlung Ihrem Freunde Lerse dessen wir uns mit Goethe oft erinnert haben. Wie soll ich Ihnen meinen Dank ausdrücken für die gefällige Beantwortung meiner fürwitzigen Fragen? Ich weiß nicht welchen Antheil ich an Frankreich
 <page index="3"/>nehme, dem ich doch keine Verbindlichkeiten habe und ganz gewiß auch keine haben werde. Es gehört aber wie besagt auch dieses unter die Rätzel meines Herzens die ich mir selbst weder auflösen kann noch mag.
-<line type="empty"/>
 <line tab="1"/>Ich wollte Ihnen ein Exemplar <ul>der beyden Alten und andrer kleiner Aufsätze</ul> beylegen, wenn es sich der Mühe verlohnte. Ich erwähne dessen nur, weil die Vorlesungen in unsrer Teutschen Gesellschaft die ich Ihnen im Manuscript zugeschickt, darin abgedruckt worden. Sie ist gegenwärtig mit einer Oekonomischen Gesellschaft im Hause des Hn. V. Türkheim verbunden, nicht vereinigt worden. Eine ähnliche Gesellschaft unter Ihrer Aufsicht würde Colmar und Ihnen Ehre und die Hochachtung der Teutschen erwerben, bey denen der Nationalgeist rege wird. Ihr aufrichtigster Freund u. Verehrer
-<line type="empty" />
-<line type="break" />Lenz
+<line type="break" /><align pos="right">Lenz</align>
 <page index="4"/>
+<line type="empty" />
 <line type="break"/><address>Herrn
 <line type="break"/>Herrn Hofrath <dul>Pfeffel</dul>
 <line type="break"/>zu <ul>Colmar.</ul></address>
-<line type="empty" />
-<line type="break" />
-<sidenote pos="right" page="4" annotation="Empfangsnotiz Pfeffels am rechten Rand, vertikal">
+<sidenote pos="right" page="4" annotation="Empfangsnotiz am rechten Rand, vertikal">
 <line type="break"/><hand ref="21"><aq>De Mr. Lenz.
 <line type="break"/>San date acc: le 4 Xbr. 1776.</aq></hand></sidenote>
 </letterText> 
 
-<letterText letter="259"><align pos="right">Schriebs den 26 Nov. 76. Göttingen.</align>
-<line type="break"/>
+<letterText letter="259"><page index="1"/><align pos="right">Schriebs den 26 Nov. 76. Göttingen.</align>
+    <line type="empty" />
+    <line type="empty" />
 <line tab="1"/>Lieber Liebster mein Einziger! ich hab hier Deinen 2t Brief vor mir und Du sollst meine Antwort auf den ersten schon lang haben die ich durch Hr. Legations Rath an Dich adressirt habe. Hier unten Abschrift davon. Mich drückt nichts als was Dich drückt und daß ich nicht helfen kann. Gott spreche Seegen über Dich! Der Instruktionen wegen will ich mit morgender Post nach Strasburg schreiben.
-<line type="empty"/>
 <line tab="1"/>Ob ich Lessens Bekanntschaft gesucht habe? nicht gesucht und hab sie mehr als jede andre hier, ich suche hier keine kann aber durch Dr. Leß und wann Du Dich näher erklärst durch seine Frau die meine Landsmännin ist viel erfahren, aber ich sage nur was Du fragst. Durch sie komm ich in die besten Gesellschaften.
-<line type="empty"/>
 <line tab="1"/>Ich weiß Boje’s Adresse nicht, weiß ihm auch nichts weder von Dir noch mir zu schicken. Gib mir nähere Nachricht ob ich Deinen lieben Bruder vielleicht hier sehn werde. Ein trefflicher junger Mann Prof. Koppe der in Mitau stund u. dort eine Landsmännin von Dir eine sehr liebenswürdige Person geheyrathet hat, liest hier über die Apostelgeschicht und Briefe. Er kennt Dich von Leipzig her da Du mit den Baronen warst, weis aber durch mich nichts weiter von Dir. Soll ich ihn grüßen?
-<line type="empty"/>
 <line tab="1"/>Bürgers Meisterübersetzung kenn ich aus dem Musäum und werde sie so bald sie zu haben ist kaufen, hier Iab ich mich ander Odyssee u. lebe in der Urkunde die ich mitnahm und hier erst recht lese, hätten wir sie <ul>ganz vor</ul> der Ausgabe der Meynungen gelesen! Mit Deiner Abendmahlschrift werd ich sobald möglich viel sagen das ich auf der Leber habe nur wünscht ich mir mehr Feuer, Aktivität, Energie.
-<line type="empty"/>
 <line tab="1"/>Walch ist mir hier der größte Mann bey dem ich <ul>viel viel</ul> lerne, der liebenswürdigste Menschenfreund voll Bonhomie mit ewigem Sonnenschein im Herzen, unaussprechlich thätig, <del>heiter wo</del> seine Bemerkungen haben durchdringenden Scharfsinn.
 <line type="empty" />
 <line type="break" /><ul>Nun die Abschrifft.</ul>
-<line type="break"/><note>Abschrift des Briefes von Röderer vom Anfang November 1776</note>
-<line type="break"/>
+<line type="break"/><align pos="center"><note>Abschrift des Briefes von Röderer vom Anfang November 1776:</note></align>
 <line tab="1"/>Tausendmal dank ich dir für deinen Brief mein allerbester alter Freund, oder will dir vielmehr danken, dann wie neu geschenket bist Du meiner alten Liebe und da magst du besser ahnden was mein Dank sey als Dirs meine Feder sagt. Meine Studien gehn hier besser als je in St. und ich finde hier mehr als ich vermuthete. Es sind Professoren hier die ich herzlich lieben muß auch außer Ihnen ist der Kopf nicht allein der sich hier weyden kann
-<line type="empty"/>
 <line tab="1"/>Von altem schweige, liebstes großes Herz! um was ich dich bitte ist Glaube an meine starke unvermögende Liebe. Wenn ich weiter nicht gehen kann, so komm ich doch nach Weimar, sollt ich auch zu Fuß gehen und mit Brod und Wasser mich nähren. Ich muß Luthers Bruder predigen hören, und die Männer sehen die mein Herz ehret, und dich umarmen zum lezten mal und dann will ich gern nach St. zurück und an den Pflug. Lang kann ich ohn das zu W. nicht weilen. Soll ich dir sagen daß ich den Pack von Pirk nicht bekommen konnte, ob ich gleich viermal zu ihm gieng, ohn’ ihn anzutreffen, und allemal zur Zeit wo man mich kommen hieß. Ich will aber nach Straßb. schreiben daß du sie bekommen sollst, nur sag mir: was eigentlich? Deine Briefe hab ich alle zu Hauß in einen meiner Sécrétair Schränke gelegt und die Thüre davor versiegelt. Ich werd sie dir aber alle schicken wenn ich wieder zu Hauß bin. Das Gräfliche Hauß von Stollberg unterhält hier eine Anzahl Pursche die Freitisch haben und der König auch. Könntest du wohl durch deine Vermittelung bey Erstern oder etwa bey Hr. Leibarzt Zimmermann mir zu einem Platz verhelfen? ich würde dadurch in Stand gesezt meinen mir sehr nützlichen Aufenthalt hier zu verlängern. Deinen Petrarch hab ich hier du sollst ihn haben so bald du willst. Ich verbleibe ewig dein Treuer zärtlicher Röderer P. S. Kaufmann 
-<sidenote pos="left" page="1" annotation="am linken Rand, vertikal"> ist alles Lobs werth und mein inniggeliebter! Willstu Maler Müllers Schattenriß, ich hab herrliche Tage mit Ihm zu M. gehabt . O der Antiquiensaal!! Zu Frankfurt hab ich die Ehre gehabt die Frau Rath Goethegesehen. Wagner ist verheyrathet. <note>Ende der Abschrift</note> daselbst u. Advocat, <ul>von Schloßer sehr geliebt, war mit zu Emmendingen.</ul></sidenote>
+<sidenote pos="left" page="1" annotation="am linken Rand, vertikal"> ist alles Lobs werth und mein inniggeliebter! Willstu Maler Müllers Schattenriß, ich hab herrliche Tage mit Ihm zu M. gehabt . O der Antiquiensaal!! Zu Frankfurt hab ich die Ehre gehabt die Frau Rath Goethegesehen. Wagner ist verheyrathet. daselbst u. Advocat, <ul>von Schloßer sehr geliebt, war mit zu Emmendingen.</ul></sidenote>
 </letterText> 
 
-<letterText letter="260">
+<letterText letter="260"><page index="1"/>
 <line tab="1"/>Es freut mich bester Herder! daß ich eine Gelegenheit finde Abschied von Dir zu nehmen. Freilich traurig genug, kaum gesehen und gesprochen, ausgestoßen aus dem Himmel als ein Landläuffer, Rebell, Pasquillant. Und doch waren zwo Stellen in diesem Pasquill die Goethe sehr gefallen haben würden, darum schickt ichs Dir. Wie lange werdt Ihr noch an Form und Namen hängen
 <page index="2"/>
-<line type="empty"/>
 <line tab="1"/>Ich gehe sobald man mich fort <ul>winkt,</ul> in den Tod aber nicht, sobald man mich herausdrücken will. Hätt’ ich nur Goethens Winke eher <ul>verstanden.</ul> Sag ihm das.
-<line type="empty"/>
 <line tab="1"/>Wie soll ich Dir danken für Deine Vorsprache beym Herzog. Er wird
 <page index="3"/>mein Herr immer bleiben, wo ich auch sey, ohne Ordres und Ukasen. Wollte Gott ein Schatten von mir bliebe in seinem Gedächtniß, wie Er und sein ganzes leutseeliges Wesen nimmer aus dem meinigen verschwinden wird. Ich weiß diese Versicherung
 <page index="4"/>ist ihm lieber als ein Danksagungsschreiben. Wolltest Du ihn mündlich bitten, mir huldreichst zu verzeihen, daß ich seine Bücher solange gehabt und gebraucht und daß ich die Dreistigkeit habe ihn untertänigst nur urp. einen Aufschub von einem Tage zu bitten – ich will gleich eine Supplique beylegen – um in dem einem aus dem Archiv die grossen Züge seines eigenen Karackters in denen seines grossen Ahnherrn Bernhard zu Ende studiren zu können.
-<line type="empty"/>
 <line tab="1"/>Schick doch diesen Brief sogleich ihm hin, ich flehe, der vorige hat 
-<sidenote pos="left" page="4" annotation="am linken Rand, vertikal"> <ul>Effeckt gethan,</ul> wofür ich tausendmal danke. Er wird mir diese letzte Gnade nicht abschlagen, wenn ihm Goethe für die Reinheit meiner Absichten Bürge ist. Und der wird es seyn, so sehr ich ihn beleidigt habe. Ich dachte nicht daß es so plötzlich aus seyn sollte und hatte mir meine süssesten Arbeiten aufgespahrt. Diese Gelegenheit ist hernach aufimmer für mich verloren.<ul>Nur ein einziger Tag –</ul></sidenote>
-<line type="empty"/>
+<sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite, vertikal"> <ul>Effeckt gethan,</ul> wofür ich tausendmal danke. Er wird mir diese letzte Gnade nicht abschlagen, wenn ihm Goethe für die Reinheit meiner Absichten Bürge ist. Und der wird es seyn, so sehr ich ihn beleidigt habe. Ich dachte nicht daß es so plötzlich aus seyn sollte und hatte mir meine süssesten Arbeiten aufgespahrt. Diese Gelegenheit ist hernach aufimmer für mich verloren.<ul>Nur ein einziger Tag –</ul></sidenote>
 <line tab="1"/>Umarme und seegne Deine Gattin; Seyd unbegrenzt glücklich – vergeßt mich. Lebt wohl!
-<line type="empty" />
-<line type="break" />
-<sidenote pos="top left" page="4" annotation="am oberen linken Rand, spiegelverkehrt">
-<line type="break"/>
+<sidenote pos="top left" page="4" annotation="am oberen linken Rand der vierten Seite, spiegelverkehrt">
 <line tab="1"/>Von dem versiegelten Zettel an Goethen sag niemand. Nochmals – Lebt wohl! Könnt ich an eurem Halse liegen.</sidenote>
-<line type="empty" />
-<line type="break" />
-<sidenote pos="top right" page="4" annotation="oben rechts, spiegelverkehrt">
+<sidenote pos="top right" page="4" annotation="oben rechts am Rand der vierten Seite, spiegelverkehrt">
 <line type="break"/>Der redliche Kalb! wie treflich u. edel!</sidenote>
-<line type="empty" />
-<line type="break" /><note>evtl. dazugehöriger Briefumschlag, in dem das erwähnte Pasquill enthalten gewesen sein könnte, mit Adresse, GSA 44/69, Bl. 25</note>
+<line type="break" /><align pos="center"><note>evtl. dazugehöriger Briefumschlag, in dem das erwähnte Pasquill enthalten gewesen sein könnte, GSA 44/69, Bl. 25:</note></align>
 <line type="break"/>
 <line tab="1"/>Meinem ehrwürdigsten Freunde <dul>Herder</dul> dieses einzigexistirende Manuskript zu seiner willkührlichen Disposition.
-<line type="empty" />
-<line type="break" />Von einem armen Reisenden der sonst nichts zu geben hat.
+<line tab="1"/>Von einem armen Reisenden der sonst nichts zu geben hat.
 </letterText> 
 
 <letterText letter="261"><aq>

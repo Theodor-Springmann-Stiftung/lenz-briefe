@@ -3809,7 +3809,7 @@
 
 		<letterDesc letter="252">
 			<sent>
-				<date when="1776-11-15">Berka?, 15. November 1776</date>
+				<date when="1776-11-15">Wahrscheinlich Berka, 15. November 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3847,7 +3847,7 @@
 				<location ref="27" />
 				<person ref="33" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -3887,7 +3887,7 @@
 
 		<letterDesc letter="257">
 			<sent>
-				<date notBefore="1776-11-22" notAfter="1776-11-25">Weimar, Zwischen 22. und 25. November
+				<date notBefore="1776-11-22" notAfter="1776-11-25">Weimar, zwischen 22. und 25. November
 					1776</date>
 				<location ref="8" />
 				<person ref="25" />
