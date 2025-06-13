@@ -4062,7 +4062,7 @@
 				<location ref="8" />
 				<person ref="1" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -4084,7 +4084,7 @@
 
 		<letterDesc letter="270">
 			<sent>
-				<date notBefore="1777-01-24">Emmendingen, Wohl bald nach 24. Januar 1777</date>
+				<date notBefore="1777-01-24">Emmendingen, wahrscheinlich bald nach dem 24. Januar 1777</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>

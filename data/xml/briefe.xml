@@ -4076,6 +4076,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <letterText letter="262"><page index="1"/>
 <line tab="1"/>Ich danke Ihnen mein verehrungswürdiger Freund und Gönner für die unangenehme Bemühung die Sie meinethalben übernommen und versichere daß mir eine Ordre wie die auch wenn ich sie verdienet durch die Hand die sie mir überbrachte, versüßt worden wäre. Da ich aber nach meiner Ueberzeugung erst gehört werden müßte, ehe man mich verdammte und meine Ehre die mir lieber als tausend Leben
 <page index="2"/>ist, mich durch Annehmung dessen was Sie mir von unbekannter Hand hinzugelegt eines mir unbewußten Verbrechens schuldig zu bekennen, nimmermehr erlauben wird, so verzeyhen Sie daß ich diese beygefügte Gnade nicht annehmen sondern um Gerechtigkeit bitten darf. Es ist nicht seit heute, daß
+<line type="empty" />
 <align pos="center"><note>am linken oberen Rand eine Kalkulation, spiegelverkehrt</note></align>
 <page index="3"/>
 <line type="empty" />
@@ -4087,7 +4088,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>Um G<tl></tl>
 <line type="break"/>Und Ge<tl></tl>
 <line type="break"/>Mit dies<tl></tl>
-<sidenote pos="left" page="3" annotation="am linken Rand, vertikal">
+<sidenote pos="left" page="3" annotation="am linken Rand der dritten Seite, vertikal">
 <line tab="1"/>Hier ein kleines Pasquill das ich Goethen zuzustellen bitte, mit der Bitte, es von Anfang – bis zu Ende zu lesen.</sidenote>
 </letterText> 
 
@@ -4113,18 +4114,13 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/><align pos="right">Lenz</align>
 </letterText> 
 
-<letterText letter="266">
+<letterText letter="266"><page index="1"/>
 <line tab="1"/><tl></tl>rzlichen Dank sag ich dir Liebster für deinen Dukat, er gefällt <tl></tl> und dann ist er von Dir! Liebes Denkmal mir Mönchlein, und in <tl></tl> mich daß du mich mißverstundst, mich in Mangel glaubtest und mir <tl></tl>, vielleicht nicht von des reichen Mannes Tisch zu werfen wolltest, <tl></tl>ster Freund, mein Bester den ich je hatte und haben werde, mich <tl></tl> er nie noch das mindeste so daß es gedrückt heisse. Hast mich auch <tl></tl>s Freytisches mißverstanden, ich käme in gar keine Relation <tl></tl>rscher dann ich könnte mir’s Essen immer auf meine Stube bringen <tl></tl> keiner an, hätte auch derwegen niemand <insertion pos="top">hier</insertion> die geringste <tl></tl> d da ich nur bis Ostern bleibe so laß es wann du bisher <tl></tl> schritt gethan hast, ist’s aber , so nehm ichs mit Dank an, und <tl></tl> r aus Strasburg kann continuiren und hieher kommen, <tl></tl> gehe. Ich kann die Pursche hier nicht gar wohl dulden und <tl></tl> weder an mir noch ich an ihnen was finden konnten, waren <tl></tl> gs, <aq>á charge.</aq> Sie schreyen immer <gr>ανтos εpa</gr> und – <tl></tl> hab keiner Seel von dir weder geschrieben noch gesagt, als einen Gruß an die Gesellschaft, und wann du willst eine Abschrift deiner Epistel. Die hab ich auch Boje geschickt mit ein paar Zeilen von mir, vielleicht antwortet Er. <fn index="5"><anchor>#</anchor></fn>
 <line type="empty"/>
-<line type="empty"/>
 <line tab="1"/>Dem kernhaften Müller werd ich erst noch schreiben, ich warte auf Antwort von Ihm. Aber sein Doktor wird sobald nicht gedruckt er arbeitet noch dran. Schade daß zwei <insertion pos="top">Strasb.</insertion> Theologen fast immer um uns waren, die schwer verdauen. Einen gräßlich schönen Hexenauftritt hat er mir draus gelesen.
-<line type="empty"/>
 <line tab="1"/>Schreib mir doch liebster Freund Nachricht von deinem Schicksal und setze mich außer Sorgen wenigstens aus der Unruh meiner Ungewißheit ich will ja weiters nichts wissen. Lebe wohl ich liebe dich.
-<line type="empty"/>
 <line tab="1"/>Hier hastu einen andern D. ich bat dich ja zu vergessen, bitte dich aber nie zu vergessen daß meinem Herzen nie wohler ist als wenn ich an dich denke als Freund, nur sey glücklich und sorgenfrei. Dein stäter Alter Röderer
-<line type="empty" />
 <line type="break" />Deiner meisterhaften Epistel bin ich zu gering ein Compliment zu zu machen, gefallen aber hat sie mir ungemein.
-<line type="empty" />
 <line type="break" /><align pos="right">Röderer</align>
 <line type="break"/>Göttingen d 9. Decemb 1776.
 <line type="empty"/>
@@ -4138,39 +4134,24 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/><aq>mit 1 Ducaten</aq></address>
 </letterText> 
 
-<letterText letter="267">
+<letterText letter="267"><page index="1"/>
 <line tab="1"/>Lieber Hafner! wenn Du oder Herr Otto unter Euren Pappieren etwas habt, dessen Bekanntmachung ihr wünschtet (vorausgesetzt daß es eurem eigenen höchsten Ideal von dem entspricht, was über die Sache gesagt werden könne
-<line type="empty"/>
 <line tab="1"/>so dürft Ihrs nur mit einem Briefe gerade an Wieland begleiten (Herrn Hofrath Wieland zu Weymar) er macht sich eine Freude daraus alles zu <ul>befördern</ul> was im Elsaß Aufmerksamkeit verdient. Euer Zutrauen zu ihm kann unbegrenzt seyn, trauet dieses einem zu, der ihn gesehen, und nicht aus litterarischpolitischen Absichten sein Freund worden ist.
-<line type="empty"/>
 <line tab="1"/>Eine Kleinigkeit um die ich Euch aber bitten will insofern ich Euch nach unserer alten Freundschaft und als geborne Teutsche ansehe. Diese wäre, aus Gefälligkeit gegen Wieland den Namen unsers Vaterlandes künftig hin nicht mit einem weichen D. sondern mit einem harten T zu schreiben. Ich habe seine Gründe drüber gehört und mich aus eigner Willkühr entschlossen
 <page index="2"/>dem alten Schulmeister Gottsched zum Trotz und einem Mann wie Wieland zu Liebe mein Vaterland nicht mehr zu beschimpfen wenn ich es von Deut einem Niedersächsischen Wort das „eine Nichtswürdigkeit“ bedeutet herleite, da unser Stifter Teut hieß und die älteste Schreibart diese kleine aber liebenswürdige Grille Wielands rechtfertigt.
-<line type="empty" />
-<line type="break" />Wenn jemand Recht hat, Brüder! wer wollte einen Augenblick anstehen ihm Recht zu geben.
-<line type="empty"/>
+<line tab="1"/>Wenn jemand Recht hat, Brüder! wer wollte einen Augenblick anstehen ihm Recht zu geben.
 <line tab="1"/>Solltet Ihr sonst jemand wissen, der nicht aus Eigennutz, sondern aus inniger Liebe zur lautersten Ehre, aus Begierde den Edelsten unsers Vaterlandes auf eine edle Art bekannt zu werden, etwas das dem Elsaß Ehre machte, in den Merkur wollte rücken lassen, der es auf die geschwindeste und einzig mögliche Art an
 <page index="3"/>unsern Höfen und in unsern besten Gesellschaften bekannt macht, so werdt Ihr mir einen Gefallen thun, mir Nachrichten von ihm zu geben, damit ich meine Einladung an ihn selber wenden könne. Adressirt die Briefe nur: an Herrn Hofrath Schlosser, in Emmedingen, abzugeben an Herrn Lenz.
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="2" annotation="am linken Rand der zweiten Seite, vertikal; die folgenden zwei Absätze">
-<line type="break"/>
 <line tab="1"/>Sehr gut wäre es wenn Ihr zu allem was Ihr einschicktet, hinzusetztet: <ul>aus dem Elsaß,</ul> es mögte mit Eurem Namen oder mit andern Buchstaben unterzeichnet sein. Ramond wird vermuthlich schon vom Herrn Aktuarius erfahren haben, daß Ihre Durchl. die Herzoginn Mutter sein Drama, nachdem sie mich darum gefragt, behalten haben.
-<line type="break"/>
 <line tab="1"/>Ganze <ul>grosse</ul> Dramen würde Wiel. schwerlich in den Merkur rücken können, wohl aber kleine. Ueberhaupt bitte ich, Euch kurz zu fassen.</sidenote>
-<line type="empty"/>
 <line tab="1"/>Wenn Du zu Herrn von Türkheim gehst so mach ihm von mir viele der schönsten Empfehlungen, nicht bloß wie sie seine persönlichen Liebenswürdigkeiten, sondern hauptsächlich seine patriotische Wärme für seine Vaterstadt verdienen. Melde mir welch einen Gang der Bürgerfreund und die Teutsche und Französische Gesellschaft in seinem Hause nehmen. Herrn Blessig empfiehl mich gleichfalls und schreib mir von seinen Neuigkeiten. Ein Gleiches bitte den Herren Ramond u. Matthieu zu thun wovon ich dem erstem Glück wünschen lasse, falls er schon abgestiegen ist von seinem <ul>hölzernen</ul> Pferde. Vermuthlich wirst Du bald hinauf steigen und dann einen glücklichen Ritt.
-<line type="empty" />
 <line type="break" />E. den 13ten.
-<line type="empty"/>
-<line type="empty"/>
-<line type="empty" />
 <line type="break" /><align pos="right">L.</align>
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="3" annotation="am linken Rand der dritten Seite, vertikal">
-<line type="break"/>
 <line tab="1"/>Es steht bei Euch, Eure Namen zu Euren Ausarbeitungen herzugeben, oder vorher zu versuchen welch ein Glück sie bei Kennern machen. Der Himmel walte über Euch und regiere Euch.</sidenote>
 <page index="4"/>
+<line type="empty" />
 <line type="break"/><address>Herrn
 <line type="break"/>Herrn <ul>Hafner</ul>
 <line type="break"/>Candidaten der Theologie
@@ -4178,46 +4159,31 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>gegenüber der neuen Kirche</address>
 </letterText> 
 
-<letterText letter="268">Strasburg d. 20. Dezbr. 1776.
-<line type="break"/>
+<letterText letter="268"><align pos="right">Strasburg d. 20. Dezbr. 1776.</align>
 <line tab="1"/>Ihr Brief kam zuspäth lieber guter Lenz um weder Röderer noch Hrn. v. Kleist anzutreffen, der erste ist längst zu Göttingen und der lezte in Paris nachdem sein Regiment von hier nach Bitsch verlegt worden.
-<line type="empty"/>
 <line tab="1"/>Hier haben Sie zum Neujahrs Geschenk die neuesten Allemanden, welche Hr. Stork hat auftreiben können. von Edelmann habe ich durch Hafner der sich Ihnen empfiehlt nur die auf dem besondern Blatt bekommen. Ich wolte Ich könnte selbst bei Ihnen seyn und dies geschenk Ihrer Durchl. zum Zeichen meiner Hochachtung übergeben. Es ist mir aber doch lieb daß ich etwas zur Vermehrung Ihrer künftigen Carnevals-Lustbarkeit beitragen kann. Zu dem glücklichen Dienst den Sie dem guten Herzog geleistet haben gratulire ich Ihnen und bin gewis dass Sie von dem Hof nicht, wenigstens nicht mit leerer Hand wegkommen werden. Sie geben mir selbst einen Wink der mir ziemlich einleuchtet. Unter welcher Gestalt ich Sie aber wieder zu sehen kriege so wird Ihre gegenwart meinem Herzen Balsam seyn. Jgfr. Lauth die Sich Ihnen empfehlen bitten Sie, falls Ihre Rückkunft noch lange verschoben werden sollte, ihnen doch was schrifftliches zu schicken über das was Sie ihnen schuldig sind, es ist sagen sie für leben und todt. Hrn. Kaufmann kenne ich nur aus Reputation. Hr. von Vietinghof ist schon lange hier durch und hat seinen Sohn mitgenommen – Hr. Flies ist, weilen sein Vater todt krank worden schon lange nach Haus gereist.
-<line type="empty"/>
 <line tab="1"/>Die Gesellschaft bestehet noch auf gutem Fuss jetzo sind die Versammlungen bis in den Jenner eingestellt und werden alsdann bei Mag. Blessig welcher indessen Pädagog worden ist im Kloster fortgesetzt werden. Unsere Schweden Ütfal werden zu Ende des Jenners nach Paris gehen und Michaelis wird nächstens von da zurückkommen er ist von den dortigen gelehrten insonderheit <aq>D’alembert Diderot</aq> und <aq>Villoison</aq> sehr wohl aufgenommen worden. Der gute <aq>Rousseau</aq> ist vor ein paar Tagen wie man sagt an seinem unglücklichen Fall gestorben.
-<line type="empty" />
-<line type="break" />Der Kaiser Joseph wird gegen den 20. jenner hier erwartet.
-<line type="empty"/>
+<line tab="1"/>Der Kaiser Joseph wird gegen den 20. jenner hier erwartet.
 <line tab="1"/>Was macht mein Freund Goethe, sagen Sie ihm doch auch ein Paar Wörtgen von mir. Er soll mich lieben oder hassen nur nicht vergessen. Empfehlen Sie mich bey gelegenheit Hrn. Herder und Hrn. von Knebel wann er noch da ist.
-<line type="empty"/>
 <line tab="1"/>Kayser hat einige kleine <aq>pieces</aq> von Ihnen lieber Lenz drucken lassen die mir sehr gefallen nur die nachricht von der Societät hätte können draus bleiben weil sie noch nicht Consistenz genug hat um allgemein bekannt zu werden.
-<line type="empty"/>
 <line tab="1"/>Hr. <aq>Ramond</aq> der hier Licentiat wird und Hr. <aq>Matthieu</aq> Empfehlen sich Ihnen. Die hiesige Philanthropische Gesellschaft hat einen neuen plan gemacht zur bessern einrichtung, noch bin ich nicht dabei, ich habe noch nicht einsehen können, daß im ganzen Vieles dabei heraus kommen sollte. Aber wir wollen sehen. Adieu lieber Lenz! seyen Sie mir gut wie ich es Goethe und Ihnen bin
-<line type="empty" />
-<line type="break" />Salzmann Act.
+<line type="break" /><align pos="right">Salzmann Act.</align>
 </letterText> 
 
-<letterText letter="269">an Herdern
+<letterText letter="269"><page index="1"/><align pos="right">an Herdern</align>
+<line type="empty"/>
 <line type="empty"/>
 <line tab="1"/>Lieber Herder! was kann, was darf ich Dir sagen. Es wäre betrübt für mich, wenn Du mein Stillschweigen nicht verstündest.
-<line type="empty"/>
 <line tab="1"/>Ich habe Dich gesehen und gesprochen, habe an Deinem Halse gehangen und Dir Lebewohl gesagt. Was bedarfs des Schauspiels
-<line type="empty"/>
 <line tab="1"/>Kaufmann ist noch nicht da, zweifle auch ob ich ihn sehen werde. Schick mir wo möglich noch einige Zeilen Stärkung derweil ich in Emmend. bin. Adieu! Grüß Weib und Kind! Adieu Herder! ich mache keine Entschuldigung.
-<line type="empty" />
 <line type="break" /><align pos="right">In der Christnacht
 <line type="break"/>bey Schlossern.</align>
 </letterText> 
 
-<letterText letter="270">
+<letterText letter="270"><page index="1"/>
 <line tab="1"/>Ihr Stillschweigen lieber Freund! zu einer Zeit da ich eben im Begrif stehe abzureisen, setzt mich in keine geringe Verlegenheit. Herr Hofrath Schlosser ist eben mit der Herrschaft in Rastadt, ich bitte also Brief und Geld mit einem Umschlag an den Herrn Posthalter Sander in Emmedingen auf das <ul>schleunigste</ul> zu adressiren, Sie können ihm dabey schreiben daß Sies darum thäten, weil Sie wüsten daß H. Schlosser nicht zu Hause; und ich werde <ul>schon Sorge tragen, </ul>daß niemand erfahren soll, wieviel es gewesen.
-<line type="empty"/>
-<line type="empty"/>
 <line tab="1"/>Haben Sie aber Anstand mit dem Manuskript, so schicken Sie mirs eben so schleunig wieder, es sind soviel Hände darnach schon ausgestreckt und verzeyh Ihnen Gott Ihr Zögern.
-<line type="empty" />
 <line type="break" /><align pos="right">Lenz.</align>
-<line type="empty"/>
-<line tab="1"/>
 <sidenote pos="left" page="1" annotation="am linken Rand, vertikal">Oder Sie könnten auch Brief und Geld an <ul>Herrn Hofrath Pfeffel in Colma</ul>r adreßiren, wo es gewiß niemand erführe und mir durch ein ander Briefgen Nachricht davon geben. Sie dürften ihm nur schreiben, Sie wären meines jetzigen Aufenthalts nicht gewiß, da ich wirklich neulich noch in Colmar – so wie in Strasburg und Fort Louis gewesen bin</sidenote>
 </letterText> 
 
