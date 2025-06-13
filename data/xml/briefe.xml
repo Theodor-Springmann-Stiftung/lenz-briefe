@@ -4921,25 +4921,17 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Meine zweite Reise in die Schweitz war an neuen Gegenständen und sonderbaren Schicksalen noch mannichfaltiger als die erste. Vielleicht unterhalt ich Ew. Gnaden ein andermal damit. Sagen Sie Goethen, ich hab ihn zu grüssen von der Reise und den Leuten die ihn drin haben wieder sehn.
 </letterText> 
 
-<letterText letter="297">
+<letterText letter="297"><page index="1"/>
 <line tab="1"/>Denken Sie sich lieben Freunde! einen Menschen der über Stock und Stein, über Berg und Thal durch dick und dünn nach Zürich kommt und überall hören muß
-<line type="empty" />
-<line type="break" />Wären Sie ein Paar Tage eher gekommen, hätten Sie Herrn Sarasin und seine Frau hier angetroffen
-<line type="empty"/>
+<line tab="1"/>Wären Sie ein Paar Tage eher gekommen, hätten Sie Herrn Sarasin und seine Frau hier angetroffen
 <line tab="1"/>Ey doch! sag ich denn mit einem giftigen Lachen über mich selbst und mein Schicksal das mich auch keine Silbe von alledem wissen noch ahnden ließ, hätt ich sie wirklich angetroffen wenn ich eher gekommen wäre?
-<line type="empty"/>
 <line tab="1"/>Sie sind recht vergnügt gewesen, sie sind bey mir gewesen sagte Herr Geßner, sie sind bey mir gewesen sagt Lavater und erzehlt mir vieles zwischen den Kaiser und Ihnen sie sind hier recht lustig gewesen, sagt Herr Escher aus dem Vollenhofe – – und ich
-<line type="empty"/>
 <line tab="1"/>Ja und ich – der sogern Ihren <aq>Cicerone</aq> zum Rigiberg hinauf gemacht, Ihnen von dort herab die Reiche der Welt und ihre Herrlichkeit – – verachten gelehrt hätte gegen das was Sie da gesehen haben würden
-<line type="empty" />
-<line type="break" />Kurz ich kann für Grimm kein Wort mehr schreiben Leben Sie wohl!
-<line type="empty" />
+<line tab="1"/>Kurz ich kann für Grimm kein Wort mehr schreiben Leben Sie wohl!
 <line type="break" /><align pos="right">Lenz.</align>
 <line type="empty" />
 <line type="break" />Kehren Sie indessen doch um
-<line type="break"/>
 <page index="2"/>
-<line type="break"/>
 <line tab="1"/>Tausend Dank für Ihre beyden Briefe die mir als eine wahre Herzstärkung – jetzt erst von Schlosser zugekommen sind.
 <line type="empty"/>
 <line tab="5"/>Wie Freundinn fühlen Sie die Wunde
@@ -4988,67 +4980,51 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="5"/>Und mit ihm Himmelsfreuden sandte
 <line type="empty"/>
 <line tab="1"/>Ich muß abbrechen weil die Post eilt. Mein Lustspiel wird eine Weile ruhen müssen, bis ich wieder lustiger bin, denn ach wir armen Phantasten können uns so wenig selber Gesetze vorschreiben als sie von andern annehmen. – Erhalten Sie nur, ich flehe, die Gesellschaft in guter Laune, bis mir auch da etwas zukommt.
-<line type="empty"/>
 <line tab="1"/>Herr v. Hohenthal wird, hoffentlich nicht versäumt haben, Ihnen seine Aufwartung zu machen. Er kränkelt zu viel, als daß er wagen dürfte in der Hitze nach Welschland zu gehen. Tausend Empfehlungen von Ihren hiesigen Freunden insonderheit Lavater.
-<line type="empty" />
-<line type="break" />Die ich Ihrer theuresten Familie gleichfalls von mir zu versichern bitte.
+<line tab="1"/>Die ich Ihrer theuresten Familie gleichfalls von mir zu versichern bitte.
 </letterText> 
 
-<letterText letter="298">
+<letterText letter="298"><page index="1"/>
 <line tab="1"/>Ich sollte freylich Ihre Briefe noch unbeantwortet lassen und (wie es meine löbliche Gewohnheit sonst ist) so lange unbeantwortet lassen, bis ich mich Ihnen und Ihrer Frau Gemalinn wieder mit Ehren weisen könnte, so aber möchten Sie denken, ich wäre schon auf meiner dritten Schweitzerreise und da ich doch würklich noch in Zürich bin, kann ich mit meinem Gewissen nicht fertig werden, Ihnen den Dahk den Ihnen unter einer Menge Zerstreuungen mein Herz für Ihre Briefe und die Bekanntschaft mit unsrer zweyten Aktrisse hatte, nicht weiß auf schwarz (oder schwarz auf weiß vielmehr) hinzusetzen. Ich habe zwar zwey schöne Stunden bey unserm Füeßli an ihrer Seite gesessen, da aber die Gesellschaft zu groß war, bey weitem nicht in die Beziehung mit ihr kommen können, in der billiger Weise der Lügner mit den Personen stehen sollte, die freundschaftlich genug sind seinen Lügen den Werth der Wahrheit zu geben. Auf den Winter hoffe ich diese Bekanntschaft besser anzubauen und wie glücklich würde ich mich schätzen, Ihnen, freylich nur mit dem Vorbehalt daß Sie selbst und Ihre Freunde dabei das beste thun! ein Paar düstere Abendstunden wegscherzen zu können.
-<page index="3"/>
-<line type="empty"/>
+<page index="2"/>
 <line tab="1"/>Wie beschämt ich bin Ihnen eine Mühe die für mich so vortheilhaft gewesen wäre, umsonst gemacht zu haben, mag Gott der DonQuixotischen Laune verzeyhen in der Hohenthal und ich unsere Reise nach Italien entwarfen. Indessen bitte mir diesen Brief nebst dem Codizill wenn ich dessen würdig, als ein Denkmal Ihrer Gesinnungen für mich aufzubewahren bis ich nach Basel komme.
-<line type="empty"/>
 <line tab="1"/>Herr Usteri hat mir das Compliment ausgerichtet und mich nicht wenig glücklich damit gemacht. Sagen Sie Ihrer Frau Gemalinn daß Mad. Im Thurm aus Schafhausen, ein Herz das ihrer Freundschaft würdig ist, mit nicht weniger Stolz mir einen Brief von Frau Gerichtsherr Sarasi gewiesen, in welchem ich um meiner Poetischen Eitelkeit die uns doch zur Begeisterung oft so noth thut wie das Wasser einem Mühlrade, den höchsten Schwung zu geben, mit Triumpf meinen Namen fand.
 <page index="3"/>
-<line type="empty"/>
 <line tab="1"/>Eine liebe Patientin die mir noch jetzt so oft von den allzukurzen Augenblicken erzehlt wo sie die Bekanntschaft Ihrer Lykoris gemacht, hat ihre neue Freundinn aus Schafhausen so sehr an ihr Krankenlager gefesselt daß sie in Zürich keinen Augenblick finden konnte nach Basel zu schreiben und sich dieses schmeichelhafte Vergnügen auf Schafhausen vorbehielt
-<line type="empty"/>
 <line tab="1"/>Uebrigens ist die hohe See der politischen Angelegenheiten jetzt in Zürich ein wenig unruhig, der Tod des Statthalter Eschers und die Unzufriedenheit der Bürger mit der langen Verzögerung der Berathschlagungen des Magistrats mit ihnen über das Geschäft zu Solothurn, haben auf dem Rathhause in den Tempeln und in der Stadt manche Bewegungen verursacht, die mir als einem auflauernden Zuschauer und vielleicht einstigen epischen Dichter über Schweitz und Schweitzer<ul>angelegenheiten,</ul> ausserordentlich interessant waren.
-<line type="empty"/>
 <line tab="1"/>Leben Sie glücklich und empfehlen mich Ihrer theuersten Frau Gemalinn als Ihren in höchster Eil ergebensten
+<line type="empty"/>
+<line type="empty"/>
 <line type="break"/>Zürich. d. 16ten Septbr. 1777.
-<line type="break"/>Tausend Empfehlungen von Lavatern
 <line type="break"/><align pos="right">Lenz</align>
+<line type="break"/>Tausend Empfehlungen von Lavatern
 </letterText> 
 
-<letterText letter="299">
+<letterText letter="299"><page index="1"/>
 <line tab="1"/>Ist es nicht eine Unglück theuerste Frau, daß ich Ihnen in einer Todesangst von Eile schreiben muß, da ich den bösen Füeßli nicht eher als eine kleine Weile vor Abgang der Post antreffen konnte. Die gegenwärtigen Bürgerlichen Unruhen in denen er eine Hauptrolle spielt, da er mit in der besonderen Commission gesessen, haben ihn, wie er sagt, ganz untüchtig gemacht an Sie zu schreiben, ich soll das gut machen, aber wie, da ich für eigene Sünden genug zu büssen habe. Künftige Woche setzt er sich hin, für Sie zu arbeiten und ich – stecke künftige Woche vielleicht in Appenzell. Wer wird mein Advokat seyn, daß ich solange anstehe, Ihnen meine Schuld abzutragen. Niemand als Ihr Herz das wenn es auch nicht sieht woran es liegt, doch glaubt daß es an zwingenden Hindernissen und weder an meiner Bereitwilligkeit noch an meinem Ernste gelegen. Ich bin ein Fremder, wie Schlosser sagt, unstet und flüchtig und habe soviele die mit mir unzufrieden sind. – Wenn Sie doch diesem guten unglücklichen durch einen Gruß das Herz ein wenig erleichtern könnten. Er kommt aufs Frühjahr in die Schweitz
 <page index="2"/>
-<line type="empty"/>
 <line tab="1"/>Frau Lavatern hat eine schlimme Woche gehabt, sehr gerührt von Ihrer Theilnehmung grüßt Sie Millionenmahl.
-<line type="empty"/>
 <line tab="1"/>Ich habe wahrlich keinen Augenblick länger, darf ich – doch alles das bleibt bis auf den nächsten Brief den ich Ihnen in einer glücklichem Lage meines Kopfes und Herzens schreiben werde. Hier ist Hn. von Hallers Silhouette statt der Meinigen, die wie alle meine Schulden noch folgen soll.
-<line type="empty" />
-<line type="break" />Tausend Empfehlungen Ihren Kleinen und Herrn und Me. Hagenbach.
-<line type="empty"/>
+<line tab="1"/>Tausend Empfehlungen Ihren Kleinen und Herrn und Me. Hagenbach.
 <line tab="1"/>Der Magen? Ey seit wenn. Im nächsten Briefe folgt ein Rezept dafür und eine Vorschrift die Linien Ihrer Hand zu studiren.
 <line type="empty" />
 <line type="break" /><align pos="right">Lenz</align>
 <line type="break"/>Zürich. D. 28sten Sptbr. 1777.
 </letterText> 
 
-<letterText letter="300"><align pos="center">Hochedelgebohrner Herr
+<letterText letter="300"><page index="1"/><align pos="center">Hochedelgebohrner Herr
 <line type="break"/>Insonders hochzuehrender Herr Rathsschreiber</align>
 <line type="empty"/>
 <line type="empty"/>
-<line type="empty"/>
 <line tab="1"/>Nur zu lange habe ichs anstehen lassen Ihnen mein verehrungswürdiger Freund und Gönner für alle Ihre mir in und ausser Basel erzeigten Gütigkeiten schriftlich meinen verbindlichsten Dank abzustatten, da ich mir diese Genugthuung bey meiner Unschlüssigkeit in Zürich zu bleiben, immer Persöhnlich vorbehielt. Die Personen an die Sie so gütig waren mir und Hn v. Hohenthal Adressen mitzugeben, der bey seiner Rückreise seine Aufwartung zu machen nicht ermangelt haben wird, verdienen in der That alle Aufmerksamkeit und Achtung der Reisenden, besonders Herr Tscharner in Rolle, von dem wir viele Gegenempfehlungen zu versichern haben. Herr Schmidt in Nion ist vollkommen so, wie Sie ihn beschrieben, doch hat sein lichtbraunes Auge bey all seiner Schüchternheit einen weiten Blick.
-<line type="break"/>
 <page index="2"/>
 <line tab="1"/>Mein gegenwärtiger Aufenthalt in Zürich wird mir täglich interessanter und ich werde mich genöthigt sehen ihn zu verlängern, wenn ich alle die Vortheile daraus ziehen will, die er mir in mehr als einer Rücksicht anbietet. Die Nachbarschaft der kleinen Cantons macht ihn mir, solange die Witterung noch günstig, doppelt so wichtig und die Persöhnlichen Bekanntschaften die sich hier wegen mehrerer Zerstreuungen langsamer machen, sind desto anziehender, je länger man sie kultivirt. Die Streittigkeiten unter den Gelehrten sind ein blosser Nebel den unbehutsame Reisende durch herausdämpfung ihrer Eigenliebe um sie herumgezogen und der verschwinden würde so bald jeder sein ganzes Verdienst kennte. Das meiste aber wie gesagt, in diesem Zauber- und Schwindeltrank ist von Fremden hineingemischt, denen ich bey Gelegenheit eine kleine Lektion zu geben hoffe, damit sie uns andern die weniger Extrapost reisen, das Spiel nicht verderben
-<line type="break"/>
 <page index="3"/>
 <line tab="1"/>Herr Brydone soll, wie mir Herr Geßner sagte, in Lausanne an Briefen über die Schweitz schreiben, ohnerachtet er in Zürich nur einige Tage gewesen. Vielleicht wissen Sie mehr davon. Der Reichthum seines Witzes und Phantasie kann uns freilich für vieles wahre entschädigen, das indessen doch auch seinen anderweitigen Werth behält.
-<line type="empty"/>
 <line tab="1"/>Von den hiesigen Unruhen werden Sie anderweitige Nachrichten haben, die ein Fremder nie mit der Gründlichkeit geben kann. Soviel dünkt mich, daß ein Kopf doppelt so wichtig seyn muß, der <ul>Plane</ul> in Republicken ausführen will und dieser Kopf dünkt mich ist an der Spitze der Züricherregierung, auf dessen persöhnliche Bekanntschaft die ich in dieser Woche noch machen soll, ich mich zum voraus wo nicht Physiognomisch, doch Physiognomik ahndend freue.
-<line type="empty"/>
 <line tab="1"/>Daß Herr Lavater in einem Allmanach von Prof. Lichtenberg aus London angegriffen worden, wird Ihnen vielleicht baldigst bekannt werden. Desto besser fürs Publikum das mit seiner Gegenantwort hoffe ich zufrieden seyn wird. – Er hat neulich ein trefliches Christusgemälde von <ul>West</ul> aus England zum Präsent erhalten, über die
 <page index="4"/>Worte: Wenn ihr nicht werdet wie die Kinder etc. Ich habe mich daran nicht satt sehen können, in den nächsten Band der Physiog. kommt ein Stich davon
-<line type="empty"/>
 <line tab="1"/>Das wären unsre hiesigen Neuigkeiten, erlauben Sie mir daß ich mit einer Bitte beschliesse. Hr. Geßner hat mir gesagt, es existirten noch eine ganze Sammlung von Briefen des seel. Kleist, die durch einen Kaufmann in Ihre Hände gekommen in Ihrer Verwahrung. Nicht um die Beziehungen die diese Briefe auf die Schweitz haben können, sondern nur um des Persöhnlichen willen, das von dem Charakter und Meinungen dieses mir aus hundert Ursachen doppelt wichtigen Dichters darinne durchscheinen muß, wünschte ich sie zu sehen und zu studiren. Ich wollte diese Neugier gern bis Basel zähmen, wenn nicht andere dringende Ursachen mir die Ansicht <ul>dieser Briefe in Zürich</ul> wünschbar machten. Ich verspräche Ihnen wenn Sie es verlangten die heiligste Verschwiegenheit und Geheimniß mit diesen Briefen an Eydes statt. Er hat sich hier eine Zeitlang aufgehalten, wie er gesehen hat, wünschte ich zu sehen und das gleichfalls aus Ursachen die ich Ihnen nur erst in der Zukunft besser erklären kann.
-<line type="empty"/>
 <line tab="1"/>Herr Gerichtsherr Sarasi wird die Gütigkeit haben diese Briefe wenn Sie sie mir auf einige Wochen anvertrauen wollten, in Bürgschaft zu nehmen. Nach gehorsamsten Empfehlungen an die Frau Gemalinn und verehrungswürdiger Familie verharre
 <line type="empty" />
 <line type="break" /><align pos="right">Dero ergebenster Diener Lenz.</align>
