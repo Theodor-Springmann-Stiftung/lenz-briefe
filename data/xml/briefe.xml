@@ -5222,23 +5222,19 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Pfeffel war vorgestern bey mir. Der liebe Mann war äusserst niedergeschlagen. Es ist ihm der junge Stocken gestorben den Er von Schinznach mitnahm.
 </letterText> 
 
-<letterText letter="311"><align pos="right">Waltersbach. D. 22sten Jenner 78.</align>
+<letterText letter="311"><page index="1"/><align pos="right">Waltersbach. D. 22sten Jenner 78.</align>
 <line type="empty"/>
 <line type="empty"/>
 <line tab="1"/>Gott mit Dir Theurer! und dem guten Kinde, das Dir diesen Brief giebt. Ich darf Dir nichts weiter über ihn sagen, da Du ihn selber siehst, nur hätt ich um Deines Grusses willen gewünscht, daß Deine Reise nach Strasburg Dich seitab ins Steihntal geführt hätte. Sehr begierig wär ich, Dein Urtheil über verschiedene der Silhouetten zu hören, die er Dir mitbringen wird, die aber wie alle Schattenrisse so unendlich verschieden von den Originalen sind. Wenn Dich Dein Genius hierher versetzen wollte, würdest Du all das fehlende oder verkritzelte durch Deinen Blick ergänzen.
-<line type="empty"/>
 <line tab="1"/>Warst Du es nicht Lieber! der mir erzehlte, daß Apostel Johannes, in den Zwischenstunden da er das Evangelium schrieb, weiter nichts that, als mit seinem Sperber zu spielen. Und dabey gesagt ein Bogen der immer gleich gespannt bleibt, verliert zuletzt seine Schnellkraft. Woher hattest Du die Anekdote, ich bitte Dich.
-<line type="empty"/>
-<line tab="1"/>
-<sidenote pos="left" page="1" annotation="Am linken Rand, vertikal">Tausend Grüsse Deinem edlen Weibe und Kleinen und viel Lebensgenuß und Abstracktion von tummen Zeuge das gar nicht die Ehre verdient, Dir einen sauren Augenblick zu machen.</sidenote>
-<line type="empty" />
-<line type="break" />Grüß auch die guten Allerleys von mir. Und schick mir ein paar Zeichen Deiner Liebe.
-<line type="empty" />
-<line type="break" /><align pos="right">Lenz.</align>
+<sidenote pos="left" page="1" annotation="Am linken Rand, vertikal">Tausend Grüsse Deinem edlen Weibe und Kleinen und viel Lebensgenuß und Abstracktion von tummen Zeuge das gar nicht die Ehre verdient, Dir einen sauren Augenblick zu machen.
+<line tab="1"/>Grüß auch die guten Allerleys von mir. Und schick mir ein paar Zeichen Deiner Liebe.
+<line type="break" /><align pos="right">Lenz.</align></sidenote>
 </letterText> 
 
-<letterText letter="312"><note>von Schlosser geschrieben</note><!-- Kann diese Notiz über <hand> gelöst werden? Wieder eine editorische Anmerkung über eine editorische Anmerkung -->
-<line type="break"/><hand ref="18"><align pos="center">P. T.</align>
+<letterText letter="312">
+    <align pos="center"><note>Schlossers Hand:</note></align>
+<line type="break"/><align pos="center">P. T.</align>
 <line type="break"/>
 <line tab="1"/>Ihnen unbekandt war ich lange Ihr Freund, durch Ihren Herrn Sohn. Drey Jahre sinds, daß ich diesen kenne, und, ob gleich wir nur selten beysammen seyn konnten; so waren wir doch Freunde. Ich ehrte sein Herz und seine Talente und liebte ihn darum; aber ich übersahe ihm seine Fehler nie, am wenigsten den, daß er sich so weit von Ihnen entfernte. Er fühlte sein Herz noch nicht rein und kindl. genung, meinen Rath zu folgen. Vor einiger Zeit schlug ihn Gott mit einer harten Krankheit. Mit dieser kehrte sein Erinnern an Ihre väterl. Treue und alle kindl. Gefühle zurück. Er war fest entschlossen, zurück zu kehren zu Ihnen, sich in Ihre Arme zu werfen und durch die Tugenden und den Werth seines männlichen Alters, Ihr Greisen-Alter glückl. zu machen. In diesem Vorsatz kam er zu mir. Ich bestärkte ihn darin und seine Abreise war auf gestern festgesetzt. Gott ließ aber ihm und uns allen zum Glück, am vorigen Dienstage seine Krankheit in ein hitziges Fieber ausbrechen, seegnete jedoch dabey unsere geringe Sorgfalt, so, daß er auf dem besten Wege der Beßerung ist. Nun bittet mich sein Herz, voll der wärmsten kindlichsten Liebe, Ihnen das zu schreiben. Er wünscht u. hofft, daß Sie an seinen Leiden herzliches Theil nehmen werden und versichert Sie nicht allein seiner kindlichen Liebe und der wahren Reue über seine Entfernung von Ihnen und seine Fehler, sondern auch von dem festen Entschluß, so bald Gott ihm die Kräfte giebt, wieder in Ihre Arme zu kehren. Ich, der ich nur zu gut fühle, daß, wenn der Mensch auf Erden glückl. seyn soll, es nur durch Liebe von, oder zu, seinen Kindern seyn kann, ich freue mich, Ihnen dieses zu schreiben, und bitte Sie inständig, mir bald einen Brief an Ihren mir immer lieben Sohn zu schicken. Sie können ihn am besten in seinen Leiden, die seine Seele selbst durchdringen, helfen und aufrichten und Gott wird Sie dafür mit dem Trost eines wohldurchlebten Alters und der größten Freude an allen Ihren Kindern segnen. Trauen Sie meiner Versicherung die wahre Hochachtung, mit welcher ich mich nenne
 <line type="empty" />
@@ -5246,41 +5242,35 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>ergebenster: Schloßer
 <line type="break"/>Markgräflich badischer Hofrath und Oberamtmann der Markgraffschaft Hochberg.</align>
 <line type="empty" />
-<line type="break" />Emmendingen in Breisgau bey Freyburg d. 9 Märtz 1778.</hand>
+<line type="break" />Emmendingen in Breisgau bey Freyburg d. 9 Märtz 1778.
 <line type="empty" />
-<line type="break" /><note>auf der letzten Seite Lenz’ Hand</note><!-- Welcher Lenz? Jakob Lenz -->
-<line type="break"/><hand ref="82">Vater! ich habe gesündigt im Himmel und vor Dir und bin fort nicht werth, daß ich Dein Kind heiße.
+<line type="break" /><align pos="center"><note>Lenz’ Hand:</note></align>
+<line type="break"/>Vater! ich habe gesündigt im Himmel und vor Dir und bin fort nicht werth, daß ich Dein Kind heiße.
+<line type="break" /><align pos="right">Jacob. Lenz.</align>
 <line type="empty" />
-<line type="break" /><align pos="right">Jacob. Lenz.</align></hand>
-<line type="empty" />
-<line type="break" /><note>darunter Schlossers Hand</note>
-<line type="break"/>
-<line tab="1"/><hand ref="18">Sie sehen die Schwermuth Ihres Sohnes. Ich bitte Sie, trösten Sie ihn bald. Wie ich höre, ist ein andrer Sohn von Ihnen in Leipzig, ich wollte, der käme und holte ihn ab. Wo nicht, so werde ich die Anstalt so machen, daß er sicher nach Leipzig kommt, so bald er gesund ist. Hoffen Sie das beste und seyn Sie Vater. Er ist äußerst bekümmert und braucht Aufrichtung. Gott wird alles seegnen. Schreiben Sie nur bald.</hand>
-<line type="empty" />
-<line type="break" />Schloßer.
+<line type="break" /> <align pos="center"><note>Schlossers Hand:</note></align>
+<line tab="1"/>Sie sehen die Schwermuth Ihres Sohnes. Ich bitte Sie, trösten Sie ihn bald. Wie ich höre, ist ein andrer Sohn von Ihnen in Leipzig, ich wollte, der käme und holte ihn ab. Wo nicht, so werde ich die Anstalt so machen, daß er sicher nach Leipzig kommt, so bald er gesund ist. Hoffen Sie das beste und seyn Sie Vater. Er ist äußerst bekümmert und braucht Aufrichtung. Gott wird alles seegnen. Schreiben Sie nur bald.
+<line type="break" /><align pos="right">Schloßer.</align>
 </letterText> 
 
-<letterText letter="313">
+<letterText letter="313"><page index="1"/>
 <line tab="1"/>Lieber Herr Sarasi es freut mich daß ich Ihnen wieder schreiben kann, ich habe eine grosse Bitte an Sie die Sie mir nicht abschlagen werden, daß Sie so gütig sind und meinem bestem Freunde und Cameraden dem Herrn Conrad Süß doch einen Meister verschaffen, wenn er ausser der Zeit nach Basel kommt, weil jetzt die Handwerksburschen stark gehen und ich den Herrn Hofrath bitten will, daß er seinem Vater zureden soll ihn noch länger als Johannis bey sich zu behalten, damit ich die Schusterey bey ihm fortlernen kann die ich angefangen habe und er ohnedem bey seinem Herrn Vater und mir viel versäumt. Es wird Ihnen das nicht schwer fallen, da er gewiß ein guter und fleissiger Arbeiter und sonst wohlerzogenes Kind ist und Sie werden mich dadurch aus vieler Noth retten, die ich Ihnen nicht sagen kann Auszugehen ist mir noch nicht gesund und was würd ich anfangen, wenn er auch fortgienge da ich gewiß wieder in meine vorige Krankheit verfallen muß. Hier bin ich dem Herrn Hofrath gegen über und ist mir so wohl bis es besser mit mir wird. Wenn es nur einige Wochen nach Johanni seyn könnte, melden Sie mir doch ob sich dort keine Meister finden die auf
 <page index="2"/>die Zeit einen Gesellen brauchten. Wenn Sie nur wollten probieren sich von ihm Schuhe machen zu lassen, ich bin versichert, daß er sie gut machen wird, besonders wenn er einige Zeit in Basel gewesen und weiß wie Sie sie gern tragen. Fleissig ist er gewiß, davon bin ich Zeuge und er arbeitet recht nett besonders wenn er sich angreift. Viel tausend Grüsse an Ihre Frau Gemalinn und an den Herrn Hofmeister und an die Kleinen. Ich bin bis ans Ende
 <line type="empty" />
 <line type="break" /><align pos="right">Ihr
+<line type="empty" />
 <line type="empty" />
 <line type="break" />gehorsamster Freund und Diener Lenz.</align>
 <line type="empty"/>
 <line tab="1"/>Er soll jetzt das erste mal auf die Wanderschaft und ich bin jetzt bey seinen Eltern ein viertel Jahr lang wie das Kind im Hause gewesen. Er ist mein Schlafkamerad und wir sitzen den ganzen Tag zusammen. Thun Sie es doch bester Herr Sarasi, lieber Herr Sarasi es wird Sie nicht gereuen. – Emmedingen, einige Tage vor Johanni, 1778. Ich könnte mich gewiß nicht wieder so an einen anderen gewöhnen, denn er ist mir wie ein Bruder.
 </letterText> 
 
-<letterText letter="314">
+<letterText letter="314"><page index="1"/>
 <line tab="1"/>Lieber Herr Sarasi, ich habe ein grosses Anliegen ich weiß, daß Sie meine Bitte erhören werden. Es betrift meinen Bruder Conrad, der für mich auf der Wanderschaft in der Fremde ist: daß Sie ihm dazu verhelfen, daß er für Sie arbeiten kann. Er war schon fort als ich Ihr werthes Schreiben erhielt und seine Abreise war so plötzlich und unvermuthet, daß ich ihm kein Briefgen an Sie mitgeben konnte. Seitdem hab ich immer auf Nachricht von ihm gewartet, bis er endlich schrieb, daß er in Basel keine Arbeit bekommen sondern in Arlesheim, einem katholischen Ort anderthalb Stunden von Basel. Nun hab ich kein Anliegen auf der Welt das mich mehr bekümmert, als wenn ich nur so glücklich seyn könnte zu hören, daß er bey Ihrem Schuhmacher wäre und Ihnen arbeiten thäte, das würde mich in kurzer Zeit gesund machen. Erzeigen Sie mir diese Freundschaft und Güte, die Freude und der Trost den ich davon haben werde wird unaussprechlich seyn, denn das Wasser allein hilft mir nicht, wenn meine Freunde nicht mit wollen dazu beytragen. Ich kann Ihnen das nicht so beschreiben
 <page index="2"/>warum ich so ernstlich darum bitte, er ist auf Mannsschuhe besprochen und ich hoffe, wenn er nur erst Ihre Gedanken weiß, wie Sies gern tragen, Sie werden gewiß mit seiner Arbeit zufrieden seyn, wenn auch das erste Paar nicht gleich gerathen sollte. Herr Süß hat mir versprochen, so bald Sie ihn unterbringen, soll er seinem Meister in Arlesheim aufkündigen und ich bin versichert er wird es aus Liebe für mich thun und aus Liebe zu sich selber, welches einerley ist, denn ich werde keine ruhige Stunde haben, wenn er an <ul>dem Katholischen Ort bleibt</ul> und wenn er jetzt schon weiter wandern sollte in <ul>der grossen Hitze</ul> das würde mir auch keine Ruhe lassen.
-<line type="empty"/>
 <line tab="1"/>Es freut mich recht sehr, daß Sie wieder einen Hofmeister haben und Ihre Frau Gemalinn sich geseegnetes Leibes befindet, Gott wolle ihr eine glückliche Entbindung schenken, daß Ihre Freude vollkommen werde und Sie auf dieser Welt nichts mehr zu wünschen haben mögen. Dann werde ich auch gesund werden und wenn der Conrad für Sie arbeitet.
-<line type="break"/>
 <page index="3"/>
-<line type="break"/>
 <line tab="1"/>Weiter weiß ich nichts zu schreiben, als ich gehe alle Morgen mit meinem <ul>lieben Herrn Süß</ul> spatzieren und bekomme auch alle Tage den Herrn Hofrath zu sehen. Nun fehlt mir nichts als daß alles so bleibt und Gott meine Wünsche erhört und Sie meine Bitte erfüllen, daß der arme Conrad wieder zu seinen Glaubensgenossen kommt. Und ich verharre unaufhörlich und zu allen Zeiten
-<line type="empty" />
 <line type="break" /><align pos="center">Ihr</align>
 <line type="break"/><align pos="right">bereitwilligster Diener und gehorsamster Freund
 <line type="break"/>J. M. R. Lenz.</align>
@@ -5293,9 +5283,8 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>Gerichtsherrn in Basel.</address>
 </letterText> 
 
-<letterText letter="315">
+<letterText letter="315"><page index="1"/>
 <line tab="1"/>Ich kann in der Eile Ihnen theurester Herr und Gönner nichts schreiben als hunderttausendfältigen Dank für die Freundschaft und Güte, die Sie für mich und meinen lieben Conrad haben, an dem ich mir die Freyheit nehme einige Zeilen mit beyzulegen, und Ihnen zu melden, daß ich jetzt nach Wiswyl herausreisen soll, wo ich brav werde Bewegung machen können mit der Jagd und Feldarbeit. Ich bin so voller Freude über soviel glückliche Sachen, die alle nach meines Herzens Wunsch ausgeschlagen sind, daß ich für Freuden nichts rechts zu sagen weiß als Sie zu bitten, daß Sie doch so gütig sind und Ihr Versprechen erfüllen, dem ehrlichen Konrad Arbeit für <dul>Sie</dul> zu geben, weil es mir nicht genug ist wenn er bey Ihrem Meister Schuhmacher ist und er nicht auch für Sie arbeitet. Verzeyhen Sie meine Dreistigkeit, ich bitte doch um Nachrichten von Ihnen und Ihrer Familie auch nach Wiswyl, zwar ist der Herr Hofrath jetzt auch nach Frankfurt verreist, der Conrad wird mir Ihr Briefgen schon durch seinen Vater zuschicken ich werde wohl einige Zeit da bleiben. Hunderttausend Grüsse Ihrer Frau Gemahlinn und sämtlichen Angehörigen, auch dem Herrn Professor Breitinger.
-<line type="empty" />
 <line type="break" /><align pos="right">Ihr
 <line type="break"/>gehorsamster Freund und Diener
 <line type="break"/>Lenz.</align>
