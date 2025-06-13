@@ -4067,16 +4067,16 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Von einem armen Reisenden der sonst nichts zu geben hat.
 </letterText> 
 
-<letterText letter="261"><aq>
+<letterText letter="261"><page index="1"/><aq>
 <line tab="1"/>Votre Altesse dans sa derniere a parú vouloir m’exiler de Weymar pour un plus long tems encore. J’ ai obei. Je la remercie de la
 <page index="2"/>lettre dont Elle a daignée m’adoucir cette peine. J’y vois des lueurs d’esperance qu’Elle ne quittera pas un projet dont l’ execution fera le plus sensible charme de ma vie. Non obstant les doutes que Mr. de Ein-
 <page index="3"/>siedel m’ ait exites sur ce sujet; en regardant l’ adorable</aq>
 </letterText> 
 
-<letterText letter="262"><note>am linken oberen Rand eine Kalkulation, spiegelverkehrt</note>
-<line type="empty"/>
+<letterText letter="262"><page index="1"/>
 <line tab="1"/>Ich danke Ihnen mein verehrungswürdiger Freund und Gönner für die unangenehme Bemühung die Sie meinethalben übernommen und versichere daß mir eine Ordre wie die auch wenn ich sie verdienet durch die Hand die sie mir überbrachte, versüßt worden wäre. Da ich aber nach meiner Ueberzeugung erst gehört werden müßte, ehe man mich verdammte und meine Ehre die mir lieber als tausend Leben
 <page index="2"/>ist, mich durch Annehmung dessen was Sie mir von unbekannter Hand hinzugelegt eines mir unbewußten Verbrechens schuldig zu bekennen, nimmermehr erlauben wird, so verzeyhen Sie daß ich diese beygefügte Gnade nicht annehmen sondern um Gerechtigkeit bitten darf. Es ist nicht seit heute, daß
+<align pos="center"><note>am linken oberen Rand eine Kalkulation, spiegelverkehrt</note></align>
 <page index="3"/>
 <line type="empty" />
 <line type="break" /><tl></tl>
@@ -4087,33 +4087,28 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>Um G<tl></tl>
 <line type="break"/>Und Ge<tl></tl>
 <line type="break"/>Mit dies<tl></tl>
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="3" annotation="am linken Rand, vertikal">
-<line type="break"/>
 <line tab="1"/>Hier ein kleines Pasquill das ich Goethen zuzustellen bitte, mit der Bitte, es von Anfang – bis zu Ende zu lesen.</sidenote>
 </letterText> 
 
-<letterText letter="263">
+<letterText letter="263"><page index="1"/>
 <line tab="1"/>Ich habe Dir nichts zu sagen, als daß Kaufmann vorigen Posttag an mich geschrieben, wie er sehr wünschte, Dich nach der Schweiz mitnehmen zu können. Nach Dessau aber sollt Du beileib nicht kommen, sondern irgendwo in der Nachbarschaft hier, (etwa in Erfurt), seine Ankunft <del>erfahren</del> erwarten. Er ist auf dem Wege oder kommt bald. Hüt Dich aber, daß Du nicht nach Dessau gehst. Da (in Erfurt) sehe ich Dich vielleicht mit Kaufm. wieder. Sudle und laure aber nicht, sondern geh. Jetzt ist an Bernhard zu denken.
 <line type="empty" />
 <line type="break" /><align pos="right">H.</align>
 <page index="2"/>
-<line type="break"/><note>Zeichnung Bäume und Weggabelung</note>
+<line type="break"/><align pos="center"><note>Zeichnung von Bäumen und einer Weggabelung</note></align>
 </letterText> 
 
-<letterText letter="264">
+<letterText letter="264"><page index="1"/>
 <line tab="1"/>Lieber Herr Lenz ich habe weiter nichts zu erinnern als den Degen. Besinnen Sie sich doch es wär doch dumm wenns damit gehen sollte wie mit denen Coloschen. Und dann hat letzhin der Hr. Geh. Leg Rath nach der Laube gefragt ich weis nicht warum, wollts Ihnen aber doch sagen.
-<line type="empty"/>
 <line tab="1"/>Am vergangenen Donnerstag sind die Mitschuldigen gespielt worden. Die Rollen waren so ausgetheilt: <ul>Alzest.</ul> Hr. G.L.R. <ul>Söller.</ul> Bertuch <ul>Wirth</ul> Musäus. <ul>Sophie.</ul> Neuhaus. <ul>Keller.</ul> Kozebue. Es soll wieder auserordentlich schön gewesen seyn.
 <line type="break"/><align pos="right">geh. Diener
 <line type="break"/>Seidel.</align>
 <line type="break"/>D. 30ten Nov. 1776.
 </letterText> 
 
-<letterText letter="265">
+<letterText letter="265"><page index="1"/>
 <line tab="1"/>Lavater! mein Herz zerspringt mir wenn ich mir einbilde, daß meine Weigerung zu Dir zu kommen, von Dir mißverstanden werden könnte. Wenn auch die heiligste Zerstreuung nicht immer Zerstreuung wäre, so bald man auf ein Ziel zugeht; so kannst Du Dir vorstellen wo mich mein Herz wohl zuerst hinführen würde, wenn es allein zu wählen hätte. Keine Alpen und kein Eis sollten mich schröcken an Deinen Busen zu fallen Gottesmann und ein Grönland zwischen uns würde aufhören kalt zu seyn, sobald ichs zu Fuß in der Hofnung durchliefe am Ende der Wallfahrth Dich zu finden. Ich wünschte Du schriebst keine Physiognomick, Du wärest ein unbekannter vergeßner vereinzelter Mann und ich dürfte mit einer ganzen Welt durch Wüsten zu Dir eilen und ausrufen Hier! –
-<line type="empty"/>
 <line tab="1"/>So aber legt meine Einzelheit kein Gewicht in Deine Schaale und unser stilles Vergnügen, so geschmückt es brautgleich mir entgegentritt ist noch zu rein für ein Auge das – Dich wie Du bist – jetzt nicht ertragen, jetzt entheiligen würde. Für ein Auge das Gegenstände sich ganz zugeeignet haben, die von Dir und Deinem Wirkungskreise so verschieden als der Himmel von der Erde sind. Lebe wohl und zürne nicht – und liebe mich dennoch – und laß Deinen Seegen mich verfolgen. Aus dem nächsten Ort wo ich <ul>stehe</ul> schreib ich Dir und harre auf Deine Antwort Lavater! wie ein Liebhaber! nicht wie der herumirrende
 <line type="break"/><align pos="right">Lenz</align>
 </letterText> 
