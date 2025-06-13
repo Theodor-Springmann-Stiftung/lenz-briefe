@@ -4425,6 +4425,8 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="5"/>Die Grazien selbst Ihren Flug
 <line tab="5"/>und machten dem schnappenden Tänzer
 <line tab="5"/>Entzückender Schmerzen genug.</align> 
+<line type="empty"/>
+<line type="empty"/>
 <line tab="1"/>Empfehlen Sie mich den Neuvermählten und Ihrem Hn. Schwager gleichfalls und bereiten sich nur auf eine recht beschwerliche Gedächtnißarbeit.
 <line type="break"/><align pos="right">Lenz.</align>
 </letterText> 
@@ -4451,18 +4453,13 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break" /><hand ref="87"><aq>Mr Kittner Doit fl. 9. tz 3.</aq></hand></pe>
 </letterText> 
 
-<letterText letter="281">
+<letterText letter="281"><page index="1"/>
 <line tab="1"/>Darf ich Sie um Ihrent- um meinetwillen bitten, das über die launigten Dichter noch nicht in Ihr Musäum zu rücken. Unser Publikum hat noch keinen Sinn dazu und es könnte entsetzlich mißverstanden werden. Heben Sies auf bis Zeit und Gelegenheit Beobachtungen günstiger sind, die durchaus auf keinen einzelnen Fall dürfen gezogen werden und wo diesmal die Anwendung auf Wieland, auf dessen <ul>wenigste</ul> Sachen sie passen, unvermeidlich wäre.
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="1" annotation="am linken Rand, vertikal"></sidenote>Wenn dies ins Museum kommt, darf ich Ihnen nie wieder etwas zuschicken.
 <page index="2"/>
-<line type="empty"/>
 <line tab="1"/>Ich schwärme in der Schweitz, habe in Schinznach vier goldene Tage gelebt, in Zürich Basel und Schafhausen viel Liebe genossen. Sagen Sie Zimmermann, daß seiner als Grundleger der helvetischen Gesellschaft mit vieler Erbauung ist gedacht worden und daß er an Hn. Doktor Stuker, einem würdigen Menschen unter den Würdigen, einen warmen Freund hat. Daß der Landpr. bald auf einander folgt freut mich, überhaupt würden Sie wohlthun, Ihre Sachen nicht mehr so zu zertrennen, worüber man mir hie und da und von sicherer Hand viel Beschwerden geäußert hat. Natürlich ists daß drey Vierthel von dem Eindruck des
 <page index="3"/>Ganzen verloren gehen. Wär’ es möglich noch die zwo Hälften zu verbinden, würden Sie sehr wohlthun denn wenn ich die Strahlen eines Brennspiegels auseinanderwerfe, kann kein Flämmlein erfolgen. Leben Sie indeßen wohl und empfehlen mich Zimmermann und allen Edlen Ihrer Gegend.
-<line type="empty" />
 <line type="break" />D. 26sten May 1777.
-<line type="empty" />
 <line type="break" /><align pos="right">Lenz</align>
 <page index="4"/>
 <line type="break"/><address>Herrn
@@ -4472,16 +4469,12 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>in <ul>Hannover.</ul></address>
 </letterText> 
 
-<letterText letter="282">
+<letterText letter="282"><page index="1"/>
 <line tab="1"/>Hier theureste Freundinn die ersten zwey Scenen des ersten Akts. Ich sollte mich zu Tode schämen daß ich auf Ihren küssenswerthen Brief so eilfertig antworten muß und noch nicht mehr von unserm Stück mitsenden kann. Aber in der unglaublichen Zerstreuung in der ich bin, wundert es mich, daß ich noch das habe fertigen können. Glauben Sie aber nicht, daß das Stück so ernsthaft und traurig endigen wird, als es anfangt, denn sonst hätte ich alle Ursach zu glauben, daß es Ihnen Langeweile machen würde.
-<line type="empty"/>
 <line tab="1"/>Wenn Sie den Schluß recht lustig haben wollen so schreiben Sie mir wieder ein Brieflein kurz oder lang wies Ihnen gelegen ist, doch so, daß ich ihn in die wilden Alpengebirge bekommen kann in die ich mich jetzt zu vertieffen gedenke. Adressiren Sie ihn nur an Lavatern. Morgen früh reise ich ab. Als Ihr erster Brief an mich kam war ich in Schafhausen. Herr Schlosser. hat mir gar keine nähern Umstände von der Kindtauffe geschrieben und ich weiß nicht einmal daß ich Pate bin. So gehts mit den Männern, wenn Sie ihn sehen so schelten Sie ihn brav aus dafür.
 <page index="2"/>
-<line type="empty"/>
 <line tab="1"/>Ich bitte doch recht sehr mirs zu schreiben wenn Ihnen eine oder die andere Stelle in diesen ersten Scenen, weil die Fortsetzung fehlt, noch unverständlich ist. Ihr Mann kommt hier noch nicht vor, er macht den Wadrigan und es steht bey Ihnen wen Sie zum Belmont wählen wollen.
-<line type="empty"/>
 <line tab="1"/>Schreiben Sie mir doch recht viel Neues von Ihnen von Ihren Angehörigen und Freunden von Ihrem Klavier und von Ihrer Gedult beym auswendig lernen. Der Himmel wirds Ihnen alles wiedervergelten, der ohnedem auf Ihrer Seite ist.
-<line type="empty"/>
 <line tab="1"/>Ich also Ihr Vetter? Nun dabey soll’s bleiben liebe Cousine, bis ich Basler Titsch von Ihnen gelernt habe und Sie in der Sprache besser tituliren kann. Zürich d. 2ten Junius. 77.
 <line type="empty"/>
 <line type="empty" />
@@ -4489,7 +4482,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <page index="3"/>
 <line type="empty"/>
 <line tab="1"/>Der Schauplatz stellet die Allee eines kleinen Gartens vor, der überall mit Gebirgen eingeschlossen ist, auf denen man in einiger Entfernung Schlösser und Landhäuser entdeckt, die an dem Fusse derselben das Ufer eines in ihrer Mitte schlängelnden Flusses verschönern helfen. <align pos="center">
-<line tab="6"/>Sophie <insertion pos="top">Detmond</insertion> tritt auf, ländlich gekleidet</align>
+    <line type="break" /><line tab="6"/>Sophie <insertion pos="top">Detmond</insertion> tritt auf, ländlich gekleidet</align>
 <line tab="5"/>Hier wär’ es denn wo mir dein Blick das erstemal
 <line tab="5"/>Dein Mund o Wadrigan! die goldne Freiheit stahl
 <line tab="5"/>Hier schien ein jedes Wort dir Zung und Herz zu brechen
@@ -4630,7 +4623,6 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <page index="9"/>
 <line tab="6"/>Dritte Scene <align pos="center">Hackli zu den Vorigen.
 <line type="break"/>Hackli, Belmonten, der in der feurigsten Entzükung Sophiens Hand küßt, von hinten zu auf die Schultern schlagend.)</align>
-<line type="break"/>
 <line tab="5"/>So?
 <line tab="5"/>Das geht ja Extrapost. Glück zu! Bravissimo
 <line tab="5"/>Wie steht das Leben sonst? ists Reislein wohl bekommen
@@ -4647,29 +4639,28 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="5"/>Ha Mutter Mutter riefs (er präsentiert Belmont die Tobacksdose) Warhaftig – in der That! –
 </letterText> 
 
-<letterText letter="283">
+<letterText letter="283"><page index="1"/>
 <line tab="1"/>Mein Liebster Herr Lentz! Sollte allenfalls Herr Kaiser den nunmehr von Ihnen beschloßenen Tour nicht mitmachen <del>wollen</del>, oder Sie beyde Freunde noch einen dritten Gefehrten mitnehmen wollen, so bietet sich Herr <aq>Orell</aq> an, von dem ich Ihnen schon ein Wort geredt, u: der vermuthlich diesen Abend auf die gleiche Stunde, wo Sie, zu mir kommt. Wollten Sie hingegen den Tour lieber mit Hn Kaiser allein machen, so bitt ich um ein Paar Worte.
 <line type="break"/><align pos="center">T. á V.</align>
 <line type="break"/><align pos="right">Füßli.</align>
 </letterText> 
 
-<letterText letter="284">
+<letterText letter="284"><page index="1"/>
 <line tab="1"/>In höchster Eil Bester! Kann ich Ihnen Abends um 12 Uhr vor einer Abreise die Morgen um 4 schon vor sich gehen soll in die wilden Cantons – nur einige Scenen von unserm Stück schicken, aus denen Sie das Ganze unmöglich noch beurtheilen können. Die Rollen die hier sind macht Herr Iselin Ihre Frau und wer die <del>erste</del> <insertion pos="top">zweyte</insertion> Liebhaberrolle kriegt – die erste bekommen Sie und zwar erst im zweyten Akt, das Theater verwandelt sich dann in ein Zimmer
-<line type="empty"/>
 <line tab="1"/>Wie Ihr Brief mir wohlgethan mag Ihnen Herr Füeßli sagen. Ich wünschte Sie schickten mir oft eine so launichte Basler chronick Besonders jetzt auf die Alpen.
-<line type="empty"/>
 <line tab="1"/>Nach Bern komm ich sobald nicht. Wenn ich vom Gotthard wieder komme, welches in 14 Tagen aufs längste ist, sollen Sie mehr von unserem Spiel zu sehen bekommen. Unterdessen herzlich umarmt von
-<line type="empty" />
 <line type="break" /><align pos="center">Ihrem</align>
 <line type="break"/><align pos="right">Diener L.</align>
 <line type="empty"/>
 <line tab="1"/>Geben Sie die Rolle Ihrer Frau und sorgen Sie doch, daß sie allenmorgen etwas davon einnimmt, etwa wie Latwerge in Thée.
 </letterText> 
 
-<letterText letter="285">
+<letterText letter="285"><page index="1"/>
 <line tab="1"/>Lieber Lavater, lieber Lenz, lieber Pfenninger – unsre Hoffnung und Freude war umsonst. Mein armes Weib ist gestern gestorben! Ich kann euch die Geschichte ihres Leidens nicht erzäln! Es thut mir zu weh! Auf ein andermahl –
 <line type="break"/><align pos="right">Schlosser</align>
-<page index="2"/>An
+<page index="2"/>
+<line type="empty"/>
+<line type="break"/>An
 <line type="break"/>Herrn Pfarrer Lavater
 <line type="break"/>in Zürch 
 </letterText> 
