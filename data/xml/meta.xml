@@ -4779,7 +4779,7 @@
 
 		<letterDesc letter="316">
 			<sent>
-				<date notBefore="1778-08-01" notAfter="1778-08-12">Emmendingen, Wohl zwischen 1. und 12.
+				<date notBefore="1778-08-01" notAfter="1778-08-12">Emmendingen, wahrscheinlich zwischen 1. und 12.
 					August 1778</date>
 				<location ref="12" />
 				<person ref="1" />
@@ -4840,7 +4840,7 @@
 
 		<letterDesc letter="320">
 			<sent>
-				<date notBefore="1779-06-01" notAfter="1779-08-31">Wohl auf der Reise nach Livland, Sommer
+				<date notBefore="1779-06-01" notAfter="1779-08-31">Wahrscheinlich auf der Reise nach Livland, Sommer
 					1779</date>
 				<location ref="55" cert="low">vmtl.</location>
 				<person ref="1" />
