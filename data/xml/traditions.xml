@@ -2584,13 +2584,13 @@
 		
 		<letterTradition letter="355">
 			<app ref="4">
-				Zürich, Zentralbibliothek, FA Lav. Ms. 572, Nr. 26 (zeitgenössische Abschrift)
+				Zürich, Zentralbibliothek, FA Lav. Ms. 572, Nr. 26 (zeitgenössische Abschrift).
 			</app>
 		</letterTradition>
 		
 		<letterTradition letter="356">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 26
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 26.
 			</app>
 		</letterTradition>
 		
@@ -2602,13 +2602,13 @@
 		
 		<letterTradition letter="358">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 37
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 37.
 			</app>
 		</letterTradition>
 		
 		<letterTradition letter="359">
 			<app ref="4">
-				Berlin, Staatsbibliothek zu Berlin – Preußischer Kulturbesitz, NL Lenz, Bd. 2, (Nr. 235), Bl. 62–63
+				Berlin, Staatsbibliothek zu Berlin – Preußischer Kulturbesitz, NL Lenz, Bd. 2, (Nr. 235), Bl. 62–63.
 			</app>
 			<app ref="11">
 				<align pos="center">Mein Wohltäter!</align> <line type="empty"/><!-- Hier nicht zentriert? -->
@@ -2684,7 +2684,7 @@
 		
 		<letterTradition letter="360">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 47
+				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 47.
 			</app>
 		</letterTradition>
 		
