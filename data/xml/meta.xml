@@ -5120,7 +5120,7 @@
 				<location ref="1" />
 				<person ref="3" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -5135,7 +5135,7 @@
 				<location ref="44" />
 				<person ref="4" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
@@ -5173,7 +5173,7 @@
 
 		<letterDesc letter="342">
 			<sent>
-				<date notBefore="1780-09-01" notAfter="1780-10-31">unbekannter Ort, nach der Abreise aus
+				<date notBefore="1780-09-01" notAfter="1780-10-31">Unbekannter Ort; nach der Abreise aus
 					Aya, wohl September/Oktober 1780</date>
 				<location ref="51" cert="low" />
 				<person ref="1" />
@@ -5189,7 +5189,7 @@
 
 		<letterDesc letter="343">
 			<sent>
-				<date notBefore="1779-06-01" notAfter="1780-12-31">unbekannter Ort, Mitte 1779 bis Ende 1780</date>
+				<date notBefore="1779-06-01" notAfter="1780-12-31">Unbekannter Ort, Mitte 1779 bis Ende 1780</date>
 				<location ref="51" cert="low">vmtl.</location>
 				<person ref="1" />
 			</sent>
@@ -5204,7 +5204,7 @@
 
 		<letterDesc letter="344">
 			<sent>
-				<date notBefore="1780-11-01" notAfter="1780-11-30">Dorpat (Tartu)?, November 1780</date>
+				<date notBefore="1780-11-01" notAfter="1780-11-30">Wahrscheinlich Dorpat (Tartu), November 1780</date>
 				<location ref="1" cert="low">vmtl.</location>
 				<person ref="1" />
 			</sent>
@@ -5219,7 +5219,7 @@
 
 		<letterDesc letter="345">
 			<sent>
-				<date notBefore="1780-11-01" notAfter="1780-11-30">auf dem Weg nach Ohlershoff, November
+				<date notBefore="1780-11-01" notAfter="1780-11-30">Auf dem Weg nach Ohlershoff, November
 					1780</date>
 				<location ref="52" />
 				<person ref="1" />
@@ -5235,7 +5235,7 @@
 
 		<letterDesc letter="346">
 			<sent>
-				<date notBefore="1780-11-26" notAfter="1780-12-26">Ohlershoff, 26. November (oder Dezember?)
+				<date notBefore="1780-11-26" notAfter="1780-12-26">Ohlershoff, 26. November
 					1780</date><!-- Da der genaue Monat unsicher ist, habe ich die Datierung als Zeitspanne
 				aufgefasst -->
 				<location ref="49" />
