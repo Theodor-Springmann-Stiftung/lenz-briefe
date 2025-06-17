@@ -5410,7 +5410,7 @@
 				<location ref="44" />
 				<person ref="71" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
