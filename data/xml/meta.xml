@@ -3405,6 +3405,7 @@
 			<received>
 				<location ref="21" />
 				<person ref="1" />
+				<person ref="89" />
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
