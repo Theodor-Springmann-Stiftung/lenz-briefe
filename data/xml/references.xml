@@ -272,6 +272,9 @@
 			<personDef index="87" name="Unbekannt"
 				vorname="NN" nachname="NN" komm="unbekannt"/>
 
+				<personDef index="88" name="Dorothea Charlotte Lenz"
+				vorname="Dorothea" nachname="Lenz" komm="dch-lenz" />
+
 		</personDefs>
 
 

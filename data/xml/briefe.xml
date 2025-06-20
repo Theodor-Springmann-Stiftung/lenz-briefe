@@ -6438,7 +6438,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>an das Damen Bureau für 2 Bräute im – – – Garten denen die übrigen schon nachfolgen werden
 </letterText> 
 
-<letterText letter="366"><page index="1"/><tabs><note>linke Spalte</note>
+<letterText letter="366"><page index="1"/><tabs><note>Tabelle</note>
 <line type="break"/>
 <line index="1"/><tab value="1-2"><aq>kin burn</aq></tab> <tab value="2-2"><aq>Kin burn</aq></tab>
 <line index="2"/><tab value="1-2">ein Kind brannte !!!!!!</tab> <tab value="2-2">aber, aber <aq>Kin</aq> und <aq>burn</aq> nicht <aq>Kil</aq></tab>
@@ -6449,74 +6449,54 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break" /><align pos="center"><gr>α/ω</gr></align>
 <line type="empty"/>
 <line tab="1"/>Ueberbringer dieses möchte gern Ihre Kirche besehen, auch wohl wenn Herrn Bergwitz ihn seiner Schwester empfelen will mit jungen Herrn in Dienste treten, ist aber seines Gewerks ein Schneider, wenn er schon auch frisirt und vielleicht auf Kundschaft spekuliert. Wenn Sie ihm erlauben wollen mit Ihrem <aq><ru>нaбзцсpaмeль</ru></aq> oder Aufseher der Knaben die Kirche (die aber keinen Lehrstul hat) zu besehen würde dieses als einen Beweis Ihrer noch nicht erloschenen Freundschaft für mich ansehen.
-<line type="empty"/>
-<line tab="1"/>Man verwirrt in Moskau immer den Grafen Münnich der den Ladogaschen Canal anlegte und dessen Sohn im Conseil des berühmten Cadetten <ul><aq>corpus</aq></ul> ist, das meines Erachtens in unsenn Jahrhundert ein andres Gesicht macht als da Peter erst kürzlich Militärschulen einzurichten antieng-mit den Anstalten des hiesigen Gouvernements auch für öffentliche und die Erziehung des Adels an verschiedenen Plätzen, besonders zur <aq>Bildung des Mittelstands</aq> für welchen unser <aq>house of commons</aq> oder Unterhaus bereits lang fertig ist, aber einer Kanzel ermangelt, wo auch adliche Kinder bisweilen anfahren und den Erziehungen könnten abgegeben werden. Es ist der Walm, als ob der Kanal zwischen dem Dnepr und der Düna würde durch junge Herrn und Fräulein oder ihre Schulmeister (wie man sie sich vorstellt) allein in Gang gebracht werden, welches eine Verblendung ist.
-<line type="empty"/>
-<line tab="1"/>
+<line tab="1"/>Man verwirrt in Moskau immer den Grafen Münnich der den Ladogaschen Canal anlegte und dessen Sohn im Conseil des berühmten Cadetten <ul><aq>corpus</aq></ul> ist, das meines Erachtens in unsenn Jahrhundert ein andres Gesicht macht als da Peter erst kürzlich Militärschulen einzurichten anfieng mit den Anstalten des hiesigen Gouvernements auch für öffentliche und die Erziehung des Adels an verschiedenen Plätzen, besonders zur <aq>Bildung des Mittelstands</aq> für welchen unser <aq>house of commons</aq> oder Unterhaus bereits lang fertig ist, aber einer Kanzel ermangelt, wo auch adliche Kinder bisweilen anfahren und den Erziehungen könnten abgegeben werden. Es ist der Walm, als ob der Kanal zwischen dem Dnepr und der Düna würde durch junge Herrn und Fräulein oder ihre Schulmeister (wie man sie sich vorstellt) allein in Gang gebracht werden, welches eine Verblendung ist.
 <sidenote pos="left" page="1" annotation="am linken Rand, vertikal">Die Deutschen verwechseln immer das Wort <aq><ru>яслц</ru></aq> welches eine Krippe mit <aq><ru>cкpцикa</ru></aq> eine Geige – und thun sich selbst damit den grössesten Schaden</sidenote>
-<line type="empty"/>
-<line tab="1"/>
 <sidenote pos="bottom" page="1" annotation="am unteren Rand">Herr P. Bause möchte Vorlesungen über allgemeine Erziehung und deren <ul>Zweke</ul> eröfnen, wozu ihm Frau E– immer einen Saal eröfnen könnte. Auch hier – doch wer wird hieher kommen und eigentlich ists für <ul>Eltern.</ul></sidenote>
-<line type="break"/>
 <page index="2"/>
-<line type="break"/>
 <line tab="1"/>Dieselbige ist aber nicht sehr zu bewundern, da sich die Ausländer mit Wiederherstellung des Seidenhandels aus Persien <ul>durch</ul> Rußland, zu Aufname ihrer Manufakturen schmeicheln, welches von ihrem Betragen in Absicht der in Rußland zu treffenden neuen Einrichtungen des Bürgerstands und der häuslichen und geistlichen Baukunst abhangen wird. Denn diese glatten Herrn möchten so gern die Stupidität der alten Schaukeln und Rhegalen oder Rahboisehen Kogalen wieder einführen, wozu ihnen die Wagen und Vorfahren immer die Handhabe geben. Man soll Kinder fahen wie die Seelenverkäuffer u. s. f.
-<line type="empty"/>
 <line tab="1"/>Es geht die Rede die Besitzer der Sawoden in Orenburg hätten sich einverstanden zur Erneuerung der Kirche in Troitzk nach dem Modell der in Jerusalem oder Woskresensk mit einer Kanzel eine Steuer zusammenzulegen weil die meisten dieser Sawoden Bauren haben die auf Namen von Klöstern in Moskau zu den Arbeiten eingeschrieben sind. Auch würden alsdenn wohl Lieferungen an Tüchern für die Troitzischen Garnisonregimenter geschehen.
-<line type="empty"/>
 <line tab="1"/>Die Hauptsache wird wohl die Errichtung einer Bibliothek in Troitz seyn zu der Herr v. Nowacoff die deutschen und englischen Buchhändler, vielleicht auch Privatgelehrte wie Herr Hofr. Schade zusammenstehen sollten.
-<line type="break"/>
 <page index="3"/>
 <line tab="1"/>Beilage ist etwas aus den Heften die zur Vorbereitung einer Poliglotte aus alten Völkergeschichten dient durch welche eine Sprache durchs ganze Reich, insofern diese aus den ersten Wurzeln so leicht gemacht wird, daß sie auch den Fremden durch Umgang und gegenseitigen Umgang erleichtert würde, wozu ein Klavier statt des A B C von 36 Consonanten mit 5 Consonanten jeder Sprache dient, die wie Klaviernoten anstatt der Halbthöne mit den Vokalen gespielt, das Wort darstellen-amEnde zu hoffen ist. Wie lernen Kinder ihre Muttersprache? Würden Kinder mehrerer Sprachen vermischt, so lernen sie sie ohne zu wissen, wie? Besonders wenn wir kleine Handpressen bekommen (aber ohne Druk) die das Auge an Unterscheidung der Buchstaben spielend gewöhnen.
-<line type="empty"/>
 <line tab="1"/>Haben Sie von Ihrem Herrn Sohn aus Kinburn keine Nachricht? Sollten unsre Benennungen aus heidnischen Zeiten, die dem Volk soviel wunderliche Ideen in den Kopf bringen, nicht abzuändern seyn? Es heißt ja: ärgert dich das Auge u. s. f. Ich unterschreibe mich gern Linz oder Lunz nur damit man bey meinem Namen nichts als meine Person denkt und auf keine albernen Nebenbegriffe kommt.
-<line type="empty"/>
 <line tab="1"/>Verzeyhn Sie mein kühnes Gewäsche, dem Verlangen Sie selbst einmal persöhnlich hier zu umarmen um dem neuen Bibelwerk beizustehen und eine Kanzel zu Catechisationen oder kurzen Volksreden unsern jungen Candidaten nach Art der in Seikonospaß einrichten zu helfen. Diese würden auch vielleicht wöchentlich <aq>dejourweise</aq> bei der Frau E. wohnen und abgeholt werden können.
-<line type="empty" />
 <line type="break" /><align pos="right">Ihr aufrichtig ergebenster JMRlands.</align>
-<line type="empty"/>
-<line type="empty"/>
-<line type="empty"/>
-<line type="empty"/>
-<line type="empty"/>
-<line type="empty"/>
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="3" annotation="am linken Rand, vertikal">vom Unterscheid der himlischen oder obren und der Phrygischen Befestigungen</sidenote>
-<line type="empty" />
-<line type="break" />
-<sidenote pos="left" page="3" annotation="am linken Rand des letzten Abschnitts, vertikal"> aus der Brandwache</sidenote>
+<sidenote pos="left" page="3" annotation="am linken Rand des letzten Abschnitts, vertikal">aus der Brandwache</sidenote>
 <page index="4"/>
+<line type="empty"/>
 <line type="break"/><address>
 <line type="break"/>Herrn Burner
 <line type="break"/>Bey den Bezkischen Anstalten
-<line type="break"/>zur Erziehung des Mittelstandes zu treuen Händen</address>
+<line type="break"/>zur Erziehung des Mittelstandes 
+<line type="empty"/>
+<line type="empty"/>
+<line type="break"/>zu treuen Händen</address>
 <line type="empty"/>
 <line tab="1"/><ru>ГOCПOДИНУ<!-- Groß geschrieben? --> мoeму Пуpнepъ въ дoмБ пoкoйнaгo штaтcкaгo coвътникa
 <line type="break"/>Дeмгдoвa для учpeждeнг Кoммepчecькaгo coктoянгя пpи глaвнoмъ
 <line type="break"/>нaдзиpaгeлecъ дoмa</ru>
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="4" annotation="am linken Rand, vertikal"><ru>Кapлу Ивaнoвичь г Буpнepъ</ru></sidenote>
 </letterText> 
 
-<letterText letter="367"><align pos="center">P.p. Werthgeschätzter lieber Kranker</align>
+<letterText letter="367"><page index="1"/><align pos="right">P.p. Werthgeschätzter lieber Kranker</align>
 <line type="empty"/>
 <line tab="1"/>Hier ist das Gestrige ein wenig besser abgeschrieben, haben Sie die Güte es wo es sich thun läßt dem Innhalt nach auch Herrn Rüdiger mitzutheilen
-<line type="empty" />
 <line type="break" /><align pos="center">Dero</align>
 <line type="break"/><align pos="right">allezeitergebenster
 <line type="break"/>Diener JMRLenz</align>
 <line type="empty" />
-<line type="break" /><address> <aq><ru>въ двopБ Никитa Пaвлoвa / Гocпoдину θиpнгaбepъ / у
-<line type="break"/>Гocпoдинa Бибepa / дa peмaнъ</ru></aq></address>
+<line type="break" /><address> <aq><ru>въ двopБ Никитa Пaвлoвa 
+    <line type="break" /> Гocпoдину θиpнгaбepъ 
+    <line type="break" />у Гocпoдинa Бибepa 
+    <line type="break" /> дa peмaнъ</ru></aq></address>
 <line type="empty" />
-<line type="break" /><note>Seite 2 und 3, Sprachenklaviatur ABBILDUNG</note>
+<line type="break" /><align pos="center"><note>auf den Seiten 2 und 3 befindet sich eine Sprachenklaviatur, vgl. die Abb. in Moskauer Schriften, Bd. 1, S. 527f.</note></align>
 <page index="4"/>
 <line type="empty" />
 <line type="break" /><align pos="center">Auf das <insertion pos="top">kleine</insertion> Kraut Reinefarth an die Rosengesellschaft</align>
 <line type="empty" />
-<line type="break" /><note>linke Spalte</note>
+<line type="break" /><note>Tabelle linke Spalte</note>
 <line type="empty"/>
 <line tab="5"/>Kleines Kraut der bösen Geister
 <line tab="5"/>Gegengift, der treuen Meister
@@ -6657,231 +6637,141 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="5"/>Das kann Sündfluth Witz allein.
 </letterText> 
 
-<letterText letter="368"><align pos="center">Lieber Papa</align>
+<letterText letter="368"><page index="1"/><align pos="center">Lieber Papa</align>
 <line type="empty"/>
 <line tab="1"/>Die unglükliche Leidenschaft welche sich meiner in Liefland bemächtiget und ihre häuffigen ernstlich väterlichen Briefe nach Petersburg und Moskau mir so oft vergeblich ausgeredet die mein Bruder und alle meine Verwandte so heftig bestritten und die ich deswegen auch aus meinem Herzen zu reissen versuchte hat sich desselben wieder bemächtiget So spielt das Schiksal mit unserm Herzen und unsem Wünschen und der Rath meiner schreibenden bärtigen Freunde, die sich mir unter der Gestalt meiner angebetheten Julie welche denen Frauenzimmern Lieflandes ein Collegium von den Sitten der alten Teutschen aus dem Tacitus mit einigen teutschen und esthnischen Reimen unter meinem Fürsitze zu eröfnen nach Maurerischen Zeichen und Regeln sich endlich rühmlich entschlossen mich den Gebeinen des verewigten Zingischans und Tamerlans schwören lassen müssen und demzufolge alle die[sje unterirrdischen Geister in Anspruch und Einspruch genommen
-<line type="empty"/>
 <line tab="1"/>Es wird in diesem Collegio ein Oratorium vorkommen welches Medea heißt die den Jason verjüngerte und ihre Kinder umbrachte auch eine Hölle und ein Orpheus denn ohne diese giebt es weder Musikalisches noch Poetisches Vergnügen, weil nach dem Tode kein Vergnügen statt hat und Engel und Geist die Schimäre eines verborgnen Giftes sind Diese ehrwürdigen alten Geheimnisse aber, noch daß es ein Verbrechen ist sie anzutasten, versteht der überwitzige Geist unsrer Liefländischen Damen nicht welchen wir durch witzeln wieder in die rechte Leise setzen wollen und ihnen beweisen daß auf der ganzen bewohnten Erde unter Gelehrten und Ungelehrten noch Spuhren dieser ehrwürdigen Phrygersitte und des einzigen rechten seelig machenden Glaubens von welchem abzuweichen dem Schwerdte die weil er seinen eignen Schild und zwölf Apostel hat – – und alle die ihm nicht beypflichten wollen rundweg für Türken und Mameluken zu erklären das Recht hat - ja ihnen nicht nur öffentlich sondern auch heimlich nach Ehre guten Namen zeitlichen wo möglich ewigen Wolfarth zu stehen in den Weg zu treten zu äusern völlige uneingeschränkte Vollmacht und Gewissensfreiheit weil er von dem einzigen rechten Dienst der Phönizier und Anbeter des Herkules und Jason gewichen und zügellosen Leidenschaften und schwännerischen Einbildungen gleich des Oehlgötzen frohnet –
 <line type="empty"/>
-<line type="empty" />
 <line type="break" /><align pos="center">Zärtlichgeliebte Geschwister
 <line type="break"/>vielgeliebte Schwester!</align>
 <line tab="1"/>Dein letzter Brief hat mich sehr gerührt, ich habe daraus ersehen daß du dich vollkommen wohl befindest, dein lieber Mann ist wieder gesund und munter, seine äusseren Umstände haben sich verbessert, eure Familie vermehrt, es fehlet euch also nichts zur irrdischen Glükseeligkeit als ein wenig Iangeweile oder wie du mir mit deiner so eignen Naivetät schreibst ein Virtuos, den zu zum Narren brauchen könntest wenn du schwermüthig wirst. Soll ich dirs rein deutsch heraus sagen noch obenein ein Liebhaber denn das kann bey allen andern Vergnügen nichts schaden wenn man einen Nothnagel auf schlimmes Wetter übrig behält.
-<line type="empty"/>
 <line tab="1"/>Liebe Schwester du bist sehr naif. Deine Offenherzigkeit freut mich mehr als die Scheinheiligkeit der Bethschwestern die ihre wahren Gesinnungen verbergen. Nach wem soll man sich denn umsehen wenn man in den Wagen steigt? Wer soll einem die Hand bieten wenn man in die Assemblee fährt. Diese Höflichkeiten will dir gerne gestatten, aber, aber – und wer soll bisweilen einen artigen Vers auf mich machen? – Wunder- 20 bare Grillenfängerin! muß denn das ein Liebhaber seyn? Ja sonst gefallen sie nicht und gerathen nicht. Umgekehrt! dem Liebhaber gerathen keine Verse, der artige Mann lügt mit kaltem Blut und viel schöner als es ein Liebhaber je thun kann, er lügt in des Liebhabers Namen. Die Regel ist nicht ohne Ausnahme, aber das ist zu verlässig, je besser gesetzt je feiner gereimt gedacht gerundet der Vers je mehr die Seele in der rechten Harmonie, desto weniger liebte der der ihn machte. Die Liebe begnügt sich wenn sie in den Fall kommt mit ängstlichen einzelnen Lauten, und <insertion pos="top">be</insertion>hält das beste zurük: der schöne Geist und artige Mann wird ein freygebiger Gastwirth und stellt das letzte aus sieben Schüssern auf den Tisch, denn er ist großmüthig
-<line type="empty"/>
 <line tab="1"/>Was soll das Wimmern und Püsteln närrisches Weib wenn eins deiner Kinder kränkelt. Ist nicht jemand da einen Vers darauf zu machen? Er ist gewiß ein Narr denn er machte Verse auf ein Weib das ihn nicht lieben durfte sie also wie die Zukerdüten brauchte, die man doch annimmt wenn sie aus gutem Herzen kommen und auch in den Mund stekt wenn einem bitter wird. Aber er muß ein Liebhaber seyn und muß fallen sonst schmeken sie nicht – Schwester Schwester – Und du suchtest dir einen Geheimsekretär?
 <page index="2"/>vielleicht die Windeln deines Kindes zu troknen oder zu besingen – Ey ey! so böse hast du es doch nicht gemeint – Nicht alle Windeln sind Windeln – Und wenn du nur die Seele deines Geheimsekretärs auf dein Gewissen ladest. O dafür ist Rath, unsere heutigen Poeten wissen allem eine Farbe zu geben –
-<line type="empty"/>
 <line tab="1"/>Ganz gut aber was wird denn nun aus deinem Geheimsekretär – Dein Narr – das ist doch ein bisgen zu unfreundlich – danke ihm ab und mache ihn wieder zu dem was er war zu einem höflichen artigen Mann der nicht über den Wolken schwebt und nicht unten im Abgrund auf Tarnedans und Bajazeth und Zingischans Stuhl sieht denn das waren Heilige der ersten Ordnung die vielleicht auch Orden stifteten –
-<line type="empty"/>
 <line tab="1"/>Laß uns ehrlich sprechen, die heutige Welt weiß nicht was sie will. Alles möchte gern beliebt seyn und gefallen und daran ist nichts versehen denn du gefällst wenn du nicht zu gefallen meynst und wirst unleidlich so bald du es merkst daß du gefällst. Aber man möchte nicht gern daß ein andrer gefiele, damit haben wir alle zu kämpfen. Und warum nicht liebe Frau wenns ein ehrlicher Mann oder ein ehrliches Stük Weisbild ist das dir auch gut ist und nützlich werden kann. Aber wehe deinem Geheimsekretär wenn er ein Weib berührt – denn dein ganzes irrdisches Glük ist hin. Er mag sich auftausendmal fünfhundert Meilen weit von dir verheurathen, wo man nichts von deiner Schönheit gehört hat – Liebe Frau! Und was ist Schönheit – – Mach mich nicht zum Pilatus – dein Spiegel ist falsch – er zeigt dir dein Gesicht nie in dem <ul>Augenblik</ul> wenn solche Gedanken in deiner Seele sind und diese entstellen deine sanfte liebreiche Gebehrde –
-<line type="empty"/>
 <line tab="1"/>Den Vorzug – ey da ist kein Vorzug – die wahre Liebe weiß von keinem Vorzug – der Liebhaber gefällt weil er liebt, die Geliebte weil sie geliebt wird. Der Liebhaber findt tausend Frauen schöner besser milder als seinen Gegenstand, aber er liebt seinen Gegenstand weil es so seyn muß, weil er gezwungen dazu ist er ist ein Unglüklicher! du kannst ihn bedauern aber du brauchst ihm nicht feind darum zu werden. Die andern Schwestern lachen darüber
-<line type="empty"/>
 <line tab="1"/>Aber was bleibt mir denn übrig, wenn er eine andre liebt? Nichts gar nichts! der Schurke bezahlet mir meine Rechnung nicht, er ist ein Betrüger Nicht so ganz als du meynst. Er hat sich nur versehen er glaubte dich zu lieben und liebt dich in einer andern. Sieh einmal er liebte dich auch vielleicht nicht bloß um der weissen Schürze willen, oder um sein Glük durch dich zu machen oder um Brod zu erhalten oder – doch was ist vom Geschmak zu reden jeder Mensch hat seinen Geschmak und man muß dem Geschmak seine Grillen lassen. Das ist eine Philosophie die kein Barometer ausschöpft - dem einen gefällt das natürliche, dem das künstliche, dem das eigennützige, dem das freye dem das eiffersüchtige, dem das unschuldige
-<line type="empty"/>
 <line tab="1"/>Was macht deine Freundin am Hofe? Oder ist sie schon wieder zurük? Hat sie nicht auch ein Paar geheim Sekretäre dort gelassen
-<line type="empty"/>
 <line tab="1"/>Sollte es möglich seyn daß dein Geheimsekretär liebte? Er müßte allen Gebrauch seiner Vernunft verloren haben und rasend geworden seyn. Weniger Naivetät Schwester! laß ihn leben. Die Grille wird übergehen und dann wird er wieder in deine Fesseln zurükkehren.
-<line type="empty"/>
 <line tab="1"/>Wenn er aber in vollem Ernst liebte? Nun dann ist er ein Türk und Mameluke, denn wie ist es möglich daß – halt ein wenig inne liebe Schwester! verdamme nicht – – – er kann seine Ursachen haben, laß ihn leben, ich bitte für ihn – Du liebst deinen Mann nicht recht oder vielmehr er hat Ursache ein wenig zu zürnen wenn du neben ihn noch einen Galeerensklaven halten möchtest der nicht dein Mann wäre. Du bist meine liebe Schwester aber die reinste heiligste Wahrheit ist mir noch lieber. Ich kann in denselben Fall gerathen und was wird aus mir wenn eine Dame sich meine Schwester zum Muster –
-<line type="empty"/>
 <line tab="1"/>Du bist ein Narr – Ey ey mir den Grandison ins Gesicht zu werfen Nun es ist doch gut daß du es mit guter Laune thatst – Wir wollen also einmal eine Ausname von deiner Immanoyukase machen und einem auf den Tod Gefangenen das Leben – ey pfuj doch, mehr, ich handle itzt – mehr mehr Schwester – pfuj schäme dich – mehr – um das rechte Leben – ich bin zufrieden
 </letterText> 
 
-<letterText letter="369">Hier ist an den Herrn Pastor Brunner
-<line type="empty"/>
+<letterText letter="369"><page index="1"/>Hier ist an den Herrn Pastor Brunner
 <line tab="1"/>und allen die ihm und seiner für ihn erschaffenen Gehülfen an Empfindung ähnlich sind die ungekünstelte Erzehlung eines mir in Liefland aufgehefteten von mir gegebnen Versprechens an ein adliches Fräulein, das mir und diesem Fräulein selbst zum äussersten Nachtheil nicht nur des Rufs sondern auch bey allen möglichen zu treffenden anderweitigen Verbindungen zur unvermeidlichen Hinderniß gereichen mußte.
-<line type="empty"/>
 <line tab="1"/>Dieses Fräulein war als ich Liefland verließ ungefähr 9 oder 10 Jahr alt, konnte also wenig sich meiner erinnern als ich nach mehr als 10 jähriger Abwesenheit wiederkam oder lieber nur durch Derpt nach Petersburg reisete. Ich hörte bei meinen Eltern und Geschwistern mit denen sie erzogen worden, daß sie sehr gut sänge und da wir einen Besuch bei ihrer Mutter ablegten die Wittwe eines Obristen der bey Hofe in keinem geringen Ansehen war ist und eine Schwester bey der Admiralität hat, die seit diesem Vorfall auf Assekuranz der Englischen Handlungskompagnie sich ein neues steinernes Haus auf Wasilei ostrow gekauft nachdem ihr Gemahl der sich in Cherson befindet zum General ist avanciert worden, hörte ich bemeldetes Fräulein singen und schikte darüber ein versifizirtes Monodrama aus Shakespear in eben der Gesangweise in das Lüneburgische Journal.
-<line type="empty"/>
-<line tab="1"/>
 <sidenote pos="right" page="1" annotation="am rechten Rand, vertikal">Wenn <aq>Mr Pükter</aq> oder <aq>Mr d’Enbrad</aq> Herrn Capellmeister Siedler oder Gemalinn besuchen bitte von mir viele Grüsse zu sagen, der angenagelt ist durch einen kranken Zähen am Fuß, der garstig verschwollen ist wie ein elender Mensch, der nicht auftreten kann ohne zu schreyen</sidenote>
-<line type="empty"/>
-<line tab="1"/>
-<sidenote pos="left" page="1" annotation="am linken Rand, vertikal, die folgenden beiden Absätze">zur neuen kleinen Kanzel für die Kaufleute + Kaufleute theilen sich in 2 Klassen, die erste handelt aus Buden oder Magasinen mit Commissionen von Materialien auch Waaren die andere mit eigenen ausgearbeiteten Waaren, ohne Gilde, denn <aq>guild</aq> aus Engeland ist darum nicht englisch und bedeutet <aq>obrok</aq> oder Abtrag einer Schuld. Hir her gehören ohne Untscheid ausser nach der Materie in der sie arbeiten
-<line type="empty"/>
+<sidenote pos="left" page="1" annotation="am linken Rand, vertikal">zur neuen kleinen Kanzel für die Kaufleute + Kaufleute theilen sich in 2 Klassen, die erste handelt aus Buden oder Magasinen mit Commissionen von Materialien auch Waaren die andere mit eigenen ausgearbeiteten Waaren, ohne Gilde, denn <aq>guild</aq> aus Engeland ist darum nicht englisch und bedeutet <aq>obrok</aq> oder Abtrag einer Schuld. Hir her gehören ohne Untscheid ausser nach der Materie in der sie arbeiten
 <line tab="1"/>l. In Marmor u. Elfenbein Bildschnitzer, Dreher In Diamanten Silber Gold. Juweliere, in schlichten Metallen Galanteriehändler in Tüchern Schneider (itzt vorzüglich rasch) in Häuten Schuster end ftir Reithosen in Seide und Leinwand Weber u. Stricker in Gold Posumentirer Dratzieher in Holz verschiedner Gattung Tischer Kanzelbauer Orgelbauer in Eisen Pferdärzte Schmiede für Küchengeräth und Schlosser. Die sich hier versammlen und Sonntags eine russische Predigt des Schwarzischen Seminarii hören. Zur Aufname neuer Städter. <ru>блa <aq>cмpoeния нoвыхъ <ul>гopoбoвъ</ul></aq></ru></sidenote>
-<line type="empty"/>
-<line type="empty"/>
 <line tab="1"/>Nun fand ich daß das Lehngut dieser Dame nach der gnädigen Verordnung der Käiserin für Staatsoffizierenwittwen durch die Gegenwart einer Russin, der Schnur oder Sohnsfrau dieser Dame ein wenig beschwert war, weil die Gebäude nicht aufs beste dort eingerichtet schienen. Dieses gab zu manchen unangenehmen Auftritten Gelegenheit weshalb ich mich in Petersburg bey der Schwester dieser Dame zum Vermittler machen wollte, in der That auch meine Absicht war, sie zu bereden, daß sie ihre Nichte nach Petersburg an den Hof nähme, besonders da sie ein neues Haus gekauft. Dieses bestättigte sich noch mehr da mir mein Vater ausdrüklich nach St. Petersburg schrieb, diese junge Dame sei als Braut mit einem Offizier vom Cadettenkorps namens Prattje als Braut versprochen, der <ul>vor</ul> mir in Derpt gewesen und den ich in dem Hause der Generalin <aq>Kurganoffsky</aq> als einen vollkommen artigen jungen Offizier kennen lernte. Man hatte mir in meiner Eltern Hause gesagt, es fehlen ihm die gewöhnlichen Blumen und Schmeicheleyen die eine Braut von ihrem Liebhaber erwartet, welches mich um so mehr veranlaßte die Verse druken zu lassen um in gewisser Weise sein Freywerber zu werden.
-<line type="empty" />
-<line type="break" />
 <sidenote pos="right" page="1" annotation="am rechten Rand, vertikal">Ueberbringer dieses ist ein Dorfbalbier der versetzlichen Juden</sidenote>
-<line type="empty"/>
-<line tab="1"/>
 <sidenote pos="bottom" page="1" annotation="am unteren Rand, horizontal">Allein sie durfte nicht wol nach Pet. reisen, weil ihr bang war die Mutter werde das Gut verlieren, wenn die Töchter heuratheten.<fn index="3"><anchor>*</anchor></fn></sidenote>
 <page index="2"/>
-<line type="empty"/>
 <line tab="1"/>Nachher reisete ein Vetter von mir mit Namen <aq>Andree</aq> – der beym Ingermannländischen Regiment ist in der Suite der Herzogin von Kurland nach Petersburg, als ich auf Bitte des Kammerjunker Liphart und der Obristin Albedilla die selbst nach Petersburg gekommen war ihre Schwester zu besuchen eine Reise zum Kammerjunker Liphardt auf sein Landgut <aq>Aya</aq> gethan: diesem Vetter schrieb ich bey dem Hause der Generalin <aq>Kurganoffsky,</aq> die bey der Flotte was vermag nicht vorbei zu gehen und sich auch meiner dort zu erinnern. Er schrieb mir einen Brief, den ich für einen Scherz halten mußte, worin allerley ausschweiffende Projekte für mich vorkamen, wenn ich etwa selbst die junge Dame zu heurathen gedächte. Ich lachte über sein Mißverständniß denn vermutlich war er an den Ton des Umganges dieser Dame, die eine der geistreichsten und gewitzigsten Hofdamen daselbst ist, nicht gewohnt und nahm das alles so vollkommen nach dem tödtenden Buchstaben, wodurch er auch meine ganze Familie verwirrt hat. Es ist wahr daß die junge Dame die wirklich Braut war, noch 2 Schwestern hatte, von deren Verbindungen übrigens ich keine Notiz nehmen konnte noch mochte, weil ich nicht ihr Vormund war.
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="2" annotation="am linken Rand, horizontal">und deren Haus eine hohe Schule sein sollte</sidenote>
-<line type="empty"/>
-<line tab="1"/>
 <sidenote pos="bottom left" page="2" annotation="am unteren linken Rand, vertikal"><fn index="3"><anchor>*</anchor></fn>Nun war der Umstand der daß die Mutter fürchtete wenn die Tochter Hn. v. Prattje heuratbete würde sie das Gut verlieren, das der Wittwe nur geschenkt <ul>scheint</ul> in Rüksicht auf die Töchter, daß sie gut können verheurathet werden. Sie raste aber sage ich und verstand den Ukase nicht. Das Gut ist ihre – solang sie lebte als Wittwe des Obristen Albedill u wenn ihre Töchter nach Petersb. reisen zu ihrer Tante und sie bleibt mit der Russischen Schwiegertochter allein, so bleibt ihr das Gut, die Töchter <ul>mögen heurathen</ul></sidenote>
-<line type="empty"/>
-<line tab="1"/>
 <sidenote pos="top left" page="2" annotation="am oberen linken Rand, vertikal">zu mal da es im Cadettenkorps ist, von wo Liefländer als Studenten auf die künftige Akademie zu Pieskau gehen. Also thäte sie wohl eine oder zwey oder alle drey Töchter nach Petersb. zur Tante zu schiken u. nicht kleingläubig zu seyn.</sidenote>
-<line type="empty"/>
 <line tab="1"/>Das ist der Verlauf der ganzen Sache, diesmal ganz einfältig und ohne Kunst – ja weil man mich durch Taubheit und Mißverstand zu allerley wunderlichen Schritten zwingen wollte – als in der Gegenwart Gottes geschrieben. Ich habe übrigens die grösseste Achtung sowohl für die Generalin <aq>Kurganoffsky</aq> als ihre Frau Schwester, die eine vieljährige Freundin meines Vaters war und hoffentlich noch ist und bleiben wird. Auch habe nicht ermangelt mich bey Hofe selbst durch Kanäle beym Cabinet für sie zu verwenden, daß das ihr zugesprochene Lehngut bey etwa vorfallenden Verfalljahren ihr noch erhalten werden möchte, da es ehemals eines der Universität in Derpt zugehörigen Güter gewesen und in sofern die Anwendung dergleichen Stiftungen an die Wittwe eines in vielen Schlachten verdienten Offiziers – dem göttlichen Willen gemäß ist.
-<line type="empty"/>
-<line tab="1"/>Und hirmit ein für allemal genug von diesen der Ehre dieser Dame sonst nachtheiligen Gerüchten da ich mit derselben ganz und gar nichts zu theilen habe
+<line tab="1"/>Und hirmit ein für allemal genug von diesen der Ehre dieser Dame sonst nachtheiligen Gerüchten da ich mit derselben ganz und gar nichts zu theilen habe :/:
 </letterText> 
 
-<letterText letter="370"><align pos="center">Theurester mit unsterblichem Ruhm
+<letterText letter="370"><page index="1"/><align pos="right">Theurester mit unsterblichem Ruhm
 <line type="break"/>von oben geschmükter verehrungswerther Papa!</align>
-<line type="empty"/>
 <line tab="1"/>Nicht Schmeichelei, die reinste Dankbarkeit beseelt meine Feder. Ich lebe – aber Ihnen die Wahrheit zu sagen, danke es nur dem allgegenwärtigen, daß ich noch athme – Herr Reimmann kann Ihnen sagen daß ich – doch er wußte es nicht – in der seltsamsten Lage von der Welt war, als ich Ihren Brief mit dem neuen Beweis Ihres Andenkens erhielt.
-<line type="empty"/>
 <line tab="1"/>Man verfolgt mich – und rathen Sie wer? – Ich habe niemals die Freundschaft verletzt die ich meinen frühsten Gönnern schuldig war. Aber – theurester Vater! ich winde mich als ein <ul>Wurm</ul> im Staube und flehe um Erlösung von allen <ul>andern</ul> Anmuthungen, die bei dem <ul>seltsamen</ul> Nazionalcharakter hier– mir Gift werden.
-<line type="empty"/>
-<line tab="1"/>
 <sidenote pos="left" page="1" annotation="am linken Rand, vertikal">Man versorgt Petersb. von der Schifflände Gschat aus mit Waaren aus Briänsk Moskau u. s. f. Dahin könnten eben sowohl auch aus Liefland über die Düna Dnepr Trubschewsk Waaren für Moskau gebracht werden.</sidenote>
-<line type="empty"/>
 <line tab="1"/>Ich habe gefehlt, 1000mal gefehlt. Am meisten in Liefland – gegen Sie, gegen meinen ältesten Bruder der ungefähr mein Herz kannte und viel in demselben voraus las. Ein hiesiger Freund hat alle meine Briefschaften wer weiß ob nicht aus einem unzeitigen Eiffer <ul>verbrannt</ul> weil er merkte daß sie mich angriffen. Was ich davon bisweilen <ul>rette</ul> – ist mir Balsam in offne Seelenwunden – denn ich sehe nun erst spät hinterher, daß Sie mein Herz <ul>besser kannten</ul> als ich selber.
-<line type="empty"/>
 <line tab="1"/>Nein, ich war nicht für Liefland gemacht und mein zärtlich geliebter Bruder Carl wird vielleicht eine neue Springfeder des Daseyns erhalten, wenn er alle Ansprüche die Liefland auf mich machen konnte, durch sein Daseyn vernichtet. Er weiß in welchem Zustande ich war als ich durch Liefland reisete.
-<line type="empty"/>
 <line tab="1"/>Hier ist das Land der heftigen Aeusserungen der Empfindungen und eines seltsamen Systems von Jurisprudenz das auf dieselben gebaut ist. Von der Seite also konnte man mir aus Liefland unaussprechlich schaden – und leider! es ist bisweilen hart genug geschehen. Denn man spricht mir meinen Taufschein ab.
-<line type="empty"/>
 <line tab="1"/>Ich lebe noch, allein bitte meine theure Verwandte und ihre holländischen und Englischen Korrespondenten zu bedenken daß ich
 <page index="2"/>ein Mensch war, der fehlen konnte und tausendmal gefehlt hat. Herr Bergmann, Herr Lavater, Herr Staatsrath Schwebs, Herr Kammerjunker Libhardt werden dis nimmer in Abrede seyn. Ich wollt in Liefland bleiben. Nun hat <ul>Gott</ul> es anders gewollt.– Und soll ich darunter <ul>ewig</ul> leiden? Und glauben meine lieben Landsleute daß ich Ihnen von hier aus niemals Dienste leisten kann oder sie Maaßregeln nehmen <ul>müssen</ul> mich dazu zu zwingen, was ich von selbst time. Ich kenne <ul>ungefähr</ul> den Zustand des dasigen auswärtigen und innländischen Handels. Ich weiß wie die hiesigen Bedürfnisse auf die dasigen passen – aber um deswillen der für alle Sünden genug gethan – keine Auslegungen weiter. Mit einem Wort – ich <ul>kann</ul> aus Liefland <ul>nicht</ul> heurathen.
-<line type="empty"/>
 <line tab="1"/>Helfen Sie mir bethen, theurester Vater! und alle Schimären weg und ins Fegfeuer bethen, die das Verhältniß in welchem ich mit Ihnen meinen theuren Verwandten Freunden u. s. f. stehe, zerstören, trübe und zu einem wahren Sklaven Joch machen. Herr Oldekopp Herr Hehn, Moritz u. wie alle die gelehrten Namen heissen, werden in meiner Achtung und Freundschaft dabei nichts verlieren, wenn auch kein einziges Consistoriale bei uns unterläuft.
-<line type="empty"/>
-<line tab="1"/>
 <sidenote pos="left" page="2" annotation="am linken Rand, vertikal">Die neue Bibelübersetzung auch mit deutsch und liefländischer Version würde auf diese Bank gegründet werden und ein Gott und ein Hirte seyn. – Aufgestanden aus den Armen des Todes.</sidenote>
-<line type="empty"/>
 <line tab="1"/>Helfen Sie mir bethen um Befreiung nicht ftir mich allein sondern für Christen – Christen wie Sie und völlig in der Stimmung als ich, die mit mir unaussprechlich leiden.
-<line type="empty"/>
 <line tab="1"/>Herr Eisen hat seine <ul>getrokneten diken Suppen</ul> für Gegenden wo wenig gekocht wird und Kräuter für die Küche nicht wachsen, nicht an den Mann bringen. Für einen solchen <ul>Schokoladenhandel</ul> weiß ich hier Absatz. Imgleichen für Liefländische Butter, Fische, Lächse, Butten, Austern Säfte mit Honig u. Zuker gekocht u. s. f. Ihnen fehlen allerley Russische Manufakturen, an wohlfeilen <ul><aq>Cattunen</aq> Indiennen,</ul> gedruckte Leinwand u. s. f. Damaste, Zeuger die man bis ans schwarze und Caspische Meer herab in allen Städten im Ueberfluß fabrizirt; Kumatsch genannt. Sie haben einige feine Liqueurs, Bücher, Moden aus England Hamburg Frankreich – sollte eine Bank fur Liefland in Moskau, um derentwillen in Petersb. Anregung gethan, nicht zum fasten, denn die Fasten sind aufgehoben– sondern eine Cirkulationsbank für Waare gegen Waare, in welcher von beiden Teilen Geld nieder legt wird – eine Schimäre seyn. Doch genug Dero gehor. Sohn
 <line type="break"/><align pos="right">Jacob R. M. Lenz</align>
 </letterText> 
 
-<letterText letter="371"><align pos="right">Moskau, den 9ten <ul>9br.</ul> 1791.</align>
+<letterText letter="371"><page index="1"/><align pos="right">Moskau, den 9ten <ul>9br.</ul> 1791.</align>
 <line type="empty" />
 <line type="break" /><align pos="center">Mein theurester Bruder!</align>
-<line type="empty"/>
 <line tab="1"/>Ich schike diesen Brief offen, weil ich nicht glaube Mißdeutungen zu besorgen zu haben. Erbetrift mit wenig Worten einen dem Ansehen nach armen und durch einen verstümmelten Körper doppelt unglüklichen Liefländer, der, in dem Hause beym Compt. der <aq>Assignationen</aq> unvermuthet aus <aq>Kadom</aq> erschien und sagte er wollte nach <aq>Riga</aq> und zwar über <aq>Smolensk Polotzk Witepck</aq> und <aq><ul>Plescou</ul></aq> – reisen, ich möchte ihm Briefe mitgeben. Dieses that ich und schrieb (nachdem einige Anstösse von Unpäslichkeit gehabt, die mich hindem selbst zu Euch zu kommen), sehr weitläuftig, weil alles doch in einem hingeht. Nun erfahre ich daß seine Reise theils durch eingefallenes Thauwetter, theils wegen Mißverständniß mit seinem angenommenen Fuhnnann einen Stillstand gewinnt und da er mir eine silberne Uhr zum Verkauf anbot, schliesse, daß es ihm auch am Gelde fehlen muß. Seine Reise über <aq>Plescou</aq> war mir doppelt erwünscht, da ich dort an einem Herrn <aq>Albert</aq> oder <aq>Albrecht</aq> und am <aq>Baron Dietz Commendanten,</aq> dessen du dich aus den Kinderjahren – doch wohl vielleicht nicht mehr erinnerst – Bekannte habe und diese mit unserm Bruder in Derpt und dem dasigen Adel verschiedene Geschäfte von Wichtigkeit in Richtigkeit bringen könnten, die sich anders nicht einfädeln lassen, als durch einen <aq>Internuncius,</aq> wozu ich aus wesentlichen Hindernissen <ul>persöhnlich</ul> diesmal nicht dienen konnte.
-<line type="empty"/>
 <line tab="1"/>Da mir also wirklich diese Reise gut und nützlich scheint, auch derselbe mehr Lust nach <aq>Riga</aq> wo er Verwandte hat als hier zu bleiben bezeuget, allein wahrscheinlich zu den Reisekosten Beyhülfe braucht, so habe mich des <aq>Couverts</aq> unsers gemeinschaftlichen Freundes Reimmann bedienen wollen, Dich und unsere sämtlichen Geschwister aufs inständigste zu bitten, etwa auf Abschlag der gütigen Beyhülfe, die mir durch Eure Güte und unsers lieben theuren Vaters zukommt, ihm, im Fall er in Umstände kommen sollte, seine Uhr zu versetzen, oder andere Schulden des Fortkommens halber zu machen, selbiges zu vergüten weil der Allwissende schon die Umstände so zu lenken wissen wird daß mir und Euch kein empfindlicher Verlust daraus erwachsen kann. Der Fuhrmann hat 26 Rubel bis Riga bedungen und ist ein gewöhnlicher, der nach Riga zu gehen pflegt: die besondren Umstände des H. v. Schröders sind mir nicht bekannt, er hat mir zwar einige Namen aus Curland genannt, die ich in Straßburg kennen gelernt, als einen von Bohlschwing mit dem er weitläuftig verwandt <insertion pos="top">zu</insertion> seyn aussagt.
-<line type="empty"/>
 <line tab="1"/>Ich hoffe daß er, welcher in 7 Tagen in <aq>Plescou</aq> seyn will und in 12 in Riga, wenn er auch Aufhaltungen findet, dennoch spätestens in 14 Tagen oder 3 Wochen bey Euch eintreffen und meine Briefe richtig abhändigen wird, woran mir mit alledem gelegen ist weil viele Dinge darinn auch meine eigene Persohn betreffen. Er hat Verwandte in <aq>Kockenhusen,</aq> wo, wenn ich nicht irre ein Prediger ist, dessen sich Bruder <aq>Carl</aq> erinnern wird, der allerley kleine Stükchen erzählte, als Papa der silberne Becher wegkam. Es war, wo ich nicht sehr irre damals ein Landtag oder Adelsversammlung in Riga, von der ich mit meinen hiesigen Zerstreuungen den eigentlichen Termin vergessen habe. Die Derplische Universität ist zu Wasser geworden, so sehr ich mich in St. Petersb. bey der Akademie bemüht, sie wieder in Andenken zu bringen, allein ich hoffe, der Liefländische Adel wird nichts dabey verlieren, weder der Rigische noch des Dörptschen Kreises bey welchem unser lieber Bruder Friedrich soviel <aq>Influenza</aq> hat. Ist nicht eine Verordnung daß der Adel zu gewissen Zeiten sich in <aq>Riga</aq> aufhalten muß, besonders der in <aq>Collegicis.</aq> Und dehnt sie sich nicht etwa auch auf die Landgeistlichkeit aus, die Geschäfte in <aq>Riga</aq> haben? – Ich küsse dich mein theurer Bruder und deine liebe Gemalinn und Haushaltung zum neuen Jahr mit tausend warmen Bruderküssen und bin ewig
 <line type="break"/><align pos="right">Dein getreuer obwohl offt kränklicher Bruder
 <line type="break"/>Jacob Michael Reinhold Lenz.</align>
-<line type="empty"/>
-<line type="empty"/>
-<line tab="1"/>
 <sidenote pos="left" page="1" annotation="am linken Rand, vertikal">Der Buchhandel würde auch bey Pieskau gewinnen, so wie die Bankgeschäfte, da diese Stadt mit allen Städten an der Düna durch die Polota, Ewst u. s. f. und durch den Urnensee mit dem Kanal und der Schifflände Gschat zusammenhängt, wo ein starker Handel von Moskau auch nach Liefland ist. Amnestie aller meiner alten Thorheiten in Liefland und ein neues Jahr.</sidenote>
 <page index="2"/>
-<line type="empty"/>
 <line tab="1"/>N.S. Es ist ein Schwager (Bruder der andren Frau) des Herrn Past. Brunner in St. Petersburg, der bey einem Feldregiment Offizier war und, wo ich nicht irre See Dienste bey den Landtruppen zur Bewahrung der Küste genommen: er heißt Neumann und hat viele Empfehlungen. Sollte derselbe dem Bruder Carl nicht zu Gesicht gekommen seyn? Oder den Kindem des Bruder Friedrich in Petersburg. Ich habe seine Adresse nicht aus der man mir ein Geheimniß macht, wenn er nach Liefland reiste, würde ihm gern einen Brief an den Herrn von Engelhardt in Odennyer auf den Gütern des Grafen Romanzoff mitgegeben haben: dieser Herr von Engelhardt ist dem Bruder Benjamin in Reval bekannt geworden, wo er Verwandte unter dem Adel hat. Ich habe noch einen Brief von ihm. Wie sehr wäre zu wünschen, daß eine hohe Schule im <ul>Lande</ul> in der Nähe entstünde, wo die jungen Liefländer ehe sie herausreisten und ihr Geld in der Fremde verschwendten, ein oder zwey Jahre das <ul>Vaterland seine Sprache</ul> und <ul>Gerechtsame</ul> kennen lernten. Es sind nur <ul>20</ul> die ins Cadettencorps aufgenommen werden. An <ul>Gelehrten</ul> auch im <ul>Lande,</ul> besonders auch in <ul>Moskau</ul> wo viele gelehrte Russen besonders der <ul>Medizin</ul> auch auf eigene und der Käiserin Kosten fremde Länder besucht haben und alle Sprachen, die deutsche nicht ausgenommen sprechen, <ul>fehlt es nicht</ul> aber nur an <ul>Eltern</ul> und <ul>Kindern</ul> die ihre tausend und über tausendjährige Vorurtheile überwinden.
-<line type="empty" />
-<line type="break" /><align pos="center">**</align>
-<line type="empty"/>
+<line type="break" /><align pos="center">***</align>
 <line tab="1"/>Ich habe Pappa von dem neuen Projekt einer <aq><ul>Polyglotta</ul></aq> oder allgemeinen <ul>Bibelübersetzung</ul> in alle Sprachen mit stehenden Pressen zum Besten der Armen – geschrieben, welcher Vorschlag hier im <ul>Senat</ul> – durchgedrungen. Dieser Brief importirt mir also – imgleichen von einer französischen <ul>Zeitung</ul> die ich auszugeben gedenke, zur Erleichterung der allgemeinen Sprache für Rußland von der alle 44 nach Herrn Tschulkoff, als <ul>Dialekte</ul> anzusehen, welches dem schönen Geschlecht das schon Sprachen kennt, <ul>spielend</ul> zu beweisen mich getraue. Zugleich werden einige Fragmente der <ul>Geschichte,</ul> zu der ich gesammlete <ul>Materialien</ul> nicht bekannt machen darf, des allgemeinen <ul>Vaterlandes,</ul> und Auszüge aus <ul>Herrn Tschulkoffs Handelsgeschichte</ul> und den neusten Handelsverordnungen, mehr <ul>dem Sinn </ul>der Gesetze nach als dem todten Buchstaben zum Besten der Landekonomie und des <ul>innern Handels auf Flüssen,</ul> diese Blätter vielleicht auch in Liefland <ul>begehren</ul> machen wo doch beinahe in jedem feineren Hause irgend eine Französinn oder Hofmeister ist (der kein <ul>Lauffer</ul> war) und Französisch wenigstens gelesen wird. Sollte unsrer theurer Altgens bey <aq>Consistorial</aq>geschäften sich seines Sohnes nicht erbannen und mein langes Geschmier etwa von Bruder Carl vorlesen lassen? Die Herrn Erzieher des Menschengeschlechts und die Theologischen Krittler und Zänker, welche aus <ul>Tag Nacht,</ul> aus <ul>Erdichtungen Wahrheit</ul> und aus Wahrheit Lüge machen möchten, nur um zu <ul>disputiren</ul> und Recht zu haben ohn zu wissen <ul>was sie eigentlich wollen,</ul> werden mir verzeihen, daß ich bey den <ul>unendlichen Schrauben</ul> der sogenannten Gewissens und Ehrgerichte, an meinen <ul>Vater selbst Zuflucht</ul> nehme und mir seinen Väterlichen Seegen ausbitten muß – welches zu einem neuen Jahr (mit der innigsten Reue über alle meine auch in Liefland begangenen Fehler, die ich aus dem was mir von seinen Briefen übrig geblieben, die vielleicht aus guter aber irrender Meynung ein Freund von mir ohne mein Wissen verbrannt hat, noch itzt ersehe) mir eine ganz neue und andere Existenz schaffen wird. Ich fürchte nur daß die Briefe <ul>nicht eher</ul> in des Derpischen Bruders als in Eure Hände lieben Geschwister! gerathen, deswegen ich eins und das andere davon hier einführe, das wichtigste aber diesem Briefe nicht anvertrauen kann, welches meine ganze irdische und <del>vielleicht</del> <ul>zukünftige Existenz</ul> betrift. Ich glaube bemerkt zu haben daß meine Rigischen Geschwister über diesen Punkt weit einsichtvoller und menschenfreundlicher denken, als die andem deren Herz umzulenken ich dem lieben Gott allein überlassen muß, weil ich kein Herzenskündiger bin. Vielleicht hat eine Lecture aus ganz verschobenen Gesichtspunkten und allzu rasche Schlüsse die durch eine alte liefländische Dame die taub war und über Pieskau nach Derpt zurükkehrte, dazu beigetragen – worunter ich allein am meisten und unsäglich leiden mußte, da diese Schlüsse sehr thätig und wirksam würden. Mit einem Worte, ich konnte und durfte mich mit keiner Liefländerinn verbinden.
-<line type="empty"/>
-<line type="empty"/>
-<line type="empty" />
 <line type="break" /><address>
 <sidenote pos="bottom" page="2" annotation="am unteren Rand, spiegelverkehrt">Herrn Johann Christian Lenz. Sekretär des K. Gouvernements und Rath in <aq>Riga</aq></sidenote></address>
 </letterText> 
 
-<letterText letter="372"> <align pos="right">d. 11ten Jun. 1791</align>
-<line type="empty" />
+<letterText letter="372"><page index="1"/> <align pos="right">d. 11ten Jun. 1791</align>
 <line type="break" /><align pos="center">Mein zärtlichgeliebtester Bruder!</align>
 <line type="empty"/>
 <line type="empty"/>
 <line tab="1"/>Wahrscheinlich wirst du den Brief von deinem Freunde (ja wie hieß er?) der mit dem General Beklemscheff nach Orloff und Kursk reisete, und meinen Einschluß bereits erhalten haben. Wie erfreute mich diese Begebenheit und wie überraschend war mir dein Stillschweigen
-<line type="empty"/>
 <line tab="1"/>Allein mein Bruder! ich habe seit der Zeit vom Herrn A– – werinn noch keine Zeile oder Nachricht erhalten, weiß auch nicht wie er sich in der neuen Station gefallt. Seine artige höfliche Freundschaftsbezeigungen liessen mich hoffen, er werde auch aus der Nachbarschaft deinen Bruder nicht hindansetzen da er sich einen so warmen Freund von dir sagte.
-<line type="empty"/>
 <line tab="1"/>Sollte Dir in Riga, oder unserm theuren Greise nicht ein Offizier der französischen Truppen bekannt worden seyn mit welchem ich durch Herrn Lavaters Vermittlung in Verbindung stand. Es schien, er suchte bey dem Hause des ehemaligen Feldmarschall Münnich, das in der Gegend von Dorpt und Ringen wie du weißt, Vornehme Verwandte hat,<fn index="3"><anchor>*</anchor></fn> ein Attachement vielleicht bey den Truppen die zur Bewahrung des Canals von Ladoga, imgleichen des zu Wischnei Wolotschok, (wo die neuen Städte Kreszi u. s. f. errichtet sind) bestimmt sind und würde, da er von dem Hofe begünstigt, und in Frankreich <ul>aus einer der besten Familien ist,</ul> durch seine nahe Verwandschaft mit dem hiesigen <ul>Direktor der Bezkischen Erziehungsanstalten</ul> (denn mit einem Wort, es ist sein Bruder) den Absichten der grossen Monarchinn zur Beförderung des innerlichen Handels und neuer Universitäten am zuverlässigsten entsprechen
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="1" annotation="am linken Rand"><fn index="3"><anchor>*</anchor></fn>Graf Solmes General Berg u. s. w. auch die Igelströhms</sidenote>
 <page index="2"/>
-<line type="empty"/>
 <line tab="1"/>Ich hätte gern hierüber an den Bruder in Derpt darüber geschrieben, wenn nach dem Innhalt seines letzten Briefes zu urtheilen, überhaupt es rathsam wäre, Feuer zu Pulver zu thun, so wenig scheint er mich – und ich ihn zu verstehen. Vielleicht wenn Personen aus den Gegenden wo ich gelebt und bekannt und unbekannt war, durch Ehre und Schande, gute und böse Gerüchte gieng, öffterer mit ihm zusammen kämen, würde er, so wie vielleicht alle seine Freunde und Bekannten mich zu <ul>miß</ul>kennen aufhören. Was man schrieb und drukte war nicht immer das was an der Sache selbst war. Ich habe ihn nie zu lieben und zu schätzen aufgehört – allein es dünkte mich, Haussorgen machten ihn ein wenig zu mißmuthig und heftig in allen seinen Briefen und andern Äusserungen gegen mich und wiesen ihm alles was ich that aus einem falschen Lichte. Das hat so seyn müssen– und nun genug davon. Wenn ich reich wäre, würde von Herzen gern seinen Kindern helfen, wenigstens worinne durch mein Vorwort bey solchen Personen dienen kann, die mehr als ich vermögen, werde niemals an meiner Brudertreue was ermangeln lassen.
-<line type="break"/>
 <page index="3"/>
-<line type="break"/>
 <line tab="1"/>Es ist nun das 10te Jahr daß ich in Moskau an einem Mißverständnisse <ul>arbeite das ich nicht überwinden kann,</ul> und das wie ich neulich – wirst du lächeln, oder auch zweiffeln? wirklich wunderbare weise – in meinem Pult nach alten Puppieren krabelte – mir <ul>durch ein Blatt</ul> das ich den drey Fräulein <ul>Beharrn,</ul> die aus dem Lande nach Zweybrük giengen über eine Theaterpiése eines Freundes bey Hofe zustellte, ganz besonders aufgieng. Dieses waren 3 Schwestern, an die ich die gewöhnlichen Floskeln verschwendete und die wahrscheinlich von diesem Wisch Gebrauch gemacht. Es war in Petersb. in einem Hause das viel Verbindungen hat – alle diese Umstände machten mich erst nach vielen Jahren aufmerksam; besonders da ihr Vater in Moskau einer der ersten Rechtsgelehrten gewesen, wo man gern allerley kleine Quinten drehen mag, um zu zeigen daß man den Justinian gelesen. Ich kann vor Gott bezeugen daß ich an nichts arges gedacht habe; ausser meinem Freunde Vergnügen zu machen
-<line type="empty"/>
 <line tab="1"/>Doch genug davon und von der Art wie in Rußland <insertion pos="right">(Liefland)</insertion> gelesen wird. Habe die Gutheit mir nur recht umständlich zu melden, was unser lieber Vater macht, ob Mama noch munter ist, ob sie Freunde haben die sie besuchen ob du offt bey ihnen bist, ob unsere Schwester Elisabeth nicht wieder an eine Heurath denkt und das dasige <aq>Liceum</aq> noch keinen neuen Regenten erhalten?
-<line type="empty"/>
 <line tab="1"/>Ich bitte knieend alle lieben Geschwister, <ul><ru>хpиcтa paди</ru>, mich</ul> mit allem was Schulen und <ul>Erziehung</ul> betrift zu verschonen.<fn index="3"><anchor>*</anchor></fn>
-<line type="empty"/>
-<line tab="1"/>
 <sidenote pos="left" page="3" annotation="am linken Rand, vertikal"><fn index="3"><anchor>*</anchor></fn>Ist dir niemals eine Familie Grefnitz aus Oesel bekannt geworden. Es war hier ein Obristl. von diesem Namen, den ich allemal mit einem v. Krefting verwechselte mit dem ich zusammenstudiert habe. Er hatte einen sehr artigen Gesellschafter aus Sachsen bey sich, aber aus <ul>Chur</ul>sachsen aus Leipzig, der ein Jurist war.</sidenote>
-<line type="break"/>
 <page index="4"/>
-<line type="empty"/>
+
 <line tab="1"/>Da ich hoffentlich deinen Freund in dessen Nachbarschafft ein besonders lieber Gönner von mir Güter hat, auch einmal sehen werde, so gestehe dir gern lieber Bruder daß mich gegenwärtig in einiger Verlegenheit befinde. Die letzthin aus eurer Güte mir übermachten 25 Rbl. mußte zu einem Kleide verwenden und bin seit der Zeit nicht wenig an Leib und Seel angegriffen worden von allerley wunderlichen Sorgen; so daß dein Freund mich auch vielleicht ein wenig melankolisch dir abgeschildert haben wird. Sollte der Ueberbringer eines langen weitläuftigen Briefes, aus <aq>Kadom,</aq> ein geborner Curländer der über Pieskau reisete, sich auch wohl bey dir eingefunden haben? Er verreisete ohne daß ich ihm Reisegeld ausmitteln konnte, und es war ziemlich kalt, daß ich für ihn viel Unruhe gehabt. Allein ob derselbe in Liefland oder Pieskau geblieben, ist mir unbekannt. Ob er mit dem Bruder in Derpt gesprochen ist noch zweiffelhafter. Und doch hätte es gewünscht weil ein hiesiger sehr artiger junger Russischer Gelehrter der aber verheurathet ist und ein <aq>Dictionnär</aq> herausgiebt, einige Offiziere hier beherbergte, die dahin giengen um die Aufsicht über ein <aq>Gymnasium</aq> zu übernehmen. Man sagt die Monarchin werde dasselbe in eine hohe Schule verwandeln. – Sollte Papa von dem <ul>neuen Bibelwerk meine Ideen gut gefunden haben</ul> und sich Unterschriften auch in Liefland hoffen lassen? Doch ich breche hier ab um Dich und deine würdige Gemalinn unbekannt aufs zärtlichste zu umarmen, noch immer verfolgt vom <ul>Asmodi</ul> der <ul>Göthen </ul>und allen seinen Freunden einen <ul>Junoneyd </ul>scheint geschworen zu haben. Aber auch betrübt
 <line type="break"/><align pos="center">Dein treuer Bruder</align>
 <line type="break"/><align pos="right">JMRLenz</align>
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="4" annotation="am linken Rand, vertikal">In der Woche der hoffentlichen Eröfnung eines <aq>depot de litterature.</aq></sidenote>
 </letterText> 
 
-<letterText letter="373">
+<letterText letter="373"><page index="1"/>
 <line tab="1"/>Tausend Dank für die Note meinem werthen Herrn Schottländer, woraus wie aus kleinem vermoderten Saamkömgen der so aus Nichts alles macht, viele Frucht schaffen kann. Nun in <aq>puncto</aq> der Musik der Gandarwen welches im Orient die Musik und der Taktschlag himmlischer Harfen war die die gewöhnlichen Ohren nicht berühren.
 <line type="break"/><align pos="center">– –</align>
-<line type="break"/>
 <line tab="1"/>Sie gehen nie in die Bosen oder Börse oder Gostinnaja und wissen auch wohl nicht wie manchen dieser armen Leute zu Muth seyn mag, die theure Zobel zu 100 150 Rubel mit grossen <ul>Reisekosten</ul> in Sibirien aufkauffen und nicht wissen wie ihrer loß zu werden, denn sie stehen! Arme Kaufleute! wie Pferde auf einem Flek und warten daß man sie sucht. Durch <aq>colporteurs</aq> werden sie sie auch schwerlich in der Stadt los werden.
-<line type="empty"/>
 <line tab="1"/>Ich habe die Akten eines seltsamen Processes unter der Feder in Absicht der liefländischen und Pieskauischen Universitäten die noch blosse Wesen der Einbildungskraft sind, unterdessen im Cabinet schon ihre Wirklichkeit haben, wenn von unsrer Seite nur ein <ul>wenig</ul> – ein klein wenig Hebammenkunst angewandt wird. Sie sind niemals in Derpt auf dem Jahrmarkt gewesen edler Freund? Und wissen also nicht, daß dort Kaufleute aus Ost und West 4 Wochen nach Weyhnachten ausstehen. Daß ich dort aus Frankreich und der Schweitz und Italien Kaufleute gefunden erinnere mich aus Kinderjahren. Nun steht unser Zobelverkäuffer hier u bethet zu Gott und niemand erhört ihn weil man seine Sprache nicht kennt. Er machte eine Reise die ihm mit eignen Pferden (nach Ihrer Ausrechnung wieviel?) auf der Post nach der Tage 16 Rubel kostete. Vielleicht wäre ihm Hin und Rükreise mit 30 Rbln. über und über bezalt denn Sie wissen wie Russen reisen
-<line type="empty" />
-<line type="break" />
 <sidenote pos="left" page="1" annotation="am linken Rand, vertikal">ich habe Karamsin davon benachrichtigt u im Enricoffschen Haus</sidenote>
 <page index="2"/>
-<line type="break"/>
 <line tab="1"/>Würde nun aber der Fürst Kurakine und eine gewisse Gräfin und eine gewisse Fürstin der <aq>Academie</aq> in Peterburg ihm wohl <ul>garantieren</ul> daß er auf dieser Reise wenigstens 5 Zobelpelze verkauft, ehe die Liefländer sie aus <aq>Canada</aq> u von den <aq>Americanern</aq> suchen, ausser was er fürs Frauenzimmer absetzt, die Kragen, Besätze p von Zobel tragen. Sie kennen aber Mitscherlich nicht, den Buchhändler? Und hier wären junge Herrn Uebersetzer und Schriftsteller genug ihm einen Laden in Derpt zu formiren mit Uebersetzungen Journälen u. Auszügen! Unser Zobelhändler nähme also auch Bücher mit für <ul>Mitscherlich,</ul> damit, wenn durch die Correspondenz des hiesigen Mitropoliten und der – sehr <ul>gelehrten</ul> Mitglieder der hiesigen Theol. Fakultät – in Saikonospaß mit dem Rigischen Erzbischoff <ul>Innokentii</ul> Zutrauen zwischen Deutschen und Russen herauskommt, die Fürstin <ul>Daschkoff </ul>eine <ul>gelehrte Gesellschaft</ul> des Dörptschen Adels stiftete, die eine deutsche und Russische Typografie nach Pieskau aus Oberpalen <ul>vermittelten</ul> und ans statt ihre Kinder mit unsäglichen Kosten 1000 Meilen weit hinaus zu schiken, dort <ul>Gelehrte</ul> zu Professoren mit Kostgängern anpflanzte – damit sage ich diese Liefländischen Herrn die 100 Rbl auf eine Charte setzen, sich dort wenigstens mit einem anständigen <ul>Pelz</ul> weisen können.
-<line type="empty"/>
 <line tab="1"/>Nun ist es lustig mit meinem Proceß mit den dasigen schönen Damen verheuratheten und nicht verheuratheten, die Catholisch thaten und nicht heurathen durften damit sie ihre geistlichen Stiften nicht verlören. Sie dürfen glüklich itzt von der Sandbank abstossen und zu ihrer Tante der Generalin bei der Flotte nach Peterb. reisen um sich mit den Offizieren des Cadettenkorps zu verheurathen, weil zu vermuthen steht, daß auch Liefländer aus dem Corps nach Pieskau reisen werden ihre Studien dort zu vollenden.
-<line type="empty" />
-<line type="break" />
-<sidenote pos="left" page="2" annotation="am linken Rand, vertikal">Das sind 5–600 Rubel <aq>profit.</aq></sidenote>
-<line type="empty" />
 <line type="break" />So giebt Gott Sieg und heut ein Bruder Dero aufrichtiger Diener
-<line type="empty" />
 <line type="break" /><align pos="right">JMRlenz.</align>
+<sidenote pos="left" page="2" annotation="am linken Rand, vertikal">Das sind 5–600 Rubel <aq>profit.</aq></sidenote>
 </letterText> 
 
-<letterText letter="374"><align pos="right">d. Jenner 1792.</align>
+<letterText letter="374"><page index="1"/><align pos="right">d. Jenner 1792.</align>
 <line type="break"/><align pos="center">Hochwolgebohrner Herr
 <line type="break"/>insonders hochzuverehrender Gönner</align>
 <line type="empty"/>
 <line type="empty"/>
-<line tab="1"/>Ich habe Russische Zobelhändler aufgesucht, um sie aufzumuntern, eine Reise nach Dörpt zu übernehmen, da ich weiß, daß der zahlreiche dasige Adel in der h.3. Köngismesse sich sonst mit Pelzwerk von Frankreich aus Canada versieht und ich nicht begreiffe, warum ein solcher Handel nicht mit Kaufleuten aus Moskau zu schliessen wäre. Allein ich ward krank über diese Jagd und da mir das Ausgehen durch heftige Schmerzen gewehrt blieb, so glaubte wenigstens durch einige Zeilen der Erinnemng genug zu thun, welche von Ew. Hochwolgeb. ersten Bekanntschaft auf der Schule in fremde Länder mitnahm und wo ich nicht irre auf einem Conzert im Löwensternschen Hause so überraschend angenehm in einem Jahrmarkt zu erneuren die Ehre hatte. Vielleicht reiset einer unsrer hiesigen holländischen Kaufleute hinüber und nimmt diese Waare mit sich; es war mir hauptsächlich daran gelegen, dem Liefländischen Adel welcher wie man mir gesagt, von der Akademie der Wissenschaften Winke erhalten, daß die Monarchinn entweder in Dörpt oder in Pleskau, wo die Ewst und Welika sich mit der Toropa vereinigen eine hohe Schule errichten wolle, einheimischen Adel in den Landessprachen und Rechten unterrichten zu lassen, eh er die Fremde besucht, etwa <ul>zur Einweyhung</ul> eines neuen Gebäudes, wie der <ul>Domantische</ul> Zauberpallast eines verwünschten Prinzen in Pieskau seyn soll, Vorschub zu thun. Man sprach von einer Drukerey, die aus Oberpalen hieher versetzt werden sollte, und in der That wäre Herr Past. Hupel, der sich so verdient ums Vaterland gemacht, nach der Beschreibung Hn. Bakmeister in Petersb. von der alten Akademie zu Derpt, der einzige Gelehrte der <ul>werth</ul> wäre, an der <ul>Stiftung</ul> einer Universität Teil zu nehmen, da es ihm, wenn er sich etwa im Sommer oder Wintersemester dort aufhalten wollte, an einem Adjunkt in Oberpalen oder auch in Pieskau oder Derpt nicht fehlen sollte.
-<line type="break"/>
-<page index="2"/>
-<line type="break"/>
-<line tab="1"/>Es ist hier ein Fürst Gholizin der in Liefland Güter hat und von seiner Bekanntschaft weiß ich zwey liebenswürdige Gelehrte aus der Schweitz, die vielleicht gegen vortheilhafte Anträge aus Liefland nicht unempfindlich seyn würden. Im Vorbeigehen <aq>„oserois je bien demander, mon cher Baron, si Vous aviez quelques Iiaisons avec une certaine Dame Douairière, Soeur de Ia Generale Kurganoffsky de Ia flotte à S. Petersbourg. Sa Soeur, comme elle ne doit pas ignorer, s’est donné une superbe maison et je crois que Me. d’A ** feroit très bien, de lui confier une ou deux de ses filles, dont on m’a dit, qu’une avoit un promis, Officier au corps des Cadets, et que j’ai eû I’honneur de voir chez Me. de K**. Le scrupule comme si son fief de Ia couronne courroit risque en eloignant une de ses filles, cesseroit bien vite parceque ces sortes de donations sont pour Ia vie de Ia Douairière. De plus, ce jeune officier dont depuis mon sejour ici je n’ai Ia moindre nouvelle, se trouvera probablement encore au corps, oú une 20taine de <ul>Livoniens</ul> sont élevés aux depens de I’Imperatrice. Ces Livoniens en sort<ul>ant du</ul> corps, pourro<ul>ient con</ul>tinuer leurs études <ul>à Plesc</ul>ou, et Mons. de Pr<ul>attje se</ul> faire un merite distingué, de les accompagner.“</aq>
 <line type="empty"/>
+<line tab="1"/>Ich habe Russische Zobelhändler aufgesucht, um sie aufzumuntern, eine Reise nach Dörpt zu übernehmen, da ich weiß, daß der zahlreiche dasige Adel in der h.3. Köngismesse sich sonst mit Pelzwerk von Frankreich aus Canada versieht und ich nicht begreiffe, warum ein solcher Handel nicht mit Kaufleuten aus Moskau zu schliessen wäre. Allein ich ward krank über diese Jagd und da mir das Ausgehen durch heftige Schmerzen gewehrt blieb, so glaubte wenigstens durch einige Zeilen der Erinnemng genug zu thun, welche von Ew. Hochwolgeb. ersten Bekanntschaft auf der Schule in fremde Länder mitnahm und wo ich nicht irre auf einem Conzert im Löwensternschen Hause so überraschend angenehm in einem Jahrmarkt zu erneuren die Ehre hatte. Vielleicht reiset einer unsrer hiesigen holländischen Kaufleute hinüber und nimmt diese Waare mit sich; es war mir hauptsächlich daran gelegen, dem Liefländischen Adel welcher wie man mir gesagt, von der Akademie der Wissenschaften Winke erhalten, daß die Monarchinn entweder in Dörpt oder in Pleskau, wo die Ewst und Welika sich mit der Toropa vereinigen eine hohe Schule errichten wolle, einheimischen Adel in den Landessprachen und Rechten unterrichten zu lassen, eh er die Fremde besucht, etwa <ul>zur Einweyhung</ul> eines neuen Gebäudes, wie der <ul>Domantische</ul> Zauberpallast eines verwünschten Prinzen in Pieskau seyn soll, Vorschub zu thun. Man sprach von einer Drukerey, die aus Oberpalen hieher versetzt werden sollte, und in der That wäre Herr Past. Hupel, der sich so verdient ums Vaterland gemacht, nach der Beschreibung Hn. Bakmeister in Petersb. von der alten Akademie zu Derpt, der einzige Gelehrte der <ul>werth</ul> wäre, an der <ul>Stiftung</ul> einer Universität Teil zu nehmen, da es ihm, wenn er sich etwa im Sommer oder Wintersemester dort aufhalten wollte, an einem Adjunkt in Oberpalen oder auch in Pieskau oder Derpt nicht fehlen sollte.
+<page index="2"/>
+<line tab="1"/>Es ist hier ein Fürst Gholizin der in Liefland Güter hat und von seiner Bekanntschaft weiß ich zwey liebenswürdige Gelehrte aus der Schweitz, die vielleicht gegen vortheilhafte Anträge aus Liefland nicht unempfindlich seyn würden. Im Vorbeigehen <aq>„oserois je bien demander, mon cher Baron, si Vous aviez quelques Iiaisons avec une certaine Dame Douairière, Soeur de Ia Generale Kurganoffsky de Ia flotte à S. Petersbourg. Sa Soeur, comme elle ne doit pas ignorer, s’est donné une superbe maison et je crois que Me. d’A ** feroit très bien, de lui confier une ou deux de ses filles, dont on m’a dit, qu’une avoit un promis, Officier au corps des Cadets, et que j’ai eû I’honneur de voir chez Me. de K**. Le scrupule comme si son fief de Ia couronne courroit risque en eloignant une de ses filles, cesseroit bien vite parceque ces sortes de donations sont pour Ia vie de Ia Douairière. De plus, ce jeune officier dont depuis mon sejour ici je n’ai Ia moindre nouvelle, se trouvera probablement encore au corps, oú une 20taine de <ul>Livoniens</ul> sont élevés aux depens de I’Imperatrice. Ces Livoniens en sort<ul>ant du</ul> corps, pourro<ul>ient con</ul>tinuer leurs études <ul>à Plesc</ul>ou, et Mons. de Pr<ul>attje se</ul> faire un merite distingué, de les accompagner.“</aq>
 <line tab="1"/>Verzeihen Ew. Hochwolgeb. daß ich alle Mißverständnisse zwischen Rußland und Liefland auf die Rechnung alter Chronikenschreiber und Schulfüchse setze. Sie waren nicht viel besser als die Romanschreiber, die bei den häuffigen Pressen in Deutschland sich wohl oft der seltsamen Anwendungen ihrer Rittergeschichten von der runden Tafel nicht versehen würden. Die Schwürigkeiten der Sprache, die durch Sitten, Gebräuche, Speisen sich gern möchten <ul>errathen</ul> lassen, wenn sie sich Feier in der
 <page index="3"/>Aussprache zu begehen scheuen, machen das einzige Mißverständniß. Die Russische Geistlichkeit in Petersburg versteht sich sehr wohl mit der deutschen und wenn Drukereyen in beiden Sprachen oder die Uebersetzung des nehmlichen Buchs in beyde – den Weg öfneten, so würde man bei dem Russen des nehmlichen Nervensystems und Blutumlaufs, auch die nehmlichen Gesinnungen antreffen.
-<line type="empty"/>
 <line tab="1"/>Ich befinde mich ein wenig in einer kritischen Lage, welche meinen lieben Brüdern und Schwestern nicht unbekannt seyn kann. Man hält mich hier überall für reich – da ich doch einen Vater habe, der bereits über dem Grabe schwebt, eine Wittwe als Tochter mit ihren Kindern bei sich hat oder in Petersburg unterstützt und von den starken Familien meiner übrigen wohlversorgten Geschwister gleichfalls in Anspruch genommen wird. – Es ist schwürig, mit meinen Geschwistern Briefwechsel zu führen, denn da ein Prof. in Giessen mir die Ehre erwiesen mich mit dem Romanschreiber – der aber in andem Aemtern dabei steht – Hn. Göthe in eine Liste zu setzen, so suchen und finden sie in allen meinen Briefen nichts als unverständliche Worte Poesie und Roman. Der Himmel wolle ihnen das wohlbekommen lassen und den Buchhandel in Liefland vermehren, damit sie auch den berühmten Rousseau vom Fuß der Pedemontischen Gebirge zur Ehre unsrer Nation in unsrer Sprache lesen können. Meine ziemlich ernsthafte Krankheit setzt dismal allen launigten Nebenausschielenden Anspielungen Grenzen, unser Leben ist freilich auf diesem Erdball nur allzuoft wunderbarer, als es sich das Hirn der Dichter und Leser von Gedichten vorstellen mag. – – Ew. Hochwolgeb. Wollen mir meine Geschwätzigkeit als einem Kranken und zum Jahrmarkte verzeihen da man gern viel spricht und ich hoffe, daß auch mein Bruder und Geschwister das Glük haben werden, denenseihen aufzuwarten. Man spricht von neuen Magazinen die einige reiche Entrepreneure von Metallgruben an verschiedenen Plätzen des Reichs errichten werden, welches
 <page index="4"/>da man in Liefland nur Branntwein nach Permien und Casan schikt, leicht zu einem solidem Handel mit Brod und Gerstensaft Gelegenheit geben könnte, woran es in den Berggruben zu mangeln scheint. Der Russische Tressenhandel würde z. B. nebst Kupfer zu Branntweinkesseln und Eisen zu andern Kesseln, gegen Lieferungen an Grütze, Malz u. s. f. über Pleskau, Toropez und Smolensk durch Agenten sehr wohl geführt werden, und manche Weitläuftigkeiten erspahren. Ich will vom Leinwand und Strumpfhandel schweigen, der auch aus benachbarten Ländern geführt wird, und da fast halb Rußland barfuß geht, bei Vereinigung der Düna mit dem Dnepr und der Moskwa mit vielem Vortheil, nebst dasigen Lächsen und gesalzenem Fleisch gegen Sibirische Fische geführt werden könnte, die man auf dem Wasser lebend erhalten kann. Sollten die Engländer mehr Bley und Zinn einführen, daß mehr Küchengeräth angeschafft werden könnte und sich etwa ihres Plüsch und Manchesterhandels wegen in Absicht der Geistlichen mit der <ul>Krone</ul> in Verhandlungen einlassen, so würde der innere Handel auf den Liefländischen Märkten bald mehr Vergnügen machen, als selbst der entfernte. Ich breche ab um Ew. Hochwohlgeb. als ein Kranker die aufrichtige Achtung zu bezeugen, welche mir Ihr persönliches Bezeigen eingeflößt. Den Liphartischen Häusern bezeige meine Ehrerbietung gleichfalls, und den jungen von Löwenstern bitte gelegentlich beizubringen, daß ihr ehmaliger Hofmeister im Hause des D. <ul>Büsching</ul> in Berlin schon vor mehrern Jahren den Schritt gethan, den wir alle einmal machen werden und welchem in diesen Tagen auch bisweilen nahe war.
-<line type="empty" />
 <line type="break" /><align pos="right">Ew. Hochwolgebornen
 <line type="break"/>gehorsamer Diener
 <line type="break"/>JMR Lenz.</align>
-<line type="empty"/>
-<line type="empty" />
 <line type="break" />Moskau, d. 14ten Jenner 1792.
 <line type="empty" />
 <line type="break" />Hn. Postmeister Peuker wird dieser Brief wo möglich zur Bestellung ergebenst empfohlen.
 <line type="empty" />
 <line type="break" /><address>
 <line type="empty" />
-<line type="break" /><align pos="center">á Monsieur
+<line type="break" /><align pos="center"><aq>á Monsieur
 <line type="break"/>Monsieur le Baron de Stiernhielm
 <line type="break"/>possesseur des terres
-<line type="break"/>á Wasola</align></address>
+<line type="break"/>á Wasola</aq></align></address>
 </letterText> </document>
 </opus>
