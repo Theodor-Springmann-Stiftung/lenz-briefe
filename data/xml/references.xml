@@ -283,11 +283,11 @@
 
 
 		<locationDefs>
-			<locationDef index="1" name="Dorpat (Tartu)" ref="https://d-nb.info/gnd/1029285-8" />
+			<locationDef index="1" name="Dorpat [Tartu]" ref="https://d-nb.info/gnd/1029285-8" />
 
-			<locationDef index="2" name="Tarwast (Tarvastu)" ref="https://d-nb.info/gnd/115455998X" />
+			<locationDef index="2" name="Tarwast [Tarvastu]" ref="https://d-nb.info/gnd/115455998X" />
 
-			<locationDef index="3" name="Königsberg (Kaliningrad)" ref="https://d-nb.info/gnd/4031541-1" />
+			<locationDef index="3" name="Königsberg [Kaliningrad]" ref="https://d-nb.info/gnd/4031541-1" />
 
 			<locationDef index="4" name="Fort Louis" ref="https://d-nb.info/gnd/4762184-9" />
 
@@ -301,7 +301,7 @@
 
 			<locationDef index="9" name="Kehl" ref="http://d-nb.info/gnd/4030137-0" />
 
-			<locationDef index="10" name="Arensburg (Kuressaare)" ref="http://d-nb.info/gnd/4097908-8" />
+			<locationDef index="10" name="Arensburg [Kuressaare]" ref="http://d-nb.info/gnd/4097908-8" />
 
 			<locationDef index="11" name="Zürich" ref="http://d-nb.info/gnd/4068038-1" />
 
@@ -349,7 +349,7 @@
 
 			<locationDef index="33" name="Wohl auf der Reise nach Emmendingen" />
 
-			<locationDef index="34" name="Auf dem Weg von Hannover nach Kassel?" />
+			<locationDef index="34" name="Auf dem Weg von Hannover nach Kassel" />
 
 			<locationDef index="35" name="Basel" ref="http://d-nb.info/gnd/4004617-5" />
 
@@ -371,16 +371,16 @@
 
 			<locationDef index="44" name="Riga" ref="http://d-nb.info/gnd/4050042-1" />
 
-			<locationDef index="45" name="Jamburg (Kingissepp)" ref="http://d-nb.info/gnd/7853282-6" />
+			<locationDef index="45" name="Jamburg [Kingissepp]" ref="http://d-nb.info/gnd/7853282-6" />
 
 			<locationDef index="46" name="St. Petersburg" ref="http://d-nb.info/gnd/4267026-3" />
 
-			<locationDef index="47" name="Cronstadt (Kronstadt)" ref="http://d-nb.info/gnd/7612964-0" /><!--
+			<locationDef index="47" name="Cronstadt [Kronstadt]" ref="http://d-nb.info/gnd/7612964-0" /><!--
 			Ist hier das Kronstadt in Rumänien gemeint? -->
 
-			<locationDef index="48" name="Aya (Ahja)" />
+			<locationDef index="48" name="Aya [Ahja]" />
 
-			<locationDef index="49" name="Ohlershoff (Oleri)" />
+			<locationDef index="49" name="Ohlershoff [Oleri]" />
 
 			<locationDef index="50" name="Moskau" ref="http://d-nb.info/gnd/4074987-3" />
 
@@ -396,7 +396,7 @@
 
 			<locationDef index="56" name="Frankfurt am Main" ref="http://d-nb.info/gnd/4018118-2" />
 			
-			<locationDef index="57" name="Pernau (Pärnu)" ref="http://d-nb.info/gnd/4045214-1" />
+			<locationDef index="57" name="Pernau [Pärnu]" ref="http://d-nb.info/gnd/4045214-1" />
 			
 			<locationDef index="58" name="Koblenz-Ehrenbreitstein" ref="http://d-nb.info/gnd/4098580-5" />
 			
@@ -406,7 +406,7 @@
 			
 			<locationDef index="61" name="Lübeck" ref="http://d-nb.info/gnd/4036483-5" />
 			
-			<locationDef index="62" name="Vasula (Wassula)" />
+			<locationDef index="62" name="Vasula [Wassula]" />
 			
 			<locationDef index="63" name="Karlsruhe" ref="http://d-nb.info/gnd/4029713-5" />
 
