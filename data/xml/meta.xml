@@ -1376,6 +1376,8 @@
 			<sent>
 				<date when="1775-12-25">Straßburg, 25. Dezember 1775</date>
 				<location ref="7" />
+				<location ref="12" />
+				<location ref="8" />
 				<person ref="1" />
 				<person ref="12" />
 				<person ref="18" />
