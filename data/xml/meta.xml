@@ -10,8 +10,8 @@
 				<person ref="1" />
 			</sent>
 			<received>
-				<location ref="1" cert="low">oder</location>
-				<location ref="10" cert="low" /><!-- Oder Arensburg Hier zwei Orte mit cert low angeben;
+				<location ref="1" cert="low"></location>
+				<!-- Oder Arensburg Hier zwei Orte mit cert low angeben;
 				bald und kurz nach nur nach dem bekannten Datum eingeben; cert Attribute für Personen und
 				Datum ergänzen; Freitextfeld einfügen; erste 7 Briefe nochmal durchgehen; Adressenleerzeilen
 				ergänzen-->
@@ -358,7 +358,7 @@
 
 		<letterDesc letter="24">
 			<sent>
-				<date notBefore="1772-10-15" notAfter="1772-10-31">Landau, Zweite Oktoberhälfte Oktober 1772</date>
+				<date notBefore="1772-10-15" notAfter="1772-10-31">Landau, zweite Oktoberhälfte Oktober 1772</date>
 				<location ref="5" />
 				<person ref="1" />
 			</sent>
@@ -373,7 +373,7 @@
 
 		<letterDesc letter="25">
 			<sent>
-				<date notBefore="1772-10-20" notAfter="1772-08-31">Landau, Gegen Ende Oktober 1772</date><!--
+				<date notBefore="1772-10-20" notAfter="1772-08-31">Landau, wahrscheinlich Ende Oktober 1772</date><!--
 				Was ist die für "Gegen Ende Oktober" konventionelle Zeitspanne? -->
 				<location ref="5" />
 				<person ref="1" />
@@ -625,7 +625,7 @@
 				<person ref="1" />
 			</sent>
 			<received>
-				<location ref="56" cert="low">vmtl.</location>
+				<location ref="56" cert="low">wahrscheinlich</location>
 				<person ref="12" />
 			</received>
 			<hasOriginal value="true" />
@@ -786,7 +786,7 @@
 
 		<letterDesc letter="52">
 			<sent>
-				<date notBefore="1775-06-01" notAfter="1775-06-15">vermutlich Emmendingen, wahrscheinlich
+				<date notBefore="1775-06-01" notAfter="1775-06-15">Vermutlich Emmendingen, wahrscheinlich
 					Anfang Juni 1775</date>
 				<location ref="12" cert="low">vmtl.</location>
 				<person ref="1" />
@@ -1014,7 +1014,7 @@
 
 		<letterDesc letter="67">
 			<sent>
-				<date notBefore="1775-09-01" notAfter="1775-09-30">Tartu, September 1775</date>
+				<date notBefore="1775-09-01" notAfter="1775-09-30">Dorpat (Tartu), September 1775</date>
 				<location ref="1" />
 				<person ref="5" />
 			</sent>
@@ -1104,7 +1104,7 @@
 
 		<letterDesc letter="73">
 			<sent>
-				<date notBefore="1775-10-01" notAfter="1775-10-31">Straßburg, Wahrscheinlich Oktober 1775</date>
+				<date notBefore="1775-10-01" notAfter="1775-10-31">Straßburg, wahrscheinlich Oktober 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
