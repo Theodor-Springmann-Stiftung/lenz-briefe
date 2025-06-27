@@ -4905,7 +4905,7 @@
 
 		<letterDesc letter="324">
 			<sent>
-				<date when="1780-01-30">Jamburg, 30. Januar 1780</date>
+				<date when="1780-01-30">Jamburg [Kingissepp], 30. Januar 1780</date>
 				<location ref="45" />
 				<person ref="1" />
 			</sent>
@@ -5100,7 +5100,7 @@
 
 		<letterDesc letter="337">
 			<sent>
-				<date when="1780-05-20">Cronstadt, 20. Mai 1780</date>
+				<date when="1780-05-20">Cronstadt [Kronschtadt], 20. Mai 1780</date>
 				<location ref="47" />
 				<person ref="1" />
 			</sent>
@@ -5161,7 +5161,7 @@
 
 		<letterDesc letter="341">
 			<sent>
-				<date when="1780-09-26">Aya, 26. September 1780</date>
+				<date when="1780-09-26">Aya [Ahja], 26. September 1780</date>
 				<location ref="48" />
 				<person ref="1" />
 			</sent>
@@ -5177,7 +5177,7 @@
 		<letterDesc letter="342">
 			<sent>
 				<date notBefore="1780-09-01" notAfter="1780-10-31">Unbekannter Ort; nach der Abreise aus
-					Aya, wohl September/Oktober 1780</date>
+					Aya [Ahja], wohl September/Oktober 1780</date>
 				<location ref="51" cert="low" />
 				<person ref="1" />
 			</sent>
@@ -5222,7 +5222,7 @@
 
 		<letterDesc letter="345">
 			<sent>
-				<date notBefore="1780-11-01" notAfter="1780-11-30">Auf dem Weg nach Ohlershoff, November
+				<date notBefore="1780-11-01" notAfter="1780-11-30">Auf dem Weg nach Ohlershoff [Oleri], November
 					1780</date>
 				<location ref="52" />
 				<person ref="1" />
@@ -5238,7 +5238,7 @@
 
 		<letterDesc letter="346">
 			<sent>
-				<date notBefore="1780-11-26" notAfter="1780-12-26">Ohlershoff, 26. November
+				<date notBefore="1780-11-26" notAfter="1780-12-26">Ohlershoff [Oleri], 26. November
 					1780</date><!-- Da der genaue Monat unsicher ist, habe ich die Datierung als Zeitspanne
 				aufgefasst -->
 				<location ref="49" />
@@ -5255,7 +5255,7 @@
 
 		<letterDesc letter="347">
 			<sent>
-				<date when="1780-12-28">Ohlershoff, 28. Dezember 1780</date>
+				<date when="1780-12-28">Ohlershoff [Oleri], 28. Dezember 1780</date>
 				<location ref="49" />
 				<person ref="1" />
 			</sent>
@@ -5512,7 +5512,7 @@
 
 		<letterDesc letter="364">
 			<sent>
-				<date notBefore="1789-01-01" notAfter="1789-12-31">Moskau, etwa 1789</date>
+				<date notBefore="1789-01-01" notAfter="1789-12-31">Moskau, um 1789</date>
 				<location ref="50" />
 				<person ref="1" />
 			</sent>
@@ -5572,7 +5572,7 @@
 
 		<letterDesc letter="368">
 			<sent>
-				<date notBefore="1790-09-01" notAfter="1790-11-30">Moskau, etwa Herbst 1790</date>
+				<date notBefore="1790-09-01" notAfter="1790-11-30">Moskau, wahrscheinlich Herbst 1790</date>
 				<location ref="50" />
 				<person ref="1" />
 			</sent>
