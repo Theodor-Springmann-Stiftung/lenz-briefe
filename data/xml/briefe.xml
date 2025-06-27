@@ -5098,7 +5098,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="empty"/>
 <line tab="1"/>Kaufmann muß allem Vermuthen nach hieher unterwegs seyn, es sind schon Briefe für ihn da. Er hat viel Ungemachs erlitten, Seesturm u. s. f.
 <page index="3"/>
-<line type="break"/><align pos="center">
+<line type="break"/>
 <line tab="5"/>Willkommen kleine Bürgerin
 <line tab="5"/>Im bunten Thal der Lügen!
 <line tab="5"/>Du gehst dahin, du Lächlerin!
@@ -5121,11 +5121,12 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="5"/>Und blicken, wie die Sonne
 <line tab="5"/>Von der ein jeder weg sich kehrt
 <line tab="5"/>Zu blind für ihre Wonne. 
-<line type="break"/><align pos="center">x</align>
+<line type="break"/><align pos="center">☓</align>
+<line type="break"/>
 <line tab="5"/>Bis daß der Adler kommen wird
 <line tab="5"/>Aus fürchterlichen Büschen,
 <line tab="5"/>Der Welten ohne Trost durchirrt –
-<line tab="5"/>Wie wirst du ihn erfrischen!</align>
+<line tab="5"/>Wie wirst du ihn erfrischen!
 <line type="empty" />
 <line type="break" /><align pos="center">～</align>
 <line type="empty" />
