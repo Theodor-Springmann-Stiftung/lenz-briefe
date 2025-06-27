@@ -1401,7 +1401,7 @@ Tarwast den 9ten November 1767.
 <line type="break"/>Pfeffel
 <line type="break"/>in Colmar.</address>
 <line type="empty" />
-<line type="break" /><note>Empfangsnotiz Pfeffels:</note> M. Lenz
+<line type="break" /><align pos="center"><note>Empfangsnotiz Pfeffels:</note> M. Lenz</align>
 <line type="break"/>Den 13.8.br 1775.
 </letterText> 
 
@@ -2552,7 +2552,7 @@ Doch muß ich auch Straßburg Gerechtigkeit widerfahren lassen. Ich habe hier ne
 <line type="break" /><align pos="right">Frid. <ul>Müller</ul></align>
 </letterText> 
 
-<letterText letter="163"><page index="1"/><note>Empfangsnotiz Boies:</note><align pos="right"><hand ref="20">Den 26 Apr. 76.</hand></align>
+<letterText letter="163"><page index="1"/><align pos="center"><note>Empfangsnotiz Boies:</note></align><align pos="right"><hand ref="20">Den 26 Apr. 76.</hand></align>
 <line type="empty"/>
 <line tab="1"/>Vernichten Sie die Wolken Boje und wenn Sie ein oder zwey Exemplare übrig behalten so lassen Sie sie keinem menschlichen Geschöpf zu Augen kommen weil sie mir zur Schande gereichen.
 <line tab="1"/>Ich bin hier unendlich wohl. Die vorzügliche Gnade des Hofes und die Freundschaft so vieler herrlichen Geschöpfe Gottes beysammen machen mich in einem gewissen Grade seelig den nur mein eigen Herz mir verderben kann.
@@ -2841,7 +2841,7 @@ Doch muß ich auch Straßburg Gerechtigkeit widerfahren lassen. Ich habe hier ne
 <line index="9"/><tab value="3-8">Das Artillerie-Corps nicht mitgerechnet</tab> <tab value="7-8"><fn index="5"><anchor>#</anchor></fn><!-- Handelt es sich hier um ein Verweiszeichen? -->5796.</tab>
 <line index="10"/><tab value="7-8"><aq>5796 Verte</aq></tab></tabs>
 <line type="empty" />
-<align pos="center"><note>am linken Rand der ersten Seite vertikal Berechnungen von Lenz’ Hand</note></align><!-- Die Berechnungen von Lenz sind hier nicht abgebildet -->
+<align pos="center"><note>am linken Rand der ersten Seite vertikal Kalkulationen von Lenz’ Hand</note></align><!-- Die Berechnungen von Lenz sind hier nicht abgebildet -->
 <line type="empty" />
 <page index="2"/>
 <line tab="1"/>Zu Flies werd ich nächstens gehen. Worinn besteht das Schletweinische Ursystem? ists theologisch? – hier wird nichts Neues von der Art eingeführt, den Theologen hier ist die Ruhe lieb und zu dem verstehn sie das alte System noch lange nicht genug, ich denke sie würdens alsdann noch eifriger beibehalten wann sies nach seiner ganzen Spinnigkeit kennten. – ist’s politisch? bestehts in neuen Exercitien? so kann ich Dir sagen daß die Sache nicht interessant seyn kann, denn es wird bald wieder ein Ende haben, sobald eines erlernt ist kommt immer wieder ein neues auf. – ist’s ökonomisch? bestehts in der Vertheilung der Almenplätze und in der Bearbeitung derselben zum Ackerbau, so kann ich Dir sagen daß man hier fast alletage fortfährt dieselben zu versteigern. Unser Magistrat hatte bei jedem Viertel Frucht das in die Stadt kam ein gewisses Stück Geld abzufordern das jährlich ein Einkommen von 40–50000 Gulden ausmachte und da nun dies auf Königsbefehl wegfällt, so suchen sie sich durch Versteigerung der almen Plätze Ersatz. Wie sich alles das bey der Veränderung des Herrn <aq>Turgot</aq> entwickeln werde? – mag Zeit lehren.
@@ -2855,7 +2855,7 @@ davon eine Compagnie aus Grenadirs besteht, die 4 andern aus Gemeinen. Das zweit
 <line tab="1"/>Die Iris wie Du itzt wissen mußt hat Hr Spener zu Berlin in Verlag genommen und sein Comissionair in Strasburg ist Bauer &amp; Treitel. Kann also nichts mit machen, nicht Dir zeigen daß Du nicht schreiben sollst <ul>„was du draus hebst nimmst du zu erst für dich, denn</ul> etc“ Lenz laß mich machen so lang ich machen kann
 <line type="break" />
 <line type="empty" />
-<align pos="center"><note>am linken Rand der zweiten Seite vertikal Berechnungen von Lenz’ Hand</note></align>
+<align pos="center"><note>am linken Rand der zweiten Seite vertikal Kalkulationen von Lenz’ Hand</note></align>
 <line type="empty" /><!-- Die Berechnungen von Lenz sind hier nicht abgebildet -->
 <page index="3"/><line tab="1"/>Wohl bekomm Dir Dein <aq>Bucephalus!</aq> Bücher schick ich Dir keine, der Porto kommt Dich höher als sie werth sind. Shakespear und mein Homer sind hier geblieben, ich hab dem Hr. Schlosser geschrieben daß er sie haben kann, ich warte auf Antwort. Er ist aber zu Anfang des Monds nach Helvetien gereist. Die Frau Hofräthin ist allein, vielleicht komm ich hin ich werd ohn das in die Gegend kommen. Wenn’s möglich ist so abonire mich für den Merkur auf dies Jahr. Hier ist alles voll Sehnsucht.
 <line tab="1"/>Hastu Lenz die Verse gelesen die Lavater der Frau von Oberkirch auf ihre Copulation geschickt hat ohne Unterschrift des Namens, die sind herrlich ich will suchen eine Copie davon zu kriegen. Sie sagte sie könnten nicht an sie adresirt seyn.
@@ -3231,7 +3231,9 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <sidenote pos="right" page="4" annotation="rechts, um 90 Grad zur Adresse gedreht">Bitte mir alles aufs bäldeste zu schicken <line type="break" />Um die Wäsche bitte aufs eheste</sidenote>
 </letterText> 
 
-<letterText letter="200">ich geh aufs Land, weil ich bey Euch nichts thun kann
+<letterText letter="200"><align pos="center"><note>Aus einem Brief von Anton Matthias Sprickmann an Heinrich Christian Boie
+    vom 18. Juli 1776:</note></align>
+    <line type="break"/>ich geh aufs Land, weil ich bey Euch nichts thun kann
 </letterText> 
 
 <letterText letter="201"><page index="1"/>
@@ -3254,7 +3256,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break" /><align pos="right">Dein Röderer.</align>
 <line tab="1"/>Nun noch ein paar Blicke in den <aq>Courier du bas Rhin</aq>, find ich was so kriegsts.
 <line tab="1"/><aq>Paris 9 17 Juin. On travaille en France a 15 Vaisseaux de Lign. &amp; 11 fregates. precaution pour la tournure que pourra prendre la guerre de l’Amerique. On va rifondre les ordonnances anciennes de la marine pour etablir une nouvelle discipline.</aq>
-<line tab="1"/>>Hast dann nichts so zu lesen? ists nöthig daß ich so ausschreibe? <aq>Courrier du b. Rh.</aq> kommt mein ich zu Mainz heraus.
+<line tab="1"/>Hast dann nichts so zu lesen? ists nöthig daß ich so ausschreibe? <aq>Courrier du b. Rh.</aq> kommt mein ich zu Mainz heraus.
 <line tab="1"/><aq>De Landres du 14 Juin. Du coté des Royalistes. 2 Vaisseaux de Ligne. 8 de 50 canons, 3 de 44 Fregates 7 de 32 can. 11 de 28. 4 de 24 can. 5 de 20. corvettes 3 de 18 can. 3 de 16. 4 de 12. 3 de 10. 2 de 8. Chaloupes armes 27. un brulot et une bombarde. total des batiments 82, Matelots100578. soldals de marine 2112.
 <line type="break"/>Etat des troupes nationales &amp; Etrang.
 <line type="break"/>Nat: 30700.
@@ -3317,7 +3319,6 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Oserois je vous prier Madame! d’agréér ici la continuation du Mercure Allemand avec les assurances de son plus profand respect et parfait éstime de la part de Monsieur Wieland l’auteur.
 <line tab="1"/>Si c’est de Votre permission, dequoi j’ai lieu de fort douter, que j’ai recú la copie de certaine silhouette, je ne demande pas pardon d’un silence qui seule pouvoit servir d’ expression a une reconnoissance qui comme le sujet qui l’ anime est au dessús de toute parole. Rien assurement me coute tant de peine qu’une lettre pour vous, quelqu’ingenu qu’il vous puisse paroitre un tel aveu, il n’est que trop reflechi, considerant le danger a qui je m’expose de peut étre Vous offenser.
 <page index="2"/>
-<line type="empty"/>
 <line tab="1"/>Il faut que je previenne avant d’entrer dans aucun detail de mon projetje previenne d’abord quelques doutes assez fortes peut etre pour empecher que je puisse etre Iu sans indignation jusqu’au bout de mon ouvrage. Ce sera dira ton qu’a mon plan une infinit. de villes et bourgs restera entierement sans garnisons, et que les autres memes les places les plus importantes et des frontieres n’en auront pas d’assez fortes seulement pour fournir des sentinelles encore moins pour fournir de Ia defense aux differentes parties des fortifications. Mais je supplie Monseigneur, de me preter seulement son attention jusqu’a Ia fin de ma premiere esquisse des Iegions, etje prens Ia liberte de l’assurer d’avance qu’alors je lui montrerai des mojens surs et infaillibles de vaincre tous ces obstacles ce qui seulement ici n’est pas encore le lieu d’exposer. Elle peut étre trés assurée que quelque peu que peut etre ma connoissance de Ia guerre je n’aie pas omis un seul pointsans y songer et reflechir, et que meme jene <insertion pos="top">me</insertion> sois pas abandonne a ce principe hazarde sur les anciens, que Ia defense des places ne soit pas un article aussi necessaire dans Ia guerre, que Ia disposition d’une armee pour Ia guerre ouverte en rase campagne, tant helles choses que pourroit deja etre debute la dessils constate pour la pluspart de l’ experience tant des anciens que des nouveaux. – Je me contente seulement d’allequer ici en passant ce que Je Comte de saxe dit par rapport aux magazins necessaires pour nourrir une garnison forte de trois 4 mille hommes, et Ia facilite que cela donne aux ennemis de prendre Ia ville par Ia famine. Ainsi ce n’est dorre quun vain apparreil pendant Ia paix que les gamisons aussi fortes sans <insertion pos="top">que</insertion> qu’on songe a la force principale du paysje veux dire de l’armee.
 <line tab="1"/>Le secret principal d’une bonne discipline pendant Ia paix ou tout s’assoupit l’ardeur, l’ambition, les vues, ce seroit un mouvement continuel proportioené cependant aux forces humaines, avec des points de d’un repos choisi et d’assez de d’agremens pour pouvoir exciter a se soustraire <insertion pos="top">subir</insertion> pour lui a toutes peines et fatigues imaginables. II faut enfin que le soldat soit heureux pour etre bon, qu’il oublie son esclavage et le regarde comme un arrangement necessaire quil se prescriroit lui meme sil ne lui ser etoit pas prescrit quil ait a quoi tenir pour lui sacrifier ses forces et sa vie et qu’au comble d’encouragemens il fasse toute guerre en quelque facon pour soi meme. Voila ce qui a rendu les Romains les vainqueurs du monde; voila ce qui rendroit le Roi de France le plus terrible et le plus adore roi de Ia terreparce que chaque soldat defendroit se droits comme les siens propres. Mais passons ces declamations encore trop avancees.
 <sidenote pos="left" page="2" annotation="am linken Rand">quil y soit eleve et qu il soit familiarises avec ces principes des sa jeunesse. Voila ce qui leve tout d’un coup tous les obstacles de la subordination</sidenote></aq>
@@ -3493,10 +3494,10 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="empty" />
 <line type="break" /><align pos="center"><note>Kalkulationen</note></align>
 <line type="empty" />
-<line type="break" />Les petites dearcharges dans les viles pas les grandes pertes larges 
+<line type="break" /><aq>Les petites dearcharges dans les viles pas les grandes pertes larges</aq> 
 <line type="break" />Das Zeughaus besuchen und mich nach allem erkundigen.
 <line type="break" />Ganz <nr> </nr> <nr> </nr> <nr> </nr> im Merkur. 
-<line type="break" />Unter Louis XIII. 15000 <nr> </nr> et 30000 cheraux also den 3ten Theile
+<line type="break" />Unter Louis XIII. 15000 <nr> </nr> et 30000 <aq>cheraux</aq> also den 3ten Theile
 </letterText> 
 
 <letterText letter="221"><page index="1"/><align pos="right">An Lenzen.</align>
@@ -3578,19 +3579,19 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="empty"/>
 <note>Tabelle, horizontal gespiegelt, linke Spalte</note>
 <line tab="1"/><hand ref="1">Amalia sucht im Nebel die beyden Prinzen die aus diese zu erhaschen + die aus <insertion pos="top">die fr. zu <nr> </nr> </insertion> gradwegs waren gestürzt In dem Augenblick zertheilt sich der Nebel und sie stehen vor ihr
-<line type="break"/>+ die sie für ein Bauernmädchen hielten, weil sie eben zu Kn. gekommen was der nun erfährt keuchend und schwitzend seine letzten Statuen zum Fenster hinaus warf.</hand>
+<line type="break"/>+ die sie für ein Bauernmädchen hielten, weil sie eben zu Kn. gekommen was der nun erfährt keuchend und schwitzend seine letzten Statuen zum Fenster hinaus warf.
 <line type="empty"/>
-<line tab="1"/><hand ref="1">Ach meine Kinder sagt sie. Du führst sie zu Knebel den sie alle bedauern, dem die Weiber alle abschwörten in dem Augenblick <er><nr extent="4"> </nr></er>
-<line tab="1"/>Die wohlthätige Frau sie hat ihm eine ausgesucht, deren Gestalt die fürstliche Urganda es auf sich genommen um Knebel zu schwärmen sie gibt sie ihm und zwar eben deswegen wird sie nichts weniger als Statue ihn <nr> </nr> sie auf greif ists Pandolfo <nr> </nr>nde. Die wächst dich<nr> </nr>Weib. Ge<nr> </nr> an ihn will auch ein lang den<nr> </nr> und d<nr> </nr> de. Die</hand>
+<line tab="1"/>Ach meine Kinder sagt sie. Du führst sie zu Knebel den sie alle bedauern, dem die Weiber alle abschwörten in dem Augenblick <er><nr extent="4"> </nr></er>
+<line tab="1"/>Die wohlthätige Frau sie hat ihm eine ausgesucht, deren Gestalt die fürstliche Urganda es auf sich genommen um Knebel zu schwärmen sie gibt sie ihm und zwar eben deswegen wird sie nichts weniger als Statue ihn <nr> </nr> sie auf greif ists Pandolfo <nr> </nr>nde. Die wächst dich<nr> </nr>Weib. Ge<nr> </nr> an ihn will auch ein lang den<nr> </nr> und d<nr> </nr> de. Die
 <line type="empty" />
 <note>Tabelle, nicht horizontal gespiegelt, rechte Spalte</note>
-<line tab="1"/><hand ref="1">Sobald ich nach Weymar komme mein Ding für die Herzogin ausmachen sehr vortheilhaft für Pandp. und für sie</hand>
+<line tab="1"/>Sobald ich nach Weymar komme mein Ding für die Herzogin ausmachen sehr vortheilhaft für Pandp. und für sie
 <line type="empty" />
 <line type="empty" />
 <note>Tabelle, horizontal gespiegelt, rechte Spalte</note>
-<line tab="1"/><hand ref="1">Das von der Deutschen Gesellschaft im Merkur.</hand>
+<line tab="1"/>Das von der Deutschen Gesellschaft im Merkur.
 <line type="empty"/>
-<line tab="1"/><hand ref="1"><del>Bitten Sie doch lieber Philipp daß H. Doktor in seinem Manuscript anstatt Henriette von Waldek schreibt H. von Warbek, Baron v. Warbek, und schreiben Sie es auch so ab. Es hat seine grossen Ursachen.</del>
+<line tab="1"/><del>Bitten Sie doch lieber Philipp daß H. Doktor in seinem Manuscript anstatt Henriette von Waldek schreibt H. von Warbek, Baron v. Warbek, und schreiben Sie es auch so ab. Es hat seine grossen Ursachen.</del>
 <line type="empty" />
 <line tab="1"/><del>Diese <nr> </nr> sollte der</del>
 <line tab="1"/>Milton war nun auch einmal gefallen, Newton lag auf dem Bauch als ob er noch in einer Berechnung der Geschwindigkeit der Centralkraft begriffen wäre und Locke schien sehr nachdenklich im Koth zu sitzen wie er wol zu dieser Begegnung könne gekommen seyn</hand>
