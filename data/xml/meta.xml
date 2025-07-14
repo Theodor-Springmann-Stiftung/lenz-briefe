@@ -1996,7 +1996,7 @@
 
 		<letterDesc letter="132">
 			<sent>
-				<date notBefore="1776-03-01" notAfter="1776-03-31">Straßburg, März 1776</date>
+				<date notBefore="1776-03-10" notAfter="1776-03-31">Straßburg, März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -2237,7 +2237,7 @@
 
 		<letterDesc letter="148">
 			<sent>
-				<date when="1776-04-01">Hinter Frankfurt, Anfang April 1776</date>
+				<date when="1776-04-06">Hinter Frankfurt, Anfang April 1776</date>
 				<person ref="1" />
 			</sent>
 			<received>
@@ -2281,7 +2281,7 @@
 
 		<letterDesc letter="151">
 			<sent>
-				<date notBefore="1776-04-01" notAfter="1776-04-05">Hinter Frankfurt, Anfang April 1776</date> <!--
+				<date notBefore="1776-04-06" notAfter="1776-04-05">Hinter Frankfurt, Anfang April 1776</date> <!--
 				Was ist hier die konventionalisierte Zeitspannne? -->
 				<person ref="1" />
 			</sent>
