@@ -71,7 +71,7 @@
 
 		<letterDesc letter="5">
 			<sent>
-				<date notBefore="1767-11-24">Tarwast (Tarvastu), nach 24. Januar 1768</date>
+				<date notBefore="1767-11-24">Tarwast (Tarvastu), nach dem 24. Januar 1768</date>
 				<location ref="1" />
 				<person ref="1" />
 				<person ref="7" />
@@ -358,7 +358,7 @@
 
 		<letterDesc letter="24">
 			<sent>
-				<date notBefore="1772-10-15" notAfter="1772-10-31">Landau, zweite Oktoberhälfte Oktober 1772</date>
+				<date notBefore="1772-10-15" notAfter="1772-10-31">Landau, zweite Oktoberhälfte 1772</date>
 				<location ref="5" />
 				<person ref="1" />
 			</sent>
@@ -560,7 +560,7 @@
 
 		<letterDesc letter="37">
 			<sent>
-				<date notBefore="1774-07-10" notAfter="1774-07-20">Straßburg, vor Mitte Juli 1774</date>
+				<date notBefore="1774-07-10" notAfter="1774-07-20">Straßburg, wahrscheinlich Mitte 1774</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -770,7 +770,7 @@
 
 		<letterDesc letter="51">
 			<sent>
-				<date notBefore="1775-06-01" notAfter="1775-06-30">Straßburg, Wahrscheinlich Juni 1775</date>
+				<date notBefore="1775-06-01" notAfter="1775-06-30">Straßburg, wahrscheinlich Juni 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -786,8 +786,7 @@
 
 		<letterDesc letter="52">
 			<sent>
-				<date notBefore="1775-06-01" notAfter="1775-06-15">Vermutlich Emmendingen, wahrscheinlich
-					Anfang Juni 1775</date>
+				<date notBefore="1775-06-01" notAfter="1775-06-15">Wahrscheinlich Emmendingen, Anfang Juni 1775</date>
 				<location ref="12" cert="low">vmtl.</location>
 				<person ref="1" />
 			</sent>
@@ -817,7 +816,7 @@
 
 		<letterDesc letter="54">
 			<sent>
-				<date notBefore="1775-06-01" notAfter="1775-06-30">Straßburg, Wahrscheinlich Juni 1775</date>
+				<date notBefore="1775-06-01" notAfter="1775-06-30">Straßburg, wahrscheinlich Juni 1775</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1529,7 +1528,7 @@
 
 		<letterDesc letter="101">
 			<sent>
-				<date notBefore="1776-01-01" notAfter="1776-01-31">Straßburg, Wahrscheinlich Januar 1776</date>
+				<date notBefore="1776-01-01" notAfter="1776-01-31">Straßburg, wahrscheinlich Januar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1559,7 +1558,7 @@
 
 		<letterDesc letter="103">
 			<sent>
-				<date from="1776-01-21" to="1776-01-22">Straßburg, 21./22. Januar 1776</date>
+				<date from="1776-01-21" to="1776-01-22">Straßburg, 21. und 22. Januar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1649,7 +1648,7 @@
 
 		<letterDesc letter="109">
 			<sent>
-				<date notAfter="1776-02-15">Straßburg, Vor 15. Februar 1776</date>
+				<date notAfter="1776-02-05">Straßburg, Anfang Februar 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1877,7 +1876,7 @@
 
 		<letterDesc letter="124">
 			<sent>
-				<date notAfter="1776-03-14">Straßburg, Vor 14. März 1776 (empfangen am 14. März)</date>
+				<date notAfter="1776-03-07">Straßburg, Anfang März 1776 (empfangen am 14. März)</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1982,7 +1981,7 @@
 
 		<letterDesc letter="131">
 			<sent>
-				<date when="1776-03-16">Straßburg, 16. März 1776</date>
+				<date when="1776-03-16">Straßburg, Anfang März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -2147,7 +2146,7 @@
 
 		<letterDesc letter="142">
 			<sent>
-				<date notBefore="1776-03-15" notAfter="1776-03-31">Frankfurt am Main, Ende März 1776</date>
+				<date notBefore="1776-03-27" notAfter="1776-03-31">Frankfurt am Main, Ende März 1776</date>
 				<location ref="56" />
 				<person ref="1" />
 			</sent>
@@ -2178,7 +2177,7 @@
 
 		<letterDesc letter="144">
 			<sent>
-				<date notBefore="1776-03-15" notAfter="1776-03-31">Darmstadt, Ende März 1776</date>
+				<date notBefore="1776-03-27" notAfter="1776-03-31">Darmstadt, Ende März 1776</date>
 				<location ref="20" />
 				<person ref="1" />
 			</sent>
@@ -2208,7 +2207,7 @@
 
 		<letterDesc letter="146">
 			<sent>
-				<date notBefore="1776-03-15" notAfter="1776-03-31">Darmstadt, Ende März 1776</date>
+				<date notBefore="1776-03-27" notAfter="1776-03-31">Darmstadt, Ende März 1776</date>
 				<location ref="20" />
 				<person ref="1" />
 			</sent>
@@ -2223,7 +2222,7 @@
 
 		<letterDesc letter="147">
 			<sent>
-				<date notBefore="1776-03-15" notAfter="1776-03-31">Darmstadt, Ende März 1776</date>
+				<date notBefore="1776-03-27" notAfter="1776-03-31">Darmstadt, Ende März 1776</date>
 				<location ref="20" />
 				<person ref="1" />
 			</sent>
@@ -2238,7 +2237,7 @@
 
 		<letterDesc letter="148">
 			<sent>
-				<date when="1776-04-01">Hinter Frankfurt, 1. April 1776</date>
+				<date when="1776-04-01">Hinter Frankfurt, Anfang April 1776</date>
 				<person ref="1" />
 			</sent>
 			<received>
@@ -2282,7 +2281,7 @@
 
 		<letterDesc letter="151">
 			<sent>
-				<date notBefore="1776-03-28" notAfter="1776-04-05">Hinter Frankfurt, Um 1. April 1776</date> <!--
+				<date notBefore="1776-03-28" notAfter="1776-04-05">Hinter Frankfurt, Anfang April 1776</date> <!--
 				Was ist hier die konventionalisierte Zeitspannne? -->
 				<person ref="1" />
 			</sent>
@@ -2463,7 +2462,7 @@
 
 		<letterDesc letter="163">
 			<sent>
-				<date notAfter="1776-04-26">Weimar, vor 26. April 1776</date>
+				<date notAfter="1776-04-26">Weimar, Mitte April [vor dem 26. April 1776]</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2538,7 +2537,7 @@
 
 		<letterDesc letter="168">
 			<sent>
-				<date notBefore="1776-04-15" notAfter="1776-04-30">Weimar, Ende April 1776</date>
+				<date notBefore="1776-04-27" notAfter="1776-04-30">Weimar, Ende April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2568,7 +2567,7 @@
 
 		<letterDesc letter="170">
 			<sent>
-				<date notBefore="1776-04-15" notAfter="1776-04-30">Bückeburg, Ende April 1776</date>
+				<date notBefore="1776-04-27" notAfter="1776-04-30">Bückeburg, Ende April 1776</date>
 				<location ref="21" />
 				<person ref="17" />
 			</sent>
@@ -2660,7 +2659,7 @@
 
 		<letterDesc letter="176">
 			<sent>
-				<date notBefore="1776-04-03">Weimar, nach 3. April 1776</date>
+				<date notBefore="1776-04-03">Weimar, Anfang April 1776</date>
 				<location ref="8" />
 				<person ref="37" />
 			</sent>
@@ -2811,7 +2810,7 @@
 
 		<letterDesc letter="186">
 			<sent>
-				<date notAfter="1776-05-27">Weimar, vor 27. Mai 1776</date>
+				<date notAfter="1776-05-27">Weimar, wahrscheinlich Mitte Mai 1776 [vor 27. Mai 1776]</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2841,7 +2840,7 @@
 
 		<letterDesc letter="188">
 			<sent>
-				<date notBefore="1776-05-24">Weimar, kurz nach dem 24. Mai 1776</date>
+				<date notBefore="1776-05-24">Weimar, um den 24. Mai 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2871,7 +2870,7 @@
 
 		<letterDesc letter="190">
 			<sent>
-				<date notBefore="1776-05-15" notAfter="1776-05-31">Weimar, Ende Mai 1776</date>
+				<date notBefore="1776-05-27" notAfter="1776-05-31">Weimar, Ende Mai 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2961,7 +2960,7 @@
 
 		<letterDesc letter="196">
 			<sent>
-				<date notBefore="1776-06-17">Weimar, bald nach dem 17. Juni 1776</date>
+				<date notBefore="1776-06-17">Weimar, Ende Juni 1776 [bald nach dem 17. Juni 1776]</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -3114,7 +3113,7 @@
 
 		<letterDesc letter="206">
 			<sent>
-				<date notBefore="1776-05-23">Berka, nach dem 23. Mai 1776</date>
+				<date notBefore="1776-05-23">Berka, wahrscheinlich Juli [nach dem 23. Mai 1776]</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3431,7 +3430,7 @@
 
 		<letterDesc letter="227">
 			<sent>
-				<date notAfter="1776-08-13">Berka, vor dem 13. August 1776</date>
+				<date notAfter="1776-08-13">Berka, Anfang August 1776 [empfangen 13. August 1776]</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3536,7 +3535,7 @@
 
 		<letterDesc letter="234">
 			<sent>
-				<date when="1776-09-20">Weimar [tatsächlich wohl aus Kochberg], 20. September 1776</date>
+				<date when="1776-09-20">Weimar [tatsächlich wahrscheinlich aus Kochberg], 20. September 1776</date>
 				<location ref="8" cert="low" />
 				<location ref="8" cert="low" />
 				<person ref="1" />
@@ -3718,7 +3717,7 @@
 
 		<letterDesc letter="246">
 			<sent>
-				<date notBefore="1776-10-01" notAfter="1776-10-31" when="1776-10-26">Wohl Berka oder
+				<date notBefore="1776-10-01" notAfter="1776-10-31" when="1776-10-26">Wahrscheinlich Berka oder
 					Kochberg, Oktober 1776</date>
 				<location ref="14" cert="low" />
 				<location ref="30" cert="low" />
@@ -3735,7 +3734,7 @@
 
 		<letterDesc letter="247">
 			<sent>
-				<date notBefore="1776-10-01" notAfter="1776-11-30">Wohl Berka oder Kochberg,
+				<date notBefore="1776-10-01" notAfter="1776-11-30">Wahrscheinlich Berka oder Kochberg,
 					Oktober/November 1776</date>
 				<location ref="14" cert="low" />
 				<location ref="30" cert="low" />
@@ -3857,7 +3856,7 @@
 
 		<letterDesc letter="255">
 			<sent>
-				<date when="1776-11-23">Weimar [wohl Berka], 23. November 1776</date>
+				<date when="1776-11-23">Weimar [wahrscheinlich tatsächlich Berka], 23. November 1776</date>
 				<location ref="8" cert="low" />
 				<location ref="14" cert="low" />
 				<person ref="1" />
@@ -4087,7 +4086,7 @@
 
 		<letterDesc letter="270">
 			<sent>
-				<date notBefore="1777-01-24">Emmendingen, wahrscheinlich bald nach dem 24. Januar 1777</date>
+				<date notBefore="1777-01-24">Emmendingen, wahrscheinlich um den 24. Januar 1777</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>
@@ -4177,7 +4176,7 @@
 
 		<letterDesc letter="276">
 			<sent>
-				<date notBefore="1777-03-01" notAfter="1777-05-31">Schweiz, Wohl Frühjahr 1777</date>
+				<date notBefore="1777-03-01" notAfter="1777-05-31">Schweiz, wahrscheinlich Frühjahr 1777</date>
 				<location ref="36" />
 				<person ref="1" />
 			</sent>
@@ -4222,7 +4221,7 @@
 
 		<letterDesc letter="279">
 			<sent>
-				<date notBefore="1777-05-12" notAfter="1777-05-15">Schinznach/Zürich, 12.-15. Mai 1777</date>
+				<date notBefore="1777-05-12" notAfter="1777-05-15">Schinznach, 12.-15. Mai 1777</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -4344,7 +4343,7 @@
 
 		<letterDesc letter="287">
 			<sent>
-				<date notBefore="1777-06-14" notAfter="1777-06-24">Zürich, zwischen 14. und 24. Juni 1777</date>
+				<date notBefore="1777-06-14" notAfter="1777-06-24">Zürich, zwischen dem 14. und 24. Juni 1777</date>
 				<location ref="11" />
 				<person ref="1" />
 			</sent>
@@ -4737,7 +4736,7 @@
 
 		<letterDesc letter="313">
 			<sent>
-				<date notAfter="1778-06-24">Emmendingen, kurz vor 24. Juni 1778</date>
+				<date notAfter="1778-06-24">Emmendingen, kurz vor dem 24. Juni 1778</date>
 				<location ref="12" />
 				<person ref="1" />
 			</sent>
@@ -4782,7 +4781,7 @@
 
 		<letterDesc letter="316">
 			<sent>
-				<date notBefore="1778-08-01" notAfter="1778-08-12">Emmendingen, wahrscheinlich zwischen 1. und 12.
+				<date notBefore="1778-08-01" notAfter="1778-08-12">Emmendingen, wahrscheinlich zwischen dem 1. und 12.
 					August 1778</date>
 				<location ref="12" />
 				<person ref="1" />
@@ -4813,7 +4812,7 @@
 
 		<letterDesc letter="318">
 			<sent>
-				<date notBefore="1778-08-01" notAfter="1778-09-30">Weisweil, August/September 1778</date>
+				<date notBefore="1778-08-14" notAfter="1778-09-30">Weisweil, August/September 1778</date>
 				<location ref="43" />
 				<person ref="1" />
 			</sent>
@@ -4979,7 +4978,7 @@
 
 		<letterDesc letter="329">
 			<sent>
-				<date notBefore="1780-04-01" notAfter="1780-04-15">St. Petersburg, wohl Anfang April 1780</date>
+				<date notBefore="1780-04-01" notAfter="1780-04-15">St. Petersburg, wahrscheinlich Anfang April 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
@@ -5145,7 +5144,7 @@
 
 		<letterDesc letter="340">
 			<sent>
-				<date notBefore="1780-07-05" notAfter="1780-08-31">St. Petersburg, zwischen 5. Juli und Ende
+				<date notBefore="1780-07-05" notAfter="1780-08-31">St. Petersburg, zwischen dem 5. Juli und Ende
 					August 1780</date>
 				<location ref="46" />
 				<person ref="1" />
@@ -5177,7 +5176,7 @@
 		<letterDesc letter="342">
 			<sent>
 				<date notBefore="1780-09-01" notAfter="1780-10-31">Unbekannter Ort; nach der Abreise aus
-					Aya [Ahja], wohl September/Oktober 1780</date>
+					Aya [Ahja], wahrscheinlich September/Oktober 1780</date>
 				<location ref="51" cert="low" />
 				<person ref="1" />
 			</sent>
@@ -5420,7 +5419,7 @@
 
 		<letterDesc letter="358">
 			<sent>
-				<date notBefore="1788-11-04">Moskau, nach dem 4. November 1788</date>
+				<date notBefore="1788-11-04">Moskau, Ende 1788 [nach dem 4. November 1788]</date>
 				<location ref="50" />
 				<person ref="1" />
 			</sent>
@@ -5497,7 +5496,7 @@
 
 		<letterDesc letter="363">
 			<sent>
-				<date notBefore="1789-05-01">Moskau, ab Mai 1789</date>
+				<date notBefore="1789-05-01">Moskau, wahrscheinlich Mitte 1789 [ab Mai 1789]</date>
 				<location ref="50" />
 				<person ref="1" />
 			</sent>
@@ -5648,7 +5647,7 @@
 
 		<letterDesc letter="373">
 			<sent>
-				<date notBefore="1790-03-01">Moskau, ab März 1790</date>
+				<date notBefore="1790-03-01">Moskau, wahrscheinlich Mitte 1790 [ab März 1790]</date>
 				<location ref="50" />
 				<person ref="1" />
 			</sent>
