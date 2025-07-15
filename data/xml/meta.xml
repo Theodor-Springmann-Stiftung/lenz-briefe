@@ -254,7 +254,7 @@
 
 		<letterDesc letter="17">
 			<sent>
-				<date from="1772-10-02" to="1772-10-02">Weisenburg, 2. September und 2. Oktober 1772</date>
+				<date from="1772-10-02" to="1772-10-02">Weisenburg, 2. September und Landau, 2. Oktober 1772</date>
 				<location ref="6" />
 				<person ref="1" />
 			</sent>
@@ -1373,7 +1373,7 @@
 
 		<letterDesc letter="91">
 			<sent>
-				<date when="1775-12-25">Straßburg, 25. Dezember 1775</date>
+				<date when="1775-12-25">Emmendingen, 23. Dezember 1775 (Schlosser); Straßburg, 25. Dezember 1775 (Lenz); Weimar, 8. Januar 1776 (Goethe)</date>
 				<location ref="7" />
 				<location ref="12" />
 				<location ref="8" />
