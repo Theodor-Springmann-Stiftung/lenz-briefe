@@ -328,7 +328,7 @@
 
 		<letterDesc letter="22">
 			<sent>
-				<date notAfter="1772-10-15">Landau, Anfang Oktober 1772</date>
+				<date notAfter="1772-10-07">Landau, Anfang Oktober 1772</date>
 				<location ref="5" />
 				<person ref="1" />
 			</sent>
@@ -1831,7 +1831,7 @@
 
 		<letterDesc letter="121">
 			<sent>
-				<date notBefore="1776-03-01" notAfter="1776-03-07">Straßburg, Anfang März 1776</date>
+				<date notBefore="1776-03-03" notAfter="1776-03-07">Straßburg, Anfang März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1876,7 +1876,7 @@
 
 		<letterDesc letter="124">
 			<sent>
-				<date notAfter="1776-03-07">Straßburg, Anfang März 1776 (empfangen am 14. März)</date>
+				<date notAfter="1776-03-03">Straßburg, Anfang März 1776 (empfangen am 14. März)</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1951,7 +1951,7 @@
 
 		<letterDesc letter="129">
 			<sent>
-				<date notBefore="1776-03-01" notAfter="1776-03-07">Straßburg, Anfang März 1776</date>
+				<date notBefore="1776-03-03" notAfter="1776-03-07">Straßburg, Anfang März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1981,7 +1981,7 @@
 
 		<letterDesc letter="131">
 			<sent>
-				<date when="1776-03-07">Straßburg, Anfang März 1776</date>
+				<date when="1776-03-03">Straßburg, Anfang März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1996,7 +1996,7 @@
 
 		<letterDesc letter="132">
 			<sent>
-				<date notBefore="1776-03-10" notAfter="1776-03-31">Straßburg, März 1776</date>
+				<date notBefore="1776-03-01" notAfter="1776-03-31">Straßburg, März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -2326,7 +2326,7 @@
 
 		<letterDesc letter="154">
 			<sent>
-				<date notBefore="1776-04-07" notAfter="1776-04-30">Weimar, April 1776</date>
+				<date notBefore="1776-04-01" notAfter="1776-04-30">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2341,7 +2341,7 @@
 
 		<letterDesc letter="155">
 			<sent>
-				<date notBefore="1776-04-07" notAfter="1776-04-30">Weimar, April 1776</date>
+				<date notBefore="1776-04-01" notAfter="1776-04-30">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2371,7 +2371,7 @@
 
 		<letterDesc letter="157">
 			<sent>
-				<date notBefore="1776-04-07" notAfter="1776-04-30">Weimar, April 1776</date>
+				<date notBefore="1776-04-01" notAfter="1776-04-30">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2401,7 +2401,7 @@
 
 		<letterDesc letter="159">
 			<sent>
-				<date notBefore="1776-04-10" notAfter="1776-04-20">Weimar, Mitte April 1776</date>
+				<date notBefore="1776-04-15" notAfter="1776-04-20">Weimar, Mitte April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2447,7 +2447,7 @@
 
 		<letterDesc letter="162">
 			<sent>
-				<date notBefore="1776-04-07" notAfter="1776-04-30">Mannheim, April 1776</date>
+				<date notBefore="1776-04-01" notAfter="1776-04-30">Mannheim, April 1776</date>
 				<location ref="31" />
 				<person ref="35" />
 			</sent>
@@ -2477,7 +2477,7 @@
 
 		<letterDesc letter="164">
 			<sent>
-				<date notBefore="1776-04-07" notAfter="1776-04-30">Weimar, April 1776</date>
+				<date notBefore="1776-04-01" notAfter="1776-04-30">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2492,7 +2492,7 @@
 
 		<letterDesc letter="165">
 			<sent>
-				<date notBefore="1776-04-07" notAfter="1776-04-30">Weimar, April 1776</date>
+				<date notBefore="1776-04-01" notAfter="1776-04-30">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2507,7 +2507,7 @@
 
 		<letterDesc letter="166">
 			<sent>
-				<date notBefore="1776-04-07" notAfter="1776-04-30">Weimar, April 1776</date>
+				<date notBefore="1776-04-01" notAfter="1776-04-30">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2719,7 +2719,7 @@
 
 		<letterDesc letter="180">
 			<sent>
-				<date notAfter="1776-05-15">Weimar, Mai/April 1776 [spätestens Mitte Mai 1776]</date><!-- Also über
+				<date notAfter="1776-04-30">Weimar, April/Mai 1776 [spätestens Mitte Mai 1776]</date><!-- Also über
 				@notAfter? -->
 				<location ref="8" />
 				<person ref="1" />
@@ -3068,7 +3068,7 @@
 
 		<letterDesc letter="203">
 			<sent>
-				<date notBefore="1776-07-10" notAfter="1776-07-31">Berka, Juli 1776</date>
+				<date notBefore="1776-07-01" notAfter="1776-07-31">Berka, Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3113,7 +3113,7 @@
 
 		<letterDesc letter="206">
 			<sent>
-				<date notBefore="1776-07-10">Berka, wahrscheinlich Juli 1776 [nach dem 23. Mai 1776]</date>
+				<date notBefore="1776-07-01">Berka, wahrscheinlich Juli 1776 [nach dem 23. Mai 1776]</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3143,7 +3143,7 @@
 
 		<letterDesc letter="208">
 			<sent>
-				<date notBefore="1776-07-10" notAfter="1776-07-31">Weimar, Juli 1776</date>
+				<date notBefore="1776-07-01" notAfter="1776-07-31">Weimar, Juli 1776</date>
 				<location ref="8" />
 				<person ref="12" />
 			</sent>
@@ -3158,7 +3158,7 @@
 
 		<letterDesc letter="209">
 			<sent>
-				<date notBefore="1776-07-10" notAfter="1776-07-31">Weimar, Juli 1776</date>
+				<date notBefore="1776-07-01" notAfter="1776-07-31">Weimar, Juli 1776</date>
 				<location ref="8" />
 				<person ref="45" />
 			</sent>
@@ -3173,7 +3173,7 @@
 
 		<letterDesc letter="210">
 			<sent>
-				<date notBefore="1776-07-10" notAfter="1776-07-31">Berka, Juli 1776</date>
+				<date notBefore="1776-07-01" notAfter="1776-07-31">Berka, Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3233,7 +3233,7 @@
 
 		<letterDesc letter="214">
 			<sent>
-				<date notBefore="1776-07-10" notAfter="1776-07-31">Berka, Juli 1776</date>
+				<date notBefore="1776-07-01" notAfter="1776-07-31">Berka, Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3263,7 +3263,7 @@
 
 		<letterDesc letter="216">
 			<sent>
-				<date notBefore="1776-07-10" notAfter="1776-07-31">Weimar, Juli 1776</date>
+				<date notBefore="1776-07-01" notAfter="1776-07-31">Weimar, Juli 1776</date>
 				<location ref="7" />
 				<person ref="11" />
 			</sent>
@@ -3278,7 +3278,7 @@
 
 		<letterDesc letter="217">
 			<sent>
-				<date notBefore="1776-07-10" notAfter="1776-07-31">Berka, Juli 1776</date>
+				<date notBefore="1776-07-01" notAfter="1776-07-31">Berka, Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3308,7 +3308,7 @@
 
 		<letterDesc letter="219">
 			<sent>
-				<date notBefore="1776-07-10" notAfter="1776-07-31">Berka, Juli 1776</date>
+				<date notBefore="1776-07-01" notAfter="1776-07-31">Berka, Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3353,7 +3353,7 @@
 
 		<letterDesc letter="222">
 			<sent>
-				<date notBefore="1776-07-10" notAfter="1776-07-31">Straßburg, Juli 1776</date>
+				<date notBefore="1776-07-01" notAfter="1776-07-31">Straßburg, Juli 1776</date>
 				<location ref="7" />
 				<person ref="11" />
 			</sent>
@@ -3383,7 +3383,7 @@
 
 		<letterDesc letter="224">
 			<sent>
-				<date notBefore="1776-07-10" notAfter="1776-07-31">Berka, Juli 1776</date>
+				<date notBefore="1776-07-01" notAfter="1776-07-31">Berka, Juli 1776</date>
 				<location ref="14" />
 				<person ref="25" />
 			</sent>
@@ -3505,7 +3505,7 @@
 
 		<letterDesc letter="232">
 			<sent>
-				<date notBefore="1776-09-01" notAfter="1776-09-10">Berka, Anfang September 1776</date>
+				<date notBefore="1776-09-03" notAfter="1776-09-10">Berka, Anfang September 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -5068,7 +5068,7 @@
 
 		<letterDesc letter="335">
 			<sent>
-				<date notBefore="1780-04-10" notAfter="1780-04-30">St. Petersburg, April 1780</date>
+				<date notBefore="1780-04-01" notAfter="1780-04-30">St. Petersburg, April 1780</date>
 				<location ref="46" />
 				<person ref="1" />
 			</sent>
