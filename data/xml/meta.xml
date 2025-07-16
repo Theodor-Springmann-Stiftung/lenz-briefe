@@ -1831,7 +1831,7 @@
 
 		<letterDesc letter="121">
 			<sent>
-				<date notBefore="1776-03-03" notAfter="1776-03-07">Straßburg, Anfang März 1776</date>
+				<date notBefore="1776-03-02" notAfter="1776-03-07">Straßburg, Anfang März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1936,7 +1936,7 @@
 
 		<letterDesc letter="128">
 			<sent>
-				<date notBefore="1776-03-01" notAfter="1776-03-07">Straßburg, Anfang März 1776</date>
+				<date notBefore="1776-03-03" notAfter="1776-03-07">Straßburg, Anfang März 1776</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -2522,7 +2522,7 @@
 
 		<letterDesc letter="167">
 			<sent>
-				<date notBefore="1776-04-07" notAfter="1776-04-30">Weimar, April 1776</date>
+				<date notBefore="1776-04-01" notAfter="1776-04-30">Weimar, April 1776</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -3083,7 +3083,7 @@
 
 		<letterDesc letter="204">
 			<sent>
-				<date notBefore="1776-07-01" notAfter="1776-07-10">Berka, Anfang Juli 1776</date>
+				<date notBefore="1776-07-03" notAfter="1776-07-10">Berka, Anfang Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3098,7 +3098,7 @@
 
 		<letterDesc letter="205">
 			<sent>
-				<date notBefore="1776-07-01" notAfter="1776-07-10">Berka, Anfang Juli 1776</date>
+				<date notBefore="1776-07-03" notAfter="1776-07-10">Berka, Anfang Juli 1776</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
