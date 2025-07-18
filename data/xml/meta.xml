@@ -71,7 +71,7 @@
 
 		<letterDesc letter="5">
 			<sent>
-				<date notBefore="1767-11-24">Tarwast (Tarvastu), wahrscheinlich Ende Januar 1768 [nach dem 24. Januar 1768]</date>
+				<date notBefore="1767-11-24">Tarwast (Tarvastu), wahrscheinlich Ende Januar 1768 [nach dem 24. Januar]</date>
 				<location ref="1" />
 				<person ref="1" />
 				<person ref="7" />
@@ -2719,7 +2719,7 @@
 
 		<letterDesc letter="180">
 			<sent>
-				<date notAfter="1776-04-30">Weimar, April/Mai 1776 [spätestens Mitte Mai 1776]</date><!-- Also über
+				<date notAfter="1776-04-30">Weimar, April/Mai 1776 [spätestens Mitte Mai]</date><!-- Also über
 				@notAfter? -->
 				<location ref="8" />
 				<person ref="1" />
@@ -2810,7 +2810,7 @@
 
 		<letterDesc letter="186">
 			<sent>
-				<date notAfter="1776-05-20">Weimar, wahrscheinlich Mitte Mai 1776 [vor 27. Mai 1776]</date>
+				<date notAfter="1776-05-20">Weimar, wahrscheinlich Mitte Mai 1776 [vor dem 27. Mai]</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -2960,7 +2960,7 @@
 
 		<letterDesc letter="196">
 			<sent>
-				<date notBefore="1776-06-20">Weimar, Ende Juni 1776 [bald nach dem 17. Juni 1776]</date>
+				<date notBefore="1776-06-20">Weimar, Ende Juni 1776 [bald nach dem 17. Juni]</date>
 				<location ref="8" />
 				<person ref="1" />
 			</sent>
@@ -3113,7 +3113,7 @@
 
 		<letterDesc letter="206">
 			<sent>
-				<date notBefore="1776-07-01">Berka, wahrscheinlich Juli 1776 [nach dem 23. Mai 1776]</date>
+				<date notBefore="1776-07-01">Berka, wahrscheinlich Juli 1776 [nach dem 23. Mai]</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
@@ -3856,7 +3856,7 @@
 
 		<letterDesc letter="255">
 			<sent>
-				<date when="1776-11-23">Weimar [wahrscheinlich tatsächlich Berka], 23. November 1776</date>
+				<date when="1776-11-23">Weimar [tatsächlich wahrscheinlich Berka], 23. November 1776</date>
 				<location ref="8" cert="low" />
 				<location ref="14" cert="low" />
 				<person ref="1" />
@@ -5419,7 +5419,7 @@
 
 		<letterDesc letter="358">
 			<sent>
-				<date notBefore="1788-11-04">Moskau, wahrscheinlich Ende 1788 [nach dem 4. November 1788]</date>
+				<date notBefore="1788-11-04">Moskau, wahrscheinlich Ende 1788 [nach dem 4. November]</date>
 				<location ref="50" />
 				<person ref="1" />
 			</sent>
@@ -5496,7 +5496,7 @@
 
 		<letterDesc letter="363">
 			<sent>
-				<date notBefore="1789-05-01">Moskau, wahrscheinlich Mitte 1789 [ab Mai 1789]</date>
+				<date notBefore="1789-05-01">Moskau, wahrscheinlich Mitte 1789 [ab Mai]</date>
 				<location ref="50" />
 				<person ref="1" />
 			</sent>
@@ -5526,7 +5526,7 @@
 
 		<letterDesc letter="365">
 			<sent>
-				<date notBefore="1789-04-02">Moskau, wahrscheinlich 1789 [nach dem 2. April 1789]</date>
+				<date notBefore="1789-04-02">Moskau, wahrscheinlich 1789 [nach dem 2. April]</date>
 				<location ref="50" />
 				<person ref="1" />
 			</sent>
@@ -5647,7 +5647,7 @@
 
 		<letterDesc letter="373">
 			<sent>
-				<date notBefore="1790-03-01">Moskau, wahrscheinlich Mitte 1790 [ab März 1790]</date>
+				<date notBefore="1790-03-01">Moskau, wahrscheinlich Mitte 1790 [ab März]</date>
 				<location ref="50" />
 				<person ref="1" />
 			</sent>
