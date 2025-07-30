@@ -3567,8 +3567,8 @@
 
 		<letterDesc letter="236">
 			<sent>
-				<date when="1776-09-22">Straßburg, 22. September 1776</date>
-				<location ref="7" />
+				<date when="1776-09-22">Weimar, 22. September 1776</date>
+				<location ref="8" />
 				<person ref="25" />
 			</sent>
 			<received>
@@ -3583,7 +3583,7 @@
 		<letterDesc letter="237">
 			<sent>
 				<date notBefore="1776-09-01" notAfter="1776-09-30">Straßburg, September 1776</date>
-				<location ref="7" />
+				<location ref="8" />
 				<person ref="45" />
 			</sent>
 			<received>
@@ -3796,7 +3796,7 @@
 
 		<letterDesc letter="251">
 			<sent>
-				<date when="1776-11-13">Berka, 13. November 1776</date>
+				<date when="1776-11-13">Zürich, 13. November 1776</date>
 				<location ref="11" />
 				<person ref="10" />
 			</sent>
@@ -3826,12 +3826,12 @@
 
 		<letterDesc letter="253">
 			<sent>
-				<date when="1776-11-16">Berka, 16. November 1776</date>
-				<location ref="14" />
+				<date when="1776-11-16">Weimar, 16. November 1776</date>
+				<location ref="8" />
 				<person ref="26" />
 			</sent>
 			<received>
-				<location ref="8" />
+				<location ref="14" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
@@ -3905,7 +3905,7 @@
 
 		<letterDesc letter="258">
 			<sent>
-				<date notBefore="1776-11-27" notAfter="1776-11-30">Berka, Ende November 1776</date>
+				<date notBefore="1776-11-27" notAfter="1776-11-30">Berka, Ende November 1776 [empfangen 4. Dezember]</date>
 				<location ref="14" />
 				<person ref="1" />
 			</sent>
