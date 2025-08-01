@@ -656,7 +656,7 @@
 			</sent>
 			<received>
 				<location ref="7" />
-				<person ref="11" />
+				<person ref="1" />
 			</received>
 			<hasOriginal value="false" />
 			<isProofread value="true" />
@@ -1343,7 +1343,7 @@
 
 		<letterDesc letter="89">
 			<sent>
-				<date notBefore="1775-12-01" notAfter="1775-12-31">Straßburg, Dezember 1775</date>
+				<date notBefore="1775-12-01" notAfter="1775-12-31">Straßburg, Dezember 1775 [empfangen am 2. Januar 1776]</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1633,7 +1633,7 @@
 
 		<letterDesc letter="108">
 			<sent>
-				<date when="1776-02-12">Straßburg, 12. Februar 1776</date>
+				<date when="1776-02-05">Straßburg, Anfang Februar 1776 [empfangen 12. Februar]</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1648,7 +1648,7 @@
 
 		<letterDesc letter="109">
 			<sent>
-				<date notAfter="1776-02-05">Straßburg, Anfang Februar 1776</date>
+				<date notAfter="1776-02-05">Straßburg, Anfang Februar 1776 [empfangen am 15. Februar]</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1694,7 +1694,7 @@
 
 		<letterDesc letter="112">
 			<sent>
-				<date when="1776-02-20">Straßburg, 20. Februar 1776</date>
+				<date when="1776-02-10">Straßburg, Mitte Februar 1776 [empfangen am 20. Februar]</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1755,7 +1755,7 @@
 		<letterDesc letter="116">
 			<sent>
 				<date notBefore="1776-02-27" notAfter="1776-02-28">Straßburg, Ende Februar 1776 [empfangen
-					6. März]</date>
+					am 6. März]</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1771,7 +1771,7 @@
 		<letterDesc letter="117">
 			<sent>
 				<date notBefore="1776-02-27" notAfter="1776-02-28">Straßburg, Ende Februar 1776 [empfangen
-					6. März]</date>
+					am 6. März]</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1876,7 +1876,7 @@
 
 		<letterDesc letter="124">
 			<sent>
-				<date notAfter="1776-03-03">Straßburg, Anfang März 1776 [empfangen 14. März]</date>
+				<date notAfter="1776-03-03">Straßburg, Anfang März 1776 [empfangen am 14. März]</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
@@ -1911,7 +1911,7 @@
 				<person ref="29" />
 			</sent>
 			<received>
-				<location ref="1" />
+				<location ref="7" />
 				<person ref="1" />
 			</received>
 			<hasOriginal value="true" />
