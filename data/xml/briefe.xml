@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<opus> <document> 
+<opus xmlns="https://lenz-archiv.de"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://lenz-archiv.de ../xsd/briefe.xsd">
+<document> 
 
 <letterText letter="1">
 <page index="1" /><align pos="right">HochEdelgeborner Hochgelahrter Herr <aq>Secretair</aq></align>

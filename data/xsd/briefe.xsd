@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="https://lenz-archiv.de"
+    xmlns="https://lenz-archiv.de"
+    xmlns:lenz="https://lenz-archiv.de"
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="common.xsd"></xs:include>
+    <xs:include schemaLocation="textelements.xsd"></xs:include>
+    <!-- Root Element: opus -->
+    <xs:element name="opus">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="document" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Document Container -->
+    <xs:element name="document">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="letterText" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="uniqueIndexLetter">
+            <xs:annotation>
+                <xs:documentation>Pflicht: Jeder Brief hat eine eindeutige ID.</xs:documentation>
+            </xs:annotation>
+
+            <xs:selector xpath="lenz:letterText" />
+            <xs:field xpath="@letter" />
+        </xs:unique>
+
+    </xs:element>
+
+    <!-- Main Letter Text Element -->
+    <xs:element name="letterText">
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="lenz:textbase">
+                    <xs:attribute name="letter" type="xs:nonNegativeInteger" use="required" />
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
