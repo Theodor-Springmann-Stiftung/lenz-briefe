@@ -69,6 +69,13 @@
             </xs:sequence>
             <xs:attribute name="letter" type="xs:nonNegativeInteger" use="required" />
         </xs:complexType>
+        <xs:unique name="uniquePageIndex">
+            <xs:annotation>
+                <xs:documentation>Pflicht: Jede Seite hat eine eindeutige Index-Nummer innerhalb eines Briefes.</xs:documentation>
+            </xs:annotation>
+            <xs:selector xpath="lenz:page" />
+            <xs:field xpath="@index" />
+        </xs:unique>
     </xs:element>
 
 </xs:schema>
