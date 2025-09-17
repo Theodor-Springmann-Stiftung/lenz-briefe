@@ -8,10 +8,8 @@
 
     <xs:complexType name="inline" mixed="true">
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element ref="page" />
             <xs:element ref="line" />
             <xs:element ref="align" />
-            <xs:element ref="sidenote" />
             <xs:element ref="aq" />
             <xs:element ref="ul" />
             <xs:element ref="address" />
