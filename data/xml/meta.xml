@@ -1981,7 +1981,7 @@
 
 		<letterDesc letter="131">
 			<sent>
-				<date when="1776-03-03">Straßburg, Anfang März 1776 [empfangen 16. März]</date>
+				<date when="1776-03-03">Straßburg, Anfang März 1776 [empfangen am 16. März]</date>
 				<location ref="7" />
 				<person ref="1" />
 			</sent>
