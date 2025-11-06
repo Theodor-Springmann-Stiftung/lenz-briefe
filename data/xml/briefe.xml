@@ -745,16 +745,16 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 </letterText> 
 
 <letterText letter="41"><page index="1"/>
-<line tab="6"/>NachtSchwärmerey
+    <align pos="center">NachtSchwärmerey</align>
 <line type="empty"/>
 <line tab="5"/>Ach rausche rausche heiliger Wasserfall
-<line tab="5"/>Rausche die Zeiten der Kindheit zurück in mein Gedächtnis
+<line tab="5"/>Rausche die Zeiten der Kindheit zurük in mein Gedächtnis
 <line tab="5"/>Da ich noch nicht entwöhnt von deinen Brüsten
 <line tab="5"/>Mutter Natur mit dankbar gefühliger Seele
 <line tab="5"/>Dir im Schoos lag dich ganz empfand
 <line tab="5"/>Schämst du dich Wange von jenen Flammen zu brennen
 <line tab="5"/>Schämst du dich Auge, von jenen geheimen Zären
-<line tab="5"/>Jenen süssen süssesten aller meiner Zären
+<line tab="5"/>Jenen süssen süssesten alle meiner Zären
 <line tab="5"/>Wieder still befeuchtet zu werden?
 <line tab="5"/>Nein so hab ich, so hab ich die Menschheit
 <line tab="5"/>Noch in der wilden Schule der Menschen
@@ -763,41 +763,41 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="5"/>Unter die Sterne sich mischen die damals
 <line tab="5"/>Nur als freundliche Funken mich ganz glücklich
 <line tab="5"/>Ganz zum Engel lächelten.
-<line tab="5"/>Aber itzt steh ich, nicht lallendes Kind mehr,
+<line tab="5"/>Aber itzt steh ich, nicht lallendes Kind mehr
 <line tab="5"/>Itzt steh ich dar ein brennender Jüngling,
-<line tab="5"/>Blöße mein Haupt vor dem Unendlichen
+<line tab="5"/>Blösse mein Haupt vor dem Unendlichen
 <line tab="5"/>Der über meiner Scheitel euch dreht
 <line tab="5"/>Dank ihn, opfr ihm in seinem Tempel
 <line tab="5"/>All meine Wünsche mein ganzes Herz.
-<line tab="5"/>Fühle sie ganz die große Bestimmung
+<line tab="5"/>Fühle sie ganz die grosse Bestimmung
 <line tab="5"/>All diese Sterne durchzuwandern
 <line tab="5"/>Zeuge dort seiner Macht zu seyn.
-<line tab="5"/>O wenn wird er, wenn wird er der glücklichste der Tage
-<line tab="5"/>Unter allen glücklichen meines Lebens
+<line tab="5"/>O wenn wird er, wenn wird er der glüklichste der Tage
+<line tab="5"/>Unter allen glüklichen meines Lebens
 <line tab="5"/>Wenn bricht er an, da ich froher erwache
 <line tab="5"/>Als ich itzt träume – o welch ein Gedanke
 <page index="2"/>
-<line tab="5"/>Gott! – noch froher als itzt! ists möglich,
+<line tab="5"/>Gott! – noch froher als itzt! ists möglich
 <line tab="5"/>Hast du soviel dem Menschen bereitet
 <line tab="5"/>Immer froher – tausendmal tausend
-<line tab="5"/>Einen nach dem andern durchwandern und – immer froher
+<line tab="5"/>Einen nach dem andren durchwandern und – immer froher
 <line tab="5"/>O da verstumm ich – und sink in Nichts
 <line tab="5"/>Schaffe mir Adern du Allmächtiger dann! und Pulse
 <line tab="5"/>Die dir erhitzter entgegen fliegen
 <line tab="5"/>Und einen Geist der dich stärker umfaßt.
 <line tab="5"/>Herr! meine Hofnung! wenn die letzte der Freuden
-<line tab="5"/>Aus deiner Schaale ich hier gekostet
+<line tab="5"/>Aus deiner Schaale ich <ul>hier</ul> gekostet
 <line tab="5"/>Ach denn – wenn nun die Wiedererinnrung
 <line tab="5"/>Aller genossenen Erdenfreuden
 <line tab="5"/>Unvermischt mit bittrer Sünde
 <line tab="5"/>Wenn sie mich einmal noch ganz überströmt
-<line tab="5"/>Und dann, plautz der Donner mir zu Füßen
+<line tab="5"/>Und dann, plautz der Donner mir zu Füssen
 <line tab="5"/>Diese zu enge Atmosphäre
 <line tab="5"/>Mir zerbricht, mir Bahn öfnet, weiter –
 <line tab="5"/>In deinen Schoos Unendlicher
 <line tab="5"/>Ach wie will ich, wie will ich alsdenn dich
 <line tab="5"/>Mit meinen Glaubensarmen umfassen
-<line tab="5"/>Drücken an mein menschliches Herz
+<line tab="5"/>Drüken an mein menschliches Herz
 <line tab="5"/>Laß nur ach laß gnädig diesen Antheil von Erde
 <line tab="5"/>Diese Seele von Erde mich unzerrüttet
 <line tab="5"/>Ganz gesammlet dir darbringen zum Opfer
@@ -825,24 +825,23 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="5"/>Nach der zu freundlichen Erde hinab. –
 <line tab="5"/>Aber ich sehe dich dort meine Doris
 <line tab="5"/>Oder bist du vielleicht – trüber Gedanke!
-<line tab="5"/>Nein du bist nicht zurückgekehrt
+<line tab="5"/>Nein du bist nicht zurükgekehrt
 <line tab="5"/>Nein ich sehe dich dort ich will in himmlischer Freundschaft
 <line tab="5"/>Mit dir an andern Quellen und Büschen
 <line tab="5"/>Sternenkind! ach wie wollen wir Kinder
 <line tab="5"/>Hand in Hand dort spazieren gehn! –
 <line tab="5"/>Aber Göthe – und Albertine –
 <line tab="5"/>Nein ihr reißt mich zur Erde hinunter
-<line tab="5"/>Grausame Liebe! ihr reißt mich hinunter.
+<line tab="5"/>Grausame Liebe! ihr reißt mich hinunter
 <line tab="5"/>Reißt denn geliebte! reißt denn ich folge
-<line tab="5"/>Reißt – und macht mir die Erde zum Himmel!
-<page index="4"/><note>linke Spalte</note>
-<line tab="1"/>Hier mein Bruder ein Brief den ich Dir schicken muß, warm wie er aus dem Herzen kommt. Dich wird das Porto nicht dauern lieber obschon kein Geschäft darinnen ist außer eine Commission von Hafner der mich lange gebethen hat. Ist doch uns kein höher Glück auf der Erde gegönnt als uns zu unterreden – mir ists das höchste. Denn alle meine Wirksamkeit ist für andre – aber mein Gefühl für Dich und einige Liebe ist für mich.
-<line type="empty"/>
-<line tab="1"/>Warum gibst Du uns denn nicht Neuigkeiten von Dir. Haben genug in unsern Briefen itzt von meinen Schmieralien gesprochen – nun laß mich wieder ausgehen von dem kleinen Dreckhauffen Ich und Dich – finden
-<line type="break"/>
+<line tab="5"/>Reißt – und macht mir die Erde zum Himmel.
+<align pos="center">—</align>
 <line type="empty" />
-<line type="break" /><align pos="right">Lenz</align> <note>rechte Spalte</note>
-<line tab="1"/>Ich habe viel in der Societät zu überwinden, auf einer Seite ists Unglauben, Zerrüttetheit, vagues Geschnarch von Bellitteratur wo nichts dahinter ist als Nesselblüthen: auf der andern steife leise Schneckenmoralphilosophie die ihren grosmütterlichen Gang fortkriecht, daß ich oft drüber die Geduld verlieren möchte. Da konnte Götz nicht durch dringen, der beyden gleich abspricht. Daher fing ich an <aq>ut vates</aq> den Leuten Standpunkt ihrer Religion einzustecken, daß itzt unter viel Schwürigkeiten vollendt ist, die Erfolge wird die Zeit lehren. Und nun stürm ich mit Ossians Helden hinein das alte Erdengefühl in ihnen aufzuwecken, das ganz in französische <aq>Liqueurs evaporirt</aq> war. Daß wirs ausführen können was ich mit ganzer Seele strebe, auf Heid und Hügel Deine Helden wieder naturalisiren.
+<page index="4"/><note>linke Spalte</note>
+<line tab="1"/>Hier mein Bruder ein Brief den ich Dir schicken muß, warm wie er aus dem Herzen kommt Dich wird das Porto nicht dauren lieber obschon kein Geschäft drinnen ist ausser eine Commission von Hafner der mich lange gebethen hat. Ist doch uns kein höher Glück auf der Erde gegönnt als uns zu unterreden – mir ists das höchste. Denn alle meine Wirksamkeit ist für andre – aber mein Gefühl für Dich und einige Liebe ist für mich.
+<line tab="1"/>Warum giebst Du uns denn nicht Neuigkeiten von Dir. Haben genug in unsern Briefen itzt von meinen Schmieralien gesprochen – nun laß mich wieder ausgehen von dem kleinen Dreckhauffen Ich und Dich – finden
+<line type="break" /><align pos="right">Lenz.</align> <note>rechte Spalte</note>
+<line tab="1"/>Ich habe viel in der Societät zu überwinden, auf einer Seite ists Unglauben Zerrüttetheit, vagues Geschnarch von Bellitteratur wo nichts dahinter ist als Nesselblüthen: auf der andern steife leise Schneckenmoralphilosophie die ihren grosmütterlichen Gang fortkriecht, daß ich oft drüber die Geduld verlieren möchte. Da konnte Götz nicht <ul>durch</ul> dringen, der <ul>beyden</ul> <ul>gleich</ul> abspricht. Daher fieng ich an <aq>ut vates</aq> den Leuten Standpunkt ihrer Religion einzustecken, das itzt unter viel Schwürigkeiten vollendt ist, die Erfolge wird die Zeit lehren. Und nun stürm ich mit Ossians Helden hinein das alte Erdengefühl in ihnen aufzuwecken, das ganz in französische <aq>Liqueurs evaporirt</aq> war. Daß wirs ausführen können was ich mit ganzer Seele strebe, auf Heyd und Hügel Deine Helden wieder naturalisiren.
 <line type="break"/><align pos="center">Addio –</align>
 </letterText> 
 
