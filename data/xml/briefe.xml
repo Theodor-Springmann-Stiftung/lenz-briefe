@@ -845,18 +845,16 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line type="break"/><align pos="center">Addio –</align>
 </letterText> 
 
-<letterText letter="42"><page index="1"/><align pos="right">D 8ten Aprill 1775.</align>
-<line type="break" />Hier mein theurer Eifferer für unser Haus einige Versgen die ich dies Jahr in Calender setzen lasse.
+<letterText letter="42"><page index="1"/><ink ref="2"><align pos="right">D 8ten Aprill 1775.</align></ink>
+    <line tab="1"/>Hier mein theurer Eifferer für unser Haus einige Versgen die ich dies Jahr in Calender setzen lasse.
 <line type="empty" />
+<line tab="5"/><align pos="center">Ueber die kritischen Nachrichten vom Zustand des deutschen Parnasses (der Verf. ist Gotter der bey Dir war</align>
 <line type="empty" />
-<align pos="center">Ueber die kritischen Nachrichten vom Zustand des deutschen Parnasses (der Verf. ist Gotter der bey Dir war</align>
-<line type="empty" />
-<line tab="6"/><ul>Gotter.</ul> Es wimmelt heut zu Tag von Sekten
+<line tab="6"/><ul>Gotter.</ul> Es wimmelt heut zu Tag von Seckten
 <line tab="6"/>Auf dem Parnaß
-<line tab="6"/><ul>Lenz</ul> Und von Insekten.
+<line tab="8"/><ul>Lenz</ul> Und von Inseckten.
 <line type="empty"/>
-<line type="empty"/>
-<align pos="center">Ueber die Dunkelheiten im Klopstock und andern</align>
+<line tab="5"/><align pos="center">Ueber die Dunkelheiten im Klopstock und andern</align>
 <line tab="6"/><ul>Der Schmecker.</ul>
 <line tab="5"/>Ich bitte gebt mir Licht
 <line tab="5"/>Herr ich versteh euch nicht
@@ -864,8 +862,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="5"/>Sobald <ul>ihr</ul> mich versteht
 <line tab="5"/>Herr, bin ich ein schlechter Poet.
 <line type="empty"/>
-<line type="empty"/>
-<align pos="center">Klopstocks Gelehrten Republick</align>
+<line tab="6"/>Klopstocks Gelehrten Republick
 <line tab="5"/>Ein götterhaft Gerüst
 <line tab="5"/>Der Menschen Thun zu adeln
 <line tab="5"/>Wer darf, wer mag da tadeln?
