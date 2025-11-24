@@ -2482,30 +2482,30 @@ Doch muß ich auch Straßburg Gerechtigkeit widerfahren lassen. Ich habe hier ne
 <line tab="1"/>Ist Fräulein von Waldner noch in Strasburg? ist die Hochzeit schon vor sich gegangen? – Ich habe ihre Cousine hier neulich eine Oper spielen sehen, aber noch nie das Herz gehabt sie anzureden. Warum, ist mir selber unbegreiflich. Aber es ist mir unmöglich. Sonst kenn’ ich hier nun alle.</sidenote>
 </letterText> 
 
-<letterText letter="158"><page index="1"/>Weimar d. 14ten April.
+<letterText letter="158"><page index="1"/>
+    <align pos="right"><aq>verte</aq></align>
+    <align pos="center">Weimar d. 14ten Aprill.</align>
 <line type="break"/>
-<line tab="1"/>Bester Lavater! Dein Kupferstecher hat sich an Fräulein Waldner versündigt. Wenn hatte sie den Mund (den auch Baley schon gemißhandelt) Daß ich Dir ihren Mund mahlen könnte und all die Güte die in ihm wohnt. Das gezwungene Lächeln ist <dul>ganz und gar</dul> außer ihrem Karackter.
-<line tab="1"/>Eben so ist der Schatten der ihre Wange umschreibt ganz entstellend, auch B. hat ihn viel zu grob gemacht um den Zug von Menschenliebe auszudrücken der darauf wohnt. <insertion pos="left">Das sagt auch der Herzog und Goethe. </insertion>
-<line tab="1"/>Wär’ es <insertion pos="top">denn nicht</insertion> möglich das zu ändern zu bessern Lavater, ich will gern das Bild noch ein Jahr lang missen, so sauer mirs ankommt. Hab’ ich doch ihr Bild im Herzen. Aber wenn Du mich <ul>Iiebst</ul> schickst Du mirs sobald Du kannst.
-<line tab="1"/>Ich bin hier verschlungen vom angenehmen Strudel des Hofes, der mich fast nicht zu Gedanken kommen läßt, weil ich den ganzen Tag oben beym Herzog bin. Aber mein Herz bleibt immer dasselbe und kann seine Richtungen nicht ändern. Das sage auch Pfenningern den Wieland und Goethe sehr lieben und ich unendlich werth halte. Dein Abraham ist sehr gnädig aufgenommen worden. Herzog u. Herzogin sind wirklich Engel, mehr hindert mich die Fülle meiner Werthachtung zu sagen. Goethe ist wirklich Mignon hier und ich ganz glücklich und ganz unglücklich
+<line tab="1"/>Bester Lavater! Dein Kupferstecher hat sich an Fräulein Waldner versündigt. Wenn hatte sie den Mund (den auch Baley schon gemißhandelt) Daß ich Dir ihren Mund mahlen könnte und all die Güte die in ihm wohnt. Das gezwungene Lächeln ist <dul>ganz und gar</dul> ausser ihrem Karackter.
+<line tab="1"/>Eben so ist der Schatten der ihre Wange umschreibt ganz entstellend, auch B. hat ihn viel zu grob gemacht um den Zug von Menschenliebe auszudrücken der darauf wohnt. <insertion pos="left">Das sagt auch der Herzog und Goethe.</insertion>
+<line tab="1"/>Wär’ es <insertion pos="top">denn nicht</insertion> möglich das zu ändern zu bessern Lavater, ich will gern das Bild noch ein Jahr lang missen, so sauer mirs ankommt. Hab’ ich doch ihr Bild im Herzen. Aber wenn Du mich <ul>liebst</ul> schickst Du mirs sobald Du kannst.
+<line tab="1"/>Ich bin hier verschlungen vom angenehmen Strudel des Hofes, der mich fast nicht zu Gedanken kommen läßt, weil ich den ganzen Tag oben beym Herzog bin. Aber mein Herz bleibt immer dasselbe und kann seine Richtungen nicht ändern. Das sage auch Pfenningern den Wieland und Goethe sehr lieben und ich unendlich werth halte. Dein Abraham ist sehr gnädig aufgenommen worden. Herzog u. Herzoginn sind wirklich Engel, mehr hindert mich die Fülle meiner Werthachtung zu sagen. Goethe ist wirklich Mignon hier und ich ganz glücklich und ganz unglücklich
 <line type="break" /><align pos="right">Lenz.</align>
-<sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal"> Deine Physiognomik habe ich mit einem der herrlichsten Geschöpfe auf Gottes Erdboden durchblättert, der Frau v. Stein Goethens grossen Freundinn. Aber auch nur durchblättert, drum kann ich Dir nichts drüber sagen. Wenn Du doch hier wärst!</sidenote>
+<sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal"> Deine Physiognomick habe ich mit einem der herrlichsten Geschöpfe auf Gottes Erdboden durchblättert, der Frau v. Stein Goethens grossen Freundinn. Aber auch nur durchblättert, drum kann ich Dir nichts drüber sagen. Wenn Du doch hier wärst!</sidenote>
 <page index="2"/>
-<line tab="1"/>Wolltest Du doch die einzige Gütigkeit haben und Käisern bitten, daß er 2 Exemplare von den beyden Alten einpacke und nach Lausanne schicke unter der <aq>Adrese
-    <line type="break"/>a Monsieur Monsieur
-    <line type="break"/>Werthes Gouverneur du jeune Baron de Hompesch
-    <line type="break"/>a Lausanne</aq>
-<line tab="1"/>abzugeben beym Herrn Professor <aq>Appeln,</aq> wo mir recht ist, ich habe seinen Namen vergessen, Röder könnt’ ihn allenfalls unter meinen Briefen auffinden. Vielleicht weißt Du die Namen einiger
-<line type="break"/>Professoren in Lausanne. K. könnte ihm schreiben, daß ich itzt in Weimar, ihn aber beordert ihm das zuzuschicken und dem jungen Hn. v. Hompesch das eine beygeschlossen, dessen Hn. Vater dem Minister in Mannheim ich gewiß die Aufwartung gemacht haben würde, wenn er nicht eben mit dem Hofe auf der Jagd gewesen als ich durchgieng.
+<line tab="1"/>Wolltest Du doch die einzige Gütigkeit haben und Käisern bitten, daß er 2 Exemplare von den beyden Alten einpacke und nach Lausanne schicke unter der <aq>Adresse
+    <align pos="right"><line type="break"/>a Monsieur Monsieur Werthes</align>
+    <align pos="right"><line type="break"/>Gouverneur du jeune Baron de Hompesch</align>
+    <align pos="right"><line type="break"/>a Lausanne</align></aq>
+<line tab="1"/>abzugeben beym Herrn Professor <aq>Appeln,</aq> wo mir recht ist, ich habe seinen Namen vergessen, Röder könnt’ ihn allenfalls unter meinen Briefen auffinden. Vielleicht weißt Du die Namen einiger Professoren in Lausanne. K. könnte ihm schreiben, daß ich itzt in Weimar, ihn aber beordert ihm das zuzuschicken und dem jungen Hn. v. Hompesch das eine beygeschlossen, dessen Hn. Vater dem Minister in Mannheim ich gewiß die Aufwartung gemacht haben würde, wenn er nicht eben mit dem Hofe auf der Jagd gewesen als ich durchgieng
 <page index="3"/>
-<line tab="1"/>Allenfalls kann er noch ein Exemplar für den Minister beischließen, das ich den jungen Herrn v. Hompesch ersuchte in meinem Namen seinem Herrn Vater zuzuschicken. Übrigens würde es mich sehr freuen von Werthes ein Briefchen hieher zu erhalten.
+<line tab="1"/>Allenfalls kann er noch ein Exemplar für den Minister beyschließen, das ich den jungen Herrn v. Hompesch ersuchte in meinem Namen seinem Herrn Vater zuzuschicken. Uebrigens würde es mich sehr freuen von Werthes ein Briefchen hieher zu erhalten.
 <line type="empty" />
-<line tab="1"/>Meine Soldaten müßt’ Ihr jetzt schon haben. Sie sind bey Weidmanns Erben gedruckt. Wo nicht so schick ich Euch bald einige Exemplare hinü<tl></tl>
+<line tab="1"/>Meine Soldaten müßt’ ihr jetzt schon haben. Sie sind bey Weidmanns Erben gedruckt. Wo nicht so schick ich euch bald einige Exemplare hinü<tl></tl>
 <line tab="1"/>Grüß den guten Kaiser.
-<line tab="1"/>Sag Pfenniger! sein Zuruf soll nicht vergeblich gewesen seyn.
+<line tab="1"/>Sag Pfenninger! sein Zuruf soll nicht vergeblich gewesen seyn.
 <line tab="1"/>und wie denn ein Mann wie er krank seyn könne.
-<line tab="1"/>Umarme Deine Frau und Deine Kleinen glücklicher Lavater.
-<line tab="1"/>Wielands Familie habe noch nicht gesehen – <insertion pos="top">sie sind alle krank.</insertion> Herder kommt balde
+<line tab="1"/>Umarme Deine Frau und Deine Kleinen glücklicher Lavater. Wielands Familie habe noch nicht gesehen – <insertion pos="top">sie sind alle krank.</insertion> Herder kommt balde
 <line type="empty" />
 <line tab="1"/>Melde mir doch Bester! wenns möglich, was Lindaus Peter in Marschlins macht. Und was Herr v. Salis für ein Jahr zu seiner Erziehung braucht.
 <page index="4"/>
@@ -2513,7 +2513,7 @@ Doch muß ich auch Straßburg Gerechtigkeit widerfahren lassen. Ich habe hier ne
 <line type="break" /><address>Herrn
 <line type="break"/>Herrn <ul>Lavater.</ul>
 <line type="break"/>Pfarrer am Waysenhause
-<line type="break"/>zu Zürch</address>
+<line type="break"/>zu Zürch.</address>
 </letterText> 
 
 <letterText letter="159"><page index="1"/>
