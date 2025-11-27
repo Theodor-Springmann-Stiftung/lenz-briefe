@@ -1075,8 +1075,10 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/>Hier ein Paar meiner Gesichtsanmerkungen wieder, über die, wie über die vorigen Du mir Deine Meynung mündlich sagen magst.
 <line tab="1"/>„Alle Linien die heraufgehen zeigen Vergnügen, alle die heruntergehen Verdruß und Traurigkeit an. Es scheint der Himmel hat den Menschen auf die Gesichter zeichnen wollen, wo der Sitz der Freuden zu suchen wäre.
 <line type="break" />„Je kleiner der Mund, desto unschuldiger das Herz: je grösser, desto erfahrener.“ 
+<line type="empty"/>
 <page index="4"/>
 <line type="empty"/>
+<align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
 <line type="break"/><address>An Lavatern.
 <line type="break"/>in Zürich.</address>
 </letterText> 
