@@ -480,13 +480,14 @@ darf den Bogen nicht zu hoch spannen, weil er dir in d. Noth geholfen p. Du hast
 <line type="break" /><align pos="right">Johann Christian Lenz.</align>
 <line tab="1"/>Tausend Grüße an die Herrn v. Kleist. Ich wünsche sehr, u. mit dem aufrichtigsten Hertzen, daß sie meine Freunde sind, u. sich meiner noch erinnern. – Sey glücklich! mein Bruder. – Von der Seite der Freunde bist Du es mehr als ich. Traurig genung, daß ich keinen eintzigen Busenfreund habe. Und was ist ein Leben ohne Freundschaft? Du hast es nie empfunden, ich liebe Dich auch zu sehr, um es zu wünschen. Laß mich bald in Dir meinen ersten und <subst><del>meinen</del><insertion>fast</insertion></subst> meinen eintzigen Freund wiederbekommen.
 <page index="4"/>
+<align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens, roter Siegelrest:</note></align>
 <line type="break"/><line type="empty"/><address>A Monsieur
 <line type="break"/>Monsieur J. M. R. Lenz.
 <line type="break"/>Kandidat der Theologie,
 <line type="break"/>presentement á Fort Louis
 <line type="break"/>P. Cond.</address>
 <line type="empty" />
-<align pos="center"><note>spiegelverkehrt:</note></align>
+<align pos="center"><note>auf der anderen Seite der Faltung:</note></align>
 <line type="break" /> <hand ref="87"> Capitaine Lieutenant Salomon Bodmer in der Mühle zu Wölflingen im Canton Zürich. </hand>  <!-- "<hand>" benötigt zwingend eine Referenz. Wie kann dabei in dem Fall vorgegangen werden, wenn keine Hand identifiziert wurde? Eine unbekannte definieren?-->
 </letterText> 
 
