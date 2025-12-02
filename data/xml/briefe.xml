@@ -1298,14 +1298,16 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line type="break"/>in <ul>Zürich.</ul></address>
 </letterText> 
 
-<letterText letter="67"><page index="1"/><align pos="center">Mein allerliebster Jacob</align>
+<letterText letter="67"><page index="1"/><align pos="right">Mein allerliebster Jac<subst><del><nr></nr></del><insertion>o</insertion></subst>b</align>
     <line type="empty"/>
-<line tab="1"/>Wie vergeblig habe ich nun so viele Jahre auff Deine zu Hause Kunft gewartet, wie oft habe ich nicht umsonst aus dem Fenster gesehn, wenn nur ein Fragtwagen ankam, ob ich Dich nicht erblickte, allein vergebens. Wie manche Tränen und <del><nr> </nr></del> Seufzer, habe ich nicht zu Gott geschickt, das er Dich führen und leiten mögte.
-<line tab="1"/>Ach wenn ich Dich auch noch ein mahl sehen könte, vor meinem Ende, und Dich segnen, ehedenn ich sterbe, so wollte ich zufrieden sein. Wie lange wiltu so herum irren, und Dich in solche nichtswürdige, Dinge vertiffen, ach nimm es doch zu Herten was Dein Vater Dir schreibt, es ist ja die Wahrheit, nimm es nur zu Hertzen, und dencke nach, was wil aus Dir werden? ich billige alles was Papa geschrieben hat.
+<line tab="1"/>Wie vergeblig habe ich nun so viele Jahre, auff Deine zu Hause Kunfft gewartet, wie offt habe ich nicht <subst><del><nr></nr></del><insertion>u</insertion></subst>msonst aus dem Fenster, gesehn, wenn nur ein Fragtwagen ankam, ob ich Dich nicht erblickte allein vergebens. Wie manche Tränen und <del>Zeu</del> Seufzer, habe ich nicht zu Gott geschickt, das er Dich führen und leiten mögte,
+<line tab="1"/>Ach wenn ich Dich auch noch einmahl sehen könte, vor meinem Ende, und Dich segnen, ehedenn ich sterbe, so wolte ist zufrieden sein. Wie lange wiltu so herum irren, und Dich in solche nichtswürdige, Dinge vertiffen ach nimm es doch zu Herten was Dein Vater Dir scheibt, es ist ja die Wahrheit, nimm es nur Zu Hertzen, und dencke nach, was wil aus Dir werden? ich billige alles was Pap. geschrieben hat.
 <page index="2"/>
-<line tab="1"/>Melde mir auch, ob Dujetzo gantz gesund bist mit Deinen Halse und Zähnen, ich bin Deinentwegen sehr besorgt gewesen.
-<line tab="1"/>Pastor <aq>Oldecob</aq> und seine Frau laßen Dich hertzlig, grüßen, sie wohnen jetzt im Garten Hauß weil sie <insertion pos="top">ganz</insertion> abgebrannt sind und alles verlohren haben die Häuser auff dem Margt sind alle abgebrannt, wie auch das Rathaus, und Löwensterns Haus, die Russische Buden und straffhalter, nebst der großen Brücke sind alle abgebrant. es ist alles wüste Die Frau Oberst Albedill ist noch in Curland, sie hat ihre älste Freilen Tochter, als Hoff Freilein bei der Alten Herzogin, hingebracht, wir warten sie täglig zurück. Ubrigens Grüße und Küsse ich Dich Zährtlig mein liebes Kind. Gott segne Dich und leite Dich auff seinen wegen. Verbleibe
-<line type="break"/><align pos="right">Deine Zärtliche Mutter
+<line tab="1"/>Melde mir auch, ob Du jetzo gantz gesundt bist mit Deinen Halse und Zähnen, ich bin Deinentwegen sehr besorgt gewesen,
+<line tab="1"/>Pastor <aq>Oldecob</aq> und seine Frau laßen Dich hertzlig, grüßen, sie wohnen jetzt im Garten Hauß, weil sie <insertion pos="top">ganz</insertion> abgebrannt sind und alles verlohren haben die Häuser auff dem Margt sind alle abgebrant, wie auch das Rathaus, und Löwensterns Haus, die Russische Buden und straffhalter, nebst der großen Brücke sind alle abgebrant. es ist alles wüste Die Frau Oberst Albedill, ist noch in Curland, sie hat ihre älste Freilen Tochter, als Hoff Freilein bei der Alten Herzogin, hingebracht, wir warten sie täglig zurück. 
+<line tab="1"/>Ubrigens Grüße und Küße ich Dich Zährtlig mein liebes Kind. 
+<line tab="1"/>Gott segne Dich und leite Dich auff seinen wegen, verbleibe
+<line type="break"/><align pos="right">Deine zärtliche Mutter
 <line type="break"/><aq>Dorothea Lenz</aq></align>
 </letterText> 
 
