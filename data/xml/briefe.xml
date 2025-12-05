@@ -1327,14 +1327,16 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 </letterText> 
 
 <letterText letter="69"><page index="1"/><align pos="right">D 29sten Sptbr.</align>
-<line tab="1"/>Herder! Ich will und muß ein <aq>Recepisse</aq> haben, ob Du <ul>Die Soldaten, eine Komödie</ul> erhalten hast, ich habe sie Dir schon seit acht Wochen unterm <aq>Couvert</aq> der Jungfer König über Darmstadt zugeschickt, wie das Pandemonium: es ist mein <ul>einzig Manuskript</ul> und wenn es verloren ist, so ist mein Leben mit verloren. Reiß mich aus diesem quälenden Zweiffel durch eine kleine Erkundigung bey Herrn Geh. Rath Heß und durch die geschwindeste Antwort, nur in zwey Zeilen.
+<line tab="1"/>Herder! Ich will und muß ein <aq>Recepiße</aq> haben, ob Du <ul>Die Soldaten, eine Komödie</ul> erhalten hast, ich habe sie Dir schon seit acht Wochen unterm <aq>Couvert</aq> der Jungfer König über Darmstadt zugeschickt, wie das Pandemonium: es ist mein <ul>einzig Manuscript</ul> und wenn es verloren ist, so ist mein Leben mit verloren. Reiß mich aus diesem quälenden Zweiffel durch eine kleine Erkundigung bey Herrn Geh. Rath Heß und durch die geschwindeste Antwort, nur in zwey Zeilen.
 <line type="break"/><align pos="right">Lenz.</align>
 <line type="empty"/>
-<line tab="1"/>Ich darf in dieser Gemüthslage keinen Menschen grüssen lassen. Ich rase nicht. In guter Prosa: Die Soldaten eine Komödie habe ich Dir über Darmstadt zugeschickt und will wissen, <ul>wo</ul> sie ist. Meine Reise ist auch wahr.
+<line tab="1"/>Ich darf in dieser Gemüthslage keinen Menschen grüssen lassen. Ich rase nicht. In guter Prosa: Die Soldaten eine Komödie habe ich Dir über Darmstadt zugeschickt und will wissen, <dul>wo</dul> sie ist. Meine Reise ist auch wahr.
 <sidenote pos="left" page="1" annotation="am linken Rand, vertikal"> Vor einem Jahr wenigstens darf sie aus tausend Ursachen nicht gedruckt werden. Mehr als ein Leben verlier ich damit –</sidenote>
 <page index="2"/>
+<line type="empty"/>
+<align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
 <line type="break"/><address>Herrn
-<line type="break"/>Herrn Herder
+<line type="break"/>Herrn <ul>Herder</ul>
 <line type="break"/>Consistorialrath
 <line type="break"/>in Bückeburg</address>
 </letterText> 
