@@ -1342,13 +1342,13 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 </letterText> 
 
 <letterText letter="70"><page index="1"/>
-<line tab="1"/>Hier ein Briefchen von Herder Lavater! Er ist gebeugt <fn index="5"><anchor>#</anchor></fn>. Gott zögert hinter der Wolke. Wenn wird er wieder mild umfliessen die Seinen! Daß Du Welt kennetest Lavater – –
-<line tab="1"/>Ich habe aus dem Zettelchen geahndet Du habst was wider Fränkeln, dessen Umstände da er am Ende seiner Laufbahn ist, Empfehlung brauchen. Seine Führung kenne ich freilich ganz und gar nicht, da ich den ganzen Tag wie ein Postpferd herumlauffe und Lektionen gebe.
+<line tab="1"/>Hier ein Briefchen von Herdern Lavater! Er ist gebeugt <insertion pos="top"><fn index="5"><anchor>#</anchor></fn></insertion>. Gott zögert hinter der Wolke. Wenn wird er wieder mild umfliessen die Seinen! Daß Du Welt kennetest Lavater – –
+<line tab="1"/>Ich habe aus dem Zettelchen geahndet Du habst etwas wieder Fränkeln, dessen Umstände da er am Ende seiner Laufbahn ist, Empfehlung brauchen. Seine Führung kenne ich freilich ganz und gar nicht, da ich den ganzen Tag wie ein Postpferd herumlauffe und Lecktionen gebe.
 <line tab="1"/>Ich sehe seegnend entgegen euren Entwürfen. Wünschte freilich bisweilen unsichtbar hinter Dir zu stehn und Dir über die Achsel ins Ohr zu flüstern, wenn Dich Dein gutes Herz – nicht alle trefliche Jungen scheinen treflich.
-<line tab="1"/>Leb wohl und erfreue mich bald durchs Anschauen Deines 2ten Theils Physiognomik. Ich warte sehnlichst auf Nachrichten aus Liefland
+<line tab="1"/>Leb wohl und erfreue mich bald durchs Anschauen Deines 2ten Theils Physiognomick. Ich warte sehnlichst auf Nachrichten aus Liefland
 <line type="break" /><align pos="right">Lenz.</align>
 <line type="break" /><align pos="center">D 29sten 7br</align>
-<sidenote pos="left" page="1" annotation="am linken Rand, vertikal"> <fn index="5"><anchor>#</anchor></fn> tief – gebeugt.</sidenote>
+<sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal"> <fn index="5"><anchor>#</anchor></fn> tief – gebeugt.</sidenote>
 </letterText> 
 
 <letterText letter="71"><page index="1"/>
