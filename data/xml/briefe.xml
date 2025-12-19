@@ -1563,7 +1563,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 </letterText> 
 
 <letterText letter="85"><page index="1"/>
-<line tab="1"/>Sie sehen lieber Gotter! hier ein Stück wo alle Characktere gleichsam nur angedeutet sind, dem Schauspieler nur Winke geben was er zu thun habe und ihm auf keine Weise zuvorgreiffen. <subst><del><nr></nr></del><insertion>I</insertion></subst>ch habe alles wohl überdacht, es läßt sich nicht anders für ein heutiges Theater einrichten, es würde sonst zu lang, zu groß, zu unbändig. Wollten Sie den Herren vorschlagen einen Versuch damit zu machen, das Sujet ist wenigstens ganz neu und wie mich deucht geschickt genug die Talente eines Schauspielers zu üben. Die beyden Freunde handeln unendlich mehr als sie reden und ihr ganzes Spiel setzt langes Studium voraus. Zwey Leute die determinirt sind in allen Fährlichkeiten einander mit ihrem Leben beyzuspringen, müssen in jeder Bewegung in jeder Mine
+<line tab="1"/>Sie sehen lieber Gotter! hier ein Stück wo alle Characktere gleichsam nur angedeutet sind, dem Schauspieler nur Winke geben was er zu thun habe und ihm auf keine Weise zuvorgreiffen. <subst><del><nr extent="1"></nr></del><insertion>I</insertion></subst>ch habe alles wohl überdacht, es läßt sich nicht anders für ein heutiges Theater einrichten, es würde sonst zu lang, zu groß, zu unbändig. Wollten Sie den Herren vorschlagen einen Versuch damit zu machen, das Sujet ist wenigstens ganz neu und wie mich deucht geschickt genug die Talente eines Schauspielers zu üben. Die beyden Freunde handeln unendlich mehr als sie reden und ihr ganzes Spiel setzt langes Studium voraus. Zwey Leute die determinirt sind in allen Fährlichkeiten einander mit ihrem Leben beyzuspringen, müssen in jeder Bewegung in jeder Mine
 <page index="2"/>Enthusiasmus für einander weisen, sonst wird das ganze Spiel frostig und kalt. Auf diese kommt nun alles an, was das Stück heben oder fallen machen kann. Eben so enthusiastisch für seinen Sohn muß der Vater seyn, oder er wird abscheulich. Die Freude bey der Hofnung seinen Sohn wiederzubekommen so ausschweiffend als die Wuth bey Fehlschlagung dieser Hofnung. Und das alles keine Grimasse unsers gleichgültigen Jahrhunderts, sondern wahres inniges Gefühl seyn. Unter diesen Voraussetzungen allein kann das Stück gefallen.
 <sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal"> Sechs Exemplare bitt ich mir aus.</sidenote>
 <line tab="1"/>Verzeyhn Sie mir meine lange Paranäse, ich weiß wohl daß der Dichter viel vom Schauspieler lernen muß, aber wiederum kann er doch dem Schauspieler am besten in den Standpunkt stellen aus dem er gearbeitet. Findt Herr Seiler es unspielbar, so lassen
@@ -1573,13 +1573,16 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <letterText letter="86"><page index="1"/>
 <line tab="1"/>In der grösten Eilfertigkeit kann ich Ihnen nur bester Gotter sagen, daß ich Ihr edles liebes Schreiben erhalten, für Ihre Theilnehmung danke und Sie bitte mir das Schicksal und die Aufnahme meiner <aq>Captivei</aq> in zwey Worten zu berichten.
 <line tab="1"/>Vor allen Dingen sagen Sie aber Goethen kein Wort von alledem, wenn Ihnen meine Freundschaft noch werth ist. Ich erwarte die Missive mit der fahrenden. Oder das Mskpt. wieder.
-<line tab="1"/>Warum geben Sie mir denn keine Nachricht von Ihrer Fräulein Schwester. Werden wir nicht das Versprechen erfüllt sehen, daß Sie sich thaten, Strasb. zu dem Mittelpunkt ihrer Zusammenkunft zu machen.
-<line tab="1"/>Und warum haben Sie an das nicht gedacht, woran mein Brief wenigstens Erinnerung seyn sollte? Ich sage Ihnen Sie erweisen Vaterlande und Freunden einen Dienst damit. Von Ihren theatralischen Sachen hör’ ich soviel reden u. kann sie kann sie nicht zur Ansicht bekommen. Leben Sie wohl Bester und antworten balde
+<line tab="1"/>Warum geben Sie mir denn keine Nachricht von Ihrer Fräulein Schwester. Werden wir nicht das Versprechen erfüllt sehen, daß Sie sich thaten, Strasbg. zu dem Mittelpunkt ihrer Zusammenkunft zu machen.
+<line tab="1"/>Und warum haben Sie an das nicht gedacht, woran mein Brief wenigstens Erinnerung seyn sollte? Ich sage Ihnen Sie erweisen Vaterlande und Freunden einen Dienst damit. Von Ihren theatralischen Sachen hör’ ich soviel reden u. kann sie kann sie nicht zur Ansicht bekommen. Leben Sie wohl bester und antworten balde
 <line type="break" /><align pos="right">Ihrem äusserst zerstreuten
-<line type="break"/>aber stets redlichen JMR Lenz</align>
+<line type="break"/>aber stets redlichen JMRlenz</align>
 <line type="empty"/>
-<sidenote pos="left" page="1" annotation="am linken Rand, vertikal"> im Begrif zu Pferde zu steigen – Wenn Sie Stolbergs sprechen, tausend Empfehlungen von mir, die ihnen Lavater auszurichten vergessen hat.</sidenote>
-<page index="4"/>Ihr Urtheil!
+<sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal"> im Begrif zu Pferde zu steigen – Wenn Sie Stolbergs sprechen, tausend Empfehlungen von mir, die ihnen Lavater auszurichten vergessen hat.</sidenote>
+<page index="4"/>
+<line type="empty"/>
+<align pos="center"><note>im oberen rechten Viertel des Blattes:</note></align>
+<line type="break" />Ihr Urtheil!
 <line type="empty"/>
 <line type="empty"/>
 <line type="break"/>Es ist hier in großer Gesellschaft vorgelesen worden und hat Glück gemacht. – Doch ists das einzige Mskpt. das ich habe
