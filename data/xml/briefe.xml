@@ -1126,7 +1126,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <sidenote pos="left" page="1" annotation="Am linken Rande, vertikal"><aq>Remerciemens pour la peine que vous vous etes donnée avec les Lindaviana</aq></sidenote>
 <page index="2"/>
 <note>linke Spalte</note>
-<line type="break"/><hand ref="12"><!-- Wie kann ich zwei Hände markieren, wenn das Element <hand> nur eine Referenz vorsieht? --> <pe><del>
+<line type="break"/><hand ref="12"><!-- Wie kann ich zwei Hände markieren, wenn das Element <hand> nur eine Referenz vorsieht? --> <pe>
 <line type="break"/>Wurstfresser aus dem Scheishaus.
 <line type="break"/><ul>Piphahn.</ul>
 <line type="break"/>Margaretlin Madre de tuti I Santi
@@ -1135,13 +1135,14 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line type="break"/>Lasueangel. Laus. Angel.
 <line type="break"/>Hengst mensch von einer Prinzeß
 <line type="empty"/>
+<line type="empty"/>
 <note>rechte Spalte</note>
-<line type="break"/>Eulenspiegel
+<line type="break"/><del>Eulenspiegel
 <line type="break"/>Fotzenhut
 <line type="break"/>Dreckfincke
 <line type="break"/>Saumagen
 <line type="break"/>Faselhans
-<line type="break"/>Blaufincke – halb <nr> </nr></del>
+<line type="break"/>Blaufincke</del> – halb <nr> </nr>
 <line type="break"/>klein Hanswurst
 <line type="break"/>beym Freyschmausen <nr> </nr>
 <line type="break"/>Hundsfut Gast Rolle
