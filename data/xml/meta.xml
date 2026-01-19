@@ -2146,7 +2146,7 @@
 
 		<letterDesc letter="142">
 			<sent>
-				<date notBefore="1776-03-27" notAfter="1776-03-31">Frankfurt am Main, Ende März 1776</date>
+				<date notBefore="1776-03-28" notAfter="1776-03-31">Frankfurt am Main, Ende März 1776</date>
 				<location ref="56" />
 				<person ref="1" />
 			</sent>
@@ -2177,7 +2177,7 @@
 
 		<letterDesc letter="144">
 			<sent>
-				<date notBefore="1776-03-27" notAfter="1776-03-31">Darmstadt, Ende März 1776</date>
+				<date notBefore="1776-03-28" notAfter="1776-03-31">Darmstadt, Ende März 1776</date>
 				<location ref="20" />
 				<person ref="1" />
 			</sent>
@@ -2207,7 +2207,7 @@
 
 		<letterDesc letter="146">
 			<sent>
-				<date notBefore="1776-03-27" notAfter="1776-03-31">Darmstadt, Ende März 1776</date>
+				<date notBefore="1776-03-28" notAfter="1776-03-31">Darmstadt, Ende März 1776</date>
 				<location ref="20" />
 				<person ref="1" />
 			</sent>
@@ -2222,7 +2222,7 @@
 
 		<letterDesc letter="147">
 			<sent>
-				<date notBefore="1776-03-27" notAfter="1776-03-31">Darmstadt, Ende März 1776</date>
+				<date notBefore="1776-03-28" notAfter="1776-03-31">Darmstadt, Ende März 1776</date>
 				<location ref="20" />
 				<person ref="1" />
 			</sent>
