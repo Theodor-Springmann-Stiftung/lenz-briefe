@@ -2659,7 +2659,7 @@
 
 		<letterDesc letter="176">
 			<sent>
-				<date notBefore="1776-04-03">Weimar, Anfang April 1776</date>
+				<date notBefore="1776-04-01">Weimar, Anfang April 1776</date>
 				<location ref="8" />
 				<person ref="37" />
 			</sent>
@@ -2719,7 +2719,7 @@
 
 		<letterDesc letter="180">
 			<sent>
-				<date notAfter="1776-04-30">Weimar, April/Mai 1776 [spätestens Mitte Mai]</date><!-- Also über
+				<date notAfter="1776-04-30">Weimar, April bis spätestens Mitte Mai 1776</date><!-- Also über
 				@notAfter? -->
 				<location ref="8" />
 				<person ref="1" />
