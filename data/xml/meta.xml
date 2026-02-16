@@ -1533,12 +1533,12 @@
 				<person ref="1" />
 			</sent>
 			<received>
-				<location ref="51" />
+				<location ref="7" />
 				<person ref="11" />
 			</received>
 			<hasOriginal value="true" />
 			<isProofread value="true" />
-			<isDraft value="false" />
+			<isDraft value="true" />
 		</letterDesc>
 
 		<letterDesc letter="102">
