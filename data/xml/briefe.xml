@@ -1933,7 +1933,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <page index="4"/>
 <line type="empty"/>
 <line type="break" /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens, rotes Siegel:</note></align>
-<address>Herrn
+<line type="break" /><address>Herrn
 <line type="break"/>Herrn <ul>Boje</ul>
 <line type="break"/>Gelehrten
 <line type="break"/>in <ul>Göttingen</ul></address>
@@ -1972,7 +1972,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <page index="4"/>
 <line type="empty"/>
 <line type="break" /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens, rotes Siegel:</note></align>
-<address>Herrn
+<line type="break" /><address>Herrn
 <line type="break"/>Herrn <ul>Boje</ul>
 <line type="break"/>Gelehrten in <del>G</del>
 <line type="break"/><ul>Göttingen</ul></address>
