@@ -65,6 +65,7 @@
                     <xs:element ref="er" />
                     <xs:element ref="ink" />
                     <xs:element ref="ru" />
+                    <xs:element ref="large" />
                 </xs:choice>
             </xs:sequence>
             <xs:attribute name="letter" type="xs:nonNegativeInteger" use="required" />

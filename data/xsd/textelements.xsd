@@ -31,6 +31,7 @@
             <xs:element ref="tabs" />
             <xs:element ref="er" />
             <xs:element ref="ink" />
+            <xs:element ref="large" />
             <xs:element ref="ru" />
         </xs:choice>
     </xs:complexType>
@@ -165,7 +166,7 @@
         <xs:complexType mixed="true">
             <xs:complexContent>
                 <xs:extension base="lenz:textbase">
-                    <xs:attribute name="extent" type="xs:positiveInteger" use="optional" />
+                    <xs:attribute name="extent" type="xs:positiveInteger" use="optional" default="1" />
                 </xs:extension>
             </xs:complexContent>
         </xs:complexType>
@@ -304,4 +305,5 @@
     <xs:element name="gr" type="lenz:textbase" />
     <xs:element name="hb" type="lenz:textbase" />
     <xs:element name="ru" type="lenz:textbase" />
+    <xs:element name="large" type="lenz:textbase" />
 </xs:schema>
