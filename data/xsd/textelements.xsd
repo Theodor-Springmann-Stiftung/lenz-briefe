@@ -226,7 +226,7 @@
     <xs:element name="tab">
         <xs:complexType mixed="true">
             <xs:complexContent>
-                <xs:extension base="lenz:textbase">
+                <xs:extension base="lenz:textbaseNoLine">
                     <xs:attribute name="value" use="required">
                         <xs:simpleType>
                             <xs:restriction base="xs:string">

@@ -2922,8 +2922,6 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line type="break"/><tab value="4-8">Anhalt</tab> <tab value="7-8">1032.</tab>
 <line type="break"/><tab value="4-8">Quercy</tab> <tab value="7-8">1000.</tab>
 <line type="break"/><tab value="4-8">Lyonnais in der Zitadelle</tab> <tab value="7-8">1000.</tab>
-<line type="break"/><tab value="7-8">
-<line/></tab>
 <line type="break"/><tab value="3-8">Das Artillerie-Corps nicht mitgerechnet</tab> <tab value="7-8"><fn index="5"><anchor>#</anchor></fn><!-- Handelt es sich hier um ein Verweiszeichen? -->5796.</tab>
 <line type="break"/><tab value="7-8"><aq>5796 Verte</aq></tab></tabs>
 <line type="empty" />
@@ -4886,49 +4884,50 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="empty" />
 <line type="break" /><align pos="center">Zu einer Reiße nach Italien von Sarasin an Lenz</align>
 <line type="empty" />
-<line type="break" /><tabs>
+<line type="break" />
+<tabs>
 <line type="break"/><tab value="1-2"><aq>Haupt Züge</aq></tab>
 <line type="empty"/>
 <line type="break"/>
 <line tab="1"/><tab value="1-2">Beym Italiäner gewinnen Sie viel wann Sie geschwind u. feurig sind. Dauerhafftes erwarten Sie nichts, aber in der Hize bekommt man alles von ihm.</tab> <tab value="2-2"><align pos="center"><aq>Weiber.</aq></align></tab>
 <line type="empty"/>
 <line type="break"/><tab value="1-2">Gegen Niedere u. Bedienten immer scharfsehend u. ernsthafft: Ist höchst nötig.</tab> <tab value="2-2">Hüten Sie sich vor genauer Bekandtschafft mit fürnehmen Weibern.</tab>
-<line type="break"/><tab value="1-2">Bey keiner Gelegenheit muß man verzagt seyn sonst ist man der Narr im Spiehl.</tab> <tab value="2-2">
-<line tab="1"/>Gegen die meisten sind Lohndirnen Engel. Wann Sie ja zur Neugirde oder aus <aq>fatalitaet</aq> eine ähnliche Bekantschafft machen so nehmen Sie sich gleich vor, kein wahres Wort zu sprechen und scheiden Sie nie als auf Wiedersehen.</tab>
-<line type="break"/><tab value="1-2">Von Grossen erhält man alles wann man sie bey der Ehre nimmt.</tab> <tab value="2-2">
-<line tab="1"/>Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie hat ehedessen einen meiner besten Freundte ins frühe Grab gestürzt. <note>Zeichnung eines Kreuzes auf einem Hügel</note></tab>
-<line type="break"/><tab value="1-2">Durch Pfaffen ist Zutritt zu allem u. bey Pfaffen leicht Zutritt, man muß aber gern u. viel sprechen.</tab> <tab value="2-2">
-<line tab="1"/><del>Tes</del> Teutsches Phlegma mit flüssigem Glas zusammen zu schmelzen ist doch ein lustiges <aq>Experiment.</aq> Gehört eben behutsamkeit zu allen Chymischen <aq>Operationen.</aq></tab>
+<line type="break"/><tab value="1-2">Bey keiner Gelegenheit muß man verzagt seyn sonst ist man der Narr im Spiehl.</tab> 
+<line tab="1"/><tab value="2-2">Gegen die meisten sind Lohndirnen Engel. Wann Sie ja zur Neugirde oder aus <aq>fatalitaet</aq> eine ähnliche Bekantschafft machen so nehmen Sie sich gleich vor, kein wahres Wort zu sprechen und scheiden Sie nie als auf Wiedersehen.</tab>
+<line type="break"/><tab value="1-2">Von Grossen erhält man alles wann man sie bey der Ehre nimmt.</tab>
+<line type="break"/><tab value="2-2">
+Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie hat ehedessen einen meiner besten Freundte ins frühe Grab gestürzt. <note>Zeichnung eines Kreuzes auf einem Hügel</note></tab>
+<line type="break"/><tab value="1-2">Durch Pfaffen ist Zutritt zu allem u. bey Pfaffen leicht Zutritt, man muß aber gern u. viel sprechen.</tab> 
+<line tab="1"/><tab value="2-2"><del>Tes</del> Teutsches Phlegma mit flüssigem Glas zusammen zu schmelzen ist doch ein lustiges <aq>Experiment.</aq> Gehört eben behutsamkeit zu allen Chymischen <aq>Operationen.</aq></tab>
 <line type="break"/><tab value="1-2"><ul><aq>Modestie ist schlechter Kram in diesem Land.</aq></ul> geht wieder die Natur des Bodens.</tab>
 <line type="break"/><tab value="1-2">Aussert Mayland u. Parma nichts französisches: Ist überall verhasst.</tab> <tab value="2-2">Versuchen Sie’s von der 60. jährigen</tab>
 <page index="6"/>
 <line type="break"/>
-<line type="break"/><tab value="1-2">
-<line tab="1"/>Abtissin biß zum 6-Jährigen Flügel Rock hinunter: Wann Sie eine andere helle Idee als <ul>Liebe</ul> heraus ziehen so bin ich ein Bernhäuter.</tab><tab value="2-2">
-<line tab="1"/>lächerlichem Adel. Eine solche Messe kan man sich nicht einbilden ohne Sie gesehen zu haben. Steiner ist ein Biedermann!
-<line type="break"/></tab>
-<line type="break"/><tab value="1-2">Darauß können Sie schliessen daß <aq>Petrarca</aq> eben keine so schwere Arbeit hatte.
-<line type="empty" />
-<line type="break" /></tab> <tab value="2-2"><align pos="center"><aq>in Genua</aq></align>
-<line type="break"/>sehen Sie Paläste
-<line type="break"/><align pos="center"><aq></aq>in Bologna</align>
 <line type="break"/>
-<line tab="1"/>Gelehrsamkeit auf Stelzen und unseeliger finsterer Zwang zwischen welchem man sich doch mit Lust durcharbeiten kan.</tab>
-<line type="break"/><tab value="1-2"><align pos="center"><aq></aq>Milano.</align>
+<line tab="1"/><tab value="1-2">Abtissin biß zum 6-Jährigen Flügel Rock hinunter: Wann Sie eine andere helle Idee als <ul>Liebe</ul> heraus ziehen so bin ich ein Bernhäuter.</tab>
+<line tab="1"/><tab value="2-2">lächerlichem Adel. Eine solche Messe kan man sich nicht einbilden ohne Sie gesehen zu haben. Steiner ist ein Biedermann!</tab>
+<line type="break"/><tab value="1-2">Darauß können Sie schliessen daß <aq>Petrarca</aq> eben keine so schwere Arbeit hatte.</tab>
+<line type="empty" />
+<line type="break" /><tab value="2-2"><align pos="center"><aq>in Genua</aq></align></tab>
+<line type="break"/><tab value="2-2">sehen Sie Paläste</tab>
+<line type="break"/><tab value="2-2"><align pos="center"><aq></aq>in Bologna</align></tab>
+<line type="break"/>
+<line tab="1"/><tab value="2-2">Gelehrsamkeit auf Stelzen und unseeliger finsterer Zwang zwischen welchem man sich doch mit Lust durcharbeiten kan.</tab>
+<line type="break"/><tab value="1-2"><align pos="center"><aq></aq>Milano.</align></tab>
 <line type="empty"/>
-<line tab="1"/>Da ist alles halb Welsch halb französisch. Ein unseeliges Mittelding das nur amusiert so lang man nichts bestimmteres kennt. Wenden Sie <insertion pos="top">sich</insertion> da hauptsächlich auf Empfehlung. vors übrige Italien.</tab> <tab value="2-2"><align pos="center"><aq>in Livorno</aq></align>
+<line tab="1"/><tab value="1-2">Da ist alles halb Welsch halb französisch. Ein unseeliges Mittelding das nur amusiert so lang man nichts bestimmteres kennt. Wenden Sie <insertion pos="top">sich</insertion> da hauptsächlich auf Empfehlung. vors übrige Italien.</tab> <tab value="2-2"><align pos="center"><aq>in Livorno</aq></align></tab>
 <line type="break"/>
-<line tab="1"/>ein <aq>Compendium</aq> der Handtlungs Geschichte von ganz Europa. In meinen Augen äusserst merkwürdig. NB. Müssen dort offt bey Kauff Leüthen speisen.
-<line type="break"/></tab>
-<line type="break"/><tab value="1-2">Bey <aq>Brunati</aq> empfangen Sie von mir fernere Briefe und bestellen die meinigen durch Ihn.
+<line tab="1"/><tab value="2-2">ein <aq>Compendium</aq> der Handtlungs Geschichte von ganz Europa. In meinen Augen äusserst merkwürdig. NB. Müssen dort offt bey Kauff Leüthen speisen.</tab>
+<line type="break"/>
+<line type="break"/><tab value="1-2">Bey <aq>Brunati</aq> empfangen Sie von mir fernere Briefe und bestellen die meinigen durch Ihn.</tab> 
 <line type="empty" />
-<line type="break" /></tab> <tab value="2-2"><align pos="center"><aq>von Fiorenza</aq></align>
-<line type="break"/>sage ich nichts. Ist seit meiner Zeit umgegossen.
+<line type="break" /><tab value="2-2"><align pos="center"><aq>von Fiorenza</aq></align></tab>
+<line type="break"/><tab value="2-2">sage ich nichts. Ist seit meiner Zeit umgegossen.</tab>
 <line type="empty" />
-<line type="break" /></tab>
-<line type="break"/><tab value="1-2"><align pos="center"><aq>in Bergamo</aq></align>
-<line type="break"/>Ist im August eine Messe die Sie sehen sollten. Da ist ein abentheurliches Zeug von</tab> <tab value="2-2"><align pos="center"><aq>vor Lucca u: Sienna</aq></align>
-<line type="break"/>müssen Sie einige Tage nehmen. Wenn Sie Glück haben, können Sie dort <del>glückliche</del> herliche Stunden durchleben.</tab> </tabs>
+<line type="break" />
+<line type="break"/><tab value="1-2"><align pos="center"><aq>in Bergamo</aq></align></tab>
+<line type="break"/><tab value="1-2">Ist im August eine Messe die Sie sehen sollten. Da ist ein abentheurliches Zeug von</tab> <tab value="2-2"><align pos="center"><aq>vor Lucca u: Sienna</aq></align></tab>
+<line type="break"/><tab value="2-2">müssen Sie einige Tage nehmen. Wenn Sie Glück haben, können Sie dort <del>glückliche</del> herliche Stunden durchleben.</tab> </tabs>
 <page index="7"/>
 <line type="break"/><align pos="center"><aq>in Rom.</aq></align>
 <line type="break"/>
