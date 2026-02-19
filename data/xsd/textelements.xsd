@@ -281,7 +281,7 @@
 
 
     <xs:element name="subst">
-        <xs:complexType mixed="true">
+        <xs:complexType>
             <xs:sequence>
                 <xs:element ref="lenz:del" minOccurs="1" maxOccurs="unbounded" />
                 <xs:element ref="lenz:insertion" minOccurs="1" maxOccurs="unbounded" />
