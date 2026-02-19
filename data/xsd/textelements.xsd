@@ -70,7 +70,7 @@
     <!-- Line Element (various types) -->
     <xs:element name="line">
         <xs:complexType>
-            <xs:attribute name="type">
+            <xs:attribute name="type" use="optional" default="break">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="break" />
@@ -156,7 +156,6 @@
         <xs:complexType mixed="true">
             <xs:complexContent>
                 <xs:extension base="lenz:textbase">
-                    <xs:attribute name="ref" type="xs:positiveInteger" use="required" />
                 </xs:extension>
             </xs:complexContent>
         </xs:complexType>

@@ -183,7 +183,7 @@ ohne-<page index="3" />dem ausgegeben haben, <insertion>so</insertion> daß ich 
 </letterText> 
 
 <letterText letter="6">
-<page index="1" /><ink ref="2"><aq>Königsberg 1769. Octbr 14.</aq></ink> 
+<page index="1" /><ink><aq>Königsberg 1769. Octbr 14.</aq></ink> 
 <line type="break" /><align pos="center">Gütigster Herr Papa.</align>
 <line type="empty" />
 <line type="break" /><line tab="1" />Um den Brief nicht überflüssig groß und dik zu machen, muß ich mich begnügen, nur gegenwärtigen kleinen Zettel in denselben an Sie einzuschliessen. Christian wird vermutlich in seinem Schreiben weitläuftiger <del><del>zu</del></del> seyn und ich habe also nur noch einige kleine Supplemente zu meinem vorigen Briefe zu geben. So sehr ich Ihnen für die gütige Besorgung eines Theils meines jährlichen <aq>Fixi</aq> verbunden bin, so sehr sehe mich genöthigt, Sie nochmals gehorsamst um die sovielmöglich baldige Beförderung dessen, was Ihre Gütigkeit zu unserer Kleidung bestimmt hat, zu bitten. <aq>Pranumeration</aq> ist nothwendig, wenn ein Student gut wirthschaften will und also ist ihm im Anfange des Jahrs immer Geld unentbehrlich. Noch einige Ausgaben habe Ihnen schon vorhin specificiren wollen, für die ich gleichfalls von Ihrer Gewogenheit einigen Ersatz hoffe, wenn es Ihre Umstände zulassen. Der Band einiger <aq>Exemplare</aq> meiner Landplagen, insonderheit der letzte, der nach Petersb. bestimmt und den ich schon dem Herrn v. Schulmann an Sie mitgegeben: kostet mir wenigstens bis 2 Dukaten. Hernach haben alle Landsleute zum Begräbniß des seel. Herrn Langhammers was beytragen müssen: weil seine Mutter eine Wittwe ist, die sich selbst nicht ernähren kann, und derjenige, der ihn studiren lassen, nicht einmal soviel, als zu den Ausgaben, an Doktor p. in seiner Krankheit erfordert worden, überschikt
@@ -854,7 +854,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line type="break"/><align pos="center">Addio –</align>
 </letterText> 
 
-<letterText letter="42"><page index="1"/><ink ref="2"><align pos="right">D 8ten Aprill 1775.</align></ink>
+<letterText letter="42"><page index="1"/><ink><align pos="right">D 8ten Aprill 1775.</align></ink>
     <line tab="1"/>Hier mein theurer Eifferer für unser Haus einige Versgen die ich dies Jahr in Calender setzen lasse.
 <line type="empty" />
 <line tab="5"/><align pos="center">Ueber die kritischen Nachrichten vom Zustand des deutschen Parnasses (der Verf. ist Gotter der bey Dir war</align>
@@ -2791,7 +2791,6 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line type="break" /><align pos="center">—</align>
 <line type="empty"/>
 <line tab="1"/>Auf den <ul>Mist</ul> mit, wenn’s nicht gefällt. 
-<line/> 
 </letterText> 
 
 <letterText letter="172"><page index="1"/><align pos="right">Den 30sten Apr. 76.</align>
@@ -3366,7 +3365,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break" /><align pos="right">L.</align>
 <page index="2"/>
 <line type="empty"/>
-<sidenote pos="left" page="2" annotation="vertikal mit dunklerer Tinte"> <ink ref="2">Die Gleichen 2 mal abmalen eines für W.
+<sidenote pos="left" page="2" annotation="vertikal mit dunklerer Tinte"> <ink>Die Gleichen 2 mal abmalen eines für W.
 <line type="break"/><ul>Sonntag.</ul>
 <line type="break"/>Wielandias Jacobi schicken
 <line type="break"/>Montag zum Amtsschreiber</ink></sidenote>
@@ -5296,7 +5295,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="empty" />
 <line type="break" /><align pos="right">Lenz</align>
 <line type="empty" />
-<line type="break"/><ink ref="2">wenn Sie etwa kein Plagiat – – –</ink>
+<line type="break"/><ink>wenn Sie etwa kein Plagiat – – –</ink>
 </letterText> 
 
 <letterText letter="310"><page index="1"/><align pos="right">777. 31. Xbr. in Basel</align>
@@ -5464,7 +5463,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="5"/>Auch einst in unserm Herbst so from und froh zu seyn. –
 </letterText> 
 
-<letterText letter="321"><page index="1"/><ink ref="2"><align pos="right">Riga d. 2ten 8br 1779 <insertion pos="top">a. St.</insertion></align></ink>
+<letterText letter="321"><page index="1"/><ink><align pos="right">Riga d. 2ten 8br 1779 <insertion pos="top">a. St.</insertion></align></ink>
 <line type="break"/>Theurester Bester!
 <line type="empty"/>
 <line tab="1"/>Verzeyhen Sie die Form dieses Briefs, wie die Zumuthung die er enthält und setzen beydes auf die Rechnung des strengsten Vertrauens nicht in Ihre Freundschaft und Güte für mich, die, wie ich aus Proben ersehen unbeschränkt ist – sondern in Ihre Gerechtigkeit und Wahrheitsliebe. Ich bitte diese Worte nicht nach dem Herkommen gedruckter Stutzernomenklatur – sondern diesmal nach der Bedeutung der Einsamkeit und ihres Entschlusses auf immer zu nehmen. Also fort für diesmal mit allen äußern Verhältnissen, die die schnelle Sprache dessen was eine besondere Lage der Umstände jetzt auf mich wirken muß, nur höchst unfruchtbar aufhalten würden.
@@ -5482,7 +5481,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>Mein Vater ist – für mich – reich, so auch meine Geschwister. Daß also das nicht in Anschlag kommen darf.</sidenote>
 </letterText> 
 
-<letterText letter="322"><page index="1"/><ink ref="2"><align pos="right">Dorpat. D. 6ten Jenner 1780.</align></ink>
+<letterText letter="322"><page index="1"/><ink><align pos="right">Dorpat. D. 6ten Jenner 1780.</align></ink>
 <line type="empty" />
 <line type="break" /><align pos="center">Mein theuerster Herr Papa!</align>
 <line type="empty"/>
@@ -5547,7 +5546,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>zu <ul>Dörpat.</ul></address>
 </letterText> 
 
-<letterText letter="325"><page index="1"/><ink ref="2"><align pos="right">St Petersburg. D. 11 Febr 80</align></ink>
+<letterText letter="325"><page index="1"/><ink><align pos="right">St Petersburg. D. 11 Febr 80</align></ink>
 <line type="empty"/>
 <line type="empty" />
 <line type="break" />Mein theurester Freund und Gönner
@@ -5609,7 +5608,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite, vertikal">Dem verehrungswürdigen Herrn Onkel und ihren sämmtlichen fürtreflichen Strasb. Cousinen bitte meine beste Empfehlung zu versichern. Wenn Ihr Herr Bruder an mich schreiben will, so lassen Sie ihn nur die Adresse an meinen Bruder machen: den Oberpastor Lenz in Dörpat p. Francfort, <aq>Memel et Riga,</aq> weil ich noch keine Bestimmung habe</sidenote>
 </letterText> 
 
-<letterText letter="328"><page index="1"/><ink ref="2"><align pos="right">StPetersburg d. 28sten Merz. 80.</align></ink>
+<letterText letter="328"><page index="1"/><ink><align pos="right">StPetersburg d. 28sten Merz. 80.</align></ink>
 <line type="empty" />
 <line type="break" /><align pos="center">Lieber Bruder!</align>
 <line type="empty"/>
@@ -6303,7 +6302,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>
 <line tab="1"/>N. S. Ich weiß, daß Sie auch <ul>ausser der Kirche</ul> und dem öffentlichen Gottesdienst Geistlicher sind und bitte daher, sich meinen Brief an meinen Vater von demselben vorlesen zu lassen und in Ihre Berathschlagung zu nehmen. Wir haben in dem hiesigen Senat ein Camptair zur Untersuchung des Petersburgischen Justizkollegii und es läßt sich hoffen, daß bey der Commission zur Errichtung neuer Städte geistliche und Weltleute Platz nehmen können. Ich will nicht sagen, Gott berathe, Gott helfe Ihnen, ich will ihn lieber bitten, mich in den Stand zu setzen, auch entfernteren Freunden nützlich zu werden, die mich freilich wohl bisweilen verkennen mögen, weil ich wieder die <ul>Täge</ul> so in der Russischen Kirche ursprünglich ausgesetzt waren, sich bey der Mahlzeit auch des Armen und Dürftigen zu erinnern, nicht mit dem schwärmerischen Eiffer zu Felde zog. Uebrigens ist wohl, bey der Einführung neuer Kalender – anjetzt alles so ziemlich gleich und die <ul>Herzens</ul>härtigkeit das einzige allgemeine Uebel das durch Geduld überwunden werden muß. Die Rangtabellen Peter des Großen fangen an auch so <ul>ziemlich</ul> menschlicher commentirt zu werden als bisher und vielleicht stehen einmal Geistliche auf, die das <ul>Ehre von einander</ul> nehmen ein wenig besser auseinander setzen. – Gott schenke Ihnen und mir weniger schmarrende Lobeserheber und seltnere standhafte und aufrichtige Freunde! – d. 6te Jun. 87.
 <line type="empty" />
-<line type="break"/><ink ref="2">Mosco.</ink>
+<line type="break"/><ink>Mosco.</ink>
 </letterText> 
 
 <letterText letter="357"><page index="1"/><align pos="right">In grosser Zerstreuung
