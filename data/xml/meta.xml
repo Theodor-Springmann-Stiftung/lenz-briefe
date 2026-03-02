@@ -1869,7 +1869,7 @@
 				<location ref="8" />
 				<person ref="28" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
