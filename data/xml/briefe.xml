@@ -3448,16 +3448,16 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break" /><align pos="center">Hegi, den 10 Julius 1776.</align>
 </letterText> 
 
-<letterText letter="208"><page index="1"/>Hier ist der Guibert die andern Bücher sind nicht zu haben.
-<line type="break" />Da ist ein Louisdor.
+<letterText letter="208"><page index="1"/><line tab="1"/>Hier ist der Guibert die andern Bücher sind nicht zu haben.
+<line tab="1"/>Da ist ein Louisdor.
 <line tab="1"/>Deine Zeichnungen sind brav fahre nur fort wie Du kannst.
 <line tab="1"/>Leb wohl und arbeite Dich aus wie Du kannst und magst.
-<line type="break" /><align pos="right">G.</align>
+<line type="break" /><align pos="center">G.</align>
 </letterText> 
 
 <letterText letter="209"><page index="1"/>
 <line tab="1"/>Herr von Einsiedel wird <aq>Ihnen</aq> Morgen durch einem <aq>expressen</aq> antworten. Ich habe den Brief ohne jemands weiter wißen selbsten eingehändiget.
-<line tab="1"/>Das Vertrauen deßen Sie mich zu würdigen belieben, zu verdienen, würde nichts vor mich zu kostbar seyn. und welcher Mensch, besäße er gleich das härteste Herz, sollte nicht die größte Hochachtung und Liebe haben, nach dem <aq>Ihnen</aq> gesehen und gesprochen.
+<line tab="1"/>Das Vertrauen deßen Sie mich zu würdigen belieben, zu verdienen, würde nichts vor mich <subst><del>so</del><insertion>zu</insertion></subst> kostbar seyn. und welcher Mensch, besäße er gleich das härteste Herz, sollte nicht die gröste Hochachtung und Liebe haben, nach dem <aq>Ihnen</aq> gesehen und gesprochen.
 <line tab="1"/>Beehren Sie mich ferner mit <aq>Ihrem</aq> Vertrauen, Ich kenne jezo kein größer Vergnügen als Ihnen zu dienen –
 <line type="break"/><align pos="right"><aq>Schenck</aq></align>
 </letterText> 
