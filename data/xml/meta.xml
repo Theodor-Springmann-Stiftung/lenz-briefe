@@ -3265,7 +3265,7 @@
 			<sent>
 				<date notBefore="1776-07-01" notAfter="1776-07-31">Straßburg, Juli 1776</date>
 				<location ref="7" />
-				<person ref="7" />
+				<person ref="11" />
 			</sent>
 			<received>
 				<location ref="8" />
