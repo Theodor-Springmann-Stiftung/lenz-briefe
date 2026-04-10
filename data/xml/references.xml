@@ -329,7 +329,7 @@
 
 			<locationDef index="23" name="Gießen" ref="http://d-nb.info/gnd/4020989-1" />
 
-			<locationDef index="24" name="hinter Frankfurt" />
+			<locationDef index="24" name="Hinter Frankfurt" />
 
 			<locationDef index="25" name="Dessau" ref="http://d-nb.info/gnd/4011536-7" />
 
@@ -384,9 +384,9 @@
 
 			<locationDef index="50" name="Moskau" ref="http://d-nb.info/gnd/4074987-3" />
 
-			<locationDef index="51" name="unbekannter Ort" />
+			<locationDef index="51" name="Unbekannter Ort" />
 
-			<locationDef index="52" name="auf dem Weg nach Ohlershoff [Oleri]" />
+			<locationDef index="52" name="Auf dem Weg nach Ohlershoff [Oleri]" />
 
 			<locationDef index="53" name="Schinznach" ref="http://d-nb.info/gnd/1104293412" />
 
