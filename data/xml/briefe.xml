@@ -2726,61 +2726,64 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/>Sollten Sie ein Exemplar des <aq>barbier de Seville</aq> besitzen so bitt ich Sie doch sehr es mir gütigst auf 8 Tage zu leyhen. Die Herzoginn Mutter ist sehr verliebt drinn und ich hab ihrs zu übersetzen versprochen damit wirs hier aufführen können.
 <page index="2"/>
 <line type="empty" />
+<align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
+<line type="empty" />
 <line type="break" /><address>Herrn
 <line type="break"/>Herrn <ul>Gotter</ul>
 <line type="break"/>Archivarius
-<line type="break"/>in <ul>Gotha.</ul></address>
+<line type="break"/>in Gotha.</address>
 </letterText> 
 
-<letterText letter="169"><page index="1"/><align pos="right">Hannov. 25sten Apr. 76.</align>
+<letterText letter="169"><page index="1"/><align pos="right">Hannover. 25sten Apr. 76.</align>
 <line type="break"/>
-<line tab="1"/>Mattei, der Ihnen diesen Brief giebt, ist mein Freund, und wünscht Sie kennen zu lernen. Ich hoffe, es wird Ihnen lieb seyn, daß ich ihn zu Ihnen führe. Es ist ein schazbarer, warmer rechtschaffener Mann, der Welt und Menschen gesehen hat. Kennen Sie nicht Charlotte Seidel? Von ihr sprechen Sie mit ihm, und von Ihrem Freunde
+<line tab="1"/>Mattei, der Ihnen diesen Brief giebt, ist mein Freund, und wünscht Sie kennen zu lernen. Ich hoffe, es wird Ihnen lieb seyn, daß ich ihn zu Ihnen führe. Es ist ein schazbarer, warmer, rechtschaffener Mann, der Welt und Menschen gesehen hat. Kennen Sie nicht Charlotte Seidel? Von ihr sprechen Sie mit ihm, und von Ihrem Freunde
 <line type="break" /><align pos="right">Boie.</align>
 <line type="empty"/>
-<line tab="1"/>Grüßen Sie Göthe. Vielleicht sind Sie nicht mehr in Weymar. So überschreib ich diesen Brief auch an Göthe, damit er wenisten Einen von Ihnen sehe. Mich verlangt nach Nachricht von Ihnen.
+<line tab="1"/>Grüßen Sie Göthe. Vielleicht sind Sie nicht mehr in Weymar. So überschreib ich diesen Brief auch an Göthe, damit er wenigstens Einen von Ihnen sehe. Mich verlangt nach Nachricht von Ihnen.
 <page index="2"/>
+<line type="empty" />
+<align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
 <line type="empty" />
 <line type="break" /><address>An Lenz oder Göthe
 <line type="break"/>Weymar.</address>
 </letterText> 
 
 <letterText letter="170"><page index="1"/>
-<line tab="1"/>Hier, liebster Lenz, hast Du einige Flicke in den Merkur. Verrathe mich nicht oder entschuldige mich wenigstens bei Wieland, daß ich an Ihn nicht schreibe, u. wähle vorsichtig aus – Eins oder Keins. Ich will keinen neuen Hundelärm haben u. Euer Merkur soll ihn nicht durch mich haben. Also wählt vorsichtig – so immer ein Flick zum Einschieben – bald schick’ ich was Anders.
-<line tab="1"/>Dein Brief lieber Lenz u. Dein <del>P</del> <aq>Epilogus galeatus</aq> zur Urkunde hat mich u. Dich noch näher gebunden. Du bist der Erste Mensch, für den ich schreibe, und kannst Du herrlich durchblicken, entschuldigen, überblicken, rathen. Schicke mir doch das Stück, oder mach’ aus, daß der Merk. von diesem Jahr an mich geschickt wird ich will auch unter den Abonnenten <insertion pos="top">seyn</insertion> – und Du arbeite fleißig dazu, lieber Junge.
+<line tab="1"/>Hier, liebster Lenz, hast Du einige Flicke in den Merkur. Verrathe mich nicht oder entschuldige mich wenigstens bei Wieland, daß ich an Ihn nicht schreibe, und wähle vorsichtig aus – Eins oder Keins. Ich will keinen neuen Hundelärm haben und Euer Merkur soll ihn nicht durch mich haben. Also wählt vorsichtig – so immer ein Flick zum Einschieben – bald schick’ ich was Anders.
+<line tab="1"/>Dein Brief lieber Lenz u. Dein <del>P</del> <aq>Epilogus galeatus</aq> zur Urkunde hat mich u. Dich noch näher gebunden. Du bist der Erste Mensch, für den ich schreibe, und kannst Du herrlich durchblicken, entschuldigen, überblicken, rathen. Schicke mir doch das Stück, oder mach’ aus, daß der Merk. von diesem Jahr an mich geschickt wird ich <subst><del>bitt</del><insertion>will</insertion></subst> auch unter den Abonnenten <insertion pos="top">seyn</insertion> – u. Du arbeite fleißig dazu, lieber Junge.
 <line tab="1"/>Mit dem Zögern in Weimar gehts doch entsetzlich. Ich sitz hier <insertion pos="top">freilich</insertion> nicht auf St. Lorenz Kohlen, u. doch unsanft, denn das Geträtsch ist überall hier herum und ich sitze. Trage Du doch bei, daß das Ding so oder so ausgeht, nur daß was gethan wird. Soll ich predigen, wohlan –
-<line tab="1"/>Und nun noch Eins, lieber Lenz. Da das Glück nicht wollte, daß ich Dich in Weimar vielleicht finde, so beschwör ich Dich, <dul>komm zu mir</dul>!!! wenn Du von dort zeuchst. Ich will Dir die Reis’ ersetzen. Ich wollt gern zu Dir halbenwegs kommen, aber dann sieht Dich nicht mein Weib, u. sie will Dich so gerne sehn u. was ist im Wirthshaus? Komm her, ich bitt u. flehe Dich, wenn Du nicht so lang in Weimar bleibst, bis wir erscheinen. Oder bleib immer da, da wir dann herrlich singen wollen Hallelujah.
+<line tab="1"/>Und nun noch Eins, lieber Lenz. Da das Glück nicht wollte, daß ich Dich in Weimar vielleicht finde, so beschwör ich Dich, <dul>komm zu mir</dul>!!! wenn Du von dort zeuchst. Ich will Dir die Reis ersetzen. Ich wollt gern zu Dir halbenwegs kommen, aber dann sieht Dich nicht mein Weib, u. sie will Dich so gerne sehn u. was ist im Wirthshaus? Komm her, ich bitt u. flehe Dich, wenn Du nicht so lang in Weimar bleibst, bis wir erscheinen. Oder bleib immer da, da wir dann herrlich singen wollen Hallelujah.
 <line tab="1"/>Nochmals gesagt, daß ich die Fabeln Dir vertraue. Leb wohl, lieber Lenz bester Junge. Grüß Göthen.
 </letterText> 
 
-<letterText letter="171"><page index="1"/>Den 27. Apr. 76.
+<letterText letter="171"><page index="1"/><align pos="right">Den 27. Apr. 76.</align>
 <line type="empty" />
 <line type="break" /><align pos="center"><ul>Promemoria</ul></align>
 	<line type="break"/><align pos="center">an <ul>Wieland, Goethe, Lenz.</ul></align>
 <line type="empty"/>
 <line tab="1"/>Ich kehre mein Viertelstündchen, u: bis es herunter gesandet
-<line type="break"/>hat, schreib ich Euch, lieben Drey, was mir einfällt.
+<line type="break"/>hat, schreib’ ich Euch, lieben Drey, was mir einfällt.
 <line type="empty" />
 <line type="break" /><align pos="center"><ul>Wieland.</ul></align>
-<line tab="1"/>Den hertzigen Brief vom 15. Apr. empfangen! Dank!
+<line type="break" />Den herzigen Brief vom 15. Apr. empfangen! Dank!
 <line tab="1"/>Freude – über die Wiedergenesung der Kranken! <ul>Werthes</ul> sagte mir, was Du in solchen Fällen leidest.
 <line tab="1"/>Ich bin Erstaunen gesund; aber mein stilles Weibchen hat viele, viele Leibesbeschwerden.
 <line type="empty" />
 <line type="break" /><align pos="center"><ul>Goethe.</ul></align>
-<line tab="1"/>Komm ich dann auch zu keiner Stunde, wo ich Dir wieder einmal mein gedrücktes Herz leeren kann! o
-<line tab="1"/>Goethe – nur noch ein paar Stunden neben Dir aufm Obern Lindengraben – oder aufm Bett im Saale!
+<line type="break" />Komm’ ich dann auch zu keiner Stunde, wo ich Dir wieder einmal mein gedrücktes Herz leeren kann! o Goethe – nur noch ein paar Stunden neben Dir aufm Obern Lindengraben – oder aufm Bett’ im Saale!
 <line type="empty" />
 <line type="break" /><align pos="center"><ul>Lenz.</ul></align>
-<line tab="1"/>Du hast nun die Briefe vom <dul>nochlebenden Lindau?</dul>
+<line type="break" />Du hast nun die Briefe vom <dul>nochlebenden Lindau?</dul>
 <line tab="1"/>Sey ruhig des Bildes wegen. <ul>Werthes</ul> ist nicht mehr in Lausanne.
 <line type="empty" />
 <line type="break" /><align pos="center"><ul>Wieland.</ul></align>
-<line tab="1"/>Aus Mißverstand ist <ul>Pirkheimer</ul> auf ein klein Täfelgen radirt worden. Ich behalte das vor mich, und laß einen andern machen.
+<line type="break" />Aus Mißverstand ist <ul>Pirkheimer</ul> auf ein klein Täfelgen radirt worden. Ich behalte das vor mich, und laß einen andern machen.
 <line type="empty" />
 <line type="break" /><align pos="center"><ul>Goethe.</ul></align>
-<line tab="1"/>In <ul>Baden</ul> und <ul>Weiningen</ul> hab ich wieder einmal satt von Dir gesprochen. <ul>Goethe</ul> und <ul>Lavater</ul> sind der <ul>Text</ul> des leztern <ul>Thema Publikums</ul> für die <ul>liebe Studiosi.</ul>
+<line type="break" />In <ul>Baden</ul> und <ul>Weiningen</ul> hab ich wieder einmal satt von Dir gesprochen. <ul>Goethe</ul> und <ul>Lavater</ul> sind der <ul>Text</ul> des leztern <ul>Thema Publikums</ul> für die <ul>liebe Studiosi.</ul>
 <line type="empty" />
 <line type="break" /><align pos="center"><ul>Wieland.</ul></align>
-<line type="break"/>Ich bin, Gott weiß, äußerlich der glücklichste Mensch. Was meine Seele inwendig zerreißt – weiß nur <ul>Gott.</ul>
+<line type="break"/>Ich bin, Gott weiß, äußerlich der glüklichste Mensch. Was meine Seele innwendig zerreißt – weiß nur <ul>Gott.</ul>
 <line type="empty" />
 <line type="break" /><align pos="center"><ul>Lenz.</ul></align>
 <line type="break"/>Ich habe noch nichts von Deinen neuern Dingen gesehen. Ach! mein Lieber! wärst Du bey mir!
@@ -2788,37 +2791,39 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line type="break" /><align pos="center"><ul>Goethe.</ul></align>
 <line type="break"/>In 8. Tagen hoff’ ich <ul>Schloßern</ul> zusehen; verspreche mir viel von ihm.
 <line type="empty" />
-<line type="break" /><align pos="center"><ul>Goethe – Wieland u. Lenz.</ul></align>
-<line type="break"/>Wollt’ Euch gern meinen <ul>Abraham</ul> senden, wenns nicht mehr kostete, als im Buchladen. Verzeiht.
-<line tab="1"/>Adieu – Ihr guten Lieben!
-<line tab="1"/>Laßt uns würken, weils Tag ist! Es kommt die Nacht, da niemand würken kann. Amen. 
-<line type="break" />Den 27. Apr. 76. J. C. <ul>Lavat.</ul>
+<line type="break" /><align pos="center"><ul>Goethe – Wieland u: Lenz.</ul></align>
+<line type="break"/>Wollt’ Euch gern meinen <ul>Abraham</ul> senden, wenn’s nicht mehr kostete, als im Buchladen. Verzeiht.
+<line tab="1"/><aq>Adieu</aq> – Ihr guten Lieben!
+<line tab="1"/>Laßt uns würken, weils Tag ist! Es kommt die Nacht, da niemand würken kann. Amen. Den 27. Apr. 76. J. C. <ul>Lavat.</ul>
 <line type="empty"/>
-<line tab="1"/>Der Wielandin Kuß für mein Weibchen hab ich noch in <aq>Petto</aq> – wollen erst eine Menge andre einziehen. Hab aber schon ein Lächeln zum voraus durch die Ankündigung erholt.
+<note>zwei Abgrenzungsstriche</note>
+<line tab="1"/>Der Wielandin Kuß für mein Weibchen hab ich noch in <aq>Petto</aq> – wollen erst eine Menge andre einziehen. Hab aber schon ein Lächeln zum voraus durch die Ankündigung erhohlt.
 <line type="empty" />
 <line type="break" /><align pos="center"><ul>Wieland.</ul></align>
-<line type="break"/><ul>Kayser</ul> wünscht seine Poesieen in Merkur gedruckt.
+<line type="break"/><ul>Kayser</ul> wünscht seine Poesieen in Merkur gedrukt.
 <line type="empty" />
 <line type="break" /><align pos="center"><ul>Urtheile.</ul></align>
-<line tab="1"/>Briefwechsel dreyer akademischer Freunde. (Ulm bey Wohler) – – – fließend; doch etwas matt fließend; Bisweilen süßlicht, und etwas fade. Übrigens voll Gutherzigkeit und für Studenten eine treffliche Lektüre. Sehr selten Geniespuren, desto mehr nüzliche Erinnerungen. Über die vielen Urtheile über lebende Personen – urhteilen wir nicht, nur kann hierüber allen Jünglingen in öffentlichen Schriften die überlegteste Behutsamkeit – nicht genug angerathen werden.
+<line type="break" /><ul>Briefwechsel dreyer akademischer Freunde.</ul> (Ulm bey Wohler) – – – fließend; doch etwas mattfließend; Bisweilen süßlicht, und etwas fade. Übrigens voll Gutherzigkeit und für Studenten eine treffliche Lektüre. Sehr selten Geniespuren, desto mehr nüzliche Erinnerungen. Über die vielen Urtheile über lebende Personen – urtheilen wir nicht, nur kann hierüber allen Jünglingen in öffentlichen Schriften die überlegteste Behutsamkeit – nicht genug angerathen werden.
 <line type="empty" />
 <line type="break" /><align pos="center">—</align>
 <line type="break" /><align pos="center">—</align>
 <line type="empty" />
-<line tab="1"/><ul>Ephemeriden der Menschheit</ul> oder Bibl. der <ul>Sittenlehre und Politik.</ul> Erstes Stück 76. Basel. Wirthschaft, Sitten, Freyheit – der Gegenstand dieser Monatschrift. – Dieß Stück enthält viel Merkwürdiges. Das Beste – der Brief von <ul>Schloßer</ul> an <ul>lselin</ul> über die <ul>Philanthropinen.</ul>
+<line tab="1"/><ul>Ephemeriden der Menschheit</ul> oder Bibl. der <ul>Sittenlehre und Politik.</ul> Erstes Stük 76. Basel. <ul>Wirthschaft, Sitten, Freyheit</ul> – der Gegenstand dieser Monatschrift. – Dieß Stük enthält viel Merkwürdiges. Das Beßte – der Brief von <ul>Schlosser</ul> an <ul>Iselin</ul> über die <ul>Philantropinen.</ul>
 <line type="break" /><align pos="center">—</align>
 <line type="break" /><align pos="center">—</align>
 <line type="empty"/>
 <line tab="1"/>Auf den <ul>Mist</ul> mit, wenn’s nicht gefällt. 
+<line type="empty"/>
+<note>Schlusszeichen</note>
 </letterText> 
 
 <letterText letter="172"><page index="1"/><align pos="right">Den 30sten Apr. 76.</align>
 <line type="empty"/>
 <line tab="1"/>Ich schick Ihnen hier die Abhandlung oder Vertheidigung und die Komödie. Mit dem Druck der lezten zumal bin ich wenig zufrieden, aber, ich kann’s weder ändern noch helfen. Die W. sind vernichtet. Ich selbst habe nicht ’mal einen Abdruck. Von diesen beyden hab ich H. Zimmermann, der sich Ihnen empfiehlt, ein Exemplar gegeben. Es sind nur 5 1/2 Bogen geworden, u. ich hab Ihnen 6 Dukaten geschickt. Ich hatte den Druck wie in der Stella bestellt, u. rechnete auf mehr als 6 Bogen. Nach der Meße kommt H. erst hier, u. giebt mir Geld. Ich will mein möglichstes thun, Ihnen mehr zu verschaffen. Aber ich verzweifle. Ich kenne die Buchhändler, u. zumal in diesem Falle, wo wir ihn doch menagiren müßen. Ich selbst
 <page index="2"/>hab über 1 Duk. Auslage. Wenn Sie mehr Exempl. haben wollen, schreiben Sie an H. nach Leipzig. Von der Vertheidigung ist nun kein Exemplar an W. gegangen.
-<line tab="1"/>Ich schicke Ihnen nächstens einen Freund von mir zu, von dem Sie hören können, was ich mache.
-<line tab="1"/>Die verlangten Nachrichten sollen Sie haben, aber heut nicht. Sie kosten mich Nachsuchungen, zu denen ich nicht Zeit habe. Ich bin ge<del><nr extent="1"></nr></del>wärtig von Schreybereien wegen der Musterungen wie erdrückt.
-<line tab="1"/>Daß das Museum in Weymar gelesen wird, freut mich. Wenn ich nur mit keinem Buchhändler zu thun hätte! Der Meinige ist vollends ein Esel, der immer mit-<page index="3"/>sprechen will. Ich hoffe immer mehr intereßante Sachen zu liefern. Im May lesen Sie ja Lenardo und Blandine. Lic. Webers Beiträge sollten uns ganz willkommen seyn, wenn ich an ihn zu kommen wüste. Vergeßen Sie Ihre Freunde nicht!
+<line tab="1"/>Ich schick Ihnen nächstens einen Freund von mir zu, von dem Sie hören können, was ich mache.
+<line tab="1"/>Die verlangten Nachrichten sollen Sie haben, aber heut nicht. Sie kosten mich Nachsuchungen, zu denen ich nicht Zeit habe. Ich bin ge<del><nr extent="1"></nr></del>wärtig von Schreibereyen wegen der Musterungen wie erdrückt.
+<line tab="1"/>Daß das Museum in Weymar gelesen wird, freut mich. Wenn ich nur mit keinem Buchhändler zu thun hätte! Der Meinige ist vollends ein Esel, der immer mit-<page index="3"/>sprechen will. Ich hoffe immer mehr intereßante Sachen zu liefern. Im May lesen Sie ja Lenardo und Blandine. Lic. Webers Beyträge sollten uns ganz wilkommen seyn, wenn ich an ihn zu kommen wüste. Vergeßen Sie Ihre Freunde nicht!
 <line tab="1"/>Wenn Sie Zeit haben, schreiben Sie mir weitläufiger, u. mehr von sich u. Weymar.
 <line type="empty" />
 <line type="break" /><align pos="center">Der Ihrige</align>
@@ -2827,13 +2832,14 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 
 <letterText letter="173"><page index="1"/><align pos="center">Weymar d. 30sten Aprill. 76.</align>
 <line type="empty"/>
-<line tab="1"/>Haben Sie doch die Güte bester Freund bey Hn. Hellwieg zu kontremandiren, daß er keine Exemplare der Vertheidigung Wielanden zuschicke. Sie würden ihn nur beunruhigen und ich habe den Mann zu lieb, ihm nicht alles zu ersparen was seine ruhige Dichterexistenz, die er gewiß verdient wenn sie ein Mensch auf der Welt verdienen kann, unterbrechen könnte. Ich wünschte allen meinen Freunden daß sie diesen Mann kennen lernten, wie ich ihn nun kenne und ihn liebten in dem Grade als ers werth ist, sie würden sich dabey sehr wohlbefinden.
-<line tab="1"/>Vom Musäum sprechen wir nicht eher, als bis ich aus Ihrer Liebe und Güte die erbethene Liste von den Appointements eines Hannöverischen Infanterie- und Cavallerie Regiments habe, woran mir alles gelegen ist. Ich befinde mich hier so wohl daß mir meine Existenz halb wie ein angenehmer Traum vorkommt. Nichtsdestoweniger werd ich einen Monathen aufs Land gehn um zu meinen Arbeiten wiederaufzuwachen. Ich umarme Sie nach viel Empfelungen an Hn. Leibarzt Zimmermann als
+<line tab="1"/>Haben Sie doch die Güte bester Freund bey Hn. Hellwieg zu kontremandiren, daß er keine Exemplare der Vertheidigung Wielanden zuschicke. Sie würden ihn nur beunruhigen und ich habe den Mann zu lieb, ihm nicht alles zu erspahren was seine ruhige Dichterexistenz, die er gewiß verdient wenn sie ein Mensch auf der Welt verdienen kann, unterbrechen könnte. Ich wünschte allen meinen Freunden daß sie diesen Mann kennen lernten, wie ich ihn nun kenne und ihn liebten in dem Grade als ers werth ist, sie würden sich dabey sehr wohlbefinden.
+<line tab="1"/>Vom Musäum sprechen wir nicht eher, als bis ich aus Ihrer Liebe und Güte die erbethene Liste von den Appointements eines Hannöverischen Infanterie- und Cavallerie Regiments habe, woran mir alles gelegen ist. Ich befinde mich hier so wohl daß mir meine Existenz halb wie ein angenehmer Traum vorkommt. Nichts destoweniger werd ich einen Monathen aufs Land gehn um zu meinen Arbeiten wiederaufzuwachen. Ich umarme Sie nach viel Empfelungen an Hn. Leibarzt Zimmermann als
 <line type="break" /><align pos="right">Ihr aufrichtigster Freund Lenz</align>
 </letterText> 
 
 <letterText letter="174"><page index="1"/>
-<line tab="1"/>Ich sehe mich genöthigt französisch zu schreiben werde also nicht allein längere Zeit sondern auch weniger Raum brauchen, da man französisch vieles kürzer sagen kann. Diese Umstände zusammengenommen nebst dem was ich bei meinem Aufenthalt allhier der mir zur Musse nothwendig ist zusetze und durch meine Abwesenheit in Strasburg einbüsse (wiewohl das letzte mir doch nicht bezahlt werden kann) möchten mich wohl nöthigen den Preiß für den Bogen höherzusetzen. Wir werden darüber schon zurecht kommen, wie ich hoffe, der Tittel wird <aq>Sur les mariages des Soldats</aq>
+<line tab="1"/>Ich sehe mich genöthigt französisch zu schreiben werde also nicht allein längere Zeit sondern auch weniger Raum brauchen, da man französisch vieles kürzer sagen kann. 
+<line tab="1"/>Diese Umstände zusammengenommen nebst dem was ich bey meinem Aufenthalt allhier der mir zur Musse nothwendig ist zusetze und durch meine Abwesenheit in Strasburg einbüsse (wiewol das letzte mir doch nicht bezahlt werden kann) möchten mich wohl nöthigen den Preiß für den Bogen höherzusetzen. Wir werden darüber schon zurecht kommen, wie ich hoffe, der Tittel wird <aq>Sur les mariages des Soldats</aq>
 <line tab="1"/>Empfehle mich Ihrer ferneren Freundschaft.
 <line type="empty" />
 <line type="break" />Weymar. D. 6ten May 1776
