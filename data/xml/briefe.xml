@@ -3662,7 +3662,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break" /><align pos="center"><aq>Strasb. Kalend. Julii 1776.</aq></align>
 </letterText> 
 
-<letterText letter="223"><page index="1"/><pe>Vom Lande</pe>
+<letterText letter="223"><page index="1"/><align pos="right"><pe>Vom Lande</pe></align>
 <line type="empty"/>
 <line type="empty"/>
 <line tab="1"/>Ich muß bitten lieber Freund! zu verhüten daß die Soldaten nicht etwa im Meßkatalogus unter meinem Namen angezeigt werden, da ich sonst nimmermehr mit Ihnen was zu theilen haben kann da sie ganz und gar <ul>wieder meinen Willen</ul> gedruckt worden sind und es die <ul>aller nachtheiligsten Folgen von der Welt</ul> für mich haben kann. Eben dadurch auch für den Verleger; der den Verfasser so wenig geschont hat. <pe>D. 26ten Julius 76</pe>
@@ -3673,8 +3673,10 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break" />
 <sidenote pos="left" page="1" annotation="am linken Rand, vertikal">
 <line type="break"/>
-<line tab="1"/><pe>Auch von dem andern Antrag bitte um Ihrer Freundschaft willen niemanden zu sagen. Die Sachen folgen so kurz aufeinander.</pe></sidenote>
+<line tab="1"/><pe>Auch von dem andern Antrag bitte um Ihrer Freundschaft willen niemanden zu sagen. Die Sachen folgen so kurz aufeinander –</pe></sidenote>
 <page index="2"/>
+<line type="empty" />
+<align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
 <line type="empty" />
 <line type="break" /><address>Herrn
 <line type="break"/>Herrn <ul>Weidmanns</ul>
@@ -3719,22 +3721,22 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 
 <letterText letter="225"><page index="1"/>Lentz,
 <line type="break"/>
-<line tab="5"/>Ein Gruß von mir aus heißer Seele.
-<line tab="5"/>Küß Kaufmann von mir. Gieb ihm den Brief wenn er kömmt.
-<line tab="5"/>Ich leide woran keine Seele denkt.
-<line tab="5"/>Kannst Du bethen, bethe für mich.
+<line type="break"/>Ein Gruß von mir aus heißer Seele.
+<line type="break"/>Küß Kaufmann von mir. Gieb ihm den Brief wenn er kömmt.
+<line type="break"/>Ich leide woran keine Seele denkt.
+<line type="break"/>Kannst Du bethen, bethe für mich.
 <line type="empty" />
 <line type="break" /><align pos="center"><aq>adieu</aq> L.</align>
 <line type="break" /><align pos="right">D. 31 Jul. 76.</align>
 <page index="2"/>
 <line type="empty"/>
 <line type="break"/>L. Kaufmann,
-<line type="break"/>d. Brief blieb zurück. <aq>adieu.</aq> bezahle d. Port u. bleibe Lavatern.
+<line type="break"/>der Brief blieb zurück. <aq>adieu.</aq> bezahle das Port u: bleibe Lavatern. .
 </letterText> 
 
-<letterText letter="226"><page index="1"/><align pos="right">Halle den 3ten Aug. 1776.</align>
+<letterText letter="226"><page index="1"/><align pos="right">Halle den 3ten Augl 1776.</align>
 <line type="break"/>
-<line tab="1"/>Ich hoffte selbst das Vergnügen zu haben, Sie , theuerster Freund, persönlich zu sprechen, verschiedene Umstände haben es aber nöthig gemacht, gerade nach Berlin und von da wieder hieher zu gehen; ich schike Ihnen also hier die Briefe, so mir Röderer mit gegeben; sollten Sie mich für würdig halten Ihre Briefe zu bekommen, wiewohl die fehlgeschlagenen Hoffnung einer Antwort auf meinem ersten, mich es fast nicht zu hoffen läßt, so bitte ich solche nur nach Halle zu adreßiren. Ich wünsche Ihnen alles mögliche WohlErgehn und Vergnügen und bin
+<line tab="1"/>Ich hoffte selbst das Vergnügen zu haben, Sie, theuerster Freund, persönlich zu sprechen, verschiedene Umstände haben es aber nöthig gemacht, gerade nach Berlin und von da wieder hieher zu gehen; ich schike Ihnen also hier die Briefe, so mir Röderer mit gegeben; sollten Sie mich für würdig halten Ihre Briefe zu bekommen, wie wohl die fehlgeschlagenen Hoffnung einer Antwort auf meinem ersten, mich es fast nicht zu hoffen läßt, so bitte ich solche nur nach Halle zu addreßiren. Ich wünsche Ihnen alles mögliche WohlErgehn und Vergnügen und bin
 <line type="empty" />
 <line type="break" /><align pos="right">Ihr gehorsamter Diener</align>
 <line type="break"/><align pos="right"><aq>Eisenberg
