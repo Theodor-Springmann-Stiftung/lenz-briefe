@@ -3876,7 +3876,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 </letterText> 
 
 <letterText letter="236"><page index="1"/>
-<line tab="1"/>Hier Herr Lenz schicke Ihnen etwas Wäsche von Schenck wo ich iezo bin, Ich bin in einem grimmigen Zorn über die Wäschern die mich so herum zieht.
+<line tab="1"/>Hier Herr Lenz schike ihnen etwas Wäsche von <aq>Schenck</aq> wo ich iezo bin, Ich bin in einem grimmigen Zorn über die Wächern die mich so herum zieht.
 <line type="empty" />
 <line type="break"/>1 Hemd.
 <line type="break"/>2 Halsbinden
@@ -3885,10 +3885,10 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/>1 P. Schuh.
 <line type="break"/>1 P. Schuhschnallen
 <line type="break"/>
-<line tab="1"/>Ihre Paar Sporen. und da schicken Sie doch mit dem nächsten dann Hr. G. L. R. seine Sporen wieder zurück.
+<line tab="1"/>Ihre Paar Sporen. und da schiken sie doch mit dem nachsten dann Hr. G. L. R. seine Sporen wieder zurük.
 <line type="empty" />
 <line type="break" /><align pos="center"><note>spiegelverkehrt:</note></align>
-<line type="break"/><pe> D 22 Septbr.</pe>
+<line type="break"/><pe>D 22 Septbr.</pe>
 <page index="2"/>
 <line type="empty" />
 <line type="break" /> <align pos="center"><note>Rechnung unbekannter Hand</note></align>
@@ -3955,7 +3955,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 
 <letterText letter="241"><page index="1"/>An keinem Orte keine Antwort.
 <line type="empty" />
-<line type="break" />Herr Cästner mündliche Antwort, viele <aq>Compli.</aq> nebst Versicherung der besten Besorgung.
+<line type="break" />Herr Cästner mündliche Antwort, viele <aq>Compli</aq> nebst Versicherung der besten Besorgung.
 <line type="empty" />
 <line type="break" />Herr Herder hat um 12 noch nicht geschrieben will bis weitere Gelegenheit versparen
 <line type="empty" />
@@ -3963,14 +3963,14 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="empty" />
 <line type="break" />Philip habe auf 3 mal nicht angetrofen und Bothenfrau, will – oder kann nicht länger warten.
 <line type="empty"/>
-<line type="break" />innliegend etwas, u. da es ein Hofbedienter gebracht. <insertion pos="top">vermuthe</insertion> daß solches von Herrn Göthe sei u etwan bei Durchl. Herzog geschrieben ist.
+<line type="break" />innliegend etwas, und da es ein Hofbedienter gebracht. <insertion pos="top">vermuthe</insertion> daß solches von Herrn Göthe sei und etwan bei Durchl Herzog geschrieben ist.
 <line type="empty" />
-<line type="break" />Der Schneider ist nicht fertig. Philip hat es vielleicht vergessen Dürfte ich Ihnen ersuchen, alle Ihre Commiss. ohne <aq>Compliments</aq>
-<line type="break"/>
-<line type="break" />an mich zu schicken. Jeder Tag da ich die Bothenfrau vermuthe ist vor mich ein Freuden Tag. Seyn Sie deß versichert. Leben Sie wohl.
+<line type="break" />Der Schneider ist nicht fertig. Philip hat es vielleicht vergeßen 
+<line type="empty" />
+<line type="break"/>Dürfte ich Ihnen ersuchen, alle Ihre Commiss. ohne <aq>Complimente</aq> an mich zu schiken. Jeder Tag da ich die Bothenfrau vermuthe ist vor mich ein Freuden Tag. Seyn Sie deßen versichert. Leben Sie wohl.
 <page index="2"/>
 <line type="empty" />
-<line type="break" />Der Brief ist nach Göttingen <aq>francirt</aq> kostet aber nur 3 g. also 1 g. zurück.
+<line type="break" />Der Brief ist nach Göttingen <aq>francirt</aq> kostet aber nur 3 g. also 1 g. zurük.
 <line type="empty" />
 <line type="break" />Viele Compl. von Herrn von Kalb
 <line type="empty" />
@@ -4022,10 +4022,12 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Verzeih mir lieber Herder, daß ich Deiner Frau eine Unschicklichkeit zumuthete. Bey uns <aq>magistris artium</aq> sind Kopf und Hand nicht immer beysammen.
 <line tab="1"/>Es war mir wahre Belohnung daß der alte Vater Gevatter Bruder und Schwester Joseph Maria Herzens Wieland meinen Pietisten nicht unter die Bank geworfen. Denn er freute mich als ich ihn schrieb.
 <line tab="1"/>Darf ich zum voraus anfragen lieber Episkopus, ob Du einem <aq>maitre de langues</aq> ein Paar Englische Bücher leyhen kannst, etwa auch eine Grammatik <aq>etc.</aq> Die Herzoginnen wollen den Winter Englisch lernen
-<line type="break" />Empfiel mich Deiner Frau und Kleinen nebst Schwägerlein.
+<line tab="1"/>Empfiel mich Deiner Frau und Kleinen nebst Schwägerlein.
 <line type="break" /><align pos="right">L.</align>
 <page index="2"/>
 <line type="empty" />
+<align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
+<line type="empty"/>
 <line type="break"/><address>
 <line type="break"/>Herrn
 <line type="break"/>Herrn Generalsuperintendenten <dul>Herder</dul>
