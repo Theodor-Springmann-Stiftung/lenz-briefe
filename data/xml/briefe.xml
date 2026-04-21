@@ -3948,8 +3948,9 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Unsere Herzogin hat mir befohlen, ihr ein Briefgen an Dich mitzugeben. Ich bitte dabey von der Fürstinn zu abstrahiren und mit Deiner durchschauenden Phantasie aus diesem Zuge Dir das Gesicht <ul>der Frau</ul> abzubilden die das, als <ul>Fürstinn,</ul> verlangen konnte.
 <line tab="1"/>Ich wünschte überhaupt Du suchtest die nähere Bekanntschaft dieser Dame, und ich habe das Herz ohne Augur oder Druide zu seyn beyden Theilen sehr viel Genugthuung davon zu versprechen. Soviel Grosses habe ich nicht leicht in einem Karackter vereinigt gefunden, der ganz und gar auf sich selber ruht. Doch ich sollte mich billig nie unterstehen etwas auf der Welt zu loben. 
 <line type="break" /><align pos="right">Le</align></pe>
-<page index="4"/><pe>
+<page index="4"/>
 <line type="empty" />
+<pe>
 <line type="break" /><nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr></pe>
 </letterText> 
 
@@ -4059,7 +4060,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="break"/><align pos="right">Röderer</align>
 <line tab="1"/>P. S. Kaufmann ist alles Lobs werth und mein inniggeliebter! Willstu Maler Müllers Schattenriß, ich hab herrliche Tage mit Ihm zu M. gehabt. O der Antiquiensaal!!
 <sidenote pos="left" page="1" annotation="am linken Rand, vertikal">
-<line type="break"/>Zu Frankfurt hab ich die Ehre gehabt der Frau Rath <aq>Goethe</aq> <del>aufzuwarten!</del> <insertion pos="bottom">zu bewundern.</insertion> Wagner ist verheyrathet.</sidenote>
+<line type="break"/>Zu Frankfurt hab ich die Ehre gehabt der Frau Rath <aq>Goethe</aq>  <del>aufzuwarten!</del> <insertion pos="bottom">zu bewundern.</insertion> Wagner ist verheyrathet.</sidenote>
 <page index="2"/>
 <line type="empty" />
 <align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
