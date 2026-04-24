@@ -4152,14 +4152,18 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 </letterText> 
 
 <letterText letter="258"><page index="1"/>
-<line tab="1"/>Ich habe Ihren Brief und Nachricht einer Dame vom Hofe gegeben die ihn einer treflichen Dame von ihrer Bekanntschaft die eben mit ihrem Sohne zwischen Dessau und Salis unschlüssig war, zugeschickt hat. Verzeyhen Sie, daß ich in diesem Stück Ihre freundschaftliche Ordre überschritten, es war mein Herz das mir dazu rieth und dieses sündigt nie.
-<line tab="1"/>Ich bin der Jahreszeit ungeachtet noch immer auf dem Lande weil man mich in W. nicht brauchen kann. Neulich glaubte sich ein Franzose der sich <ul>einen Zögling des grossen</ul> <ul>Voltaire</ul> sagte, seiner Sache schon gewiß, als er mit einem großen Empfehlungsschreiben vom Prinzen <er><nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr></er> <!-- Bezieht sich die unleserlich gemachte Streichung auf die Streichung zuvor? --> aus Berlin, einem Verwandten unsers Hauses, worin derselbe den Geh. Legationsrath Goethe den deutschen Shakesp. und den teutschen Voltäre nannte und gegenwärtigen Fremden wegen
-<page index="2"/>seiner guten Sitten und Talente und Verse empfahl, sich meinem Freunde Goethe vorstellen ließ; weil unsere Einrichtungen aber nicht für Fremde sind, mußte der Zögling des grossen Voltaire mit Schimpf und Schande abziehn. Ich bitte diese Geschichte bekannt zu machen.
+<line tab="1"/>Ich habe Ihren Brief und Nachricht einer Dame vom Hofe gegeben die ihn einer treflichen Dame von ihrer Bekanntschaft die eben mit ihrem Sohn zwischen Dessau und Salis unschlüssig war, zugeschickt hat. Verzeihen Sie daß ich in diesem Stück Ihre freundschaftliche Ordre überschritten, es war mein Herz das mir dazu rieth und dieses sündigt nie.
+<line tab="1"/>Ich bin der Jahrszeit ungeachtet noch immer auf dem Lande weil man mich in W. nicht brauchen kann. Neulich glaubte sich ein Franzose der sich <ul>einen Zögling des grossen</ul> <ul>Voltaire</ul> sagte, seiner Sache schon gewiß, als er mit einem grossen Empfehlungsschreiben vom Prinzen <er><nr> </nr> <nr> </nr> <nr> </nr> <nr> </nr></er> <!-- Bezieht sich die unleserlich gemachte Streichung auf die Streichung zuvor? --> aus Berlin, einem Verwandten unsers Hauses, worin derselbe den geh. Legationsrath Goethe den deutschen Shakesp. und den teutschen Voltäre nannte und gegenwärtigen Fremden wegen
+<page index="2"/>seiner guten Sitten und Talente und Verse empfahl, sich meinem Freunde Goethe vorstellen ließ; weil unsere Einrichtungen aber nicht für Fremde sind, mußte der Zögling des grossen Voltäre mit Schimpf und Schande abziehn. Ich bitte diese Geschichte bekannt zu machen.
 <line tab="1"/>Meine wärmste Empfehlung Ihrem Freunde Lerse dessen wir uns mit Goethe oft erinnert haben. Wie soll ich Ihnen meinen Dank ausdrücken für die gefällige Beantwortung meiner fürwitzigen Fragen? Ich weiß nicht welchen Antheil ich an Frankreich
-<page index="3"/>nehme, dem ich doch keine Verbindlichkeiten habe und ganz gewiß auch keine haben werde. Es gehört aber wie besagt auch dieses unter die Rätzel meines Herzens die ich mir selbst weder auflösen kann noch mag.
-<line tab="1"/>Ich wollte Ihnen ein Exemplar <ul>der beyden Alten und andrer kleiner Aufsätze</ul> beylegen, wenn es sich der Mühe verlohnte. Ich erwähne dessen nur, weil die Vorlesungen in unsrer Teutschen Gesellschaft die ich Ihnen im Manuscript zugeschickt, darin abgedruckt worden. Sie ist gegenwärtig mit einer Oekonomischen Gesellschaft im Hause des Hn. V. Türkheim verbunden, nicht vereinigt worden. Eine ähnliche Gesellschaft unter Ihrer Aufsicht würde Colmar und Ihnen Ehre und die Hochachtung der Teutschen erwerben, bey denen der Nationalgeist rege wird. Ihr aufrichtigster Freund u. Verehrer
+<page index="3"/>nehme, dem ich doch keine Verbindlichkeiten habe und <dul>ganz gewiß auch</dul> keine haben werde. Es gehört aber wie besagt auch dieses unter die Rätzel meines Herzens die ich mir selbst weder auflösen kann noch mag.
+<line tab="1"/>Ich wollte Ihnen ein Exemplar <ul>der beyden Alten und andrer kleiner Aufsätze</ul> beylegen, wenn es sich der Mühe verlohnte. Ich erwähne dessen nur, weil die Vorlesungen in unserer Teutschen Gesellschaft die ich Ihnen im Manuscript zugeschickt, darin abgedruckt worden. Sie ist gegenwärtig mit einer Oekonomischen Gesellschaft im Hause des Hn. V. Türkheim verbunden, nicht vereinigt worden. Eine ähnliche Gesellschaft unter Ihrer Aufsicht würde Colmar und Ihnen Ehre und die Hochachtung der Teutschen erwerben, bey denen der Nationalgeist rege wird. 
+<line tab="1"/>Ihr 
+<line type="break"/><align pos="right">aufrichtigster Freund u. Verehrer</align>
 <line type="break" /><align pos="right">Lenz</align>
 <page index="4"/>
+<line type="empty" />
+<align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
 <line type="empty" />
 <line type="break"/><address>Herrn
 <line type="break"/>Herrn Hofrath <dul>Pfeffel</dul>
@@ -4186,15 +4190,15 @@ Lieber Liebster mein Einziger! ich hab hier Deinen 2ten Brief vor mir und Du sol
 </letterText> 
 
 <letterText letter="260"><page index="1"/>
-<line tab="1"/>Es freut mich bester Herder! daß ich eine Gelegenheit finde Abschied von Dir zu nehmen. Freilich traurig genug, kaum gesehen und gesprochen, ausgestoßen aus dem Himmel als ein Landläuffer, Rebell, Pasquillant. Und doch waren zwo Stellen in diesem Pasquill die Goethe sehr gefallen haben würden, darum schickt ichs Dir. Wie lange werdt Ihr noch an Form und Namen hängen
+<line tab="1"/>Es freut mich bester Herder! daß ich eine Gelegenheit finde Abschied von Dir zu nehmen. Freilich traurig genug, kaum gesehen und gesprochen, ausgestossen aus dem Himmel als ein Landläuffer, Rebell, Pasquillant. Und doch waren zwo Stellen in diesem Pasquill die Goethe sehr gefallen haben würden, darum schickt ichs Dir. Wie lange werdt ihr noch an Form und Namen hängen
 <page index="2"/>
 <line tab="1"/>Ich gehe sobald man mich fort <ul>winkt,</ul> in den Tod aber nicht, sobald man mich herausdrücken will. Hätt’ ich nur Goethens Winke eher <ul>verstanden.</ul> Sag ihm das.
 <line tab="1"/>Wie soll ich Dir danken für Deine Vorsprache beym Herzog. Er wird
 <page index="3"/>mein Herr immer bleiben, wo ich auch sey, ohne Ordres und Ukasen. Wollte Gott ein Schatten von mir bliebe in seinem Gedächtniß, wie Er und sein ganzes leutseeliges Wesen nimmer aus dem meinigen verschwinden wird. Ich weiß diese Versicherung
-<page index="4"/>ist ihm lieber als ein Danksagungsschreiben. Wolltest Du ihn mündlich bitten, mir huldreichst zu verzeihen, daß ich seine Bücher solange gehabt und gebraucht und daß ich die Dreistigkeit habe ihn untertänigst nur urp. einen Aufschub von einem Tage zu bitten – ich will gleich eine Supplique beylegen – um in dem einem aus dem Archiv die grossen Züge seines eigenen Karackters in denen seines grossen Ahnherrn Bernhard zu Ende studiren zu können.
+<page index="4"/>ist ihm lieber als ein Danksagungsschreiben. Wolltest Du ihn mündlich bitten mir huldreichst zu verzeihen, daß ich seine Bücher solange gehabt und gebraucht und daß ich die Dreistigkeit habe ihn unterthänigst nur um einen Aufschub von einem Tage zu bitten – ich will gleich eine Supplique beylegen – um in dem einem aus dem Archiv die grossen Züge seines eigenen Karakters in denen seines grossen Ahnherrn Bernhard zu Ende studiren zu können.
 <line tab="1"/>Schick doch diesen Brief sogleich ihm hin, ich flehe, der vorige hat 
-<sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite, vertikal"> <ul>Effeckt gethan,</ul> wofür ich tausendmal danke. Er wird mir diese letzte Gnade nicht abschlagen, wenn ihm Goethe für die Reinheit meiner Absichten Bürge ist. Und der wird es seyn, so sehr ich ihn beleidigt habe. Ich dachte nicht daß es so plötzlich aus seyn sollte und hatte mir meine süssesten Arbeiten aufgespahrt. Diese Gelegenheit ist hernach aufimmer für mich verloren.<ul>Nur ein einziger Tag –</ul></sidenote>
-<line tab="1"/>Umarme und seegne Deine Gattin; Seyd unbegrenzt glücklich – vergeßt mich. Lebt wohl!
+<sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite, vertikal"> <ul>Effeckt gethan,</ul> wofür ich tausendmal danke. Er wird mir diese letzte Gnade nicht abschlagen, wenn ihm Goethe für die Reinheit meiner Absichten Bürge ist. Und der wird es seyn, so sehr ich ihn beleidigt habe. Ich dachte nicht daß es so plötzlich aus seyn sollte und hatte mir meine süssesten Arbeiten aufgespahrt. Diese Gelegenheit ist hernach auf immer für mich verloren. <ul>Nur ein einziger Tag 
+<line tab="1"/>Umarme und seegne Deine Gattin; Seyd unbegrenzt glücklich – vergeßt mich. Lebt wohl!</ul></sidenote>
 <sidenote pos="top left" page="4" annotation="am oberen linken Rand der vierten Seite, spiegelverkehrt">
 <line tab="1"/>Von dem versiegelten Zettel an Goethen sag niemand. Nochmals – Lebt wohl! Könnt ich an eurem Halse liegen.</sidenote>
 <sidenote pos="top right" page="4" annotation="oben rechts am Rand der vierten Seite, spiegelverkehrt">
@@ -4220,10 +4224,11 @@ Lieber Liebster mein Einziger! ich hab hier Deinen 2ten Brief vor mir und Du sol
 <line type="empty" />
 <line type="break" /><tl></tl>
 <line type="break"/>Eh<tl></tl>
-<line type="break"/>S<tl></tl>
-<line type="break"/>Au<tl></tl>
-<line type="break"/>Abgeh<tl></tl>
-<line type="break"/>Um G<tl></tl>
+<line type="break"/>s<tl></tl>
+<line type="break"/>a<tl></tl>
+<line type="break"/>sol<tl></tl>
+<line type="break"/>abgeh<tl></tl>
+<line type="break"/>um G<tl></tl>
 <line type="break"/>Und Ge<tl></tl>
 <line type="break"/>Mit dies<tl></tl>
 <sidenote pos="left" page="3" annotation="am linken Rand der dritten Seite, vertikal">
@@ -4231,7 +4236,7 @@ Lieber Liebster mein Einziger! ich hab hier Deinen 2ten Brief vor mir und Du sol
 </letterText> 
 
 <letterText letter="263"><page index="1"/>
-<line tab="1"/>Ich habe Dir nichts zu sagen, als daß Kaufmann vorigen Posttag an mich geschrieben, wie er sehr wünschte, Dich nach der Schweiz mitnehmen zu können. Nach Dessau aber sollt Du beileib nicht kommen, sondern irgendwo in der Nachbarschaft hier, (etwa in Erfurt), seine Ankunft <del>erfahren</del> erwarten. Er ist auf dem Wege oder kommt bald. Hüt Dich aber, daß Du nicht nach Dessau gehst. Da (in Erfurt) sehe ich Dich vielleicht mit Kaufm. wieder. Sudle und laure aber nicht, sondern geh. Jetzt ist an Bernhard zu denken.
+<line tab="1"/>Ich habe Dir nichts zu sagen, als daß Kaufmann vorigen Posttag an mich geschrieben, wie er sehr wünschte, Dich nach der Schweiz mitnehmen zu können. Nach Deßau aber sollt Du beileib nicht kommen, sondern irgendwo in der Nachbarschaft hier, (etwa in Erfurt), seine Ankunft <del>erfarten</del> erwarten. Er ist auf dem Wege oder kommt bald. Hüt Dich aber, daß Du nicht nach Deßau gehst. Da (in Erfurt) sehe ich Dich vielleicht mit Kaufm. wieder. Sudle und laure aber nicht, sondern geh. Jetzt ist an Bernhard zu denken.
 <line type="empty" />
 <line type="break" /><align pos="right">H.</align>
 <page index="2"/>
@@ -4239,30 +4244,32 @@ Lieber Liebster mein Einziger! ich hab hier Deinen 2ten Brief vor mir und Du sol
 </letterText> 
 
 <letterText letter="264"><page index="1"/>
-<line tab="1"/>Lieber Herr Lenz ich habe weiter nichts zu erinnern als den Degen. Besinnen Sie sich doch es wär doch dumm wenns damit gehen sollte wie mit denen Coloschen. Und dann hat letzhin der Hr. Geh. Leg Rath nach der Laube gefragt ich weis nicht warum, wollts Ihnen aber doch sagen.
-<line tab="1"/>Am vergangenen Donnerstag sind die Mitschuldigen gespielt worden. Die Rollen waren so ausgetheilt: <ul>Alzest.</ul> Hr. G.L.R. <ul>Söller.</ul> Bertuch <ul>Wirth</ul> Musäus. <ul>Sophie.</ul> Neuhaus. <ul>Keller.</ul> Kozebue. Es soll wieder auserordentlich schön gewesen seyn.
+<line tab="1"/>Lieber Herr Lenz ich habe weiter nichts zu erinnern als den Degen. Besinnen sie sich doch es wär doch dumm wenns damit gehen sollte wie mit denen Coloschen. Und dann hat lezhin der Hr. Geh. Leg Rath nach der Laube gefragt ich weis nicht warum, wollts ihnen aber doch sagen.
+<line tab="1"/>Am vergangenen Donnerstag sind die Mitschuldigen gespielt worden. Die Rollen waren so ausgetheilt: <ul>Alzest.</ul> Hr. G. L. R. <ul>Söller.</ul> Bertuch <ul>Wirth</ul> Musäus. <ul>Sophie.</ul> Neuhaus. <ul>Keller.</ul> Kozebue. Es soll wieder auserordentlich schön gewesen seyn.
 <line type="break"/><align pos="right">geh. Diener</align>
 <line type="break"/><align pos="right">Seidel.</align>
 <line type="break"/>D. 30ten Nov. 1776.
 </letterText> 
 
 <letterText letter="265"><page index="1"/>
-<line tab="1"/>Lavater! mein Herz zerspringt mir wenn ich mir einbilde, daß meine Weigerung zu Dir zu kommen, von Dir mißverstanden werden könnte. Wenn auch die heiligste Zerstreuung nicht immer Zerstreuung wäre, so bald man auf ein Ziel zugeht; so kannst Du Dir vorstellen wo mich mein Herz wohl zuerst hinführen würde, wenn es allein zu wählen hätte. Keine Alpen und kein Eis sollten mich schröcken an Deinen Busen zu fallen Gottesmann und ein Grönland zwischen uns würde aufhören kalt zu seyn, sobald ichs zu Fuß in der Hofnung durchliefe am Ende der Wallfahrth Dich zu finden. Ich wünschte Du schriebst keine Physiognomick, Du wärest ein unbekannter vergeßner vereinzelter Mann und ich dürfte mit einer ganzen Welt durch Wüsten zu Dir eilen und ausrufen Hier! –
+<line tab="1"/>Lavater! mein Herz zerspringt mir wenn ich mir einbilde, daß meine Weigerung zu Dir zu kommen, von Dir mißverstanden werden könnte. Wenn auch die heiligste Zerstreuung nicht immer Zerstreuung wäre, so bald man auf ein Ziel zugeht; so kannst Du Dir vorstellen wo mich mein Herz wohl zuerst hinführen würde, wenn es allein zu wählen hätte. Keine Alpen und kein Eis sollten mich schröcken an Deinen Busen zu fallen Gottesmann und ein Grönland zwischen uns würde aufhören kalt zu seyn, sobald ichs zu Fuß in der Hofnung durchliefe am Ende der Wallfahrth Dich zu finden. Ich wünschte Du schriebst keine Physiognomick, Du wärest ein unbekannter, vergeßner vereinzelter Mann und ich dürfte mit einer ganzen Welt durch Wüsten zu Dir eilen und ausruffen Hier! –
 <line tab="1"/>So aber legt meine Einzelheit kein Gewicht in Deine Schaale und unser stilles Vergnügen, so geschmückt es brautgleich mir entgegentritt ist noch zu rein für ein Auge das – Dich wie Du bist – jetzt nicht ertragen, jetzt entheiligen würde. Für ein Auge das Gegenstände sich ganz zugeeignet haben, die von Dir und Deinem Wirkungskreise so verschieden als der Himmel von der Erde sind. Lebe wohl und zürne nicht – und liebe mich dennoch – und laß Deinen Seegen mich verfolgen. Aus dem nächsten Ort wo ich <ul>stehe</ul> schreib ich Dir und harre auf Deine Antwort Lavater! wie ein Liebhaber! nicht wie der herumirrende
 <line type="break"/><align pos="right">Lenz</align>
 </letterText> 
 
 <letterText letter="266"><page index="1"/>
-<line tab="1"/><tl></tl>rzlichen Dank sag ich dir Liebster für deinen Dukat, er gefällt <tl></tl> und dann ist er von Dir! Liebes Denkmal mir Mönchlein, und in <tl></tl> mich daß du mich mißverstundst, mich in Mangel glaubtest und mir <tl></tl>, vielleicht nicht von des reichen Mannes Tisch zu werfen wolltest, <tl></tl>ster Freund, mein Bester den ich je hatte und haben werde, mich <tl></tl> er nie noch das mindeste so daß es gedrückt heisse. Hast mich auch <tl></tl>s Freytisches mißverstanden, ich käme in gar keine Relation <tl></tl>rscher dann ich könnte mir’s Essen immer auf meine Stube bringen <tl></tl> keiner an, hätte auch derwegen niemand <insertion pos="top">hier</insertion> die geringste <tl></tl> d da ich nur bis Ostern bleibe so laß es wann du bisher <tl></tl> schritt gethan hast, ist’s aber , so nehm ichs mit Dank an, und <tl></tl> r aus Strasburg kann continuiren und hieher kommen, <tl></tl> gehe. Ich kann die Pursche hier nicht gar wohl dulden und <tl></tl> weder an mir noch ich an ihnen was finden konnten, waren <tl></tl> gs, <aq>á charge.</aq> Sie schreyen immer <gr>ανтos εpa</gr> und – <tl></tl> hab keiner Seel von dir weder geschrieben noch gesagt, als einen Gruß an die Gesellschaft, und wann du willst eine Abschrift deiner Epistel. Die hab ich auch Boje geschickt mit ein paar Zeilen von mir, vielleicht antwortet Er. <fn index="5"><anchor>#</anchor></fn>
+<line tab="1"/><tl></tl>rzlichen Dank sag ich Dir Liebster für Deinen Dukat, er gefällt <tl></tl> und dann ist er von Dir! Liebes Denkmal mir Mönchlein, und in <tl></tl> mich daß Du mich mißverstundst, mich in Mangel glaubtest und mir <tl></tl>, vielleicht nicht von des reichen Mannes Tisch zu werfen wolltest, <tl></tl>ster Freund, mein Bester den ich je hatte und haben werde, mich <tl></tl> er nie noch das mindeste so daß es gedrückt heiße. Hast mich auch <tl></tl>s Freytisches mißverstanden, ich käme in gar keine Relation <tl></tl>rscher dann ich könnte mir’s Eßen immer auf meine Stube bringen <tl></tl> keiner an, hätte auch derwegen niemand <insertion pos="top">hier</insertion> die geringste <tl></tl> d da ich nur bis Ostern bleibe so laß es wann Du bisher <tl></tl>ritt gethan hast, ists aber, so nehm ichs mit Dank an, und <tl></tl> r aus Strasburg kann continuiren und hieher kommen <tl></tl> gehe. Ich kann die Pursche hier nicht gar wohl dulden und <tl></tl> weder an mir noch ich an Ihnen was finden konnten, waren <tl></tl> ges, <aq>á charge.</aq> Sie schreyen immer <gr>ανтos εpa</gr> und – <tl></tl> hab keiner Seel von Dir weder geschrieben noch gesagt, als einen <tl></tl>uß an die Gesellschaft, und wann Du willst eine Abschrift Deiner Epistel. Die hab ich auch Boje geschickt mit ein paar Zeilen von mir, vielleicht antwortet Er. <fn index="5"><anchor>#</anchor></fn>
 <line tab="1"/>Dem kernhaften Müller werd ich erst noch schreiben, ich warte auf Antwort von Ihm. Aber sein Doktor wird sobald nicht gedruckt er arbeitet noch dran. Schade daß zwei <insertion pos="top">Strasb.</insertion> Theologen fast immer um uns waren, die schwer verdauen. Einen gräßlich schönen Hexenauftritt hat er mir draus gelesen.
-<line tab="1"/>Schreib mir doch liebster Freund Nachricht von deinem Schicksal und setze mich außer Sorgen wenigstens aus der Unruh meiner Ungewißheit ich will ja weiters nichts wissen. Lebe wohl ich liebe dich.
-<line tab="1"/>Hier hastu einen andern D. ich bat dich ja zu vergessen, bitte dich aber nie zu vergessen daß meinem Herzen nie wohler ist als wenn ich an dich denke als Freund, nur sey glücklich und sorgenfrei. Dein stäter Alter Röderer
-<line tab="1"/>Deiner meisterhaften Epistel bin ich zu gering ein Compliment zu zu machen, gefallen aber hat sie mir ungemein.
+<line tab="1"/>Schreib mir doch liebster Freund Nachricht von deinem Schiksal und setze mich außer Sorgen wenigstens aus der Unruh meiner Ungewißheit ich will ja weiters nichts wißen. Lebe wohl ich liebe dich.
+<line tab="1"/>Hier hastu einen andern D. ich bat Dich ja zu vergeßen, bitte Dich aber nie zu vergeßen daß meinem Herzen nie wohler ist als wenn ich an Dich denke als Freund, nur sey glücklich und sorgenfrei. Dein stäter Alter Röderer.
+<line tab="1"/>Deiner meisterhaften Epistel bin ich zu gering ein Compliment zu zu machen, gefallen aber hat sie mir ungemein
 <line type="break" /><align pos="right">Röderer</align>
 <line type="break"/>Göttingen d 9. Decemb 1776.
 <line type="empty"/>
-<line tab="1"/><fn index="5"><anchor>#</anchor></fn> Vom 13 huius hab ich Antwort, Er dankt dir und schon ist deine Epistel zu Leipzig , wo er sie wie meine Demosth. Rede eingerückt im December zu sehen hofft. Ich mußte vor 8 Tagen diesen Brief wieder zurücknehmen, weil er nur mit fahrender Post geht und erst heute d . 15 dieselbe von hie abging. Lebe wohl mein Allerbester. P.S. Hr . Boje bietet mir seine Gefälligkeiten an, und sobald ich ihm wieder schreibe werd ich um den Freitisch für mich oder meinen Bruder ansuchen. Gieb mir nur auch bald Nachricht von dir mein allertheuerster liebster Freund.
+<line tab="1"/><fn index="5"><anchor>#</anchor></fn> Vom 13 huius hab ich Antwort, Er dankt Dir und schon ist Deine Epistel zu Leibzig , wo er sie wie meine Demosth. Rede eingerückt im December zu sehen hofft. Ich mußte vor 8 Tagen diesen Brief wieder zurüknehmen, weil er nur mit fahrender Post geht und erst heute d. 15 dieselbe von hie abgieng. Lebe wohl mein Allerbester. P.S. Hr Boje bietet mir seine Gefälligkeiten an, und so bald ich Ihm wieder schreibe werd ich um den Freitisch für mich oder meinen Bruder ansuchen. Gieb mir nur auch bald Nachricht von Dir mein Allertheuerster liebster Freund.
 <page index="2"/>
+<line type="empty" />
+<align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
 <line type="empty" />
 <line type="break" /><address>An Herrn
 <line type="break"/><tl></tl>rn <ul><aq>Lenz</aq></ul> abzugeben bey
