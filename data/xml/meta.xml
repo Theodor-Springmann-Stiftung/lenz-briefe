@@ -2893,7 +2893,7 @@
 				<location ref="8" />
 				<person ref="41" />
 			</received>
-			<hasOriginal value="false" />
+			<hasOriginal value="true" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>
