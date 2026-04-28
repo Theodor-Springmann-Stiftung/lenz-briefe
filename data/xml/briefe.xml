@@ -3184,7 +3184,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 
 <letterText letter="195"><page index="1"/><align pos="center">Den 17. Jun. 1776.</align>
 <line type="empty"/>
-<line tab="1"/>Ich schreibe, daß Sie mein Stillschweigen nicht andem Ursachen beymeßen, lieber L. Die Krankheit und izt der Tod meines Chefs des alten Feldmarschalls, der mich hieher gezogen, und viel guten Willen u. Freundschaft für mich hatte, hat mich sehr zerrüttet und verwirrt mich noch. Ich habe sehr viel zu arbeiten, u. kann nichts für mich thun, bis das Departement wieder einen Vorgesetzten hat. Gewinnen kann ich wenig dabey; verlieren viel. <tl></tl> ten Sie doch Lindaus unbesonnenes Blatt nicht drucken lassen! Es kann ihm so leicht schaden, wenn’s bekannt wird. H. hat mir noch nicht geantwortet, aber seyn Sie ruhig. Sobald ich Antwort habe, schick ich sie Ihnen wenigstens gleich zu, wenn ich auch nicht dabei sollte schreiben können. Leben Sie wohl
+<line tab="1"/>Ich schreibe, daß Sie mein Stillschweigen nicht andern Ursachen beymeßen, lieber L. Die Krankheit und izt der Tod meines Chefs des alten Feldmarschalls, der mich hieher gezogen, und viel guten Willen u. Freundschaft für mich hatte, hat mich sehr zerrüttet, und verwirrt mich noch. Ich habe sehr viel zu arbeiten, u. kann nichts für mich thun, bis das Departement wieder einen Vorgesezten hat. Gewinnen kann ich wenig dabey; verlieren viel. <tl></tl> ten Sie doch Lindaus unbesonnenes Blatt nicht drucken laßen! Es kann ihm so leicht schaden, wenn’s bekannt wird. H. hat mir noch nicht geantwortet, aber seyn Sie ruhig. Sobald ich Antwort habe, schick ich sie Ihnen wenigstens gleich zu, wenn ich auch nicht dabey sollte schreiben können. Leben Sie wohl
 <line type="break" /><align pos="right">Boie.</align>
 <line tab="1"/>Ein Freund von mir Sprickmann aus Münster, wird durch Weymar reisen und Sie sehn. Nehmen Sie ihn auf als meinen Freund. Ihr Brief an Stolberg hat mich sehr gefreut.
 <line type="empty" />
@@ -3194,22 +3194,29 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line type="empty" />
 <page index="2"/>
 <line type="empty" />
+<align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
+<line type="empty" />
 <line type="break" /><address>Bey Herrn D. Göthe.
-<line type="break"/>Weym<tl></tl>
+<line type="break"/><ul>Weym</ul><tl></tl>
 <line type="empty" />
 <line type="break" />Herrn <ul>Lenz</ul>
-    <line type="break"/>Gelehrten</address>
+    <line type="break"/>Gelehrten in</address>
     <line type="empty" />
 <line type="break" /><align pos="center"><note>Entwurf zum Brief an Lauth vom 17. Juni 1776, zunächst um 180 Grad zur Adresse gedreht:</note></align><hand ref="1">
-<line tab="1"/>1) nicht ein Wort teutsch reden in Lyvrey gehen aufwärts bey Zürch kriegst 20 bis 25 <fn index="5"><anchor>#</anchor></fn> eine Livrey Obristen Kleidungsstücke an Wäsche Schuhe u. Strümpfen nicht sich wenigstens auf 3 Jahr engagiren läßt er sich ihrer uberwendig macht so wird ihm das Reisegeld vom Gehalt abgezogen Reisegeld von Strasb. nach Lübeck von da geht er zu Wasser nach Pernau.
-<line tab="1"/>Ein gewisser Cap. Rennekampf erkundigt sich nach den <aq>Doctor</aq> Sax und Prof. Schütz die seine Freunde gewesen
+<line tab="1"/>1) nicht ein Wort teutsch reden in Lyvrey gehen aufwärts bey Zürch kriegt 20 bis 25 <fn index="5"><anchor>#</anchor></fn> eine Liverey Obristen Kleidungsstüke an Wäsche Schuhen u. Strümpfen nicht sich wenigstens auf 3 Jahr engagiren läßt er sich ihrer uberwendig macht so wird ihm das Reisegeld vom Gehalt abgezogen Reisegeld von Strasb. nach Lübek von da geht er zu Wasser nach Pernau.
+<line tab="1"/>Ein gewisser Cap. Rennekampf erkundigt sich nach den <aq>Doctor Sax</aq> und Prof. Schütz die seine Freunde gewesen
+<line type="empty"/>
 <line type="break" /><align pos="center"><note>horizontal gespiegelt:</note></align>
-<line tab="1"/>Von Palloper. Er hat vor 26 Jahren als Hauptm. mit seinem Corps in Strasb. gestanden
+<line tab="1"/>Von Palloper. Er hat vor 26 Jahren als Hauptm. mit seinem Corps. in Strasb. gestanden.
+<line type="empty"/>
 <align pos="center"><note>vertikal gespiegelt:</note></align>
 <line type="break" />2 Binden
 <line type="break"/>1 P. seidene Strümpfe
 <line type="break"/>1 Hemd
-<line type="break"/>1 <nr></nr></hand>
+<line type="break"/>1 Schnuptuch</hand>
+ <line type="empty" />
+<align pos="center"><note>unleserliche Kalkukation</note></align>
+
 </letterText> 
 
 <letterText letter="196"><page index="1"/>
@@ -3493,7 +3500,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 </letterText> 
 
 <letterText letter="211"><page index="1"/>
-<line tab="1"/>Ich muß Ew. Durchlaucht in tiefster Unterthänigkeit berichten, daß ich am Mittewoch Morgen ein Pack mit Wäsche und den Tag darauf Abends den Herrn Doktor Buchholz mit verschiedenen Arzeneymitteln richtig erhalten; da aber in unserm Dorf weder mit Gold bereiftes Pappier noch ein Formular zu einem Danksagungsschreiben, noch auch ein Dicktionär witziger und galanter Einfälle zu haben ist, so werden Sie gnädigste Herzogin! einem Kranken verzeyhen, daß er diesesmal nicht dankbar seyn kann. Der Ueberbringer Ihres huldreichen Geschenks hat, wie ich aus der Ankunft des Arztes geschlossen, vermutlich die Nachricht zurückgebracht, daß er mich zu Bette und weinend angetroffen, welches letztere er für eine Wirkung meiner Krankheit gehalten haben muß; da mir eine Mißdeutung von der Art noch öftere Besuche des Arztes zuziehen könnte, so habe ihr nur durch diese Zeilen zuvorkommen wollen.
+<line tab="1"/>Ich muß Ew. Durchlaucht in tiefster Unterthänigkeit berichten, daß ich am Mittewoch Morgen ein Pack mit Wäsche und den Tag darauf Abends den Herrn Docktor Buchholz mit verschiedenen Arzeneymitteln richtig erhalten; da aber in unserm Dorf weder mit Gold bereiftes Pappier noch ein Formular zu einem Danksagungsschreiben, noch auch ein Dicktionnär witziger und galanter Einfälle zu haben ist, so werden Sie gnädigste Herzogin! einem Kranken verzeyhen, daß er diesesmal nicht dankbar seyn kann. Der Ueberbringer Ihres huldreichen Geschenks hat, wie ich aus der Ankunft des Arztes geschlossen, vermutlich die Nachricht zurückgebracht, daß er mich zu Bette und weinend angetroffen, welches letztere er für eine Wirkung meiner Krankheit gehalten haben muß; da mir eine Mißdeutung von der Art noch öftere Besuche des Arztes zuziehen könnte, so habe ihr nur durch diese Zeilen zuvorkommen wollen.
 <page index="2"/>
 <line type="empty"/>
 <line type="break"/><align pos="center"><note>Es folgen zwei Seiten Exzerpte aus Stuart, Über das System und Frankreichs Bankrut, 3. Buch, Einl. p. 546; vgl. Schriften zur Sozialreform, Bd. 1, S. 396f.</note></align>
@@ -3512,22 +3519,23 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Nimmermehr an sie <ul>zu schreiben</ul> wo möglich alle Gelegenheiten zu vermeiden <ul>sie zu sehen</ul> weil ich mir nicht trauen darf gelobe ich Gott.
 </letterText> 
 
-<letterText letter="213"><page index="1"/>Hier Bruder eins und das andere.
+<letterText letter="213"><page index="1"/><line tab="1"/>Hier Bruder eins und das andere.
+    <line type="empty" />
 <line tab="1"/>Es wäre mir doch <ul>lieb,</ul> wenn die Meynungen eines Layen im Merkur kürzlich recensirt würden, ohne Ansehen der Person. Sag’ Wieland nicht von wem sie sind.
 <line tab="1"/>Sag mir doch ob Herder nicht bald kommt. Mein Herz ahndet ihm entgegen.
 <line tab="1"/>Ich möcht ihn und sein Weib gern sehen – geniessen kann ich itzt nichts mehr. <tl></tl>
 <sidenote pos="top" page="1" annotation="am oberen Rand, horizontal gespiegelt">
-<line tab="1"/><del>Sie</del> Charakter von Sienas Freundin – tief – verb. – um sie nicht zu verderben weil sie ihr nicht ihre Neigung zu gestehen, weil sie wohl sieht daß jene als Delikatesse für sie gl. abtreten würde und ihr wie natürlich Liebe für ihn zutraut. Sie begegnet also Truf. mit der äußerersten Inegalität. Die falsche Delikatesse kreuzt sich wun-</sidenote>
+<line tab="1"/><del>sie</del> Charakter von Sienas Freundin – tief – verb. – um sie nicht zu verderben will sie ihr nicht ihre Neigung zugestehen, weil sie wohl sieht daß jene als Delikatesse für sie gl. abtreten würde und ihr wie natürlich Liebe für ihn zutraut. Sie begegnet also Truf. mit der äussersten Inegalität. Die falsche Delikatesse kreuzt sich wun-</sidenote>
 <sidenote pos="left" page="1" annotation="am linken Rand, horizontal gespiegelt">
 <line type="empty"/>
-<line tab="1"/>derbar mit Cath. an der es ihr immer ärgert daß sie Tr. nach ihrer Meynung nicht freundl. Genug und zwar aus pruderie denkt sie, begegnet. Endl. kommt sie zum Ausbruch und zu <ul>Vorwürfen.</ul></sidenote>
+<line tab="1"/>derbar mit Cath. an der es ihr immer ärgert daß sie Tr. nach ihrer Meynung nicht freundl. genug und zwar aus <aq>pruderie</aq> denkt sie, begegnet. Endl. kommt sie zum Ausbruch und zu <ul>Vorwürfen.</ul></sidenote>
 <line tab="1"/>(Grosser Krieg gegen die falsche moralische Delikatesse die die Herzen soweit entfernt und ihren Grund in Stolz haben. ☓ ☓
 <sidenote pos="right" page="1" annotation="am rechten Rand, vertikal">
-<line tab="1"/>☓ ☓ was es der Freundin kostet endlich <ul>zu gestehen daß sie ihn liebt.</ul> wohin es im Stück doch getrieben wird.</sidenote>
+<line tab="1"/>☓ ☓ was es der Freundin kostet endl. <ul>zu gestehen daß sie ihn liebt.</ul> wohin es im Stük doch getrieben wird.</sidenote>
 <page index="2"/>
 <line type="break" /><align pos="center"><note>Zeichnung eines liegenden Soldaten</note></align>
 <line type="empty" />
-<line type="break" />des pouvraint revendiquent leurs droit pretensions avec main forte
+<line type="break" /><aq>des pouvraint revendiquent leurs <del>droit</del> pretensions avec main forte</aq>
 </letterText> 
 
 <letterText letter="214"><page index="1"/>
