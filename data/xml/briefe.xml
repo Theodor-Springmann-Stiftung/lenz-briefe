@@ -2194,7 +2194,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <letterText letter="130"><page index="1"/>D 11ten Merz 76.
 <line type="empty"/>
 <line type="empty"/>
-<line tab="1"/>Wie wär’ es bester Freund! wenn Sie Die Freunde machen den Philosophen dem Herrn Leibarzt Zimmermann gäben (der mich schon darum angesprochen), daß er sie bey Reichen in Leipzig noch auf die Ostermesse könnte drucken lassen. Von dem Honorario gäb’ er Ihnen soviel für Ihren Freund Herr Hellwieg ab, als ihm der Druck der Wolken gekostet, <ul>„zugleich</ul> <ul>versprächen Sie ihm aufs heiligste ein ander Stück</ul> <ul>von mir das vielleicht gegen Michael fertig wird</ul> <ul>gewiß, kann ich sagen, da es nur noch an der letzten Hand fehlt die ich dran lege“</ul>
+<line tab="1"/>Wie wär’ es bester Freund! wenn Sie Die Freunde machen den Philosophen dem Herrn Leibarzt Zimmermann gäben (der mich schon darum angesprochen), daß er sie bey Reichen in Leipzig noch auf die Ostermesse könnte drucken lassen. Von dem Honorario gäb’ er Ihnen soviel für Ihren Freund Herr Hellwieg ab, als ihm der Druck der Wolken gekostet, <ul>„zugleich versprächen Sie ihm aufs heiligste ein ander Stück</ul> <ul>von mir das vielleicht gegen Michael fertig wird gewiß, kann ich sagen, da es nur noch an der letzten Hand fehlt die ich dran lege“</ul>
 <line tab="1"/>Es wäre mir aus Ursachen die auch Herr Leibarzt Zimmermann weiß lieber Die Freunde diese Ostern in Leipzig erscheinen zu sehen überdem muß ich Ihnen aufrichtig gestehen daß ich gegenwärtig durch Schulden und andere wunderbare Verwickelungen mich in einer Geldnoth befinde die <ul>üble Folgen</ul> auf mein ganzes künftiges Schicksal haben könnte. Umarmung.
 <line type="break" /><align pos="center">Lenz.</align>
 <line type="break" /><align pos="right"><aq>verte</aq></align>
@@ -3227,23 +3227,24 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 
 <letterText letter="197"><page index="1"/>
     <sidenote pos="top" page="1" annotation="Am oberen Rand">
-    <line type="break"/>Im Kriege können die Weiber auf und mitgehn, die Kinder den Eltern lassen
+    <line type="break"/>im Kriege können die Weiber auf und mitgehn, die Kinder den Eltern lassen
 <line type="break"/>Soldatenweiber nähren sich mit ihrer Arbeit
 <line type="break"/>Offiziers von ihren Männern trennen
 <line type="break"/>Alle Anstalten wegen der Deserteurs fallen weg, Kinder zu hause
-<line type="break" /><aq>Tout ou rien.</aq>
+<line type="break" /><aq>tout ou rien.</aq>
 <line type="break" />Soldatenweiber machen die Marquatete
-<line type="break" />Ich sah Weiber als Amazonen im Nothfall mitfechten und das stärkste corps de reserve machen</sidenote> 
+<line type="break" />ich sah Weiber als Amazonen im Nothfall mit fechten und das stärkste <aq>corps de reserve</aq> machen</sidenote> 
 <line tab="1"/>Hier schick ich Ihnen mein schätzbarer Freund ein Exemplar von meinen Soldaten zur schuldigen Danksagung für alle mir in Mannheim erzeigte Liebe. Es sollte mich freuen, wenn es von Ihrer Schauspielerbaumschule als Uebungsstück deklamirt werden könnte.
-<sidenote pos="right" page="1" annotation="über dem zweiten Absatz">Daß alle Bürger itzt drauf rechen können daß die herzen ihrer Weiber an den Soldaten hängen die ledig sind.</sidenote>
-<line tab="1"/>Ich habe Eckhafen hier auf einem Conzert bey Hofe gesprochen und viel von Mannheim mit ihm ger<tl></tl> Er ist wohl zu alt und zu wohl in Gotha, als daß e<tl></tl> ausserordentlich vortheilhafte Bedingungen zu Ihne<tl></tl> translocirt werden könnte. Er erbietet sich aber g<tl></tl> wenn Sie ihm junge Mannheimer zuschicken wollen, sie auf alle mögliche Weise zuzustutzen und er ist in der That der Mann dazu. Wie sehr wünschte ich unserm Freunde Müller eine Unterredung mit ihm. Es freute mich wie ein Geschenk, daß er über unsere gewöhnlichen Schauspieler und ihre Gebärdungen mit mir auf ein Haar zusammentraf. Sagen Sie doch das wenn es seyn kann einmal dem Graf Portia. Hier ist ein Liebhabertheater für Adel und Bürger, wo alle elende Schauspielerregeln verbannt sind. Ueberhaupt interessirt sich der Herzog und beide Herzoginnen ungemein für deutsche Litteratur, mehr als ich sagen darf.
-<line tab="1"/>Daß es mir wohl geht brauch ich Ihnen nicht zu sagen, sonst blieb’ ich nicht so lange. Grüssen Sie doch alle guten Freunde und behalten mich lieb.
+<sidenote pos="right" page="1" annotation="über dem zweiten Absatz">Daß alle Bürger itzt drauf können rechen daß die herzen ihrer Weiber an den Soldaten hängen die ledig sind.</sidenote>
+<line tab="1"/>Ich habe Eckhafen hier auf einem Conzert bey Hofe gesprochen und viel von Mannheim mit ihm ger<tl></tl> Er ist wohl zu alt und zu wohl in Gotha, als daß e<tl></tl> ausserordentlich vortheilhafte Bedingungen zu Ihne<tl></tl> translocirt werden könnte. Er erbietet sich aber g<tl></tl> wenn Sie ihm junge Mannheimer zuschicken wollen, <subst><del>s</del><insertion>S</insertion></subst>ie auf alle mögliche Weise zuzustutzen und er ist in der That der Mann dazu. Wie sehr wünschte ich unserm Freunde Müller eine Unterredung mit ihm. Es freute mich wie ein Geschenk, daß er über unsere gewöhnlichen Schauspieler und ihre Gebehrdungen mit mir auf ein Haar zusammentraf. Sagen Sie doch das wenn es seyn kann einmal dem Graf Portia. Hier ist ein Liebhabertheater für Adel und Bürger, wo alle elende Schauspielerregeln verbannt sind. Ueberhaupt interessirt sich der Herzog und beyde Herzoginnen ungemein für deutsche Litteratur, mehr als ich sagen darf.
+<line tab="1"/>Daß es mir wohlgeht brauch ich Ihnen nicht zu sagen, sonst blieb’ ich nicht so lange. Grüssen Sie doch alle guten Freunde und behalten mich lieb.
 <line type="break"/><align pos="right">Lenz</align>
 <sidenote pos="left" page="1" annotation="Am linken Rande, vertikal">
-<line tab="1"/>Wieland ist ein herzguter Mann mit dem ich gleich zusammen geschmolzen bin. – – Auch sind sonst viel trefliche Menschen hier und die Liebhaberei allgemein weil der Hof das Exempel giebt. Grüssen Sie unsern lieben Müller doch.</sidenote>
+<line tab="1"/>Wieland ist ein herzguter Mann mit dem ich gleich zusammen geschmolzen bin. – – Auch sind sonst viel trefliche Menschen hier und die Liebhaberey allgemein weil der Hof das Exempel giebt. Grüssen Sie unsern lieben Müller doch.</sidenote>
 <page index="2"/>
 <line tab="1"/>2ter Theil wo die bürgerlichen Einrichtungen
-<line tab="1"/>Alles kommt auf einen Numerische Eintheilung in Klassen an die durch die Feudalverfassung zu Grund gegangen, daß alle Classen sich die Hände bieten u. so allw Kräfte in Bewegung gesetzt werden Stuart schlägt vor.
+<line tab="1"/>Alles kommt auf eine Numerische Eintheilung in Klassen an die durch die Feudalverfassung zu Grund gegangen, daß alle Classen sich die Hände bieten und so alle Kräfte in Bewegung gesetzt werden 
+<line tab="1"/>Stuart schlägt vor.
 <line type="empty" />
 <line type="break" /><align pos="center"><aq>Ddd.</aq></align>
 </letterText> 
