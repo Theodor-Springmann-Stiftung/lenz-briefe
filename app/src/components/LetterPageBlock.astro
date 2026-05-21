@@ -8,23 +8,23 @@ type Props = {
 const { page } = Astro.props;
 ---
 
-<section class="grid gap-4 border-t border-[var(--rule)] py-5 first:border-t-0 first:pt-0" aria-labelledby={`page-${page.page}`}>
+<section class="" aria-labelledby={`page-${page.page}`}>
   <div>
-    <p class="m-0 text-[0.68rem] uppercase tracking-[0.2em] text-[var(--muted)]">Seite {page.page}</p>
+    <p class="">Seite {page.page}</p>
   </div>
-  <div class="grid items-start justify-between gap-8 min-[981px]:grid-cols-[minmax(0,43rem)_minmax(14rem,18rem)]">
-    <article class="prose max-w-[43rem]" set:html={page.textHtml} />
+  <div class="">
+    <article class="" set:html={page.textHtml} />
     {page.sidenotes.length > 0 && (
-      <aside class="grid gap-4 border-l border-[var(--rule)] pl-5 min-[981px]:sticky min-[981px]:top-4">
-        <div class="grid gap-4">
+      <aside class="">
+        <div class="">
           {page.sidenotes.map((note) => (
-            <section class="grid gap-2 border-b border-[rgba(23,23,23,0.1)] pb-4 last:border-b-0 last:pb-0">
-              <div class="prose prose--note" set:html={note.html} />
+            <section class="">
+              <div class="" set:html={note.html} />
             </section>
           ))}
         </div>
       </aside>
     )}
-    {page.sidenotes.length === 0 && <div class="hidden min-[981px]:block min-h-px" aria-hidden="true"></div>}
+    {page.sidenotes.length === 0 && <div class="" aria-hidden="true"></div>}
   </div>
 </section>

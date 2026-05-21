@@ -14,11 +14,11 @@ if (!group) {
   title={`${group.label} | Lenz-Briefe`}
   description={`Briefe im Zeitraum ${group.label}.`}
 >
-  <div class="grid gap-8">
-    <header class="grid gap-3 border-b border-[var(--rule)] pb-5">
-      <p class="m-0 text-[0.68rem] uppercase tracking-[0.22em] text-[var(--muted)]">Jahresgruppe</p>
-      <h1 class="m-0 text-[clamp(1.9rem,4vw,3.2rem)] font-normal leading-[1.02]">{group.label}</h1>
-      <p class="m-0 max-w-[42rem] text-[0.95rem] leading-7 text-[var(--muted)]">{group.letters.length} Briefe in dieser Gruppe.</p>
+  <div class="">
+    <header class="">
+      <p class="">Jahresgruppe</p>
+      <h1 class="">{group.label}</h1>
+      <p class="">{group.letters.length} Briefe in dieser Gruppe.</p>
     </header>
 
     <YearGroupSection group={group} />

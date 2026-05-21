@@ -12,14 +12,14 @@ const recipients = joinLabels(letter.received.persons);
 const places = joinLabels(letter.sent.locations);
 ---
 
-<a class="grid gap-3 border-b border-[var(--rule)] py-4 text-inherit no-underline transition duration-150 hover:border-[rgba(23,23,23,0.32)] md:grid-cols-[5.75rem_minmax(0,1fr)] md:gap-6" href={`/letters/${letter.letter}/`}>
-  <div class="grid content-start gap-1 pt-[0.1rem]">
-    <span class="text-[0.68rem] uppercase tracking-[0.18em] text-[var(--muted)]">Brief</span>
-    <strong class="text-[1.55rem] font-normal leading-none">{letter.letter}</strong>
+<a class="" href={`/letters/${letter.letter}/`}>
+  <div class="">
+    <span class="">Brief</span>
+    <strong class="">{letter.letter}</strong>
   </div>
-  <div class="grid gap-2">
-    <p class="m-0 text-[1.02rem] leading-[1.45]">{letter.sent.date?.text ?? "Ohne Datierung"}</p>
-    <p class="m-0 flex flex-wrap gap-x-4 gap-y-1 text-[0.82rem] uppercase tracking-[0.12em] text-[var(--muted)]">
+  <div class="">
+    <p class="">{letter.sent.date?.text ?? "Ohne Datierung"}</p>
+    <p class="">
       {senders && <span>{senders}</span>}
       {recipients && <span>An {recipients}</span>}
       {places && <span>{places}</span>}
