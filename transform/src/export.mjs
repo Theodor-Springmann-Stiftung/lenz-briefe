@@ -68,13 +68,19 @@ async function compileStylesheet(name) {
   await ensureDir(CACHE_DIR);
   const stylesheetPath = path.join(XSLT_DIR, `${name}.xsl`);
   const sefPath = path.join(CACHE_DIR, `${name}.sef.json`);
+  const dependencyPaths = [stylesheetPath];
+  const commonStylesheetPath = path.join(XSLT_DIR, "common.xsl");
+  if (name !== "common") {
+    dependencyPaths.push(commonStylesheetPath);
+  }
 
-  const stylesheetStat = await fs.stat(stylesheetPath);
+  const dependencyStats = await Promise.all(dependencyPaths.map((dependencyPath) => fs.stat(dependencyPath)));
+  const latestDependencyMtime = Math.max(...dependencyStats.map((stat) => stat.mtimeMs));
   let shouldCompile = true;
 
   try {
     const sefStat = await fs.stat(sefPath);
-    shouldCompile = stylesheetStat.mtimeMs > sefStat.mtimeMs;
+    shouldCompile = latestDependencyMtime > sefStat.mtimeMs;
   } catch {
     shouldCompile = true;
   }

@@ -1,0 +1,28 @@
+---
+import type { YearGroup } from "../lib/edition";
+import { getYearGroupHref } from "../lib/edition";
+
+type Props = {
+  groups: YearGroup[];
+  activeGroupId?: string | null;
+};
+
+const { groups, activeGroupId = null } = Astro.props;
+---
+
+<nav class="grid gap-3 rounded-2xl border border-[rgba(28,33,38,0.12)] bg-[rgba(255,249,239,0.82)] p-4" aria-label="Chronologie">
+  <a class:list={[ "rounded-[0.9rem] border border-[rgba(28,33,38,0.12)] bg-[rgba(255,255,255,0.55)] px-4 py-3 text-inherit no-underline", { "border-[rgba(139,62,47,0.45)] bg-[rgba(225,194,162,0.35)]": activeGroupId === "__home__" } ]} href="/">
+    Übersicht
+  </a>
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(10.5rem,1fr))] gap-[0.65rem]">
+    {groups.map((group) => (
+      <a
+        class:list={["flex items-baseline justify-between gap-2 rounded-[0.9rem] border border-[rgba(28,33,38,0.12)] bg-[rgba(255,255,255,0.55)] px-4 py-3 text-inherit no-underline", { "border-[rgba(139,62,47,0.45)] bg-[rgba(225,194,162,0.35)]": activeGroupId === group.id }]}
+        href={getYearGroupHref(group.id)}
+      >
+        <span>{group.label}</span>
+        <small class="text-[var(--muted)]">{group.letters.length}</small>
+      </a>
+    ))}
+  </div>
+</nav>

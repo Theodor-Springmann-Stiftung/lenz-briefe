@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import YearGroupSection from "../../components/YearGroupSection.astro";
+import { getAllYearGroups, getYearGroup } from "../../lib/edition";
+
+export async function getStaticPaths() {
+  const groups = await getAllYearGroups();
+  return groups.map((group) => ({ params: { group: group.id } }));
+}
+
+const { group: groupId } = Astro.params;
+if (!groupId) {
+  throw new Error("Missing year group route parameter");
+}
+
+const [_, group] = await Promise.all([getAllYearGroups(), getYearGroup(groupId)]);
+
+if (!group) {
+  throw new Error(`Unknown year group: ${groupId}`);
+}
+---
+
+<Layout title={`${group.label} | Lenz-Briefe`} description={`Briefe im Zeitraum ${group.label}.`}>
+  <div class="grid gap-8">
+    <header class="grid gap-3 border-b border-[var(--rule)] pb-5">
+      <p class="m-0 text-[0.68rem] uppercase tracking-[0.22em] text-[var(--muted)]">Jahresgruppe</p>
+      <h1 class="m-0 text-[clamp(1.9rem,4vw,3.2rem)] font-normal leading-[1.02]">{group.label}</h1>
+      <p class="m-0 max-w-[42rem] text-[0.95rem] leading-7 text-[var(--muted)]">{group.letters.length} Briefe in dieser Gruppe.</p>
+    </header>
+
+    <YearGroupSection group={group} />
+  </div>
+</Layout>

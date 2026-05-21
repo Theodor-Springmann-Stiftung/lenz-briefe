@@ -1,0 +1,20 @@
+---
+import { getAllYearGroups, getYearGroupHref } from "../lib/edition";
+
+const groups = await getAllYearGroups();
+---
+
+<header class="site-header">
+  <div class="border-y border-[var(--rule)] py-4">
+    <div class="grid gap-3 md:grid-cols-[minmax(0,18rem)_1fr] md:items-end md:gap-6">
+      <a class="text-[clamp(1.2rem,2vw,1.55rem)] leading-tight tracking-[0.01em] text-[var(--ink)] no-underline hover:underline" href={getYearGroupHref(groups[0]?.id ?? "1756-1770")}>
+        J.M.R. Lenz - Briefe
+      </a>
+      <nav class="flex flex-wrap gap-x-4 gap-y-2 text-[0.9rem] leading-6" aria-label="Briefe nach Jahren">
+        {groups.map((group) => (
+          <a class="px-0 py-0 text-[var(--muted)] no-underline hover:text-[var(--ink)] hover:underline" href={getYearGroupHref(group.id)}>{group.label}</a>
+        ))}
+      </nav>
+    </div>
+  </div>
+</header>

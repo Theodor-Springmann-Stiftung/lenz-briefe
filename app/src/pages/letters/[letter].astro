@@ -1,0 +1,100 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import LetterPageBlock from "../../components/LetterPageBlock.astro";
+import TraditionsBlock from "../../components/TraditionsBlock.astro";
+import {
+  getLetterBundle,
+  getLetterIndex,
+  getLetterNeighbors,
+  getYearGroupForLetter,
+  getYearGroupHref
+} from "../../lib/edition";
+
+export async function getStaticPaths() {
+  const letters = await getLetterIndex();
+  return letters.map((letter) => ({
+    params: { letter: letter.letter }
+  }));
+}
+
+const { letter } = Astro.params;
+if (!letter) {
+  throw new Error("Missing letter route parameter");
+}
+
+const bundle = await getLetterBundle(letter);
+const [neighbors, parentGroup] = await Promise.all([
+  getLetterNeighbors(letter),
+  getYearGroupForLetter(bundle.meta)
+]);
+---
+
+<Layout
+  title={`Brief ${bundle.meta.letter} | Lenz-Briefe`}
+  description={bundle.meta.sent.date?.text ?? `Brief ${bundle.meta.letter}`}
+>
+  <div class="grid gap-8">
+    <nav>
+      {parentGroup ? <a class="text-[0.82rem] uppercase tracking-[0.14em] text-[var(--muted)] no-underline hover:text-[var(--ink)] hover:underline" href={getYearGroupHref(parentGroup.id)}>Zur Jahresgruppe {parentGroup.label}</a> : <a class="text-[0.82rem] uppercase tracking-[0.14em] text-[var(--muted)] no-underline hover:text-[var(--ink)] hover:underline" href="/">Zu den Briefen</a>}
+    </nav>
+
+    <header class="grid gap-4 border-b border-[var(--rule)] pb-6">
+      <div class="grid gap-1">
+        <p class="m-0 text-[0.68rem] uppercase tracking-[0.22em] text-[var(--muted)]">Brief {bundle.meta.letter}</p>
+        <h1 class="m-0 max-w-[26ch] text-[clamp(1.55rem,2.6vw,2.35rem)] font-normal leading-[1.08]">{bundle.meta.sent.date?.text ?? "Ohne Datierung"}</h1>
+      </div>
+      {(bundle.meta.sent.persons.length > 0 || bundle.meta.received.persons.length > 0) && (
+        <div class="grid gap-3 text-[var(--ink)] md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-start" aria-label="Korrespondenz">
+          <div class="flex flex-wrap items-start gap-x-3 gap-y-2">
+            {bundle.meta.sent.persons.map((person) => (
+              <span class="inline-flex min-w-0 flex-wrap items-center gap-2">
+                <span class="text-[1rem] leading-7">{person.label}</span>
+                {bundle.meta.sent.locations.map((location) => (
+                  <span class="inline-flex items-center border border-[var(--rule)] px-2 py-[0.12rem] text-[0.74rem] uppercase tracking-[0.12em] text-[var(--muted)]">{location.label}</span>
+                ))}
+              </span>
+            ))}
+          </div>
+          <span class="hidden self-start pt-[0.35rem] text-[0.95rem] text-[var(--muted)] md:block" aria-hidden="true">→</span>
+          <div class="flex flex-wrap items-start gap-x-3 gap-y-2 md:justify-end">
+            {bundle.meta.received.persons.map((person) => (
+              <span class="inline-flex min-w-0 flex-wrap items-center gap-2">
+                <span class="text-[1rem] leading-7">{person.label}</span>
+                {bundle.meta.received.locations.map((location) => (
+                  <span class="inline-flex items-center border border-[var(--rule)] px-2 py-[0.12rem] text-[0.74rem] uppercase tracking-[0.12em] text-[var(--muted)]">{location.label}</span>
+                ))}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+    </header>
+
+    <section class="grid gap-6">
+      {bundle.pages.map((page) => <LetterPageBlock page={page} />)}
+    </section>
+
+    <TraditionsBlock html={bundle.meta.traditionsHtml} />
+
+    <nav class="grid gap-4 border-t border-[var(--rule)] pt-5 sm:grid-cols-2" aria-label="Briefnavigation">
+      <div>
+        {neighbors.previous ? (
+          <a class="text-[0.92rem] text-[var(--muted)] no-underline hover:text-[var(--ink)] hover:underline" href={`/letters/${neighbors.previous.letter}/`}>
+            ← Brief {neighbors.previous.letter}
+          </a>
+        ) : (
+          <span> </span>
+        )}
+      </div>
+      <div class="sm:text-right">
+        {neighbors.next ? (
+          <a class="text-[0.92rem] text-[var(--muted)] no-underline hover:text-[var(--ink)] hover:underline" href={`/letters/${neighbors.next.letter}/`}>
+            Brief {neighbors.next.letter} →
+          </a>
+        ) : (
+          <span> </span>
+        )}
+      </div>
+    </nav>
+  </div>
+</Layout>

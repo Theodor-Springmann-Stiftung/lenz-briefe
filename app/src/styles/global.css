@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f3efe6;
+  --paper-deep: #ddd4c2;
+  --surface: #fbf9f4;
+  --ink: #171717;
+  --muted: #5f5a54;
+  --rule: rgba(23, 23, 23, 0.16);
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    width: 100%;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.36), rgba(255, 255, 255, 0.08)),
+      var(--paper);
+    color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer components {
+  .prose {
+    font-size: 1.02rem;
+    line-height: 1.82;
+  }
+
+  .prose .lb-page {
+    display: inline-block;
+    width: 0.65rem;
+    height: 0.65rem;
+    margin-right: 0.35rem;
+    border-radius: 9999px;
+    background: var(--ink);
+    opacity: 0.18;
+    vertical-align: middle;
+  }
+
+  .prose .lb-line {
+    display: block;
+  }
+
+  .prose .lb-line--empty {
+    margin-bottom: 0.9rem;
+  }
+
+  .prose .lb-indent {
+    display: inline-block;
+    white-space: pre;
+  }
+
+  .prose .lb-indent[data-tab="1"] {
+    width: 1.6em;
+  }
+
+  .prose .lb-indent[data-tab="2"] {
+    width: 3.2em;
+  }
+
+  .prose .lb-indent[data-tab="3"] {
+    width: 4.8em;
+  }
+
+  .prose .lb-indent[data-tab="4"] {
+    width: 6.4em;
+  }
+
+  .prose .lb-indent[data-tab="5"] {
+    width: 8em;
+  }
+
+  .prose .lb-indent[data-tab="6"] {
+    width: 9.6em;
+  }
+
+  .prose .lb-indent[data-tab="7"] {
+    width: 11.2em;
+  }
+
+  .prose .lb-rule {
+    margin: 1.1rem 0 1.2rem;
+    border: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .prose .align[data-pos="right"] {
+    text-align: right;
+  }
+
+  .prose .align[data-pos="center"] {
+    text-align: center;
+  }
+
+  .prose .ul {
+    text-decoration: underline;
+  }
+
+  .prose .tul {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 3px;
+  }
+
+  .prose .dul {
+    text-decoration-line: underline;
+    text-decoration-style: double;
+  }
+
+  .prose .large {
+    font-size: 1.14em;
+  }
+
+  .prose .tl,
+  .prose .er,
+  .prose .note,
+  .prose .nr {
+    color: var(--muted);
+  }
+
+  .prose .tabs {
+    display: grid;
+    gap: 0.3rem;
+    margin: 0.9rem 0;
+  }
+
+  .prose .tab {
+    padding: 0.16rem 0;
+    border-bottom: 1px dotted rgba(23, 23, 23, 0.14);
+  }
+
+  .prose--note {
+    font-size: 0.92rem;
+    line-height: 1.72;
+  }
+
+  .prose--traditions {
+    font-size: 0.95rem;
+    line-height: 1.78;
+  }
+}

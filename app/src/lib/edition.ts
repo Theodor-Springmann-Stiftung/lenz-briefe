@@ -1,0 +1,219 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+export type ResolvedRef = {
+  ref: string;
+  cert: string | null;
+  erschlossen: string | null;
+  label: string | null;
+  resolved: Record<string, string | null> | null;
+};
+
+export type DateInfo = {
+  text: string;
+  when: string | null;
+  notBefore: string | null;
+  notAfter: string | null;
+  from: string | null;
+  to: string | null;
+  cert: string | null;
+};
+
+export type LetterMeta = {
+  letter: string;
+  slug: string;
+  sent: {
+    date: DateInfo | null;
+    locations: ResolvedRef[];
+    persons: ResolvedRef[];
+  };
+  received: {
+    date: DateInfo | null;
+    locations: ResolvedRef[];
+    persons: ResolvedRef[];
+  };
+  hasOriginal: boolean;
+  isProofread: boolean;
+  isDraft: boolean;
+  hasText: boolean;
+  hasTraditions: boolean;
+  hasSidenotes: boolean;
+  pageCount: number;
+  pages: string[];
+  traditionsHtml?: string;
+};
+
+export type SidenoteRecord = {
+  id: string;
+  order: number;
+  letter: string;
+  page: string;
+  pos: string;
+  annotation: string;
+  html: string;
+};
+
+export type LetterPageData = {
+  page: string;
+  textHtml: string;
+  sidenotes: SidenoteRecord[];
+};
+
+export type LetterBundle = {
+  meta: LetterMeta;
+  pages: LetterPageData[];
+};
+
+export type YearGroup = {
+  id: string;
+  label: string;
+  start: number;
+  end: number;
+  letters: LetterMeta[];
+};
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const appRoot = path.resolve(__dirname, "..", "..");
+const generatedRoot = process.env.LENZ_GENERATED_DIR
+  ? path.resolve(process.env.LENZ_GENERATED_DIR)
+  : path.join(appRoot, "generated");
+
+const yearGroupsBase = [
+  { id: "1756-1770", label: "1756–1770", start: 1756, end: 1770 },
+  { id: "1771-1775", label: "1771–1775", start: 1771, end: 1775 },
+  { id: "1776", label: "1776", start: 1776, end: 1776 },
+  { id: "1777-1779", label: "1777–1779", start: 1777, end: 1779 },
+  { id: "1780-1792", label: "1780–1792", start: 1780, end: 1792 }
+] as const;
+
+export type YearGroupId = (typeof yearGroupsBase)[number]["id"];
+
+async function readJsonFile<T>(filePath: string): Promise<T> {
+  const raw = await readFile(filePath, "utf8");
+  return JSON.parse(raw) as T;
+}
+
+async function readTextFile(filePath: string): Promise<string> {
+  return await readFile(filePath, "utf8");
+}
+
+function getDateKey(meta: LetterMeta): string | null {
+  const date = meta.sent.date;
+  if (!date) return null;
+  return date.when ?? date.from ?? date.notBefore ?? date.to ?? date.notAfter ?? null;
+}
+
+export function getDerivedYear(meta: LetterMeta): number | null {
+  const key = getDateKey(meta);
+  if (!key) return null;
+  const match = key.match(/^(\d{4})/);
+  return match ? Number(match[1]) : null;
+}
+
+function compareLetters(a: LetterMeta, b: LetterMeta): number {
+  const aKey = getDateKey(a) ?? "";
+  const bKey = getDateKey(b) ?? "";
+  if (aKey !== bKey) {
+    return aKey.localeCompare(bKey);
+  }
+  return Number(a.letter) - Number(b.letter);
+}
+
+export function joinLabels(items: ResolvedRef[]): string {
+  return items.map((item) => item.label).filter(Boolean).join(", ");
+}
+
+export async function getLetterIndex(): Promise<LetterMeta[]> {
+  const indexPath = path.join(generatedRoot, "letters", "index.json");
+  return await readJsonFile<LetterMeta[]>(indexPath);
+}
+
+export async function getGroupedLetterIndex(): Promise<YearGroup[]> {
+  const letters = await getLetterIndex();
+  const groups = yearGroupsBase.map((group) => ({ ...group, letters: [] as LetterMeta[] }));
+
+  for (const letter of letters) {
+    const year = getDerivedYear(letter);
+    if (year == null) {
+      continue;
+    }
+    const group = groups.find((item) => year >= item.start && year <= item.end);
+    if (group) {
+      group.letters.push(letter);
+    }
+  }
+
+  for (const group of groups) {
+    group.letters.sort(compareLetters);
+  }
+
+  return groups.filter((group) => group.letters.length > 0);
+}
+
+export async function getAllYearGroups(): Promise<YearGroup[]> {
+  const letters = await getLetterIndex();
+  const groups = yearGroupsBase.map((group) => ({ ...group, letters: [] as LetterMeta[] }));
+
+  for (const letter of letters) {
+    const year = getDerivedYear(letter);
+    if (year == null) continue;
+    const group = groups.find((item) => year >= item.start && year <= item.end);
+    if (group) {
+      group.letters.push(letter);
+    }
+  }
+
+  for (const group of groups) {
+    group.letters.sort(compareLetters);
+  }
+
+  return groups;
+}
+
+export async function getYearGroup(groupId: string): Promise<YearGroup | null> {
+  const groups = await getAllYearGroups();
+  return groups.find((group) => group.id === groupId) ?? null;
+}
+
+export async function getYearGroupForLetter(letter: LetterMeta): Promise<YearGroup | null> {
+  const year = getDerivedYear(letter);
+  if (year == null) return null;
+  const groups = await getAllYearGroups();
+  return groups.find((group) => year >= group.start && year <= group.end) ?? null;
+}
+
+export function getYearGroupHref(groupId: string): string {
+  return `/years/${groupId}/`;
+}
+
+export async function getLetterBundle(letter: string): Promise<LetterBundle> {
+  const letterDir = path.join(generatedRoot, "letters", letter);
+  const meta = await readJsonFile<LetterMeta>(path.join(letterDir, "meta.json"));
+  const pages = await Promise.all(
+    meta.pages.map(async (page) => ({
+      page,
+      textHtml: await readTextFile(path.join(letterDir, page, "text.html")),
+      sidenotes: await readJsonFile<SidenoteRecord[]>(path.join(letterDir, page, "sidenotes.json"))
+    }))
+  );
+
+  return { meta, pages };
+}
+
+export async function getLetterNeighbors(letter: string) {
+  const index = await getLetterIndex();
+  const ordered = [...index].sort((a, b) => Number(a.letter) - Number(b.letter));
+  const currentIndex = ordered.findIndex((item) => item.letter === letter);
+  if (currentIndex === -1) {
+    return { previous: null, next: null };
+  }
+  return {
+    previous: ordered[currentIndex - 1] ?? null,
+    next: ordered[currentIndex + 1] ?? null
+  };
+}
+
+export function getGeneratedRoot(): string {
+  return generatedRoot;
+}

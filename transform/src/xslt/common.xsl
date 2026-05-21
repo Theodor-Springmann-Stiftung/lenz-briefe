@@ -16,14 +16,23 @@
   </xsl:template>
 
   <xsl:template match="tei:line">
-    <span class="lb-line">
-      <xsl:if test="@type">
-        <xsl:attribute name="data-type" select="@type" />
-      </xsl:if>
-      <xsl:if test="@tab">
-        <xsl:attribute name="data-tab" select="@tab" />
-      </xsl:if>
-    </span>
+    <xsl:choose>
+      <xsl:when test="@type = 'line'">
+        <hr class="lb-rule" />
+      </xsl:when>
+      <xsl:when test="@type = 'empty'">
+        <br class="lb-line" data-type="empty" />
+        <br class="lb-line lb-line--empty" data-type="empty" />
+      </xsl:when>
+      <xsl:otherwise>
+        <br class="lb-line">
+          <xsl:attribute name="data-type" select="if (@type) then string(@type) else 'break'" />
+        </br>
+        <xsl:if test="@tab">
+          <span class="lb-indent" data-tab="{@tab}"></span>
+        </xsl:if>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="tei:align">

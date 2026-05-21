@@ -1,23 +1,35 @@
+---
+import "../styles/global.css";
+import SiteHeader from "../components/SiteHeader.astro";
+
+type Props = {
+	title?: string;
+	description?: string;
+};
+
+const {
+	title = 'Lenz-Briefe',
+	description = 'Statische Edition der Briefe von Jakob Michael Reinhold Lenz.'
+} = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="de">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="description" content={description} />
+		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<div class="min-h-screen">
+			<main class="mx-auto max-w-[72rem] px-5 pb-20 pt-10">
+				<SiteHeader />
+				<slot />
+			</main>
+		</div>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

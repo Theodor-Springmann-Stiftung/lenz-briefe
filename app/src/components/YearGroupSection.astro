@@ -1,0 +1,23 @@
+---
+import LetterIndexEntry from "./LetterIndexEntry.astro";
+import type { YearGroup } from "../lib/edition";
+
+type Props = {
+  group: YearGroup;
+};
+
+const { group } = Astro.props;
+---
+
+<section class="grid gap-6 py-2 first:pt-0" aria-labelledby={`year-${group.id}`}>
+  <div class="grid gap-2 border-b border-[var(--rule)] pb-4">
+    <p class="m-0 text-[0.68rem] uppercase tracking-[0.22em] text-[var(--muted)]">Briefe</p>
+    <div class="flex flex-wrap items-end justify-between gap-3">
+      <h2 class="m-0 text-[clamp(1.35rem,2vw,1.8rem)] font-normal leading-[1.05]" id={`year-${group.id}`}>{group.label}</h2>
+      <p class="m-0 text-[0.82rem] uppercase tracking-[0.14em] text-[var(--muted)]">{group.letters.length} Einträge</p>
+    </div>
+  </div>
+  <div class="grid gap-0">
+    {group.letters.map((letter) => <LetterIndexEntry letter={letter} />)}
+  </div>
+</section>
