@@ -37,6 +37,19 @@ function serializeNode(node) {
   return serializer.serializeToString(node);
 }
 
+function serializeChildNode(node) {
+  if (node.nodeType === 3) {
+    return node.data;
+  }
+  if (node.nodeType === 4) {
+    return `<![CDATA[${node.data}]]>`;
+  }
+  if (node.nodeType === 8) {
+    return `<!--${node.data}-->`;
+  }
+  return serializer.serializeToString(node);
+}
+
 async function ensureDir(dir) {
   await fs.mkdir(dir, { recursive: true });
 }
@@ -199,6 +212,39 @@ function collectSidenotePages(letterText) {
   return Array.from(pages).sort((a, b) => Number(a) - Number(b));
 }
 
+function splitLetterTextByPage(letterText, letter) {
+  const pageMap = new Map();
+  let currentPage = null;
+  let currentChunks = [];
+
+  for (const node of Array.from(letterText.childNodes)) {
+    if (node.nodeType === 1 && node.localName === "page") {
+      if (currentPage !== null) {
+        pageMap.set(
+          currentPage,
+          `<letterPage xmlns="${NS}" letter="${letter}" page="${currentPage}">${currentChunks.join("")}</letterPage>`
+        );
+      }
+      currentPage = String(getAttribute(node, "index"));
+      currentChunks = [serializeChildNode(node)];
+      continue;
+    }
+
+    if (currentPage !== null) {
+      currentChunks.push(serializeChildNode(node));
+    }
+  }
+
+  if (currentPage !== null) {
+    pageMap.set(
+      currentPage,
+      `<letterPage xmlns="${NS}" letter="${letter}" page="${currentPage}">${currentChunks.join("")}</letterPage>`
+    );
+  }
+
+  return pageMap;
+}
+
 function buildSidenoteRecords(letterText, letter, page, htmlItems) {
   const sidenotes = select(`./l:sidenote[@page='${page}']`, letterText);
   return sidenotes.map((node, index) => ({
@@ -246,14 +292,7 @@ async function exportEdition({ outDir }) {
     const letter = String(getAttribute(letterText, "letter"));
     const slug = slugifyLetter(letter);
     const letterDir = path.join(absoluteOutDir, "letters", letter);
-
-    const textHtml = await runStylesheet("letter-text", {
-      sourceText: serializeNode(letterText),
-      stylesheetParams: {
-        letter
-      }
-    });
-    await writeFile(path.join(letterDir, "text.html"), textHtml + "\n");
+    const pageXmlMap = splitLetterTextByPage(letterText, letter);
 
     const traditionNode = traditionsByLetter.get(letter) ?? null;
     const traditionsXml = traditionNode ? serializeNode(traditionNode) : `<letterTradition xmlns="${NS}" letter="${letter}"/>`;
@@ -263,8 +302,6 @@ async function exportEdition({ outDir }) {
         letter
       }
     });
-    await writeFile(path.join(letterDir, "traditions.html"), traditionsHtml + "\n");
-
     const meta = metaByLetter.get(letter) ?? {
       letter,
       slug,
@@ -275,9 +312,16 @@ async function exportEdition({ outDir }) {
       isDraft: false
     };
 
-    const sidenotePages = collectSidenotePages(letterText);
-    const allSidenoteRecords = [];
-    for (const page of sidenotePages) {
+    for (const [page, pageXml] of pageXmlMap.entries()) {
+      const textHtml = await runStylesheet("letter-text", {
+        sourceText: pageXml,
+        stylesheetParams: {
+          letter,
+          page
+        }
+      });
+      await writeFile(path.join(letterDir, page, "text.html"), textHtml + "\n");
+
       const sidenotesHtml = await runStylesheet("sidenotes", {
         sourceText: serializeNode(letterText),
         stylesheetParams: {
@@ -290,13 +334,13 @@ async function exportEdition({ outDir }) {
         .filter((node) => node.nodeType === 1)
         .map((node) => serializer.serializeToString(node));
       const records = buildSidenoteRecords(letterText, letter, page, htmlItems);
-      allSidenoteRecords.push(...records);
+      await writeFile(
+        path.join(letterDir, page, "sidenotes.json"),
+        JSON.stringify(records, null, 2) + "\n"
+      );
     }
-    await writeFile(
-      path.join(letterDir, "sidenotes.json"),
-      JSON.stringify(allSidenoteRecords, null, 2) + "\n"
-    );
 
+    const sidenotePages = collectSidenotePages(letterText);
     const hasSidenotes = sidenotePages.length > 0;
     const hasTraditions = extractTraditionPresence(traditionNode);
     const metaOutput = {
@@ -305,11 +349,17 @@ async function exportEdition({ outDir }) {
       slug,
       hasText: true,
       hasTraditions,
-      hasSidenotes
+      hasSidenotes,
+      pageCount: pageXmlMap.size,
+      pages: Array.from(pageXmlMap.keys()).sort((a, b) => Number(a) - Number(b)),
+      traditionsHtml
     };
     await writeFile(path.join(letterDir, "meta.json"), JSON.stringify(metaOutput, null, 2) + "\n");
 
-    indexEntries.push(metaOutput);
+    indexEntries.push({
+      ...metaOutput,
+      traditionsHtml: undefined
+    });
   }
 
   indexEntries.sort((a, b) => Number(a.letter) - Number(b.letter));

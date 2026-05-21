@@ -27,10 +27,12 @@ artifacts into the given output directory. Relative output paths are supported.
 
 Per letter, the exporter writes:
 
-- `text.html`
-- `traditions.html`
 - `meta.json`
-- `sidenotes.json`
+- `<page>/text.html`
+- `<page>/sidenotes.json`
 
-Each `sidenotes.json` entry keeps its `page` metadata so consumers can group notes
-by page without requiring nested page folders.
+The page subfolder names come from the `index` values of the source `<page>` tags.
+Each page-level `sidenotes.json` entry still keeps its `page` metadata explicitly.
+
+`meta.json` contains the resolved letter metadata, page list, and the rendered
+letter-level `traditionsHtml`.
