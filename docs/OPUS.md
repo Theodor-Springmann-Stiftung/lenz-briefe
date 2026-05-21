@@ -169,8 +169,10 @@ align[@value]           Textausrichtung left | right | center
 anchor                  Fußnotenanker
 anchor[@ref]            Verweis auf die fn[@index] der Fußnote
 aq                      Text in lateinischen Buchstaben
+b                       Fett gesetzter Text
 del                     Gestrichener Text
 dul                     Doppelt unterstrichener Text
+er                      Geloescht
 fn                      Fußnote
 fn[@index]              Identifiziert die Fußnote eindeutig (Nummer)
 ful                     Linie im Text (Tabellenkontext)
@@ -178,13 +180,21 @@ gr                      Text in griechischen Buchstaben
 hand                    Text fremder Hand
 hand[@ref]              Verweis auf opus/definitions/handDefs/handDef[@index]
 hb                      Text in hebräischen Buchstaben
+highlight               Hervorgehobener Text
+highlight[@color]       Farbe der Hervorhebung; beliebiger CSS-Farbwert
 insertion               nachträglich eingefügt (transkribierte Originale)
+it                      Kursiver Text
+large                   Groesser gesetzter Text
 note                    Anmerkung der Editor:innen
 nr                      Unentziffert
+pe                      Bleistift
+ru                      Text in russischen Buchstaben
 sub                     Tiefgestellter Text
 super                   Hochgestellter Text
+tl                      Textverlust
 ul                      Unterstrichener Text
 tul                     Dreifach unterstrichener Text
+undo                    Ungetilgt
 ```
 
 Tabellen:

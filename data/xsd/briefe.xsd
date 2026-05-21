@@ -45,6 +45,9 @@
                     <xs:element ref="sidenote" />
                     <xs:element ref="aq" />
                     <xs:element ref="ul" />
+                    <xs:element ref="tul" />
+                    <xs:element ref="highlight" />
+                    <xs:element ref="undo" />
                     <xs:element ref="address" />
                     <xs:element ref="insertion" />
                     <xs:element ref="del" />

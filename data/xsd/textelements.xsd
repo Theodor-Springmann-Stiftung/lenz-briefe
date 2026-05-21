@@ -12,6 +12,9 @@
             <xs:element ref="align" />
             <xs:element ref="aq" />
             <xs:element ref="ul" />
+            <xs:element ref="tul" />
+            <xs:element ref="highlight" />
+            <xs:element ref="undo" />
             <xs:element ref="address" />
             <xs:element ref="insertion" />
             <xs:element ref="del" />
@@ -41,6 +44,8 @@
             <xs:element ref="align" />
             <xs:element ref="aq" />
             <xs:element ref="ul" />
+            <xs:element ref="tul" />
+            <xs:element ref="highlight" />
             <xs:element ref="address" />
             <xs:element ref="insertion" />
             <xs:element ref="del" />
@@ -111,6 +116,7 @@
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="break" />
                         <xs:enumeration value="empty" />
+                        <xs:enumeration value="line" />
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
@@ -327,6 +333,26 @@
 
     <xs:element name="aq" type="lenz:textbase" />
     <xs:element name="ul" type="lenz:textbase" />
+    <xs:element name="tul" type="lenz:textbase" />
+    <xs:element name="highlight">
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="lenz:textbase">
+                    <xs:attribute name="color" type="xs:string" use="required" />
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="undo">
+        <xs:complexType>
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
+                <xs:element ref="lenz:del" />
+                <xs:element ref="lenz:ul" />
+                <xs:element ref="lenz:tul" />
+                <xs:element ref="lenz:dul" />
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="address" type="lenz:textbase" />
     <xs:element name="del" type="lenz:textbase" />
     <xs:element name="note" type="lenz:textbase" />
