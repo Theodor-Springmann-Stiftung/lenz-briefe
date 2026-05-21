@@ -220,7 +220,6 @@
                     <xs:choice minOccurs="0" maxOccurs="unbounded">
                         <xs:element ref="lenz:tab" minOccurs="1" maxOccurs="unbounded" />
                         <xs:element ref="lenz:line" />
-                        <xs:element ref="lenz:page" />
                         <xs:element ref="lenz:note" />
                     </xs:choice>
                     <xs:attribute name="extent" type="xs:positiveInteger" use="optional" />
