@@ -1,8 +1,10 @@
 import fs from "node:fs/promises";
+import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
+import { performance } from "node:perf_hooks";
 import SaxonJS from "saxon-js";
 import xpath from "xpath";
 import { DOMParser, XMLSerializer } from "@xmldom/xmldom";
@@ -16,6 +18,10 @@ const XSLT_DIR = path.join(TRANSFORM_DIR, "src", "xslt");
 const CACHE_DIR = path.join(TRANSFORM_DIR, ".cache");
 const NS = "https://lenz-archiv.de";
 const stylesheetFileCache = new Map();
+const LETTER_CONCURRENCY = Math.max(
+  1,
+  Math.min(typeof os.availableParallelism === "function" ? os.availableParallelism() : os.cpus().length, 8)
+);
 
 const select = xpath.useNamespaces({ l: NS });
 const parser = new DOMParser();
@@ -51,6 +57,35 @@ function serializeChildNode(node) {
   return serializer.serializeToString(node);
 }
 
+function createTimings() {
+  const totals = new Map();
+  const counts = new Map();
+
+  return {
+    record(label, durationMs) {
+      totals.set(label, (totals.get(label) ?? 0) + durationMs);
+      counts.set(label, (counts.get(label) ?? 0) + 1);
+    },
+    async measure(label, fn) {
+      const startedAt = performance.now();
+      try {
+        return await fn();
+      } finally {
+        this.record(label, performance.now() - startedAt);
+      }
+    },
+    snapshot() {
+      return Array.from(totals.entries())
+        .map(([label, totalMs]) => ({
+          label,
+          totalMs,
+          count: counts.get(label) ?? 0
+        }))
+        .sort((a, b) => b.totalMs - a.totalMs);
+    }
+  };
+}
+
 async function ensureDir(dir) {
   await fs.mkdir(dir, { recursive: true });
 }
@@ -65,58 +100,64 @@ async function readXml(fileName) {
   return parser.parseFromString(source, "text/xml");
 }
 
-async function compileStylesheet(name) {
-  await ensureDir(CACHE_DIR);
-  const stylesheetPath = path.join(XSLT_DIR, `${name}.xsl`);
-  const sefPath = path.join(CACHE_DIR, `${name}.sef.json`);
-  const dependencyPaths = [stylesheetPath];
-  const commonStylesheetPath = path.join(XSLT_DIR, "common.xsl");
-  if (name !== "common") {
-    dependencyPaths.push(commonStylesheetPath);
-  }
+async function compileStylesheet(name, timings) {
+  return await timings.measure("compileStylesheet", async () => {
+    await ensureDir(CACHE_DIR);
+    const stylesheetPath = path.join(XSLT_DIR, `${name}.xsl`);
+    const sefPath = path.join(CACHE_DIR, `${name}.sef.json`);
+    const dependencyPaths = [stylesheetPath];
+    const commonStylesheetPath = path.join(XSLT_DIR, "common.xsl");
+    if (name !== "common") {
+      dependencyPaths.push(commonStylesheetPath);
+    }
 
-  const dependencyStats = await Promise.all(dependencyPaths.map((dependencyPath) => fs.stat(dependencyPath)));
-  const latestDependencyMtime = Math.max(...dependencyStats.map((stat) => stat.mtimeMs));
-  let shouldCompile = true;
+    const dependencyStats = await Promise.all(dependencyPaths.map((dependencyPath) => fs.stat(dependencyPath)));
+    const latestDependencyMtime = Math.max(...dependencyStats.map((stat) => stat.mtimeMs));
+    let shouldCompile = true;
 
-  try {
-    const sefStat = await fs.stat(sefPath);
-    shouldCompile = latestDependencyMtime > sefStat.mtimeMs;
-  } catch {
-    shouldCompile = true;
-  }
+    try {
+      const sefStat = await fs.stat(sefPath);
+      shouldCompile = latestDependencyMtime > sefStat.mtimeMs;
+    } catch {
+      shouldCompile = true;
+    }
 
-  if (shouldCompile) {
-    const xslt3Bin = path.join(
-      TRANSFORM_DIR,
-      "node_modules",
-      ".bin",
-      process.platform === "win32" ? "xslt3.cmd" : "xslt3"
-    );
-    await execFileAsync(xslt3Bin, [
-      "-xsl:" + stylesheetPath,
-      "-export:" + sefPath,
-      "-nogo"
-    ]);
-  }
+    if (shouldCompile) {
+      const xslt3Bin = path.join(
+        TRANSFORM_DIR,
+        "node_modules",
+        ".bin",
+        process.platform === "win32" ? "xslt3.cmd" : "xslt3"
+      );
+      await execFileAsync(xslt3Bin, [
+        "-xsl:" + stylesheetPath,
+        "-export:" + sefPath,
+        "-nogo"
+      ]);
+    }
 
-  return sefPath;
+    return sefPath;
+  });
 }
 
-async function runStylesheet(name, params, options = {}) {
+async function runStylesheet(name, params, timings, options = {}) {
   if (!stylesheetFileCache.has(name)) {
-    stylesheetFileCache.set(name, compileStylesheet(name));
+    stylesheetFileCache.set(name, compileStylesheet(name, timings));
   }
 
   const stylesheetFileName = await stylesheetFileCache.get(name);
-  const result = await SaxonJS.transform(
-    {
-      stylesheetFileName,
-      destination: "serialized",
-      initialTemplate: "Q{http://www.w3.org/1999/XSL/Transform}initial-template",
-      ...params
-    },
-    "async"
+  const result = await timings.measure(
+    `transform:${name}`,
+    async () =>
+      await SaxonJS.transform(
+        {
+          stylesheetFileName,
+          destination: "serialized",
+          initialTemplate: "Q{http://www.w3.org/1999/XSL/Transform}initial-template",
+          ...params
+        },
+        "async"
+      )
   );
 
   if (options.trim === false) {
@@ -284,22 +325,49 @@ function extractTraditionPresence(traditionNode) {
   return Boolean(traditionNode && xpath.select("./*[local-name()='app']", traditionNode).length > 0);
 }
 
+async function mapWithConcurrency(items, concurrency, mapper) {
+  const results = new Array(items.length);
+  let nextIndex = 0;
+
+  async function worker() {
+    while (true) {
+      const currentIndex = nextIndex;
+      nextIndex += 1;
+      if (currentIndex >= items.length) {
+        return;
+      }
+      results[currentIndex] = await mapper(items[currentIndex], currentIndex);
+    }
+  }
+
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, items.length) }, () => worker())
+  );
+
+  return results;
+}
+
 async function exportEdition({ outDir }) {
+  const timings = createTimings();
   const absoluteOutDir = path.resolve(outDir);
-  const briefeDoc = await readXml("briefe.xml");
-  const metaDoc = await readXml("meta.xml");
-  const traditionsDoc = await readXml("traditions.xml");
-  const referencesDoc = await readXml("references.xml");
-  const git = await getGitMetadata();
-  const refs = buildReferenceMaps(referencesDoc);
+  const briefeDoc = await timings.measure("readXml:briefe", async () => await readXml("briefe.xml"));
+  const metaDoc = await timings.measure("readXml:meta", async () => await readXml("meta.xml"));
+  const traditionsDoc = await timings.measure("readXml:traditions", async () => await readXml("traditions.xml"));
+  const referencesDoc = await timings.measure("readXml:references", async () => await readXml("references.xml"));
+  const git = await timings.measure("gitMetadata", async () => await getGitMetadata());
+  const refs = await timings.measure("buildReferenceMaps", async () => buildReferenceMaps(referencesDoc));
 
-  await ensureDir(absoluteOutDir);
+  await timings.measure("ensureOutDir", async () => await ensureDir(absoluteOutDir));
 
-  const letterTextNodes = select("/l:opus/l:document/l:letterText", briefeDoc);
-  const metaLetterNodes = select("/l:opus/l:descriptions/l:letterDesc", metaDoc);
-  const traditionLetterNodes = xpath.select(
-    "/*[local-name()='opus']/*[local-name()='traditions']/*[local-name()='letterTradition']",
-    traditionsDoc
+  const letterTextNodes = await timings.measure("select:letterTextNodes", async () => select("/l:opus/l:document/l:letterText", briefeDoc));
+  const metaLetterNodes = await timings.measure("select:metaLetterNodes", async () => select("/l:opus/l:descriptions/l:letterDesc", metaDoc));
+  const traditionLetterNodes = await timings.measure(
+    "select:traditionLetterNodes",
+    async () =>
+      xpath.select(
+        "/*[local-name()='opus']/*[local-name()='traditions']/*[local-name()='letterTradition']",
+        traditionsDoc
+      )
   );
   const metaByLetter = new Map(
     metaLetterNodes.map((node) => [
@@ -314,22 +382,26 @@ async function exportEdition({ outDir }) {
     ])
   );
 
-  const indexEntries = [];
-
-  for (const letterText of letterTextNodes) {
+  const indexEntries = await timings.measure("processLetters", async () =>
+    await mapWithConcurrency(letterTextNodes, LETTER_CONCURRENCY, async (letterText) => {
+      return await timings.measure("processLetter", async () => {
     const letter = String(getAttribute(letterText, "letter"));
     const slug = slugifyLetter(letter);
     const letterDir = path.join(absoluteOutDir, "letters", letter);
-    const pageXmlMap = splitLetterTextByPage(letterText, letter);
+    const pageXmlMap = await timings.measure("splitLetterTextByPage", async () => splitLetterTextByPage(letterText, letter));
 
     const traditionNode = traditionsByLetter.get(letter) ?? null;
     const traditionsXml = traditionNode ? serializeNode(traditionNode) : `<letterTradition xmlns="${NS}" letter="${letter}"/>`;
-    const traditionsHtml = await runStylesheet("traditions", {
-      sourceText: traditionsXml,
-      stylesheetParams: {
-        letter
-      }
-    });
+    const traditionsHtml = await runStylesheet(
+      "traditions",
+      {
+        sourceText: traditionsXml,
+        stylesheetParams: {
+          letter
+        }
+      },
+      timings
+    );
     const meta = metaByLetter.get(letter) ?? {
       letter,
       slug,
@@ -341,34 +413,46 @@ async function exportEdition({ outDir }) {
     };
 
     for (const [page, pageXml] of pageXmlMap.entries()) {
-      const textHtml = await runStylesheet("letter-text", {
-        sourceText: pageXml,
-        stylesheetParams: {
-          letter,
-          page
-        }
-      });
-      await writeFile(path.join(letterDir, page, "text.html"), textHtml + "\n");
+      const textHtml = await runStylesheet(
+        "letter-text",
+        {
+          sourceText: pageXml,
+          stylesheetParams: {
+            letter,
+            page
+          }
+        },
+        timings
+      );
+      await timings.measure("writeFile:textHtml", async () => await writeFile(path.join(letterDir, page, "text.html"), textHtml + "\n"));
 
-      const sidenotes = select(`./l:sidenote[@page='${page}']`, letterText);
+      const sidenotes = await timings.measure("select:pageSidenotes", async () => select(`./l:sidenote[@page='${page}']`, letterText));
       const htmlItems = await Promise.all(
         sidenotes.map((sidenote) =>
-          runStylesheet("sidenotes", {
-            sourceText: serializeNode(sidenote),
-            stylesheetParams: {
-              letter
-            }
-          })
+          runStylesheet(
+            "sidenotes",
+            {
+              sourceText: serializeNode(sidenote),
+              stylesheetParams: {
+                letter
+              }
+            },
+            timings
+          )
         )
       );
       const records = buildSidenoteRecords(sidenotes, letter, page, htmlItems);
-      await writeFile(
-        path.join(letterDir, page, "sidenotes.json"),
-        JSON.stringify(records, null, 2) + "\n"
+      await timings.measure(
+        "writeFile:sidenotesJson",
+        async () =>
+          await writeFile(
+            path.join(letterDir, page, "sidenotes.json"),
+            JSON.stringify(records, null, 2) + "\n"
+          )
       );
     }
 
-    const sidenotePages = collectSidenotePages(letterText);
+    const sidenotePages = await timings.measure("collectSidenotePages", async () => collectSidenotePages(letterText));
     const hasSidenotes = sidenotePages.length > 0;
     const hasTraditions = extractTraditionPresence(traditionNode);
     const metaOutput = {
@@ -382,34 +466,48 @@ async function exportEdition({ outDir }) {
       pages: Array.from(pageXmlMap.keys()).sort((a, b) => Number(a) - Number(b)),
       traditionsHtml
     };
-    await writeFile(path.join(letterDir, "meta.json"), JSON.stringify(metaOutput, null, 2) + "\n");
+    await timings.measure("writeFile:metaJson", async () => await writeFile(path.join(letterDir, "meta.json"), JSON.stringify(metaOutput, null, 2) + "\n"));
 
-    indexEntries.push({
-      ...metaOutput,
-      traditionsHtml: undefined
-    });
-  }
+        return {
+          ...metaOutput,
+          traditionsHtml: undefined
+        };
+      });
+    })
+  );
 
   indexEntries.sort((a, b) => Number(a.letter) - Number(b.letter));
-  await writeFile(
-    path.join(absoluteOutDir, "letters", "index.json"),
-    JSON.stringify(indexEntries, null, 2) + "\n"
+  await timings.measure(
+    "writeFile:indexJson",
+    async () =>
+      await writeFile(
+        path.join(absoluteOutDir, "letters", "index.json"),
+        JSON.stringify(indexEntries, null, 2) + "\n"
+      )
   );
-  await writeFile(
-    path.join(absoluteOutDir, "stats.json"),
-    JSON.stringify(
-      {
-        ...git,
-        counts: {
-          meta: metaLetterNodes.length,
-          letterText: letterTextNodes.length,
-          traditions: traditionLetterNodes.length
-        }
-      },
-      null,
-      2
-    ) + "\n"
+  await timings.measure(
+    "writeFile:statsJson",
+    async () =>
+      await writeFile(
+        path.join(absoluteOutDir, "stats.json"),
+        JSON.stringify(
+          {
+            ...git,
+            counts: {
+              meta: metaLetterNodes.length,
+              letterText: letterTextNodes.length,
+              traditions: traditionLetterNodes.length
+            }
+          },
+          null,
+          2
+        ) + "\n"
+      )
   );
+
+  return {
+    timings: timings.snapshot()
+  };
 }
 
 export { exportEdition };
