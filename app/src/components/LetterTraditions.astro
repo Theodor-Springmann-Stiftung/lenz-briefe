@@ -1,0 +1,17 @@
+---
+type Props = {
+  html: string | undefined;
+};
+
+const { html } = Astro.props;
+---
+
+{html && (
+  <section aria-labelledby="traditions-heading">
+    <div>
+      <p>Überlieferung</p>
+      <h2 id="traditions-heading">Tradition</h2>
+    </div>
+    <div set:html={html} />
+  </section>
+)}

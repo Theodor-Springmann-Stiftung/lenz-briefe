@@ -1,2 +1,25 @@
 @import "tailwindcss";
 
+@layer components {
+  .letter-body-prose .letter-text {
+    display: contents;
+  }
+
+  .letter-body-prose .page-anchor {
+    display: inline;
+    user-select: none;
+  }
+
+  .letter-body-prose .page-line-probe {
+    display: inline;
+    user-select: none;
+  }
+
+  .letter-body-prose .sidenote-marker {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    vertical-align: baseline;
+  }
+}

@@ -1,0 +1,14 @@
+---
+import type { LetterPageData } from "../lib/edition";
+
+type Props = {
+  pages: LetterPageData[];
+};
+
+const { pages } = Astro.props;
+const html = pages.map((page) => page.textHtml).join("");
+---
+
+<div class="min-w-0">
+  <div class="letter-body-prose" data-letter-body set:html={html} />
+</div>

@@ -1,0 +1,66 @@
+---
+import type { LetterMeta } from "../lib/edition";
+
+type Neighbors = {
+  previous: LetterMeta | null;
+  next: LetterMeta | null;
+};
+
+type Props = {
+  meta: LetterMeta;
+  neighbors: Neighbors;
+};
+
+const { meta, neighbors } = Astro.props;
+---
+
+<header>
+  <div>
+    <p>Brief {meta.letter}</p>
+    <h1>{meta.sent.date?.text ?? "Ohne Datierung"}</h1>
+  </div>
+
+  {(meta.sent.persons.length > 0 || meta.received.persons.length > 0) && (
+    <div aria-label="Korrespondenz">
+      <div>
+        {meta.sent.persons.map((person) => (
+          <span>{person.label}</span>
+        ))}
+      </div>
+      <span aria-hidden="true">→</span>
+      <div>
+        {meta.received.persons.map((person) => (
+          <span>
+            <span>{person.label}</span>
+            {meta.received.locations.length > 0 && (
+              <span>
+                ({meta.received.locations.map((location) => location.label).join(", ")})
+              </span>
+            )}
+          </span>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <nav aria-label="Briefnavigation">
+    <div>
+      {neighbors.previous ? (
+        <a href={`/letters/${neighbors.previous.letter}/`}>
+          ← Brief {neighbors.previous.letter}
+        </a>
+      ) : (
+        <span aria-hidden="true"> </span>
+      )}
+    </div>
+    <div>
+      {neighbors.next ? (
+        <a href={`/letters/${neighbors.next.letter}/`}>
+          Brief {neighbors.next.letter} →
+        </a>
+      ) : (
+        <span aria-hidden="true"> </span>
+      )}
+    </div>
+  </nav>
+</header>

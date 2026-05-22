@@ -1,0 +1,22 @@
+---
+import type { LetterPageData } from "../lib/edition";
+
+type Props = {
+  pages: LetterPageData[];
+};
+
+const { pages } = Astro.props;
+---
+
+<div class="relative min-h-full" data-page-rail aria-label="Seiten">
+  {pages.map((page) => (
+    <div
+      class="absolute left-0 w-full pr-2 text-right data-[positioned=false]:invisible"
+      data-anchor-id={`page-${page.page}`}
+      data-align="bottom"
+      data-positioned="false"
+    >
+      <span>{page.page}</span>
+    </div>
+  ))}
+</div>

@@ -1,13 +1,14 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import LetterPageBlock from "../../components/LetterPageBlock.astro";
-import TraditionsBlock from "../../components/TraditionsBlock.astro";
+import LetterBody from "../../components/LetterBody.astro";
+import LetterHeader from "../../components/LetterHeader.astro";
+import LetterPageNumbers from "../../components/LetterPageNumbers.astro";
+import LetterSidenoteMargins from "../../components/LetterSidenoteMargins.astro";
+import LetterTraditions from "../../components/LetterTraditions.astro";
 import {
   getLetterBundle,
   getLetterIndex,
-  getLetterNeighbors,
-  getYearGroupForLetter,
-  getYearGroupHref
+  getLetterNeighbors
 } from "../../lib/edition";
 
 export async function getStaticPaths() {
@@ -23,77 +24,289 @@ if (!letter) {
 }
 
 const bundle = await getLetterBundle(letter);
-const [neighbors, parentGroup] = await Promise.all([
-  getLetterNeighbors(letter),
-  getYearGroupForLetter(bundle.meta)
-]);
+const neighbors = await getLetterNeighbors(letter);
+const allSidenotes = bundle.pages.flatMap((page) => page.sidenotes);
 ---
 
 <Layout
   title={`Brief ${bundle.meta.letter} | Lenz-Briefe`}
   description={bundle.meta.sent.date?.text ?? `Brief ${bundle.meta.letter}`}
 >
-  <div class="">
+  <div>
+    <LetterHeader meta={bundle.meta} neighbors={neighbors} />
 
-		<div clas="">
-			<div class="">
-				<div class="">
-					<p class="">Brief {bundle.meta.letter}</p>
-					<h1 class="">{bundle.meta.sent.date?.text ?? "Ohne Datierung"}</h1>
-				</div>
-				{(bundle.meta.sent.persons.length > 0 || bundle.meta.received.persons.length > 0) && (
-					<div class="" aria-label="Korrespondenz">
-						<div class="">
-							{bundle.meta.sent.persons.map((person) => (
-								<span class="">
-									<span class="">{person.label}</span>
-								</span>
-							))}
-						</div>
-						<span class="" aria-hidden="true">→</span>
-						<div class="">
-							{bundle.meta.received.persons.map((person) => (
-								<span class="">
-									<span class="">{person.label}</span>
-									({bundle.meta.received.locations.map((location) => (
-										<span class="">{location.label}</span>
-									))})
-								</span>
-							))}
-						</div>
-					</div>
-				)}
-			</div>
-
-
-			<nav class="" aria-label="Briefnavigation">
-				<div>
-					{neighbors.previous ? (
-						<a class="" href={`/letters/${neighbors.previous.letter}/`}>
-							← Brief {neighbors.previous.letter}
-						</a>
-					) : (
-						<span> </span>
-					)}
-				</div>
-				<div class="">
-					{neighbors.next ? (
-						<a class="" href={`/letters/${neighbors.next.letter}/`}>
-							Brief {neighbors.next.letter} →
-						</a>
-					) : (
-						<span> </span>
-					)}
-				</div>
-			</nav>
-		</div>
-
-
-    <section class="">
-      {bundle.pages.map((page) => <LetterPageBlock page={page} />)}
+    <section class="grid grid-cols-[4.5rem_minmax(0,1fr)_18rem] items-stretch gap-6 max-[980px]:grid-cols-[3.5rem_minmax(0,1fr)]" data-letter-layout>
+      <LetterPageNumbers pages={bundle.pages} />
+      <LetterBody pages={bundle.pages} />
+      <LetterSidenoteMargins notes={allSidenotes} />
     </section>
 
-    <TraditionsBlock html={bundle.meta.traditionsHtml} />
-
+    <LetterTraditions html={bundle.meta.traditionsHtml} />
   </div>
+
+  <script is:inline>
+    (() => {
+      const roots = document.querySelectorAll("[data-letter-layout]");
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
+      const INLINE_BREAK_TEXT = " | ";
+      const PROBE_SELECTOR = ".page-line-probe";
+
+      const getBottomGap = (item) => {
+        if (!context) {
+          return 0;
+        }
+
+        const sample = item.textContent?.trim();
+        if (!sample) {
+          return 0;
+        }
+
+        const computed = window.getComputedStyle(item);
+        context.font = computed.font;
+        const metrics = context.measureText(sample);
+        const fontDescent = metrics.fontBoundingBoxDescent ?? 0;
+        const glyphDescent = metrics.actualBoundingBoxDescent ?? 0;
+        return Math.max(0, fontDescent - glyphDescent);
+      };
+
+      const createPageProbe = (pageId) => {
+        const probe = document.createElement("span");
+        probe.className = "page-line-probe";
+        probe.dataset.pageProbeFor = pageId;
+        probe.setAttribute("aria-hidden", "true");
+        probe.textContent = "\u200B";
+        return probe;
+      };
+
+      const removePageProbes = (body) => {
+        for (const probe of body.querySelectorAll(PROBE_SELECTOR)) {
+          probe.remove();
+        }
+      };
+
+      const getPageContainer = (anchor) => {
+        let node = anchor.nextSibling;
+
+        while (node) {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            const element = node;
+            if (element instanceof HTMLElement && element.classList.contains("letter-text")) {
+              return element;
+            }
+          } else if (node.nodeType === Node.TEXT_NODE && node.textContent?.trim()) {
+            return null;
+          }
+
+          node = node.nextSibling;
+        }
+
+        return null;
+      };
+
+      const isIgnoredNode = (node) => {
+        if (node.nodeType === Node.TEXT_NODE) {
+          return !node.textContent?.trim();
+        }
+
+        if (!(node instanceof HTMLElement)) {
+          return false;
+        }
+
+        return node.classList.contains("lb-page") || node.classList.contains("page-line-probe");
+      };
+
+      const isLineBreakNode = (node) =>
+        node instanceof HTMLBRElement && node.classList.contains("lb-line");
+
+      const getMeaningfulTopLevelNodes = (container) =>
+        Array.from(container.childNodes).filter((node) => !isIgnoredNode(node));
+
+      const splitTextForProbe = (node) => {
+        const index = node.textContent?.search(/\S/) ?? -1;
+        if (index <= 0) {
+          return node;
+        }
+
+        return node.splitText(index);
+      };
+
+      const insertProbeAtVisibleStart = (node, pageId) => {
+        const probe = createPageProbe(pageId);
+
+        if (node.nodeType === Node.TEXT_NODE) {
+          const target = splitTextForProbe(node);
+          target.parentNode?.insertBefore(probe, target);
+          return probe;
+        }
+
+        if (!(node instanceof HTMLElement)) {
+          return probe;
+        }
+
+        for (const child of Array.from(node.childNodes)) {
+          if (isIgnoredNode(child) || isLineBreakNode(child)) {
+            continue;
+          }
+
+          if (child.nodeType === Node.TEXT_NODE && child.textContent?.trim()) {
+            return insertProbeAtVisibleStart(child, pageId);
+          }
+
+          if (child instanceof HTMLElement) {
+            return insertProbeAtVisibleStart(child, pageId);
+          }
+        }
+
+        node.prepend(probe);
+        return probe;
+      };
+
+      const classifyPageStart = (anchor, isFirstPage) => {
+        const container = getPageContainer(anchor);
+        const nodes = container ? getMeaningfulTopLevelNodes(container) : [];
+        const firstNode = nodes[0] ?? null;
+        const startsWithLineBreak = isLineBreakNode(firstNode);
+
+        const mode = startsWithLineBreak ? "line-break" : "inline-break";
+        anchor.dataset.pageStart = mode;
+        anchor.dataset.firstPage = isFirstPage ? "true" : "false";
+
+        return {
+          anchor,
+          container,
+          mode,
+          firstNode,
+          firstContentNode:
+            mode === "line-break"
+              ? nodes.find((node) => !isLineBreakNode(node)) ?? null
+              : firstNode
+        };
+      };
+
+      const buildPageTargets = (body) => {
+        removePageProbes(body);
+        const anchors = Array.from(body.querySelectorAll(".page-anchor"));
+        const firstPageAnchorId = anchors[0]?.id ?? "";
+        const targets = new Map();
+
+        for (const anchor of anchors) {
+          if (!(anchor instanceof HTMLElement) || !anchor.id) {
+            continue;
+          }
+
+          const pageStart = classifyPageStart(anchor, anchor.id === firstPageAnchorId);
+          if (!pageStart.container) {
+            anchor.replaceChildren();
+            targets.set(anchor.id, anchor);
+            continue;
+          }
+
+          const pageId = anchor.id;
+          let target = anchor;
+
+          if (!pageStart.anchor.dataset.firstPage || pageStart.anchor.dataset.firstPage !== "true") {
+            if (pageStart.mode === "inline-break") {
+              const probe = createPageProbe(pageId);
+              anchor.replaceChildren(document.createTextNode(INLINE_BREAK_TEXT), probe);
+              target = probe;
+              targets.set(pageId, target);
+              continue;
+            }
+          }
+
+          anchor.replaceChildren();
+          if (pageStart.firstContentNode) {
+            target = insertProbeAtVisibleStart(pageStart.firstContentNode, pageId);
+          }
+
+          targets.set(pageId, target);
+        }
+
+        return { firstPageAnchorId, targets };
+      };
+
+      const positionRail = (items, body, rail, pageTargets) => {
+        const bodyRect = body.getBoundingClientRect();
+        let maxBottom = 0;
+
+        for (const [index, item] of items.entries()) {
+          const anchorId = item.getAttribute("data-anchor-id");
+          const align = item.getAttribute("data-align") ?? "top";
+          if (!anchorId) {
+            item.setAttribute("data-positioned", "false");
+            continue;
+          }
+
+          if (align === "bottom" && index === 0) {
+            const label = item.textContent?.trim();
+            if (label === "1") {
+              item.setAttribute("data-positioned", "false");
+              item.style.top = "";
+              continue;
+            }
+          }
+
+          const target =
+            align === "bottom"
+              ? pageTargets.get(anchorId) ?? null
+              : body.querySelector(`#${CSS.escape(anchorId)}`);
+          if (!(target instanceof HTMLElement)) {
+            item.setAttribute("data-positioned", "false");
+            continue;
+          }
+
+          const targetRect = target.getBoundingClientRect();
+          const bottomGap = align === "bottom" ? getBottomGap(item) : 0;
+          const rawTop =
+            align === "bottom"
+              ? targetRect.bottom - bodyRect.top - item.offsetHeight + bottomGap
+              : targetRect.top - bodyRect.top;
+          const top = Math.max(0, rawTop);
+          item.style.top = `${Math.round(top)}px`;
+          item.setAttribute("data-positioned", "true");
+          maxBottom = Math.max(maxBottom, top + item.offsetHeight);
+        }
+
+        rail.style.minHeight = `${Math.max(body.offsetHeight, Math.ceil(maxBottom))}px`;
+      };
+
+      const setupLayout = (root) => {
+        const body = root.querySelector("[data-letter-body]");
+        const pageRail = root.querySelector("[data-page-rail]");
+        const sidenoteRail = root.querySelector("[data-sidenote-rail]");
+
+        if (!(body instanceof HTMLElement) || !(pageRail instanceof HTMLElement) || !(sidenoteRail instanceof HTMLElement)) {
+          return;
+        }
+
+        const pageItems = Array.from(pageRail.querySelectorAll("[data-anchor-id]"));
+        const sidenoteItems = Array.from(sidenoteRail.querySelectorAll("[data-anchor-id]"));
+
+        const reposition = () => {
+          const pageTargets = buildPageTargets(body);
+          positionRail(pageItems, body, pageRail, pageTargets.targets);
+          positionRail(sidenoteItems, body, sidenoteRail, pageTargets.targets);
+        };
+
+        const schedule = () => requestAnimationFrame(reposition);
+        const resizeObserver = new ResizeObserver(schedule);
+        resizeObserver.observe(body);
+        resizeObserver.observe(root);
+
+        if (document.fonts?.ready) {
+          document.fonts.ready.then(schedule);
+        }
+
+        window.addEventListener("resize", schedule, { passive: true });
+        schedule();
+      };
+
+      for (const root of roots) {
+        if (root instanceof HTMLElement) {
+          setupLayout(root);
+        }
+      }
+    })();
+  </script>
 </Layout>
