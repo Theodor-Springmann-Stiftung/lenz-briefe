@@ -7,9 +7,13 @@
 
   <xsl:import href="common.xsl" />
   <xsl:param name="letter" as="xs:string?" />
+  <xsl:param name="sidenoteId" as="xs:string?" />
 
   <xsl:template name="xsl:initial-template">
     <aside class="sidenote">
+      <xsl:if test="$sidenoteId">
+        <xsl:attribute name="id" select="$sidenoteId" />
+      </xsl:if>
       <xsl:attribute name="data-letter" select="$letter" />
       <xsl:attribute name="data-page" select="/*/@page" />
       <xsl:attribute name="data-pos" select="/*/@pos" />

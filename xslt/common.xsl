@@ -2,7 +2,8 @@
 <xsl:stylesheet version="3.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:lb="https://lenz-archiv.de"
-  exclude-result-prefixes="lb">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  exclude-result-prefixes="lb xs">
 
   <xsl:output method="html" encoding="UTF-8" omit-xml-declaration="yes" />
   <xsl:mode on-no-match="shallow-skip" />
@@ -13,6 +14,21 @@
 
   <xsl:template match="lb:page">
     <span class="lb-page" data-index="{@index}"></span>
+  </xsl:template>
+
+  <xsl:template match="lb:sidenote">
+    <span class="sidenote-marker">
+      <xsl:attribute name="id" select="
+        concat(
+          'anchor-letter-',
+          format-integer(xs:integer(/*/@letter), '000'),
+          '-page-',
+          string(@page),
+          '-sidenote-',
+          string(count(preceding::lb:sidenote[@page = current()/@page]) + 1)
+        )
+      " />
+    </span>
   </xsl:template>
 
   <xsl:template match="lb:line">

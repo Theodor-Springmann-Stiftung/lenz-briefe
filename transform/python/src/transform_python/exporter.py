@@ -373,16 +373,23 @@ def _process_letter(
         )
         sidenotes_path = letter_dir / page / "sidenotes.json"
         if sidenotes:
+            records = build_sidenote_records(
+                sidenotes,
+                letter,
+                page,
+                ["" for _ in sidenotes],
+            )
             html_items = [
                 runner.run_stylesheet(
                     "sidenotes",
                     serialize_node(sidenote),
-                    {"letter": letter},
+                    {"letter": letter, "sidenoteId": records[index]["id"]},
                     timings,
                 )
-                for sidenote in sidenotes
+                for index, sidenote in enumerate(sidenotes)
             ]
-            records = build_sidenote_records(sidenotes, letter, page, html_items)
+            for index, html in enumerate(html_items):
+                records[index]["html"] = html
             timings.measure(
                 "writeFile:sidenotesJson",
                 lambda: write_json(sidenotes_path, records),

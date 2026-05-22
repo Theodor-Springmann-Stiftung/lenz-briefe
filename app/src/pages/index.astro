@@ -1,9 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import YearGroupSection from "../components/YearGroupSection.astro";
-import { getYearGroup } from "../lib/edition";
+import { getYearGroupHref, getAllYearGroups } from "../lib/edition";
 
-const group = await getYearGroup("1756-1770");
+const groups = await getAllYearGroups();
+const group = groups[0];
 
 if (!group) {
   throw new Error("Missing first year group");
@@ -14,13 +15,14 @@ if (!group) {
   title={`${group.label} | Lenz-Briefe`}
   description={`Briefe im Zeitraum ${group.label}.`}
 >
+	<nav class="" aria-label="Briefe nach Jahren">
+		<ol>
+		{groups.map((group) => (
+			<li><a class="" href={getYearGroupHref(group.id)}>{group.label}</a></li>
+		))}
+		</ol>
+	</nav>
   <div class="">
-    <header class="">
-      <p class="">Jahresgruppe</p>
-      <h1 class="">{group.label}</h1>
-      <p class="">{group.letters.length} Briefe in dieser Gruppe.</p>
-    </header>
-
     <YearGroupSection group={group} />
   </div>
 </Layout>

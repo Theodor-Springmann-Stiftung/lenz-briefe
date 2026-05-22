@@ -21,13 +21,12 @@ if (!group) {
 ---
 
 <Layout title={`${group.label} | Lenz-Briefe`} description={`Briefe im Zeitraum ${group.label}.`}>
+	<nav class="" aria-label="Briefe nach Jahren">
+		{groups.map((group) => (
+			<a class="" href={getYearGroupHref(group.id)}>{group.label}</a>
+		))}
+	</nav>
   <div class="">
-    <header class="">
-      <p class="">Jahresgruppe</p>
-      <h1 class="">{group.label}</h1>
-      <p class="">{group.letters.length} Briefe in dieser Gruppe.</p>
-    </header>
-
     <YearGroupSection group={group} />
   </div>
 </Layout>

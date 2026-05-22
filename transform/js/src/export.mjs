@@ -451,21 +451,30 @@ async function exportEdition({ outDir }) {
       const sidenotes = await timings.measure("select:pageSidenotes", async () => select(`./l:sidenote[@page='${page}']`, letterText));
       const sidenotesPath = path.join(letterDir, page, "sidenotes.json");
       if (sidenotes.length > 0) {
+        const records = buildSidenoteRecords(
+          sidenotes,
+          letter,
+          page,
+          Array.from({ length: sidenotes.length }, () => "")
+        );
         const htmlItems = await Promise.all(
-          sidenotes.map((sidenote) =>
+          sidenotes.map((sidenote, index) =>
             runStylesheet(
               "sidenotes",
               {
                 sourceText: serializeNode(sidenote),
                 stylesheetParams: {
-                  letter
+                  letter,
+                  sidenoteId: records[index].id
                 }
               },
               timings
             )
           )
         );
-        const records = buildSidenoteRecords(sidenotes, letter, page, htmlItems);
+        records.forEach((record, index) => {
+          record.html = htmlItems[index] ?? "";
+        });
         await timings.measure(
           "writeFile:sidenotesJson",
           async () =>

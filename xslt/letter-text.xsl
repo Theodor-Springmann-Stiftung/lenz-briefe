@@ -13,7 +13,7 @@
       <xsl:if test="$page">
         <xsl:attribute name="data-page" select="$page" />
       </xsl:if>
-      <xsl:apply-templates select="/*/node()[not(self::lb:sidenote)]" />
+      <xsl:apply-templates select="/*/node()" />
     </article>
   </xsl:template>
 

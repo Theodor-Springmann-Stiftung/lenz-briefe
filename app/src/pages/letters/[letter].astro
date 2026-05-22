@@ -34,41 +34,60 @@ const [neighbors, parentGroup] = await Promise.all([
   description={bundle.meta.sent.date?.text ?? `Brief ${bundle.meta.letter}`}
 >
   <div class="">
-    <nav>
-      {parentGroup ? <a class="" href={getYearGroupHref(parentGroup.id)}>Zur Jahresgruppe {parentGroup.label}</a> : <a class="" href="/">Zu den Briefen</a>}
-    </nav>
 
-    <header class="">
-      <div class="">
-        <p class="">Brief {bundle.meta.letter}</p>
-        <h1 class="">{bundle.meta.sent.date?.text ?? "Ohne Datierung"}</h1>
-      </div>
-      {(bundle.meta.sent.persons.length > 0 || bundle.meta.received.persons.length > 0) && (
-        <div class="" aria-label="Korrespondenz">
-          <div class="">
-            {bundle.meta.sent.persons.map((person) => (
-              <span class="">
-                <span class="">{person.label}</span>
-                {bundle.meta.sent.locations.map((location) => (
-                  <span class="">{location.label}</span>
-                ))}
-              </span>
-            ))}
-          </div>
-          <span class="" aria-hidden="true">→</span>
-          <div class="">
-            {bundle.meta.received.persons.map((person) => (
-              <span class="">
-                <span class="">{person.label}</span>
-                {bundle.meta.received.locations.map((location) => (
-                  <span class="">{location.label}</span>
-                ))}
-              </span>
-            ))}
-          </div>
-        </div>
-      )}
-    </header>
+		<div clas="">
+			<div class="">
+				<div class="">
+					<p class="">Brief {bundle.meta.letter}</p>
+					<h1 class="">{bundle.meta.sent.date?.text ?? "Ohne Datierung"}</h1>
+				</div>
+				{(bundle.meta.sent.persons.length > 0 || bundle.meta.received.persons.length > 0) && (
+					<div class="" aria-label="Korrespondenz">
+						<div class="">
+							{bundle.meta.sent.persons.map((person) => (
+								<span class="">
+									<span class="">{person.label}</span>
+								</span>
+							))}
+						</div>
+						<span class="" aria-hidden="true">→</span>
+						<div class="">
+							{bundle.meta.received.persons.map((person) => (
+								<span class="">
+									<span class="">{person.label}</span>
+									({bundle.meta.received.locations.map((location) => (
+										<span class="">{location.label}</span>
+									))})
+								</span>
+							))}
+						</div>
+					</div>
+				)}
+			</div>
+
+
+			<nav class="" aria-label="Briefnavigation">
+				<div>
+					{neighbors.previous ? (
+						<a class="" href={`/letters/${neighbors.previous.letter}/`}>
+							← Brief {neighbors.previous.letter}
+						</a>
+					) : (
+						<span> </span>
+					)}
+				</div>
+				<div class="">
+					{neighbors.next ? (
+						<a class="" href={`/letters/${neighbors.next.letter}/`}>
+							Brief {neighbors.next.letter} →
+						</a>
+					) : (
+						<span> </span>
+					)}
+				</div>
+			</nav>
+		</div>
+
 
     <section class="">
       {bundle.pages.map((page) => <LetterPageBlock page={page} />)}
@@ -76,25 +95,5 @@ const [neighbors, parentGroup] = await Promise.all([
 
     <TraditionsBlock html={bundle.meta.traditionsHtml} />
 
-    <nav class="" aria-label="Briefnavigation">
-      <div>
-        {neighbors.previous ? (
-          <a class="" href={`/letters/${neighbors.previous.letter}/`}>
-            ← Brief {neighbors.previous.letter}
-          </a>
-        ) : (
-          <span> </span>
-        )}
-      </div>
-      <div class="">
-        {neighbors.next ? (
-          <a class="" href={`/letters/${neighbors.next.letter}/`}>
-            Brief {neighbors.next.letter} →
-          </a>
-        ) : (
-          <span> </span>
-        )}
-      </div>
-    </nav>
   </div>
 </Layout>

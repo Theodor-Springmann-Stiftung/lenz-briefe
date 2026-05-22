@@ -9,10 +9,5 @@ const groups = await getAllYearGroups();
       <a class="" href={getYearGroupHref(groups[0]?.id ?? "1756-1770")}>
         J.M.R. Lenz - Briefe
       </a>
-      <nav class="" aria-label="Briefe nach Jahren">
-        {groups.map((group) => (
-          <a class="" href={getYearGroupHref(group.id)}>{group.label}</a>
-        ))}
-      </nav>
     </div>
 </header>

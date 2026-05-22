@@ -8,12 +8,14 @@ type Props = {
 const { page } = Astro.props;
 ---
 
-<section class="" aria-labelledby={`page-${page.page}`}>
-  <div>
-    <p class="">Seite {page.page}</p>
+<section class="flex flex-row" aria-labelledby={`page-${page.page}`}>
+  <div class="grow-0 shrink-0 w-12">
+    <p class="">{page.page}</p>
   </div>
-  <div class="">
+  <div class="grow">
     <article class="" set:html={page.textHtml} />
+  </div>
+	<div class="grow-0 shrink-0 w-64">
     {page.sidenotes.length > 0 && (
       <aside class="">
         <div class="">
@@ -26,5 +28,5 @@ const { page } = Astro.props;
       </aside>
     )}
     {page.sidenotes.length === 0 && <div class="" aria-hidden="true"></div>}
-  </div>
+	</div>
 </section>
