@@ -1,0 +1,25 @@
+[project]
+name = "lenz-briefe-transform-python"
+version = "0.1.0"
+description = "Python-based XML export pipeline for the Lenz edition"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "lxml>=5.3.0",
+  "saxonche>=12.5.0",
+]
+
+[project.scripts]
+transform = "transform_python.cli:main"
+check-coverage = "transform_python.check_coverage:main"
+benchmark-transform = "transform_python.benchmark:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/transform_python"]

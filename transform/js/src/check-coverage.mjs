@@ -3,9 +3,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT_DIR = path.resolve(__dirname, "..", "..");
+const ROOT_DIR = path.resolve(__dirname, "..", "..", "..");
 const textelementsPath = path.join(ROOT_DIR, "data", "xsd", "textelements.xsd");
-const commonXslPath = path.join(ROOT_DIR, "transform", "src", "xslt", "common.xsl");
+const commonXslPath = path.join(ROOT_DIR, "xslt", "common.xsl");
 
 function getInlineRefs(xsd) {
   const inlineMatch = xsd.match(

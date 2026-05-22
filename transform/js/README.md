@@ -19,11 +19,14 @@ npm run check:coverage
 Run the exporter:
 
 ```bash
-npm run transform -- --out ../app/generated
+npm run transform -- --out ../../app/generated
 ```
 
-The exporter reads the XML files in `../data/xml/` and writes generated HTML/JSON
+The exporter reads the XML files in `../../data/xml/` and writes generated HTML/JSON
 artifacts into the given output directory. Relative output paths are supported.
+
+The stylesheets live in the repo-level `../../xslt/` directory and are shared with
+the Python-based transformer.
 
 Per letter, the exporter writes:
 
