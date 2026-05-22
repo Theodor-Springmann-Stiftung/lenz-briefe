@@ -31,8 +31,14 @@ Per letter, the exporter writes:
 - `<page>/text.html`
 - `<page>/sidenotes.json`
 
+At the generated root, the exporter also writes:
+
+- `stats.json`
+
 The page subfolder names come from the `index` values of the source `<page>` tags.
 Each page-level `sidenotes.json` entry still keeps its `page` metadata explicitly.
 
 `meta.json` contains the resolved letter metadata, page list, and the rendered
 letter-level `traditionsHtml`.
+`stats.json` contains the source commit hash/date and source letter counts from
+`meta.xml`, `briefe.xml`, and `traditions.xml`.

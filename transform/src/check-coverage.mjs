@@ -28,8 +28,8 @@ function getHandledTags(xsl) {
   for (const match of matches) {
     for (const part of match.split("|")) {
       const token = part.trim();
-      if (token.startsWith("tei:")) {
-        handled.add(token.slice("tei:".length));
+      if (token.startsWith("lb:")) {
+        handled.add(token.slice("lb:".length));
       }
     }
   }

@@ -15,6 +15,7 @@ const DATA_DIR = path.join(ROOT_DIR, "data", "xml");
 const XSLT_DIR = path.join(TRANSFORM_DIR, "src", "xslt");
 const CACHE_DIR = path.join(TRANSFORM_DIR, ".cache");
 const NS = "https://lenz-archiv.de";
+const stylesheetFileCache = new Map();
 
 const select = xpath.useNamespaces({ l: NS });
 const parser = new DOMParser();
@@ -103,7 +104,11 @@ async function compileStylesheet(name) {
 }
 
 async function runStylesheet(name, params, options = {}) {
-  const stylesheetFileName = await compileStylesheet(name);
+  if (!stylesheetFileCache.has(name)) {
+    stylesheetFileCache.set(name, compileStylesheet(name));
+  }
+
+  const stylesheetFileName = await stylesheetFileCache.get(name);
   const result = await SaxonJS.transform(
     {
       stylesheetFileName,
@@ -119,6 +124,18 @@ async function runStylesheet(name, params, options = {}) {
   }
 
   return String(result.principalResult ?? "").trim();
+}
+
+async function getGitMetadata() {
+  const [commitHashResult, commitDateResult] = await Promise.all([
+    execFileAsync("git", ["rev-parse", "HEAD"], { cwd: ROOT_DIR }),
+    execFileAsync("git", ["show", "-s", "--format=%cI", "HEAD"], { cwd: ROOT_DIR })
+  ]);
+
+  return {
+    commitHash: commitHashResult.stdout.trim(),
+    commitDate: commitDateResult.stdout.trim()
+  };
 }
 
 function buildReferenceMaps(referencesDoc) {
@@ -251,8 +268,7 @@ function splitLetterTextByPage(letterText, letter) {
   return pageMap;
 }
 
-function buildSidenoteRecords(letterText, letter, page, htmlItems) {
-  const sidenotes = select(`./l:sidenote[@page='${page}']`, letterText);
+function buildSidenoteRecords(sidenotes, letter, page, htmlItems) {
   return sidenotes.map((node, index) => ({
     id: `${slugifyLetter(letter)}-page-${page}-sidenote-${index + 1}`,
     order: index + 1,
@@ -274,19 +290,25 @@ async function exportEdition({ outDir }) {
   const metaDoc = await readXml("meta.xml");
   const traditionsDoc = await readXml("traditions.xml");
   const referencesDoc = await readXml("references.xml");
+  const git = await getGitMetadata();
   const refs = buildReferenceMaps(referencesDoc);
 
   await ensureDir(absoluteOutDir);
 
   const letterTextNodes = select("/l:opus/l:document/l:letterText", briefeDoc);
+  const metaLetterNodes = select("/l:opus/l:descriptions/l:letterDesc", metaDoc);
+  const traditionLetterNodes = xpath.select(
+    "/*[local-name()='opus']/*[local-name()='traditions']/*[local-name()='letterTradition']",
+    traditionsDoc
+  );
   const metaByLetter = new Map(
-    select("/l:opus/l:descriptions/l:letterDesc", metaDoc).map((node) => [
+    metaLetterNodes.map((node) => [
       String(getAttribute(node, "letter")),
       extractMeta(node, refs)
     ])
   );
   const traditionsByLetter = new Map(
-    xpath.select("/*[local-name()='opus']/*[local-name()='traditions']/*[local-name()='letterTradition']", traditionsDoc).map((node) => [
+    traditionLetterNodes.map((node) => [
       String(getAttribute(node, "letter")),
       node
     ])
@@ -328,18 +350,18 @@ async function exportEdition({ outDir }) {
       });
       await writeFile(path.join(letterDir, page, "text.html"), textHtml + "\n");
 
-      const sidenotesHtml = await runStylesheet("sidenotes", {
-        sourceText: serializeNode(letterText),
-        stylesheetParams: {
-          letter,
-          page
-        }
-      });
-      const htmlDoc = parser.parseFromString(`<root>${sidenotesHtml}</root>`, "text/xml");
-      const htmlItems = Array.from(htmlDoc.documentElement.childNodes)
-        .filter((node) => node.nodeType === 1)
-        .map((node) => serializer.serializeToString(node));
-      const records = buildSidenoteRecords(letterText, letter, page, htmlItems);
+      const sidenotes = select(`./l:sidenote[@page='${page}']`, letterText);
+      const htmlItems = await Promise.all(
+        sidenotes.map((sidenote) =>
+          runStylesheet("sidenotes", {
+            sourceText: serializeNode(sidenote),
+            stylesheetParams: {
+              letter
+            }
+          })
+        )
+      );
+      const records = buildSidenoteRecords(sidenotes, letter, page, htmlItems);
       await writeFile(
         path.join(letterDir, page, "sidenotes.json"),
         JSON.stringify(records, null, 2) + "\n"
@@ -372,6 +394,21 @@ async function exportEdition({ outDir }) {
   await writeFile(
     path.join(absoluteOutDir, "letters", "index.json"),
     JSON.stringify(indexEntries, null, 2) + "\n"
+  );
+  await writeFile(
+    path.join(absoluteOutDir, "stats.json"),
+    JSON.stringify(
+      {
+        ...git,
+        counts: {
+          meta: metaLetterNodes.length,
+          letterText: letterTextNodes.length,
+          traditions: traditionLetterNodes.length
+        }
+      },
+      null,
+      2
+    ) + "\n"
   );
 }
 

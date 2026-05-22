@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="3.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:tei="https://lenz-archiv.de"
-  exclude-result-prefixes="tei">
+  xmlns:lb="https://lenz-archiv.de"
+  exclude-result-prefixes="lb">
 
   <xsl:import href="common.xsl" />
   <xsl:param name="letter" as="xs:string?" xmlns:xs="http://www.w3.org/2001/XMLSchema" />
@@ -13,7 +13,7 @@
     </section>
   </xsl:template>
 
-  <xsl:template match="tei:app | *[local-name()='app']">
+  <xsl:template match="lb:app | *[local-name()='app']">
     <div class="tradition-app">
       <xsl:if test="@ref">
         <xsl:attribute name="data-ref" select="@ref" />

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="3.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:tei="https://lenz-archiv.de"
-  exclude-result-prefixes="tei">
+  xmlns:lb="https://lenz-archiv.de"
+  exclude-result-prefixes="lb">
 
   <xsl:output method="html" encoding="UTF-8" omit-xml-declaration="yes" />
   <xsl:mode on-no-match="shallow-skip" />
@@ -11,11 +11,11 @@
     <xsl:value-of select="." />
   </xsl:template>
 
-  <xsl:template match="tei:page">
+  <xsl:template match="lb:page">
     <span class="lb-page" data-index="{@index}"></span>
   </xsl:template>
 
-  <xsl:template match="tei:line">
+  <xsl:template match="lb:line">
     <xsl:choose>
       <xsl:when test="@type = 'line'">
         <hr class="lb-rule" />
@@ -35,43 +35,43 @@
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="tei:align">
+  <xsl:template match="lb:align">
     <div class="align" data-pos="{@pos}">
       <xsl:apply-templates />
     </div>
   </xsl:template>
 
-  <xsl:template match="tei:aq">
+  <xsl:template match="lb:aq">
     <span class="aq"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:ul">
+  <xsl:template match="lb:ul">
     <span class="ul"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:tul">
+  <xsl:template match="lb:tul">
     <span class="tul"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:dul">
+  <xsl:template match="lb:dul">
     <span class="dul"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:highlight">
+  <xsl:template match="lb:highlight">
     <mark class="highlight" data-color="{@color}" style="background-color: {@color};">
       <xsl:apply-templates />
     </mark>
   </xsl:template>
 
-  <xsl:template match="tei:undo">
+  <xsl:template match="lb:undo">
     <span class="undo"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:address">
+  <xsl:template match="lb:address">
     <address><xsl:apply-templates /></address>
   </xsl:template>
 
-  <xsl:template match="tei:insertion">
+  <xsl:template match="lb:insertion">
     <span class="insertion">
       <xsl:if test="@pos">
         <xsl:attribute name="data-pos" select="@pos" />
@@ -80,35 +80,35 @@
     </span>
   </xsl:template>
 
-  <xsl:template match="tei:del">
+  <xsl:template match="lb:del">
     <del><xsl:apply-templates /></del>
   </xsl:template>
 
-  <xsl:template match="tei:hand">
+  <xsl:template match="lb:hand">
     <span class="hand" data-ref="{@ref}"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:note">
+  <xsl:template match="lb:note">
     <span class="note"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:tl">
+  <xsl:template match="lb:tl">
     <span class="tl"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:fn">
+  <xsl:template match="lb:fn">
     <span class="fn" data-index="{@index}"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:pe">
+  <xsl:template match="lb:pe">
     <span class="pe"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:anchor">
+  <xsl:template match="lb:anchor">
     <span class="anchor"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:nr">
+  <xsl:template match="lb:nr">
     <span class="nr">
       <xsl:if test="@extent">
         <xsl:attribute name="data-extent" select="@extent" />
@@ -117,47 +117,47 @@
     </span>
   </xsl:template>
 
-  <xsl:template match="tei:b">
+  <xsl:template match="lb:b">
     <strong><xsl:apply-templates /></strong>
   </xsl:template>
 
-  <xsl:template match="tei:it">
+  <xsl:template match="lb:it">
     <em><xsl:apply-templates /></em>
   </xsl:template>
 
-  <xsl:template match="tei:gr">
+  <xsl:template match="lb:gr">
     <span class="gr"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:hb">
+  <xsl:template match="lb:hb">
     <span class="hb"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:er">
+  <xsl:template match="lb:er">
     <span class="er"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:ink">
+  <xsl:template match="lb:ink">
     <span class="ink"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:large">
+  <xsl:template match="lb:large">
     <span class="large"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:ru">
+  <xsl:template match="lb:ru">
     <span class="ru"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:subst">
+  <xsl:template match="lb:subst">
     <span class="subst"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="tei:tabs">
+  <xsl:template match="lb:tabs">
     <div class="tabs"><xsl:apply-templates /></div>
   </xsl:template>
 
-  <xsl:template match="tei:tab">
+  <xsl:template match="lb:tab">
     <div class="tab" data-value="{@value}"><xsl:apply-templates /></div>
   </xsl:template>
 
