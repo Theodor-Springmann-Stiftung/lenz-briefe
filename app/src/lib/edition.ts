@@ -94,6 +94,17 @@ async function readJsonFile<T>(filePath: string): Promise<T> {
   return JSON.parse(raw) as T;
 }
 
+async function readOptionalJsonFile<T>(filePath: string, fallback: T): Promise<T> {
+  try {
+    return await readJsonFile<T>(filePath);
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+      return fallback;
+    }
+    throw error;
+  }
+}
+
 async function readTextFile(filePath: string): Promise<string> {
   return await readFile(filePath, "utf8");
 }
@@ -194,7 +205,7 @@ export async function getLetterBundle(letter: string): Promise<LetterBundle> {
     meta.pages.map(async (page) => ({
       page,
       textHtml: await readTextFile(path.join(letterDir, page, "text.html")),
-      sidenotes: await readJsonFile<SidenoteRecord[]>(path.join(letterDir, page, "sidenotes.json"))
+      sidenotes: await readOptionalJsonFile<SidenoteRecord[]>(path.join(letterDir, page, "sidenotes.json"), [])
     }))
   );
 

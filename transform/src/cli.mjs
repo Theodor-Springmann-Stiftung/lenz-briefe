@@ -27,14 +27,8 @@ function parseArgs(argv) {
 async function main() {
   const { out } = parseArgs(process.argv.slice(2));
   const result = await exportEdition({ outDir: out });
-  if (result?.timings?.length) {
-    console.error("Timing summary:");
-    for (const entry of result.timings) {
-      const averageMs = entry.totalMs / entry.count;
-      console.error(
-        `- ${entry.label}: ${entry.totalMs.toFixed(1)}ms total over ${entry.count} call(s) (${averageMs.toFixed(1)}ms avg)`
-      );
-    }
+  if (typeof result?.totalMs === "number") {
+    console.error(`Wall time: ${result.totalMs.toFixed(1)}ms`);
   }
 }
 

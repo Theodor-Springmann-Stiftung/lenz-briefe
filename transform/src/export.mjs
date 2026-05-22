@@ -90,9 +90,24 @@ async function ensureDir(dir) {
   await fs.mkdir(dir, { recursive: true });
 }
 
+async function resetDir(dir) {
+  await fs.rm(dir, { recursive: true, force: true });
+  await fs.mkdir(dir, { recursive: true });
+}
+
 async function writeFile(targetPath, content) {
   await ensureDir(path.dirname(targetPath));
   await fs.writeFile(targetPath, content, "utf8");
+}
+
+async function removeFileIfExists(targetPath) {
+  try {
+    await fs.unlink(targetPath);
+  } catch (error) {
+    if (error?.code !== "ENOENT") {
+      throw error;
+    }
+  }
 }
 
 async function readXml(fileName) {
@@ -325,6 +340,10 @@ function extractTraditionPresence(traditionNode) {
   return Boolean(traditionNode && xpath.select("./*[local-name()='app']", traditionNode).length > 0);
 }
 
+function renderEmptyTraditions(letter) {
+  return `<section class="traditions" data-letter="${letter}"></section>`;
+}
+
 async function mapWithConcurrency(items, concurrency, mapper) {
   const results = new Array(items.length);
   let nextIndex = 0;
@@ -349,6 +368,7 @@ async function mapWithConcurrency(items, concurrency, mapper) {
 
 async function exportEdition({ outDir }) {
   const timings = createTimings();
+  const startedAt = performance.now();
   const absoluteOutDir = path.resolve(outDir);
   const briefeDoc = await timings.measure("readXml:briefe", async () => await readXml("briefe.xml"));
   const metaDoc = await timings.measure("readXml:meta", async () => await readXml("meta.xml"));
@@ -357,7 +377,7 @@ async function exportEdition({ outDir }) {
   const git = await timings.measure("gitMetadata", async () => await getGitMetadata());
   const refs = await timings.measure("buildReferenceMaps", async () => buildReferenceMaps(referencesDoc));
 
-  await timings.measure("ensureOutDir", async () => await ensureDir(absoluteOutDir));
+  await timings.measure("resetOutDir", async () => await resetDir(absoluteOutDir));
 
   const letterTextNodes = await timings.measure("select:letterTextNodes", async () => select("/l:opus/l:document/l:letterText", briefeDoc));
   const metaLetterNodes = await timings.measure("select:metaLetterNodes", async () => select("/l:opus/l:descriptions/l:letterDesc", metaDoc));
@@ -391,17 +411,19 @@ async function exportEdition({ outDir }) {
     const pageXmlMap = await timings.measure("splitLetterTextByPage", async () => splitLetterTextByPage(letterText, letter));
 
     const traditionNode = traditionsByLetter.get(letter) ?? null;
-    const traditionsXml = traditionNode ? serializeNode(traditionNode) : `<letterTradition xmlns="${NS}" letter="${letter}"/>`;
-    const traditionsHtml = await runStylesheet(
-      "traditions",
-      {
-        sourceText: traditionsXml,
-        stylesheetParams: {
-          letter
-        }
-      },
-      timings
-    );
+    const hasTraditions = extractTraditionPresence(traditionNode);
+    const traditionsHtml = hasTraditions
+      ? await runStylesheet(
+          "traditions",
+          {
+            sourceText: serializeNode(traditionNode),
+            stylesheetParams: {
+              letter
+            }
+          },
+          timings
+        )
+      : renderEmptyTraditions(letter);
     const meta = metaByLetter.get(letter) ?? {
       letter,
       slug,
@@ -427,34 +449,38 @@ async function exportEdition({ outDir }) {
       await timings.measure("writeFile:textHtml", async () => await writeFile(path.join(letterDir, page, "text.html"), textHtml + "\n"));
 
       const sidenotes = await timings.measure("select:pageSidenotes", async () => select(`./l:sidenote[@page='${page}']`, letterText));
-      const htmlItems = await Promise.all(
-        sidenotes.map((sidenote) =>
-          runStylesheet(
-            "sidenotes",
-            {
-              sourceText: serializeNode(sidenote),
-              stylesheetParams: {
-                letter
-              }
-            },
-            timings
+      const sidenotesPath = path.join(letterDir, page, "sidenotes.json");
+      if (sidenotes.length > 0) {
+        const htmlItems = await Promise.all(
+          sidenotes.map((sidenote) =>
+            runStylesheet(
+              "sidenotes",
+              {
+                sourceText: serializeNode(sidenote),
+                stylesheetParams: {
+                  letter
+                }
+              },
+              timings
+            )
           )
-        )
-      );
-      const records = buildSidenoteRecords(sidenotes, letter, page, htmlItems);
-      await timings.measure(
-        "writeFile:sidenotesJson",
-        async () =>
-          await writeFile(
-            path.join(letterDir, page, "sidenotes.json"),
-            JSON.stringify(records, null, 2) + "\n"
-          )
-      );
+        );
+        const records = buildSidenoteRecords(sidenotes, letter, page, htmlItems);
+        await timings.measure(
+          "writeFile:sidenotesJson",
+          async () =>
+            await writeFile(
+              sidenotesPath,
+              JSON.stringify(records, null, 2) + "\n"
+            )
+        );
+      } else {
+        await timings.measure("removeFile:sidenotesJson", async () => await removeFileIfExists(sidenotesPath));
+      }
     }
 
     const sidenotePages = await timings.measure("collectSidenotePages", async () => collectSidenotePages(letterText));
     const hasSidenotes = sidenotePages.length > 0;
-    const hasTraditions = extractTraditionPresence(traditionNode);
     const metaOutput = {
       ...meta,
       letter,
@@ -506,6 +532,7 @@ async function exportEdition({ outDir }) {
   );
 
   return {
+    totalMs: performance.now() - startedAt,
     timings: timings.snapshot()
   };
 }
