@@ -73,6 +73,11 @@ export type YearGroup = {
   letters: LetterMeta[];
 };
 
+type LetterNeighbors = {
+  previous: LetterMeta | null;
+  next: LetterMeta | null;
+};
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..", "..");
 const generatedRoot = process.env.LENZ_GENERATED_DIR
@@ -88,6 +93,12 @@ const yearGroupsBase = [
 ] as const;
 
 export type YearGroupId = (typeof yearGroupsBase)[number]["id"];
+
+let letterIndexPromise: Promise<LetterMeta[]> | null = null;
+let orderedLetterIndexPromise: Promise<LetterMeta[]> | null = null;
+let yearGroupsPromise: Promise<YearGroup[]> | null = null;
+let groupedYearIndexPromise: Promise<YearGroup[]> | null = null;
+let neighborMapPromise: Promise<Map<string, LetterNeighbors>> | null = null;
 
 async function readJsonFile<T>(filePath: string): Promise<T> {
   const raw = await readFile(filePath, "utf8");
@@ -109,10 +120,27 @@ async function readTextFile(filePath: string): Promise<string> {
   return await readFile(filePath, "utf8");
 }
 
+export function getEarliestDateBoundary(date: DateInfo | null): string | null {
+  if (!date) {
+    return null;
+  }
+
+  const candidates = [date.when, date.from, date.notBefore, date.to, date.notAfter].filter(
+    (value): value is string => Boolean(value)
+  );
+  if (candidates.length === 0) {
+    return null;
+  }
+
+  return candidates.reduce((earliest, value) => (value < earliest ? value : earliest));
+}
+
+export function getChronologicalDateKey(meta: LetterMeta): string | null {
+  return getEarliestDateBoundary(meta.sent.date) ?? getEarliestDateBoundary(meta.received.date);
+}
+
 function getDateKey(meta: LetterMeta): string | null {
-  const date = meta.sent.date;
-  if (!date) return null;
-  return date.when ?? date.from ?? date.notBefore ?? date.to ?? date.notAfter ?? null;
+  return getChronologicalDateKey(meta);
 }
 
 export function getDerivedYear(meta: LetterMeta): number | null {
@@ -123,25 +151,29 @@ export function getDerivedYear(meta: LetterMeta): number | null {
 }
 
 function compareLetters(a: LetterMeta, b: LetterMeta): number {
-  const aKey = getDateKey(a) ?? "";
-  const bKey = getDateKey(b) ?? "";
+  const aKey = getChronologicalDateKey(a);
+  const bKey = getChronologicalDateKey(b);
+
+  if (aKey == null && bKey == null) {
+    return Number(a.letter) - Number(b.letter);
+  }
+
+  if (aKey == null) {
+    return 1;
+  }
+
+  if (bKey == null) {
+    return -1;
+  }
+
   if (aKey !== bKey) {
     return aKey.localeCompare(bKey);
   }
+
   return Number(a.letter) - Number(b.letter);
 }
 
-export function joinLabels(items: ResolvedRef[]): string {
-  return items.map((item) => item.label).filter(Boolean).join(", ");
-}
-
-export async function getLetterIndex(): Promise<LetterMeta[]> {
-  const indexPath = path.join(generatedRoot, "letters", "index.json");
-  return await readJsonFile<LetterMeta[]>(indexPath);
-}
-
-export async function getGroupedLetterIndex(): Promise<YearGroup[]> {
-  const letters = await getLetterIndex();
+function buildYearGroups(letters: LetterMeta[], includeEmpty: boolean): YearGroup[] {
   const groups = yearGroupsBase.map((group) => ({ ...group, letters: [] as LetterMeta[] }));
 
   for (const letter of letters) {
@@ -149,37 +181,78 @@ export async function getGroupedLetterIndex(): Promise<YearGroup[]> {
     if (year == null) {
       continue;
     }
+
     const group = groups.find((item) => year >= item.start && year <= item.end);
     if (group) {
       group.letters.push(letter);
     }
   }
 
-  for (const group of groups) {
-    group.letters.sort(compareLetters);
+  return includeEmpty ? groups : groups.filter((group) => group.letters.length > 0);
+}
+
+async function getOrderedLetterIndex(): Promise<LetterMeta[]> {
+  if (!orderedLetterIndexPromise) {
+    orderedLetterIndexPromise = getLetterIndex().then((letters) => [...letters].sort(compareLetters));
   }
 
-  return groups.filter((group) => group.letters.length > 0);
+  return await orderedLetterIndexPromise;
+}
+
+async function getMemoizedYearGroups(includeEmpty: boolean): Promise<YearGroup[]> {
+  if (includeEmpty) {
+    if (!yearGroupsPromise) {
+      yearGroupsPromise = getOrderedLetterIndex().then((letters) => buildYearGroups(letters, true));
+    }
+
+    return await yearGroupsPromise;
+  }
+
+  if (!groupedYearIndexPromise) {
+    groupedYearIndexPromise = getOrderedLetterIndex().then((letters) => buildYearGroups(letters, false));
+  }
+
+  return await groupedYearIndexPromise;
+}
+
+async function getNeighborMap(): Promise<Map<string, LetterNeighbors>> {
+  if (!neighborMapPromise) {
+    neighborMapPromise = getOrderedLetterIndex().then((ordered) => {
+      const neighbors = new Map<string, LetterNeighbors>();
+
+      ordered.forEach((item, index) => {
+        neighbors.set(item.letter, {
+          previous: ordered[index - 1] ?? null,
+          next: ordered[index + 1] ?? null
+        });
+      });
+
+      return neighbors;
+    });
+  }
+
+  return await neighborMapPromise;
+}
+
+export function joinLabels(items: ResolvedRef[]): string {
+  return items.map((item) => item.label).filter(Boolean).join(", ");
+}
+
+export async function getLetterIndex(): Promise<LetterMeta[]> {
+  if (!letterIndexPromise) {
+    const indexPath = path.join(generatedRoot, "letters", "index.json");
+    letterIndexPromise = readJsonFile<LetterMeta[]>(indexPath);
+  }
+
+  return await letterIndexPromise;
+}
+
+export async function getGroupedLetterIndex(): Promise<YearGroup[]> {
+  return await getMemoizedYearGroups(false);
 }
 
 export async function getAllYearGroups(): Promise<YearGroup[]> {
-  const letters = await getLetterIndex();
-  const groups = yearGroupsBase.map((group) => ({ ...group, letters: [] as LetterMeta[] }));
-
-  for (const letter of letters) {
-    const year = getDerivedYear(letter);
-    if (year == null) continue;
-    const group = groups.find((item) => year >= item.start && year <= item.end);
-    if (group) {
-      group.letters.push(letter);
-    }
-  }
-
-  for (const group of groups) {
-    group.letters.sort(compareLetters);
-  }
-
-  return groups;
+  return await getMemoizedYearGroups(true);
 }
 
 export async function getYearGroup(groupId: string): Promise<YearGroup | null> {
@@ -217,16 +290,8 @@ export async function getLetterBundle(letter: string): Promise<LetterBundle> {
 }
 
 export async function getLetterNeighbors(letter: string) {
-  const index = await getLetterIndex();
-  const ordered = [...index].sort((a, b) => Number(a.letter) - Number(b.letter));
-  const currentIndex = ordered.findIndex((item) => item.letter === letter);
-  if (currentIndex === -1) {
-    return { previous: null, next: null };
-  }
-  return {
-    previous: ordered[currentIndex - 1] ?? null,
-    next: ordered[currentIndex + 1] ?? null
-  };
+  const neighbors = await getNeighborMap();
+  return neighbors.get(letter) ?? { previous: null, next: null };
 }
 
 export function getGeneratedRoot(): string {

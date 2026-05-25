@@ -44,7 +44,7 @@
         <br class="lb-line">
           <xsl:attribute name="data-type" select="if (@type) then string(@type) else 'break'" />
         </br>
-        <xsl:if test="@tab">
+        <xsl:if test="@tab and not(following-sibling::*[1][self::lb:align])">
           <span class="lb-indent" data-tab="{@tab}"></span>
         </xsl:if>
       </xsl:otherwise>
@@ -52,9 +52,16 @@
   </xsl:template>
 
   <xsl:template match="lb:align">
-    <div class="align" data-pos="{@pos}">
+    <span class="align" data-pos="{@pos}">
+      <xsl:if test="preceding-sibling::*[1][self::lb:line[@tab]]">
+        <xsl:attribute name="data-tab" select="string(preceding-sibling::*[1]/@tab)" />
+      </xsl:if>
       <xsl:apply-templates />
-    </div>
+    </span>
+  </xsl:template>
+
+  <xsl:template match="lb:added">
+    <span class="added"><xsl:apply-templates /></span>
   </xsl:template>
 
   <xsl:template match="lb:aq">
@@ -149,6 +156,14 @@
     <span class="hb"><xsl:apply-templates /></span>
   </xsl:template>
 
+  <xsl:template match="lb:sub">
+    <sub class="sub"><xsl:apply-templates /></sub>
+  </xsl:template>
+
+  <xsl:template match="lb:super">
+    <sup class="super"><xsl:apply-templates /></sup>
+  </xsl:template>
+
   <xsl:template match="lb:er">
     <span class="er"><xsl:apply-templates /></span>
   </xsl:template>
@@ -167,6 +182,26 @@
 
   <xsl:template match="lb:subst">
     <span class="subst"><xsl:apply-templates /></span>
+  </xsl:template>
+
+  <xsl:template match="lb:ful">
+    <span class="ful"><xsl:apply-templates /></span>
+  </xsl:template>
+
+  <xsl:template match="lb:datum">
+    <span class="datum"><xsl:apply-templates /></span>
+  </xsl:template>
+
+  <xsl:template match="lb:ps">
+    <span class="ps"><xsl:apply-templates /></span>
+  </xsl:template>
+
+  <xsl:template match="lb:sal">
+    <span class="sal"><xsl:apply-templates /></span>
+  </xsl:template>
+
+  <xsl:template match="lb:sig">
+    <span class="sig"><xsl:apply-templates /></span>
   </xsl:template>
 
   <xsl:template match="lb:tabs">

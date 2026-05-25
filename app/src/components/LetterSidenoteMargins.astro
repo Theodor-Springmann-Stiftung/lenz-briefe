@@ -9,16 +9,12 @@ const { notes } = Astro.props;
 ---
 
 <div
-  class="relative min-h-full max-[980px]:static max-[980px]:col-start-2 max-[980px]:mt-6"
-  data-sidenote-rail
+  class="min-h-full max-[980px]:col-start-2 max-[980px]:mt-6"
   aria-label="Randnotizen"
 >
   {notes.map((note) => (
     <section
-      class="absolute left-0 w-full data-[positioned=false]:invisible max-[980px]:static max-[980px]:mt-4 max-[980px]:visible"
-      data-anchor-id={`anchor-${note.id}`}
-      data-align="top"
-      data-positioned="false"
+      class="mt-4 first:mt-0"
     >
       <div set:html={note.html} />
     </section>

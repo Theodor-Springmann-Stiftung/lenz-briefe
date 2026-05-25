@@ -44,6 +44,302 @@ const allSidenotes = bundle.pages.flatMap((page) => page.sidenotes);
     <LetterTraditions html={bundle.meta.traditionsHtml} />
   </div>
 
+  <style is:global>
+    .letter-body-prose {
+      --lb-indent-1: 1.5rem;
+      --lb-indent-2: 3rem;
+      --lb-indent-3: 4.5rem;
+      --lb-indent-4: 6rem;
+      --lb-indent-5: 7.5rem;
+      --lb-indent-6: 9rem;
+      --lb-indent-7: 10.5rem;
+      color: #2d2417;
+    }
+
+    .letter-body-prose .letter-text {
+      display: contents;
+      font-family: var(--font-serif);
+      font-size: 1.06rem;
+      line-height: 1.72;
+      color: inherit;
+    }
+
+    .letter-body-prose .lb-page {
+      display: inline;
+      user-select: none;
+    }
+
+    .letter-body-prose .lb-line {
+      line-height: inherit;
+    }
+
+    .letter-body-prose .lb-line--empty {
+      display: block;
+      content: "";
+      margin-block-end: 0.85rem;
+    }
+
+    .letter-body-prose .lb-rule {
+      width: min(10rem, 35%);
+      margin: 1.4rem auto;
+      border: 0;
+      border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+    }
+
+    .letter-body-prose .lb-indent {
+      display: inline-block;
+      flex: 0 0 auto;
+      white-space: pre;
+    }
+
+    .letter-body-prose .lb-indent[data-tab="1"] {
+      width: var(--lb-indent-1);
+    }
+
+    .letter-body-prose .lb-indent[data-tab="2"] {
+      width: var(--lb-indent-2);
+    }
+
+    .letter-body-prose .lb-indent[data-tab="3"] {
+      width: var(--lb-indent-3);
+    }
+
+    .letter-body-prose .lb-indent[data-tab="4"] {
+      width: var(--lb-indent-4);
+    }
+
+    .letter-body-prose .lb-indent[data-tab="5"] {
+      width: var(--lb-indent-5);
+    }
+
+    .letter-body-prose .lb-indent[data-tab="6"] {
+      width: var(--lb-indent-6);
+    }
+
+    .letter-body-prose .lb-indent[data-tab="7"] {
+      width: var(--lb-indent-7);
+    }
+
+    .letter-body-prose .align {
+      display: block;
+      width: 100%;
+      text-align: start;
+    }
+
+    .letter-body-prose .align[data-pos="center"] {
+      text-align: center;
+    }
+
+    .letter-body-prose .align[data-pos="right"] {
+      text-align: right;
+    }
+
+    .letter-body-prose .align[data-tab="1"] {
+      padding-inline-start: var(--lb-indent-1);
+    }
+
+    .letter-body-prose .align[data-tab="2"] {
+      padding-inline-start: var(--lb-indent-2);
+    }
+
+    .letter-body-prose .align[data-tab="3"] {
+      padding-inline-start: var(--lb-indent-3);
+    }
+
+    .letter-body-prose .align[data-tab="4"] {
+      padding-inline-start: var(--lb-indent-4);
+    }
+
+    .letter-body-prose .align[data-tab="5"] {
+      padding-inline-start: var(--lb-indent-5);
+    }
+
+    .letter-body-prose .align[data-tab="6"] {
+      padding-inline-start: var(--lb-indent-6);
+    }
+
+    .letter-body-prose .align[data-tab="7"] {
+      padding-inline-start: var(--lb-indent-7);
+    }
+
+    .letter-body-prose .aq {
+      font-style: italic;
+    }
+
+    .letter-body-prose .gr,
+    .letter-body-prose .hb,
+    .letter-body-prose .ru {
+      letter-spacing: 0.04em;
+    }
+
+    .letter-body-prose .ul {
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
+
+    .letter-body-prose .dul {
+      text-decoration: underline;
+      text-decoration-style: double;
+      text-underline-offset: 0.15em;
+    }
+
+    .letter-body-prose .tul {
+      text-decoration: underline;
+      text-decoration-style: wavy;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 0.15em;
+    }
+
+    .letter-body-prose .highlight {
+      padding-inline: 0.08em;
+      border-radius: 0.12em;
+      color: inherit;
+    }
+
+    .letter-body-prose .undo,
+    .letter-body-prose .added {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 0.15em;
+    }
+
+    .letter-body-prose .insertion {
+      color: #6e4820;
+    }
+
+    .letter-body-prose .insertion[data-pos="top"] {
+      vertical-align: super;
+      font-size: 0.76em;
+      line-height: 1;
+    }
+
+    .letter-body-prose del {
+      color: color-mix(in srgb, currentColor 78%, transparent);
+      text-decoration-thickness: 1px;
+    }
+
+    .letter-body-prose .subst {
+      white-space: nowrap;
+    }
+
+    .letter-body-prose .hand {
+      font-style: italic;
+      color: #5f5445;
+    }
+
+    .letter-body-prose .note {
+      color: #6a6154;
+      font-size: 0.94em;
+    }
+
+    .letter-body-prose .tl {
+      display: inline-block;
+      min-width: 0.7em;
+      border-bottom: 1px dotted currentColor;
+      opacity: 0.55;
+      transform: translateY(-0.08em);
+    }
+
+    .letter-body-prose .fn,
+    .letter-body-prose .anchor {
+      vertical-align: super;
+      font-size: 0.78em;
+      line-height: 1;
+    }
+
+    .letter-body-prose .nr {
+      color: #7a6a55;
+      font-style: italic;
+    }
+
+    .letter-body-prose .nr:empty::before {
+      content: "[…]";
+    }
+
+    .letter-body-prose .pe {
+      color: #7a5732;
+    }
+
+    .letter-body-prose .er {
+      opacity: 0.7;
+    }
+
+    .letter-body-prose .large {
+      font-size: 1.14em;
+    }
+
+    .letter-body-prose .sub {
+      vertical-align: sub;
+      font-size: 0.8em;
+    }
+
+    .letter-body-prose .super {
+      vertical-align: super;
+      font-size: 0.8em;
+    }
+
+    .letter-body-prose .sal,
+    .letter-body-prose .sig {
+      letter-spacing: 0.02em;
+    }
+
+    .letter-body-prose .ful {
+      display: inline-block;
+      min-width: 2rem;
+      border-bottom: 1px solid currentColor;
+      transform: translateY(-0.12em);
+    }
+
+    .letter-body-prose address {
+      font-style: inherit;
+    }
+
+    .letter-body-prose .tabs {
+      display: grid;
+      gap: 0.35rem 1rem;
+      margin-block: 1rem;
+    }
+
+    .letter-body-prose .tab {
+      min-width: 0;
+    }
+
+    .letter-body-prose .tab[data-value="1-2"],
+    .letter-body-prose .tab[data-value="2-2"] {
+      display: inline-block;
+      width: calc(50% - 0.5rem);
+      vertical-align: top;
+    }
+
+    .letter-body-prose .tab[data-value="1-12"] {
+      margin-inline-start: 8.333%;
+    }
+
+    .letter-body-prose .tab[data-value="5-12"] {
+      margin-inline-start: 41.667%;
+    }
+
+    .letter-body-prose .tab[data-value="10-12"] {
+      margin-inline-start: 83.333%;
+    }
+
+    .letter-body-prose .tab[data-value="1-8"] {
+      margin-inline-start: 12.5%;
+    }
+
+    .letter-body-prose .tab[data-value="3-8"] {
+      margin-inline-start: 37.5%;
+    }
+
+    .letter-body-prose .tab[data-value="4-8"] {
+      margin-inline-start: 50%;
+    }
+
+    .letter-body-prose .tab[data-value="7-8"] {
+      margin-inline-start: 87.5%;
+    }
+  </style>
+
   <script is:inline>
     (() => {
       const roots = document.querySelectorAll("[data-letter-layout]");
@@ -274,19 +570,16 @@ const allSidenotes = bundle.pages.flatMap((page) => page.sidenotes);
       const setupLayout = (root) => {
         const body = root.querySelector("[data-letter-body]");
         const pageRail = root.querySelector("[data-page-rail]");
-        const sidenoteRail = root.querySelector("[data-sidenote-rail]");
 
-        if (!(body instanceof HTMLElement) || !(pageRail instanceof HTMLElement) || !(sidenoteRail instanceof HTMLElement)) {
+        if (!(body instanceof HTMLElement) || !(pageRail instanceof HTMLElement)) {
           return;
         }
 
         const pageItems = Array.from(pageRail.querySelectorAll("[data-anchor-id]"));
-        const sidenoteItems = Array.from(sidenoteRail.querySelectorAll("[data-anchor-id]"));
 
         const reposition = () => {
           const pageTargets = buildPageTargets(body);
           positionRail(pageItems, body, pageRail, pageTargets.targets);
-          positionRail(sidenoteItems, body, sidenoteRail, pageTargets.targets);
         };
 
         const schedule = () => requestAnimationFrame(reposition);
