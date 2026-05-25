@@ -1,6 +1,6 @@
 ---
 import type { LetterMeta } from "../lib/edition";
-import { joinLabels } from "../lib/edition";
+import { getLetterHref, joinLabels } from "../lib/edition";
 
 type Props = {
   letter: LetterMeta;
@@ -12,7 +12,7 @@ const recipients = joinLabels(letter.received.persons);
 const places = joinLabels(letter.sent.locations);
 ---
 
-<a class="" href={`/letters/${letter.letter}/`}>
+<a class="" href={getLetterHref(letter.letter)}>
   <div class="">
     <span class="">Brief</span>
     <strong class="">{letter.letter}</strong>

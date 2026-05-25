@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import YearGroupSection from "../../components/YearGroupSection.astro";
-import { getAllYearGroups, getYearGroup } from "../../lib/edition";
+import { getAllYearGroups, getYearGroup, getYearGroupHref } from "../../lib/edition";
 
 export async function getStaticPaths() {
   const groups = await getAllYearGroups();
@@ -13,7 +13,7 @@ if (!groupId) {
   throw new Error("Missing year group route parameter");
 }
 
-const [_, group] = await Promise.all([getAllYearGroups(), getYearGroup(groupId)]);
+const [groups, group] = await Promise.all([getAllYearGroups(), getYearGroup(groupId)]);
 
 if (!group) {
   throw new Error(`Unknown year group: ${groupId}`);

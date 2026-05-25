@@ -1,5 +1,6 @@
 ---
 import type { LetterMeta } from "../lib/edition";
+import { getLetterHref } from "../lib/edition";
 
 type Neighbors = {
   previous: LetterMeta | null;
@@ -46,7 +47,7 @@ const { meta, neighbors } = Astro.props;
   <nav aria-label="Briefnavigation">
     <div>
       {neighbors.previous ? (
-        <a href={`/letters/${neighbors.previous.letter}/`}>
+        <a href={getLetterHref(neighbors.previous.letter)}>
           ← Brief {neighbors.previous.letter}
         </a>
       ) : (
@@ -55,7 +56,7 @@ const { meta, neighbors } = Astro.props;
     </div>
     <div>
       {neighbors.next ? (
-        <a href={`/letters/${neighbors.next.letter}/`}>
+        <a href={getLetterHref(neighbors.next.letter)}>
           Brief {neighbors.next.letter} →
         </a>
       ) : (

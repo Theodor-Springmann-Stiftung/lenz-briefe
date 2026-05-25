@@ -195,7 +195,11 @@ export async function getYearGroupForLetter(letter: LetterMeta): Promise<YearGro
 }
 
 export function getYearGroupHref(groupId: string): string {
-  return `/years/${groupId}/`;
+  return `/jahrgang/${groupId}/`;
+}
+
+export function getLetterHref(letter: string): string {
+  return `/briefe/${letter}/`;
 }
 
 export async function getLetterBundle(letter: string): Promise<LetterBundle> {
