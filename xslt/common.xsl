@@ -41,9 +41,11 @@
         <br class="lb-line lb-line--empty" data-type="empty" />
       </xsl:when>
       <xsl:otherwise>
-        <br class="lb-line">
-          <xsl:attribute name="data-type" select="if (@type) then string(@type) else 'break'" />
-        </br>
+        <xsl:if test="not(preceding-sibling::*[1][self::lb:align]) and not(following-sibling::*[1][self::lb:align])">
+          <br class="lb-line">
+            <xsl:attribute name="data-type" select="if (@type) then string(@type) else 'break'" />
+          </br>
+        </xsl:if>
         <xsl:if test="@tab and not(following-sibling::*[1][self::lb:align])">
           <span class="lb-indent" data-tab="{@tab}"></span>
         </xsl:if>

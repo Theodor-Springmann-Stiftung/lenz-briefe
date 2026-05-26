@@ -1,60 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: "Linux Biolinum", "Merriweather Sans", ui-sans-serif;
-    --font-serif: "Linux Libertine", ui-serif;
+    --font-hand: var(--font-playfair), "Iowan Old Style", "Palatino Linotype", Palatino, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-}
-
-@font-face {
-  font-family: "Linux Libertine";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../assets/fonts/LinLibertine_Rah.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Linux Libertine";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../assets/fonts/LinLibertine_RIah.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Linux Libertine";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../assets/fonts/LinLibertine_RBah.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Linux Libertine";
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../assets/fonts/LinLibertine_RBIah.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Linux Biolinum";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../assets/fonts/LinBiolinum_Rah.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Linux Biolinum";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../assets/fonts/LinBiolinum_RIah.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Linux Biolinum";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../assets/fonts/LinBiolinum_RBah.ttf") format("truetype");
 }
 
 @layer components {

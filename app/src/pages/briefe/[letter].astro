@@ -83,6 +83,7 @@ const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [
     }
 
     .letter-body-prose .lb-line {
+      clear: both;
       line-height: inherit;
     }
 
@@ -176,7 +177,8 @@ const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [
     }
 
     .letter-body-prose .aq {
-      font-style: italic;
+      font-family: var(--font-sans);
+      font-style: normal;
     }
 
     .letter-body-prose .gr,
@@ -236,8 +238,10 @@ const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [
     }
 
     .letter-body-prose .hand {
-      font-style: italic;
-      color: #5f5445;
+      font-family: var(--font-hand);
+      font-style: normal;
+      color: #1f1c18;
+      font-size: 0.95rem;
     }
 
     .letter-body-prose .note {
@@ -253,6 +257,14 @@ const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [
       transform: translateY(-0.08em);
     }
 
+    .letter-body-prose .tl::before,
+    .letter-body-prose .tl::after,
+    .letter-body-prose .nr::before,
+    .letter-body-prose .nr::after {
+      content: "⸰";
+      opacity: 0.85;
+    }
+
     .letter-body-prose .fn,
     .letter-body-prose .anchor {
       vertical-align: super;
@@ -263,10 +275,6 @@ const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [
     .letter-body-prose .nr {
       color: #7a6a55;
       font-style: italic;
-    }
-
-    .letter-body-prose .nr:empty::before {
-      content: "[…]";
     }
 
     .letter-body-prose .pe {
@@ -360,6 +368,7 @@ const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [
       const context = canvas.getContext("2d");
       const INLINE_BREAK_TEXT = " | ";
       const PROBE_SELECTOR = ".page-line-probe";
+
 
       const getBottomGap = (item) => {
         if (!context) {
