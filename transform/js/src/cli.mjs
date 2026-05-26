@@ -1,4 +1,4 @@
-import { exportEdition } from "./export.mjs";
+import { runExport } from "./export.mjs";
 
 function parseArgs(argv) {
   const args = { out: null };
@@ -26,7 +26,7 @@ function parseArgs(argv) {
 
 async function main() {
   const { out } = parseArgs(process.argv.slice(2));
-  const result = await exportEdition({ outDir: out });
+  const result = await runExport({ outDir: out });
   if (typeof result?.totalMs === "number") {
     console.error(`Wall time: ${result.totalMs.toFixed(1)}ms`);
   }

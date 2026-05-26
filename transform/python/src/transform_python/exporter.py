@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
+import tempfile
 from time import perf_counter
 from typing import Any
 
@@ -12,18 +13,19 @@ from .common import (
     CACHE_DIR,
     NS,
     NSMAP,
-    ROOT_DIR,
     Timings,
     ensure_dir,
     get_attribute,
-    get_git_metadata,
+    get_git_metadata_safe,
     read_xml,
     remove_file_if_exists,
+    replace_dir,
     reset_dir,
     serialize_child_node,
     serialize_node,
     slugify_letter,
     text_content,
+    utc_iso_now,
     write_json,
     write_text,
     XSLT_DIR,
@@ -195,6 +197,64 @@ def render_empty_traditions(letter: str) -> str:
     return f'<section class="traditions" data-letter="{letter}"></section>'
 
 
+class PipelineFailure(Exception):
+    def __init__(self, kind: str, stage: str, message: str, cause: Exception | None = None) -> None:
+        super().__init__(f"{stage}: {message}")
+        self.kind = kind
+        self.stage = stage
+        self.message = message
+        self.cause = cause
+
+    def with_context(self, **context: str | None) -> "PipelineFailure":
+        details = ", ".join(f"{key}={value}" for key, value in context.items() if value is not None)
+        message = f"{self.message} ({details})" if details else self.message
+        return PipelineFailure(self.kind, self.stage, message, self)
+
+
+def _build_success_status(
+    generator: str, source: dict[str, str], counts: dict[str, int]
+) -> dict[str, Any]:
+    return {
+        "version": 1,
+        "state": "success",
+        "generator": generator,
+        "generatedAt": utc_iso_now(),
+        "source": source,
+        "success": {
+            "counts": counts,
+        },
+    }
+
+
+def _build_failure_status(generator: str, source: dict[str, str], failure: PipelineFailure) -> dict[str, Any]:
+    return {
+        "version": 1,
+        "state": "failure",
+        "generator": generator,
+        "generatedAt": utc_iso_now(),
+        "source": source,
+        "failure": {
+            "kind": failure.kind,
+            "stage": failure.stage,
+            "message": failure.message,
+        },
+    }
+
+
+def _normalize_failure(error: Exception) -> PipelineFailure:
+    if isinstance(error, PipelineFailure):
+        return error
+    return PipelineFailure("unknown", "export", str(error), error)
+
+
+def _read_required_xml(file_name: str) -> etree._ElementTree:
+    try:
+        return read_xml(file_name)
+    except Exception as error:
+        stage = f"readXml:{file_name.removesuffix('.xml')}"
+        raise PipelineFailure("xml", stage, str(error), error) from error
+
+
 @dataclass
 class StylesheetRunner:
     processor: Any
@@ -214,23 +274,26 @@ class StylesheetRunner:
             return executable
 
         def compile_now() -> Any:
-            ensure_dir(CACHE_DIR)
-            stylesheet_path = XSLT_DIR / f"{name}.xsl"
-            sef_path = CACHE_DIR / f"{name}.sef.json"
-            dependency_paths = [stylesheet_path]
-            common_stylesheet_path = XSLT_DIR / "common.xsl"
-            if name != "common":
-                dependency_paths.append(common_stylesheet_path)
+            try:
+                ensure_dir(CACHE_DIR)
+                stylesheet_path = XSLT_DIR / f"{name}.xsl"
+                sef_path = CACHE_DIR / f"{name}.sef.json"
+                dependency_paths = [stylesheet_path]
+                common_stylesheet_path = XSLT_DIR / "common.xsl"
+                if name != "common":
+                    dependency_paths.append(common_stylesheet_path)
 
-            latest_dependency_mtime = max(path.stat().st_mtime for path in dependency_paths)
-            should_compile = True
-            if sef_path.exists():
-                should_compile = latest_dependency_mtime > sef_path.stat().st_mtime
+                latest_dependency_mtime = max(path.stat().st_mtime for path in dependency_paths)
+                should_compile = True
+                if sef_path.exists():
+                    should_compile = latest_dependency_mtime > sef_path.stat().st_mtime
 
-            if should_compile:
-                self.xsltproc.compile_stylesheet(stylesheet_file=str(stylesheet_path), save=str(sef_path))
+                if should_compile:
+                    self.xsltproc.compile_stylesheet(stylesheet_file=str(stylesheet_path), save=str(sef_path))
 
-            return self.xsltproc.compile_stylesheet(stylesheet_file=str(stylesheet_path))
+                return self.xsltproc.compile_stylesheet(stylesheet_file=str(stylesheet_path))
+            except Exception as error:
+                raise PipelineFailure("xslt", f"compile:{name}", str(error), error) from error
 
         executable = timings.measure("compileStylesheet", compile_now)
         self.executables[name] = executable
@@ -240,13 +303,18 @@ class StylesheetRunner:
         executable = self.compile_stylesheet(name, timings)
 
         def run_now() -> str:
-            executable.clear_parameters()
-            document = self.processor.parse_xml(xml_text=source_text)
-            executable.set_global_context_item(xdm_item=document)
-            for key, value in stylesheet_params.items():
-                executable.set_parameter(key, self.processor.make_string_value(str(value)))
-            result = executable.call_template_returning_string()
-            return str(result).strip()
+            try:
+                executable.clear_parameters()
+                document = self.processor.parse_xml(xml_text=source_text)
+                executable.set_global_context_item(xdm_item=document)
+                for key, value in stylesheet_params.items():
+                    executable.set_parameter(key, self.processor.make_string_value(str(value)))
+                result = executable.call_template_returning_string()
+                return str(result).strip()
+            except PipelineFailure:
+                raise
+            except Exception as error:
+                raise PipelineFailure("xslt", f"transform:{name}", str(error), error) from error
 
         return timings.measure(f"transform:{name}", run_now)
 
@@ -257,11 +325,10 @@ def export_edition(out_dir: str) -> dict[str, Any]:
     absolute_out_dir = Path(out_dir).resolve()
     runner = StylesheetRunner.create()
 
-    briefe_doc = timings.measure("readXml:briefe", lambda: read_xml("briefe.xml"))
-    meta_doc = timings.measure("readXml:meta", lambda: read_xml("meta.xml"))
-    traditions_doc = timings.measure("readXml:traditions", lambda: read_xml("traditions.xml"))
-    references_doc = timings.measure("readXml:references", lambda: read_xml("references.xml"))
-    git = timings.measure("gitMetadata", get_git_metadata)
+    briefe_doc = timings.measure("readXml:briefe", lambda: _read_required_xml("briefe.xml"))
+    meta_doc = timings.measure("readXml:meta", lambda: _read_required_xml("meta.xml"))
+    traditions_doc = timings.measure("readXml:traditions", lambda: _read_required_xml("traditions.xml"))
+    references_doc = timings.measure("readXml:references", lambda: _read_required_xml("references.xml"))
     refs = timings.measure("buildReferenceMaps", lambda: build_reference_maps(references_doc))
 
     timings.measure("resetOutDir", lambda: reset_dir(absolute_out_dir))
@@ -299,25 +366,35 @@ def export_edition(out_dir: str) -> dict[str, Any]:
         "writeFile:indexJson",
         lambda: write_json(absolute_out_dir / "letters" / "index.json", index_entries),
     )
-    timings.measure(
-        "writeFile:statsJson",
-        lambda: write_json(
-            absolute_out_dir / "stats.json",
-            {
-                **git,
-                "counts": {
-                    "meta": len(meta_letter_nodes),
-                    "letterText": len(letter_text_nodes),
-                    "traditions": len(tradition_letter_nodes),
-                },
-            },
-        ),
-    )
 
     return {
         "totalMs": (perf_counter() - started_at) * 1000.0,
+        "counts": {
+            "meta": len(meta_letter_nodes),
+            "letterText": len(letter_text_nodes),
+            "traditions": len(tradition_letter_nodes),
+        },
         "timings": timings.snapshot(),
     }
+
+
+def run_export(out_dir: str, generator: str = "python") -> dict[str, Any]:
+    absolute_out_dir = Path(out_dir).resolve()
+    ensure_dir(absolute_out_dir.parent)
+    staging_dir = Path(tempfile.mkdtemp(prefix=f"{absolute_out_dir.name}-", dir=str(absolute_out_dir.parent)))
+    source = get_git_metadata_safe()
+
+    try:
+        result = export_edition(str(staging_dir))
+        write_json(staging_dir / "status.json", _build_success_status(generator, source, result["counts"]))
+        replace_dir(staging_dir, absolute_out_dir)
+        return result
+    except Exception as error:
+        failure = _normalize_failure(error)
+        reset_dir(staging_dir)
+        write_json(staging_dir / "status.json", _build_failure_status(generator, source, failure))
+        replace_dir(staging_dir, absolute_out_dir)
+        raise failure
 
 
 def _process_letter(
@@ -335,16 +412,18 @@ def _process_letter(
 
     tradition_node = traditions_by_letter.get(letter)
     has_traditions = extract_tradition_presence(tradition_node)
-    traditions_html = (
-        runner.run_stylesheet(
-            "traditions",
-            serialize_node(tradition_node),
-            {"letter": letter},
-            timings,
-        )
-        if has_traditions and tradition_node is not None
-        else render_empty_traditions(letter)
-    )
+    if has_traditions and tradition_node is not None:
+        try:
+            traditions_html = runner.run_stylesheet(
+                "traditions",
+                serialize_node(tradition_node),
+                {"letter": letter},
+                timings,
+            )
+        except PipelineFailure as error:
+            raise error.with_context(letter=letter) from error
+    else:
+        traditions_html = render_empty_traditions(letter)
     meta = meta_by_letter.get(letter) or {
         "letter": letter,
         "slug": slug,
@@ -356,12 +435,15 @@ def _process_letter(
     }
 
     for page, page_xml in page_xml_map.items():
-        text_html = runner.run_stylesheet(
-            "letter-text",
-            page_xml,
-            {"letter": letter, "page": page},
-            timings,
-        )
+        try:
+            text_html = runner.run_stylesheet(
+                "letter-text",
+                page_xml,
+                {"letter": letter, "page": page},
+                timings,
+            )
+        except PipelineFailure as error:
+            raise error.with_context(letter=letter, page=page) from error
         timings.measure(
             "writeFile:textHtml",
             lambda page_value=page, text_value=text_html: write_text(letter_dir / page_value / "text.html", text_value + "\n"),
@@ -379,15 +461,18 @@ def _process_letter(
                 page,
                 ["" for _ in sidenotes],
             )
-            html_items = [
-                runner.run_stylesheet(
-                    "sidenotes",
-                    serialize_node(sidenote),
-                    {"letter": letter, "sidenoteId": records[index]["id"]},
-                    timings,
-                )
-                for index, sidenote in enumerate(sidenotes)
-            ]
+            try:
+                html_items = [
+                    runner.run_stylesheet(
+                        "sidenotes",
+                        serialize_node(sidenote),
+                        {"letter": letter, "sidenoteId": records[index]["id"]},
+                        timings,
+                    )
+                    for index, sidenote in enumerate(sidenotes)
+                ]
+            except PipelineFailure as error:
+                raise error.with_context(letter=letter, page=page) from error
             for index, html in enumerate(html_items):
                 records[index]["html"] = html
             timings.measure(

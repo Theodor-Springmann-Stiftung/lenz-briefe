@@ -22,6 +22,10 @@ Run the exporter:
 uv run transform --out ../../app/generated
 ```
 
+The exporter always publishes a `status.json` file into the output directory.
+Successful runs also publish the generated letter artifacts. Failed runs replace
+the output with failure metadata so the Astro app can build a generic failure site.
+
 Benchmark the Python exporter against the Node exporter:
 
 ```bash

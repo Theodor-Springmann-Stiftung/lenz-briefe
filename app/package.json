@@ -7,10 +7,11 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node ./scripts/check-generated.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "node --test --experimental-strip-types ./src/lib/edition.test.ts"
+    "test": "node --test --experimental-strip-types ./src/lib/edition.test.ts ./scripts/check-generated.test.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",

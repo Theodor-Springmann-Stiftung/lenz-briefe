@@ -1,28 +1,42 @@
 ---
+import FailureState from "../components/FailureState.astro";
 import Layout from "../layouts/Layout.astro";
 import YearGroupSection from "../components/YearGroupSection.astro";
-import { getYearGroupHref, getAllYearGroups } from "../lib/edition";
+import {
+  getGeneratedStatus,
+  getYearGroupHref,
+  getAllYearGroups,
+  isGeneratedFailureStatus
+} from "../lib/edition";
 
-const groups = await getAllYearGroups();
-const group = groups[0];
-
-if (!group) {
-  throw new Error("Missing first year group");
-}
+const status = await getGeneratedStatus();
+const isFailure = isGeneratedFailureStatus(status);
+const groups = isFailure ? [] : await getAllYearGroups();
+const group = groups[0] ?? null;
 ---
 
 <Layout
-  title={`${group.label} | Lenz-Briefe`}
-  description={`Briefe im Zeitraum ${group.label}.`}
+  title={isFailure ? "Editionstatus | Lenz-Briefe" : `${group?.label ?? "Lenz-Briefe"} | Lenz-Briefe`}
+  description={
+    isFailure
+      ? "Statusseite fur einen fehlgeschlagenen Export der Lenz-Briefe."
+      : `Briefe im Zeitraum ${group?.label ?? ""}.`
+  }
 >
-	<nav class="" aria-label="Briefe nach Jahren">
-		<ol>
-		{groups.map((group) => (
-			<li><a class="" href={getYearGroupHref(group.id)}>{group.label}</a></li>
-		))}
-		</ol>
-	</nav>
-  <div class="">
-    <YearGroupSection group={group} />
-  </div>
+  {isFailure ? (
+    <FailureState status={status} context="home" />
+  ) : (
+    <>
+      <nav class="" aria-label="Briefe nach Jahren">
+        <ol>
+        {groups.map((group) => (
+          <li><a class="" href={getYearGroupHref(group.id)}>{group.label}</a></li>
+        ))}
+        </ol>
+      </nav>
+      <div class="">
+        {group && <YearGroupSection group={group} />}
+      </div>
+    </>
+  )}
 </Layout>

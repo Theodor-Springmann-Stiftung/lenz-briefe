@@ -36,7 +36,11 @@ Per letter, the exporter writes:
 
 At the generated root, the exporter also writes:
 
-- `stats.json`
+- `status.json`
+
+`status.json` always exists after a transform attempt. Successful runs also write
+the generated letter artifacts. Failed runs replace the output with failure
+metadata so the Astro app can build a generic failure site.
 
 The page subfolder names come from the `index` values of the source `<page>` tags.
 Each page-level `sidenotes.json` entry still keeps its `page` metadata explicitly.

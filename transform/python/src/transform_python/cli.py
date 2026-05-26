@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import sys
 
-from .exporter import export_edition
+from .exporter import run_export
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
@@ -14,7 +14,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args(sys.argv[1:])
-    result = export_edition(args.out)
+    try:
+        result = run_export(args.out)
+    except Exception as error:
+        print(str(error), file=sys.stderr)
+        return 1
     total_ms = result.get("totalMs")
     if isinstance(total_ms, (int, float)):
         print(f"Wall time: {total_ms:.1f}ms", file=sys.stderr)

@@ -27,6 +27,26 @@ const select = xpath.useNamespaces({ l: NS });
 const parser = new DOMParser();
 const serializer = new XMLSerializer();
 
+class PipelineError extends Error {
+  constructor(kind, stage, message, cause) {
+    super(`${stage}: ${message}`);
+    this.name = "PipelineError";
+    this.kind = kind;
+    this.stage = stage;
+    this.detail = message;
+    this.cause = cause;
+  }
+
+  withContext(context) {
+    const details = Object.entries(context)
+      .filter(([, value]) => value != null)
+      .map(([key, value]) => `${key}=${value}`)
+      .join(", ");
+    const message = details ? `${this.detail} (${details})` : this.detail;
+    return new PipelineError(this.kind, this.stage, message, this);
+  }
+}
+
 function textContent(node) {
   return (node?.textContent ?? "").replace(/\s+/g, " ").trim();
 }
@@ -95,6 +115,32 @@ async function resetDir(dir) {
   await fs.mkdir(dir, { recursive: true });
 }
 
+async function replaceDir(stagingDir, targetDir) {
+  const backupDir = `${targetDir}.backup`;
+  await fs.rm(backupDir, { recursive: true, force: true });
+
+  try {
+    await fs.rename(targetDir, backupDir);
+  } catch (error) {
+    if (error?.code !== "ENOENT") {
+      throw error;
+    }
+  }
+
+  try {
+    await fs.rename(stagingDir, targetDir);
+  } catch (error) {
+    try {
+      await fs.rename(backupDir, targetDir);
+    } catch {
+      // Ignore restore failure and surface the original publish error.
+    }
+    throw error;
+  }
+
+  await fs.rm(backupDir, { recursive: true, force: true });
+}
+
 async function writeFile(targetPath, content) {
   await ensureDir(path.dirname(targetPath));
   await fs.writeFile(targetPath, content, "utf8");
@@ -115,43 +161,55 @@ async function readXml(fileName) {
   return parser.parseFromString(source, "text/xml");
 }
 
+async function readRequiredXml(fileName) {
+  try {
+    return await readXml(fileName);
+  } catch (error) {
+    throw new PipelineError("xml", `readXml:${fileName.replace(/\.xml$/, "")}`, error.message, error);
+  }
+}
+
 async function compileStylesheet(name, timings) {
   return await timings.measure("compileStylesheet", async () => {
-    await ensureDir(CACHE_DIR);
-    const stylesheetPath = path.join(XSLT_DIR, `${name}.xsl`);
-    const sefPath = path.join(CACHE_DIR, `${name}.sef.json`);
-    const dependencyPaths = [stylesheetPath];
-    const commonStylesheetPath = path.join(XSLT_DIR, "common.xsl");
-    if (name !== "common") {
-      dependencyPaths.push(commonStylesheetPath);
-    }
-
-    const dependencyStats = await Promise.all(dependencyPaths.map((dependencyPath) => fs.stat(dependencyPath)));
-    const latestDependencyMtime = Math.max(...dependencyStats.map((stat) => stat.mtimeMs));
-    let shouldCompile = true;
-
     try {
-      const sefStat = await fs.stat(sefPath);
-      shouldCompile = latestDependencyMtime > sefStat.mtimeMs;
-    } catch {
-      shouldCompile = true;
-    }
+      await ensureDir(CACHE_DIR);
+      const stylesheetPath = path.join(XSLT_DIR, `${name}.xsl`);
+      const sefPath = path.join(CACHE_DIR, `${name}.sef.json`);
+      const dependencyPaths = [stylesheetPath];
+      const commonStylesheetPath = path.join(XSLT_DIR, "common.xsl");
+      if (name !== "common") {
+        dependencyPaths.push(commonStylesheetPath);
+      }
 
-    if (shouldCompile) {
-      const xslt3Bin = path.join(
-        TRANSFORM_DIR,
-        "node_modules",
-        ".bin",
-        process.platform === "win32" ? "xslt3.cmd" : "xslt3"
-      );
-      await execFileAsync(xslt3Bin, [
-        "-xsl:" + stylesheetPath,
-        "-export:" + sefPath,
-        "-nogo"
-      ]);
-    }
+      const dependencyStats = await Promise.all(dependencyPaths.map((dependencyPath) => fs.stat(dependencyPath)));
+      const latestDependencyMtime = Math.max(...dependencyStats.map((stat) => stat.mtimeMs));
+      let shouldCompile = true;
 
-    return sefPath;
+      try {
+        const sefStat = await fs.stat(sefPath);
+        shouldCompile = latestDependencyMtime > sefStat.mtimeMs;
+      } catch {
+        shouldCompile = true;
+      }
+
+      if (shouldCompile) {
+        const xslt3Bin = path.join(
+          TRANSFORM_DIR,
+          "node_modules",
+          ".bin",
+          process.platform === "win32" ? "xslt3.cmd" : "xslt3"
+        );
+        await execFileAsync(xslt3Bin, [
+          "-xsl:" + stylesheetPath,
+          "-export:" + sefPath,
+          "-nogo"
+        ]);
+      }
+
+      return sefPath;
+    } catch (error) {
+      throw new PipelineError("xslt", `compile:${name}`, error.message, error);
+    }
   });
 }
 
@@ -161,19 +219,28 @@ async function runStylesheet(name, params, timings, options = {}) {
   }
 
   const stylesheetFileName = await stylesheetFileCache.get(name);
-  const result = await timings.measure(
-    `transform:${name}`,
-    async () =>
-      await SaxonJS.transform(
-        {
-          stylesheetFileName,
-          destination: "serialized",
-          initialTemplate: "Q{http://www.w3.org/1999/XSL/Transform}initial-template",
-          ...params
-        },
-        "async"
-      )
-  );
+  let result;
+
+  try {
+    result = await timings.measure(
+      `transform:${name}`,
+      async () =>
+        await SaxonJS.transform(
+          {
+            stylesheetFileName,
+            destination: "serialized",
+            initialTemplate: "Q{http://www.w3.org/1999/XSL/Transform}initial-template",
+            ...params
+          },
+          "async"
+        )
+    );
+  } catch (error) {
+    if (error instanceof PipelineError) {
+      throw error;
+    }
+    throw new PipelineError("xslt", `transform:${name}`, error.message, error);
+  }
 
   if (options.trim === false) {
     return result.principalResult;
@@ -192,6 +259,57 @@ async function getGitMetadata() {
     commitHash: commitHashResult.stdout.trim(),
     commitDate: commitDateResult.stdout.trim()
   };
+}
+
+async function getGitMetadataSafe() {
+  try {
+    return await getGitMetadata();
+  } catch {
+    return {
+      commitHash: "unknown",
+      commitDate: "unknown"
+    };
+  }
+}
+
+function getGeneratedTimestamp() {
+  return new Date().toISOString();
+}
+
+function buildSuccessStatus(generator, source, counts) {
+  return {
+    version: 1,
+    state: "success",
+    generator,
+    generatedAt: getGeneratedTimestamp(),
+    source,
+    success: {
+      counts
+    }
+  };
+}
+
+function buildFailureStatus(generator, source, failure) {
+  return {
+    version: 1,
+    state: "failure",
+    generator,
+    generatedAt: getGeneratedTimestamp(),
+    source,
+    failure: {
+      kind: failure.kind,
+      stage: failure.stage,
+      message: failure.detail
+    }
+  };
+}
+
+function normalizeFailure(error) {
+  if (error instanceof PipelineError) {
+    return error;
+  }
+
+  return new PipelineError("unknown", "export", error?.message ?? String(error), error);
 }
 
 function buildReferenceMaps(referencesDoc) {
@@ -370,11 +488,10 @@ async function exportEdition({ outDir }) {
   const timings = createTimings();
   const startedAt = performance.now();
   const absoluteOutDir = path.resolve(outDir);
-  const briefeDoc = await timings.measure("readXml:briefe", async () => await readXml("briefe.xml"));
-  const metaDoc = await timings.measure("readXml:meta", async () => await readXml("meta.xml"));
-  const traditionsDoc = await timings.measure("readXml:traditions", async () => await readXml("traditions.xml"));
-  const referencesDoc = await timings.measure("readXml:references", async () => await readXml("references.xml"));
-  const git = await timings.measure("gitMetadata", async () => await getGitMetadata());
+  const briefeDoc = await timings.measure("readXml:briefe", async () => await readRequiredXml("briefe.xml"));
+  const metaDoc = await timings.measure("readXml:meta", async () => await readRequiredXml("meta.xml"));
+  const traditionsDoc = await timings.measure("readXml:traditions", async () => await readRequiredXml("traditions.xml"));
+  const referencesDoc = await timings.measure("readXml:references", async () => await readRequiredXml("references.xml"));
   const refs = await timings.measure("buildReferenceMaps", async () => buildReferenceMaps(referencesDoc));
 
   await timings.measure("resetOutDir", async () => await resetDir(absoluteOutDir));
@@ -412,8 +529,10 @@ async function exportEdition({ outDir }) {
 
     const traditionNode = traditionsByLetter.get(letter) ?? null;
     const hasTraditions = extractTraditionPresence(traditionNode);
-    const traditionsHtml = hasTraditions
-      ? await runStylesheet(
+    let traditionsHtml = renderEmptyTraditions(letter);
+    if (hasTraditions) {
+      try {
+        traditionsHtml = await runStylesheet(
           "traditions",
           {
             sourceText: serializeNode(traditionNode),
@@ -422,8 +541,11 @@ async function exportEdition({ outDir }) {
             }
           },
           timings
-        )
-      : renderEmptyTraditions(letter);
+        );
+      } catch (error) {
+        throw normalizeFailure(error).withContext({ letter });
+      }
+    }
     const meta = metaByLetter.get(letter) ?? {
       letter,
       slug,
@@ -435,17 +557,22 @@ async function exportEdition({ outDir }) {
     };
 
     for (const [page, pageXml] of pageXmlMap.entries()) {
-      const textHtml = await runStylesheet(
-        "letter-text",
-        {
-          sourceText: pageXml,
-          stylesheetParams: {
-            letter,
-            page
-          }
-        },
-        timings
-      );
+      let textHtml;
+      try {
+        textHtml = await runStylesheet(
+          "letter-text",
+          {
+            sourceText: pageXml,
+            stylesheetParams: {
+              letter,
+              page
+            }
+          },
+          timings
+        );
+      } catch (error) {
+        throw normalizeFailure(error).withContext({ letter, page });
+      }
       await timings.measure("writeFile:textHtml", async () => await writeFile(path.join(letterDir, page, "text.html"), textHtml + "\n"));
 
       const sidenotes = await timings.measure("select:pageSidenotes", async () => select(`./l:sidenote[@page='${page}']`, letterText));
@@ -457,21 +584,26 @@ async function exportEdition({ outDir }) {
           page,
           Array.from({ length: sidenotes.length }, () => "")
         );
-        const htmlItems = await Promise.all(
-          sidenotes.map((sidenote, index) =>
-            runStylesheet(
-              "sidenotes",
-              {
-                sourceText: serializeNode(sidenote),
-                stylesheetParams: {
-                  letter,
-                  sidenoteId: records[index].id
-                }
-              },
-              timings
+        let htmlItems;
+        try {
+          htmlItems = await Promise.all(
+            sidenotes.map((sidenote, index) =>
+              runStylesheet(
+                "sidenotes",
+                {
+                  sourceText: serializeNode(sidenote),
+                  stylesheetParams: {
+                    letter,
+                    sidenoteId: records[index].id
+                  }
+                },
+                timings
+              )
             )
-          )
-        );
+          );
+        } catch (error) {
+          throw normalizeFailure(error).withContext({ letter, page });
+        }
         records.forEach((record, index) => {
           record.html = htmlItems[index] ?? "";
         });
@@ -520,30 +652,42 @@ async function exportEdition({ outDir }) {
         JSON.stringify(indexEntries, null, 2) + "\n"
       )
   );
-  await timings.measure(
-    "writeFile:statsJson",
-    async () =>
-      await writeFile(
-        path.join(absoluteOutDir, "stats.json"),
-        JSON.stringify(
-          {
-            ...git,
-            counts: {
-              meta: metaLetterNodes.length,
-              letterText: letterTextNodes.length,
-              traditions: traditionLetterNodes.length
-            }
-          },
-          null,
-          2
-        ) + "\n"
-      )
-  );
 
   return {
     totalMs: performance.now() - startedAt,
+    counts: {
+      meta: metaLetterNodes.length,
+      letterText: letterTextNodes.length,
+      traditions: traditionLetterNodes.length
+    },
     timings: timings.snapshot()
   };
 }
 
-export { exportEdition };
+async function runExport({ outDir, generator = "js" }) {
+  const absoluteOutDir = path.resolve(outDir);
+  await ensureDir(path.dirname(absoluteOutDir));
+  const stagingDir = await fs.mkdtemp(path.join(path.dirname(absoluteOutDir), `${path.basename(absoluteOutDir)}-`));
+  const source = await getGitMetadataSafe();
+
+  try {
+    const result = await exportEdition({ outDir: stagingDir });
+    await writeFile(
+      path.join(stagingDir, "status.json"),
+      JSON.stringify(buildSuccessStatus(generator, source, result.counts), null, 2) + "\n"
+    );
+    await replaceDir(stagingDir, absoluteOutDir);
+    return result;
+  } catch (error) {
+    const failure = normalizeFailure(error);
+    await resetDir(stagingDir);
+    await writeFile(
+      path.join(stagingDir, "status.json"),
+      JSON.stringify(buildFailureStatus(generator, source, failure), null, 2) + "\n"
+    );
+    await replaceDir(stagingDir, absoluteOutDir);
+    throw failure;
+  }
+}
+
+export { exportEdition, runExport };

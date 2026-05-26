@@ -1,4 +1,5 @@
 ---
+import FailureState from "../../components/FailureState.astro";
 import Layout from "../../layouts/Layout.astro";
 import LetterBody from "../../components/LetterBody.astro";
 import LetterHeader from "../../components/LetterHeader.astro";
@@ -6,13 +7,19 @@ import LetterPageNumbers from "../../components/LetterPageNumbers.astro";
 import LetterSidenoteMargins from "../../components/LetterSidenoteMargins.astro";
 import LetterTraditions from "../../components/LetterTraditions.astro";
 import {
+  getFailureLetterIds,
   getLetterBundle,
   getLetterIndex,
-  getLetterNeighbors
+  getLetterNeighbors,
+  getGeneratedStatus,
+  isGeneratedFailureStatus
 } from "../../lib/edition";
 
 export async function getStaticPaths() {
-  const letters = await getLetterIndex();
+  const status = await getGeneratedStatus();
+  const letters = isGeneratedFailureStatus(status)
+    ? getFailureLetterIds().map((letter) => ({ letter }))
+    : await getLetterIndex();
   return letters.map((letter) => ({
     params: { letter: letter.letter }
   }));
@@ -23,15 +30,20 @@ if (!letter) {
   throw new Error("Missing letter route parameter");
 }
 
-const bundle = await getLetterBundle(letter);
-const neighbors = await getLetterNeighbors(letter);
-const allSidenotes = bundle.pages.flatMap((page) => page.sidenotes);
+const status = await getGeneratedStatus();
+const isFailure = isGeneratedFailureStatus(status);
+const bundle = isFailure ? null : await getLetterBundle(letter);
+const neighbors = isFailure ? null : await getLetterNeighbors(letter);
+const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [];
 ---
 
 <Layout
-  title={`Brief ${bundle.meta.letter} | Lenz-Briefe`}
-  description={bundle.meta.sent.date?.text ?? `Brief ${bundle.meta.letter}`}
+  title={`Brief ${letter} | Lenz-Briefe`}
+  description={isFailure ? `Statusseite fur Brief ${letter}.` : bundle?.meta.sent.date?.text ?? `Brief ${letter}`}
 >
+  {isFailure ? (
+    <FailureState status={status} context="letter" label={letter} />
+  ) : bundle && neighbors ? (
   <div>
     <LetterHeader meta={bundle.meta} neighbors={neighbors} />
 
@@ -43,6 +55,7 @@ const allSidenotes = bundle.pages.flatMap((page) => page.sidenotes);
 
     <LetterTraditions html={bundle.meta.traditionsHtml} />
   </div>
+  ) : null}
 
   <style is:global>
     .letter-body-prose {

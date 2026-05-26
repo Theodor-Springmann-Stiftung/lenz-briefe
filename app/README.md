@@ -36,10 +36,20 @@ All commands are run from the root of the project, from a terminal:
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run build`           | Validate `generated/` and build the production site to `./dist/` |
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## Generated Data Requirement
+
+The app build expects generated export metadata in `./generated/status.json`.
+On successful exports, `status.json` is accompanied by `./generated/letters/index.json`
+and the generated letter files. On failed exports, Astro can still build a generic
+failure-state site from `status.json` alone.
+
+Produce that data first with one of the transform workspaces, or point the app at
+an alternate export with `LENZ_GENERATED_DIR`.
 
 ## 👀 Want to learn more?
 

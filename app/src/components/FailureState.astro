@@ -1,0 +1,71 @@
+---
+import type { GeneratedFailureStatus } from "../lib/edition";
+import { getYearGroupDefinitions, getYearGroupHref } from "../lib/edition";
+
+type Props = {
+  status: GeneratedFailureStatus;
+  context: "home" | "year-group" | "letter";
+  label?: string;
+};
+
+const { status, context, label } = Astro.props;
+const groups = getYearGroupDefinitions();
+
+const titles = {
+  home: "Die Edition ist derzeit nicht verfugbar.",
+  "year-group": `Der Jahrgang ${label ?? ""} ist derzeit nicht verfugbar.`,
+  letter: `Brief ${label ?? ""} ist derzeit nicht verfugbar.`
+};
+
+const descriptions = {
+  home: "Beim Aufbau der generierten Editionsdaten ist ein Fehler aufgetreten.",
+  "year-group": "Die Jahrgangsseite zeigt derzeit den Status des letzten fehlgeschlagenen Exports.",
+  letter: "Diese Briefseite zeigt derzeit den Status des letzten fehlgeschlagenen Exports."
+};
+---
+
+<section aria-labelledby="failure-title">
+  <p>Editionstatus</p>
+  <h1 id="failure-title">{titles[context]}</h1>
+  <p>{descriptions[context]}</p>
+
+  <dl>
+    <div>
+      <dt>Fehlertyp</dt>
+      <dd>{status.failure.kind}</dd>
+    </div>
+    <div>
+      <dt>Pipeline-Schritt</dt>
+      <dd>{status.failure.stage}</dd>
+    </div>
+    <div>
+      <dt>Meldung</dt>
+      <dd>{status.failure.message}</dd>
+    </div>
+    <div>
+      <dt>Quell-Commit</dt>
+      <dd>{status.source.commitHash}</dd>
+    </div>
+    <div>
+      <dt>Quell-Datum</dt>
+      <dd>{status.source.commitDate}</dd>
+    </div>
+    <div>
+      <dt>Exportzeit</dt>
+      <dd>{status.generatedAt}</dd>
+    </div>
+    <div>
+      <dt>Exporter</dt>
+      <dd>{status.generator}</dd>
+    </div>
+  </dl>
+
+  <nav aria-label="Jahrgange">
+    <p>Bekannte Jahrgangsseiten</p>
+    <ul>
+      {groups.map((group) => (
+        <li><a href={getYearGroupHref(group.id)}>{group.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+</section>

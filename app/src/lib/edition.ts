@@ -1,6 +1,5 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 
 export type ResolvedRef = {
   ref: string;
@@ -73,16 +72,53 @@ export type YearGroup = {
   letters: LetterMeta[];
 };
 
+type GeneratedSourceInfo = {
+  commitHash: string;
+  commitDate: string;
+};
+
+type GeneratedCounts = {
+  meta: number;
+  letterText: number;
+  traditions: number;
+};
+
+export type GeneratedSuccessStatus = {
+  version: 1;
+  state: "success";
+  generator: string;
+  generatedAt: string;
+  source: GeneratedSourceInfo;
+  success: {
+    counts: GeneratedCounts;
+  };
+};
+
+export type GeneratedFailureStatus = {
+  version: 1;
+  state: "failure";
+  generator: string;
+  generatedAt: string;
+  source: GeneratedSourceInfo;
+  failure: {
+    kind: string;
+    stage: string;
+    message: string;
+  };
+};
+
+export type GeneratedStatus = GeneratedSuccessStatus | GeneratedFailureStatus;
+
 type LetterNeighbors = {
   previous: LetterMeta | null;
   next: LetterMeta | null;
 };
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const appRoot = path.resolve(__dirname, "..", "..");
+const appRoot = process.cwd();
 const generatedRoot = process.env.LENZ_GENERATED_DIR
   ? path.resolve(process.env.LENZ_GENERATED_DIR)
   : path.join(appRoot, "generated");
+const failureLetterLimit = 1000;
 
 const yearGroupsBase = [
   { id: "1756-1770", label: "1756–1770", start: 1756, end: 1770 },
@@ -99,6 +135,7 @@ let orderedLetterIndexPromise: Promise<LetterMeta[]> | null = null;
 let yearGroupsPromise: Promise<YearGroup[]> | null = null;
 let groupedYearIndexPromise: Promise<YearGroup[]> | null = null;
 let neighborMapPromise: Promise<Map<string, LetterNeighbors>> | null = null;
+let generatedStatusPromise: Promise<GeneratedStatus> | null = null;
 
 async function readJsonFile<T>(filePath: string): Promise<T> {
   const raw = await readFile(filePath, "utf8");
@@ -120,6 +157,67 @@ async function readTextFile(filePath: string): Promise<string> {
   return await readFile(filePath, "utf8");
 }
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null;
+}
+
+function parseGeneratedStatus(value: unknown): GeneratedStatus {
+  if (!isRecord(value)) {
+    throw new Error("Generated status must be an object.");
+  }
+
+  if (value.version !== 1) {
+    throw new Error("Generated status has an unsupported version.");
+  }
+
+  if (value.state !== "success" && value.state !== "failure") {
+    throw new Error("Generated status must declare a valid state.");
+  }
+
+  if (typeof value.generator !== "string" || typeof value.generatedAt !== "string") {
+    throw new Error("Generated status is missing generator or generatedAt.");
+  }
+
+  if (!isRecord(value.source)) {
+    throw new Error("Generated status is missing source metadata.");
+  }
+
+  if (typeof value.source.commitHash !== "string" || typeof value.source.commitDate !== "string") {
+    throw new Error("Generated status source metadata is invalid.");
+  }
+
+  if (value.state === "success") {
+    if (!isRecord(value.success) || !isRecord(value.success.counts)) {
+      throw new Error("Generated success status is missing counts.");
+    }
+
+    const counts = value.success.counts;
+    if (
+      typeof counts.meta !== "number" ||
+      typeof counts.letterText !== "number" ||
+      typeof counts.traditions !== "number"
+    ) {
+      throw new Error("Generated success status counts are invalid.");
+    }
+
+    return value as GeneratedSuccessStatus;
+  }
+
+  if (!isRecord(value.failure)) {
+    throw new Error("Generated failure status is missing failure details.");
+  }
+
+  if (
+    typeof value.failure.kind !== "string" ||
+    typeof value.failure.stage !== "string" ||
+    typeof value.failure.message !== "string"
+  ) {
+    throw new Error("Generated failure status details are invalid.");
+  }
+
+  return value as GeneratedFailureStatus;
+}
+
 export function getEarliestDateBoundary(date: DateInfo | null): string | null {
   if (!date) {
     return null;
@@ -133,6 +231,22 @@ export function getEarliestDateBoundary(date: DateInfo | null): string | null {
   }
 
   return candidates.reduce((earliest, value) => (value < earliest ? value : earliest));
+}
+
+export function getYearGroupDefinitions(): Array<Omit<YearGroup, "letters">> {
+  return yearGroupsBase.map((group) => ({ ...group }));
+}
+
+export function getFailureLetterIds(limit = failureLetterLimit): string[] {
+  return Array.from({ length: limit }, (_, index) => String(index + 1));
+}
+
+export function isGeneratedFailureStatus(status: GeneratedStatus): status is GeneratedFailureStatus {
+  return status.state === "failure";
+}
+
+export function isGeneratedSuccessStatus(status: GeneratedStatus): status is GeneratedSuccessStatus {
+  return status.state === "success";
 }
 
 export function getChronologicalDateKey(meta: LetterMeta): string | null {
@@ -236,6 +350,15 @@ async function getNeighborMap(): Promise<Map<string, LetterNeighbors>> {
 
 export function joinLabels(items: ResolvedRef[]): string {
   return items.map((item) => item.label).filter(Boolean).join(", ");
+}
+
+export async function getGeneratedStatus(): Promise<GeneratedStatus> {
+  if (!generatedStatusPromise) {
+    const statusPath = path.join(generatedRoot, "status.json");
+    generatedStatusPromise = readJsonFile<unknown>(statusPath).then((value) => parseGeneratedStatus(value));
+  }
+
+  return await generatedStatusPromise;
 }
 
 export async function getLetterIndex(): Promise<LetterMeta[]> {

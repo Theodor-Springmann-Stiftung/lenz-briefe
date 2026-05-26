@@ -7,6 +7,7 @@ import shutil
 import subprocess
 import time
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 
@@ -97,6 +98,28 @@ def reset_dir(dir_path: Path) -> None:
     dir_path.mkdir(parents=True, exist_ok=True)
 
 
+def remove_dir_if_exists(dir_path: Path) -> None:
+    if dir_path.exists():
+        shutil.rmtree(dir_path)
+
+
+def replace_dir(staging_dir: Path, target_dir: Path) -> None:
+    backup_dir = target_dir.with_name(f"{target_dir.name}.backup")
+    remove_dir_if_exists(backup_dir)
+
+    if target_dir.exists():
+        target_dir.rename(backup_dir)
+
+    try:
+        staging_dir.rename(target_dir)
+    except Exception:
+        if backup_dir.exists() and not target_dir.exists():
+            backup_dir.rename(target_dir)
+        raise
+    finally:
+        remove_dir_if_exists(backup_dir)
+
+
 def write_text(target_path: Path, content: str) -> None:
     ensure_dir(target_path.parent)
     target_path.write_text(content, encoding="utf8")
@@ -129,6 +152,17 @@ def get_git_metadata() -> dict[str, str]:
         text=True,
     ).stdout.strip()
     return {"commitHash": commit_hash, "commitDate": commit_date}
+
+
+def get_git_metadata_safe() -> dict[str, str]:
+    try:
+        return get_git_metadata()
+    except Exception:
+        return {"commitHash": "unknown", "commitDate": "unknown"}
+
+
+def utc_iso_now() -> str:
+    return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
 
 def available_parallelism() -> int:

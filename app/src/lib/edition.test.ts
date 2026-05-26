@@ -1,11 +1,15 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import path from "node:path";
 
 import {
   getAllYearGroups,
   getChronologicalDateKey,
   getEarliestDateBoundary,
+  getFailureLetterIds,
+  getGeneratedRoot,
   getLetterNeighbors,
+  getYearGroupDefinitions,
   type DateInfo,
   type LetterMeta
 } from "./edition.ts";
@@ -94,6 +98,21 @@ test("getChronologicalDateKey falls back to the received date when the sent date
 
 test("getChronologicalDateKey returns null when neither sent nor received has a date", () => {
   assert.equal(getChronologicalDateKey(makeMeta()), null);
+});
+
+test("getGeneratedRoot defaults to the app generated directory", () => {
+  assert.equal(getGeneratedRoot(), path.join(process.cwd(), "generated"));
+});
+
+test("getYearGroupDefinitions exposes the hardcoded year groups", () => {
+  assert.deepEqual(
+    getYearGroupDefinitions().map((group) => group.id),
+    ["1756-1770", "1771-1775", "1776", "1777-1779", "1780-1792"]
+  );
+});
+
+test("getFailureLetterIds creates the synthetic failure-mode brief routes", () => {
+  assert.deepEqual(getFailureLetterIds(3), ["1", "2", "3"]);
 });
 
 test("equal chronological dates are kept in numeric letter order in year-group lists", async () => {
