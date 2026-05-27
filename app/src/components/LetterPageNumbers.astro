@@ -1,8 +1,6 @@
 ---
-import type { LetterPageData } from "../lib/edition";
-
 type Props = {
-  pages: LetterPageData[];
+  pages: string[];
 };
 
 const { pages } = Astro.props;
@@ -12,11 +10,11 @@ const { pages } = Astro.props;
   {pages.map((page) => (
     <div
       class="absolute left-0 w-full pr-2 text-right data-[positioned=false]:invisible"
-      data-anchor-id={`page-${page.page}`}
+      data-anchor-id={`page-${page}`}
       data-align="bottom"
       data-positioned="false"
     >
-      <span>{page.page}</span>
+      <span>{page}</span>
     </div>
   ))}
 </div>

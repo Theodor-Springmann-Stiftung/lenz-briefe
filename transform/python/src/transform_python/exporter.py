@@ -11,17 +11,14 @@ from saxonche import PySaxonProcessor
 
 from .common import (
     CACHE_DIR,
-    NS,
     NSMAP,
     Timings,
     ensure_dir,
     get_attribute,
     get_git_metadata_safe,
     read_xml,
-    remove_file_if_exists,
     replace_dir,
     reset_dir,
-    serialize_child_node,
     serialize_node,
     slugify_letter,
     text_content,
@@ -141,33 +138,9 @@ def collect_sidenote_pages(letter_text: etree._Element) -> list[str]:
     return sorted(pages, key=lambda page: int(page))
 
 
-def split_letter_text_by_page(letter_text: etree._Element, letter: str) -> dict[str, str]:
-    page_map: dict[str, str] = {}
-    current_page: str | None = None
-    current_chunks: list[str] = []
-
-    for node in letter_text.xpath("./node()", namespaces=NSMAP):
-        if isinstance(node, etree._Element) and isinstance(node.tag, str) and etree.QName(node).localname == "page":
-            if current_page is not None:
-                page_map[current_page] = (
-                    f'<letterPage xmlns="{NS}" letter="{letter}" page="{current_page}">'
-                    + "".join(current_chunks)
-                    + "</letterPage>"
-                )
-            current_page = str(get_attribute(node, "index"))
-            current_chunks = [serialize_child_node(node)]
-            continue
-        if current_page is not None:
-            current_chunks.append(serialize_child_node(node))
-
-    if current_page is not None:
-        page_map[current_page] = (
-            f'<letterPage xmlns="{NS}" letter="{letter}" page="{current_page}">'
-            + "".join(current_chunks)
-            + "</letterPage>"
-        )
-
-    return page_map
+def collect_letter_pages(letter_text: etree._Element) -> list[str]:
+    pages = [str(get_attribute(node, "index")) for node in letter_text.xpath("./l:page", namespaces=NSMAP)]
+    return sorted(pages, key=lambda page: int(page))
 
 
 def build_sidenote_records(
@@ -408,7 +381,7 @@ def _process_letter(
     letter = str(get_attribute(letter_text, "letter"))
     slug = slugify_letter(letter)
     letter_dir = absolute_out_dir / "letters" / letter
-    page_xml_map = timings.measure("splitLetterTextByPage", lambda: split_letter_text_by_page(letter_text, letter))
+    pages = timings.measure("collectLetterPages", lambda: collect_letter_pages(letter_text))
 
     tradition_node = traditions_by_letter.get(letter)
     has_traditions = extract_tradition_presence(tradition_node)
@@ -434,33 +407,33 @@ def _process_letter(
         "isDraft": False,
     }
 
-    for page, page_xml in page_xml_map.items():
-        try:
-            text_html = runner.run_stylesheet(
-                "letter-text",
-                page_xml,
-                {"letter": letter, "page": page},
-                timings,
-            )
-        except PipelineFailure as error:
-            raise error.with_context(letter=letter, page=page) from error
-        timings.measure(
-            "writeFile:textHtml",
-            lambda page_value=page, text_value=text_html: write_text(letter_dir / page_value / "text.html", text_value + "\n"),
+    try:
+        text_html = runner.run_stylesheet(
+            "letter-text",
+            serialize_node(letter_text),
+            {},
+            timings,
         )
+    except PipelineFailure as error:
+        raise error.with_context(letter=letter) from error
+    timings.measure(
+        "writeFile:textHtml",
+        lambda text_value=text_html: write_text(letter_dir / "text.html", text_value + "\n"),
+    )
 
+    sidenotes_by_page: dict[str, list[dict[str, Any]]] = {}
+    for page in pages:
         sidenotes = timings.measure(
             "select:pageSidenotes",
             lambda page_value=page: letter_text.xpath(f"./l:sidenote[@page='{page_value}']", namespaces=NSMAP),
         )
-        sidenotes_path = letter_dir / page / "sidenotes.json"
+        records = build_sidenote_records(
+            sidenotes,
+            letter,
+            page,
+            ["" for _ in sidenotes],
+        )
         if sidenotes:
-            records = build_sidenote_records(
-                sidenotes,
-                letter,
-                page,
-                ["" for _ in sidenotes],
-            )
             try:
                 html_items = [
                     runner.run_stylesheet(
@@ -475,12 +448,11 @@ def _process_letter(
                 raise error.with_context(letter=letter, page=page) from error
             for index, html in enumerate(html_items):
                 records[index]["html"] = html
-            timings.measure(
-                "writeFile:sidenotesJson",
-                lambda: write_json(sidenotes_path, records),
-            )
-        else:
-            timings.measure("removeFile:sidenotesJson", lambda: remove_file_if_exists(sidenotes_path))
+        sidenotes_by_page[page] = records
+    timings.measure(
+        "writeFile:sidenotesJson",
+        lambda: write_json(letter_dir / "sidenotes.json", sidenotes_by_page),
+    )
 
     sidenote_pages = timings.measure("collectSidenotePages", lambda: collect_sidenote_pages(letter_text))
     meta_output = {
@@ -490,8 +462,8 @@ def _process_letter(
         "hasText": True,
         "hasTraditions": has_traditions,
         "hasSidenotes": len(sidenote_pages) > 0,
-        "pageCount": len(page_xml_map),
-        "pages": sorted(page_xml_map.keys(), key=lambda page: int(page)),
+        "pageCount": len(pages),
+        "pages": pages,
         "traditionsHtml": traditions_html,
     }
     timings.measure(

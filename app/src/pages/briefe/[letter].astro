@@ -34,7 +34,6 @@ const status = await getGeneratedStatus();
 const isFailure = isGeneratedFailureStatus(status);
 const bundle = isFailure ? null : await getLetterBundle(letter);
 const neighbors = isFailure ? null : await getLetterNeighbors(letter);
-const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [];
 ---
 
 <Layout
@@ -49,8 +48,8 @@ const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [
 
     <section class="grid grid-cols-[4.5rem_minmax(0,1fr)_18rem] items-stretch gap-6 max-[980px]:grid-cols-[3.5rem_minmax(0,1fr)]" data-letter-layout>
       <LetterPageNumbers pages={bundle.pages} />
-      <LetterBody pages={bundle.pages} />
-      <LetterSidenoteMargins notes={allSidenotes} />
+      <LetterBody textHtml={bundle.textHtml} />
+      <LetterSidenoteMargins sidenotesByPage={bundle.sidenotesByPage} />
     </section>
 
     <LetterTraditions html={bundle.meta.traditionsHtml} />
@@ -69,8 +68,7 @@ const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [
       color: #2d2417;
     }
 
-    .letter-body-prose .letter-text {
-      display: contents;
+    .letter-body-prose {
       font-family: var(--font-serif);
       font-size: 1.06rem;
       line-height: 1.72;
@@ -403,25 +401,6 @@ const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [
         }
       };
 
-      const getPageContainer = (anchor) => {
-        let node = anchor.nextSibling;
-
-        while (node) {
-          if (node.nodeType === Node.ELEMENT_NODE) {
-            const element = node;
-            if (element instanceof HTMLElement && element.classList.contains("letter-text")) {
-              return element;
-            }
-          } else if (node.nodeType === Node.TEXT_NODE && node.textContent?.trim()) {
-            return null;
-          }
-
-          node = node.nextSibling;
-        }
-
-        return null;
-      };
-
       const isIgnoredNode = (node) => {
         if (node.nodeType === Node.TEXT_NODE) {
           return !node.textContent?.trim();
@@ -431,14 +410,30 @@ const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [
           return false;
         }
 
-        return node.classList.contains("lb-page") || node.classList.contains("page-line-probe");
+        return (
+          node.classList.contains("lb-page") ||
+          node.classList.contains("page-anchor") ||
+          node.classList.contains("page-line-probe")
+        );
       };
 
       const isLineBreakNode = (node) =>
         node instanceof HTMLBRElement && node.classList.contains("lb-line");
 
-      const getMeaningfulTopLevelNodes = (container) =>
-        Array.from(container.childNodes).filter((node) => !isIgnoredNode(node));
+      const getNextMeaningfulSibling = (node, { skipLineBreaks = false } = {}) => {
+        let current = node?.nextSibling ?? null;
+
+        while (current) {
+          if (isIgnoredNode(current) || (skipLineBreaks && isLineBreakNode(current))) {
+            current = current.nextSibling;
+            continue;
+          }
+
+          return current;
+        }
+
+        return null;
+      };
 
       const splitTextForProbe = (node) => {
         const index = node.textContent?.search(/\S/) ?? -1;
@@ -481,9 +476,7 @@ const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [
       };
 
       const classifyPageStart = (anchor, isFirstPage) => {
-        const container = getPageContainer(anchor);
-        const nodes = container ? getMeaningfulTopLevelNodes(container) : [];
-        const firstNode = nodes[0] ?? null;
+        const firstNode = getNextMeaningfulSibling(anchor);
         const startsWithLineBreak = isLineBreakNode(firstNode);
 
         const mode = startsWithLineBreak ? "line-break" : "inline-break";
@@ -492,12 +485,11 @@ const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [
 
         return {
           anchor,
-          container,
           mode,
           firstNode,
           firstContentNode:
             mode === "line-break"
-              ? nodes.find((node) => !isLineBreakNode(node)) ?? null
+              ? getNextMeaningfulSibling(firstNode, { skipLineBreaks: true })
               : firstNode
         };
       };
@@ -514,12 +506,6 @@ const allSidenotes = bundle ? bundle.pages.flatMap((page) => page.sidenotes) : [
           }
 
           const pageStart = classifyPageStart(anchor, anchor.id === firstPageAnchorId);
-          if (!pageStart.container) {
-            anchor.replaceChildren();
-            targets.set(anchor.id, anchor);
-            continue;
-          }
-
           const pageId = anchor.id;
           let target = anchor;
 

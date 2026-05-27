@@ -7,10 +7,6 @@
 }
 
 @layer components {
-  .letter-body-prose .letter-text {
-    display: contents;
-  }
-
   .letter-body-prose .page-anchor {
     display: inline;
     user-select: none;

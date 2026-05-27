@@ -53,15 +53,13 @@ export type SidenoteRecord = {
   html: string;
 };
 
-export type LetterPageData = {
-  page: string;
-  textHtml: string;
-  sidenotes: SidenoteRecord[];
-};
+export type SidenotesByPage = Record<string, SidenoteRecord[]>;
 
 export type LetterBundle = {
   meta: LetterMeta;
-  pages: LetterPageData[];
+  textHtml: string;
+  pages: string[];
+  sidenotesByPage: SidenotesByPage;
 };
 
 export type YearGroup = {
@@ -401,15 +399,13 @@ export function getLetterHref(letter: string): string {
 export async function getLetterBundle(letter: string): Promise<LetterBundle> {
   const letterDir = path.join(generatedRoot, "letters", letter);
   const meta = await readJsonFile<LetterMeta>(path.join(letterDir, "meta.json"));
-  const pages = await Promise.all(
-    meta.pages.map(async (page) => ({
-      page,
-      textHtml: await readTextFile(path.join(letterDir, page, "text.html")),
-      sidenotes: await readOptionalJsonFile<SidenoteRecord[]>(path.join(letterDir, page, "sidenotes.json"), [])
-    }))
+  const textHtml = await readTextFile(path.join(letterDir, "text.html"));
+  const sidenotesByPage = await readOptionalJsonFile<SidenotesByPage>(
+    path.join(letterDir, "sidenotes.json"),
+    {}
   );
 
-  return { meta, pages };
+  return { meta, textHtml, pages: meta.pages, sidenotesByPage };
 }
 
 export async function getLetterNeighbors(letter: string) {

@@ -31,8 +31,8 @@ the Python-based transformer.
 Per letter, the exporter writes:
 
 - `meta.json`
-- `<page>/text.html`
-- `<page>/sidenotes.json`
+- `text.html`
+- `sidenotes.json`
 
 At the generated root, the exporter also writes:
 
@@ -42,8 +42,12 @@ At the generated root, the exporter also writes:
 the generated letter artifacts. Failed runs replace the output with failure
 metadata so the Astro app can build a generic failure site.
 
-The page subfolder names come from the `index` values of the source `<page>` tags.
-Each page-level `sidenotes.json` entry still keeps its `page` metadata explicitly.
+`text.html` is a continuous letter-level stream. Source `<page>` tags become inline
+page markers in the rendered HTML, with matching `.page-anchor` and `.lb-page`
+elements for each source page index.
+
+`sidenotes.json` is keyed by source page index. Each sidenote entry still keeps its
+`page` metadata explicitly.
 
 `meta.json` contains the resolved letter metadata, page list, and the rendered
 letter-level `traditionsHtml`.

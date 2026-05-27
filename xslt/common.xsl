@@ -13,6 +13,7 @@
   </xsl:template>
 
   <xsl:template match="lb:page">
+    <span class="page-anchor" id="{concat('page-', @index)}">&#x200C;</span>
     <span class="lb-page" data-index="{@index}"></span>
   </xsl:template>
 

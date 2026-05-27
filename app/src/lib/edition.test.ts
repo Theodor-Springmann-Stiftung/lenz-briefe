@@ -7,6 +7,7 @@ import {
   getChronologicalDateKey,
   getEarliestDateBoundary,
   getFailureLetterIds,
+  getLetterBundle,
   getGeneratedRoot,
   getLetterNeighbors,
   getYearGroupDefinitions,
@@ -102,6 +103,17 @@ test("getChronologicalDateKey returns null when neither sent nor received has a 
 
 test("getGeneratedRoot defaults to the app generated directory", () => {
   assert.equal(getGeneratedRoot(), path.join(process.cwd(), "generated"));
+});
+
+test("getLetterBundle returns a continuous text stream with page-keyed sidenotes", async () => {
+  const bundle = await getLetterBundle("1");
+
+  assert.deepEqual(bundle.pages, bundle.meta.pages);
+  assert.match(bundle.textHtml, /class="page-anchor" id="page-1"/);
+  assert.match(bundle.textHtml, /class="lb-page" data-index="1"/);
+  assert.doesNotMatch(bundle.textHtml, /class="letter-text"/);
+  assert.deepEqual(Object.keys(bundle.sidenotesByPage), bundle.pages);
+  assert.ok(Array.isArray(bundle.sidenotesByPage["1"]));
 });
 
 test("getYearGroupDefinitions exposes the hardcoded year groups", () => {

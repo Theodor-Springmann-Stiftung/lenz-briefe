@@ -64,19 +64,6 @@ function serializeNode(node) {
   return serializer.serializeToString(node);
 }
 
-function serializeChildNode(node) {
-  if (node.nodeType === 3) {
-    return node.data;
-  }
-  if (node.nodeType === 4) {
-    return `<![CDATA[${node.data}]]>`;
-  }
-  if (node.nodeType === 8) {
-    return `<!--${node.data}-->`;
-  }
-  return serializer.serializeToString(node);
-}
-
 function createTimings() {
   const totals = new Map();
   const counts = new Map();
@@ -144,16 +131,6 @@ async function replaceDir(stagingDir, targetDir) {
 async function writeFile(targetPath, content) {
   await ensureDir(path.dirname(targetPath));
   await fs.writeFile(targetPath, content, "utf8");
-}
-
-async function removeFileIfExists(targetPath) {
-  try {
-    await fs.unlink(targetPath);
-  } catch (error) {
-    if (error?.code !== "ENOENT") {
-      throw error;
-    }
-  }
 }
 
 async function readXml(fileName) {
@@ -409,37 +386,10 @@ function collectSidenotePages(letterText) {
   return Array.from(pages).sort((a, b) => Number(a) - Number(b));
 }
 
-function splitLetterTextByPage(letterText, letter) {
-  const pageMap = new Map();
-  let currentPage = null;
-  let currentChunks = [];
-
-  for (const node of Array.from(letterText.childNodes)) {
-    if (node.nodeType === 1 && node.localName === "page") {
-      if (currentPage !== null) {
-        pageMap.set(
-          currentPage,
-          `<letterPage xmlns="${NS}" letter="${letter}" page="${currentPage}">${currentChunks.join("")}</letterPage>`
-        );
-      }
-      currentPage = String(getAttribute(node, "index"));
-      currentChunks = [serializeChildNode(node)];
-      continue;
-    }
-
-    if (currentPage !== null) {
-      currentChunks.push(serializeChildNode(node));
-    }
-  }
-
-  if (currentPage !== null) {
-    pageMap.set(
-      currentPage,
-      `<letterPage xmlns="${NS}" letter="${letter}" page="${currentPage}">${currentChunks.join("")}</letterPage>`
-    );
-  }
-
-  return pageMap;
+function collectLetterPages(letterText) {
+  return select("./l:page", letterText)
+    .map((node) => String(getAttribute(node, "index")))
+    .sort((a, b) => Number(a) - Number(b));
 }
 
 function buildSidenoteRecords(sidenotes, letter, page, htmlItems) {
@@ -525,7 +475,7 @@ async function exportEdition({ outDir }) {
     const letter = String(getAttribute(letterText, "letter"));
     const slug = slugifyLetter(letter);
     const letterDir = path.join(absoluteOutDir, "letters", letter);
-    const pageXmlMap = await timings.measure("splitLetterTextByPage", async () => splitLetterTextByPage(letterText, letter));
+    const pages = await timings.measure("collectLetterPages", async () => collectLetterPages(letterText));
 
     const traditionNode = traditionsByLetter.get(letter) ?? null;
     const hasTraditions = extractTraditionPresence(traditionNode);
@@ -556,34 +506,32 @@ async function exportEdition({ outDir }) {
       isDraft: false
     };
 
-    for (const [page, pageXml] of pageXmlMap.entries()) {
-      let textHtml;
-      try {
-        textHtml = await runStylesheet(
-          "letter-text",
-          {
-            sourceText: pageXml,
-            stylesheetParams: {
-              letter,
-              page
-            }
-          },
-          timings
-        );
-      } catch (error) {
-        throw normalizeFailure(error).withContext({ letter, page });
-      }
-      await timings.measure("writeFile:textHtml", async () => await writeFile(path.join(letterDir, page, "text.html"), textHtml + "\n"));
+    let textHtml;
+    try {
+      textHtml = await runStylesheet(
+        "letter-text",
+        {
+          sourceText: serializeNode(letterText),
+          stylesheetParams: {}
+        },
+        timings
+      );
+    } catch (error) {
+      throw normalizeFailure(error).withContext({ letter });
+    }
+    await timings.measure("writeFile:textHtml", async () => await writeFile(path.join(letterDir, "text.html"), textHtml + "\n"));
 
+    const sidenotesByPage = {};
+    for (const page of pages) {
       const sidenotes = await timings.measure("select:pageSidenotes", async () => select(`./l:sidenote[@page='${page}']`, letterText));
-      const sidenotesPath = path.join(letterDir, page, "sidenotes.json");
+      const records = buildSidenoteRecords(
+        sidenotes,
+        letter,
+        page,
+        Array.from({ length: sidenotes.length }, () => "")
+      );
+
       if (sidenotes.length > 0) {
-        const records = buildSidenoteRecords(
-          sidenotes,
-          letter,
-          page,
-          Array.from({ length: sidenotes.length }, () => "")
-        );
         let htmlItems;
         try {
           htmlItems = await Promise.all(
@@ -607,18 +555,18 @@ async function exportEdition({ outDir }) {
         records.forEach((record, index) => {
           record.html = htmlItems[index] ?? "";
         });
-        await timings.measure(
-          "writeFile:sidenotesJson",
-          async () =>
-            await writeFile(
-              sidenotesPath,
-              JSON.stringify(records, null, 2) + "\n"
-            )
-        );
-      } else {
-        await timings.measure("removeFile:sidenotesJson", async () => await removeFileIfExists(sidenotesPath));
       }
+
+      sidenotesByPage[page] = records;
     }
+    await timings.measure(
+      "writeFile:sidenotesJson",
+      async () =>
+        await writeFile(
+          path.join(letterDir, "sidenotes.json"),
+          JSON.stringify(sidenotesByPage, null, 2) + "\n"
+        )
+    );
 
     const sidenotePages = await timings.measure("collectSidenotePages", async () => collectSidenotePages(letterText));
     const hasSidenotes = sidenotePages.length > 0;
@@ -629,8 +577,8 @@ async function exportEdition({ outDir }) {
       hasText: true,
       hasTraditions,
       hasSidenotes,
-      pageCount: pageXmlMap.size,
-      pages: Array.from(pageXmlMap.keys()).sort((a, b) => Number(a) - Number(b)),
+      pageCount: pages.length,
+      pages,
       traditionsHtml
     };
     await timings.measure("writeFile:metaJson", async () => await writeFile(path.join(letterDir, "meta.json"), JSON.stringify(metaOutput, null, 2) + "\n"));
