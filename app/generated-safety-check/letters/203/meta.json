@@ -1,0 +1,88 @@
+{
+  "letter": "203",
+  "slug": "letter-203",
+  "sent": {
+    "date": {
+      "text": "Berka, Juli 1776",
+      "when": null,
+      "notBefore": "1776-07-01",
+      "notAfter": "1776-07-31",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "14",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Berka",
+        "resolved": {
+          "index": "14",
+          "name": "Berka",
+          "ref": "http://d-nb.info/gnd/4087284-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "37",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Friedrich Hildebrand von Einsiedel",
+        "resolved": {
+          "index": "37",
+          "name": "Friedrich Hildebrand von Einsiedel",
+          "vorname": "Friedrich Hildebrand von",
+          "nachname": "Einsiedel",
+          "komm": "einsiedel",
+          "ref": "http://d-nb.info/gnd/118681818"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": true,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "2"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"203\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 33, Nr. 70; Entwurf. Kärtchen mit Schmuckrand.\n\t\t\t</div>\n   </div>\n</section>"
+}

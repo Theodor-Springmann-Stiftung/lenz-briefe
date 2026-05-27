@@ -5,6 +5,7 @@ import os
 import re
 import shutil
 import subprocess
+import tempfile
 import time
 from collections import defaultdict
 from datetime import datetime, timezone
@@ -90,6 +91,36 @@ def serialize_child_node(node: Any) -> str:
 
 def ensure_dir(dir_path: Path) -> None:
     dir_path.mkdir(parents=True, exist_ok=True)
+
+
+def _is_strict_descendant(path: Path, parent: Path) -> bool:
+    try:
+        return path.relative_to(parent) != Path(".")
+    except ValueError:
+        return False
+
+
+def assert_safe_output_dir(dir_path: Path) -> Path:
+    absolute_dir = dir_path.resolve()
+    filesystem_root = Path(absolute_dir.anchor)
+    repo_root = ROOT_DIR.resolve()
+    temp_root = Path(tempfile.gettempdir()).resolve()
+
+    if absolute_dir == filesystem_root:
+        raise ValueError(f"Refusing to write transform output to filesystem root: {absolute_dir}")
+
+    if absolute_dir == repo_root:
+        raise ValueError(f"Refusing to write transform output to repository root: {absolute_dir}")
+
+    if absolute_dir == temp_root:
+        raise ValueError(f"Refusing to write transform output to system temp root: {absolute_dir}")
+
+    if not (_is_strict_descendant(absolute_dir, repo_root) or _is_strict_descendant(absolute_dir, temp_root)):
+        raise ValueError(
+            f"Refusing to write transform output outside the repository or system temp directory: {absolute_dir}"
+        )
+
+    return absolute_dir
 
 
 def reset_dir(dir_path: Path) -> None:

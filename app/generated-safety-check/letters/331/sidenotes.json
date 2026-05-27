@@ -1,0 +1,16 @@
+{
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [
+    {
+      "id": "letter-331-page-4-sidenote-1",
+      "order": 1,
+      "letter": "331",
+      "page": "4",
+      "pos": "left",
+      "annotation": "am linken Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-331-page-4-sidenote-1\" data-letter=\"331\" data-page=\"4\" data-pos=\"left\" data-annotation=\"am linken Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Wenn Sie meinen Freund Hartknoch sehen, so grüssen Sie ihn von mir und sagen Sie ihm, daß wenn er erst Gesundheit aus Ihren Gegenden geholt, sich ihm die weissen Bären die er sich vielleicht in unsern Gegenden hinsetzt, noch wol einmal auf eine Art entzaubern könnten, die ihn überführte, daß wahre Schätzung des Verdienstes nur im Vaterlande (das nicht immer <span class=\"aq\">native soil</span> zu seyn braucht) möglich sey –</div>\n</aside>"
+    }
+  ]
+}

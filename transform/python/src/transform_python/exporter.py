@@ -13,6 +13,7 @@ from .common import (
     CACHE_DIR,
     NSMAP,
     Timings,
+    assert_safe_output_dir,
     ensure_dir,
     get_attribute,
     get_git_metadata_safe,
@@ -352,7 +353,7 @@ def export_edition(out_dir: str) -> dict[str, Any]:
 
 
 def run_export(out_dir: str, generator: str = "python") -> dict[str, Any]:
-    absolute_out_dir = Path(out_dir).resolve()
+    absolute_out_dir = assert_safe_output_dir(Path(out_dir))
     ensure_dir(absolute_out_dir.parent)
     staging_dir = Path(tempfile.mkdtemp(prefix=f"{absolute_out_dir.name}-", dir=str(absolute_out_dir.parent)))
     source = get_git_metadata_safe()

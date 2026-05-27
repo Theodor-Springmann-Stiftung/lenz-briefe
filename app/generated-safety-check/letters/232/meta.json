@@ -1,0 +1,90 @@
+{
+  "letter": "232",
+  "slug": "letter-232",
+  "sent": {
+    "date": {
+      "text": "Berka, Anfang September 1776",
+      "when": null,
+      "notBefore": "1776-09-01",
+      "notAfter": "1776-09-03",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "14",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Berka",
+        "resolved": {
+          "index": "14",
+          "name": "Berka",
+          "ref": "http://d-nb.info/gnd/4087284-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "30",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Kochberg",
+        "resolved": {
+          "index": "30",
+          "name": "Kochberg",
+          "ref": null
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "41",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Charlotte von Stein",
+        "resolved": {
+          "index": "41",
+          "name": "Charlotte von Stein",
+          "vorname": "Charlotte von",
+          "nachname": "Stein",
+          "komm": "stein",
+          "ref": "http://d-nb.info/gnd/118617222"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": true,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 4,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"232\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tKraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 28. Wohl Entwurf.\n\t\t\t</div>\n   </div>\n   <div class=\"tradition-app\" data-ref=\"11\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tSie sprechen davon, mich meiner Einsamkeit zu entreißen – und geben mir dafür \n\t\t\t\tebenso beredte Gründe an. Haben Sie, Madame! als Sie diese Zeilen schrieben, \n\t\t\t\tauch bedacht, welchen Eindruck sie auf mich machen würden? Auf mich, der keine \n\t\t\t\tandere Erleichterung von den Übeln, die mich niederdrücken, kennt, als diese vor \n\t\t\t\tdem Universum zu verstecken. Warum mich ans Licht zwingen, um dort eine abscheuliche \n\t\t\t\tRolle zu spielen, selbst Menschen gegenüber, an denen mein Herz früher größten \n\t\t\t\tAnteil nahm. Es ist unmöglich, Ihnen die ganze Tragik meiner Lage zu erläutern, \n\t\t\t\tSie werden etwas davon aus der Widersprüchlichkeit all meiner Handlungen \n\t\t\t\terraten, obgleich meine verderbten – Sie mögen mich für ebenso verderbt \n\t\t\t\thalten – Empfindungen sich niemals darauf reduzieren lassen, dass sie sich \n\t\t\t\twidersprechen. Geben Sie zu, dass es nichts Grausameres gibt, als gegen sein \n\t\t\t\tHerz zu handeln; ich bin aber durch die Taten eben der Personen dazu gezwungen, \n\t\t\t\tdie sich früher meine Freunde nannten und die unter diesem Vorwand meinen, sich \n\t\t\t\talles gegen mich erlauben zu können. \n\t\t\t\t\n\t\t\t\tVerraten Sie mich, falls Sie darin etwas finden, das Ihre Liebe zur Wahrheit und \n\t\t\t\tIhren Hass auf das Laster befriedigt, den ich Ihnen persönlich verkünde verschaffen \n\t\t\t\tSie sich dieses Vergnügen der großen Seelen, dazu beizutragen, dass die eine über \n\t\t\t\tden anderen triumphiert, vor allem bei so glänzenden Gelegenheiten, bei denen der \n\t\t\t\tEifer, die eine gerettet und den anderen zerstört zu haben, Ihnen als Trophäe beim \n\t\t\t\tganzen Publikum und vielleicht sogar der Nachwelt dienen wird. Ich liefere Ihnen \n\t\t\t\tdie Waffen dazu, ich öffne Ihnen mein Herz. Ich erkläre mich für schuldig an all den \n\t\t\t\tStreichen, wegen derer Sie mir am letzten Abend so heftige Vorwürfe machten, ich \n\t\t\t\twerde Ihnen sogar nichts weniger als einen Wandel meines Verhaltens erklären, ich \n\t\t\t\twerde es standhaft beibehalten, solange die Gründe, die mich dazu zwingen, nicht \n\t\t\t\tverschwinden wollen. Sie sollten sich also hüten, mir eine Gelegenheit zu liefern, \n\t\t\t\tunter dem äußeren Schein von Unschuld und Redlichkeit Unheil anzurichten. Ich flehe \n\t\t\t\tSie an, warum soll ich mich am Hof produzieren? Warum mir so reizvolle Anblicke \n\t\t\t\teröffnen, wenn ich dazu entschlossen war, auf dem Land zu bleiben. Warum Anstoß bei \n\t\t\t\tPersonen erregen, die mich bis jetzt vom Hofe fernhalten wollten, um vor meinen \n\t\t\t\tkleinen Tricks und Streichen sicher zu sein? Die, um meinen Streichen zuvorzukommen \n\t\t\t\toder vielleicht um mich zu bessern, all ihre Geringschätzung aufgeboten haben, kleine \n\t\t\t\tTricks ihrer Art, oft noch feiner oder wenigstens besser versteckt, freundlicher und \n\t\t\t\tbesser angebrachter Spott, und die meine gefällige Aufheiterung ihrer Mattheit offen \n\t\t\t\tgesagt von Herzen ausgenutzt haben. Ich habe mit ihnen Blindekuh gespielt und aus zu \n\t\t\t\tgroßer Freundschaft zu mir haben sie vergessen, dass ich mir die Augen selbst verbunden \n\t\t\t\thabe und versuchen, wenn auch vergeblich, sie mir noch zu fesseln. Es ist nur natürlich, \n\t\t\t\tdass nichts ihrem Stolz, auf den ich keine Rücksicht mehr nehmen werde, mehr schmeicheln \n\t\t\t\tkann. Es ist leicht vorauszusehen, dass dieser Verhaltenswandel ihnen kaum zusagen wird, \n\t\t\t\tnachdem ihnen mein bei der Ankunft vorgetäuschtes Verhalten so viel Vorteil verschafft hat. \n\t\t\t\tIch kann dieses Verhalten jedoch keinesfalls fortsetzen, obwohl ihre Freundschaft mich \n\t\t\t\tdavon überzeugen will und welche Ehre ich auch darin setze, einem Hof zu gefallen, der \n\t\t\t\tgerade die Blicke ganz Deutschlands und sogar unserer Nachbarn auf sich zieht, ich habe \n\t\t\t\tEhrgeiz genug, nicht mehr den Spaßvogel zu geben. Mit diesen Gefühlen kann ich mich nicht \n\t\t\t\tzurückhalten, dort eine neue Laufbahn zu beginnen.</div>\n   </div>\n</section>"
+}

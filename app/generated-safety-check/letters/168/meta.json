@@ -1,0 +1,88 @@
+{
+  "letter": "168",
+  "slug": "letter-168",
+  "sent": {
+    "date": {
+      "text": "Weimar, Ende April 1776",
+      "when": null,
+      "notBefore": "1776-04-27",
+      "notAfter": "1776-04-30",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "15",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Gotha",
+        "resolved": {
+          "index": "15",
+          "name": "Gotha",
+          "ref": "http://d-nb.info/gnd/4021652-4"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "14",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Friedrich Wilhelm Gotter",
+        "resolved": {
+          "index": "14",
+          "name": "Friedrich Wilhelm Gotter",
+          "vorname": "Friedrich Wilhelm",
+          "nachname": "Gotter",
+          "komm": "gotter",
+          "ref": "http://d-nb.info/gnd/118540939"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "2"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"168\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tKraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 7. Handschriftlicher Vermerk auf dem Umschlag „franco“ und „13“; rotes Siegel. \n\t\t\t</div>\n   </div>\n</section>"
+}

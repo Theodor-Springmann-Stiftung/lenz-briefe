@@ -1,0 +1,94 @@
+{
+  "letter": "362",
+  "slug": "letter-362",
+  "sent": {
+    "date": {
+      "text": "Moskau, 1789",
+      "when": null,
+      "notBefore": "1789-01-01",
+      "notAfter": "1789-12-31",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "50",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Moskau",
+        "resolved": {
+          "index": "50",
+          "name": "Moskau",
+          "ref": "http://d-nb.info/gnd/4074987-3"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "46",
+        "cert": null,
+        "erschlossen": null,
+        "label": "St. Petersburg",
+        "resolved": {
+          "index": "46",
+          "name": "St. Petersburg",
+          "ref": "http://d-nb.info/gnd/4267026-3"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "72",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Graf Friedrich von Anhalt",
+        "resolved": {
+          "index": "72",
+          "name": "Graf Friedrich von Anhalt",
+          "vorname": "Friedrich",
+          "nachname": "Graf von Anhalt",
+          "komm": "von anhalt",
+          "ref": "http://d-nb.info/gnd/102638403"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 8,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"362\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 36.\n\t\t\t</div>\n   </div>\n</section>"
+}

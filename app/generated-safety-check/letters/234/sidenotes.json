@@ -1,0 +1,16 @@
+{
+  "1": [
+    {
+      "id": "letter-234-page-1-sidenote-1",
+      "order": 1,
+      "letter": "234",
+      "page": "1",
+      "pos": "left",
+      "annotation": "am linken Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-234-page-1-sidenote-1\" data-letter=\"234\" data-page=\"1\" data-pos=\"left\" data-annotation=\"am linken Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">\nIch bin schon seit dem Aprill in Weym. Bitte mir doch die Nachrichten <span class=\"ul\">sobald es möglich,</span> gütigst zukommen zu lassen. Von meinem Grosvater erwähnen Sie nicht, wenn ich bitten darf.</div>\n</aside>"
+    }
+  ],
+  "2": [],
+  "3": [],
+  "4": []
+}

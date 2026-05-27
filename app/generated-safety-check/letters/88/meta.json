@@ -1,0 +1,87 @@
+{
+  "letter": "88",
+  "slug": "letter-088",
+  "sent": {
+    "date": {
+      "text": "Straßburg, Dezember 1775",
+      "when": null,
+      "notBefore": "1775-12-01",
+      "notAfter": "1775-12-31",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "16",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Göttingen",
+        "resolved": {
+          "index": "16",
+          "name": "Göttingen",
+          "ref": "http://d-nb.info/gnd/4021477-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "20",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Heinrich Christian Boie",
+        "resolved": {
+          "index": "20",
+          "name": "Heinrich Christian Boie",
+          "vorname": "Heinrich Christian",
+          "nachname": "Boie",
+          "komm": "boie",
+          "ref": "http://d-nb.info/gnd/118661078"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"88\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tKraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 3.\n\t\t\t</div>\n   </div>\n</section>"
+}

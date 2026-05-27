@@ -1,0 +1,90 @@
+{
+  "letter": "359",
+  "slug": "letter-359",
+  "sent": {
+    "date": {
+      "text": "Moskau, wahrscheinlich Ende 1788",
+      "when": null,
+      "notBefore": null,
+      "notAfter": "1788-12-31",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "50",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Moskau",
+        "resolved": {
+          "index": "50",
+          "name": "Moskau",
+          "ref": "http://d-nb.info/gnd/4074987-3"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "46",
+        "cert": null,
+        "erschlossen": null,
+        "label": "St. Petersburg",
+        "resolved": {
+          "index": "46",
+          "name": "St. Petersburg",
+          "ref": "http://d-nb.info/gnd/4267026-3"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "69",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Lawrent Brouwer",
+        "resolved": {
+          "index": "69",
+          "name": "Lawrent Brouwer",
+          "vorname": "Lawrent",
+          "nachname": "Brouwer",
+          "komm": "brouwer",
+          "ref": null
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 4,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"359\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tBerlin, Staatsbibliothek zu Berlin – Preußischer Kulturbesitz, NL Lenz, Bd. 2, (Nr. 235), Bl. 62–63.\n\t\t\t</div>\n   </div>\n   <div class=\"tradition-app\" data-ref=\"11\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tMein Wohltäter! \n\t\t\t\tDie Reise, die Herr Reimann ohne mein Wissen und ohne mir zu erlauben, ihn zu \n\t\t\t\tbegleiten, unternommen hat, gibt mir ein wenig Hoffnung; denn ehrlich gesagt war \n\t\t\t\tmein Herz recht bedrückt. Man behauptet hier, dass Ihre Hoheit Madame die \n\t\t\t\tGroßherzogin sich sehr selten zu lachen erlaubt: dass sie aber bei der anmaßenden \n\t\t\t\tForderung der Schweden, die ganze Armee solle ihre Waffen übergeben und in diesem \n\t\t\t\tFall verpflichte sich der Herzog von Suderm., mit den Türken über Frieden zu \n\t\t\t\tverhandeln, sich nicht habe enthalten können, laut herauszulachen. Diese Episode \n\t\t\t\that mir den Stoff für ein kleines Drama geliefert, das ich dem einzigen Zensor \n\t\t\t\tvorlege, den ich kenne. –\n\t\t\t\tWeinender Czarlot und lachender Czarlot, kleines Drama über den Krieg der Schweden \n\t\t\t\tLachender Czarlot: Man sagt, dass unsere ganze Armee die Waffen niedergelegt hat.\n\t\t\t\tWeinender Czarlot: Ja, Mama, hiiiii.\n\t\t\t\tLachender Czarlot: Und die Schweden stehen weiter unter den Waffen\n\t\t\t\tWeinender Czarlot: Ja da Mama, hiiiii\n\t\t\t\tLachender Czarlot: Aber was gibt das? Unsere ganze Armee wird gefangengenommen: und \n\t\t\t\tmein Gatte, weit entfernt, die Schweden zu entwaffnen, wird ihnen noch neue Waffen \n\t\t\t\tliefern.\n\t\t\t\tWeinender Czarlot: Das gibt eine schöne Geschichte, Mama hihiiiii\n\t\t\t\tCzarlot (ausbrechend): Aber habt ihr nicht gehört, dass die Waffen der Schweden Scheren \n\t\t\t\tund Maßbänder sind und dass sie gerade wie die Wahnsinnigen daran arbeiten, unsere ganze \n\t\t\t\tArmee und selbst meinen Gatten mit Hosen zu versorgen\n\t\t\t\tWeinender Czarlot: Was soll das bedeuten, hiiiii – unsere ganze Armee entwaffnet\n\t\t\t\tLachender Czarlot: Aber begreifst Du Verrückte nicht, dass man ihnen keine Kleider machen\n\t\t\t\tkann, während sie bewaffnet sind und kämpfen. Wenn nicht genug Scheren da sind, wird man \n\t\t\t\twelche aus Tula kommen lassen\n\t\t\t\tWeinender Czarlot: Aber der Herzog von Sudermannland will uns unser Land wegnehmen, das ist \n\t\t\t\tnicht zum Lachen!\n\t\t\t\t\n\t\t\t\tLachender Czarlot: Aber er gibt uns dafür Tuch und Eisen und dient selbst in unserer Armee, \n\t\t\t\treicht das nicht? Er ist ein von Kopf bis Fuß bewaffneter Gefangener.\n\t\t\t\tWeinender Czarlot: Hiiiii.\n\t\t\t\tLachender Czarlot: Du bist ja verrückt, hättest Du dafür Blut vergießen wollen. Es reicht \n\t\t\t\tjetzt mit deinem Geheule\n\t\t\t\tWeinender Czarlot: Aber unser Land, unser Land\n\t\t\t\tLachender Czarlot: Du Verrückte, unser Land gehört weiter uns: Wir leihen es einem Freund, \n\t\t\t\tder zu wenig davon hat, dafür aber zu viele Einwohner und Handwerker, die kein Brot haben. \n\t\t\t\tMögen sie es in Russland suchen\n\t\t\t\tWeinender Czarlot: Aber letztendlich werden wir so zu Schweden\n\t\t\t\tLachender Czarot: Du Verrückte, die Schweden werden keine Russen werden und die Russen keine \n\t\t\t\tSchweden, aber sie werden von nun an in guter Freundschaft miteinander leben.\n\t\t\t\tBote (ganz außer Atem): Oh weh oh weh, die Schweden haben unsere ganze Armee entwaffnet, und \n\t\t\t\tanstatt sich zu verteidigen, sind sie bis aufs Hemd ausgeplündert. Man ordne öffentliche \n\t\t\t\tGebete an\n\t\t\t\tWeinender Czarlot (lässt sich in einen Sessel fallen): Nun ist es also geschehen\n\t\t\t\tLachender Czarlot: Aber sie werden kommen und auch uns ausplündern.\n\t\t\t\tWeinender Czarlot: Ich sterbe!\n\t\t\t\tIch hatte wirklich mehr Recht als jeder andere, die Rolle des weinenden Czarlot zu spielen, \n\t\t\t\tdie mir vielleicht gar nicht schlecht gelungen ist, da ich meine Verhältnisse in ihrem ganzen \n\t\t\t\tWert und Gewicht kenne. Das bedrückte mich, und ich gestehe, dass ich, wäre ich der Mann, \n\t\t\t\tmeinen werten Landsleuten männlichen Geschlechts meine Gefühle einzuflößen, sie nicht so schnell \n\t\t\t\tentwaffnen lassen hätte. Sie haben Schneider ganz wie die Herren Schweden, die übrigens im \n\t\t\t\tganzen Reich Brot finden werden, ohne uns allzu sehr zu belästigen. Der beiliegende Brief gibt \n\t\t\t\tvielleicht Aufschluss darüber; er war an den Grafen von Anhalt adressiert und wenn mein Wohltäter \n\t\t\t\tihn ihm zukommen lassen kann, wird das eine schwache Huldigung sein, die unsere Herzen heimlich \n\t\t\t\tdem legitimen Erbe der Rechte Peters des Großen entgegenbringen. Er hätte uns ein Tübingen geben \n\t\t\t\tkönnen. \n\t\t\t\t\n\t\t\t\tMan hat mir berichtet, dass der auf der Insel Rügen geborene Herr Gadebusch gestorben ist; ich \n\t\t\t\tbedaure das wegen der livländischen Annalen, die er mir gütigerweise geschickt hat, obwohl ich \n\t\t\t\tdas Unglück hatte, dass die weinenden Herren Czarlots aus Moskau mich fast all meiner Bücher \n\t\t\t\tberaubt haben. Das wird mich nicht daran hindern, irgendeine Lektüre zu suchen, die mir Stoff \n\t\t\t\tfür die Werke liefern könnte, die ich den jungen Hoheiten bei der ersten günstigen Gelegenheit \n\t\t\t\tzu Füßen legen werde.\n\t\t\t\tLenz.</div>\n   </div>\n</section>"
+}

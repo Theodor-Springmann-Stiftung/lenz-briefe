@@ -1,0 +1,87 @@
+{
+  "letter": "245",
+  "slug": "letter-245",
+  "sent": {
+    "date": {
+      "text": "Weimar, Oktober 1776",
+      "when": null,
+      "notBefore": "1776-10-01",
+      "notAfter": "1776-10-31",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "26",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Christoph Martin Wieland",
+        "resolved": {
+          "index": "26",
+          "name": "Christoph Martin Wieland",
+          "vorname": "Christoph Martin",
+          "nachname": "Wieland",
+          "komm": "wieland",
+          "ref": "http://d-nb.info/gnd/118632477"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "30",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Kochberg",
+        "resolved": {
+          "index": "30",
+          "name": "Kochberg",
+          "ref": null
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"245\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tJohann Gottfried Röderer, von Straßburg und seine Freunde. [Hrsg. von August Stöber]\n\t\t\t\tNachtrag von\n\t\t\t\tBriefen an Röderer und Lenz: von Lavater, Schlosser, Blessig, Pfenninger und Wieland, nebst\n\t\t\t\tbisher\n\t\t\t\tungedruckten Aufsätzen von Lenz (Für die Besitzer der Alsatia vom J. 1873). Colmar 1874, S.\n\t\t\t\t20f.\n\t\t\t</div>\n   </div>\n</section>"
+}

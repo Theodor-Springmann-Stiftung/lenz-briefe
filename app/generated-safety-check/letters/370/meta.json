@@ -1,0 +1,88 @@
+{
+  "letter": "370",
+  "slug": "letter-370",
+  "sent": {
+    "date": {
+      "text": "Moskau, wahrscheinlich November 1790",
+      "when": null,
+      "notBefore": "1790-11-01",
+      "notAfter": "1790-11-30",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "50",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Moskau",
+        "resolved": {
+          "index": "50",
+          "name": "Moskau",
+          "ref": "http://d-nb.info/gnd/4074987-3"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "44",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Riga",
+        "resolved": {
+          "index": "44",
+          "name": "Riga",
+          "ref": "http://d-nb.info/gnd/4050042-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "4",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Christian David Lenz",
+        "resolved": {
+          "index": "4",
+          "name": "Christian David Lenz",
+          "vorname": "Christian David",
+          "nachname": "Lenz",
+          "komm": "chd-lenz",
+          "ref": "https://d-nb.info/gnd/12021363X"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "2"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"370\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 27.\n\t\t\t</div>\n   </div>\n</section>"
+}

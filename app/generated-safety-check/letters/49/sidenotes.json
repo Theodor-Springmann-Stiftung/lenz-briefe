@@ -1,0 +1,33 @@
+{
+  "1": [
+    {
+      "id": "letter-049-page-1-sidenote-1",
+      "order": 1,
+      "letter": "49",
+      "page": "1",
+      "pos": "left",
+      "annotation": "am linken Rand der ersten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-049-page-1-sidenote-1\" data-letter=\"49\" data-page=\"1\" data-pos=\"left\" data-annotation=\"am linken Rand der ersten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">\n<span class=\"fn\" data-index=\"5\"><span class=\"anchor\">#</span></span> Der Kurländer sitzt schon lang unter seinen Hausgöttern und ist auf dem Wege gestorben und wieder auferstanden. Ich war wirklich auf den Punkt ihn zu begleiten, aber all meine Anstalten wurden zu Wasser. Doch trag ich mich immer noch mit einer Ausschweiffung nach Deutschland</div>\n</aside>"
+    }
+  ],
+  "2": [
+    {
+      "id": "letter-049-page-2-sidenote-1",
+      "order": 1,
+      "letter": "49",
+      "page": "2",
+      "pos": "left",
+      "annotation": "am linken Rand der zweiten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-049-page-2-sidenote-1\" data-letter=\"49\" data-page=\"2\" data-pos=\"left\" data-annotation=\"am linken Rand der zweiten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">\nGrüssen Sie mir Ihre verehrungswürdige Schwester und den lieben Doktor. Wenn Sie aber nach Lyon schreiben, oder Himmel führe Ihre Hand alsdenn, meiner im Besten zu gedenken. Kann ich nicht erfahren wenn sie zurückkommen. Lieber Freund! wären doch alle Oerter in der Welt so nah bey einander als in Shakespears Stücken! Lion, Strasburg, Gotha – ich denk’, ich erwarte Sie alle.</div>\n</aside>"
+    },
+    {
+      "id": "letter-049-page-2-sidenote-2",
+      "order": 2,
+      "letter": "49",
+      "page": "2",
+      "pos": "bottom",
+      "annotation": "am oberen Rand der zweiten Seite, spiegelverkehrt",
+      "html": "<aside class=\"sidenote\" id=\"letter-049-page-2-sidenote-2\" data-letter=\"49\" data-page=\"2\" data-pos=\"bottom\" data-annotation=\"am oberen Rand der zweiten Seite, spiegelverkehrt\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">\nWas sagen Sie zu all dem Gelärms übern Werther? Ist das erhört einen Roman wie eine Predigt zu beurtheilen. O Deutschland mit deinem Geschmack!</div>\n</aside>"
+    }
+  ]
+}

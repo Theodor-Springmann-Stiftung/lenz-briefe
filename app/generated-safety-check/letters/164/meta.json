@@ -1,0 +1,91 @@
+{
+  "letter": "164",
+  "slug": "letter-164",
+  "sent": {
+    "date": {
+      "text": "Weimar, April 1776",
+      "when": null,
+      "notBefore": "1776-04-01",
+      "notAfter": "1776-04-30",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "25",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Dessau",
+        "resolved": {
+          "index": "25",
+          "name": "Dessau",
+          "ref": "http://d-nb.info/gnd/4011536-7"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "34",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Friedrich Simon",
+        "resolved": {
+          "index": "34",
+          "name": "Johann Friedrich Simon",
+          "vorname": "Johann Friedrich",
+          "nachname": "Simon",
+          "komm": "simon",
+          "ref": "http://d-nb.info/gnd/1076372430"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": true,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 5,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"164\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tTallinn, Eesti Ajaloomuuseum, Fondi 61, Nimistu 1, S/Ü 23, Bl. 37–39. Anfang des Briefes verschollen. Der vollständige Brief umfasste sechs Quartseiten. Es handelt sich wahrscheinlich um einen Entwurf.\n\t\t\t</div>\n   </div>\n</section>"
+}

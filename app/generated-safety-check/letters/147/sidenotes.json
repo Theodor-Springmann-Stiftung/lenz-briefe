@@ -1,0 +1,14 @@
+{
+  "1": [],
+  "2": [
+    {
+      "id": "letter-147-page-2-sidenote-1",
+      "order": 1,
+      "letter": "147",
+      "page": "2",
+      "pos": "left",
+      "annotation": "am linken Rand der zweiten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-147-page-2-sidenote-1\" data-letter=\"147\" data-page=\"2\" data-pos=\"left\" data-annotation=\"am linken Rand der zweiten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">\n<span class=\"pe\">Mein Antheil war kein andrer als den jede edle Seele an dem Schicksal eines Frauenzimmers wie das nehmen mußte: Ein Teuffel müste ich seyn ruhig zuzusehen, daß sie unglücklich seyn soll</span></div>\n</aside>"
+    }
+  ]
+}

@@ -97,6 +97,36 @@ async function ensureDir(dir) {
   await fs.mkdir(dir, { recursive: true });
 }
 
+function isStrictDescendant(target, parent) {
+  const relative = path.relative(parent, target);
+  return relative !== "" && !relative.startsWith("..") && !path.isAbsolute(relative);
+}
+
+function assertSafeOutputDir(dir) {
+  const absoluteDir = path.resolve(dir);
+  const filesystemRoot = path.parse(absoluteDir).root;
+  const repoRoot = path.resolve(ROOT_DIR);
+  const tempRoot = path.resolve(os.tmpdir());
+
+  if (absoluteDir === filesystemRoot) {
+    throw new Error(`Refusing to write transform output to filesystem root: ${absoluteDir}`);
+  }
+
+  if (absoluteDir === repoRoot) {
+    throw new Error(`Refusing to write transform output to repository root: ${absoluteDir}`);
+  }
+
+  if (absoluteDir === tempRoot) {
+    throw new Error(`Refusing to write transform output to system temp root: ${absoluteDir}`);
+  }
+
+  if (!isStrictDescendant(absoluteDir, repoRoot) && !isStrictDescendant(absoluteDir, tempRoot)) {
+    throw new Error(`Refusing to write transform output outside the repository or system temp directory: ${absoluteDir}`);
+  }
+
+  return absoluteDir;
+}
+
 async function resetDir(dir) {
   await fs.rm(dir, { recursive: true, force: true });
   await fs.mkdir(dir, { recursive: true });
@@ -613,7 +643,7 @@ async function exportEdition({ outDir }) {
 }
 
 async function runExport({ outDir, generator = "js" }) {
-  const absoluteOutDir = path.resolve(outDir);
+  const absoluteOutDir = assertSafeOutputDir(outDir);
   await ensureDir(path.dirname(absoluteOutDir));
   const stagingDir = await fs.mkdtemp(path.join(path.dirname(absoluteOutDir), `${path.basename(absoluteOutDir)}-`));
   const source = await getGitMetadataSafe();

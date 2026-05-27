@@ -1,0 +1,78 @@
+{
+  "letter": "327",
+  "slug": "letter-327",
+  "sent": {
+    "date": {
+      "text": "St. Petersburg, 27. März 1780",
+      "when": "1780-03-27",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "46",
+        "cert": null,
+        "erschlossen": null,
+        "label": "St. Petersburg",
+        "resolved": {
+          "index": "46",
+          "name": "St. Petersburg",
+          "ref": "http://d-nb.info/gnd/4267026-3"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [],
+    "persons": [
+      {
+        "ref": "64",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Friederike Brion",
+        "resolved": {
+          "index": "64",
+          "name": "Friederike Brion",
+          "vorname": "Friederike",
+          "nachname": "Brion",
+          "komm": "brion",
+          "ref": "http://d-nb.info/gnd/118515500"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 4,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"327\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 19 (Der Brief erreicht\n\t\t\t\tFriederike\n\t\t\t\tBrion nicht).\n\t\t\t</div>\n   </div>\n</section>"
+}

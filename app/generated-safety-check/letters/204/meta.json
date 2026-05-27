@@ -1,0 +1,89 @@
+{
+  "letter": "204",
+  "slug": "letter-204",
+  "sent": {
+    "date": {
+      "text": "Berka, Anfang Juli 1776",
+      "when": null,
+      "notBefore": "1776-07-03",
+      "notAfter": "1776-07-10",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "14",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Berka",
+        "resolved": {
+          "index": "14",
+          "name": "Berka",
+          "ref": "http://d-nb.info/gnd/4087284-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "32",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Henriette von Oberkirch geb. Waldner von Freundstein",
+        "resolved": {
+          "index": "32",
+          "name": "Henriette von Oberkirch geb. Waldner von Freundstein",
+          "vorname": "Henriette-Luise von",
+          "nachname": "Oberkirch",
+          "komm": "oberkirch",
+          "ref": "http://d-nb.info/gnd/124494692"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": true,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 3,
+  "pages": [
+    "1",
+    "2",
+    "3"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"204\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 33, Nr. 3. Entwurf.\n\t\t\t</div>\n   </div>\n   <div class=\"tradition-app\" data-ref=\"11\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tHier, Madame! ist nun die Fortsetzung des Gedichts von Herrn Wieland. Ich nehme \n\t\t\t\tmir die Freiheit, sie Ihnen selbst vorzulegen, um Sie nicht in die Verlegenheit zu \n\t\t\t\tbringen, ihm aus Gefälligkeit etwas Nettes sagen zu müssen. Gott gebe, dass Sie genug \n\t\t\t\tVertrauen zu mir haben, mir mitzuteilen, was Sie über das Ende dieses Gedichts zu \n\t\t\t\tsagen haben, ich würde sicherlich nur mit klösterlicher Diskretion davon Gebrauch \n\t\t\t\tmachen. \n\t\t\t\t\n\t\t\t\tMein Freund Goethe wird bei seiner neuen Anstellung so sehr mit Beschäftigungen überladen, \n\t\t\t\tdass er sich nicht einmal die anmutige Art zunutze machen kann, mit der Sie sich an ihn \n\t\t\t\terinnert haben. Er macht Ihnen stattdessen seine ergebensten Komplimente und wartet auf \n\t\t\t\tdie rechte Stimmung, um Ihnen irgendein neues Erzeugnis aus seiner Feder zukommen zu lassen. \n\t\t\t\tIch füge die Abschrift eines Porträts der liebenswerten Türkin bei, deren Schicksal in der \n\t\t\t\tStella Sie so sehr interessiert hat. Sie liegt neben ihrem Gemahl, dem Graf von Gleichen, \n\t\t\t\tund seiner Frau in Erfurt begraben. \n\t\t\t\t\n\t\t\t\tIch würde hier gerne etwas aus der deutschen Literatur beifügen, das mir Ihrer Aufmerksamkeit \n\t\t\t\twürdig erschiene, aber zum Unglück der Herren Buchhändler dieser Messe habe ich nichts finden \n\t\t\t\tkönnen. Auch ist an unserem Hof gerade nur englische Lektüre in Mode. Ich habe tatsächlich \n\t\t\t\tdie Beobachtung gemacht, dass diese Sprache für die Damen weniger schwer zu erlernen ist, \n\t\t\t\tals man sich vorstellt, vor allem für diejenigen, die das Deutsche und das Französische \n\t\t\t\tbeherrschen, woraus das Englische zusammengesetzt ist. \n\t\t\t\t\n\t\t\t\tHerr Lavater hat mir den ersten Versuch Ihres gestochenen Porträts geschickt, der mir besser \n\t\t\t\tgefällt als derjenige, den mir Fräulein König gütigerweise zugesendet hat. Ich sehe jedoch, \n\t\t\t\tdass kein Künstler vermag, diese Züge wiederzugeben, die in Wahrheit nur für die Vorstellung \n\t\t\t\tsind.</div>\n   </div>\n</section>"
+}

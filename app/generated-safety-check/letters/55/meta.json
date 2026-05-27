@@ -1,0 +1,101 @@
+{
+  "letter": "55",
+  "slug": "letter-055",
+  "sent": {
+    "date": {
+      "text": "Straßburg, 13. Juli 1775",
+      "when": "1775-07-13",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      },
+      {
+        "ref": "15",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Luise König",
+        "resolved": {
+          "index": "15",
+          "name": "Luise König",
+          "vorname": "Luise",
+          "nachname": "König",
+          "komm": "könig",
+          "ref": null
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "21",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Bückeburg",
+        "resolved": {
+          "index": "21",
+          "name": "Bückeburg",
+          "ref": "http://d-nb.info/gnd/4008715-3"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "16",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Karoline von Herder",
+        "resolved": {
+          "index": "16",
+          "name": "Karoline von Herder",
+          "vorname": "Karoline von",
+          "nachname": "Herder",
+          "komm": "herder",
+          "ref": "http://d-nb.info/gnd/118549561"
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"55\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tJohannes Froitzheim: Zu Strassburgs Sturm- und Drangperiode 1770–1776. Strassburg 1888, S.\n\t\t\t\t82f.\n\t\t\t</div>\n   </div>\n</section>"
+}

@@ -1,0 +1,13 @@
+{
+  "1": [
+    {
+      "id": "letter-311-page-1-sidenote-1",
+      "order": 1,
+      "letter": "311",
+      "page": "1",
+      "pos": "left",
+      "annotation": "Am linken Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-311-page-1-sidenote-1\" data-letter=\"311\" data-page=\"1\" data-pos=\"left\" data-annotation=\"Am linken Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Tausend Grüsse Deinem edlen Weibe und Kleinen und viel Lebensgenuß und Abstracktion von tummen Zeuge das gar nicht die Ehre verdient, Dir einen sauren Augenblick zu machen.\n</div>\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">Grüß auch die guten Allerleys von mir. Und schick mir ein paar Zeichen Deiner Liebe.\n</div>\n   <div class=\"lb-line-block\" data-type=\"break\" data-align=\"right\">Lenz.</div>\n</aside>"
+    }
+  ]
+}

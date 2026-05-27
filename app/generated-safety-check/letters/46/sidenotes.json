@@ -1,0 +1,26 @@
+{
+  "1": [],
+  "2": [],
+  "3": [
+    {
+      "id": "letter-046-page-3-sidenote-1",
+      "order": 1,
+      "letter": "46",
+      "page": "3",
+      "pos": "bottom left",
+      "annotation": "am linken unteren Rand der dritten Seite",
+      "html": "<aside class=\"sidenote\" id=\"letter-046-page-3-sidenote-1\" data-letter=\"46\" data-page=\"3\" data-pos=\"bottom left\" data-annotation=\"am linken unteren Rand der dritten Seite\">\n   <div class=\"lb-line-block\" data-type=\"break\"> <span class=\"fn\" data-index=\"5\"><span class=\"anchor\">#</span></span> weibliche</div>\n</aside>"
+    }
+  ],
+  "4": [
+    {
+      "id": "letter-046-page-4-sidenote-1",
+      "order": 1,
+      "letter": "46",
+      "page": "4",
+      "pos": "left",
+      "annotation": "am linken Rand der vierten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-046-page-4-sidenote-1\" data-letter=\"46\" data-page=\"4\" data-pos=\"left\" data-annotation=\"am linken Rand der vierten Seite, vertikal\">\n   <div class=\"lb-line-block lb-line-block--empty\" data-type=\"empty\"></div>\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">\nAlles alles schicken Sie mir was Sie gemacht haben, auch das französische. Ich muß Sie ganz kennen lernen und das grad in dieser Lage meines Herzens. Hier ist meine Adresse. Was kannֹ’s mir auch schaden Ihnen meinen Namen zu sagen. Es ist so der <span class=\"ul\">kürzeste</span> Weg. Und ich habe viele Namensvetter, die auch Goethen kennen.\n</div>\n   <div class=\"lb-line-block lb-line-block--empty\" data-type=\"empty\"></div>\n</aside>"
+    }
+  ]
+}

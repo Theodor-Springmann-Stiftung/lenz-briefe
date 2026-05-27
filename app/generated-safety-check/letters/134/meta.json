@@ -1,0 +1,88 @@
+{
+  "letter": "134",
+  "slug": "letter-134",
+  "sent": {
+    "date": {
+      "text": "Straßburg, 15. März 1776",
+      "when": "1776-03-15",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "19",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Hannover",
+        "resolved": {
+          "index": "19",
+          "name": "Hannover",
+          "ref": "http://d-nb.info/gnd/4023349-2"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "51",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Georg Zimmermann",
+        "resolved": {
+          "index": "51",
+          "name": "Johann Georg Zimmermann",
+          "vorname": "Johann Georg",
+          "nachname": "Zimmermann",
+          "komm": "zimmermann",
+          "ref": "http://d-nb.info/gnd/1186369798"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "2"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"134\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tBerlin, Archiv der Berlin-Brandenburgischen Akademie der Wissenschaft, Slg. Weinhold, Nr.\n\t\t\t\t792. Textverlust durch Ausriss. Handschriftlicher Vermerk auf dem Umschlag „St“; „üFürth“, „4“, unentzifferter Vermerk; Stempel „DEKEHL“, rotes Siegel.\n\t\t\t</div>\n   </div>\n</section>"
+}

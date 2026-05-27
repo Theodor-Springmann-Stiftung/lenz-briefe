@@ -1,0 +1,36 @@
+{
+  "1": [],
+  "2": [
+    {
+      "id": "letter-042-page-2-sidenote-1",
+      "order": 1,
+      "letter": "42",
+      "page": "2",
+      "pos": "left",
+      "annotation": "am linken Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-042-page-2-sidenote-1\" data-letter=\"42\" data-page=\"2\" data-pos=\"left\" data-annotation=\"am linken Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">\n<span class=\"fn\" data-index=\"5\"><span class=\"anchor\">#</span></span> ich schick es Gottern nicht eher als bis Du mir die Erlaubniß gegeben hast. Sonst wollt’ ich schon für ein <span class=\"aq\">vehiculum</span> sorgen ihm die Medicin beyzubringen</div>\n</aside>"
+    }
+  ],
+  "3": [
+    {
+      "id": "letter-042-page-3-sidenote-1",
+      "order": 1,
+      "letter": "42",
+      "page": "3",
+      "pos": "left",
+      "annotation": "am linken Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-042-page-3-sidenote-1\" data-letter=\"42\" data-page=\"3\" data-pos=\"left\" data-annotation=\"am linken Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">\nWarum hast Du mir denn nicht die Vollendung Deines Mskpts. für Freunde zugeschikt? Doch Dank dafür! Und für alle die reichhaltigen Gedanken in diesem Mkspt. ewigen Dank.</div>\n</aside>"
+    }
+  ],
+  "4": [
+    {
+      "id": "letter-042-page-4-sidenote-1",
+      "order": 1,
+      "letter": "42",
+      "page": "4",
+      "pos": "left",
+      "annotation": "am linken Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-042-page-4-sidenote-1\" data-letter=\"42\" data-page=\"4\" data-pos=\"left\" data-annotation=\"am linken Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Der gute Röderer Nathanael empfiehlt sich euch allen aufs zärtlichste. Adieu! Adieu!</div>\n</aside>"
+    }
+  ]
+}

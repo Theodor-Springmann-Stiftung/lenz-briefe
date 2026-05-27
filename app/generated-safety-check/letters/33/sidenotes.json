@@ -1,0 +1,16 @@
+{
+  "1": [],
+  "2": [
+    {
+      "id": "letter-033-page-2-sidenote-1",
+      "order": 1,
+      "letter": "33",
+      "page": "2",
+      "pos": "bottom",
+      "annotation": "am unteren Rand der zweiten Seite",
+      "html": "<aside class=\"sidenote\" id=\"letter-033-page-2-sidenote-1\" data-letter=\"33\" data-page=\"2\" data-pos=\"bottom\" data-annotation=\"am unteren Rand der zweiten Seite\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-align=\"center\"> ich wünscht ich könnte den Kopf in mein innerstes Herz hineinzeichnen damit er mir zu allen Stunden und Augenblicken gegenwärtig wäre </div>\n</aside>"
+    }
+  ],
+  "3": [],
+  "4": []
+}
