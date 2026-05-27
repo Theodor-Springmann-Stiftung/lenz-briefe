@@ -4244,7 +4244,7 @@
 				<location ref="53" />
 				<person ref="1" />
 			</received>
-			<hasOriginal value="true" />
+			<hasOriginal value="false" />
 			<isProofread value="true" />
 			<isDraft value="false" />
 		</letterDesc>

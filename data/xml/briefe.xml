@@ -4590,12 +4590,11 @@ Lieber Liebster mein Einziger! ich hab hier Deinen 2ten Brief vor mir und Du sol
 <line type="empty"/>
 <line type="empty"/>
 <line tab="1"/>Hier sind Pfeffels Lieder wieder, meine würdigste Freundinn! freylich muß ich mich schämen, daß ich so spät damit bin, Ihre Geduld und vielleicht Ihre Sanftmut selbst auf eine so unverschämte Probe gesetzt, doch wenn Sie alles wüßten was ich zur Entschuldigung sagen könnte und doch nicht sage, würden Sie mir das verstohlne Vergnügen etwas aus Ihrer Brieftasche bey mir zu tragen, vielleicht noch länger gegönnt haben.
-<line tab="1"/>Ganz gewiß werden Sie sich den ersten Akt der verabredeten Comödie hiebey vermuthen so gewissenhaft ich aber daran gearbeitet so hab ich doch so wenige Augenblicke ganz zu mir selber kommen können, daß Ihr liebes Gedächtniß vor der Hand noch ein Weilgen Ruhe haben wird. Es kommt aber gewiß so wie alles
+<line tab="1"/>Ganz gewiß werden Sie sich den ersten Ackt der verabredeten Comödie hiebey vermuthen so gewissenhaft ich aber daran gearbeitet so hab ich doch so wenige Augenblicke ganz zu mir selber kommen können, daß Ihr liebes Gedächtniß vor der Hand noch ein Weilgen Ruhe haben wird. Es kommt aber gewiß so wie alles
 <page index="2"/>was ich verspreche und ich hoffe etwas davon Herrn Sarasi (den ich schon unterwegens vermuthe) in Schinznach vorlesen zu können.
-<line tab="1"/>Um eines aber habe ich Sie noch zu bitten, ich habe unter den Gedichten das artigste vermißt, eine Epistel an Sie, in der unser hellsehende Blinde ein so getreues Porträt von Ihnen machte. Wollen Sie mich in die glücklichste Laune setzen unser angefangenes Stück, woran Ihnen doch vielleicht etwas gelegen seyn wird, bald und zu Ihrer Genugthuung zu endigen, so lassen Sie mir dieses nebst ein Paar Zeilen von Ihnen, aber wohl zu merken im Schweitzer Teutsch, zu kommen, Sie können sichs nimmer vorstellen, wieviel Begeisterndes diese Sprache in Ihrem Munde für mich hat.
-<page index="3"/>
-<line tab="1"/>Sie dürften Ihren Brief nur an Herrn Sarasi adressiren, daß er mir ihn nach Zürich, oder wo ich von da hingehen werde wenn ich von Schinznach zurückkomme, schickte, er wird mir eppen eine außerordentliche Freude machen und die Rolle die ich für Sie ausarbeite nur desto besser ausfallen.
-<line tab="1"/>Empfehlen Sie mich allen Freunden Ihres Hauses die ich nicht in Schinznach zusprechen die Ehre haben sollte. Ihren kleinen Inokulierten druck ich manch herzliches Küßgen auf ihre Narben und höre Sie oft im Geist ihnen kleine Geschichtgen erzehlen. So habe ich auch dem letzten Ball unsichtbar zugesehen, Sie haben recht viel getanzt.
+<line tab="1"/>Um eines aber habe ich Sie noch zu bitten, ich habe unter den Gedichten das artigste vermißt, eine Epistel an Sie, in der unser Hellsehende Blinde ein so getreues Porträt von Ihnen machte. Wollen Sie mich in die glücklichste Laune setzen unser angefangenes Stück, woran Ihnen doch vielleicht etwas gelegen seyn wird, bald und zu Ihrer Genugthuung zu endigen, so lassen Sie mir dieses nebst ein Paar Zeilen von Ihnen, aber wohl zu merken im Schweitzer Teutsch, zukommen, Sie können sichs nimmer vorstellen, wieviel Begeisterndes diese Sprache in Ihrem Munde für mich hat.
+<page index="3"/><line tab="1"/>Sie dürften Ihren Brief nur an Herrn Sarasi adressiren, daß er mir ihn nach Zürich, oder wo ich von da hingehen werde wenn ich von Schinznach zurückkomme, schickte, er wird mir eppen eine ausserordentliche Freude machen und die Rolle die ich für Sie ausarbeite nur desto besser ausfallen.
+<line tab="1"/>Empfehlen Sie mich allen Freunden Ihres Hauses die ich nicht in Schinznach zu sprechen die Ehre haben sollte. Ihren Kleinen Inokulirten druck ich manch herzliches Küßgen auf ihre Narben und höre Sie oft im Geist ihnen kleine Geschichtgen erzehlen. So habe ich auch dem letzten Ball unsichtbar zugesehen, Sie haben recht viel getanzt.
 <line type="break"/>
 	<line tab="5"/><align pos="center">Da lenkten im reitzenden Wirbel</align>
 	<line tab="5"/><align pos="center">Die Grazien selbst Ihren Flug</align>
@@ -4622,23 +4621,27 @@ Lieber Liebster mein Einziger! ich hab hier Deinen 2ten Brief vor mir und Du sol
 <line type="break"/>Zu Diener Stadthalter von Bubigheim.</hand>
 </letterText> 
 
-<letterText letter="280"><page index="1"/> <pe>
-<line tab="1"/>Lenz von deinem Auge kein Blick, du streckst nicht nach mir den Arm, reichst mir keine Hand! Doch du bist wohl lebe wohl, sieh auch nach mir.</pe>
-<page index="2"/><pe>
+<letterText letter="280"><page index="1"/> 
+<line tab="1"/>Lenz von Deinem Auge kein Blick, Du streckst nicht nach mir den Arm, reichst mir keine Hand! Doch Du bist wohl lebe wohl, sieh auch nach mir.
+<page index="2"/>
 <line type="empty" />
-<line type="break" /><hand ref="87"><aq>Mr Kittner Doit fl. 9. tz 3.</aq></hand></pe>
+<line type="break" /><hand ref="87"><aq>Mr Kittner Doit fl. 9. tz 3.</aq></hand>
 </letterText> 
 
 <letterText letter="281"><page index="1"/>
 <line tab="1"/>Darf ich Sie um Ihrent- um meinetwillen bitten, das über die launigten Dichter noch nicht in Ihr Musäum zu rücken. Unser Publikum hat noch keinen Sinn dazu und es könnte entsetzlich mißverstanden werden. Heben Sies auf bis Zeit und Gelegenheit Beobachtungen günstiger sind, die durchaus auf keinen einzelnen Fall dürfen gezogen werden und wo diesmal die Anwendung auf Wieland, auf dessen <ul>wenigste</ul> Sachen sie passen, unvermeidlich wäre.
-<sidenote pos="left" page="1" annotation="am linken Rand, vertikal"></sidenote>Wenn dies ins Museum kommt, darf ich Ihnen nie wieder etwas zuschicken.
+<sidenote pos="left" page="1" annotation="am linken Rand, vertikal"></sidenote>Wenn dies ins Musäum kommt, darf ich Ihnen nie wieder etwas zuschicken.
 <page index="2"/>
 <line type="empty" />
-<line tab="1"/>Ich schwärme in der Schweitz, habe in Schinznach vier goldene Tage gelebt, in Zürich Basel und Schafhausen viel Liebe genossen. Sagen Sie Zimmermann, daß seiner als Grundleger der helvetischen Gesellschaft mit vieler Erbauung ist gedacht worden und daß er an Hn. Doktor Stuker, einem würdigen Menschen unter den Würdigen, einen warmen Freund hat. Daß der Landpr. bald auf einander folgt freut mich, überhaupt würden Sie wohlthun, Ihre Sachen nicht mehr so zu zertrennen, worüber man mir hie und da und von sicherer Hand viel Beschwerden geäußert hat. Natürlich ists daß drey Vierthel von dem Eindruck des
-<page index="3"/>Ganzen verloren gehen. Wär’ es möglich noch die zwo Hälften zu verbinden, würden Sie sehr wohlthun denn wenn ich die Strahlen eines Brennspiegels auseinanderwerfe, kann kein Flämmlein erfolgen. Leben Sie indeßen wohl und empfehlen mich Zimmermann und allen Edlen Ihrer Gegend.
+<line tab="1"/>Ich schwärme in der Schweitz, habe in Schinznach vier goldene Tage gelebt, in Zürich Basel und Schafhausen viel Liebe genossen. Sagen Sie Zimmermann, daß seiner als Grundleger der helvetischen Gesellschaft mit vieler Erbauung ist gedacht worden und daß er an Hn. Doktor Stuker, einem würdigen Menschen unter den Würdigen, einen warmen Freund hat. Daß der Landpr. bald auf einander folgt freut mich, überhaupt würden Sie wohlthun, Ihre Sachen nicht mehr so zu zertrennen, worüber man mir hie und da und von sicherer Hand viel Beschwerden geäussert hat. Natürlich ists daß drey Vierthel von dem Eindruck des
+<page index="3"/>Ganzen verloren gehen. Wär’ es möglich noch die zwo Hälften zu verbinden, würden Sie sehr wohlthun denn wenn ich die Strahlen eines Brennspiegels auseinander werfe, kann kein Flämmlein erfolgen Leben Sie indessen wohl und empfehlen mich Zimmermann und allen Edlen Ihrer Gegend.
+<line type="empty" />
 <line type="break" />D. 26sten May 1777.
 <line type="break" /><align pos="right">Lenz</align>
 <page index="4"/>
+<line type="empty" />
+<align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
+<line type="empty" />
 <line type="break"/><address>Herrn
 <line type="break"/>Herrn Stabssekretär
 <line type="break"/><ul>Boje</ul>
