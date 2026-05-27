@@ -1,0 +1,54 @@
+{
+  "1": [
+    {
+      "id": "letter-227-page-1-sidenote-1",
+      "order": 1,
+      "letter": "227",
+      "page": "1",
+      "pos": "left",
+      "annotation": "am linken Rand der ersten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-227-page-1-sidenote-1\" data-letter=\"227\" data-page=\"1\" data-pos=\"left\" data-annotation=\"am linken Rand der ersten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">Verzeyhen Sie meine Länge über einen so uninteressanten Punkt für Sie. Es liegt mir\n      zu sehr am Herzen als daß ich nicht bitten und geilen sollte um Stillschweigen.</div>\n</aside>"
+    }
+  ],
+  "2": [
+    {
+      "id": "letter-227-page-2-sidenote-1",
+      "order": 1,
+      "letter": "227",
+      "page": "2",
+      "pos": "left",
+      "annotation": "am linken Rand der zweiten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-227-page-2-sidenote-1\" data-letter=\"227\" data-page=\"2\" data-pos=\"left\" data-annotation=\"am linken Rand der zweiten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">Der Verf. der Soldaten <span class=\"ul\">heißt Steenkerk,</span> <span class=\"insertion\" data-pos=\"top\">soll und muß so heissen</span> ich darf auch <span class=\"ul\">meinen</span> Namen nicht länger hergeben da ich in <span class=\"ul\">zuviel</span> Verdrüßlichkeiten dadurch gerathen würde und man von mir auf ihn rathen könnte. nur\n      eine Scene ist von mir</div>\n</aside>"
+    },
+    {
+      "id": "letter-227-page-2-sidenote-2",
+      "order": 2,
+      "letter": "227",
+      "page": "2",
+      "pos": "bottom",
+      "annotation": "am unteren Rand der zweiten Seite",
+      "html": "<aside class=\"sidenote\" id=\"letter-227-page-2-sidenote-2\" data-letter=\"227\" data-page=\"2\" data-pos=\"bottom\" data-annotation=\"am unteren Rand der zweiten Seite\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">thun Sie mir die Liebe und hindern die Publizität der Soldaten soviel an Ihnen ist,\n      bitten auch Zimmermann drum. Nur nicht viel davon geredt, ich bitte, noch weniger\n      geschrieben</div>\n</aside>"
+    }
+  ],
+  "3": [
+    {
+      "id": "letter-227-page-3-sidenote-1",
+      "order": 1,
+      "letter": "227",
+      "page": "3",
+      "pos": "bottom",
+      "annotation": "am unteren Rand der dritten Seite",
+      "html": "<aside class=\"sidenote\" id=\"letter-227-page-3-sidenote-1\" data-letter=\"227\" data-page=\"3\" data-pos=\"bottom\" data-annotation=\"am unteren Rand der dritten Seite\">\n   <div class=\"lb-line-block\" data-type=\"break\">nur daß dieser Brief nicht auch gedruckt wird.</div>\n</aside>"
+    },
+    {
+      "id": "letter-227-page-3-sidenote-2",
+      "order": 2,
+      "letter": "227",
+      "page": "3",
+      "pos": "left",
+      "annotation": "am linken Rand der dritten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-227-page-3-sidenote-2\" data-letter=\"227\" data-page=\"3\" data-pos=\"left\" data-annotation=\"am linken Rand der dritten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Ich danke für die Liste: sie kam mir zwar ein wenig zu spät. Wissen Sie mir nicht\n      zu sagen, wohin man Briefe an Hn. v. Lindau adressirt und wenn wieder ein Schiff abgeht\n      auch ob stark geworben wird.</div>\n</aside>"
+    }
+  ],
+  "4": []
+}

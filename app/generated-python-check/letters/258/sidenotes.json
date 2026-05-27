@@ -1,0 +1,16 @@
+{
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [
+    {
+      "id": "letter-258-page-4-sidenote-1",
+      "order": 1,
+      "letter": "258",
+      "page": "4",
+      "pos": "right",
+      "annotation": "Empfangsnotiz am rechten Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-258-page-4-sidenote-1\" data-letter=\"258\" data-page=\"4\" data-pos=\"right\" data-annotation=\"Empfangsnotiz am rechten Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"hand\" data-ref=\"21\"><span class=\"aq\">De Mr. Lenz.\n            </span></span></div>\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"hand\" data-ref=\"21\"><span class=\"aq\">San date acc: le 4 Xbr. 1776.</span></span></div>\n</aside>"
+    }
+  ]
+}

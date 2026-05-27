@@ -1,0 +1,87 @@
+{
+  "letter": "309",
+  "slug": "letter-309",
+  "sent": {
+    "date": {
+      "text": "Schloss Hegi, zweite Dezemberhälfte 1777",
+      "when": null,
+      "notBefore": "1777-12-15",
+      "notAfter": "1777-12-31",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "54",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Schloss Hegi",
+        "resolved": {
+          "index": "54",
+          "name": "Schloss Hegi",
+          "ref": "http://d-nb.info/gnd/4089188-4"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "11",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Zürich",
+        "resolved": {
+          "index": "11",
+          "name": "Zürich",
+          "ref": "http://d-nb.info/gnd/4068038-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "58",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Heinrich Füssli",
+        "resolved": {
+          "index": "58",
+          "name": "Johann Heinrich Füssli",
+          "vorname": "Johann Heinrich",
+          "nachname": "Füssli",
+          "komm": "füssli",
+          "ref": "http://d-nb.info/gnd/136012159"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"309\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tZürich, Zentralbibliothek, Ms. M 1.183, Nr. 1.\n         \t\t\t</div>\n   </div>\n</section>"
+}

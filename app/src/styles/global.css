@@ -12,11 +12,6 @@
     user-select: none;
   }
 
-  .letter-body-prose .page-line-probe {
-    display: inline;
-    user-select: none;
-  }
-
   .letter-body-prose .sidenote-marker {
     display: inline-block;
     width: 0;

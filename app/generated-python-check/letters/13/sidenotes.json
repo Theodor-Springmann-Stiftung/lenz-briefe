@@ -1,0 +1,14 @@
+{
+  "1": [],
+  "2": [
+    {
+      "id": "letter-013-page-2-sidenote-1",
+      "order": 1,
+      "letter": "13",
+      "page": "2",
+      "pos": "top left",
+      "annotation": "am linken Rand der zweiten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-013-page-2-sidenote-1\" data-letter=\"13\" data-page=\"2\" data-pos=\"top left\" data-annotation=\"am linken Rand der zweiten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Kleists lesen alle meine Briefe. Wir sind aber Freunde und Du darfst alles frey schreiben,\n      nur nichts von ihnen.</div>\n</aside>"
+    }
+  ]
+}

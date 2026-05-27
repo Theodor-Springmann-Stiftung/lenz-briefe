@@ -7,7 +7,9 @@
   <xsl:import href="common.xsl" />
 
   <xsl:template name="xsl:initial-template">
-    <xsl:apply-templates select="/*/node()" />
+    <xsl:call-template name="lb:render-flow">
+      <xsl:with-param name="nodes" select="/*/node()" />
+    </xsl:call-template>
   </xsl:template>
 
 </xsl:stylesheet>

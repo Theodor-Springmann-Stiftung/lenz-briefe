@@ -1,0 +1,87 @@
+{
+  "letter": "244",
+  "slug": "letter-244",
+  "sent": {
+    "date": {
+      "text": "Kochberg, 24. Oktober 1776",
+      "when": "1776-10-24",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "30",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Kochberg",
+        "resolved": {
+          "index": "30",
+          "name": "Kochberg",
+          "ref": null
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "52",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Herzogin Anna Amalia",
+        "resolved": {
+          "index": "52",
+          "name": "Herzogin Anna Amalia",
+          "vorname": "Anna",
+          "nachname": "Amalia",
+          "komm": "amalia",
+          "ref": "http://d-nb.info/gnd/118649485"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": true,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"244\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tKraków, Biblioteka Jagiellońska, Lenziana 4, Nr. 6, 22v, Entwurf; eingerahmt von\n         Notizen zur Militärreform; auf der Rückseite ebenfalls Notizen zur Militärreform,\n         vgl. Schriften zur Sozialreform, Bd. 1, S. 299.\n         \t\t\t</div>\n   </div>\n</section>"
+}

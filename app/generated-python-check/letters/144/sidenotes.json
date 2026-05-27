@@ -1,0 +1,63 @@
+{
+  "1": [
+    {
+      "id": "letter-144-page-1-sidenote-1",
+      "order": 1,
+      "letter": "144",
+      "page": "1",
+      "pos": "left",
+      "annotation": "am linken Rand der ersten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-144-page-1-sidenote-1\" data-letter=\"144\" data-page=\"1\" data-pos=\"left\" data-annotation=\"am linken Rand der ersten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">es ist mir Last der Verzweiflung wenn man meine Wolken Goethen auf den Rücken schieben\n      wollte. Er weiß nicht einmal daß ich die <span class=\"ul\">Idee</span> gehabt welche zu schreiben. – Ueberhaupt stehe ich allein.</div>\n</aside>"
+    }
+  ],
+  "2": [
+    {
+      "id": "letter-144-page-2-sidenote-1",
+      "order": 1,
+      "letter": "144",
+      "page": "2",
+      "pos": "top",
+      "annotation": "am oberen Rand, horizontal gespiegelt",
+      "html": "<aside class=\"sidenote\" id=\"letter-144-page-2-sidenote-1\" data-letter=\"144\" data-page=\"2\" data-pos=\"top\" data-annotation=\"am oberen Rand, horizontal gespiegelt\">\n   <div class=\"lb-line-block\" data-type=\"break\">auf das Paradies wär’ ich begierig könnt ichs nicht bekommen Vater Herder?</div>\n</aside>"
+    },
+    {
+      "id": "letter-144-page-2-sidenote-2",
+      "order": 2,
+      "letter": "144",
+      "page": "2",
+      "pos": "left",
+      "annotation": "am linken Rand des ersten Absatzes der zweiten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-144-page-2-sidenote-2\" data-letter=\"144\" data-page=\"2\" data-pos=\"left\" data-annotation=\"am linken Rand des ersten Absatzes der zweiten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\"> nichts von Schicksal hier!</div>\n</aside>"
+    },
+    {
+      "id": "letter-144-page-2-sidenote-3",
+      "order": 3,
+      "letter": "144",
+      "page": "2",
+      "pos": "left",
+      "annotation": "am äußeren linken Rand der zweiten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-144-page-2-sidenote-3\" data-letter=\"144\" data-page=\"2\" data-pos=\"left\" data-annotation=\"am äußeren linken Rand der zweiten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">Solltest Du ein Exemplar der Wolken selber zu Handen bekommen, so halt es unter sieben\n      Siegeln. Sie könnten mir <span class=\"dul\">alles</span> verderben was ich thun will kann werde. – Deinem Weibe Heil!!!</div>\n</aside>"
+    }
+  ],
+  "3": [
+    {
+      "id": "letter-144-page-3-sidenote-1",
+      "order": 1,
+      "letter": "144",
+      "page": "3",
+      "pos": "left",
+      "annotation": "am linken Rand der dritten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-144-page-3-sidenote-1\" data-letter=\"144\" data-page=\"3\" data-pos=\"left\" data-annotation=\"am linken Rand der dritten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">Die Wolken <span class=\"ul\">dürfen</span> nicht eher als nach meinem Tode ans Licht kommen. Es sind wahre Wolken voll Schnee\n      und Hagel die Gott wegwehte. Der Anhang wird Dir besser gefallen und <span class=\"ul\">den solltu haben</span>. – Grüsse Zimmermann.</div>\n</aside>"
+    },
+    {
+      "id": "letter-144-page-3-sidenote-2",
+      "order": 2,
+      "letter": "144",
+      "page": "3",
+      "pos": "top",
+      "annotation": "am oberen Rand der dritten Seite, horizontal gespiegelt",
+      "html": "<aside class=\"sidenote\" id=\"letter-144-page-3-sidenote-2\" data-letter=\"144\" data-page=\"3\" data-pos=\"top\" data-annotation=\"am oberen Rand der dritten Seite, horizontal gespiegelt\">\n   <div class=\"lb-line-block\" data-type=\"break\"> Die Meynungen – sind von mir.</div>\n</aside>"
+    }
+  ],
+  "4": []
+}

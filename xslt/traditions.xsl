@@ -18,7 +18,9 @@
       <xsl:if test="@ref">
         <xsl:attribute name="data-ref" select="@ref" />
       </xsl:if>
-      <xsl:apply-templates />
+      <xsl:call-template name="lb:render-flow">
+        <xsl:with-param name="nodes" select="node()" />
+      </xsl:call-template>
     </div>
   </xsl:template>
 

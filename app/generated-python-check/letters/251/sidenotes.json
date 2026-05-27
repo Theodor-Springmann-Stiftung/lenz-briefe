@@ -1,0 +1,14 @@
+{
+  "1": [
+    {
+      "id": "letter-251-page-1-sidenote-1",
+      "order": 1,
+      "letter": "251",
+      "page": "1",
+      "pos": "right",
+      "annotation": "am rechten Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-251-page-1-sidenote-1\" data-letter=\"251\" data-page=\"1\" data-pos=\"right\" data-annotation=\"am rechten Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"hand\" data-ref=\"10\">Deine Briefe. Adieu. Den 13. Nov. 76 am Krankenbette meines Weibchens. L.</span></div>\n</aside>"
+    }
+  ],
+  "2": []
+}

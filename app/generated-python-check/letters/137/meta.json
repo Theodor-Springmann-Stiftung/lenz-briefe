@@ -1,0 +1,87 @@
+{
+  "letter": "137",
+  "slug": "letter-137",
+  "sent": {
+    "date": {
+      "text": "Bückeburg, März 1776",
+      "when": null,
+      "notBefore": "1776-03-01",
+      "notAfter": "1776-03-31",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "21",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Bückeburg",
+        "resolved": {
+          "index": "21",
+          "name": "Bückeburg",
+          "ref": "http://d-nb.info/gnd/4008715-3"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "17",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Gottfried von Herder",
+        "resolved": {
+          "index": "17",
+          "name": "Johann Gottfried von Herder",
+          "vorname": "Johann Gottfried von",
+          "nachname": "Herder",
+          "komm": "jg-herder",
+          "ref": "http://d-nb.info/gnd/118549553"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"137\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 19. Herder schickt\n         Lenz das gedruckte Drama „Die Soldaten“.\n         \t\t\t</div>\n   </div>\n</section>"
+}

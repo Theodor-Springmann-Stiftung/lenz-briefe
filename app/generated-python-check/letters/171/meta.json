@@ -1,0 +1,115 @@
+{
+  "letter": "171",
+  "slug": "letter-171",
+  "sent": {
+    "date": {
+      "text": "Zürich, 27. April 1776",
+      "when": "1776-04-27",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "11",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Zürich",
+        "resolved": {
+          "index": "11",
+          "name": "Zürich",
+          "ref": "http://d-nb.info/gnd/4068038-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "10",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Caspar Lavater",
+        "resolved": {
+          "index": "10",
+          "name": "Johann Caspar Lavater",
+          "vorname": "Johann Caspar",
+          "nachname": "Lavater",
+          "komm": "lavater",
+          "ref": "http://d-nb.info/gnd/118570293"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "26",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Christoph Martin Wieland",
+        "resolved": {
+          "index": "26",
+          "name": "Christoph Martin Wieland",
+          "vorname": "Christoph Martin",
+          "nachname": "Wieland",
+          "komm": "wieland",
+          "ref": "http://d-nb.info/gnd/118632477"
+        }
+      },
+      {
+        "ref": "12",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Wolfgang Goethe",
+        "resolved": {
+          "index": "12",
+          "name": "Johann Wolfgang Goethe",
+          "vorname": "Johann Wolfgang",
+          "nachname": "Goethe",
+          "komm": "goethe",
+          "ref": "http://d-nb.info/gnd/118540238"
+        }
+      },
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"171\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tZürich, Zentralbibliothek, FA Lav. Ms. 586, Nr. 94, Zg. Abschrift.\n         \t\t\t</div>\n   </div>\n</section>"
+}

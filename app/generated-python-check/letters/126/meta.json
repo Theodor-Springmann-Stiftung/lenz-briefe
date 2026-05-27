@@ -1,0 +1,90 @@
+{
+  "letter": "126",
+  "slug": "letter-126",
+  "sent": {
+    "date": {
+      "text": "Darmstadt, 8. März 1776",
+      "when": "1776-03-08",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "20",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Darmstadt",
+        "resolved": {
+          "index": "20",
+          "name": "Darmstadt",
+          "ref": "http://d-nb.info/gnd/4011077-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "29",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Heinrich Merck",
+        "resolved": {
+          "index": "29",
+          "name": "Johann Heinrich Merck",
+          "vorname": "Johann Heinrich",
+          "nachname": "Merck",
+          "komm": "merck",
+          "ref": "http://d-nb.info/gnd/118581015"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 4,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"126\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 39.\n         \t\t\t</div>\n   </div>\n</section>"
+}

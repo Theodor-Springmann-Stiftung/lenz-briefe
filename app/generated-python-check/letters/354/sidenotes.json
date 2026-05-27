@@ -1,0 +1,25 @@
+{
+  "1": [
+    {
+      "id": "letter-354-page-1-sidenote-1",
+      "order": 1,
+      "letter": "354",
+      "page": "1",
+      "pos": "left",
+      "annotation": "am linken Rand der ersten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-354-page-1-sidenote-1\" data-letter=\"354\" data-page=\"1\" data-pos=\"left\" data-annotation=\"am linken Rand der ersten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"fn\" data-index=\"3\"><span class=\"anchor\">☓</span></span> Der auf der Nachbarschaft des H. Brunners wohnt und mit ihm ein Herz u eine Seele\n      ist\n      </div>\n</aside>"
+    },
+    {
+      "id": "letter-354-page-1-sidenote-2",
+      "order": 2,
+      "letter": "354",
+      "page": "1",
+      "pos": "bottom",
+      "annotation": "am unteren Rand der ersten Seite, horizontal",
+      "html": "<aside class=\"sidenote\" id=\"letter-354-page-1-sidenote-2\" data-letter=\"354\" data-page=\"1\" data-pos=\"bottom\" data-annotation=\"am unteren Rand der ersten Seite, horizontal\">\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"fn\" data-index=\"4\"><span class=\"anchor\">☓ ☓</span></span> Unter diesen muß ich besonders zwei junge Verwandte des Grafen von Soritsch zählen,\n      welche, da sie schon einige Jahre vor mir in dieser Anstalt gebildet worden mit dem\n      Sohn der Me. Exter eine <span class=\"ul\">ädle</span> Freundschaft errichtet und deren Onkel in einer der wichtigsten Angelegenheiten des\n      Staats eine wichtige Rolle gespielt. Imgleichen einen teutschen Obristen, der von\n      Petersburg hieher gekommen und seinen Reisegesellschafter bei uns eingeführt.</div>\n</aside>"
+    }
+  ],
+  "2": [],
+  "3": [],
+  "4": []
+}

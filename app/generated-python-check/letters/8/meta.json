@@ -1,0 +1,87 @@
+{
+  "letter": "8",
+  "slug": "letter-008",
+  "sent": {
+    "date": {
+      "text": "Fort Louis, Ende Mai 1772",
+      "when": null,
+      "notBefore": "1772-05-15",
+      "notAfter": "1772-05-30",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "4",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Fort Louis",
+        "resolved": {
+          "index": "4",
+          "name": "Fort Louis",
+          "ref": "https://d-nb.info/gnd/4762184-9"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "9",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Daniel Salzmann",
+        "resolved": {
+          "index": "9",
+          "name": "Johann Daniel Salzmann",
+          "vorname": "Johann Daniel",
+          "nachname": "Salzmann ",
+          "komm": "salzmann",
+          "ref": "https://d-nb.info/gnd/116777265"
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"8\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tAugust Stöber: Der Aktuar Salzmann, Goethe’s Freund und Tischgenosse in Strassburg.\n         \t\t\t\tFrankfurt am Main 1855, S. 64–71. Stöber spricht davon, dass „einige unvollständige\n         Blättchen bei den Briefen [liegen], welche einzelne philosophische und theologische\n         Betrachtungen, besonders über Leibnitz, enthalten.“ Die Manuskripte der Briefe an\n         Salzmann sind beim Brand der Straßburger Bibliothek 1870 verloren gegangen.\n         \t\t\t</div>\n   </div>\n</section>"
+}

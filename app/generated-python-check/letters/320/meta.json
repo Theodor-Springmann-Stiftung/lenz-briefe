@@ -1,0 +1,87 @@
+{
+  "letter": "320",
+  "slug": "letter-320",
+  "sent": {
+    "date": {
+      "text": "Wahrscheinlich auf der Reise nach Livland, Sommer 1779",
+      "when": null,
+      "notBefore": "1779-06-01",
+      "notAfter": "1779-08-31",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "55",
+        "cert": "low",
+        "erschlossen": null,
+        "label": "Wohl auf der Reise nach Livland",
+        "resolved": {
+          "index": "55",
+          "name": "Wohl auf der Reise nach Livland",
+          "ref": null
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Dorpat [Tartu]",
+        "resolved": {
+          "index": "1",
+          "name": "Dorpat [Tartu]",
+          "ref": "https://d-nb.info/gnd/1029285-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "6",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Christine Margarethe Lenz",
+        "resolved": {
+          "index": "6",
+          "name": "Christine Margarethe Lenz",
+          "vorname": "Christine Margarethe",
+          "nachname": "Lenz",
+          "komm": "chm-lenz",
+          "ref": null
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"320\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tKraków, Biblioteka Jagiellońska, Krakau, Lenziana 5, Nr. 34 (Abschrift).\n         \t\t\t</div>\n   </div>\n</section>"
+}

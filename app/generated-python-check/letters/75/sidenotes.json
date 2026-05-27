@@ -1,0 +1,13 @@
+{
+  "1": [
+    {
+      "id": "letter-075-page-1-sidenote-1",
+      "order": 1,
+      "letter": "75",
+      "page": "1",
+      "pos": "bottom",
+      "annotation": "am unteren Rand",
+      "html": "<aside class=\"sidenote\" id=\"letter-075-page-1-sidenote-1\" data-letter=\"75\" data-page=\"1\" data-pos=\"bottom\" data-annotation=\"am unteren Rand\">\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"fn\" data-index=\"5\"><span class=\"anchor\">#</span></span> ich ließ die Wolken druken.</div>\n</aside>"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "letter": "205",
+  "slug": "letter-205",
+  "sent": {
+    "date": {
+      "text": "Berka, Anfang Juli 1776",
+      "when": null,
+      "notBefore": "1776-07-03",
+      "notAfter": "1776-07-10",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "14",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Berka",
+        "resolved": {
+          "index": "14",
+          "name": "Berka",
+          "ref": "http://d-nb.info/gnd/4087284-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "15",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Luise König",
+        "resolved": {
+          "index": "15",
+          "name": "Luise König",
+          "vorname": "Luise",
+          "nachname": "König",
+          "komm": "könig",
+          "ref": null
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": true,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 4,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"205\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 33, Nr. 2; Entwurf.\n         \t\t\t</div>\n   </div>\n   <div class=\"tradition-app\" data-ref=\"11\">\n      <div class=\"lb-line-block\" data-type=\"break\">Ich weiß nicht, allzu großzügige Freundin, was ich von der Silhouette halten soll,\n         die \n         \t\t\t\tSie mir liebenswerterweise durch meinen Freund Röderer zukommen ließen. Es \n         \t\t\t\twäre zu anmaßend von mir, dem Märchen, das er mir darüber erzählt hat, Glauben\n         \n         \t\t\t\tzu schenken, ich wage jedoch nicht, mir die Wahrheit einzugestehen und mich \n         \t\t\t\tdes schönsten Traumes zu berauben, den ich in meinem Leben je gehabt habe. \n         \t\t\t\tErlauben Sie, dass ich mich ganz und gar an Ihre Güte halte und dass ich, \n         \t\t\t\tindem ich ihn so weit wie möglich in die Länge ziehe, ihn dazu nutze, Ihnen \n         \t\t\t\tunendlich zu danken und Ihnen meine innigste Verehrung auszudrücken, weil \n         \t\t\t\tdiese Illusion meiner Einbildungskraft so guttut, dass es Ihrem Herzen zur \n         \t\t\t\tEhre gereicht, sie mir nicht zu nehmen. \n         \t\t\t\tGestatten Sie mir trotzdem, Ihnen zu sagen, dass die Kopie, die ich von besagter,\n         \n         \t\t\t\tfür Herrn Lavater bestimmten und offensichtlich von Ihnen selbst abgezogenen \n         \t\t\t\tSilhouette erhalten habe, Röder nicht so gut gelungen ist, dem Sie wohl die Erlaubnis\n         \n         \t\t\t\tgegeben haben, sie bei Ihnen anzufertigen, dass vielleicht Ihnen das Modell \n         \t\t\t\thätte gelingen müssen. Er hat diese schönen Umrisse völlig verfehlt, die Maler\n         \n         \t\t\t\tund Graveure, selbst Herr Baley, dessen zu geringe Präzision Lavater nicht genug\n         \n         \t\t\t\ttadeln kann, verzweifeln lassen, was dazu führt, dass der wahrhafte Ausdruck der\n         \n         \t\t\t\tbedeutsamsten Züge sich nur erraten lässt und eher dem Denken überlassen bleibt\n         \n         \t\t\t\tals vor die Augen zu treten.\n         \t\t\t\tGeruhen Sie, hochgeschätzte Freundin, die beigefügten Fortsetzungen des Teutschen\n         \n         \t\t\t\tMerkur an Frau von Oberkirch weiterzuleiten; Herr Wieland, Herausgeber und Verfasser\n         \n         \t\t\t\tdes Gedichts Liebe um Liebe, empfiehlt sich hierdurch ihrer Gunst und versucht,\n         \n         \t\t\t\tihr seine tiefe Achtung vor allem auszudrücken, was er über sie gehört hat, vor\n         \n         \t\t\t\tallem von seinem Freund Goethe. Er wäre äußerst zufrieden über den Zuspruch einer\n         \n         \t\t\t\tso vollendeten Kennerin, deren Antwort er sicher verdient und die der süßeste\n         Lohn \n         \t\t\t\tfür einen der ersten Männer unseres Jahrhunderts wäre. Teilen Sie mir gütigst\n         mit, \n         \t\t\t\tbeehren Sie mich mit Ihren Aufträgen, falls irgendeine deutsche Broschüre, die\n         Ihre \n         \t\t\t\tAufmerksamkeit verdienen könnte, noch nicht bis nach Straßburg durchgedrungen\n         ist. \n         \t\t\t\tDas wäre die größte Gunst eines Schicksals, das bis jetzt nur versucht hat, mich\n         zu \n         \t\t\t\tunterjochen.\n         \t\t\t\tErweisen Sie Frau von Oberkirch, falls sie es gestattet und sich zu meinem Glück \n         \t\t\t\tnoch meines Namens erinnert, meine untertänigste Hochachtung. Ich bitte Sie außerdem,\n         \n         \t\t\t\tIhre Frau Mutter und Ihr Fräulein Schwester nicht zu vergessen.\n         \t\t\t\tIch bitte Sie nochmals, mir mitzuteilen, ob irgendein neues Buch oder eine andere\n         Neuigkeit \n         \t\t\t\tvielleicht die Neugier von Frau von Oberkirch weckt. Nachrichten von Ihrer Cousine\n         wüsste \n         \t\t\t\tich gerade keine, außer, dass sie mit der regierenden Herzogin in ihr Landhaus\n         nach \n         \t\t\t\tBelvedere gefahren ist; der Herzog ist in Ilmenau; wo ich ihn bald zu sehen hoffe,\n         \n         \t\t\t\tnachdem ich noch einige Wochen die süße Einsamkeit genieße.\n         \t\t\t\tLenz</div>\n   </div>\n</section>"
+}

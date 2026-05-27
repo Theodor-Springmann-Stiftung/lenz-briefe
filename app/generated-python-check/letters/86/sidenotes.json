@@ -1,0 +1,14 @@
+{
+  "1": [
+    {
+      "id": "letter-086-page-1-sidenote-1",
+      "order": 1,
+      "letter": "86",
+      "page": "1",
+      "pos": "left",
+      "annotation": "am linken Rand der ersten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-086-page-1-sidenote-1\" data-letter=\"86\" data-page=\"1\" data-pos=\"left\" data-annotation=\"am linken Rand der ersten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\"> im Begrif zu Pferde zu steigen – Wenn Sie Stolbergs sprechen, tausend Empfehlungen\n      von mir, die ihnen Lavater auszurichten vergessen hat.</div>\n</aside>"
+    }
+  ],
+  "4": []
+}

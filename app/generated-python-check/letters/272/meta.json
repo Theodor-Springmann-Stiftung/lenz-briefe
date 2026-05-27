@@ -1,0 +1,89 @@
+{
+  "letter": "272",
+  "slug": "letter-272",
+  "sent": {
+    "date": {
+      "text": "Zürich, 20. und 23. Februar 1777",
+      "when": null,
+      "notBefore": "1777-02-20",
+      "notAfter": "1777-02-23",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "11",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Zürich",
+        "resolved": {
+          "index": "11",
+          "name": "Zürich",
+          "ref": "http://d-nb.info/gnd/4068038-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "22",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Philipp Christoph Kayser",
+        "resolved": {
+          "index": "22",
+          "name": "Philipp Christoph Kayser",
+          "vorname": "Philipp Christoph",
+          "nachname": "Kayser",
+          "komm": "kayser",
+          "ref": "http://d-nb.info/gnd/116090235"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "12",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Emmendingen",
+        "resolved": {
+          "index": "12",
+          "name": "Emmendingen",
+          "ref": "http://d-nb.info/gnd/4014586-4"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 3,
+  "pages": [
+    "1",
+    "2",
+    "3"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"272\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 24.\n         \t\t\t</div>\n   </div>\n</section>"
+}

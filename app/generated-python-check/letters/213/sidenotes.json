@@ -1,0 +1,32 @@
+{
+  "1": [
+    {
+      "id": "letter-213-page-1-sidenote-1",
+      "order": 1,
+      "letter": "213",
+      "page": "1",
+      "pos": "top",
+      "annotation": "am oberen Rand, horizontal gespiegelt",
+      "html": "<aside class=\"sidenote\" id=\"letter-213-page-1-sidenote-1\" data-letter=\"213\" data-page=\"1\" data-pos=\"top\" data-annotation=\"am oberen Rand, horizontal gespiegelt\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\"><del>sie</del> Charakter von Sienas Freundin – tief – verb. – um sie nicht zu verderben will sie\n      ihr nicht ihre Neigung zugestehen, weil sie wohl sieht daß jene als Delikatesse für\n      sie gl. abtreten würde und ihr wie natürlich Liebe für ihn zutraut. Sie begegnet also\n      Truf. mit der äussersten Inegalität. Die falsche Delikatesse kreuzt sich wun-</div>\n</aside>"
+    },
+    {
+      "id": "letter-213-page-1-sidenote-2",
+      "order": 2,
+      "letter": "213",
+      "page": "1",
+      "pos": "left",
+      "annotation": "am linken Rand, horizontal gespiegelt",
+      "html": "<aside class=\"sidenote\" id=\"letter-213-page-1-sidenote-2\" data-letter=\"213\" data-page=\"1\" data-pos=\"left\" data-annotation=\"am linken Rand, horizontal gespiegelt\">\n   <div class=\"lb-line-block lb-line-block--empty\" data-type=\"empty\"></div>\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">derbar mit Cath. an der es ihr immer ärgert daß sie Tr. nach ihrer Meynung nicht freundl.\n      genug und zwar aus <span class=\"aq\">pruderie</span> denkt sie, begegnet. Endl. kommt sie zum Ausbruch und zu <span class=\"ul\">Vorwürfen.</span></div>\n</aside>"
+    },
+    {
+      "id": "letter-213-page-1-sidenote-3",
+      "order": 3,
+      "letter": "213",
+      "page": "1",
+      "pos": "right",
+      "annotation": "am rechten Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-213-page-1-sidenote-3\" data-letter=\"213\" data-page=\"1\" data-pos=\"right\" data-annotation=\"am rechten Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">☓ ☓ was es der Freundin kostet endl. <span class=\"ul\">zu gestehen daß sie ihn liebt.</span> wohin es im Stük doch getrieben wird.</div>\n</aside>"
+    }
+  ],
+  "2": []
+}

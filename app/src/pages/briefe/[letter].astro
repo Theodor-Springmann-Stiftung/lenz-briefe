@@ -80,14 +80,18 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
       user-select: none;
     }
 
-    .letter-body-prose .lb-line {
-      clear: both;
-      line-height: inherit;
+    .letter-body-prose .lb-line-block,
+    .letter-body-prose .lb-tab-row {
+      display: block;
     }
 
-    .letter-body-prose .lb-line--empty {
-      display: block;
-      content: "";
+    .letter-body-prose .lb-line-block[data-type="break"],
+    .letter-body-prose .lb-tab-row[data-type="break"] {
+      min-height: 1lh;
+    }
+
+    .letter-body-prose .lb-line-block--empty {
+      min-height: 1lh;
       margin-block-end: 0.85rem;
     }
 
@@ -98,44 +102,18 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
       border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent);
     }
 
-    .letter-body-prose .lb-indent {
-      display: inline-block;
-      flex: 0 0 auto;
-      white-space: pre;
-    }
-
-    .letter-body-prose .lb-indent[data-tab="1"] {
-      width: var(--lb-indent-1);
-    }
-
-    .letter-body-prose .lb-indent[data-tab="2"] {
-      width: var(--lb-indent-2);
-    }
-
-    .letter-body-prose .lb-indent[data-tab="3"] {
-      width: var(--lb-indent-3);
-    }
-
-    .letter-body-prose .lb-indent[data-tab="4"] {
-      width: var(--lb-indent-4);
-    }
-
-    .letter-body-prose .lb-indent[data-tab="5"] {
-      width: var(--lb-indent-5);
-    }
-
-    .letter-body-prose .lb-indent[data-tab="6"] {
-      width: var(--lb-indent-6);
-    }
-
-    .letter-body-prose .lb-indent[data-tab="7"] {
-      width: var(--lb-indent-7);
-    }
-
     .letter-body-prose .align {
       display: block;
       width: 100%;
       text-align: start;
+    }
+
+    .letter-body-prose .lb-line-block[data-align="center"] {
+      text-align: center;
+    }
+
+    .letter-body-prose .lb-line-block[data-align="right"] {
+      text-align: right;
     }
 
     .letter-body-prose .align[data-pos="center"] {
@@ -146,31 +124,59 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
       text-align: right;
     }
 
-    .letter-body-prose .align[data-tab="1"] {
+    .letter-body-prose .lb-line-block[data-tab="1"] {
+      text-indent: var(--lb-indent-1);
+    }
+
+    .letter-body-prose .lb-tab-row[data-tab="1"] {
       padding-inline-start: var(--lb-indent-1);
     }
 
-    .letter-body-prose .align[data-tab="2"] {
+    .letter-body-prose .lb-line-block[data-tab="2"] {
+      text-indent: var(--lb-indent-2);
+    }
+
+    .letter-body-prose .lb-tab-row[data-tab="2"] {
       padding-inline-start: var(--lb-indent-2);
     }
 
-    .letter-body-prose .align[data-tab="3"] {
+    .letter-body-prose .lb-line-block[data-tab="3"] {
+      text-indent: var(--lb-indent-3);
+    }
+
+    .letter-body-prose .lb-tab-row[data-tab="3"] {
       padding-inline-start: var(--lb-indent-3);
     }
 
-    .letter-body-prose .align[data-tab="4"] {
+    .letter-body-prose .lb-line-block[data-tab="4"] {
+      text-indent: var(--lb-indent-4);
+    }
+
+    .letter-body-prose .lb-tab-row[data-tab="4"] {
       padding-inline-start: var(--lb-indent-4);
     }
 
-    .letter-body-prose .align[data-tab="5"] {
+    .letter-body-prose .lb-line-block[data-tab="5"] {
+      text-indent: var(--lb-indent-5);
+    }
+
+    .letter-body-prose .lb-tab-row[data-tab="5"] {
       padding-inline-start: var(--lb-indent-5);
     }
 
-    .letter-body-prose .align[data-tab="6"] {
+    .letter-body-prose .lb-line-block[data-tab="6"] {
+      text-indent: var(--lb-indent-6);
+    }
+
+    .letter-body-prose .lb-tab-row[data-tab="6"] {
       padding-inline-start: var(--lb-indent-6);
     }
 
-    .letter-body-prose .align[data-tab="7"] {
+    .letter-body-prose .lb-line-block[data-tab="7"] {
+      text-indent: var(--lb-indent-7);
+    }
+
+    .letter-body-prose .lb-tab-row[data-tab="7"] {
       padding-inline-start: var(--lb-indent-7);
     }
 
@@ -314,9 +320,14 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
     }
 
     .letter-body-prose .tabs {
-      display: grid;
-      gap: 0.35rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
       margin-block: 1rem;
+    }
+
+    .letter-body-prose .lb-tab-row {
+      min-width: 0;
     }
 
     .letter-body-prose .tab {
@@ -362,44 +373,6 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
   <script is:inline>
     (() => {
       const roots = document.querySelectorAll("[data-letter-layout]");
-      const canvas = document.createElement("canvas");
-      const context = canvas.getContext("2d");
-      const INLINE_BREAK_TEXT = " | ";
-      const PROBE_SELECTOR = ".page-line-probe";
-
-
-      const getBottomGap = (item) => {
-        if (!context) {
-          return 0;
-        }
-
-        const sample = item.textContent?.trim();
-        if (!sample) {
-          return 0;
-        }
-
-        const computed = window.getComputedStyle(item);
-        context.font = computed.font;
-        const metrics = context.measureText(sample);
-        const fontDescent = metrics.fontBoundingBoxDescent ?? 0;
-        const glyphDescent = metrics.actualBoundingBoxDescent ?? 0;
-        return Math.max(0, fontDescent - glyphDescent);
-      };
-
-      const createPageProbe = (pageId) => {
-        const probe = document.createElement("span");
-        probe.className = "page-line-probe";
-        probe.dataset.pageProbeFor = pageId;
-        probe.setAttribute("aria-hidden", "true");
-        probe.textContent = "\u200B";
-        return probe;
-      };
-
-      const removePageProbes = (body) => {
-        for (const probe of body.querySelectorAll(PROBE_SELECTOR)) {
-          probe.remove();
-        }
-      };
 
       const isIgnoredNode = (node) => {
         if (node.nodeType === Node.TEXT_NODE) {
@@ -412,122 +385,24 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
 
         return (
           node.classList.contains("lb-page") ||
-          node.classList.contains("page-anchor") ||
-          node.classList.contains("page-line-probe")
+          node.classList.contains("page-anchor")
         );
       };
 
-      const isLineBreakNode = (node) =>
-        node instanceof HTMLBRElement && node.classList.contains("lb-line");
-
-      const getNextMeaningfulSibling = (node, { skipLineBreaks = false } = {}) => {
-        let current = node?.nextSibling ?? null;
-
-        while (current) {
-          if (isIgnoredNode(current) || (skipLineBreaks && isLineBreakNode(current))) {
-            current = current.nextSibling;
-            continue;
-          }
-
-          return current;
-        }
-
-        return null;
-      };
-
-      const splitTextForProbe = (node) => {
-        const index = node.textContent?.search(/\S/) ?? -1;
-        if (index <= 0) {
-          return node;
-        }
-
-        return node.splitText(index);
-      };
-
-      const insertProbeAtVisibleStart = (node, pageId) => {
-        const probe = createPageProbe(pageId);
-
-        if (node.nodeType === Node.TEXT_NODE) {
-          const target = splitTextForProbe(node);
-          target.parentNode?.insertBefore(probe, target);
-          return probe;
-        }
-
-        if (!(node instanceof HTMLElement)) {
-          return probe;
-        }
-
-        for (const child of Array.from(node.childNodes)) {
-          if (isIgnoredNode(child) || isLineBreakNode(child)) {
-            continue;
-          }
-
-          if (child.nodeType === Node.TEXT_NODE && child.textContent?.trim()) {
-            return insertProbeAtVisibleStart(child, pageId);
-          }
-
-          if (child instanceof HTMLElement) {
-            return insertProbeAtVisibleStart(child, pageId);
-          }
-        }
-
-        node.prepend(probe);
-        return probe;
-      };
-
-      const classifyPageStart = (anchor, isFirstPage) => {
-        const firstNode = getNextMeaningfulSibling(anchor);
-        const startsWithLineBreak = isLineBreakNode(firstNode);
-
-        const mode = startsWithLineBreak ? "line-break" : "inline-break";
-        anchor.dataset.pageStart = mode;
-        anchor.dataset.firstPage = isFirstPage ? "true" : "false";
-
-        return {
-          anchor,
-          mode,
-          firstNode,
-          firstContentNode:
-            mode === "line-break"
-              ? getNextMeaningfulSibling(firstNode, { skipLineBreaks: true })
-              : firstNode
-        };
-      };
-
       const buildPageTargets = (body) => {
-        removePageProbes(body);
-        const anchors = Array.from(body.querySelectorAll(".page-anchor"));
-        const firstPageAnchorId = anchors[0]?.id ?? "";
         const targets = new Map();
+        const anchors = Array.from(body.querySelectorAll(".page-anchor"));
 
         for (const anchor of anchors) {
           if (!(anchor instanceof HTMLElement) || !anchor.id) {
             continue;
           }
 
-          const pageStart = classifyPageStart(anchor, anchor.id === firstPageAnchorId);
-          const pageId = anchor.id;
-          let target = anchor;
-
-          if (!pageStart.anchor.dataset.firstPage || pageStart.anchor.dataset.firstPage !== "true") {
-            if (pageStart.mode === "inline-break") {
-              const probe = createPageProbe(pageId);
-              anchor.replaceChildren(document.createTextNode(INLINE_BREAK_TEXT), probe);
-              target = probe;
-              targets.set(pageId, target);
-              continue;
-            }
-          }
-
-          anchor.replaceChildren();
-          if (pageStart.firstContentNode) {
-            target = insertProbeAtVisibleStart(pageStart.firstContentNode, pageId);
-          }
-
-          targets.set(pageId, target);
+          anchor.textContent = anchor.dataset.inlineBreak === "true" ? " | " : "";
+          targets.set(anchor.id, anchor);
         }
 
-        return { firstPageAnchorId, targets };
+        return { targets };
       };
 
       const positionRail = (items, body, rail, pageTargets) => {
@@ -561,10 +436,9 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
           }
 
           const targetRect = target.getBoundingClientRect();
-          const bottomGap = align === "bottom" ? getBottomGap(item) : 0;
           const rawTop =
             align === "bottom"
-              ? targetRect.bottom - bodyRect.top - item.offsetHeight + bottomGap
+              ? targetRect.bottom - bodyRect.top - item.offsetHeight
               : targetRect.top - bodyRect.top;
           const top = Math.max(0, rawTop);
           item.style.top = `${Math.round(top)}px`;

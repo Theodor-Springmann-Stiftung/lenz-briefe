@@ -111,9 +111,46 @@ test("getLetterBundle returns a continuous text stream with page-keyed sidenotes
   assert.deepEqual(bundle.pages, bundle.meta.pages);
   assert.match(bundle.textHtml, /class="page-anchor" id="page-1"/);
   assert.match(bundle.textHtml, /class="lb-page" data-index="1"/);
+  assert.match(bundle.textHtml, /class="lb-line-block/);
   assert.doesNotMatch(bundle.textHtml, /class="letter-text"/);
+  assert.doesNotMatch(bundle.textHtml, /<br class="lb-line"/);
   assert.deepEqual(Object.keys(bundle.sidenotesByPage), bundle.pages);
   assert.ok(Array.isArray(bundle.sidenotesByPage["1"]));
+});
+
+test("sidenotes and tables use the normalized block model", async () => {
+  const sidenoteBundle = await getLetterBundle("108");
+  const tableBundle = await getLetterBundle("366");
+
+  assert.match(sidenoteBundle.sidenotesByPage["1"][0]?.html ?? "", /class="lb-line-block/);
+  assert.doesNotMatch(sidenoteBundle.sidenotesByPage["1"][0]?.html ?? "", /<br class="lb-line"/);
+  assert.match(tableBundle.textHtml, /class="lb-tab-row"/);
+  assert.match(
+    tableBundle.textHtml,
+    /class="lb-line-block" data-type="break" data-align="right">Ihr aufrichtig ergebenster JMRlands\./
+  );
+});
+
+test("page markers stay inline instead of creating synthetic line blocks", async () => {
+  const lineStartBundle = await getLetterBundle("79");
+  const inlineCarryBundle = await getLetterBundle("20");
+
+  assert.match(
+    lineStartBundle.textHtml,
+    /<div class="lb-line-block" data-type="break" data-tab="1"><span class="page-anchor" id="page-1">.*?<\/span><span class="lb-page" data-index="1"><\/span>Ulm/s
+  );
+  assert.match(
+    lineStartBundle.textHtml,
+    /<span class="page-anchor" id="page-4" data-inline-break="true"> \| <\/span><span class="lb-page" data-index="4"><\/span>gedanckt/s
+  );
+  assert.match(
+    inlineCarryBundle.textHtml,
+    /<span class="aq">Corres-<\/span> <span class="page-anchor" id="page-3" data-inline-break="true"> \| <\/span><span class="lb-page" data-index="3"><\/span><span class="aq">pondence<\/span>/s
+  );
+  assert.match(
+    inlineCarryBundle.textHtml,
+    /data-type="empty"><\/div><span class="page-anchor" id="page-4">.*?<\/span><span class="lb-page" data-index="4"><\/span><div class="lb-line-block lb-line-block--empty"/s
+  );
 });
 
 test("getYearGroupDefinitions exposes the hardcoded year groups", () => {

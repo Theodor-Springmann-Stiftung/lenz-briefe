@@ -18,7 +18,9 @@
       <xsl:attribute name="data-page" select="/*/@page" />
       <xsl:attribute name="data-pos" select="/*/@pos" />
       <xsl:attribute name="data-annotation" select="/*/@annotation" />
-      <xsl:apply-templates select="/*/node()" />
+      <xsl:call-template name="lb:render-flow">
+        <xsl:with-param name="nodes" select="/*/node()" />
+      </xsl:call-template>
     </aside>
   </xsl:template>
 

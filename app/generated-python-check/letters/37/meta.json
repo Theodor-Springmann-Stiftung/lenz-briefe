@@ -1,0 +1,87 @@
+{
+  "letter": "37",
+  "slug": "letter-037",
+  "sent": {
+    "date": {
+      "text": "Straßburg, wahrscheinlich Mitte 1774",
+      "when": null,
+      "notBefore": "1774-07-10",
+      "notAfter": "1774-07-20",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "56",
+        "cert": "low",
+        "erschlossen": null,
+        "label": "Frankfurt am Main",
+        "resolved": {
+          "index": "56",
+          "name": "Frankfurt am Main",
+          "ref": "http://d-nb.info/gnd/4018118-2"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "12",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Wolfgang Goethe",
+        "resolved": {
+          "index": "12",
+          "name": "Johann Wolfgang Goethe",
+          "vorname": "Johann Wolfgang",
+          "nachname": "Goethe",
+          "komm": "goethe",
+          "ref": "http://d-nb.info/gnd/118540238"
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"37\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tZürich, Zentralbibliothek, FA Lav. Ms. 16a; Abschrift des Lenz-Gedichts von Johann\n         Caspar\n         \t\t\t\tLavater in\n         \t\t\t\tseinem „Tagebuch einer Reise nach Bad Ems im Sommer 1774“, Heft X, [S. 10], unter\n         dem Datum\n         \t\t\t\tvom\n         \t\t\t\t15. Juli 1774.\n         \t\t\t</div>\n   </div>\n</section>"
+}

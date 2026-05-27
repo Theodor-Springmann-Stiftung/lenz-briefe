@@ -1,0 +1,116 @@
+{
+  "letter": "285",
+  "slug": "letter-285",
+  "sent": {
+    "date": {
+      "text": "Emmendingen, 9. Juni 1777",
+      "when": "1777-06-09",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "12",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Emmendingen",
+        "resolved": {
+          "index": "12",
+          "name": "Emmendingen",
+          "ref": "http://d-nb.info/gnd/4014586-4"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "18",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Georg Schlosser",
+        "resolved": {
+          "index": "18",
+          "name": "Johann Georg Schlosser",
+          "vorname": "Johann Georg",
+          "nachname": "Schlosser",
+          "komm": "schlosser",
+          "ref": "http://d-nb.info/gnd/118795163"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "11",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Zürich",
+        "resolved": {
+          "index": "11",
+          "name": "Zürich",
+          "ref": "http://d-nb.info/gnd/4068038-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "10",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Caspar Lavater",
+        "resolved": {
+          "index": "10",
+          "name": "Johann Caspar Lavater",
+          "vorname": "Johann Caspar",
+          "nachname": "Lavater",
+          "komm": "lavater",
+          "ref": "http://d-nb.info/gnd/118570293"
+        }
+      },
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      },
+      {
+        "ref": "23",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Konrad Pfenninger",
+        "resolved": {
+          "index": "23",
+          "name": "Johann Konrad Pfenninger",
+          "vorname": "Johann Konrad",
+          "nachname": "Pfenninger",
+          "komm": "pfenninger",
+          "ref": "http://d-nb.info/gnd/104318112"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "2"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"285\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tZentralbibliothek Zürich, FA Lav Ms 526, Nr. 4.\n         \t\t\t</div>\n   </div>\n</section>"
+}

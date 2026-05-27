@@ -1,0 +1,87 @@
+{
+  "letter": "306",
+  "slug": "letter-306",
+  "sent": {
+    "date": {
+      "text": "Schloss Hegi, 17. November 1777",
+      "when": "1777-11-17",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "54",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Schloss Hegi",
+        "resolved": {
+          "index": "54",
+          "name": "Schloss Hegi",
+          "ref": "http://d-nb.info/gnd/4089188-4"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "35",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Basel",
+        "resolved": {
+          "index": "35",
+          "name": "Basel",
+          "ref": "http://d-nb.info/gnd/4004617-5"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "80",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Sarasin",
+        "resolved": {
+          "index": "80",
+          "name": "Jakob Sarasin",
+          "vorname": "Jakob",
+          "nachname": "Sarasin",
+          "komm": "j-sarasin",
+          "ref": "http://d-nb.info/gnd/11947624X"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"306\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tBasel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 13.\n         \t\t\t</div>\n   </div>\n</section>"
+}

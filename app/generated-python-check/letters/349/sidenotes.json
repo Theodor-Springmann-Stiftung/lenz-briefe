@@ -1,0 +1,32 @@
+{
+  "1": [],
+  "2": [
+    {
+      "id": "letter-349-page-2-sidenote-1",
+      "order": 1,
+      "letter": "349",
+      "page": "2",
+      "pos": "left",
+      "annotation": "am linken Rand der ersten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-349-page-2-sidenote-1\" data-letter=\"349\" data-page=\"2\" data-pos=\"left\" data-annotation=\"am linken Rand der ersten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Die Bekanntschaft des Hr. Obristen v. Renkendorf in dem Hause S. Exzell. des General\n      Bauer würde mich gereizt haben, Papa die Bitte zu thun, die Du mir einmal anriethest\n      – wenn es nicht so schwer hielte, ihn um einen Brief zu bitten. Die würdige alte Dame\n      <span class=\"aq\">en question</span> ist dieses Frühjahr schwer krank gewesen. Danke <span class=\"ul\">Bruder Schmidt</span> <span class=\"dul\">bald</span> für den Gouv. von <span class=\"ul\">Novogorod.</span></div>\n</aside>"
+    },
+    {
+      "id": "letter-349-page-2-sidenote-2",
+      "order": 2,
+      "letter": "349",
+      "page": "2",
+      "pos": "top",
+      "annotation": "Am oberen Rand der zweiten Seite, spiegelverkehrt und eingerahmt",
+      "html": "<aside class=\"sidenote\" id=\"letter-349-page-2-sidenote-2\" data-letter=\"349\" data-page=\"2\" data-pos=\"top\" data-annotation=\"Am oberen Rand der zweiten Seite, spiegelverkehrt und eingerahmt\">\n   <div class=\"lb-line-block\" data-type=\"break\">es ist einer der vorzüglichsten Menschen, der Gouver. Siewers. Er wohnte beym General\n      B.</div>\n</aside>"
+    },
+    {
+      "id": "letter-349-page-2-sidenote-3",
+      "order": 3,
+      "letter": "349",
+      "page": "2",
+      "pos": "left",
+      "annotation": "Am linken Rand der zweiten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-349-page-2-sidenote-3\" data-letter=\"349\" data-page=\"2\" data-pos=\"left\" data-annotation=\"Am linken Rand der zweiten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">ist es denn nicht möglich, daß ich durch den Derptschen Fuhrmann <span class=\"aq\">Remmert Samuel</span>, der in 8 Tagen hieher kommt, meine Sachen und Bücher, die bey Engelhardt, oder jetzt\n      vermutlich bey Bürgerm. Vitl oder Hr. Haase in Walk stehn, erhalte. Ich denke doch,\n      daß ich sie brauche! –</div>\n</aside>"
+    }
+  ]
+}

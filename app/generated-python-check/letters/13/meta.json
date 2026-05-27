@@ -1,0 +1,88 @@
+{
+  "letter": "13",
+  "slug": "letter-013",
+  "sent": {
+    "date": {
+      "text": "Fort Louis, 13. Juli 1772",
+      "when": "1772-07-13",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "4",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Fort Louis",
+        "resolved": {
+          "index": "4",
+          "name": "Fort Louis",
+          "ref": "https://d-nb.info/gnd/4762184-9"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "3",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Königsberg [Kaliningrad]",
+        "resolved": {
+          "index": "3",
+          "name": "Königsberg [Kaliningrad]",
+          "ref": "https://d-nb.info/gnd/4031541-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Christian Lenz",
+        "resolved": {
+          "index": "8",
+          "name": "Johann Christian Lenz",
+          "vorname": "Johann Christian",
+          "nachname": "Lenz",
+          "komm": "jch-lenz",
+          "ref": null
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "2"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"13\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tKraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 9\n         \t\t\t</div>\n   </div>\n</section>"
+}

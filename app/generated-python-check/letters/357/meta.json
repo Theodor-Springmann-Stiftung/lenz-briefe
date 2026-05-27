@@ -1,0 +1,87 @@
+{
+  "letter": "357",
+  "slug": "letter-357",
+  "sent": {
+    "date": {
+      "text": "Moskau, September 1787",
+      "when": null,
+      "notBefore": "1787-09-01",
+      "notAfter": "1787-09-30",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "50",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Moskau",
+        "resolved": {
+          "index": "50",
+          "name": "Moskau",
+          "ref": "http://d-nb.info/gnd/4074987-3"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "44",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Riga",
+        "resolved": {
+          "index": "44",
+          "name": "Riga",
+          "ref": "http://d-nb.info/gnd/4050042-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "71",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Friedrich Hartknoch",
+        "resolved": {
+          "index": "71",
+          "name": "Johann Friedrich Hartknoch",
+          "vorname": "Johann Friedrich",
+          "nachname": "Hartknoch",
+          "komm": "hartknoch",
+          "ref": "http://d-nb.info/gnd/7751283-2"
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"357\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tEuphorion 14 (1907), S. 614f.\n         \t\t\t</div>\n   </div>\n</section>"
+}

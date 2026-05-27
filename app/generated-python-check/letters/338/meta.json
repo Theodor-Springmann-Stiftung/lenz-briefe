@@ -1,0 +1,87 @@
+{
+  "letter": "338",
+  "slug": "letter-338",
+  "sent": {
+    "date": {
+      "text": "St. Petersburg, 9. Juni 1780",
+      "when": "1780-06-09",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "46",
+        "cert": null,
+        "erschlossen": null,
+        "label": "St. Petersburg",
+        "resolved": {
+          "index": "46",
+          "name": "St. Petersburg",
+          "ref": "http://d-nb.info/gnd/4267026-3"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Dorpat [Tartu]",
+        "resolved": {
+          "index": "1",
+          "name": "Dorpat [Tartu]",
+          "ref": "https://d-nb.info/gnd/1029285-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "3",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Friedrich David Lenz",
+        "resolved": {
+          "index": "3",
+          "name": "Friedrich David Lenz",
+          "vorname": "Friedrich David",
+          "nachname": "Lenz",
+          "komm": "fd-lenz",
+          "ref": null
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"338\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tIn einem Schreiben an Petersen vom 2. November 1815 (Riga, Latvijas Akadēmiskā\n         Bibliotekā,\n         \t\t\t\tMs.\n         \t\t\t\t1113, F. 25, V. 34, Nr. 15) zitiert Dumpf aus einem Brief von Lenz an seinen Bruder\n         \t\t\t\tFriedrich David\n         \t\t\t\tvom „3ten Pfingsttag 80“, dessen Handschrift verschollen ist. Lenz habe in dem\n         Brief auch\n         \t\t\t\t„einer\n         \t\t\t\tStelle erwähnt, die ihm Nicolay vorgeschlagen und durch die er an den Großfürsten\n         gelangte“.\n         \t\t\t</div>\n   </div>\n</section>"
+}

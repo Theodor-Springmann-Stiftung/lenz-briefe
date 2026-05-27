@@ -1,0 +1,88 @@
+{
+  "letter": "212",
+  "slug": "letter-212",
+  "sent": {
+    "date": {
+      "text": "Berka, 15. Juli 1776",
+      "when": "1776-07-15",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "14",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Berka",
+        "resolved": {
+          "index": "14",
+          "name": "Berka",
+          "ref": "http://d-nb.info/gnd/4087284-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "32",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Henriette von Oberkirch geb. Waldner von Freundstein",
+        "resolved": {
+          "index": "32",
+          "name": "Henriette von Oberkirch geb. Waldner von Freundstein",
+          "vorname": "Henriette-Luise von",
+          "nachname": "Oberkirch",
+          "komm": "oberkirch",
+          "ref": "http://d-nb.info/gnd/124494692"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": true,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "2"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"212\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tKraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 22; Entwurf.\n         \t\t\t</div>\n   </div>\n   <div class=\"tradition-app\" data-ref=\"11\">\n      <div class=\"lb-line-block\" data-type=\"break\">Adieu, schöne Stiftsdame, denn so, wie ich Sie das letzte Mal gesehen habe, werde\n         \n         \t\t\t\tich Sie eines Tages wiedersehen, wenn nicht in dieser Welt, so doch in einer \n         \t\t\t\tanderen. Seien Sie immer ebenso glücklich darüber, dass Sie von mir angebetet\n         \n         \t\t\t\twerden und glauben Sie ja nicht, dass man unglücklich sein könnte, wenn man \n         \t\t\t\tsolche Gefühle für Sie hegt.\n         \t\t\t\tLenz\n         \t\t\t\tAn Ihrem Namenstag, dem 15. Juli 1776.\n         \t\t\t\t\n         \t\t\t\tIch hoffe wiederzukommen</div>\n   </div>\n</section>"
+}

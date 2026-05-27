@@ -1,0 +1,14 @@
+{
+  "1": [],
+  "2": [
+    {
+      "id": "letter-087-page-2-sidenote-1",
+      "order": 1,
+      "letter": "87",
+      "page": "2",
+      "pos": "left",
+      "annotation": "am linken Rand der zweiten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-087-page-2-sidenote-1\" data-letter=\"87\" data-page=\"2\" data-pos=\"left\" data-annotation=\"am linken Rand der zweiten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\"> Frage doch Lavatern ob er mein letztes Briefgen erhalten hat, in dem von der Physiognomik\n      die Rede war. Ich gab ihn jemanden bis Basel mit, dessen mir bekannte Nachlässigkeit\n      mir itzt Sorgen macht.</div>\n</aside>"
+    }
+  ]
+}

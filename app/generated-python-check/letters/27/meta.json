@@ -1,0 +1,87 @@
+{
+  "letter": "27",
+  "slug": "letter-027",
+  "sent": {
+    "date": {
+      "text": "Landau, 10. Dezember 1772",
+      "when": "1772-12-10",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "5",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Landau",
+        "resolved": {
+          "index": "5",
+          "name": "Landau",
+          "ref": "http://d-nb.info/gnd/4034222-0"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Dorpat [Tartu]",
+        "resolved": {
+          "index": "1",
+          "name": "Dorpat [Tartu]",
+          "ref": "https://d-nb.info/gnd/1029285-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "4",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Christian David Lenz",
+        "resolved": {
+          "index": "4",
+          "name": "Christian David Lenz",
+          "vorname": "Christian David",
+          "nachname": "Lenz",
+          "komm": "chd-lenz",
+          "ref": "https://d-nb.info/gnd/12021363X"
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"27\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tErich Schmidt: Lenziana, in: Sitzungsberichte der Königlich Preußischen Akademie\n         der\n         \t\t\t\tWissenschaften zu Berlin, Jg. 1901, 41. Stück: Gesammtsitzung, 24. October, S.\n         1003f.\n         \t\t\t</div>\n   </div>\n</section>"
+}

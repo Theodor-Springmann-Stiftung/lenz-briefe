@@ -1,0 +1,14 @@
+{
+  "1": [],
+  "2": [
+    {
+      "id": "letter-224-page-2-sidenote-1",
+      "order": 1,
+      "letter": "224",
+      "page": "2",
+      "pos": "right",
+      "annotation": "am rechten Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-224-page-2-sidenote-1\" data-letter=\"224\" data-page=\"2\" data-pos=\"right\" data-annotation=\"am rechten Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">mit 2 Bouteill. Wein und 3 Citronen in Papier</div>\n</aside>"
+    }
+  ]
+}

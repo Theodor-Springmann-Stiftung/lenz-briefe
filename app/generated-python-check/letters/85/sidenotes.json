@@ -1,0 +1,24 @@
+{
+  "1": [
+    {
+      "id": "letter-085-page-1-sidenote-1",
+      "order": 1,
+      "letter": "85",
+      "page": "1",
+      "pos": "left",
+      "annotation": "am linken Rand der ersten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-085-page-1-sidenote-1\" data-letter=\"85\" data-page=\"1\" data-pos=\"left\" data-annotation=\"am linken Rand der ersten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\"> Sechs Exemplare bitt ich mir aus.</div>\n</aside>"
+    }
+  ],
+  "2": [
+    {
+      "id": "letter-085-page-2-sidenote-1",
+      "order": 1,
+      "letter": "85",
+      "page": "2",
+      "pos": "left",
+      "annotation": "Fortsetzung am linken Rand der zweiten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-085-page-2-sidenote-1\" data-letter=\"85\" data-page=\"2\" data-pos=\"left\" data-annotation=\"Fortsetzung am linken Rand der zweiten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\"> Sie es etwa drucken, es möchte doch wohl auch im Lesen hie und da gefallen. Lenz.</div>\n</aside>"
+    }
+  ]
+}

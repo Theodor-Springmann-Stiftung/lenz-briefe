@@ -1,0 +1,90 @@
+{
+  "letter": "346",
+  "slug": "letter-346",
+  "sent": {
+    "date": {
+      "text": "Ohlershoff [Oleri], 26. November 1780",
+      "when": null,
+      "notBefore": "1780-11-26",
+      "notAfter": "1780-12-26",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "49",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Ohlershoff [Oleri]",
+        "resolved": {
+          "index": "49",
+          "name": "Ohlershoff [Oleri]",
+          "ref": null
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Dorpat [Tartu]",
+        "resolved": {
+          "index": "1",
+          "name": "Dorpat [Tartu]",
+          "ref": "https://d-nb.info/gnd/1029285-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "2",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Friedrich Konrad Gadebusch",
+        "resolved": {
+          "index": "2",
+          "name": "Friedrich Konrad Gadebusch",
+          "vorname": "Friedrich Konrad",
+          "nachname": "Gadebusch",
+          "komm": "gadebusch",
+          "ref": null
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 4,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"346\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tRiga, Latvijas Valsts Vēstures Arhīvs, Fonda 4038, Aprakst 2, Lietas 1642, (Nr.\n         209), S.\n         \t\t\t\t779–782.\n         \t\t\t</div>\n   </div>\n</section>"
+}

@@ -1,0 +1,13 @@
+{
+  "1": [
+    {
+      "id": "letter-084-page-1-sidenote-1",
+      "order": 1,
+      "letter": "84",
+      "page": "1",
+      "pos": "left",
+      "annotation": "am linken Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-084-page-1-sidenote-1\" data-letter=\"84\" data-page=\"1\" data-pos=\"left\" data-annotation=\"am linken Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Daß doch der Abdruck des Possenspiels recht korrekt wird. \n      </div>\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">ich kann und darf sie hier weder abschreiben noch abschreiben lassen.</div>\n</aside>"
+    }
+  ]
+}

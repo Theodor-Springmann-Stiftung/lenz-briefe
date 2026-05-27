@@ -1,0 +1,90 @@
+{
+  "letter": "46",
+  "slug": "letter-046",
+  "sent": {
+    "date": {
+      "text": "Straßburg, 1. Mai 1775",
+      "when": "1775-05-01",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "58",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Koblenz-Ehrenbreitstein",
+        "resolved": {
+          "index": "58",
+          "name": "Koblenz-Ehrenbreitstein",
+          "ref": "http://d-nb.info/gnd/4098580-5"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "13",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Sophie von La Roche",
+        "resolved": {
+          "index": "13",
+          "name": "Sophie von La Roche",
+          "vorname": "Sophie von",
+          "nachname": "La Roche",
+          "komm": "la roche",
+          "ref": "http://d-nb.info/gnd/118569767"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 4,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"46\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tWeimar, Goethe- und Schiller-Archiv, GSA 56/N3, Bl. 3–4.\n         \t\t\t</div>\n   </div>\n</section>"
+}

@@ -1,0 +1,104 @@
+{
+  "letter": "297",
+  "slug": "letter-297",
+  "sent": {
+    "date": {
+      "text": "Zürich, August 1777",
+      "when": null,
+      "notBefore": "1777-08-01",
+      "notAfter": "1777-08-31",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "11",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Zürich",
+        "resolved": {
+          "index": "11",
+          "name": "Zürich",
+          "ref": "http://d-nb.info/gnd/4068038-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "35",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Basel",
+        "resolved": {
+          "index": "35",
+          "name": "Basel",
+          "ref": "http://d-nb.info/gnd/4004617-5"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "79",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Gertrud Sarasin",
+        "resolved": {
+          "index": "79",
+          "name": "Gertrud Sarasin",
+          "vorname": "Gertrud",
+          "nachname": "Sarasin",
+          "komm": "sarasin",
+          "ref": "http://d-nb.info/gnd/1117247015"
+        }
+      },
+      {
+        "ref": "80",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Sarasin",
+        "resolved": {
+          "index": "80",
+          "name": "Jakob Sarasin",
+          "vorname": "Jakob",
+          "nachname": "Sarasin",
+          "komm": "j-sarasin",
+          "ref": "http://d-nb.info/gnd/11947624X"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 4,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"297\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tBasel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 7.\n         \t\t\t</div>\n   </div>\n</section>"
+}

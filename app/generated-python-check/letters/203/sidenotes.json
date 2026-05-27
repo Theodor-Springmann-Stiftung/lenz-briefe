@@ -1,0 +1,14 @@
+{
+  "1": [],
+  "2": [
+    {
+      "id": "letter-203-page-2-sidenote-1",
+      "order": 1,
+      "letter": "203",
+      "page": "2",
+      "pos": "left",
+      "annotation": "vertikal mit dunklerer Tinte",
+      "html": "<aside class=\"sidenote\" id=\"letter-203-page-2-sidenote-1\" data-letter=\"203\" data-page=\"2\" data-pos=\"left\" data-annotation=\"vertikal mit dunklerer Tinte\">\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"ink\">Die Gleichen 2 mal abmalen eines für W.\n         </span></div>\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"ink\"><span class=\"ul\">Sonntag.</span>\n         </span></div>\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"ink\">Wielandias Jacobi schicken\n         </span></div>\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"ink\">Montag zum Amtsschreiber</span></div>\n</aside>"
+    }
+  ]
+}

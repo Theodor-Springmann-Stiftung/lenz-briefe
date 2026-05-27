@@ -1,0 +1,90 @@
+{
+  "letter": "273",
+  "slug": "letter-273",
+  "sent": {
+    "date": {
+      "text": "Colmar, 5. April 1777",
+      "when": "1777-04-05",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "26",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Colmar",
+        "resolved": {
+          "index": "26",
+          "name": "Colmar",
+          "ref": "http://d-nb.info/gnd/4010401-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "39",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Ramond de Carbonnières",
+        "resolved": {
+          "index": "39",
+          "name": "Ramond de Carbonnières",
+          "vorname": "Ramond de",
+          "nachname": "Carbonnières",
+          "komm": "carbonnières",
+          "ref": null
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "12",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Emmendingen",
+        "resolved": {
+          "index": "12",
+          "name": "Emmendingen",
+          "ref": "http://d-nb.info/gnd/4014586-4"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 4,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"273\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tKraków, Biblioteka Jagiellońska, Lenziana 5, zwei Briefe Ramond de Carbonnières\n         an Lenz, Nr.\n         \t\t\t\t2.\n         \t\t\t</div>\n   </div>\n   <div class=\"tradition-app\" data-ref=\"11\">\n      <div class=\"lb-line-block\" data-type=\"break\">In Straßburg habe ich, mein Herr und lieber Freund, von Ihrem Aufenthalt in Colmar\n         \n         \t\t\t\terfahren und sehr bedauert, nicht mit Ihnen dort sein zu können. Die Wichtigkeit\n         der \n         \t\t\t\tGeschäfte, die mich zurückhielten, hinderte mich, Sie dort zu treffen. Was mich\n         über \n         \t\t\t\tdieses Missgeschick hinwegtrösten kann, ist allein die Hoffnung, die Sie den Herren\n         \n         \t\t\t\tPfeffel und Lerse gemacht haben, Sie dort wiederzusehen. Ich nehme Sie in die\n         Pflicht, \n         \t\t\t\tIhr Wort nicht zu brechen; und ich wünsche sehr, einer der Gründe zu sein, die\n         sie \n         \t\t\t\tdaran binden, Ihr Wort zu halten. Hier ist, mein lieber Freund, mein armseliges\n         Drama, \n         \t\t\t\tmehr schlecht als recht gedruckt; und durch die Ohrfeigen des Korrektors an die\n         Ohrfeigen \n         \t\t\t\tder Kritiker gewöhnt. Ihr Name ist das Beste in diesem Werk, und Ihr Zuspruch\n         ist sein \n         \t\t\t\tVerdienst. Um die Huldigung zu komplettieren, die schwächliche Huldigung, die\n         meine Widmung \n         \t\t\t\tIhrer Protektion erweist; sollte ich die Gründe dafür in einer längeren Widmung\n         darlegen, \n         \t\t\t\tmein Freund Mathieu wollte das nicht erlauben; er hat mir gesagt, dass ich Ihre\n         Werke nicht \n         \t\t\t\tnennen und von Ihren Begabungen nicht sprechen könne, ohne entweder Ihre Geheimnisse\n         oder Ihre \n         \t\t\t\tBescheidenheit bloßzustellen und was die Qualitäten Ihres Herzens betrifft, so\n         müssen diese \n         \t\t\t\tim Herzen Ihrer Freunde sein und dort geweiht werden, viel eher als in einer eitlen\n         Schrift. \n         \t\t\t\tGeruhen Sie, sein Beschützer zu sein, wie Sie sein Pate gewesen sind; geruhen\n         Sie, der Mäzen \n         \t\t\t\tschwacher Talente zu sein, die große Talente benötigen, um von ihnen geführt zu\n         werden; geruhen \n         \t\t\t\tSie, mich ein wenig an Ihrem Ruhm teilhaben zu lassen. \n         \t\t\t\n         \t\t\t\t\n         \t\t\t\tMein Freund Mathieu, der sich rühmt, der Ihre zu sein, lässt mich Ihnen die Versicherung\n         seiner \n         \t\t\t\tzärtlichsten Zuneigung ausrichten. Er macht sich Vorwürfe, Ihnen so lange nicht\n         geschrieben zu \n         \t\t\t\thaben; aber Ihr ungewisser Aufenthaltsort und Ihr ungewisses Ziel haben ihn daran\n         gehindert. \n         \t\t\t\tSeit Ihrer Abreise aus Weimar hat er Sie immer in Straßburg erwartet, wo Sie durchgereist\n         sind, \n         \t\t\t\tohne irgendjemand von denen zu besuchen, die Ihnen so aufrichtig zugetan sind;\n         ich soll Ihnen \n         \t\t\t\tdeswegen tausend Vorwürfe machen. \n         \t\t\t\n         \t\t\t\t\n         \t\t\t\tNoch ein Wort. Ich war sehr geschmeichelt vom Zuspruch, mit dem Ihre Hoheiten die\n         Herzoginnen von \n         \t\t\t\tWeimar mein Werk zu ehren geruhten, ich verdanke Ihnen, lieber Freund, diesen\n         Triumph und schulde \n         \t\t\t\tIhnen Dank; es bleibt mir nur noch, Sie um Rat zu fragen, auf welche Weise ich\n         an diesen Hof einige \n         \t\t\t\tExemplare, die ich als Huldigung schuldig bin, schicken kann. Sie hatten die Güte,\n         meinem Bruder \n         \t\t\t\tmitzuteilen, dass Ihr berühmter Freund Goethe diese darbietet. Ist es nötig, ist\n         es angebracht, dass \n         \t\t\t\tich den Herzoginnen schreibe; oder nur an Madame die verwitwete Fürstin oder überhaupt\n         nicht? Ich bitte \n         \t\t\t\tSie inständig, mich darüber aufzuklären, Sie werden mir einen großen Dienst erweisen.\n         \n         \t\t\t\t\n         \t\t\t\tHerr Schlosser wird Ihnen, lieber Freund, dieses Paket hier übergeben. Ich habe die\n         Ehre, ihm zu schreiben \n         \t\t\t\tund ihm ein Exemplar meines Dramas zu schenken; ich bitte ihn gleichzeitig darum,\n         sich Ihrer für einige Tage \n         \t\t\t\tzu entledigen, und Sie zu Ihren Freunden aus Colmar zu schicken, die ihm dafür\n         zu größtem Dank verpflichtet \n         \t\t\t\tsein werden. \n         \t\t\t\t\n         \t\t\t\tMein lieber Freund, ich erwarte gütigst Ihre Weisung, um mir die Freiheit zu erlauben,\n         an Herrn Goethe zu \n         \t\t\t\tschreiben und ihn zu bitten, einen Erweis meiner Verehrung seiner Person und seiner\n         Schriften \n         \t\t\t\tentgegenzunehmen. \n         \t\t\t\t\n         \t\t\t\tIch verbleibe in aufrichtiger und größter Zuneigung, \n         \t\t\t\tmein Herr und lieber Freund,\n         \t\t\t\t\n         \t\t\t\tIhr Ihnen treu ergebener Diener\n         \t\t\t\tRamond\n         \t\t\t\t\n         \t\t\t\tAnwalt am Conseil.</div>\n   </div>\n</section>"
+}

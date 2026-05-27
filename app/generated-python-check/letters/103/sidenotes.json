@@ -1,0 +1,26 @@
+{
+  "1": [
+    {
+      "id": "letter-103-page-1-sidenote-1",
+      "order": 1,
+      "letter": "103",
+      "page": "1",
+      "pos": "left",
+      "annotation": "am linken Rand der ersten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-103-page-1-sidenote-1\" data-letter=\"103\" data-page=\"1\" data-pos=\"left\" data-annotation=\"am linken Rand der ersten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">Das Soliloquium des Wetterhahn könnte füglich wegbleiben. Es ist <span class=\"ul\">zu</span> schmutzig. Sorgen Sie doch dafür bester! <span class=\"ul\">Wenigstens muß er in Kleidern</span> am Tisch sitzen. es wäre mir <span class=\"ul\">aber sehr lieb</span> wenns ganz wegbliebe. <span class=\"aq\">verte</span></div>\n</aside>"
+    }
+  ],
+  "2": [],
+  "3": [],
+  "4": [
+    {
+      "id": "letter-103-page-4-sidenote-1",
+      "order": 1,
+      "letter": "103",
+      "page": "4",
+      "pos": "left",
+      "annotation": "am linken Rand der vierten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-103-page-4-sidenote-1\" data-letter=\"103\" data-page=\"4\" data-pos=\"left\" data-annotation=\"am linken Rand der vierten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Von Blessig und andern nächstens</div>\n</aside>"
+    }
+  ]
+}

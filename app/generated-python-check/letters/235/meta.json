@@ -1,0 +1,87 @@
+{
+  "letter": "235",
+  "slug": "letter-235",
+  "sent": {
+    "date": {
+      "text": "Straßburg, 21. September 1776",
+      "when": "1776-09-21",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "9",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Daniel Salzmann",
+        "resolved": {
+          "index": "9",
+          "name": "Johann Daniel Salzmann",
+          "vorname": "Johann Daniel",
+          "nachname": "Salzmann ",
+          "komm": "salzmann",
+          "ref": "https://d-nb.info/gnd/116777265"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"235\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tSchmidt, Erich: Lenziana. In: Sitzungsberichte der Königlich Preußischen Akademie\n         der\n         \t\t\t\tWissenschaften zu Berlin, Jg. 1901, 41. Stück: Gesammtsitzung, 24. October, S.\n         1007f.; laut\n         \t\t\t\tFSt II 263 nach\n         \t\t\t\tfehlerhafter Kopie.\n         \t\t\t</div>\n   </div>\n</section>"
+}

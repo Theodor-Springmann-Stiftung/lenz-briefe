@@ -1,0 +1,87 @@
+{
+  "letter": "84",
+  "slug": "letter-084",
+  "sent": {
+    "date": {
+      "text": "Straßburg, November 1775",
+      "when": null,
+      "notBefore": "1775-11-01",
+      "notAfter": "1775-11-30",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "16",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Göttingen",
+        "resolved": {
+          "index": "16",
+          "name": "Göttingen",
+          "ref": "http://d-nb.info/gnd/4021477-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "20",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Heinrich Christian Boie",
+        "resolved": {
+          "index": "20",
+          "name": "Heinrich Christian Boie",
+          "vorname": "Heinrich Christian",
+          "nachname": "Boie",
+          "komm": "boie",
+          "ref": "http://d-nb.info/gnd/118661078"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"84\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n         \t\t\t\tKraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 2. Lenz\n         sendet wohl das Exemplar der „Wolken“ an Boie, das zuvor Schlosser hatte und das nun\n         einen Riss aufwies. Die Beilage „von Schlossern“ war wohl gegen Wielands „Abderiten“\n         gerichtet. „Schulmeisterbrief“ ist wohl „Matz Höcker“.  \n         \t\t\t</div>\n   </div>\n</section>"
+}
