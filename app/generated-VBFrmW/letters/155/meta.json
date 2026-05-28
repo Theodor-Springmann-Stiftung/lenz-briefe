@@ -1,0 +1,90 @@
+{
+  "letter": "155",
+  "slug": "letter-155",
+  "sent": {
+    "date": {
+      "text": "Weimar, April 1776",
+      "when": null,
+      "notBefore": "1776-04-01",
+      "notAfter": "1776-04-30",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "59",
+        "cert": "low",
+        "erschlossen": null,
+        "label": "Gegend um Kassel",
+        "resolved": {
+          "index": "59",
+          "name": "Gegend um Kassel",
+          "ref": null
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "19",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Heinrich Julius von Lindau",
+        "resolved": {
+          "index": "19",
+          "name": "Heinrich Julius von Lindau",
+          "vorname": "Heinrich Julius von",
+          "nachname": "Lindau",
+          "komm": "lindau",
+          "ref": "http://d-nb.info/gnd/117014214"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": true,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 4,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"155\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 7. Entwurf.\n\t\t\t</div>\n   </div>\n</section>"
+}

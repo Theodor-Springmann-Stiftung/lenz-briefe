@@ -1,0 +1,102 @@
+{
+  "letter": "143",
+  "slug": "letter-143",
+  "sent": {
+    "date": {
+      "text": "Straßburg, 25. März 1776",
+      "when": "1776-03-25",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "15",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Luise König",
+        "resolved": {
+          "index": "15",
+          "name": "Luise König",
+          "vorname": "Luise",
+          "nachname": "König",
+          "komm": "könig",
+          "ref": null
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "20",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Darmstadt",
+        "resolved": {
+          "index": "20",
+          "name": "Darmstadt",
+          "ref": "http://d-nb.info/gnd/4011077-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "30",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Friederike Hesse",
+        "resolved": {
+          "index": "30",
+          "name": "Friederike Hesse",
+          "vorname": "Friederike",
+          "nachname": "Hesse",
+          "komm": "hesse",
+          "ref": "http://d-nb.info/gnd/143459023"
+        }
+      },
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "2"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"143\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tBerlin, Staatsbibliothek zu Berlin – Preußischer Kulturbesitz, NL Lenz, Bd. 2 (Nr. 236),\n\t\t\t\tBl. 64. Lenz machte Station bei Friederike Hesse, daher richtete Luise König den Brief dorthin.\n\t\t\t</div>\n   </div>\n</section>"
+}

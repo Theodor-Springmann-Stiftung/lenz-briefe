@@ -1,0 +1,88 @@
+{
+  "letter": "279",
+  "slug": "letter-279",
+  "sent": {
+    "date": {
+      "text": "Schinznach, 12. bis 15. Mai 1777",
+      "when": null,
+      "notBefore": "1777-05-12",
+      "notAfter": "1777-05-15",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "11",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Zürich",
+        "resolved": {
+          "index": "11",
+          "name": "Zürich",
+          "ref": "http://d-nb.info/gnd/4068038-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "10",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Caspar Lavater",
+        "resolved": {
+          "index": "10",
+          "name": "Johann Caspar Lavater",
+          "vorname": "Johann Caspar",
+          "nachname": "Lavater",
+          "komm": "lavater",
+          "ref": "http://d-nb.info/gnd/118570293"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "11",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Zürich",
+        "resolved": {
+          "index": "11",
+          "name": "Zürich",
+          "ref": "http://d-nb.info/gnd/4068038-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "2"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"279\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 31a; Zuschreibung und\n\t\t\t\tDatierung des\n\t\t\t\tZettels unsicher.\n\t\t\t\tHand.\n\t\t\t</div>\n   </div>\n</section>"
+}

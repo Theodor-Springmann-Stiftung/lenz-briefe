@@ -1,0 +1,87 @@
+{
+  "letter": "219",
+  "slug": "letter-219",
+  "sent": {
+    "date": {
+      "text": "Berka, Juli 1776",
+      "when": null,
+      "notBefore": "1776-07-01",
+      "notAfter": "1776-07-31",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "14",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Berka",
+        "resolved": {
+          "index": "14",
+          "name": "Berka",
+          "ref": "http://d-nb.info/gnd/4087284-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "25",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Dessau",
+        "resolved": {
+          "index": "25",
+          "name": "Dessau",
+          "ref": "http://d-nb.info/gnd/4011536-7"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "34",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Friedrich Simon",
+        "resolved": {
+          "index": "34",
+          "name": "Johann Friedrich Simon",
+          "vorname": "Johann Friedrich",
+          "nachname": "Simon",
+          "komm": "simon",
+          "ref": "http://d-nb.info/gnd/1076372430"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": true,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"219\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tKraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 24; wohl Entwurf.\n\t\t\t</div>\n   </div>\n</section>"
+}

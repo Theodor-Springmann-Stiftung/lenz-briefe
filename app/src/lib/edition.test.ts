@@ -54,6 +54,10 @@ function makeMeta(overrides: Partial<LetterMeta> = {}): LetterMeta {
   };
 }
 
+function compactHtml(html: string): string {
+  return html.replace(/\s+/g, " ").trim();
+}
+
 test("getEarliestDateBoundary returns when when it is the only populated boundary", () => {
   assert.equal(getEarliestDateBoundary(makeDate({ when: "1775-04-08" })), "1775-04-08");
 });
@@ -121,19 +125,52 @@ test("getLetterBundle returns a continuous text stream with page-keyed sidenotes
 test("sidenotes and tables use the normalized block model", async () => {
   const sidenoteBundle = await getLetterBundle("108");
   const tableBundle = await getLetterBundle("366");
+  const compactTableHtml = compactHtml(tableBundle.textHtml);
 
   assert.match(sidenoteBundle.sidenotesByPage["1"][0]?.html ?? "", /class="lb-line-block/);
   assert.doesNotMatch(sidenoteBundle.sidenotesByPage["1"][0]?.html ?? "", /<br class="lb-line"/);
   assert.match(tableBundle.textHtml, /class="lb-tab-row"/);
+  assert.match(compactTableHtml, /data-layout="aligned".*<div class="align-right">Ihr aufrichtig ergebenster JMRlands\.<\/div>/);
+});
+
+test("align-bearing lines render into left center and right slots", async () => {
+  const singleAlignBundle = await getLetterBundle("108");
+  const mixedAlignBundle = await getLetterBundle("163");
+  const reverseOrderBundle = await getLetterBundle("158");
+  const repeatedRightBundle = await getLetterBundle("65");
+  const plainLeftRightBundle = await getLetterBundle("349");
+  const compactSingleAlignHtml = compactHtml(singleAlignBundle.textHtml);
+  const compactMixedAlignHtml = compactHtml(mixedAlignBundle.textHtml);
+  const compactReverseOrderHtml = compactHtml(reverseOrderBundle.textHtml);
+  const compactRepeatedRightHtml = compactHtml(repeatedRightBundle.textHtml);
+  const compactPlainLeftRightHtml = compactHtml(plainLeftRightBundle.textHtml);
+
   assert.match(
-    tableBundle.textHtml,
-    /class="lb-line-block" data-type="break" data-align="right">Ihr aufrichtig ergebenster JMRlands\./
+    compactSingleAlignHtml,
+    /data-layout="aligned"> <div class="align-left">.*?<\/div> <div class="align-center">Bester Freund!<\/div> <div class="align-right"><\/div>/
+  );
+  assert.match(
+    compactMixedAlignHtml,
+    /data-layout="aligned"> <div class="align-left">.*?<span class="page-anchor" id="page-1">.*?<\/span><span class="lb-page" data-index="1"><\/span>.*?<\/div> <div class="align-center"><span class="note">Empfangsnotiz Boies:<\/span><\/div> <div class="align-right"><span class="hand" data-ref="20">Den 26 Apr\. 76\.<\/span><\/div>/
+  );
+  assert.match(
+    compactReverseOrderHtml,
+    /data-layout="aligned"> <div class="align-left">.*?<span class="page-anchor" id="page-1">.*?<\/span><span class="lb-page" data-index="1"><\/span>.*?<\/div> <div class="align-center">Weimar d\. 14ten Aprill\.<\/div> <div class="align-right"><span class="aq">verte<\/span><\/div>/
+  );
+  assert.match(
+    compactRepeatedRightHtml,
+    /data-layout="aligned"> <div class="align-left">.*?<\/div> <div class="align-center"><\/div> <div class="align-right">Lenz\. <span class="aq"><span class="fn" data-index="5"><span class="anchor">#<\/span><\/span> verte<\/span><\/div>/
+  );
+  assert.match(
+    compactPlainLeftRightHtml,
+    /data-tab="5" data-layout="aligned"> <div class="align-left">mit Glanz erfüllt <\/div> <div class="align-center"><\/div> <div class="align-right">Shsp\.<\/div>/
   );
 });
 
 test("page markers stay inline instead of creating synthetic line blocks", async () => {
   const lineStartBundle = await getLetterBundle("79");
   const inlineCarryBundle = await getLetterBundle("20");
+  const nextBlockCarryBundle = await getLetterBundle("42");
 
   assert.match(
     lineStartBundle.textHtml,
@@ -149,7 +186,15 @@ test("page markers stay inline instead of creating synthetic line blocks", async
   );
   assert.match(
     inlineCarryBundle.textHtml,
-    /data-type="empty"><\/div><span class="page-anchor" id="page-4">.*?<\/span><span class="lb-page" data-index="4"><\/span><div class="lb-line-block lb-line-block--empty"/s
+    /data-type="empty"><\/div>\s*<div class="lb-line-block" data-type="break" data-layout="aligned">\s*<div class="align-left"><span class="page-anchor" id="page-4">.*?<\/span><span class="lb-page" data-index="4"><\/span><\/div>\s*<div class="align-center"><span class="note">Außenseite des zum Umschlag gefalteten Bogens, roter Siegelrest:<\/span><\/div>/s
+  );
+  assert.match(
+    nextBlockCarryBundle.textHtml,
+    /Wie stehts um d\. Fenster die ich eingeschmissen\s*<\/div>\s*<div class="lb-line-block lb-line-block--empty" data-type="empty"><\/div>\s*<div class="lb-line-block" data-type="break" data-tab="6"><span class="page-anchor" id="page-3">.*?<\/span><span class="lb-page" data-index="3"><\/span>\s*Merk\./s
+  );
+  assert.match(
+    nextBlockCarryBundle.textHtml,
+    /<\/div>\s*<div class="lb-line-block" data-type="break" data-tab="1"><span class="page-anchor" id="page-4">.*?<\/span><span class="lb-page" data-index="4"><\/span>\s*Wie sehr wünscht/s
   );
 });
 

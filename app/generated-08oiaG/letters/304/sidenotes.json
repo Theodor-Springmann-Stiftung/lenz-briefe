@@ -1,0 +1,13 @@
+{
+  "1": [
+    {
+      "id": "letter-304-page-1-sidenote-1",
+      "order": 1,
+      "letter": "304",
+      "page": "1",
+      "pos": "left",
+      "annotation": "Am linken Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-304-page-1-sidenote-1\" data-letter=\"304\" data-page=\"1\" data-pos=\"left\" data-annotation=\"Am linken Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Verse künftig und viel Empfehlungen auch Pfeffeln u. Lersen</div>\n</aside>"
+    }
+  ]
+}

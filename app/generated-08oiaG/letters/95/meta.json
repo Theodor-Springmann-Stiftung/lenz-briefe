@@ -1,0 +1,88 @@
+{
+  "letter": "95",
+  "slug": "letter-095",
+  "sent": {
+    "date": {
+      "text": "Zürich, Januar 1776",
+      "when": null,
+      "notBefore": "1776-01-01",
+      "notAfter": "1776-01-31",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "11",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Zürich",
+        "resolved": {
+          "index": "11",
+          "name": "Zürich",
+          "ref": "http://d-nb.info/gnd/4068038-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "22",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Philipp Christoph Kayser",
+        "resolved": {
+          "index": "22",
+          "name": "Philipp Christoph Kayser",
+          "vorname": "Philipp Christoph",
+          "nachname": "Kayser",
+          "komm": "kayser",
+          "ref": "http://d-nb.info/gnd/116090235"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "2"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"95\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 25. Textverlust durch Ausriss.\n\t\t\t</div>\n   </div>\n</section>"
+}

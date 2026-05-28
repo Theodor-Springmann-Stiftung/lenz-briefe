@@ -1,0 +1,102 @@
+{
+  "letter": "196",
+  "slug": "letter-196",
+  "sent": {
+    "date": {
+      "text": "Weimar, Ende Juni 1776 [bald nach dem 17. Juni]",
+      "when": null,
+      "notBefore": "1776-06-20",
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "42",
+        "cert": "low",
+        "erschlossen": null,
+        "label": "Anna Marie Laudt",
+        "resolved": {
+          "index": "42",
+          "name": "Anna Marie Laudt",
+          "vorname": "Anna Marie",
+          "nachname": "Laudt",
+          "komm": "am-laudt",
+          "ref": null
+        }
+      },
+      {
+        "ref": "43",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Susanne Margareta Laudt",
+        "resolved": {
+          "index": "43",
+          "name": "Susanne Margareta Laudt",
+          "vorname": "Susanne Margareta",
+          "nachname": "Laudt",
+          "komm": "sm-laudt",
+          "ref": null
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": true,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "2"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"196\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tKraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 16; Entwurf.\n\t\t\t</div>\n   </div>\n</section>"
+}

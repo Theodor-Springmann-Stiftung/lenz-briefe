@@ -1,0 +1,87 @@
+{
+  "letter": "200",
+  "slug": "letter-200",
+  "sent": {
+    "date": {
+      "text": "Weimar, 27. Juni 1776",
+      "when": "1776-06-27",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "12",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Wolfgang Goethe",
+        "resolved": {
+          "index": "12",
+          "name": "Johann Wolfgang Goethe",
+          "vorname": "Johann Wolfgang",
+          "nachname": "Goethe",
+          "komm": "goethe",
+          "ref": "http://d-nb.info/gnd/118540238"
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"200\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\t„Lenz habe ich nicht gefunden; er hatte den nämlichen Morgen ein Billet an\n\t\t\t\tGöthe\n\t\t\t\t(wirkl. Geheimenrath) hinterlassen: ich geh aufs Land, weil ich bey Euch nichts thun kann,\n\t\t\t\tund damit\n\t\t\t\tzum Thor hinaus, ohne zu sagen, wohin? Oder auf wie lange.“; zitiert nach Anton Matthias\n\t\t\t\tSprickmann und Heinrich Christian Boie, „… ewig in diesem Himmel die Hölle leiden“.\n\t\t\t\tBriefwechsel\n\t\t\t\t1775–1782, hg. v. Jochen Grywatsch, Bielefeld 2008, S. 13.\n\t\t\t</div>\n   </div>\n</section>"
+}

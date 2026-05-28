@@ -1,0 +1,90 @@
+{
+  "letter": "100",
+  "slug": "letter-100",
+  "sent": {
+    "date": {
+      "text": "Kehl, Januar 1776",
+      "when": null,
+      "notBefore": "1776-01-01",
+      "notAfter": "1776-01-31",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "9",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Kehl",
+        "resolved": {
+          "index": "9",
+          "name": "Kehl",
+          "ref": "http://d-nb.info/gnd/4030137-0"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "18",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Kassel",
+        "resolved": {
+          "index": "18",
+          "name": "Kassel",
+          "ref": "http://d-nb.info/gnd/4029869-3"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "19",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Heinrich Julius von Lindau",
+        "resolved": {
+          "index": "19",
+          "name": "Heinrich Julius von Lindau",
+          "vorname": "Heinrich Julius von",
+          "nachname": "Lindau",
+          "komm": "lindau",
+          "ref": "http://d-nb.info/gnd/117014214"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 4,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"100\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tDüsseldorf, Goethe-Museum, 0. Textverlust durch Ausriss. Auf dem Umschlag unentzifferter handschriftlicher Vermerk; Stempel: „DEKEHL“, rotes Siegel.\n\t\t\t</div>\n   </div>\n</section>"
+}

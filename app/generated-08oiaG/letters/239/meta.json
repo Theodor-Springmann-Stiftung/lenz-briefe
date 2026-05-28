@@ -1,0 +1,87 @@
+{
+  "letter": "239",
+  "slug": "letter-239",
+  "sent": {
+    "date": {
+      "text": "Weimar, 8. Oktober 1776",
+      "when": "1776-10-08",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "17",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Gottfried von Herder",
+        "resolved": {
+          "index": "17",
+          "name": "Johann Gottfried von Herder",
+          "vorname": "Johann Gottfried von",
+          "nachname": "Herder",
+          "komm": "jg-herder",
+          "ref": "http://d-nb.info/gnd/118549553"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "30",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Kochberg",
+        "resolved": {
+          "index": "30",
+          "name": "Kochberg",
+          "ref": null
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"239\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 17. Textverlust durch Ausriss. Herder erhält durch Kaufmann den Brief von Röderer an Lenz vom 8. August 1776.\n\t\t\t</div>\n   </div>\n</section>"
+}

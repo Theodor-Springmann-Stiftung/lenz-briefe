@@ -1,0 +1,78 @@
+{
+  "letter": "151",
+  "slug": "letter-151",
+  "sent": {
+    "date": {
+      "text": "Hinter Frankfurt, wahrscheinlich Ende März 1776",
+      "when": null,
+      "notBefore": "1776-03-30",
+      "notAfter": "1776-03-31",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "32",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Henriette von Oberkirch geb. Waldner von Freundstein",
+        "resolved": {
+          "index": "32",
+          "name": "Henriette von Oberkirch geb. Waldner von Freundstein",
+          "vorname": "Henriette-Luise von",
+          "nachname": "Oberkirch",
+          "komm": "oberkirch",
+          "ref": "http://d-nb.info/gnd/124494692"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": true,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 4,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"151\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 33, Nr. 5. Entwurf in Bleistift.\n\t\t\t</div>\n   </div>\n   <div class=\"tradition-app\" data-ref=\"11\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tDies schreibt Ihnen ein Unbekannter, verstehen Sie das mehr als eine Warnung des \n\t\t\t\tHimmels. Ich kann daran kein Interesse haben, weil ich meinen Namen nicht nenne. \n\t\t\t\tWas werden Sie tun, allzu liebenswürdige und reizende Baronin! Einen Mann heiraten, \n\t\t\t\tder nicht von Ihrem Format ist, der gar nicht in der Lage ist, Sie zu schätzen. \n\t\t\t\tJugend, Schönheit, Anmut, Begabungen, Reichtümer, alles alles einer Seele opfern, \n\t\t\t\tdie vielleicht nur den letzten und den niederträchtigsten dieser seltenen Vorzüge \n\t\t\t\tzu schätzen weiß. Gott, wie weit ist es mit Ihnen gekommen, dass Sie, die Sie so \n\t\t\t\tgeistreich und scharfsinnig sind, sich auf diese Weise einem blinden, grausamen und \n\t\t\t\tungerechten Schicksal hingeben, das Ihre wahren Freunde früher oder später das Leben \n\t\t\t\tkosten wird, weil sie sehen, wie Sie mittellos verloren sind, ja verloren, weil Sie, \n\t\t\t\treizend wie Sie sind, in die Hände eines gewöhnlichen und folglich kalten und \n\t\t\t\tleichtfertigen Mannes gefallen sind, Sie, eine in jeder Hinsicht außergewöhnliche Frau. \n\t\t\t\tHören Sie mich an, hören Sie mich an, geben Sie sich nicht so leichtfertig hin, warten \n\t\t\t\tSie wenigstens, prüfen Sie ihn, denn was haben Sie zu verlieren: Prüfen Sie tausendmal, \n\t\t\t\tob er eines Tages Ihre Hand verdient. Bedenken Sie doch, dass es sich um eine Entscheidung \n\t\t\t\tfür das ganze Leben handelt, eine Entscheidung, die man nicht rückgängig machen kann. \n\t\t\t\tGlauben Sie mir, jede Liebe der Tugend beginnt bei sich selbst, man kann sich nicht mehr \n\t\t\t\tüber das Schicksal beklagen, nachdem man sich selbst unglücklich gemacht hat. Und welch \n\t\t\t\tgrößeres Unglück, welch größeres Verbrechen könnte es geben, als dass Sie selbst sich \n\t\t\t\tzweifelhaften, zumindest aber oberflächlichen Absichten hingeben, sich einem Herzen geben, \n\t\t\t\tdas nicht vor Freude darüber zu sterben weiß, einen unvergleichlichen Triumph davongetragen \n\t\t\t\tzu haben, einem Herzen, das nicht seine ganze Glückseligkeit darin findet, Sie anzubeten.\n\t\t\t</div>\n   </div>\n</section>"
+}

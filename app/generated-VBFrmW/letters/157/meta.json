@@ -1,0 +1,87 @@
+{
+  "letter": "157",
+  "slug": "letter-157",
+  "sent": {
+    "date": {
+      "text": "Weimar, April 1776",
+      "when": null,
+      "notBefore": "1776-04-01",
+      "notAfter": "1776-04-30",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "15",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Luise König",
+        "resolved": {
+          "index": "15",
+          "name": "Luise König",
+          "vorname": "Luise",
+          "nachname": "König",
+          "komm": "könig",
+          "ref": null
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": true,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"157\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tKraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 19. Der Brief fand sich im Lenz-Nachlass; er wurde daher wahrscheinlich nicht abgeschickt.\n\t\t\t</div>\n   </div>\n</section>"
+}

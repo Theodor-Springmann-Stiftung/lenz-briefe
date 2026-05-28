@@ -1,0 +1,87 @@
+{
+  "letter": "311",
+  "slug": "letter-311",
+  "sent": {
+    "date": {
+      "text": "Waldersbach, 22. Januar 1778",
+      "when": "1778-01-22",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "42",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Waldersbach",
+        "resolved": {
+          "index": "42",
+          "name": "Waldersbach",
+          "ref": "http://d-nb.info/gnd/10197465-6"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "11",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Zürich",
+        "resolved": {
+          "index": "11",
+          "name": "Zürich",
+          "ref": "http://d-nb.info/gnd/4068038-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "10",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Caspar Lavater",
+        "resolved": {
+          "index": "10",
+          "name": "Johann Caspar Lavater",
+          "vorname": "Johann Caspar",
+          "nachname": "Lavater",
+          "komm": "lavater",
+          "ref": "http://d-nb.info/gnd/118570293"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"311\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tZürich, Zentralbibliothek, RP 20, Nr. 16.\n\t\t\t</div>\n   </div>\n</section>"
+}

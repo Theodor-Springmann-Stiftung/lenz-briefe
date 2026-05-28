@@ -1,0 +1,24 @@
+{
+  "1": [
+    {
+      "id": "letter-371-page-1-sidenote-1",
+      "order": 1,
+      "letter": "371",
+      "page": "1",
+      "pos": "left",
+      "annotation": "am linken Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-371-page-1-sidenote-1\" data-letter=\"371\" data-page=\"1\" data-pos=\"left\" data-annotation=\"am linken Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Der Buchhandel würde auch bey Pieskau gewinnen, so wie die Bankgeschäfte, da diese Stadt mit allen Städten an der Düna durch die Polota, Ewst u. s. f. und durch den Urnensee mit dem Kanal und der Schifflände Gschat zusammenhängt, wo ein starker Handel von Moskau auch nach Liefland ist. Amnestie aller meiner alten Thorheiten in Liefland und ein neues Jahr.</div>\n</aside>"
+    }
+  ],
+  "2": [
+    {
+      "id": "letter-371-page-2-sidenote-1",
+      "order": 1,
+      "letter": "371",
+      "page": "2",
+      "pos": "bottom",
+      "annotation": "am unteren Rand, spiegelverkehrt",
+      "html": "<aside class=\"sidenote\" id=\"letter-371-page-2-sidenote-1\" data-letter=\"371\" data-page=\"2\" data-pos=\"bottom\" data-annotation=\"am unteren Rand, spiegelverkehrt\">\n   <div class=\"lb-line-block\" data-type=\"break\">\n      <address>Herrn Johann Christian Lenz. Sekretär des K. Gouvernements und Rath in <span class=\"aq\">Riga</span></address>\n   </div>\n</aside>"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "1": [
+    {
+      "id": "letter-364-page-1-sidenote-1",
+      "order": 1,
+      "letter": "364",
+      "page": "1",
+      "pos": "left",
+      "annotation": "am linken Rand der ersten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-364-page-1-sidenote-1\" data-letter=\"364\" data-page=\"1\" data-pos=\"left\" data-annotation=\"am linken Rand der ersten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Der Tyrischen Bachischen Geheimnisse des Geschlechtreitzes und Visionen</div>\n</aside>"
+    }
+  ],
+  "2": [],
+  "3": [],
+  "4": [
+    {
+      "id": "letter-364-page-4-sidenote-1",
+      "order": 1,
+      "letter": "364",
+      "page": "4",
+      "pos": "left",
+      "annotation": "am linken Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-364-page-4-sidenote-1\" data-letter=\"364\" data-page=\"4\" data-pos=\"left\" data-annotation=\"am linken Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Wir haben solche Lehrer bey Herrn von Nowicoff die dem geistlichen Stande und also der wahren Erziehung nach ihrem Beruf gewidmet sind und wöchentlich in Pensionen dejuriren können, aber nicht als <span class=\"aq\">Schakal</span>meister und Aberhutzer. Es ist aber ein Unterscheid unter Organisiren zum Selbstlernen, oder gleich zum Gelehrten machen, wie unvernünftige Eltern wähnen</div>\n</aside>"
+    }
+  ]
+}

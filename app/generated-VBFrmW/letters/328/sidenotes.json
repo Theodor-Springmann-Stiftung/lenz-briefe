@@ -1,0 +1,55 @@
+{
+  "1": [
+    {
+      "id": "letter-328-page-1-sidenote-1",
+      "order": 1,
+      "letter": "328",
+      "page": "1",
+      "pos": "left",
+      "annotation": "am linken Rand der ersten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-328-page-1-sidenote-1\" data-letter=\"328\" data-page=\"1\" data-pos=\"left\" data-annotation=\"am linken Rand der ersten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">geheimen Rath</div>\n</aside>"
+    }
+  ],
+  "2": [
+    {
+      "id": "letter-328-page-2-sidenote-1",
+      "order": 1,
+      "letter": "328",
+      "page": "2",
+      "pos": "left",
+      "annotation": "am linken Rand der zweiten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-328-page-2-sidenote-1\" data-letter=\"328\" data-page=\"2\" data-pos=\"left\" data-annotation=\"am linken Rand der zweiten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"fn\" data-index=\"1\"><span class=\"anchor\">╒</span></span> eine Grille, die von hundert Personen auf eine so schiefe Art ausgelegt werden könnte daß mir angst und bange werden würde. – Es ist indessen gut, alle Ressourcen von Petersburg zu kennen.</div>\n</aside>"
+    }
+  ],
+  "3": [
+    {
+      "id": "letter-328-page-3-sidenote-1",
+      "order": 1,
+      "letter": "328",
+      "page": "3",
+      "pos": "left",
+      "annotation": "am linken Rand der dritten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-328-page-3-sidenote-1\" data-letter=\"328\" data-page=\"3\" data-pos=\"left\" data-annotation=\"am linken Rand der dritten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"fn\" data-index=\"3\"><span class=\"anchor\">☓</span></span> er weiß vermuthlich nicht wieviel 1 Rbl. in Ptersb. macht. Er will nicht wissen, daß niemand hier einen Schritt umsonst thut und daß sein Schwiegervater d. H. Tulander Eymerweise bezahlt – Da des Schwiegersohns Eymer grösser, unbehandelsamer sind und beym Aufrollen jedes allein 8 Cop. beym Abrollen 7 gekostet, welches er auf soviel 1000 Eymer berechnen kann. Daß das Geld in der Festung in Kupfer ausgezahlt wird – soviel tausende – – daß das Zählen bewachen – – doch wer kann da für Verdruß endigen. Mag ers anders probiren! und sichs stehlen lassen</div>\n</aside>"
+    }
+  ],
+  "4": [
+    {
+      "id": "letter-328-page-4-sidenote-1",
+      "order": 1,
+      "letter": "328",
+      "page": "4",
+      "pos": "left",
+      "annotation": "am linken Rand, vertikal, linke Spalte",
+      "html": "<aside class=\"sidenote\" id=\"letter-328-page-4-sidenote-1\" data-letter=\"328\" data-page=\"4\" data-pos=\"left\" data-annotation=\"am linken Rand, vertikal, linke Spalte\">\n   <div class=\"lb-line-block\" data-type=\"break\">(auch an Past. Wolf könnt eine Erinnerung in Deinem Briefe nicht schaden, der mich so oft invitirt und so oft Deiner gedacht hat, auch mich nach Dir fragt.</div>\n</aside>"
+    },
+    {
+      "id": "letter-328-page-4-sidenote-2",
+      "order": 2,
+      "letter": "328",
+      "page": "4",
+      "pos": "left",
+      "annotation": "am linken Rand, vertikal, rechte Spalte",
+      "html": "<aside class=\"sidenote\" id=\"letter-328-page-4-sidenote-2\" data-letter=\"328\" data-page=\"4\" data-pos=\"left\" data-annotation=\"am linken Rand, vertikal, rechte Spalte\">\n   <div class=\"lb-line-block\" data-type=\"break\">Besonders da er noch keine Ausgaben hier für mich gehabt hat; und mit Gottes Hülfe (wozu er aber doch wenigstens soviel beytragen muß, daß er mich mit seinem Ansehen unterstützt und nicht thut, als ob ich ein <span class=\"ul\">geborener Knecht</span> wäre) es doch in kurzem zur Entscheidung kommen muß Auf die Art schadet er mir mehr, da jedermann aufmerksam werden würde, warum er mir unfreundlicher als andern Geschwistern begegnet.</div>\n</aside>"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [],
+  "5": [],
+  "6": [],
+  "7": [],
+  "8": [
+    {
+      "id": "letter-343-page-8-sidenote-1",
+      "order": 1,
+      "letter": "343",
+      "page": "8",
+      "pos": "left",
+      "annotation": "Am linken Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-343-page-8-sidenote-1\" data-letter=\"343\" data-page=\"8\" data-pos=\"left\" data-annotation=\"Am linken Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Wirst Du nicht die Geduld verlieren, heut nichts als Verse zu lesen. Sei versichert, daß meine Ader Dir wieder sehr lange Ruhe lassen wird.</div>\n</aside>"
+    }
+  ]
+}

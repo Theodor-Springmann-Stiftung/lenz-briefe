@@ -1,0 +1,87 @@
+{
+  "letter": "180",
+  "slug": "letter-180",
+  "sent": {
+    "date": {
+      "text": "Weimar, April bis spätestens Mitte Mai 1776",
+      "when": null,
+      "notBefore": null,
+      "notAfter": "1776-04-30",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "58",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Koblenz-Ehrenbreitstein",
+        "resolved": {
+          "index": "58",
+          "name": "Koblenz-Ehrenbreitstein",
+          "ref": "http://d-nb.info/gnd/4098580-5"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "13",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Sophie von La Roche",
+        "resolved": {
+          "index": "13",
+          "name": "Sophie von La Roche",
+          "vorname": "Sophie von",
+          "nachname": "La Roche",
+          "komm": "la roche",
+          "ref": "http://d-nb.info/gnd/118569767"
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"180\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tReise des Herrn von Bretschneider nach London und Paris: nebst Auszügen aus seinen Briefen\n\t\t\t\tan\n\t\t\t\tHerrn Friedrich Nicolai. Hrsg. v. Leopold Friedrich Günther von Goeckingk. Berlin, Stettin\n\t\t\t\t1817, S.\n\t\t\t\t273f.; Bretschneider an Christoph Friedrich Nicolai, 21. Mai 1776.\n\t\t\t</div>\n   </div>\n</section>"
+}

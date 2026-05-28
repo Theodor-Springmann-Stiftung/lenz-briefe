@@ -1,0 +1,88 @@
+{
+  "letter": "249",
+  "slug": "letter-249",
+  "sent": {
+    "date": {
+      "text": "Berka, Anfang November 1776",
+      "when": null,
+      "notBefore": "1776-11-01",
+      "notAfter": "1776-11-10",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "14",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Berka",
+        "resolved": {
+          "index": "14",
+          "name": "Berka",
+          "ref": "http://d-nb.info/gnd/4087284-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "30",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Kochberg",
+        "resolved": {
+          "index": "30",
+          "name": "Kochberg",
+          "ref": null
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "41",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Charlotte von Stein",
+        "resolved": {
+          "index": "41",
+          "name": "Charlotte von Stein",
+          "vorname": "Charlotte von",
+          "nachname": "Stein",
+          "komm": "stein",
+          "ref": "http://d-nb.info/gnd/118617222"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": true,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "2"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"249\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tKraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 30; Entwurf zum Brief an Charlotte von Stein\n\t\t\t\tvom 3. November 1776. Zu einer genauen Darstellung der Kalkulationen und Notizen vgl. Schriften zur Sozialreform, S. 397f.\n\t\t\t</div>\n   </div>\n</section>"
+}

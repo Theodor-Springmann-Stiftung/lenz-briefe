@@ -83,18 +83,181 @@
     </xsl:element>
   </xsl:function>
 
+  <xsl:function name="lb:alignment-slot" as="xs:string">
+    <xsl:param name="pos" as="xs:string?" />
+    <xsl:sequence select="
+      if ($pos = 'center')
+      then 'center'
+      else if ($pos = 'right')
+      then 'right'
+      else 'left'
+    " />
+  </xsl:function>
+
+  <xsl:function name="lb:slots-for-node" as="xs:string*">
+    <xsl:param name="node" as="node()" />
+    <xsl:sequence select="
+      if ($node/self::lb:align)
+      then lb:alignment-slot(string($node/@pos))
+      else if ($node/self::text()[normalize-space()])
+      then 'left'
+      else if ($node/self::text())
+      then ()
+      else if ($node/self::t:page or $node/self::t:sidenote-marker)
+      then 'left'
+      else distinct-values(for $child in $node/node() return lb:slots-for-node($child))
+    " />
+  </xsl:function>
+
+  <xsl:function name="lb:node-slot" as="xs:string?">
+    <xsl:param name="node" as="node()" />
+    <xsl:choose>
+      <xsl:when test="$node/self::text()[not(normalize-space())]">
+        <xsl:variable
+          name="preceding-meaningful"
+          as="node()?"
+          select="$node/preceding-sibling::node()[not(self::text()[not(normalize-space())])][1]"
+        />
+        <xsl:variable
+          name="following-meaningful"
+          as="node()?"
+          select="$node/following-sibling::node()[not(self::text()[not(normalize-space())])][1]"
+        />
+        <xsl:variable
+          name="preceding-slot"
+          as="xs:string?"
+          select="if (exists($preceding-meaningful)) then lb:node-slot($preceding-meaningful) else ()"
+        />
+        <xsl:variable
+          name="following-slot"
+          as="xs:string?"
+          select="if (exists($following-meaningful)) then lb:node-slot($following-meaningful) else ()"
+        />
+        <xsl:sequence select="
+          if ($preceding-slot = $following-slot and exists($preceding-slot))
+          then $preceding-slot
+          else ()
+        " />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:variable name="slots" as="xs:string*" select="lb:slots-for-node($node)" />
+        <xsl:sequence select="
+          if (count($slots) = 1)
+          then $slots[1]
+          else if (empty($slots))
+          then ()
+          else 'left'
+        " />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:function>
+
+  <xsl:function name="lb:filter-slot-nodes" as="node()*">
+    <xsl:param name="nodes" as="node()*" />
+    <xsl:param name="slot" as="xs:string" />
+    <xsl:param name="inherited-slot" as="xs:string?" />
+    <xsl:for-each select="$nodes">
+      <xsl:choose>
+        <xsl:when test="self::text()">
+          <xsl:variable
+            name="resolved-slot"
+            as="xs:string?"
+            select="if (exists($inherited-slot)) then $inherited-slot else lb:node-slot(.)"
+          />
+          <xsl:if test="exists($resolved-slot) and $resolved-slot = $slot">
+            <xsl:sequence select="." />
+          </xsl:if>
+        </xsl:when>
+        <xsl:when test="self::lb:align">
+          <xsl:if test="lb:alignment-slot(string(@pos)) = $slot">
+            <xsl:sequence select="lb:filter-slot-nodes(node(), $slot, $slot)" />
+          </xsl:if>
+        </xsl:when>
+        <xsl:when test="self::comment() or self::processing-instruction()">
+          <xsl:sequence />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:variable name="node-slot" as="xs:string?" select="lb:node-slot(.)" />
+          <xsl:variable
+            name="child-slot"
+            as="xs:string?"
+            select="
+              if (exists($inherited-slot))
+              then $inherited-slot
+              else if (exists($node-slot) and $node-slot != 'left')
+              then $node-slot
+              else ()
+            "
+          />
+          <xsl:variable
+            name="children"
+            as="node()*"
+            select="lb:filter-slot-nodes(node(), $slot, $child-slot)"
+          />
+          <xsl:choose>
+            <xsl:when test="exists($children)">
+              <xsl:sequence select="lb:clone-element(., $children)" />
+            </xsl:when>
+            <xsl:when test="exists(if (exists($inherited-slot)) then $inherited-slot else $node-slot) and (if (exists($inherited-slot)) then $inherited-slot else $node-slot) = $slot">
+              <xsl:sequence select="lb:clone-element(., ())" />
+            </xsl:when>
+          </xsl:choose>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:for-each>
+  </xsl:function>
+
   <xsl:function name="lb:flush-state" as="map(*)">
     <xsl:param name="completed" as="element()*" />
     <xsl:param name="current-type" as="xs:string?" />
     <xsl:param name="current-tab" as="xs:string?" />
     <xsl:param name="current-content" as="node()*" />
+    <xsl:variable
+      name="trailing-marker-start"
+      as="xs:integer?"
+      select="
+        (
+          for $index in reverse(1 to count($current-content))
+          return
+            if (
+              $current-content[$index]/self::t:page
+              or $current-content[$index]/self::t:sidenote-marker
+              or $current-content[$index]/self::text()[not(normalize-space())]
+            )
+            then ()
+            else $index + 1
+        )[1]
+      "
+    />
+    <xsl:variable
+      name="leading-content"
+      as="node()*"
+      select="
+        if (exists($trailing-marker-start))
+        then $current-content[position() lt $trailing-marker-start]
+        else ()
+      "
+    />
+    <xsl:variable
+      name="trailing-markers"
+      as="node()*"
+      select="
+        if (exists($trailing-marker-start))
+        then $current-content[position() ge $trailing-marker-start]
+        else ()
+      "
+    />
     <xsl:variable name="next-completed" as="element()*" select="
       if (lb:has-meaningful-content($current-content))
       then (
         $completed,
         if (exists($current-type) or exists($current-tab))
-        then lb:temp-explicit-line($current-type, $current-tab, $current-content)
-        else lb:temp-line($current-content)
+        then lb:temp-explicit-line(
+          $current-type,
+          $current-tab,
+          if (exists($trailing-marker-start)) then $leading-content else $current-content
+        )
+        else lb:temp-line(if (exists($trailing-marker-start)) then $leading-content else $current-content)
       )
       else $completed
     " />
@@ -102,7 +265,7 @@
       'completed': $next-completed,
       'currentType': (),
       'currentTab': (),
-      'currentContent': if (lb:has-meaningful-content($current-content)) then () else $current-content
+      'currentContent': if (lb:has-meaningful-content($current-content)) then $trailing-markers else $current-content
     }" />
   </xsl:function>
 
@@ -263,12 +426,11 @@
             <xsl:variable name="flushed" select="lb:flush-state($completed, $current-type, $current-tab, $current-content)" />
             <xsl:choose>
               <xsl:when test="$line-type = ('empty', 'line')">
-                <xsl:variable name="materialized" select="lb:materialize-marker-state($flushed?completed, (), (), $flushed?currentContent)" />
                 <xsl:next-iteration>
-                  <xsl:with-param name="completed" select="($materialized?completed, lb:temp-explicit-line($line-type, $line-tab, ()))" />
+                  <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, ()))" />
                   <xsl:with-param name="current-type" select="()" />
                   <xsl:with-param name="current-tab" select="()" />
-                  <xsl:with-param name="current-content" select="()" />
+                  <xsl:with-param name="current-content" select="$flushed?currentContent" />
                 </xsl:next-iteration>
               </xsl:when>
               <xsl:otherwise>
@@ -312,12 +474,11 @@
             <xsl:variable name="flushed" select="lb:flush-state($completed, $current-type, $current-tab, $current-content)" />
             <xsl:choose>
               <xsl:when test="$line-type = ('empty', 'line')">
-                <xsl:variable name="materialized" select="lb:materialize-marker-state($flushed?completed, (), (), $flushed?currentContent)" />
                 <xsl:next-iteration>
-                  <xsl:with-param name="completed" select="($materialized?completed, lb:temp-explicit-line($line-type, $line-tab, ()))" />
+                  <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, ()))" />
                   <xsl:with-param name="current-type" select="()" />
                   <xsl:with-param name="current-tab" select="()" />
-                  <xsl:with-param name="current-content" select="()" />
+                  <xsl:with-param name="current-content" select="$flushed?currentContent" />
                 </xsl:next-iteration>
               </xsl:when>
               <xsl:otherwise>
@@ -375,7 +536,11 @@
       as="node()*"
       select="node()[not(self::text()[not(normalize-space())]) and not(self::t:sidenote-marker or self::t:page)]"
     />
-    <xsl:variable name="is-promoted-align" as="xs:boolean" select="count($meaningful-content) = 1 and $meaningful-content[1][self::lb:align]" />
+    <xsl:variable
+      name="has-align"
+      as="xs:boolean"
+      select="exists($meaningful-content[self::lb:align or descendant::lb:align])"
+    />
     <div>
       <xsl:attribute name="class" select="
         string-join(
@@ -391,24 +556,23 @@
       <xsl:if test="@tab">
         <xsl:attribute name="data-tab" select="string(@tab)" />
       </xsl:if>
-      <xsl:if test="$is-promoted-align">
-        <xsl:attribute name="data-align" select="string($meaningful-content[1]/@pos)" />
+      <xsl:if test="$has-align and $line-type != 'line'">
+        <xsl:attribute name="data-layout">aligned</xsl:attribute>
       </xsl:if>
       <xsl:choose>
         <xsl:when test="$line-type = 'line'">
           <hr class="lb-rule" />
         </xsl:when>
-        <xsl:when test="$is-promoted-align">
-          <xsl:for-each select="node()">
-            <xsl:choose>
-              <xsl:when test="self::lb:align">
-                <xsl:apply-templates select="node()" />
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:apply-templates select="." />
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:for-each>
+        <xsl:when test="$has-align">
+          <div class="align-left">
+            <xsl:apply-templates select="lb:filter-slot-nodes(node(), 'left', ())" />
+          </div>
+          <div class="align-center">
+            <xsl:apply-templates select="lb:filter-slot-nodes(node(), 'center', ())" />
+          </div>
+          <div class="align-right">
+            <xsl:apply-templates select="lb:filter-slot-nodes(node(), 'right', ())" />
+          </div>
         </xsl:when>
         <xsl:otherwise>
           <xsl:apply-templates select="node()" />

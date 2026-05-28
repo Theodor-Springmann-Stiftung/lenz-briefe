@@ -1,0 +1,87 @@
+{
+  "letter": "154",
+  "slug": "letter-154",
+  "sent": {
+    "date": {
+      "text": "Weimar, April 1776",
+      "when": null,
+      "notBefore": "1776-04-01",
+      "notAfter": "1776-04-30",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "11",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Zürich",
+        "resolved": {
+          "index": "11",
+          "name": "Zürich",
+          "ref": "http://d-nb.info/gnd/4068038-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "10",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Caspar Lavater",
+        "resolved": {
+          "index": "10",
+          "name": "Johann Caspar Lavater",
+          "vorname": "Johann Caspar",
+          "nachname": "Lavater",
+          "komm": "lavater",
+          "ref": "http://d-nb.info/gnd/118570293"
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"154\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tZürich, Zentralbibliothek, FA Lav. Ms. 594.12 (1), Exzerptheft von Lavaters Hand.\n\t\t\t</div>\n   </div>\n</section>"
+}

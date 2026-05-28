@@ -1,0 +1,87 @@
+{
+  "letter": "352",
+  "slug": "letter-352",
+  "sent": {
+    "date": {
+      "text": "Moskau, 30. Oktober 1781",
+      "when": "1781-10-30",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "50",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Moskau",
+        "resolved": {
+          "index": "50",
+          "name": "Moskau",
+          "ref": "http://d-nb.info/gnd/4074987-3"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "50",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Moskau",
+        "resolved": {
+          "index": "50",
+          "name": "Moskau",
+          "ref": "http://d-nb.info/gnd/4074987-3"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "84",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Gerhard Friedrich Müller",
+        "resolved": {
+          "index": "84",
+          "name": "Gerhard Friedrich Müller",
+          "vorname": "Gerhard Friedrich",
+          "nachname": "Müller",
+          "komm": "gf-müller",
+          "ref": "http://d-nb.info/gnd/118953362"
+        }
+      }
+    ]
+  },
+  "hasOriginal": false,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 1,
+  "pages": [
+    "1"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"352\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tArchiv für Literaturgeschichte 5 (1876), S. 601f.\n\t\t\t</div>\n   </div>\n</section>"
+}

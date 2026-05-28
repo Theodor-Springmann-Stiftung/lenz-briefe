@@ -1,0 +1,26 @@
+{
+  "1": [],
+  "2": [
+    {
+      "id": "letter-337-page-2-sidenote-1",
+      "order": 1,
+      "letter": "337",
+      "page": "2",
+      "pos": "left",
+      "annotation": "am linken Rand der ersten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-337-page-2-sidenote-1\" data-letter=\"337\" data-page=\"2\" data-pos=\"left\" data-annotation=\"am linken Rand der ersten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\">Noch einmal lieber Bruder, sage Igelstr. nichts von dem, was ich von Dir zu wissen begehre und glaube mir doch, daß ich nicht ganz mit der Stange im Nebel herumfahre. Es hat Ursachen die ich Dir nicht sagen kann schriftlich. Antworte mir aber ja aufs schleunigste, damit ich Papa schreiben kann und andern Personen, an die es schon lang nöthig war.</div>\n</aside>"
+    }
+  ],
+  "3": [],
+  "4": [
+    {
+      "id": "letter-337-page-4-sidenote-1",
+      "order": 1,
+      "letter": "337",
+      "page": "4",
+      "pos": "left",
+      "annotation": "Am linken Rand, mit vertikalem Strich abgetrennt",
+      "html": "<aside class=\"sidenote\" id=\"letter-337-page-4-sidenote-1\" data-letter=\"337\" data-page=\"4\" data-pos=\"left\" data-annotation=\"Am linken Rand, mit vertikalem Strich abgetrennt\">\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"fn\" data-index=\"7\"><span class=\"anchor\">╒</span></span> NB. Dies kann nicht schaden, Igelstrohm mag sein was er will. Es hätte mir schon viel genutzt</div>\n</aside>"
+    }
+  ]
+}

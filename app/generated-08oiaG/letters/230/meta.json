@@ -1,0 +1,88 @@
+{
+  "letter": "230",
+  "slug": "letter-230",
+  "sent": {
+    "date": {
+      "text": "Weimar, 28. August 1776",
+      "when": "1776-08-28",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "25",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Philipp Seidel",
+        "resolved": {
+          "index": "25",
+          "name": "Philipp Seidel",
+          "vorname": "Philipp",
+          "nachname": "Seidel",
+          "komm": "seidel",
+          "ref": "http://d-nb.info/gnd/117463639"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "14",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Berka",
+        "resolved": {
+          "index": "14",
+          "name": "Berka",
+          "ref": "http://d-nb.info/gnd/4087284-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": false,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "2"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"230\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tRiga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 63. Beigefügtes Paket, Billett und Brief nicht ermittelt.\n\t\t\t</div>\n   </div>\n</section>"
+}

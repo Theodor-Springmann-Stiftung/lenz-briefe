@@ -1,0 +1,14 @@
+{
+  "1": [],
+  "2": [
+    {
+      "id": "letter-206-page-2-sidenote-1",
+      "order": 1,
+      "letter": "206",
+      "page": "2",
+      "pos": "left",
+      "annotation": "am linken Rand",
+      "html": "<aside class=\"sidenote\" id=\"letter-206-page-2-sidenote-1\" data-letter=\"206\" data-page=\"2\" data-pos=\"left\" data-annotation=\"am linken Rand\">\n   <div class=\"lb-line-block\" data-type=\"break\"><span class=\"aq\">quil y soit eleve et qu il soit familiarises avec ces principes des sa jeunesse. Voila ce qui leve tout d’un coup tous les obstacles de la subordination</span></div>\n</aside>"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "1": [
+    {
+      "id": "letter-089-page-1-sidenote-1",
+      "order": 1,
+      "letter": "89",
+      "page": "1",
+      "pos": "left",
+      "annotation": "Fortsetzung am linken Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-089-page-1-sidenote-1\" data-letter=\"89\" data-page=\"1\" data-pos=\"left\" data-annotation=\"Fortsetzung am linken Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\"> Nachricht von Zerbins Schicksal, das ich ganz ohne Umstände mir als ein Biedermann zu bestimmen bitte, bin mit wahrer Freundschaft\n</div>\n   <div class=\"lb-line-block\" data-type=\"break\" data-layout=\"aligned\">\n      <div class=\"align-left\"></div>\n      <div class=\"align-center\"></div>\n      <div class=\"align-right\">Ihr ehrlicher Fr. u. Diener Lenz.</div>\n   </div>\n</aside>"
+    }
+  ]
+}

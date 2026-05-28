@@ -1,0 +1,90 @@
+{
+  "letter": "260",
+  "slug": "letter-260",
+  "sent": {
+    "date": {
+      "text": "Weimar, 29. oder 30. November 1776",
+      "when": null,
+      "notBefore": "1776-11-29",
+      "notAfter": "1776-11-30",
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "8",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Weimar",
+        "resolved": {
+          "index": "8",
+          "name": "Weimar",
+          "ref": "http://d-nb.info/gnd/4065105-8"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "17",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Johann Gottfried von Herder",
+        "resolved": {
+          "index": "17",
+          "name": "Johann Gottfried von Herder",
+          "vorname": "Johann Gottfried von",
+          "nachname": "Herder",
+          "komm": "jg-herder",
+          "ref": "http://d-nb.info/gnd/118549553"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 4,
+  "pages": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"260\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tWeimar, Goethe- und Schiller-Archiv, GSA 44/69, Bl. 20–21. Beilagen nicht ermittelt.\n\t\t\t</div>\n   </div>\n</section>"
+}

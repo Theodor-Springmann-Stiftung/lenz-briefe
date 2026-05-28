@@ -1,0 +1,15 @@
+{
+  "1": [],
+  "2": [],
+  "3": [
+    {
+      "id": "letter-262-page-3-sidenote-1",
+      "order": 1,
+      "letter": "262",
+      "page": "3",
+      "pos": "left",
+      "annotation": "am linken Rand der dritten Seite, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-262-page-3-sidenote-1\" data-letter=\"262\" data-page=\"3\" data-pos=\"left\" data-annotation=\"am linken Rand der dritten Seite, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\" data-tab=\"1\">\nHier ein kleines Pasquill das ich Goethen zuzustellen bitte, mit der Bitte, es von Anfang – bis zu Ende zu lesen.</div>\n</aside>"
+    }
+  ]
+}

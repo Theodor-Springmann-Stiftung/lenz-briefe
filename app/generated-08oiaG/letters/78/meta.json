@@ -1,0 +1,88 @@
+{
+  "letter": "78",
+  "slug": "letter-078",
+  "sent": {
+    "date": {
+      "text": "Straßburg, 23. Oktober 1775",
+      "when": "1775-10-23",
+      "notBefore": null,
+      "notAfter": null,
+      "from": null,
+      "to": null,
+      "cert": null
+    },
+    "locations": [
+      {
+        "ref": "7",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Straßburg",
+        "resolved": {
+          "index": "7",
+          "name": "Straßburg",
+          "ref": "http://d-nb.info/gnd/4057878-1"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "1",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Jakob Michael Reinhold Lenz",
+        "resolved": {
+          "index": "1",
+          "name": "Jakob Michael Reinhold Lenz",
+          "vorname": "Jakob Michael Reinhold",
+          "nachname": "Lenz",
+          "komm": "jmr-lenz",
+          "ref": "https://d-nb.info/gnd/118571656"
+        }
+      }
+    ]
+  },
+  "received": {
+    "date": null,
+    "locations": [
+      {
+        "ref": "15",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Gotha",
+        "resolved": {
+          "index": "15",
+          "name": "Gotha",
+          "ref": "http://d-nb.info/gnd/4021652-4"
+        }
+      }
+    ],
+    "persons": [
+      {
+        "ref": "14",
+        "cert": null,
+        "erschlossen": null,
+        "label": "Friedrich Wilhelm Gotter",
+        "resolved": {
+          "index": "14",
+          "name": "Friedrich Wilhelm Gotter",
+          "vorname": "Friedrich Wilhelm",
+          "nachname": "Gotter",
+          "komm": "gotter",
+          "ref": "http://d-nb.info/gnd/118540939"
+        }
+      }
+    ]
+  },
+  "hasOriginal": true,
+  "isProofread": true,
+  "isDraft": false,
+  "hasText": true,
+  "hasTraditions": true,
+  "hasSidenotes": true,
+  "pageCount": 2,
+  "pages": [
+    "1",
+    "4"
+  ],
+  "traditionsHtml": "<section class=\"traditions\" data-letter=\"78\">\n   <div class=\"tradition-app\" data-ref=\"4\">\n      <div class=\"lb-line-block\" data-type=\"break\">\n\t\t\t\tKraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 2. Auf dem Umschlag handschriftlicher Vermerk „franco Rheinhausen“; handschriftlich „8“; Stempel: „STRASBOURG“.\n\t\t\t</div>\n   </div>\n</section>"
+}

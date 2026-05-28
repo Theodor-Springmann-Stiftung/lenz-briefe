@@ -1,0 +1,16 @@
+{
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [
+    {
+      "id": "letter-321-page-4-sidenote-1",
+      "order": 1,
+      "letter": "321",
+      "page": "4",
+      "pos": "left",
+      "annotation": "am linken Rand, vertikal",
+      "html": "<aside class=\"sidenote\" id=\"letter-321-page-4-sidenote-1\" data-letter=\"321\" data-page=\"4\" data-pos=\"left\" data-annotation=\"am linken Rand, vertikal\">\n   <div class=\"lb-line-block\" data-type=\"break\"> werden, mit dem ich auch schweigend mich jederzeit und überall nennen werde\n</div>\n   <div class=\"lb-line-block\" data-type=\"break\" data-layout=\"aligned\">\n      <div class=\"align-left\">\n</div>\n      <div class=\"align-center\"></div>\n      <div class=\"align-right\">Ihren</div>\n   </div>\n   <div class=\"lb-line-block\" data-type=\"break\" data-layout=\"aligned\">\n      <div class=\"align-left\">\n</div>\n      <div class=\"align-center\"></div>\n      <div class=\"align-right\">gehorsamstergebensten</div>\n   </div>\n   <div class=\"lb-line-block\" data-type=\"break\" data-layout=\"aligned\">\n      <div class=\"align-left\">\n</div>\n      <div class=\"align-center\"></div>\n      <div class=\"align-right\">JMR Lenz.</div>\n   </div>\n   <div class=\"lb-line-block lb-line-block--empty\" data-type=\"empty\"></div>\n   <div class=\"lb-line-block\" data-type=\"break\" data-layout=\"aligned\">\n      <div class=\"align-left\">\n</div>\n      <div class=\"align-center\"><span class=\"note\">eingerahmt:</span></div>\n      <div class=\"align-right\"></div>\n   </div>\n   <div class=\"lb-line-block\" data-type=\"break\">Mein Vater ist – für mich – reich, so auch meine Geschwister. Daß also das nicht in Anschlag kommen darf.</div>\n</aside>"
+    }
+  ]
+}

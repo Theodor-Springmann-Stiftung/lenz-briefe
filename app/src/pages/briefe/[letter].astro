@@ -65,6 +65,7 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
       --lb-indent-5: 7.5rem;
       --lb-indent-6: 9rem;
       --lb-indent-7: 10.5rem;
+      --lb-indent-8: 12rem;
       color: #2d2417;
     }
 
@@ -102,18 +103,47 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
       border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent);
     }
 
+    .letter-body-prose .lb-line-block[data-layout="aligned"] {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      align-items: start;
+    }
+
+    .letter-body-prose .align-left,
+    .letter-body-prose .align-center,
+    .letter-body-prose .align-right {
+      grid-column: 1;
+      grid-row: 1;
+      inline-size: fit-content;
+      max-inline-size: 100%;
+      min-width: 0;
+    }
+
+    .letter-body-prose .align-left:empty,
+    .letter-body-prose .align-center:empty,
+    .letter-body-prose .align-right:empty {
+      display: none;
+    }
+
+    .letter-body-prose .align-left {
+      justify-self: start;
+      text-align: left;
+    }
+
+    .letter-body-prose .align-center {
+      justify-self: center;
+      text-align: center;
+    }
+
+    .letter-body-prose .align-right {
+      justify-self: end;
+      text-align: right;
+    }
+
     .letter-body-prose .align {
       display: block;
       width: 100%;
       text-align: start;
-    }
-
-    .letter-body-prose .lb-line-block[data-align="center"] {
-      text-align: center;
-    }
-
-    .letter-body-prose .lb-line-block[data-align="right"] {
-      text-align: right;
     }
 
     .letter-body-prose .align[data-pos="center"] {
@@ -124,60 +154,100 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
       text-align: right;
     }
 
-    .letter-body-prose .lb-line-block[data-tab="1"] {
+    .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="1"] {
       text-indent: var(--lb-indent-1);
+    }
+
+    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="1"] {
+      padding-inline-start: var(--lb-indent-1);
     }
 
     .letter-body-prose .lb-tab-row[data-tab="1"] {
       padding-inline-start: var(--lb-indent-1);
     }
 
-    .letter-body-prose .lb-line-block[data-tab="2"] {
+    .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="2"] {
       text-indent: var(--lb-indent-2);
+    }
+
+    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="2"] {
+      padding-inline-start: var(--lb-indent-2);
     }
 
     .letter-body-prose .lb-tab-row[data-tab="2"] {
       padding-inline-start: var(--lb-indent-2);
     }
 
-    .letter-body-prose .lb-line-block[data-tab="3"] {
+    .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="3"] {
       text-indent: var(--lb-indent-3);
+    }
+
+    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="3"] {
+      padding-inline-start: var(--lb-indent-3);
     }
 
     .letter-body-prose .lb-tab-row[data-tab="3"] {
       padding-inline-start: var(--lb-indent-3);
     }
 
-    .letter-body-prose .lb-line-block[data-tab="4"] {
+    .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="4"] {
       text-indent: var(--lb-indent-4);
+    }
+
+    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="4"] {
+      padding-inline-start: var(--lb-indent-4);
     }
 
     .letter-body-prose .lb-tab-row[data-tab="4"] {
       padding-inline-start: var(--lb-indent-4);
     }
 
-    .letter-body-prose .lb-line-block[data-tab="5"] {
+    .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="5"] {
       text-indent: var(--lb-indent-5);
+    }
+
+    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="5"] {
+      padding-inline-start: var(--lb-indent-5);
     }
 
     .letter-body-prose .lb-tab-row[data-tab="5"] {
       padding-inline-start: var(--lb-indent-5);
     }
 
-    .letter-body-prose .lb-line-block[data-tab="6"] {
+    .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="6"] {
       text-indent: var(--lb-indent-6);
+    }
+
+    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="6"] {
+      padding-inline-start: var(--lb-indent-6);
     }
 
     .letter-body-prose .lb-tab-row[data-tab="6"] {
       padding-inline-start: var(--lb-indent-6);
     }
 
-    .letter-body-prose .lb-line-block[data-tab="7"] {
+    .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="7"] {
       text-indent: var(--lb-indent-7);
+    }
+
+    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="7"] {
+      padding-inline-start: var(--lb-indent-7);
     }
 
     .letter-body-prose .lb-tab-row[data-tab="7"] {
       padding-inline-start: var(--lb-indent-7);
+    }
+
+    .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="8"] {
+      text-indent: var(--lb-indent-8);
+    }
+
+    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="8"] {
+      padding-inline-start: var(--lb-indent-8);
+    }
+
+    .letter-body-prose .lb-tab-row[data-tab="8"] {
+      padding-inline-start: var(--lb-indent-8);
     }
 
     .letter-body-prose .aq {
@@ -405,6 +475,28 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
         return { targets };
       };
 
+      const createBaselineProbe = () => {
+        const probe = document.createElement("span");
+        probe.setAttribute("aria-hidden", "true");
+        probe.style.display = "inline-block";
+        probe.style.width = "0";
+        probe.style.height = "1px";
+        probe.style.padding = "0";
+        probe.style.margin = "0";
+        probe.style.border = "0";
+        probe.style.verticalAlign = "baseline";
+        probe.style.overflow = "hidden";
+        return probe;
+      };
+
+      const measureBaseline = (element) => {
+        const probe = createBaselineProbe();
+        element.append(probe);
+        const rect = probe.getBoundingClientRect();
+        probe.remove();
+        return rect.bottom;
+      };
+
       const positionRail = (items, body, rail, pageTargets) => {
         const bodyRect = body.getBoundingClientRect();
         let maxBottom = 0;
@@ -436,9 +528,12 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
           }
 
           const targetRect = target.getBoundingClientRect();
+          const targetBaseline = measureBaseline(target) - bodyRect.top;
+          const itemRect = item.getBoundingClientRect();
+          const itemBaseline = measureBaseline(item) - itemRect.top;
           const rawTop =
             align === "bottom"
-              ? targetRect.bottom - bodyRect.top - item.offsetHeight
+              ? targetBaseline - itemBaseline
               : targetRect.top - bodyRect.top;
           const top = Math.max(0, rawTop);
           item.style.top = `${Math.round(top)}px`;
