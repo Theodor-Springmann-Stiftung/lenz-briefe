@@ -671,6 +671,9 @@
       <xsl:if test="@pos">
         <xsl:attribute name="data-pos" select="@pos" />
       </xsl:if>
+      <xsl:if test="@pos = ('top', 'bottom', 'left', 'right')">
+        <span class="insertion-marker"></span>
+      </xsl:if>
       <xsl:apply-templates />
     </span>
   </xsl:template>

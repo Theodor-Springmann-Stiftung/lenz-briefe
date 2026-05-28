@@ -167,6 +167,30 @@ test("align-bearing lines render into left center and right slots", async () => 
   );
 });
 
+test("directional insertions render with a CSS marker hook", async () => {
+  const topInsertionBundle = await getLetterBundle("46");
+  const leftInsertionBundle = await getLetterBundle("64");
+  const rightInsertionBundle = await getLetterBundle("372");
+  const bottomInsertionBundle = await getLetterBundle("232");
+
+  assert.match(
+    compactHtml(topInsertionBundle.textHtml),
+    /<span class="insertion" data-pos="top"><span class="insertion-marker"><\/span>noch<\/span>/
+  );
+  assert.match(
+    compactHtml(leftInsertionBundle.textHtml),
+    /<span class="insertion" data-pos="left"><span class="insertion-marker"><\/span>Wenn wird<\/span>/
+  );
+  assert.match(
+    compactHtml(rightInsertionBundle.textHtml),
+    /<span class="insertion" data-pos="right"><span class="insertion-marker"><\/span>\(Liefland\)<\/span>/
+  );
+  assert.match(
+    compactHtml(bottomInsertionBundle.textHtml),
+    /<span class="insertion" data-pos="bottom"><span class="insertion-marker"><\/span>ou du moins plus cachés<\/span>/
+  );
+});
+
 test("page markers stay inline instead of creating synthetic line blocks", async () => {
   const lineStartBundle = await getLetterBundle("79");
   const inlineCarryBundle = await getLetterBundle("20");

@@ -293,13 +293,55 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
     }
 
     .letter-body-prose .insertion {
-      color: #6e4820;
+      color: inherit;
+      text-indent: 0;
     }
 
-    .letter-body-prose .insertion[data-pos="top"] {
-      vertical-align: super;
-      font-size: 0.76em;
+    .letter-body-prose .insertion::before {
+      content: "⌞";
+      color: #334155;
+      margin-inline-end: -0.2em;
+    }
+
+    .letter-body-prose .insertion::after {
+      content: "⌟";
+      color: #334155;
+      margin-inline-start: -0.4ch;
+    }
+
+    .letter-body-prose .insertion-marker {
+      white-space: nowrap;
+      text-indent: 0;
+    }
+
+    .letter-body-prose .insertion-marker::before {
+      position: relative;
+      bottom: -0.15rem;
+      display: inline-block;
+      font-size: 0.875em;
       line-height: 1;
+      white-space: nowrap;
+      color: #334155;
+    }
+
+    .letter-body-prose .insertion[data-pos="left"] .insertion-marker::before {
+      content: "🠊";
+    }
+
+    .letter-body-prose .insertion[data-pos="right"] .insertion-marker::before {
+      content: "🠜";
+    }
+
+    .letter-body-prose .insertion[data-pos="top"] .insertion-marker::before {
+      content: "🠟";
+      bottom: 0;
+      font-size: 0.75em;
+    }
+
+    .letter-body-prose .insertion[data-pos="bottom"] .insertion-marker::before {
+      content: "🠝";
+      bottom: 0;
+      font-size: 0.75em;
     }
 
     .letter-body-prose del {
@@ -316,6 +358,10 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
       font-style: normal;
       color: #1f1c18;
       font-size: 0.95rem;
+    }
+
+    .letter-body-prose .ink {
+      color: #173a63;
     }
 
     .letter-body-prose .note {
@@ -341,9 +387,6 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
 
     .letter-body-prose .fn,
     .letter-body-prose .anchor {
-      vertical-align: super;
-      font-size: 0.78em;
-      line-height: 1;
     }
 
     .letter-body-prose .nr {
