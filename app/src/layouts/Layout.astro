@@ -30,12 +30,14 @@ const {
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="">
-			<Header/>
-			<main class="">
-				<slot />
+		<div class="min-h-screen flex flex-col">
+			<Header />
+			<main class="grow shrink-0">
+				<div class="">
+					<slot />
+				</div>
 			</main>
-			<Footer/>
+			<Footer />
 		</div>
 	</body>
 </html>

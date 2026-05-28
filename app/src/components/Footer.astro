@@ -1,0 +1,26 @@
+---
+const generatedDate = new Intl.DateTimeFormat("de-DE", {
+  month: "long",
+  year: "numeric"
+}).format(new Date());
+---
+
+<footer class="">
+  <div class="">
+    <div class="">
+      <span class="" aria-hidden="true">
+        <i class=""></i>
+        <i class=""></i>
+      </span>
+      <span>CC BY 4.0 · {generatedDate}</span>
+    </div>
+
+    <div class="">
+      <span>Ein Projekt der Theodor Springmann Stiftung</span>
+      <span aria-hidden="true">·</span>
+      <span>Impressum &amp; Datenschutz</span>
+      <span aria-hidden="true">·</span>
+      <span>Code</span>
+    </div>
+  </div>
+</footer>

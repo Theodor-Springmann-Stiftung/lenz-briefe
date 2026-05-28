@@ -15,53 +15,54 @@ type Props = {
 const { meta, neighbors } = Astro.props;
 ---
 
-<header>
-  <div>
-    <p>Brief {meta.letter}</p>
-    <h1>{meta.sent.date?.text ?? "Ohne Datierung"}</h1>
-  </div>
+<div class="flex flx-row mb-1 border-b border-stone-200">
 
-  {(meta.sent.persons.length > 0 || meta.received.persons.length > 0) && (
-    <div aria-label="Korrespondenz">
-      <div>
-        {meta.sent.persons.map((person) => (
-          <span>{person.label}</span>
-        ))}
-      </div>
-      <span aria-hidden="true">→</span>
-      <div>
-        {meta.received.persons.map((person) => (
-          <span>
-            <span>{person.label}</span>
-            {meta.received.locations.length > 0 && (
-              <span>
-                ({meta.received.locations.map((location) => location.label).join(", ")})
-              </span>
-            )}
-          </span>
-        ))}
-      </div>
-    </div>
-  )}
+	<div class="flex flex-col grow-1" aria-label="Korrespondenzmetadaten">
+		<div class="italic" aria-label="Datum">{meta.sent.date?.text ?? "Ohne Datierung"}</div>
 
-  <nav aria-label="Briefnavigation">
+			{(meta.sent.persons.length > 0 || meta.received.persons.length > 0) && (
+				<div class="flex flex-row gap-x-2">
+					<div>
+						{meta.sent.persons.map((person) => (
+							<span>{person.label}</span>
+						))}
+					</div>
+					<i class="ri-arrow-right-long-line" aria-label="An"></i>
+					<div>
+						{meta.received.persons.map((person) => (
+							<span>
+								<span>{person.label}</span>
+								{meta.received.locations.length > 0 && (
+									<span>
+										({meta.received.locations.map((location) => location.label).join(", ")})
+									</span>
+								)}
+							</span>
+						))}
+					</div>
+				</div>
+			)}
+	</div>
+
+  <nav aria-label="Briefnavigation" class="shrink-0 grow-0 flex flex-row gap-x-1 self-end">
     <div>
       {neighbors.previous ? (
         <a href={getLetterHref(neighbors.previous.letter)}>
-          ← Brief {neighbors.previous.letter}
-        </a>
+					<i class="ri-arrow-left-line link-dotted"></i>
+				</a>
       ) : (
         <span aria-hidden="true"> </span>
       )}
     </div>
+		<div class="font-variant-small-caps">LKB</div>
     <div>
       {neighbors.next ? (
         <a href={getLetterHref(neighbors.next.letter)}>
-          Brief {neighbors.next.letter} →
+					<i class="ri-arrow-right-line link-dotted"></i>
         </a>
       ) : (
         <span aria-hidden="true"> </span>
       )}
     </div>
   </nav>
-</header>
+</div>

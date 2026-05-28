@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "remixicon/fonts/remixicon.css";
 
 @theme {
     --font-hand: var(--font-playfair), "Iowan Old Style", "Palatino Linotype", Palatino, serif;
@@ -6,7 +7,46 @@
       "Courier New", monospace;
 }
 
+@layer base {
+  :root {
+    --app-bg: #ffffff;
+    --app-surface: #ffffff;
+    --app-border: rgba(80, 59, 35, 0.18);
+    --app-text: #2d2417;
+    --app-text-muted: #6b5b46;
+    --app-accent: #6f4d2f;
+    --app-accent-strong: #4f341d;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--app-bg);
+    color: var(--app-text);
+    font-family: var(--font-sans);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
 @layer components {
+	.link-dotted {
+		@apply underline decoration-dotted hover:decoration-solid underline-offset-3;
+	}
+
+  .app-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
   .letter-body-prose .page-anchor {
     display: inline;
     user-select: none;
