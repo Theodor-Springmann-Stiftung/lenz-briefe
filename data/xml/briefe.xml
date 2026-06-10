@@ -4986,11 +4986,9 @@ Lieber Liebster mein Einziger! ich hab hier Deinen 2ten Brief vor mir und Du sol
 <line type="empty" />
 <line type="break" />
 <tabs>
-<line type="break"/><tab value="1-2"><aq>Haupt Züge</aq></tab>
-<line type="empty"/>
+<line type="break"/><tab value="1-2"><align pos="center"><aq>Haupt Züge</aq></align></tab>
 <line type="break"/>
 <line tab="1"/><tab value="1-2">Beym Italiäner gewinnen Sie viel wann Sie geschwind u: feurig sind. Dauerhafftes erwarten Sie nichts aber in der Hize bekommt man alles von ihm.</tab> 
-<line type="empty"/>
 <line type="break"/><tab value="1-2">Gegen Niedere u. Bedienten immer scharfsehend u. ernsthafft: Ist höchst nötig.</tab> 
 <line type="break"/><tab value="1-2">Bey keiner Gelegenheit muß man verzagt seyn, sonst ist man der Narr im Spiehl.</tab>
 <line type="break"/><tab value="1-2">Von Grossen erhält man alles wann man sie bey der Ehre nimmt.</tab>
@@ -5008,31 +5006,23 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 </tabs>
 <page index="6"/>
 <tabs>
-<line type="break"/>
-<line type="break"/>
-<line tab="1"/><tab value="1-2">Abtissin biß zum 6-Jährigen Flügel Rock hinunter: Wann Sie eine andere helle Idee als <ul>Liebe</ul> heraus ziehen so bin ich ein Bernhäuter.</tab>
+<line tab="1"/><tab value="1-2">Abtissin biß zum 6.Jährigen Flügel Rock hinunter: Wann Sie eine andere helle Idee als <ul>Liebe</ul> heraus ziehen so bin ich ein Bernhäuter.</tab>
 <line type="break"/><tab value="1-2">Darauß können Sie schliessen daß <aq>Petrarca</aq> eben keine so schwere Arbeit hatte.</tab>
-<line type="empty" />
-<line type="break" /><tab value="2-2"><align pos="center"><aq>in Genua</aq></align></tab>
-<line type="break"/><tab value="2-2">sehen Sie Paläste</tab>
-<line type="break"/><tab value="2-2"><align pos="center"><aq></aq>in Bologna</align></tab>
-<line type="break"/>
-<line tab="1"/><tab value="2-2">Gelehrsamkeit auf Stelzen und unseeliger finsterer Zwang zwischen welchem man sich doch mit Lust durcharbeiten kan.</tab>
 <line type="break"/><tab value="1-2"><align pos="center"><aq></aq>Milano.</align></tab>
 <line type="empty"/>
-<line tab="1"/><tab value="1-2">Da ist alles halb Welsch halb französisch. Ein unseeliges Mittelding das nur amusiert so lang man nichts bestimmteres kennt. Wenden Sie <insertion pos="top">sich</insertion> da hauptsächlich auf Empfehlung. vors übrige Italien.</tab> <tab value="2-2"><align pos="center"><aq>in Livorno</aq></align></tab>
-<line type="break"/>
-<line tab="1"/><tab value="2-2">ein <aq>Compendium</aq> der Handtlungs Geschichte von ganz Europa. In meinen Augen äusserst merkwürdig. NB. Müssen dort offt bey Kauff Leüthen speisen.</tab>
-<line type="break"/>
+<line tab="1"/><tab value="1-2">Da ist alles halb Welsch halb französisch. Ein unseeliges Mittelding das nur amusiert so lang man nichts bestimmteres kennt. Wenden Sie <insertion pos="top">sich</insertion> da hauptsächlich auf Empfehlung. vors übrige Italien.</tab> 
 <line type="break"/><tab value="1-2">Bey <aq>Brunati</aq> empfangen Sie von mir fernere Briefe und bestellen die meinigen durch Ihn.</tab> 
-<line type="empty" />
-<line type="break" /><tab value="2-2"><align pos="center"><aq>von Fiorenza</aq></align></tab>
-<line type="break"/><tab value="2-2">sage ich nichts. Ist seit meiner Zeit umgegossen.</tab>
-<line type="empty" />
-<line type="break" />
 <line type="break"/><tab value="1-2"><align pos="center"><aq>in Bergamo</aq></align></tab>
 <line type="break"/><tab value="1-2">Ist im August eine Messe die Sie sehen sollten. Da ist ein abentheurliches Zeug von</tab>
 <line tab="1"/><tab value="2-2">lächerlichem Adel. Eine solche Messe kan man sich nicht einbilden ohne Sie gesehen zu haben. Steiner ist ein Biedermann!</tab>
+<line type="break" /><tab value="2-2"><align pos="center"><aq>in Genua</aq></align></tab>
+<line type="break"/><tab value="2-2">sehen Sie Paläste</tab>
+<line type="break"/><tab value="2-2"><align pos="center"><aq></aq>in Bologna</align></tab>
+<line tab="1"/><tab value="2-2">Gelehrsamkeit auf Stelzen und unseeliger finsterer Zwang zwischen welchem man sich doch mit Lust durcharbeiten kan.</tab>
+<tab value="2-2"><align pos="center"><aq>in Livorno</aq></align></tab>
+<line tab="1"/><tab value="2-2">ein <aq>Compendium</aq> der Handtlungs Geschichte von ganz Europa. In meinen Augen äusserst merkwürdig. NB. Müssen dort offt bey Kauff Leüthen speisen.</tab>
+<line type="break" /><tab value="2-2"><align pos="center"><aq>von Fiorenza</aq></align></tab>
+<line type="break"/><tab value="2-2">sage ich nichts. Ist seit meiner Zeit umgegossen.</tab>
  <tab value="2-2"><align pos="center"><aq>vor Lucca u: Sienna</aq></align></tab>
 <line type="break"/><tab value="2-2">müssen Sie einige Tage nehmen. Wenn Sie Glück haben, können Sie dort <del>glückliche</del> herliche Stunden durchleben.</tab> </tabs>
 <page index="7"/>
