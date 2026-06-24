@@ -21,7 +21,15 @@ PACKAGE_DIR = Path(__file__).resolve().parents[2]
 ROOT_DIR = PACKAGE_DIR.parent.parent
 DATA_DIR = ROOT_DIR / "data" / "xml"
 XSLT_DIR = ROOT_DIR / "xslt"
+XSD_DIR = ROOT_DIR / "data" / "xsd"
 CACHE_DIR = PACKAGE_DIR / ".cache"
+
+XSD_MAP = {
+    "briefe.xml": "briefe.xsd",
+    "meta.xml": "meta.xsd",
+    "references.xml": "references.xsd",
+    "traditions.xml": "briefe.xsd",
+}
 
 
 class Timings:
@@ -182,14 +190,21 @@ def get_git_metadata() -> dict[str, str]:
         capture_output=True,
         text=True,
     ).stdout.strip()
-    return {"commitHash": commit_hash, "commitDate": commit_date}
+    commit_message = subprocess.run(
+        ["git", "show", "-s", "--format=%s", "HEAD"],
+        cwd=ROOT_DIR,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    return {"commitHash": commit_hash, "commitDate": commit_date, "commitMessage": commit_message}
 
 
 def get_git_metadata_safe() -> dict[str, str]:
     try:
         return get_git_metadata()
     except Exception:
-        return {"commitHash": "unknown", "commitDate": "unknown"}
+        return {"commitHash": "unknown", "commitDate": "unknown", "commitMessage": "unknown"}
 
 
 def utc_iso_now() -> str:
@@ -198,3 +213,23 @@ def utc_iso_now() -> str:
 
 def available_parallelism() -> int:
     return max(1, min(os.cpu_count() or 1, 8))
+
+
+def validate_xml(doc: etree._ElementTree, file_name: str) -> list[dict[str, str | int]]:
+    try:
+        xsd = etree.XMLSchema(etree.parse(str(XSD_DIR / XSD_MAP[file_name])))
+    except etree.XMLSchemaParseError as error:
+        return [{"kind": "xsd", "stage": f"validateXsd:{file_name.removesuffix('.xml')}", "message": str(error)}]
+
+    if not xsd.validate(doc):
+        return [
+            {
+                "kind": "xsd",
+                "stage": f"validateXsd:{file_name.removesuffix('.xml')}",
+                "message": error.message,
+                "line": error.line if error.line > 0 else None,
+                "file": file_name,
+            }
+            for error in xsd.error_log
+        ]
+    return []

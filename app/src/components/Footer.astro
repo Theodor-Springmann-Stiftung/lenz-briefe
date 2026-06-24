@@ -1,8 +1,13 @@
 ---
+import { getGeneratedStatus } from "../lib/edition";
+
 const generatedDate = new Intl.DateTimeFormat("de-DE", {
   month: "long",
   year: "numeric"
 }).format(new Date());
+
+const status = await getGeneratedStatus();
+const shortHash = status.source.commitHash.substring(0, 7);
 ---
 
 <footer class="">
@@ -12,7 +17,7 @@ const generatedDate = new Intl.DateTimeFormat("de-DE", {
         <i class=""></i>
         <i class=""></i>
       </span>
-      <span>CC BY 4.0 · {generatedDate}</span>
+      <span>CC BY 4.0 · {generatedDate} · Commit <a href="/status/">{shortHash}</a></span>
     </div>
 
     <div class="">

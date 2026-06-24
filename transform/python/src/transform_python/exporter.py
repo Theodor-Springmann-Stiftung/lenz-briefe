@@ -24,10 +24,13 @@ from .common import (
     slugify_letter,
     text_content,
     utc_iso_now,
+    validate_xml,
     write_json,
     write_text,
     XSLT_DIR,
 )
+
+from .verweise import check_verweise
 
 
 def extract_date(node: etree._Element | None) -> dict[str, Any] | None:
@@ -186,9 +189,9 @@ class PipelineFailure(Exception):
 
 
 def _build_success_status(
-    generator: str, source: dict[str, str], counts: dict[str, int]
+    generator: str, source: dict[str, str], counts: dict[str, int], warnings: list[dict[str, str]] | None = None
 ) -> dict[str, Any]:
-    return {
+    result = {
         "version": 1,
         "state": "success",
         "generator": generator,
@@ -198,10 +201,15 @@ def _build_success_status(
             "counts": counts,
         },
     }
+    if warnings:
+        result["warnings"] = warnings
+    return result
 
 
-def _build_failure_status(generator: str, source: dict[str, str], failure: PipelineFailure) -> dict[str, Any]:
-    return {
+def _build_failure_status(
+    generator: str, source: dict[str, str], failure: PipelineFailure, warnings: list[dict[str, str]] | None = None
+) -> dict[str, Any]:
+    result = {
         "version": 1,
         "state": "failure",
         "generator": generator,
@@ -213,6 +221,9 @@ def _build_failure_status(generator: str, source: dict[str, str], failure: Pipel
             "message": failure.message,
         },
     }
+    if warnings:
+        result["warnings"] = warnings
+    return result
 
 
 def _normalize_failure(error: Exception) -> PipelineFailure:
@@ -305,6 +316,13 @@ def export_edition(out_dir: str) -> dict[str, Any]:
     references_doc = timings.measure("readXml:references", lambda: _read_required_xml("references.xml"))
     refs = timings.measure("buildReferenceMaps", lambda: build_reference_maps(references_doc))
 
+    warnings: list[dict[str, str]] = []
+    warnings += timings.measure("validateXsd:briefe", lambda: validate_xml(briefe_doc, "briefe.xml"))
+    warnings += timings.measure("validateXsd:meta", lambda: validate_xml(meta_doc, "meta.xml"))
+    warnings += timings.measure("validateXsd:traditions", lambda: validate_xml(traditions_doc, "traditions.xml"))
+    warnings += timings.measure("validateXsd:references", lambda: validate_xml(references_doc, "references.xml"))
+    warnings += timings.measure("lintVerweise", lambda: check_verweise(briefe_doc, meta_doc, traditions_doc, references_doc))
+
     timings.measure("resetOutDir", lambda: reset_dir(absolute_out_dir))
 
     letter_text_nodes = timings.measure(
@@ -349,6 +367,7 @@ def export_edition(out_dir: str) -> dict[str, Any]:
             "traditions": len(tradition_letter_nodes),
         },
         "timings": timings.snapshot(),
+        "warnings": warnings,
     }
 
 
@@ -360,7 +379,7 @@ def run_export(out_dir: str, generator: str = "python") -> dict[str, Any]:
 
     try:
         result = export_edition(str(staging_dir))
-        write_json(staging_dir / "status.json", _build_success_status(generator, source, result["counts"]))
+        write_json(staging_dir / "status.json", _build_success_status(generator, source, result["counts"], result.get("warnings")))
         replace_dir(staging_dir, absolute_out_dir)
         return result
     except Exception as error:

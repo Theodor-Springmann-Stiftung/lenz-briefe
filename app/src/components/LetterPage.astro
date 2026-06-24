@@ -1,0 +1,594 @@
+---
+import type { LetterBundle, LetterMeta } from "../lib/edition";
+import LetterBody from "./LetterBody.astro";
+import LetterHeader from "./LetterHeader.astro";
+import LetterPageNumbers from "./LetterPageNumbers.astro";
+import LetterSidenoteMargins from "./LetterSidenoteMargins.astro";
+import LetterTraditions from "./LetterTraditions.astro";
+
+type Props = {
+  bundle: LetterBundle;
+  neighbors: { previous: LetterMeta | null; next: LetterMeta | null };
+};
+
+const { bundle, neighbors } = Astro.props;
+---
+
+<div>
+  <LetterHeader meta={bundle.meta} neighbors={neighbors} />
+
+  <section class="grid grid-cols-[4.5rem_minmax(0,1fr)_18rem] items-stretch gap-6 max-[980px]:grid-cols-[3.5rem_minmax(0,1fr)]" data-letter-layout>
+    <LetterPageNumbers pages={bundle.pages} />
+    <LetterBody textHtml={bundle.textHtml} />
+    <LetterSidenoteMargins sidenotesByPage={bundle.sidenotesByPage} />
+  </section>
+
+  <LetterTraditions html={bundle.meta.traditionsHtml} />
+</div>
+
+<style is:global>
+  .letter-body-prose {
+    --lb-indent-1: 1.5rem;
+    --lb-indent-2: 3rem;
+    --lb-indent-3: 4.5rem;
+    --lb-indent-4: 6rem;
+    --lb-indent-5: 7.5rem;
+    --lb-indent-6: 9rem;
+    --lb-indent-7: 10.5rem;
+    --lb-indent-8: 12rem;
+    color: #2d2417;
+  }
+
+  .letter-body-prose {
+    font-family: var(--font-serif);
+    font-size: 1.06rem;
+    line-height: 1.72;
+    color: inherit;
+  }
+
+  .letter-body-prose .lb-page {
+    display: inline;
+    user-select: none;
+  }
+
+  .letter-body-prose .lb-line-block,
+  .letter-body-prose .lb-tab-row {
+    display: block;
+  }
+
+  .letter-body-prose .lb-line-block[data-type="break"],
+  .letter-body-prose .lb-tab-row[data-type="break"] {
+    min-height: 1lh;
+  }
+
+  .letter-body-prose .lb-line-block--empty {
+    min-height: 1lh;
+    margin-block-end: 0.85rem;
+  }
+
+  .letter-body-prose .lb-rule {
+    width: min(10rem, 35%);
+    margin: 1.4rem auto;
+    border: 0;
+    border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+  }
+
+  .letter-body-prose .lb-line-block[data-layout="aligned"] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .letter-body-prose .align-left,
+  .letter-body-prose .align-center,
+  .letter-body-prose .align-right {
+    grid-column: 1;
+    grid-row: 1;
+    inline-size: fit-content;
+    max-inline-size: 100%;
+    min-width: 0;
+  }
+
+  .letter-body-prose .align-left:empty,
+  .letter-body-prose .align-center:empty,
+  .letter-body-prose .align-right:empty {
+    display: none;
+  }
+
+  .letter-body-prose .align-left {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .letter-body-prose .align-center {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .letter-body-prose .align-right {
+    justify-self: end;
+    text-align: right;
+  }
+
+  .letter-body-prose .align {
+    display: block;
+    width: 100%;
+    text-align: start;
+  }
+
+  .letter-body-prose .align[data-pos="center"] {
+    text-align: center;
+  }
+
+  .letter-body-prose .align[data-pos="right"] {
+    text-align: right;
+  }
+
+  .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="1"] {
+    text-indent: var(--lb-indent-1);
+  }
+
+  .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="1"] {
+    padding-inline-start: var(--lb-indent-1);
+  }
+
+  .letter-body-prose .lb-tab-row[data-tab="1"] {
+    padding-inline-start: var(--lb-indent-1);
+  }
+
+  .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="2"] {
+    text-indent: var(--lb-indent-2);
+  }
+
+  .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="2"] {
+    padding-inline-start: var(--lb-indent-2);
+  }
+
+  .letter-body-prose .lb-tab-row[data-tab="2"] {
+    padding-inline-start: var(--lb-indent-2);
+  }
+
+  .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="3"] {
+    text-indent: var(--lb-indent-3);
+  }
+
+  .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="3"] {
+    padding-inline-start: var(--lb-indent-3);
+  }
+
+  .letter-body-prose .lb-tab-row[data-tab="3"] {
+    padding-inline-start: var(--lb-indent-3);
+  }
+
+  .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="4"] {
+    text-indent: var(--lb-indent-4);
+  }
+
+  .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="4"] {
+    padding-inline-start: var(--lb-indent-4);
+  }
+
+  .letter-body-prose .lb-tab-row[data-tab="4"] {
+    padding-inline-start: var(--lb-indent-4);
+  }
+
+  .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="5"] {
+    text-indent: var(--lb-indent-5);
+  }
+
+  .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="5"] {
+    padding-inline-start: var(--lb-indent-5);
+  }
+
+  .letter-body-prose .lb-tab-row[data-tab="5"] {
+    padding-inline-start: var(--lb-indent-5);
+  }
+
+  .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="6"] {
+    text-indent: var(--lb-indent-6);
+  }
+
+  .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="6"] {
+    padding-inline-start: var(--lb-indent-6);
+  }
+
+  .letter-body-prose .lb-tab-row[data-tab="6"] {
+    padding-inline-start: var(--lb-indent-6);
+  }
+
+  .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="7"] {
+    text-indent: var(--lb-indent-7);
+  }
+
+  .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="7"] {
+    padding-inline-start: var(--lb-indent-7);
+  }
+
+  .letter-body-prose .lb-tab-row[data-tab="7"] {
+    padding-inline-start: var(--lb-indent-7);
+  }
+
+  .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab="8"] {
+    text-indent: var(--lb-indent-8);
+  }
+
+  .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="8"] {
+    padding-inline-start: var(--lb-indent-8);
+  }
+
+  .letter-body-prose .lb-tab-row[data-tab="8"] {
+    padding-inline-start: var(--lb-indent-8);
+  }
+
+  .letter-body-prose .aq {
+    font-family: var(--font-sans);
+    font-style: normal;
+  }
+
+  .letter-body-prose .gr,
+  .letter-body-prose .hb,
+  .letter-body-prose .ru {
+    letter-spacing: 0.04em;
+  }
+
+  .letter-body-prose .ul {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .letter-body-prose .dul {
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-underline-offset: 0.15em;
+  }
+
+  .letter-body-prose .tul {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 0.15em;
+  }
+
+  .letter-body-prose .highlight {
+    padding-inline: 0.08em;
+    border-radius: 0.12em;
+    color: inherit;
+  }
+
+  .letter-body-prose .undo,
+  .letter-body-prose .added {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.15em;
+  }
+
+  .letter-body-prose .insertion {
+    color: inherit;
+    text-indent: 0;
+  }
+
+  .letter-body-prose .insertion::before {
+    content: "⌞";
+    color: #334155;
+    margin-inline-end: -0.2em;
+  }
+
+  .letter-body-prose .insertion::after {
+    content: "⌟";
+    color: #334155;
+    margin-inline-start: -0.4ch;
+  }
+
+  .letter-body-prose .insertion-marker {
+    white-space: nowrap;
+    text-indent: 0;
+  }
+
+  .letter-body-prose .insertion-marker::before {
+    position: relative;
+    bottom: -0.15rem;
+    display: inline-block;
+    font-size: 0.875em;
+    line-height: 1;
+    white-space: nowrap;
+    color: #334155;
+  }
+
+  .letter-body-prose .insertion[data-pos="left"] .insertion-marker::before {
+    content: "🠊";
+  }
+
+  .letter-body-prose .insertion[data-pos="right"] .insertion-marker::before {
+    content: "🠜";
+  }
+
+  .letter-body-prose .insertion[data-pos="top"] .insertion-marker::before {
+    content: "🠟";
+    bottom: 0;
+    font-size: 0.75em;
+  }
+
+  .letter-body-prose .insertion[data-pos="bottom"] .insertion-marker::before {
+    content: "🠝";
+    bottom: 0;
+    font-size: 0.75em;
+  }
+
+  .letter-body-prose del {
+    color: color-mix(in srgb, currentColor 78%, transparent);
+    text-decoration-thickness: 1px;
+  }
+
+  .letter-body-prose .subst {
+    white-space: nowrap;
+  }
+
+  .letter-body-prose .hand {
+    font-family: var(--font-hand);
+    font-style: normal;
+    color: #1f1c18;
+    font-size: 0.95rem;
+  }
+
+  .letter-body-prose .ink {
+    color: #173a63;
+  }
+
+  .letter-body-prose .note {
+    color: #6a6154;
+    font-size: 0.94em;
+  }
+
+  .letter-body-prose .tl {
+    display: inline-block;
+    min-width: 0.7em;
+    border-bottom: 1px dotted currentColor;
+    opacity: 0.55;
+    transform: translateY(-0.08em);
+  }
+
+  .letter-body-prose .tl::before,
+  .letter-body-prose .tl::after,
+  .letter-body-prose .nr::before,
+  .letter-body-prose .nr::after {
+    content: "⸰";
+    opacity: 0.85;
+  }
+
+  .letter-body-prose .fn,
+  .letter-body-prose .anchor {
+  }
+
+  .letter-body-prose .nr {
+    color: #7a6a55;
+    font-style: italic;
+  }
+
+  .letter-body-prose .pe {
+    color: #7a5732;
+  }
+
+  .letter-body-prose .er {
+    opacity: 0.7;
+  }
+
+  .letter-body-prose .large {
+    font-size: 1.14em;
+  }
+
+  .letter-body-prose .sub {
+    vertical-align: sub;
+    font-size: 0.8em;
+  }
+
+  .letter-body-prose .super {
+    vertical-align: super;
+    font-size: 0.8em;
+  }
+
+  .letter-body-prose .sal,
+  .letter-body-prose .sig {
+    letter-spacing: 0.02em;
+  }
+
+  .letter-body-prose .ful {
+    display: inline-block;
+    min-width: 2rem;
+    border-bottom: 1px solid currentColor;
+    transform: translateY(-0.12em);
+  }
+
+  .letter-body-prose address {
+    font-style: inherit;
+  }
+
+  .letter-body-prose .tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-block: 1rem;
+  }
+
+  .letter-body-prose .lb-tab-row {
+    min-width: 0;
+  }
+
+  .letter-body-prose .tab {
+    min-width: 0;
+  }
+
+  .letter-body-prose .tab[data-value="1-2"],
+  .letter-body-prose .tab[data-value="2-2"] {
+    display: inline-block;
+    width: calc(50% - 0.5rem);
+    vertical-align: top;
+  }
+
+  .letter-body-prose .tab[data-value="1-12"] {
+    margin-inline-start: 8.333%;
+  }
+
+  .letter-body-prose .tab[data-value="5-12"] {
+    margin-inline-start: 41.667%;
+  }
+
+  .letter-body-prose .tab[data-value="10-12"] {
+    margin-inline-start: 83.333%;
+  }
+
+  .letter-body-prose .tab[data-value="1-8"] {
+    margin-inline-start: 12.5%;
+  }
+
+  .letter-body-prose .tab[data-value="3-8"] {
+    margin-inline-start: 37.5%;
+  }
+
+  .letter-body-prose .tab[data-value="4-8"] {
+    margin-inline-start: 50%;
+  }
+
+  .letter-body-prose .tab[data-value="7-8"] {
+    margin-inline-start: 87.5%;
+  }
+</style>
+
+<script is:inline>
+  (() => {
+    const roots = document.querySelectorAll("[data-letter-layout]");
+
+    const isIgnoredNode = (node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        return !node.textContent?.trim();
+      }
+
+      if (!(node instanceof HTMLElement)) {
+        return false;
+      }
+
+      return (
+        node.classList.contains("lb-page") ||
+        node.classList.contains("page-anchor")
+      );
+    };
+
+    const buildPageTargets = (body) => {
+      const targets = new Map();
+      const anchors = Array.from(body.querySelectorAll(".page-anchor"));
+
+      for (const anchor of anchors) {
+        if (!(anchor instanceof HTMLElement) || !anchor.id) {
+          continue;
+        }
+
+        anchor.textContent = anchor.dataset.inlineBreak === "true" ? " | " : "";
+        targets.set(anchor.id, anchor);
+      }
+
+      return { targets };
+    };
+
+    const createBaselineProbe = () => {
+      const probe = document.createElement("span");
+      probe.setAttribute("aria-hidden", "true");
+      probe.style.display = "inline-block";
+      probe.style.width = "0";
+      probe.style.height = "1px";
+      probe.style.padding = "0";
+      probe.style.margin = "0";
+      probe.style.border = "0";
+      probe.style.verticalAlign = "baseline";
+      probe.style.overflow = "hidden";
+      return probe;
+    };
+
+    const measureBaseline = (element) => {
+      const probe = createBaselineProbe();
+      element.append(probe);
+      const rect = probe.getBoundingClientRect();
+      probe.remove();
+      return rect.bottom;
+    };
+
+    const positionRail = (items, body, rail, pageTargets) => {
+      const bodyRect = body.getBoundingClientRect();
+      let maxBottom = 0;
+
+      for (const [index, item] of items.entries()) {
+        const anchorId = item.getAttribute("data-anchor-id");
+        const align = item.getAttribute("data-align") ?? "top";
+        if (!anchorId) {
+          item.setAttribute("data-positioned", "false");
+          continue;
+        }
+
+        if (align === "bottom" && index === 0) {
+          const label = item.textContent?.trim();
+          if (label === "1") {
+            item.setAttribute("data-positioned", "false");
+            item.style.top = "";
+            continue;
+          }
+        }
+
+        const target =
+          align === "bottom"
+            ? pageTargets.get(anchorId) ?? null
+            : body.querySelector(`#${CSS.escape(anchorId)}`);
+        if (!(target instanceof HTMLElement)) {
+          item.setAttribute("data-positioned", "false");
+          continue;
+        }
+
+        const targetRect = target.getBoundingClientRect();
+        const targetBaseline = measureBaseline(target) - bodyRect.top;
+        const itemRect = item.getBoundingClientRect();
+        const itemBaseline = measureBaseline(item) - itemRect.top;
+        const rawTop =
+          align === "bottom"
+            ? targetBaseline - itemBaseline
+            : targetRect.top - bodyRect.top;
+        const top = Math.max(0, rawTop);
+        item.style.top = `${Math.round(top)}px`;
+        item.setAttribute("data-positioned", "true");
+        maxBottom = Math.max(maxBottom, top + item.offsetHeight);
+      }
+
+      rail.style.minHeight = `${Math.max(body.offsetHeight, Math.ceil(maxBottom))}px`;
+    };
+
+    const setupLayout = (root) => {
+      const body = root.querySelector("[data-letter-body]");
+      const pageRail = root.querySelector("[data-page-rail]");
+
+      if (!(body instanceof HTMLElement) || !(pageRail instanceof HTMLElement)) {
+        return;
+      }
+
+      const pageItems = Array.from(pageRail.querySelectorAll("[data-anchor-id]"));
+
+      const reposition = () => {
+        const pageTargets = buildPageTargets(body);
+        positionRail(pageItems, body, pageRail, pageTargets.targets);
+      };
+
+      const schedule = () => requestAnimationFrame(reposition);
+      const resizeObserver = new ResizeObserver(schedule);
+      resizeObserver.observe(body);
+      resizeObserver.observe(root);
+
+      if (document.fonts?.ready) {
+        document.fonts.ready.then(schedule);
+      }
+
+      window.addEventListener("resize", schedule, { passive: true });
+      schedule();
+    };
+
+    for (const root of roots) {
+      if (root instanceof HTMLElement) {
+        setupLayout(root);
+      }
+    }
+  })();
+</script>

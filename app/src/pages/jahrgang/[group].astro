@@ -1,13 +1,12 @@
 ---
-import FailureState from "../../components/FailureState.astro";
+import FailurePage from "../../components/FailurePage.astro";
 import Layout from "../../layouts/Layout.astro";
-import YearGroupSection from "../../components/YearGroupSection.astro";
+import YearGroupPage from "../../components/YearGroupPage.astro";
 import {
   getAllYearGroups,
   getGeneratedStatus,
   getYearGroup,
   getYearGroupDefinitions,
-  getYearGroupHref,
   isGeneratedFailureStatus
 } from "../../lib/edition";
 
@@ -39,25 +38,12 @@ if (!group) {
 ---
 
 <Layout
-  title={`${group?.label ?? groupId} | Lenz-Briefe`}
+  title={isFailure ? "Editionstatus | Lenz-Briefe" : `${group.label} | Lenz-Briefe`}
   description={
     isFailure
-      ? `Statusseite fur den Jahrgang ${group?.label ?? groupId}.`
-      : `Briefe im Zeitraum ${group?.label ?? groupId}.`
+      ? `Statusseite fur den Jahrgang ${group.label}.`
+      : `Briefe im Zeitraum ${group.label}.`
   }
 >
-  {isFailure ? (
-    <FailureState status={status} context="year-group" label={group.label} />
-  ) : (
-    <>
-      <nav class="" aria-label="Briefe nach Jahren">
-        {groups.map((item) => (
-          <a class="" href={getYearGroupHref(item.id)}>{item.label}</a>
-        ))}
-      </nav>
-      <div class="">
-        <YearGroupSection group={group} />
-      </div>
-    </>
-  )}
+  {isFailure ? <FailurePage status={status} /> : <YearGroupPage groups={groups} group={group} />}
 </Layout>

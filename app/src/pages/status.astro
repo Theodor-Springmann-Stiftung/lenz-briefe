@@ -1,0 +1,121 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getGeneratedStatus, isGeneratedFailureStatus } from "../lib/edition";
+
+const status = await getGeneratedStatus();
+const isFailure = isGeneratedFailureStatus(status);
+const repoUrl = "https://github.com/Theodor-Springmann-Stiftung/lenz-briefe";
+const commitUrl = `${repoUrl}/commit/${status.source.commitHash}`;
+const shortHash = status.source.commitHash.substring(0, 7);
+
+function formatDate(iso: string): string {
+  const date = new Date(iso);
+  return new Intl.DateTimeFormat("de-DE", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZoneName: "short"
+  }).format(date);
+}
+---
+
+<Layout title="Status | Lenz-Briefe" description="Metadaten zum aktuellen Stand der Edition.">
+  <section aria-labelledby="status-title">
+    <p>Status der Edition</p>
+    <h1 id="status-title">Metadaten</h1>
+
+    <dl>
+      <div>
+        <dt>Zustand</dt>
+        <dd>{isFailure ? "Fehlgeschlagen" : "Erfolgreich"}</dd>
+      </div>
+      <div>
+        <dt>Generator</dt>
+        <dd>{status.generator}</dd>
+      </div>
+      <div>
+        <dt>Exportiert am</dt>
+        <dd>{formatDate(status.generatedAt)}</dd>
+      </div>
+    </dl>
+
+    <h2>Quelle</h2>
+    <dl>
+      <div>
+        <dt>Repository</dt>
+        <dd><a href={repoUrl}>{repoUrl}</a></dd>
+      </div>
+      <div>
+        <dt>Commit</dt>
+        <dd><a href={commitUrl}>{shortHash}</a></dd>
+      </div>
+      <div>
+        <dt>Commit-Datum</dt>
+        <dd>{formatDate(status.source.commitDate)}</dd>
+      </div>
+      {status.source.commitMessage && (
+        <div>
+          <dt>Commit-Nachricht</dt>
+          <dd>{status.source.commitMessage}</dd>
+        </div>
+      )}
+    </dl>
+
+    {isFailure ? (
+      <>
+        <h2>Fehler</h2>
+        <dl>
+          <div>
+            <dt>Fehlertyp</dt>
+            <dd>{status.failure.kind}</dd>
+          </div>
+          <div>
+            <dt>Pipeline-Schritt</dt>
+            <dd>{status.failure.stage}</dd>
+          </div>
+          <div>
+            <dt>Meldung</dt>
+            <dd>{status.failure.message}</dd>
+          </div>
+        </dl>
+      </>
+    ) : (
+      <>
+        <h2>Export-Ergebnisse</h2>
+        <dl>
+          <div>
+            <dt>Brief-Metadaten</dt>
+            <dd>{status.success.counts.meta}</dd>
+          </div>
+          <div>
+            <dt>Brief-Texte</dt>
+            <dd>{status.success.counts.letterText}</dd>
+          </div>
+          <div>
+            <dt>Uberlieferungen</dt>
+            <dd>{status.success.counts.traditions}</dd>
+          </div>
+        </dl>
+      </>
+    )}
+
+    {status.warnings && status.warnings.length > 0 && (
+      <>
+        <h2>Warnungen</h2>
+        <dl>
+          {status.warnings.map((warning) => (
+            <div>
+              <dt>
+                {warning.stage}
+                {warning.file && ` (${warning.file}${warning.line != null ? `:${warning.line}` : ""})`}
+              </dt>
+              <dd><code>{warning.message}</code></dd>
+            </div>
+          ))}
+        </dl>
+      </>
+    )}
+  </section>
+</Layout>

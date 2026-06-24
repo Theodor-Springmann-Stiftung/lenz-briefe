@@ -14,9 +14,16 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TRANSFORM_DIR = path.resolve(__dirname, "..");
 const ROOT_DIR = path.resolve(TRANSFORM_DIR, "..", "..");
 const DATA_DIR = path.join(ROOT_DIR, "data", "xml");
+const XSD_DIR = path.join(ROOT_DIR, "data", "xsd");
 const XSLT_DIR = path.join(ROOT_DIR, "xslt");
 const CACHE_DIR = path.join(TRANSFORM_DIR, ".cache");
 const NS = "https://lenz-archiv.de";
+const XSD_MAP = {
+  "briefe.xml": "briefe.xsd",
+  "meta.xml": "meta.xsd",
+  "references.xml": "references.xsd",
+  "traditions.xml": "briefe.xsd"
+};
 const stylesheetFileCache = new Map();
 const LETTER_CONCURRENCY = Math.max(
   1,
@@ -257,14 +264,16 @@ async function runStylesheet(name, params, timings, options = {}) {
 }
 
 async function getGitMetadata() {
-  const [commitHashResult, commitDateResult] = await Promise.all([
+  const [commitHashResult, commitDateResult, commitMessageResult] = await Promise.all([
     execFileAsync("git", ["rev-parse", "HEAD"], { cwd: ROOT_DIR }),
-    execFileAsync("git", ["show", "-s", "--format=%cI", "HEAD"], { cwd: ROOT_DIR })
+    execFileAsync("git", ["show", "-s", "--format=%cI", "HEAD"], { cwd: ROOT_DIR }),
+    execFileAsync("git", ["show", "-s", "--format=%s", "HEAD"], { cwd: ROOT_DIR })
   ]);
 
   return {
     commitHash: commitHashResult.stdout.trim(),
-    commitDate: commitDateResult.stdout.trim()
+    commitDate: commitDateResult.stdout.trim(),
+    commitMessage: commitMessageResult.stdout.trim()
   };
 }
 
@@ -274,17 +283,113 @@ async function getGitMetadataSafe() {
   } catch {
     return {
       commitHash: "unknown",
-      commitDate: "unknown"
+      commitDate: "unknown",
+      commitMessage: "unknown"
     };
   }
+}
+
+async function validateXml(fileName) {
+  const stage = `validateXsd:${fileName.replace(/\.xml$/, "")}`;
+  const xmlPath = path.join(DATA_DIR, fileName);
+  const xsdPath = path.join(XSD_DIR, XSD_MAP[fileName]);
+
+  try {
+    await execFileAsync("xmllint", ["--schema", xsdPath, "--noout", xmlPath]);
+    return [];
+  } catch (error) {
+    if (!error.stderr) {
+      return [{ kind: "xsd", stage, message: `Validation failed: ${error.message}` }];
+    }
+
+    return String(error.stderr)
+      .trim()
+      .split("\n")
+      .filter((line) => line.length > 0 && !line.endsWith(" fails to validate"))
+      .map((line) => {
+        const match = line.match(/^.+?:(\d+): (.+)$/);
+        if (match) {
+          return {
+            kind: "xsd",
+            stage,
+            message: match[2],
+            line: Number(match[1]),
+            file: fileName
+          };
+        }
+        return { kind: "xsd", stage, message: line, file: fileName };
+      });
+  }
+}
+
+function lintVerweise(briefeDoc, metaDoc, traditionsDoc, referencesDoc) {
+  const errors = [];
+
+  const letterDescIds = new Set(
+    select("//l:letterDesc", metaDoc).map((node) => getAttribute(node, "letter")).filter(Boolean)
+  );
+  const personDefIds = new Set(
+    select("//l:personDef", referencesDoc).map((node) => getAttribute(node, "index"))
+  );
+  const locationDefIds = new Set(
+    select("//l:locationDef", referencesDoc).map((node) => getAttribute(node, "index"))
+  );
+  const appDefIds = new Set(
+    select("//l:appDef", referencesDoc).map((node) => getAttribute(node, "index"))
+  );
+
+  function checkDoc(doc, fileName) {
+    for (const node of xpath.select("//letterText", doc)) {
+      const id = getAttribute(node, "letter");
+      if (id && !letterDescIds.has(id)) {
+        errors.push({ kind: "verweise", stage: "lintVerweise", message: `Invalid reference (letterText:${id})`, file: fileName });
+      }
+    }
+    for (const node of xpath.select("//letterTradition", doc)) {
+      const id = getAttribute(node, "letter");
+      if (id && !letterDescIds.has(id)) {
+        errors.push({ kind: "verweise", stage: "lintVerweise", message: `Invalid reference (letterTradition:${id})`, file: fileName });
+      }
+    }
+    for (const node of select("//l:location", doc)) {
+      const ref = getAttribute(node, "ref");
+      if (ref && !locationDefIds.has(ref)) {
+        errors.push({ kind: "verweise", stage: "lintVerweise", message: `Invalid reference (location:${ref})`, file: fileName });
+      }
+    }
+    for (const node of select("//l:person", doc)) {
+      const ref = getAttribute(node, "ref");
+      if (ref && !personDefIds.has(ref)) {
+        errors.push({ kind: "verweise", stage: "lintVerweise", message: `Invalid reference (person:${ref})`, file: fileName });
+      }
+    }
+    for (const node of xpath.select("//hand", doc)) {
+      const ref = getAttribute(node, "ref");
+      if (ref && !personDefIds.has(ref)) {
+        errors.push({ kind: "verweise", stage: "lintVerweise", message: `Invalid reference (person:${ref})`, file: fileName });
+      }
+    }
+    for (const node of xpath.select("//app", doc)) {
+      const ref = getAttribute(node, "ref");
+      if (ref && !appDefIds.has(ref)) {
+        errors.push({ kind: "verweise", stage: "lintVerweise", message: `Invalid reference (app:${ref})`, file: fileName });
+      }
+    }
+  }
+
+  checkDoc(briefeDoc, "briefe.xml");
+  checkDoc(metaDoc, "meta.xml");
+  checkDoc(traditionsDoc, "traditions.xml");
+
+  return errors;
 }
 
 function getGeneratedTimestamp() {
   return new Date().toISOString();
 }
 
-function buildSuccessStatus(generator, source, counts) {
-  return {
+function buildSuccessStatus(generator, source, counts, warnings) {
+  const status = {
     version: 1,
     state: "success",
     generator,
@@ -294,10 +399,14 @@ function buildSuccessStatus(generator, source, counts) {
       counts
     }
   };
+  if (warnings && warnings.length > 0) {
+    status.warnings = warnings;
+  }
+  return status;
 }
 
-function buildFailureStatus(generator, source, failure) {
-  return {
+function buildFailureStatus(generator, source, failure, warnings) {
+  const status = {
     version: 1,
     state: "failure",
     generator,
@@ -309,6 +418,10 @@ function buildFailureStatus(generator, source, failure) {
       message: failure.detail
     }
   };
+  if (warnings && warnings.length > 0) {
+    status.warnings = warnings;
+  }
+  return status;
 }
 
 function normalizeFailure(error) {
@@ -474,6 +587,13 @@ async function exportEdition({ outDir }) {
   const referencesDoc = await timings.measure("readXml:references", async () => await readRequiredXml("references.xml"));
   const refs = await timings.measure("buildReferenceMaps", async () => buildReferenceMaps(referencesDoc));
 
+  const warnings = []
+    .concat(await timings.measure("validateXsd:briefe", async () => await validateXml("briefe.xml")))
+    .concat(await timings.measure("validateXsd:meta", async () => await validateXml("meta.xml")))
+    .concat(await timings.measure("validateXsd:traditions", async () => await validateXml("traditions.xml")))
+    .concat(await timings.measure("validateXsd:references", async () => await validateXml("references.xml")))
+    .concat(await timings.measure("lintVerweise", async () => lintVerweise(briefeDoc, metaDoc, traditionsDoc, referencesDoc)));
+
   await timings.measure("resetOutDir", async () => await resetDir(absoluteOutDir));
 
   const letterTextNodes = await timings.measure("select:letterTextNodes", async () => select("/l:opus/l:document/l:letterText", briefeDoc));
@@ -638,7 +758,8 @@ async function exportEdition({ outDir }) {
       letterText: letterTextNodes.length,
       traditions: traditionLetterNodes.length
     },
-    timings: timings.snapshot()
+    timings: timings.snapshot(),
+    warnings
   };
 }
 
@@ -652,7 +773,7 @@ async function runExport({ outDir, generator = "js" }) {
     const result = await exportEdition({ outDir: stagingDir });
     await writeFile(
       path.join(stagingDir, "status.json"),
-      JSON.stringify(buildSuccessStatus(generator, source, result.counts), null, 2) + "\n"
+      JSON.stringify(buildSuccessStatus(generator, source, result.counts, result.warnings), null, 2) + "\n"
     );
     await replaceDir(stagingDir, absoluteOutDir);
     return result;

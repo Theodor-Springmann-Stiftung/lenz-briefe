@@ -1,10 +1,9 @@
 ---
-import FailureState from "../components/FailureState.astro";
+import FailurePage from "../components/FailurePage.astro";
+import HomePage from "../components/HomePage.astro";
 import Layout from "../layouts/Layout.astro";
-import YearGroupSection from "../components/YearGroupSection.astro";
 import {
   getGeneratedStatus,
-  getYearGroupHref,
   getAllYearGroups,
   isGeneratedFailureStatus
 } from "../lib/edition";
@@ -23,20 +22,5 @@ const group = groups[0] ?? null;
       : `Briefe im Zeitraum ${group?.label ?? ""}.`
   }
 >
-  {isFailure ? (
-    <FailureState status={status} context="home" />
-  ) : (
-    <>
-      <nav class="" aria-label="Briefe nach Jahren">
-        <ol>
-        {groups.map((group) => (
-          <li><a class="" href={getYearGroupHref(group.id)}>{group.label}</a></li>
-        ))}
-        </ol>
-      </nav>
-      <div class="">
-        {group && <YearGroupSection group={group} />}
-      </div>
-    </>
-  )}
+  {isFailure ? <FailurePage status={status} /> : <HomePage groups={groups} group={group} />}
 </Layout>

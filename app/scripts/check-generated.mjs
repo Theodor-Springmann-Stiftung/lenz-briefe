@@ -47,6 +47,38 @@ export function parseGeneratedStatus(raw) {
     throw new Error("Generated status source metadata is invalid.");
   }
 
+  // commitMessage is optional (older exports may not include it)
+  if (typeof value.source.commitMessage !== "undefined" && typeof value.source.commitMessage !== "string") {
+    throw new Error("Generated status source commitMessage is invalid.");
+  }
+
+  // warnings is optional
+  if (typeof value.warnings !== "undefined") {
+    if (!Array.isArray(value.warnings)) {
+      throw new Error("Generated status warnings must be an array.");
+    }
+
+    for (const warning of value.warnings) {
+      if (
+        typeof warning !== "object" ||
+        warning === null ||
+        typeof warning.kind !== "string" ||
+        typeof warning.stage !== "string" ||
+        typeof warning.message !== "string"
+      ) {
+        throw new Error("Generated status warning entry is invalid.");
+      }
+
+      if (typeof warning.line !== "undefined" && typeof warning.line !== "number") {
+        throw new Error("Generated status warning line must be a number.");
+      }
+
+      if (typeof warning.file !== "undefined" && typeof warning.file !== "string") {
+        throw new Error("Generated status warning file must be a string.");
+      }
+    }
+  }
+
   if (value.state === "success") {
     const counts = value.success?.counts;
     if (

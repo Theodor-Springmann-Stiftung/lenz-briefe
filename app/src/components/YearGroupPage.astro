@@ -1,0 +1,21 @@
+---
+import type { YearGroup } from "../lib/edition";
+import { getYearGroupHref } from "../lib/edition";
+import YearGroupSection from "./YearGroupSection.astro";
+
+type Props = {
+  groups: YearGroup[];
+  group: YearGroup;
+};
+
+const { groups, group } = Astro.props;
+---
+
+<nav class="" aria-label="Briefe nach Jahren">
+  {groups.map((item) => (
+    <a class="" href={getYearGroupHref(item.id)}>{item.label}</a>
+  ))}
+</nav>
+<div class="">
+  <YearGroupSection group={group} />
+</div>

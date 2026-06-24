@@ -9,9 +9,10 @@
     <!-- Root Element: opus -->
     <xs:element name="opus">
         <xs:complexType>
-            <xs:sequence>
+            <xs:choice>
                 <xs:element ref="document" minOccurs="1" maxOccurs="1" />
-            </xs:sequence>
+                <xs:element ref="traditions" minOccurs="1" maxOccurs="1" />
+            </xs:choice>
         </xs:complexType>
     </xs:element>
 
@@ -80,6 +81,36 @@
             <xs:selector xpath="lenz:page" />
             <xs:field xpath="@index" />
         </xs:unique>
+    </xs:element>
+
+    <!-- Traditions Container -->
+    <xs:element name="traditions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="letterTradition" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Letter Tradition Entry -->
+    <xs:element name="letterTradition">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="app" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="letter" type="xs:nonNegativeInteger" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <!-- App Reference (within traditions) -->
+    <xs:element name="app">
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="inline">
+                    <xs:attribute name="ref" type="xs:nonNegativeInteger" use="required" />
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
     </xs:element>
 
 </xs:schema>

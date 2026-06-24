@@ -22,7 +22,8 @@ function makeStatus(state, overrides = {}) {
     generatedAt: "2026-05-26T00:00:00.000Z",
     source: {
       commitHash: "abc123",
-      commitDate: "2026-05-26T00:00:00.000Z"
+      commitDate: "2026-05-26T00:00:00.000Z",
+      commitMessage: "fix: update parser"
     }
   };
 
