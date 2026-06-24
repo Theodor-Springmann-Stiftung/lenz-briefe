@@ -6,7 +6,7 @@ type Props = {
 const { pages } = Astro.props;
 ---
 
-<div class="relative min-h-full" data-page-rail aria-label="Seiten">
+<div class="relative min-h-full" data-page-rail aria-label="Seiten" data-pagefind-ignore>
   {pages.map((page) => (
     <div
       class="absolute left-0 w-full pr-2 text-right data-[positioned=false]:invisible"

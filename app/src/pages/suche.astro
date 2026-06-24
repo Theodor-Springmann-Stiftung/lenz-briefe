@@ -1,0 +1,222 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Suche | Lenz-Briefe" description="Volltextsuche in den Briefen von J.M.R. Lenz.">
+  <section aria-labelledby="suche-title" data-pagefind-ignore>
+    <h1 id="suche-title">Briefe durchsuchen</h1>
+
+    <div>
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Briefe durchsuchen \u2026"
+        autofocus
+      />
+      <select id="year-filter">
+        <option value="">Alle Jahre</option>
+      </select>
+    </div>
+
+    <div id="search-status" hidden></div>
+
+    <div id="results-text"></div>
+    <div id="results-kopf"></div>
+  </section>
+</Layout>
+
+<script is:inline>
+  (async () => {
+    const input = document.getElementById("search-input");
+    const filterSelect = document.getElementById("year-filter");
+    const textEl = document.getElementById("results-text");
+    const kopfEl = document.getElementById("results-kopf");
+    const statusEl = document.getElementById("search-status");
+
+    const pagefind = await import("/pagefind/pagefind.js");
+
+    const filters = await pagefind.filters();
+    if (filters?.year) {
+      const years = Object.keys(filters.year).sort();
+      for (const year of years) {
+        const opt = document.createElement("option");
+        opt.value = year;
+        opt.textContent = `${year} (${filters.year[year]})`;
+        filterSelect.appendChild(opt);
+      }
+    } else {
+      filterSelect.parentElement.removeChild(filterSelect);
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement("div");
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function searchTerms(term) {
+      return term.toLowerCase().split(/\s+/).filter(Boolean);
+    }
+
+    function matchesTerm(value, terms) {
+      const lower = String(value ?? "").toLowerCase();
+      return terms.some((t) => lower.includes(t));
+    }
+
+    function highlightMeta(values, terms) {
+      return values.map((v) => {
+        let text = escapeHtml(v);
+        for (const t of terms) {
+          const re = new RegExp(`(${t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+          text = text.replace(re, '<mark>$1</mark>');
+        }
+        return text;
+      });
+    }
+
+    function metaVal(meta, key) {
+      const v = meta?.[key];
+      if (!v) return null;
+      if (Array.isArray(v)) return v[0];
+      return v;
+    }
+    function metaList(meta, key) {
+      const v = meta?.[key];
+      if (!v) return [];
+      if (Array.isArray(v)) return v;
+      return [v];
+    }
+
+    function renderMetaLine(meta, terms) {
+      const parts = [];
+      const dateVal = metaVal(meta, "date");
+      if (dateVal) {
+        parts.push(`<span>${highlightMeta([dateVal], terms)[0]}</span>`);
+      }
+      const persons = metaList(meta, "person");
+      if (persons.length) {
+        parts.push(`<span>${highlightMeta(persons, terms).join(", ")}</span>`);
+      }
+      const orte = [...new Set(metaList(meta, "ort"))];
+      if (orte.length) {
+        parts.push(`<span>${highlightMeta(orte, terms).join(", ")}</span>`);
+      }
+      const letter = metaVal(meta, "letter");
+      const metaLine = letter
+        ? `<span>Brief ${escapeHtml(letter)}</span>`
+        : "";
+      return { metaLine, metaParts: parts };
+    }
+
+    function renderTextResult(r, terms) {
+      const excerpt = r.excerpt
+        ? r.excerpt.replace(/<mark>/g, '<mark>').replace(/<\/mark>/g, '</mark>')
+        : "";
+      const { metaLine, metaParts } = renderMetaLine(r.meta ?? {}, terms);
+      return `<article>
+        <div>${metaLine}${metaParts.length ? " · " + metaParts.join(" · ") : ""}</div>
+        <a href="${escapeHtml(r.url)}">
+          <p>${excerpt || escapeHtml(r.raw_content?.substring(0, 200) ?? "")}</p>
+        </a>
+      </article>`;
+    }
+
+    function renderKopfResult(r, terms) {
+      const { metaLine, metaParts } = renderMetaLine(r.meta ?? {}, terms);
+      if (!metaParts.length && !metaLine) return "";
+      return `<article>
+        <div>${metaLine}${metaParts.length ? " · " + metaParts.join(" · ") : ""}</div>
+        <a href="${escapeHtml(r.url)}">Brief ${escapeHtml(metaVal(r.meta ?? {}, "letter") ?? "?")} ansehen</a>
+      </article>`;
+    }
+
+    function renderSection(el, heading, results, terms, renderFn) {
+      if (!results.length) {
+        el.innerHTML = "";
+        return;
+      }
+      const count = results.length;
+      el.innerHTML = `<h2>${heading} (${count})</h2>` + results.map((r) => renderFn(r, terms)).join("");
+    }
+
+    function metaHasMatch(meta, terms) {
+      const values = [
+        metaVal(meta, "date"),
+        ...metaList(meta, "person"),
+        ...metaList(meta, "ort"),
+      ].filter(Boolean);
+      return values.some((v) => matchesTerm(v, terms));
+    }
+
+    let pending = null;
+
+    async function doSearch() {
+      const term = input.value.trim();
+      const year = filterSelect.value;
+
+      if (!term) {
+        textEl.innerHTML = "";
+        kopfEl.innerHTML = "";
+        statusEl.hidden = true;
+        return;
+      }
+
+      const token = (pending = Symbol());
+      statusEl.hidden = false;
+      statusEl.textContent = "Suche \u2026";
+
+      try {
+        const hasSpace = term.includes(" ");
+        const alreadyQuoted = term.startsWith('"') && term.endsWith('"');
+        const searchTerm = alreadyQuoted || !hasSpace ? term : `"${term}"`;
+
+        const search = await pagefind.search(searchTerm, {
+          filters: year ? { year } : undefined,
+        });
+
+        const allResults = await Promise.all(search.results.map((r) => r.data()));
+
+        if (token !== pending) return;
+
+        const terms = searchTerms(term);
+
+        const textHits = [];
+        const kopfHits = [];
+
+        for (const r of allResults) {
+          const hasTextMatch = r.excerpt?.includes("<mark>");
+          const hasMetaMatch = metaHasMatch(r.meta ?? {}, terms);
+
+          if (hasTextMatch) textHits.push(r);
+          if (hasMetaMatch) kopfHits.push(r);
+        }
+
+        const total = textHits.length + kopfHits.length;
+
+        statusEl.textContent = total === 1
+          ? "1 Ergebnis"
+          : `${total} Ergebnisse`;
+
+        if (total === 0) {
+          textEl.innerHTML = "";
+          kopfEl.innerHTML = `<p>Keine Ergebnisse f\u00fcr &bdquo;${escapeHtml(term)}&ldquo;.</p>`;
+          return;
+        }
+
+        renderSection(textEl, "Treffer in Brieftexten", textHits, terms, renderTextResult);
+        renderSection(kopfEl, "Treffer in Metadaten", kopfHits, terms, renderKopfResult);
+      } catch (err) {
+        if (token !== pending) return;
+        statusEl.textContent = "Fehler bei der Suche.";
+        console.error(err);
+      }
+    }
+
+    let debounceTimer;
+    input.addEventListener("input", () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(doSearch, 200);
+    });
+    filterSelect.addEventListener("change", doSearch);
+  })();
+</script>

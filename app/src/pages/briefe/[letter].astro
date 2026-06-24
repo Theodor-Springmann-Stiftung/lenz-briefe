@@ -30,6 +30,27 @@ const status = await getGeneratedStatus();
 const isFailure = isGeneratedFailureStatus(status);
 const bundle = isFailure ? null : await getLetterBundle(letter);
 const neighbors = isFailure ? null : await getLetterNeighbors(letter);
+
+let year: string | null = null;
+let dateText = "";
+let personen: string[] = [];
+let orte: string[] = [];
+if (bundle) {
+  const dateStr = bundle.meta.sent.date?.when ?? bundle.meta.received.date?.when ?? "";
+  const match = dateStr.match(/^(\d{4})/);
+  if (match) {
+    year = match[1];
+  }
+  dateText = bundle.meta.sent.date?.text ?? "";
+  personen = [
+    ...(bundle.meta.sent.persons ?? []).map((p: { label?: string }) => p.label).filter(Boolean),
+    ...(bundle.meta.received.persons ?? []).map((p: { label?: string }) => p.label).filter(Boolean),
+  ];
+  orte = [
+    ...(bundle.meta.sent.locations ?? []).map((l: { label?: string }) => l.label).filter(Boolean),
+    ...(bundle.meta.received.locations ?? []).map((l: { label?: string }) => l.label).filter(Boolean),
+  ];
+}
 ---
 
 <Layout
@@ -41,4 +62,17 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
   ) : bundle && neighbors ? (
     <LetterPage bundle={bundle} neighbors={neighbors} />
   ) : null}
+
+  {bundle && (
+    <div slot="meta" hidden data-pagefind-filter="bereich:kopf">
+      <span data-pagefind-meta="letter">{letter}</span>
+      {dateText && <span data-pagefind-meta="date">{dateText}</span>}
+      {personen.map((name) => <span data-pagefind-meta="person">{name}</span>)}
+      {orte.map((ort) => <span data-pagefind-meta="ort">{ort}</span>)}
+    </div>
+  )}
+
+  {bundle && (
+    <span data-pagefind-filter="year" style="display:none">{year ?? ""}</span>
+  )}
 </Layout>

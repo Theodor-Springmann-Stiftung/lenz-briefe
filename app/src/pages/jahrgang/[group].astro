@@ -45,5 +45,7 @@ if (!group) {
       : `Briefe im Zeitraum ${group.label}.`
   }
 >
+  <div data-pagefind-ignore>
   {isFailure ? <FailurePage status={status} /> : <YearGroupPage groups={groups} group={group} />}
+  </div>
 </Layout>

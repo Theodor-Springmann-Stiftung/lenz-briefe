@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
+import pagefind from './src/integrations/pagefind.ts';
 
 // https://astro.build/config
 export default defineConfig({
@@ -77,6 +78,7 @@ export default defineConfig({
     enabled: false,
   },
   output: 'static',
+  integrations: [pagefind()],
   vite: {
     plugins: [tailwindcss()],
   },

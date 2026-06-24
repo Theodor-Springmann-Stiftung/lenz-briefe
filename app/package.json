@@ -6,6 +6,7 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "predev": "test -d dist/pagefind || npm run build",
     "dev": "astro dev",
     "prebuild": "node ./scripts/check-generated.mjs",
     "build": "astro build",
@@ -20,6 +21,7 @@
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
-    "@types/node": "^25.9.1"
+    "@types/node": "^25.9.1",
+    "pagefind": "^1.5.2"
   }
 }

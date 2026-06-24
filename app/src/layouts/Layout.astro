@@ -7,6 +7,7 @@ import Footer from "../components/Footer.astro";
 type Props = {
 	title?: string;
 	description?: string;
+	head?: string;
 };
 
 const {
@@ -28,15 +29,17 @@ const {
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		<title>{title}</title>
+		<slot name="head" />
 	</head>
 	<body>
 		<div class="min-h-screen flex flex-col">
 			<Header />
-			<main class="grow shrink-0">
+			<main class="grow shrink-0" data-pagefind-body data-pagefind-filter="bereich:text">
 				<div class="">
 					<slot />
 				</div>
 			</main>
+			<slot name="meta" />
 			<Footer />
 		</div>
 	</body>

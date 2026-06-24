@@ -22,5 +22,7 @@ const group = groups[0] ?? null;
       : `Briefe im Zeitraum ${group?.label ?? ""}.`
   }
 >
+  <div data-pagefind-ignore>
   {isFailure ? <FailurePage status={status} /> : <HomePage groups={groups} group={group} />}
+  </div>
 </Layout>

@@ -15,7 +15,7 @@ type Props = {
 const { meta, neighbors } = Astro.props;
 ---
 
-<div class="flex flx-row mb-1 border-b border-stone-200">
+<div class="flex flx-row mb-1 border-b border-stone-200" data-pagefind-ignore>
 
 	<div class="flex flex-col grow-1" aria-label="Korrespondenzmetadaten">
 		<div class="italic" aria-label="Datum">{meta.sent.date?.text ?? "Ohne Datierung"}</div>

@@ -1,3 +1,10 @@
+---
+const pathname = Astro.url.pathname;
+const isBriefe = pathname.startsWith("/briefe/");
+const isHome = pathname === "/" || pathname.startsWith("/jahrgang/");
+const isSuche = pathname.startsWith("/suche/");
+---
+
 <header class="grow-0 shrink-0 flex flex-row justify-between px-4 py-2">
 	<a class="" href="/" aria-label="Startseite der Kritischen Briefausgabe">
 		<span class="" aria-hidden="true"></span>
@@ -5,6 +12,8 @@
 	</a>
 
 	<nav aria-label="Hauptnavigation" class="">
-		<a class="" href="/">Jahrgänge</a>
+		<a class={isHome ? "active" : ""} href="/">Briefauswahl</a>
+		<a class={isBriefe ? "active" : ""} href={isBriefe ? pathname : "/briefe/1/"}>Briefansicht</a>
+		<a class={isSuche ? "active" : ""} href="/suche/">Volltextsuche</a>
 	</nav>
 </header>
