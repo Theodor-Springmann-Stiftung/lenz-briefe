@@ -5619,20 +5619,21 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 </letterText> 
 
 <letterText letter="323"><page index="1"/>
-<line tab="1"/>Kraft dieser meiner Obligation bescheinige ich Endesunterschriebener, daß ich von Herrn George Behrens in Riga die Summe von 100 Rbl. sage Ein hundert Rubel Silbermünze zum nothwendigen Gebrauch als ein Darlehn empfangen und solche <aq>a dato</aq> innerhalb sechs Monathen, nebst den gehörigen Zinsen <aq>a 6 pro Cento</aq> dankbarlichst wiederzubezahlen mich anheischig mache Dörpat, den 18ten Jenner 1780.
+<line tab="1"/>Kraft dieser meiner Obligation bescheinige ich Endesunterschriebener, daß ich von Herrn George Behrens in Riga die Summe von 100 Rbl. sage Ein hundert Rubel Silbermünze zum nothwendigen Gebrauch als ein Darlehn empfangen und solche <aq>a dato</aq> innerhalb sechs Monathen, nebst den gehörigen Zinsen <aq>a 6 pro Cento</aq> dankbarlichst wiederzubezahlen mich anheischig mache 
+<line type="break" />Dörpat, den 18ten Jenner 1780.
 <line type="empty"/>
 <line type="empty" />
 <line type="break" /><align pos="right">Jakob Michael Reinhold Lenz</align>
 <line type="break"/><align pos="right">der mathematischen und schönen Wissenschaften Beflissener.</align>
 <line type="empty" />
 <line type="break" /><hand ref="62"><align pos="right">Ich bin zufrieden mit den 100 Rubeln ohne Intereße</align>
-	<line type="break"/><align pos="right">G Berens</align></hand>
+	<line type="break"/><align pos="right"><aq>G Berens</aq></align></hand>
 <line type="empty"/>
 <line type="empty" />
 <line type="break" />gut für hundert Rubel
 <line type="empty"/>
-<line tab="1"/><hand ref="4">Den 13. April 1781. habe ich diese 100 Rbl. schreibe hundert Rubel dem Herrn Berends bezahlt und ihm das Geld durch den jungen Ministerial Ehrenstreit zugesandt.
-<line type="break"/>C. D. Lenz Sen:</hand>
+<line tab="1"/><hand ref="4">Den 13. April 1781. habe ich diese 100 Rbl: schreibe hundert Rubel dem Herrn Berends bezalt und ihm das Geld durch den jungen Ministerial Ehrenstreit zugesandt.
+<line type="break"/><aq>C. D. Lenz Sen:</aq></hand>
 </letterText> 
 
 <letterText letter="324"><page index="1"/><align pos="right">Jamburg d. 30sten Jenner 80</align>
