@@ -5667,24 +5667,26 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 <line type="empty"/>
 <line tab="1"/>Schon lange hätte Ihnen mit glühender Freundschaft für alle die Proben Ihrer unschätzbaren Güte für mich gedankt, wenn die gewöhnlichen Zerstreuungen von Petersburg und die noch hinzukommenden Sorgen meines Gesuchs mich nicht abgehalten. Gewiß, mein würdiger Gönner! es ist wahr was die Naturkündiger behaupten, daß sich in der ganzen Natur nur die ähnlichen Wesen vereinigen, und daß dieses Gesetz die Freundschaften ebensowohl schließt als die Verbindungen der Blutsfreundschaft. Ihre ganze Familie besteht aus Leuten wie Sie sind, das heißt Leuten, die die völligste Ehrerbietung unsers Herzens verdienen.
 <page index="2"/>
-<line tab="1"/>Ich bedaure daß ich Ihnen noch nichts näheres von meiner Bestimmung schreiben kann, theils weil die Zeit zu kurz ist, theils weil ich noch weit vom Ziel bin. Indessen ist Hofnung da, es zu erreichen, wenn die Vorsicht die alle Herzen lenken muß – und wird – zu meinen Wünschen und Bemühungen Ja spricht.
+<line tab="1"/>Ich bedaure daß ich Ihnen noch nichts näheres von meiner Bestimmung schreiben kann, theils weil die Zeit zu kurz ist, theils weil ich noch weit vom Ziel bin. Indessen ist Hofnung da, es <subst><del><nr></nr></del><insertion>z</insertion></subst>u erreichen, wenn die Vorsicht die alle Herzen lenken muß – und wird – zu meinen Wünschen und Bemühungen Ja spricht.
 <line tab="1"/>Seyn Sie unterdessen so gütig und übersenden mir unter dem Couvert des Herrn Schwagers eine nunmehr ausführliche Note von dem was Ihnen schuldig bin. Herr Brauer wird Ihnen gemeldet haben, daß die Schleiffen hier nicht für dismal gebraucht
 <page index="3"/>werden konnten, so wenig als die Knöpfe, weil sie von anderer Couleur als die Weste waren. Doch könnt es vielleicht seyn daß wenn Sie sie sonst nicht besser los werden, ich sie Ihnen künftig zu einem Wrak abnehmen kann. Wie besagt, die letzte Note von den Schnupftüchern, Hut u. s. f. nebst dem Zeuge zum Kleide und Futter habe noch zu erwarten.
-<sidenote pos="left" page="2" annotation="am linken Rand der zweiten Seite, vertikal">Darf ich so frey seyn ein kleines Briefgen beyzuschliessen, das ich auf keine andre Art nach Derpt zu bringen weiß.</sidenote>
-<line tab="1"/>Der Frau Gemalinn bitte zu sagen, daß man sie stündlich auf den Sommer hier erwartet –
+<sidenote pos="left" page="2" annotation="am linken Rand der zweiten Seite, vertikal">Darf ich so frey seyn ein kleines Briefgen beyzuschliessen, das ich auf keine andre Art nach Derpt zu bringen weiß.
+<line tab="1"/>Der Frau Gemalinn bitte zu sagen, daß man sie stüntlich auf den Sommer hier erwartet –</sidenote>
 <line tab="1"/>Von meinen Umständen wird Ihnen der Herr Schwager nächstens und vielleicht gute Neuigkeiten schreiben. Ich höre der Herr Sohn sollen mit General Berg herüber kommen. Das wäre mir eine angenehme Neuigkeit die vielleicht selbst auf mich Einfluß haben könnte, wenn bis dahin nicht schon alles richtig ist. Empfehlen Sie mich Ihrer fürtreflichen Gemahlinn und samtlichen Angehörigen und behalten im freundschaftlichstgütigen Andenken
 <line type="empty" />
 <line type="break" /><align pos="right">Ihren</align>
 <line type="break"/><align pos="right">ganzergebensten Diener</align>
 <line type="break"/><align pos="right">J M R Lenz.</align>
 <line type="empty"/>
-<sidenote pos="left" page="3" annotation="am linken Rand der dritten Seite, vertikal">Herr Aelster Schow wird nun wohl retunirt sein. Es war unvorsichtig vom Derptschen Magistrat mit dem Gouvernement zu hadern, da die Sache der Statthalterschaften noch seit Beginnung der Welt in Rußland auf keinem bessern Fuß gestanden. Sehr unvorsichtig!</sidenote>
+<sidenote pos="left" page="3" annotation="am linken Rand der dritten Seite, vertikal">Herr Aelster Schow wird nun wohl returnirt sein. Es war unvorsichtig vom Derptschen Magistrat mit dem Gouvernement zu hadern, da die Sache der Statthalterschaften noch seit Beginnung der Welt in Rußland auf keinem bessern Fuß gestanden. Sehr unvorsichtig!</sidenote>
 <page index="4"/>
 <line type="empty"/>
-<line type="break"/><hand ref="87"><address><aq>A Monsieur
+<align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
+<line type="empty"/>
+<line type="break"/><address><aq>A Monsieur
 <line type="break"/>Monsieur Peuker
 <line type="break"/>Translateur du College des Affaires Etrangers – Maitre des Postes.
-<line type="break"/><ul>Dorpat</ul></aq></address></hand>
+<line type="break"/><ul>Dorpat</ul></aq></address>
 </letterText> 
 
 <letterText letter="326"><page index="1"/><align pos="right">St. Petersb. d. 27sten Merz</align>
