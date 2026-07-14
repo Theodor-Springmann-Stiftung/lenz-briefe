@@ -6709,10 +6709,12 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 <line type="break"/><align pos="right">allezeitergebenster</align>
 <line type="break"/><align pos="right">Diener JMRLenz</align>
 <line type="empty" />
-<line type="break" /><address> <aq><ru>въ двopБ Никитa Пaвлoвa 
-    <line type="break" /> Гocпoдину θиpнгaбepъ 
-    <line type="break" />у Гocпoдинa Бибepa 
-    <line type="break" /> дa peмaнъ</ru></aq></address>
+<line type="empty"/>
+<line type="empty"/>
+<line type="break" /><address> <ru>въ дворѣ Никиты Павлова
+    <line type="break" />Господину Θирнгаберъ
+    <line type="break" />у Господина Бибера
+    <line type="break" />да реманъ</ru></address>
 <line type="empty" />
 <line type="break" /><align pos="center"><note>auf den Seiten 2 und 3 befindet sich eine Sprachenklaviatur, vgl. die Abb. in Moskauer Schriften, Bd. 1, S. 527f.</note></align>
 <page index="4"/>
@@ -6727,8 +6729,8 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 <line tab="5"/>Bei dem fremde Sprachenlesen
 <line tab="5"/>Von dem reinsten aller Wesen
 <line tab="5"/>Eingesetzt zum Frauen Thee
-<line tab="5"/>Pharisäer Sadducäer (die Theologen und Juristen der alten Juden)
-<line tab="5"/>Pfarrensäer Seide dreher
+<line tab="5"/>Pharisäer Sadducäer <insertion pos="right">(die Theologen und Juristen der alten Juden)</insertion>
+<line tab="5"/>Pfarrensäer Seidedreher
 <line tab="5"/>Brauten auch mit dir Caffée!
 <line type="empty"/>
 <line tab="5"/>Laß die Wortverdreher rathen
@@ -6767,7 +6769,7 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 <line tab="5"/>Wie ein junger Bräutigam
 <line tab="5"/>Unser Herr Gott muß am Schopfe
 <line tab="5"/>Denn sie fassen und beym Kopfe
-<line tab="5"/>Zu dem Isch und Ischa fiihren
+<line tab="5"/>Zu dem Isch und Ischa führen
 <line tab="5"/>Daß sie nennen, was er ist
 <line tab="5"/>Heyde Tartar oder Christ.
 <line type="empty"/>
@@ -6790,7 +6792,7 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 <line tab="5"/>Bringet ihr ein Schärfgen Witz
 <line tab="5"/>So gebietet nicht zu fasten
 <line tab="5"/>Das Verbot ist gar zu spitz
-<line tab="5"/>Schadewitz und <aq>ma.lle</aq> Witz
+<line tab="5"/>Schadewitz und <aq>malle</aq> Witz
 <line tab="5"/>Sind zwei Dinge lieber Fritz
 <line tab="5"/>Die Versucher und Sophisten
 <line tab="5"/>Die mit Sokrates und Christen
@@ -6804,7 +6806,7 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 <line tab="5"/>Leib und Seele wird zum Geist.</insertion>
 <line tab="5"/>Witz ist wie ein scharfes Messer
 <line tab="5"/>Ey je schärfer desto besser
-<line tab="5"/>Doch der Teuffel hattauch Witz
+<line tab="5"/>Doch der Teuffel hatt auch Witz
 <line tab="5"/>Hätt’ er können Brod aus Steinen
 <line tab="5"/>Machen, würde der nicht weinen
 <line tab="5"/>Den er ohne Noth versucht
@@ -6823,10 +6825,10 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 <line tab="5"/>Daß ein Haus drey Häuser wär.
 <line tab="5"/>Denn man mag den Kopf verbinden
 <line tab="5"/>Wie man will den Fuß zu schinden
-<line tab="5"/>Ist damm nicht angenehm
+<line tab="5"/>Ist darum nicht angenehm
 <line tab="5"/>Buchstabieren und klawieren
 <line tab="5"/>Fällt im Alter nicht bequem
-<line tab="5"/>Und ein Wortanatomiren
+<line tab="5"/>Und ein Wort anatomiren
 <line tab="5"/>Appliziren dividiren
 <line tab="5"/>Erst vertiren, dann halbiren
 <line tab="5"/><insertion pos="right">Macht den Salamanda frieren
@@ -6840,7 +6842,7 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 <line tab="5"/>Nicht verstehn ist aber dumm –
 <line tab="5"/>Laßts so gut seyn – nur verdrehen
 <line tab="5"/>Das ist Antimonium.
-<line tab="5"/>Luthrisch Kaifisch und Catholisch
+<line tab="5"/>Luthrisch Kalfisch und Catholisch
 <line tab="5"/>Paulisch Kephisch Apostolisch
 <line tab="5"/>Seyd nur bieder gut und rein
 <line tab="5"/>Laßt den Rheinfall immer fallen
@@ -6851,12 +6853,12 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 <line tab="5"/>Ohne Arglist, Freundschaftschein
 <line tab="5"/>Als gewönnet ihr, falsch zu seyn.
 <line tab="5"/>Seyd die vier Evangelisten
-<line tab="5"/>Liebe Frauen! küßt mich nichtLaßts
-<line tab="5"/>so gut seyn – Wenn sie küßten!
+<line tab="5"/>Liebe Frauen! küßt mich nicht –
+<line tab="5"/>Laßts so gut seyn – Wenn sie küßten!
 <line tab="5"/>– Ich hab Schwären im Gesicht –
 <line tab="5"/>Horchet Judas nicht ihr Frälen
 <line tab="5"/>Laßt den armen Jonas seyn
-<line tab="5"/>Den spricht ☓ ☓ kann nicht vermählen
+<line tab="5"/>Den spricht x x kann nicht vermählen
 <line tab="5"/>Das kann Sündfluth Witz allein.
 </letterText> 
 
