@@ -126,7 +126,7 @@
 
 		<letterTradition letter="20">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 33.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 33. Roter Siegelrest.
 			</app>
 		</letterTradition>
 
@@ -593,7 +593,7 @@
 
 		<letterTradition letter="91">
 			<app ref="4">
-				Düsseldorf, Goethe-Museum, NW 992/1967. Textverlust durch Ausriss.
+				Düsseldorf, Goethe-Museum, NW 992/1967. Textverlust durch Ausriss. Roter Siegelrest.
 			</app>
 		</letterTradition>
 
@@ -822,7 +822,7 @@
 
 		<letterTradition letter="128">
 			<app ref="4">
-				Weimar, Goethe- und Schiller-Archiv, GSA 44/69, Bl. 12–13.
+				Weimar, Goethe- und Schiller-Archiv, GSA 44/69, Bl. 12–13. Roter Siegelrest.
 			</app>
 		</letterTradition>
 
@@ -1018,7 +1018,7 @@
 
 		<letterTradition letter="156">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 5. Textverlust durch Ausschnitt. Handschriftlicher Vermerk auf dem Umschlag „fr.“. 
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 5. Textverlust durch Ausschnitt. Handschriftlicher Vermerk auf dem Umschlag „fr.“; rotes Siegel. 
 			</app>
 		</letterTradition>
 
@@ -1030,7 +1030,7 @@
 
 		<letterTradition letter="158">
 			<app ref="4">
-				Zürich, Zentralbibliothek, RP 20, Nr. 12. Textverlust durch Ausriss.
+				Zürich, Zentralbibliothek, RP 20, Nr. 12. Textverlust durch Ausriss. Roter Siegelrest.
 			</app>
 		</letterTradition>
 
@@ -1456,7 +1456,7 @@
 				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 23; Entwurf. Briefentwurf am Ende der ersten Seite; andere Aufzeichnungen vgl. Schriften zur Sozialreform, Bd. 1, S. 394f.
 			</app>
 			<app ref="11">
-				<line tab="1"/>Darf ich, gnädige Frau, Sie zu bitten wagen, die Fortsetzung des Teutschen Merkur entgegenzunehmen, mit tiefstem Respekt und der ausgezeichneten Hochachtung des Autors, Herrn Wieland.
+				<line tab="1"/>[Briefentwurf am Ende der ersten Seite:] Darf ich, gnädige Frau, Sie zu bitten wagen, die Fortsetzung des Teutschen Merkur entgegenzunehmen, mit tiefstem Respekt und der ausgezeichneten Hochachtung des Autors, Herrn Wieland.
 				<line tab="1"/>Sollte ich mit Ihrer Erlaubnis, was ich anzweifle, die Kopie einer gewissen Silhouette erhalten haben, so kann ich nicht um Verzeihung bitten für mein Schweigen, das nur ein Ausdruck von Dankbarkeit ist, die, wie die Sache, die es hervorrief, über das Sprechen wohl erhaben ist. Kaum etwas kostet mich mehr Mühe, als einen Brief an Sie zu verfassen; mag Ihnen das Geständnis auch harmlos erscheinen, so ist es doch wohl überlegt, bedenkt man die Gefahr, in die ich mich begebe, Sie vielleicht zu kränken. 
 			</app>
 		</letterTradition>
@@ -2064,13 +2064,13 @@
 
 		<letterTradition letter="274">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 17.
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 17. Rotes Siegel; handschriftliche Vermerke „v Emmendingen“, „frc. Ffurth“, „12“, „4 gl(?)“.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="275">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, .Ms 1113, F. 25, V. 32, Nr. 38.
+				Riga, Latvijas Akadēmiskā Bibliotekā, .Ms 1113, F. 25, V. 32, Nr. 38. Textverlust durch Ausriss. Handschriftliche Vermerke „Francko“ und „4“; rotes Siegel.
 			</app>
 		</letterTradition>
 
@@ -2097,19 +2097,19 @@
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 31a; Zuschreibung und
 				Datierung des
 				Zettels unsicher.
-				Hand.
+
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="280">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Lenziana 2, Nr. 10f.
+				Kraków, Biblioteka Jagiellońska, Lenziana 2, Nr. 10f; „Dr. Dumpfs Hand“.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="281">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 18.
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 18. Rotes Siegel; handschriftliche Vermerke „franco Francfort“, „4 gl“, „14“.
 			</app>
 		</letterTradition>
 
@@ -2133,7 +2133,7 @@
 
 		<letterTradition letter="285">
 			<app ref="4">
-				Zentralbibliothek Zürich, FA Lav Ms 526, Nr. 4.
+				Zentralbibliothek Zürich, FA Lav Ms 526, Nr. 4. Schwarzes Siegel, handschriftlicher Vermerk „3“, ein weiterer unentziffert.
 			</app>
 		</letterTradition>
 
@@ -2151,31 +2151,33 @@
 
 		<letterTradition letter="288">
 			<app ref="4">
-				Zürich, Zentralbibliothek, RP 20, Nr. 1.
+				Zürich, Zentralbibliothek, RP 20, Nr. 1. Beigelegte Briefe von Christian David Lenz und Christoph Kaufmann nicht ermittelt.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="289">
 			<app ref="4">
-				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 4.
+				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 4. Brief, den Lenz v. Hohenthal mitgibt, nicht ermittelt.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="290">
 			<app ref="4">
-				Zürich, Zentralbibliothek, Ms. M 1.183, Nr. 3.
+				Zürich, Zentralbibliothek, Ms. M 1.183, Nr. 3. Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="291">
 			<app ref="4">
-				Zürich, Zentralbibliothek, Ms. M 1.183, Nr. 4. Einlage nicht ermittelt.
+				Zürich, Zentralbibliothek, Ms. M 1.183, Nr. 4. Bei der Einlage handelt es sich um den Brief aus Neuenburg, 10. Juli 1777,
+von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="292">
 			<app ref="4">
-				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 5.
+				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 5. Roter Siegelrest. Der Brief ist eingeschlagen in den Brief von Lenz aus Neuenburg an Johann Heinrich Füssli nach Zürich vom 10. Juli 1777.
+
 			</app>
 		</letterTradition>
 
@@ -2199,7 +2201,7 @@
 
 		<letterTradition letter="296">
 			<app ref="4">
-				Schmidt, Lenziana, S. 1017; FSt, S. 98, hat andere Lesarten; Entwurf.
+				Schmidt, Lenziana, S. 1017; FSt II, S. 98, hat andere Lesarten; Entwurf. Beilage nicht ermittelt.
 			</app>
 		</letterTradition>
 
@@ -2219,13 +2221,13 @@
 			<app ref="4">
 				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 9; auf dem gleichen Bogen wie: Basel,
 				Staatsarchiv, PA
-				212 F 11, 27, 10, Nr. 10 (Brief gleichen Datums an Jacob Sarasin).
+				212 F 11, 27, 10, Nr. 10 (Brief gleichen Datums an Jacob Sarasin). Beigelegte Silhouette nicht ermittelt.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="300">
 			<app ref="4">
-				Basel, Staatsarchiv, PA 98, 37, S. 221–224.
+				Basel, Staatsarchiv, PA 98, 37, S. 221–224. Dem Brief an Sarasin, Zürich, 28. September 1777, beigelegt.
 			</app>
 		</letterTradition>
 
@@ -2233,7 +2235,7 @@
 			<app ref="4">
 				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 10; auf dem gleichen Bogen wie: Basel,
 				Staatsarchiv, PA
-				212 F 11, 27, 10, Nr. 9 (Brief gleichen Datums an Gertrud Sarasin).
+				212 F 11, 27, 10, Nr. 9 (Brief gleichen Datums an Gertrud Sarasin). Beigefügtes Päckchen an Schlosser nicht ermittelt. Bei dem beigelegten Brief an Iselin handelt es sich um den von Zürich, 28. September 1777.
 			</app>
 		</letterTradition>
 
@@ -2245,7 +2247,7 @@
 
 		<letterTradition letter="303">
 			<app ref="4">
-				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 11.
+				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 11. Beigelegte Silhouetten nicht ermittelt.
 			</app>
 		</letterTradition>
 
@@ -2257,13 +2259,13 @@
 
 		<letterTradition letter="305">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 53.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 53. Rotes Siegel.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="306">
 			<app ref="4">
-				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 13.
+				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 13. Einlage an Lerse nicht ermittelt.
 			</app>
 		</letterTradition>
 
@@ -2302,7 +2304,7 @@
 				Kraków, Biblioteka Jagiellońska, Krakau, Lenziana 5, Nr. 35 (Abschrift; „Copia eines Briefes
 				des
 				Herrn Hofrath Schloßers aus Emmendingen an den Probst Lenz de dato den 9 Märtz. N. St.
-				1778.“).
+				1778.“). Auf dem Manuskript Briefentwurf von Christian David Lenz an Friedrich David Lenz.
 			</app>
 		</letterTradition>
 
@@ -2314,13 +2316,13 @@
 
 		<letterTradition letter="314">
 			<app ref="4">
-				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 16.
+				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 16. Roter Siegelrest.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="315">
 			<app ref="4">
-				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 17.
+				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 17. Beigelegter Brief an Conrad Süß nicht ermittelt.
 			</app>
 		</letterTradition>
 
