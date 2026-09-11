@@ -33,6 +33,7 @@ const neighbors = isFailure ? null : await getLetterNeighbors(letter);
 
 let year: string | null = null;
 let dateText = "";
+let chronoKey = letter.padStart(4, "0");
 let personen: string[] = [];
 let orte: string[] = [];
 if (bundle) {
@@ -40,6 +41,9 @@ if (bundle) {
   const match = dateStr.match(/^(\d{4})/);
   if (match) {
     year = match[1];
+  }
+  if (dateStr) {
+    chronoKey = dateStr;
   }
   dateText = bundle.meta.sent.date?.text ?? "";
   personen = [
@@ -74,5 +78,9 @@ if (bundle) {
 
   {bundle && (
     <span data-pagefind-filter="year" style="display:none">{year ?? ""}</span>
+  )}
+
+  {bundle && (
+    <span data-pagefind-sort="chrono" style="display:none">{chronoKey}</span>
   )}
 </Layout>

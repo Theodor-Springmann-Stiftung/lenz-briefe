@@ -108,16 +108,35 @@ import Layout from "../layouts/Layout.astro";
       return { metaLine, metaParts: parts };
     }
 
+    function cleanExcerpt(text) {
+      return text
+        .replace(/<mark>/g, '<mark>')
+        .replace(/<\/mark>/g, '</mark>')
+        .replace(/^Brief \d+( \| Lenz-Briefe)?\s*[·•]?\s*/, '');
+    }
+
     function renderTextResult(r, terms) {
-      const excerpt = r.excerpt
-        ? r.excerpt.replace(/<mark>/g, '<mark>').replace(/<\/mark>/g, '</mark>')
-        : "";
       const { metaLine, metaParts } = renderMetaLine(r.meta ?? {}, terms);
+
+      const excerpts = [];
+      if (r.sub_results?.length) {
+        for (const sub of r.sub_results) {
+          const ex = cleanExcerpt(sub.excerpt ?? "");
+          const title = sub.title ? `<span>${escapeHtml(sub.title)}</span> · ` : "";
+          excerpts.push(`${title}<a href="${escapeHtml(sub.url)}"><p>${ex}</p></a>`);
+        }
+      } else {
+        const ex = cleanExcerpt(r.excerpt ?? "");
+        if (ex) {
+          excerpts.push(`<a href="${escapeHtml(r.url)}"><p>${ex}</p></a>`);
+        }
+      }
+
+      const itemsHtml = excerpts.map((e) => `<div>${e}</div>`).join("");
+
       return `<article>
         <div>${metaLine}${metaParts.length ? " · " + metaParts.join(" · ") : ""}</div>
-        <a href="${escapeHtml(r.url)}">
-          <p>${excerpt || escapeHtml(r.raw_content?.substring(0, 200) ?? "")}</p>
-        </a>
+        ${itemsHtml}
       </article>`;
     }
 
@@ -172,6 +191,7 @@ import Layout from "../layouts/Layout.astro";
 
         const search = await pagefind.search(searchTerm, {
           filters: year ? { year } : undefined,
+          sort: { chrono: "asc" },
         });
 
         const allResults = await Promise.all(search.results.map((r) => r.data()));

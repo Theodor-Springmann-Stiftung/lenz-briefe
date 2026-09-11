@@ -196,29 +196,31 @@ test("page markers stay inline instead of creating synthetic line blocks", async
   const inlineCarryBundle = await getLetterBundle("20");
   const nextBlockCarryBundle = await getLetterBundle("42");
 
+  const stripH6 = (html: string) => html.replace(/<h6[^>]*><\/h6>/g, "");
+
   assert.match(
-    lineStartBundle.textHtml,
-    /<div class="lb-line-block" data-type="break" data-tab="1"><span class="page-anchor" id="page-1">.*?<\/span><span class="lb-page" data-index="1"><\/span>Ulm/s
+    stripH6(lineStartBundle.textHtml),
+    /<div class="lb-line-block" data-type="break" data-tab="1">\s*<span class="page-anchor" id="page-1">.*?<\/span><span class="lb-page" data-index="1"><\/span>Ulm/s
   );
   assert.match(
-    lineStartBundle.textHtml,
+    stripH6(lineStartBundle.textHtml),
     /<span class="page-anchor" id="page-4" data-inline-break="true"> \| <\/span><span class="lb-page" data-index="4"><\/span>gedanckt/s
   );
   assert.match(
-    inlineCarryBundle.textHtml,
-    /<span class="aq">Corres-<\/span> <span class="page-anchor" id="page-3" data-inline-break="true"> \| <\/span><span class="lb-page" data-index="3"><\/span><span class="aq">pondence<\/span>/s
+    stripH6(inlineCarryBundle.textHtml),
+    /<span class="aq">Corres-<\/span>\s+<span class="page-anchor" id="page-3" data-inline-break="true"> \| <\/span><span class="lb-page" data-index="3"><\/span><span class="aq">pondence<\/span>/s
   );
   assert.match(
-    inlineCarryBundle.textHtml,
-    /data-type="empty"><\/div>\s*<div class="lb-line-block" data-type="break" data-layout="aligned">\s*<div class="align-left"><span class="page-anchor" id="page-4">.*?<\/span><span class="lb-page" data-index="4"><\/span><\/div>\s*<div class="align-center"><span class="note">Außenseite des zum Umschlag gefalteten Bogens, roter Siegelrest:<\/span><\/div>/s
+    stripH6(inlineCarryBundle.textHtml),
+    /data-type="empty"><\/div>\s*<div class="lb-line-block" data-type="break" data-layout="aligned">\s*<div class="align-left">\s*<span class="page-anchor" id="page-4">.*?<\/span><span class="lb-page" data-index="4"><\/span><\/div>\s*<div class="align-center"><span class="note">Außenseite des zum Umschlag gefalteten Bogens, roter Siegelrest:<\/span><\/div>/s
   );
   assert.match(
-    nextBlockCarryBundle.textHtml,
-    /Wie stehts um d\. Fenster die ich eingeschmissen\s*<\/div>\s*<div class="lb-line-block lb-line-block--empty" data-type="empty"><\/div>\s*<div class="lb-line-block" data-type="break" data-tab="6"><span class="page-anchor" id="page-3">.*?<\/span><span class="lb-page" data-index="3"><\/span>\s*Merk\./s
+    stripH6(nextBlockCarryBundle.textHtml),
+    /Wie stehts um d\. Fenster die ich eingeschmissen\s*<\/div>\s*<div class="lb-line-block lb-line-block--empty" data-type="empty"><\/div>\s*<div class="lb-line-block" data-type="break" data-tab="6">\s*<span class="page-anchor" id="page-3">.*?<\/span><span class="lb-page" data-index="3"><\/span>\s*Merk\./s
   );
   assert.match(
-    nextBlockCarryBundle.textHtml,
-    /<\/div>\s*<div class="lb-line-block" data-type="break" data-tab="1"><span class="page-anchor" id="page-4">.*?<\/span><span class="lb-page" data-index="4"><\/span>\s*Wie sehr wünscht/s
+    stripH6(nextBlockCarryBundle.textHtml),
+    /<\/div>\s*<div class="lb-line-block" data-type="break" data-tab="1">\s*<span class="page-anchor" id="page-4">.*?<\/span><span class="lb-page" data-index="4"><\/span>\s*Wie sehr wünscht/s
   );
 });
 
