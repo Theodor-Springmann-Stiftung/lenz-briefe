@@ -5,6 +5,8 @@ import pagefind from './src/integrations/pagefind.ts';
 
 // https://astro.build/config
 export default defineConfig({
+  // Preserve HTML-aware spacing between inline elements after the Astro 7 upgrade.
+  compressHTML: true,
   fonts: [
     {
       provider: fontProviders.local(),
