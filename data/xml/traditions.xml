@@ -352,8 +352,8 @@
 				geglaubt, dass Dir das Kummer bereiten könnte, ich habe es Dir auch nur mitgeteilt, um zu ergründen, 
 				wie Du zu diesen Dingen stehst, um in Zukunft etwas Vernünftigeres darüber sagen zu können. Das sind 
 				meine Absichten, ich habe alles getan, um es zu unterdrücken und kann Dir im Voraus versichern, 
-				dass es niemals das Licht der Welt erblicken wird. Wir werden noch darüber sprechen.<line type="break"/>
-				<align pos="right">Le.</align><line type="empty"/>
+				dass es niemals das Licht der Welt erblicken wird. Wir werden noch darüber sprechen.<line />
+				<align pos="right">Le.</align><vspace lines="1"/>
 				
 				Vielen Dank für die Mühe, die Sie sich mit den Lindaviana gegeben haben</app>
 		</letterTradition>
@@ -1206,7 +1206,7 @@
 			</app>.
 			<app ref="11">
 				<!-- Wird die Datierung des Briefs in der Übersetzung ausgelassen oder fehlt diese im Dokument? -->
-				<align pos="center">Mein Herr und lieber Freund.</align> <line type="empty"/>
+				<align pos="center">Mein Herr und lieber Freund.</align> <vspace lines="1"/>
 				
 				<line tab="1"/>Da die Nachricht von Ihrer plötzlichen Abreise aus Straßburg mir sehr großen Kummer bereitet 
 				hatte, hörte ich mit größtem Interesse die Neuigkeiten von Ihnen; mein Freund hat mir recht 
@@ -1214,7 +1214,7 @@
 				befinden sich unter den Augen und dem Schutz eines Fürsten, der Talente zu schätzen weiß 
 				und der ein bedeutender Mann wäre, auch wenn er kein Fürst wäre. Ich vergleiche die Vorstellung, 
 				die ich mir von seinem Hof mache, mit meiner tristen Bleibe. Talente brauchen eine Bühne und 
-				ich befinde mich in einer Wüste inmitten meiner lieben Mitbürger.<line type="break"/>
+				ich befinde mich in einer Wüste inmitten meiner lieben Mitbürger.<line />
 				Meiner kleinen Eigenliebe, mein lieber Freund, schmeichelt Ihre angenehme Art, sich an mich zu 
 				erinnern zu sehr, weswegen ich Ihrer Bitte sofort nachkomme; ich beauftrage meinen Freund, Ihnen 
 				mein Werk zu schicken; in vielerlei Hinsicht ist es das Ihrige, ich verdanke Ihnen Lektionen, ich 
@@ -1244,7 +1244,7 @@
 				
 				Ich verbleibe mit treuer und unerschütterlicher Verbundenheit, mein Herr und lieber Freund,
 				
-				<align pos="right">Ihr untertäniger und gehorsamer Diener.<line type="break"/>
+				<align pos="right">Ihr untertäniger und gehorsamer Diener.<line />
 				Ramond</align></app>
 		</letterTradition>
 
@@ -1442,12 +1442,12 @@
 				unterjochen.
 				<line tab="1"/>Erweisen Sie Frau von Oberkirch, falls sie es gestattet und sich zu meinem Glück 
 				noch meines Namens erinnert, meine untertänigste Hochachtung. Ich bitte Sie außerdem, 
-				Ihre Frau Mutter und Ihr Fräulein Schwester nicht zu vergessen.<line type="break"/>
+				Ihre Frau Mutter und Ihr Fräulein Schwester nicht zu vergessen.<line />
 				Ich bitte Sie nochmals, mir mitzuteilen, ob irgendein neues Buch oder eine andere Neuigkeit 
 				vielleicht die Neugier von Frau von Oberkirch weckt. Nachrichten von Ihrer Cousine wüsste 
 				ich gerade keine, außer, dass sie mit der regierenden Herzogin in ihr Landhaus nach 
 				Belvedere gefahren ist; der Herzog ist in Ilmenau; wo ich ihn bald zu sehen hoffe, 
-				nachdem ich noch einige Wochen die süße Einsamkeit genieße.<line type="break"/>
+				nachdem ich noch einige Wochen die süße Einsamkeit genieße.<line />
 				<align pos="right">Lenz</align></app>
 		</letterTradition>
 
@@ -1500,11 +1500,11 @@
 				ich Sie eines Tages wiedersehen, wenn nicht in dieser Welt, so doch in einer 
 				anderen. Seien Sie immer ebenso glücklich darüber, dass Sie von mir angebetet 
 				werden und glauben Sie ja nicht, dass man unglücklich sein könnte, wenn man 
-				solche Gefühle für Sie hegt.<line type="break"/>
+				solche Gefühle für Sie hegt.<line />
 				<align pos="right">Lenz</align>
-				<line type="break"/>An Ihrem Namenstag, dem 15. Juli 1776.
-				<line type="empty"/>
-				<line type="break"/>Ich hoffe wiederzukommen</app>
+				<line />An Ihrem Namenstag, dem 15. Juli 1776.
+				<vspace lines="1"/>
+				<line />Ich hoffe wiederzukommen</app>
 		</letterTradition>
 
 		<letterTradition letter="213">
@@ -2056,8 +2056,8 @@
 				<line tab="1"/>Ich verbleibe in aufrichtiger und größter Zuneigung, 
 				mein Herr und lieber Freund,
 				
-				Ihr Ihnen treu ergebener Diener<line type="break"/>
-				Ramond<line type="break"/>
+				Ihr Ihnen treu ergebener Diener<line />
+				Ramond<line />
 				
 				Anwalt am Conseil.</app>
 		</letterTradition>
@@ -2607,8 +2607,8 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 				Berlin, Staatsbibliothek zu Berlin – Preußischer Kulturbesitz, NL Lenz, Bd. 2, (Nr. 235), Bl. 62–63.
 			</app>
 			<app ref="11">
-				<align pos="center">Mein Wohltäter!</align> <line type="empty"/><!-- Hier nicht zentriert? -->
-				<line type="empty"/>
+				<align pos="center">Mein Wohltäter!</align> <vspace lines="1"/><!-- Hier nicht zentriert? -->
+				<vspace lines="1"/>
 				<line tab="1"/>Die Reise, die Herr Reimann ohne mein Wissen und ohne mir zu erlauben, ihn zu 
 				begleiten, unternommen hat, gibt mir ein wenig Hoffnung; denn ehrlich gesagt war 
 				mein Herz recht bedrückt. Man behauptet hier, dass Ihre Hoheit Madame die 
@@ -2617,45 +2617,45 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 				Fall verpflichte sich der Herzog von Suderm., mit den Türken über Frieden zu 
 				verhandeln, sich nicht habe enthalten können, laut herauszulachen. Diese Episode 
 				hat mir den Stoff für ein kleines Drama geliefert, das ich dem einzigen Zensor 
-				vorlege, den ich kenne. –<line type="break"/>
-				Weinender Czarlot und lachender Czarlot, kleines Drama über den Krieg der Schweden<line type="break"/> 
-				Lachender Czarlot: Man sagt, dass unsere ganze Armee die Waffen niedergelegt hat.<line type="break"/>
-				Weinender Czarlot: Ja, Mama, hiiiii.<line type="break"/>
-				Lachender Czarlot: Und die Schweden stehen weiter unter den Waffen<line type="break"/>
-				Weinender Czarlot: Ja da Mama, hiiiii<line type="break"/>
+				vorlege, den ich kenne. –<line />
+				Weinender Czarlot und lachender Czarlot, kleines Drama über den Krieg der Schweden<line /> 
+				Lachender Czarlot: Man sagt, dass unsere ganze Armee die Waffen niedergelegt hat.<line />
+				Weinender Czarlot: Ja, Mama, hiiiii.<line />
+				Lachender Czarlot: Und die Schweden stehen weiter unter den Waffen<line />
+				Weinender Czarlot: Ja da Mama, hiiiii<line />
 				Lachender Czarlot: Aber was gibt das? Unsere ganze Armee wird gefangengenommen: und 
 				mein Gatte, weit entfernt, die Schweden zu entwaffnen, wird ihnen noch neue Waffen 
-				liefern.<line type="break"/>
-				Weinender Czarlot: Das gibt eine schöne Geschichte, Mama hihiiiii<line type="break"/>
+				liefern.<line />
+				Weinender Czarlot: Das gibt eine schöne Geschichte, Mama hihiiiii<line />
 				Czarlot (ausbrechend): Aber habt ihr nicht gehört, dass die Waffen der Schweden Scheren 
 				und Maßbänder sind und dass sie gerade wie die Wahnsinnigen daran arbeiten, unsere ganze 
-				Armee und selbst meinen Gatten mit Hosen zu versorgen<line type="break"/>
-				Weinender Czarlot: Was soll das bedeuten, hiiiii – unsere ganze Armee entwaffnet<line type="break"/>
+				Armee und selbst meinen Gatten mit Hosen zu versorgen<line />
+				Weinender Czarlot: Was soll das bedeuten, hiiiii – unsere ganze Armee entwaffnet<line />
 				Lachender Czarlot: Aber begreifst Du Verrückte nicht, dass man ihnen keine Kleider machen
 				kann, während sie bewaffnet sind und kämpfen. Wenn nicht genug Scheren da sind, wird man 
-				welche aus Tula kommen lassen<line type="break"/>
+				welche aus Tula kommen lassen<line />
 				Weinender Czarlot: Aber der Herzog von Sudermannland will uns unser Land wegnehmen, das ist 
 				nicht zum Lachen!
-				<page index="2"/><line type="break"/>
+				<page index="2"/><line />
 				Lachender Czarlot: Aber er gibt uns dafür Tuch und Eisen und dient selbst in unserer Armee, 
-				reicht das nicht? Er ist ein von Kopf bis Fuß bewaffneter Gefangener.<line type="break"/>
-				Weinender Czarlot: Hiiiii.<line type="break"/>
+				reicht das nicht? Er ist ein von Kopf bis Fuß bewaffneter Gefangener.<line />
+				Weinender Czarlot: Hiiiii.<line />
 				Lachender Czarlot: Du bist ja verrückt, hättest Du dafür Blut vergießen wollen. Es reicht 
-				jetzt mit deinem Geheule<line type="break"/>
-				Weinender Czarlot: Aber unser Land, unser Land<line type="break"/>
+				jetzt mit deinem Geheule<line />
+				Weinender Czarlot: Aber unser Land, unser Land<line />
 				Lachender Czarlot: Du Verrückte, unser Land gehört weiter uns: Wir leihen es einem Freund, 
 				der zu wenig davon hat, dafür aber zu viele Einwohner und Handwerker, die kein Brot haben. 
-				Mögen sie es in Russland suchen<line type="break"/>
-				Weinender Czarlot: Aber letztendlich werden wir so zu Schweden<line type="break"/>
+				Mögen sie es in Russland suchen<line />
+				Weinender Czarlot: Aber letztendlich werden wir so zu Schweden<line />
 				Lachender Czarot: Du Verrückte, die Schweden werden keine Russen werden und die Russen keine 
-				Schweden, aber sie werden von nun an in guter Freundschaft miteinander leben.<line type="break"/>
+				Schweden, aber sie werden von nun an in guter Freundschaft miteinander leben.<line />
 				Bote (ganz außer Atem): Oh weh oh weh, die Schweden haben unsere ganze Armee entwaffnet, und 
 				anstatt sich zu verteidigen, sind sie bis aufs Hemd ausgeplündert. Man ordne öffentliche 
-				Gebete an<line type="break"/>
-				Weinender Czarlot (lässt sich in einen Sessel fallen): Nun ist es also geschehen<line type="break"/>
-				Lachender Czarlot: Aber sie werden kommen und auch uns ausplündern.<line type="break"/>
-				Weinender Czarlot: Ich sterbe!<line type="break"/>
-				<page index="3"/><line type="break"/>
+				Gebete an<line />
+				Weinender Czarlot (lässt sich in einen Sessel fallen): Nun ist es also geschehen<line />
+				Lachender Czarlot: Aber sie werden kommen und auch uns ausplündern.<line />
+				Weinender Czarlot: Ich sterbe!<line />
+				<page index="3"/><line />
 				<line tab="1"/>Ich hatte wirklich mehr Recht als jeder andere, die Rolle des weinenden Czarlot zu spielen, 
 				die mir vielleicht gar nicht schlecht gelungen ist, da ich meine Verhältnisse in ihrem ganzen 
 				Wert und Gewicht kenne. Das bedrückte mich, und ich gestehe, dass ich, wäre ich der Mann, 
@@ -2672,7 +2672,7 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 				das Unglück hatte, dass die weinenden Herren Czarlots aus Moskau mich fast all meiner Bücher 
 				beraubt haben. Das wird mich nicht daran hindern, irgendeine Lektüre zu suchen, die mir Stoff 
 				für die Werke liefern könnte, die ich den jungen Hoheiten bei der ersten günstigen Gelegenheit 
-				zu Füßen legen werde.<line type="break"/>
+				zu Füßen legen werde.<line />
 				<align pos="right">Lenz.</align></app>
 		</letterTradition>
 		
@@ -2689,7 +2689,7 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 			<app ref="11">
 				<align pos="center"><line tab="1"/>Antrag an meinen Bruder oder einen meiner Freunde in St. Petersburg, sich 
 				freundlicherweise bei Seiner Exzellenz dem Kanzler Besborodko für mich 
-				einzusetzen und den Hof um eine Pension zu bitten, sei sie auch noch so gering.</align> <line type="empty"/>
+				einzusetzen und den Hof um eine Pension zu bitten, sei sie auch noch so gering.</align> <vspace lines="1"/>
 			
 				
 				<line tab="1"/>Der Verfasser einiger Übersetzungen aus dem Russischen ins Deutsche, der sich 

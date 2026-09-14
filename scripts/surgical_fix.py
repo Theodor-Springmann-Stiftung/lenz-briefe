@@ -14,26 +14,26 @@ def fix_align_patterns(content):
     patterns = [
         # Pattern 1: Simple case with line break in middle
         (
-            '<align pos="right">gehorsamsten Diener\n<line type="break" />Jacob Michael Reinhold Lenz</align>',
-            '<align pos="right">gehorsamsten Diener</align>\n<line type="break" /><align pos="right">Jacob Michael Reinhold Lenz</align>'
+            '<align pos="right">gehorsamsten Diener\n<line />Jacob Michael Reinhold Lenz</align>',
+            '<align pos="right">gehorsamsten Diener</align>\n<line /><align pos="right">Jacob Michael Reinhold Lenz</align>'
         ),
 
         # Pattern 2: Multi-line signature block
         (
-            '<align pos="right">Hoch Edelgeborner Hochgelahrter Herr <aq>Secretair</aq>\n<line type="break" tab="7" />Verehrungswürdigster Gönner\n<line type="break" tab="7" />Ew. HochEdelgebh:</align>',
-            '<align pos="right">Hoch Edelgeborner Hochgelahrter Herr <aq>Secretair</aq></align>\n<line type="break" tab="7" /><align pos="right">Verehrungswürdigster Gönner</align>\n<line type="break" tab="7" /><align pos="right">Ew. HochEdelgebh:</align>'
+            '<align pos="right">Hoch Edelgeborner Hochgelahrter Herr <aq>Secretair</aq>\n<line  tab="7" />Verehrungswürdigster Gönner\n<line  tab="7" />Ew. HochEdelgebh:</align>',
+            '<align pos="right">Hoch Edelgeborner Hochgelahrter Herr <aq>Secretair</aq></align>\n<line  tab="7" /><align pos="right">Verehrungswürdigster Gönner</align>\n<line  tab="7" /><align pos="right">Ew. HochEdelgebh:</align>'
         ),
 
         # Pattern 3: With <aq> tag containing line break
         (
-            '<align pos="center">\n  <aq>Interfusa nitentes\n<line type="break"/>Vites aequora Cycladas.</aq>\n</align>',
-            '<align pos="center">\n  <aq>Interfusa nitentes</aq></align>\n<line type="break"/><align pos="center"><aq>Vites aequora Cycladas.</aq>\n</align>'
+            '<align pos="center">\n  <aq>Interfusa nitentes\n<line />Vites aequora Cycladas.</aq>\n</align>',
+            '<align pos="center">\n  <aq>Interfusa nitentes</aq></align>\n<line /><align pos="center"><aq>Vites aequora Cycladas.</aq>\n</align>'
         ),
 
         # Pattern 4: Signature with aq
         (
-            '<align pos="right">Sie ewig liebender <aq>Alcibiades</aq>\n<line type="break"/>J. M. R. L.</align>',
-            '<align pos="right">Sie ewig liebender <aq>Alcibiades</aq></align>\n<line type="break"/><align pos="right">J. M. R. L.</align>'
+            '<align pos="right">Sie ewig liebender <aq>Alcibiades</aq>\n<line />J. M. R. L.</align>',
+            '<align pos="right">Sie ewig liebender <aq>Alcibiades</aq></align>\n<line /><align pos="right">J. M. R. L.</align>'
         ),
     ]
 

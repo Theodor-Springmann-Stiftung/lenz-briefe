@@ -6,9 +6,10 @@
     elementFormDefault="qualified">
     <xs:include schemaLocation="common.xsd"></xs:include>
 
-    <xs:complexType name="inline" mixed="true">
-        <xs:choice minOccurs="0" maxOccurs="unbounded">
+    <xs:group name="inlineElements">
+        <xs:choice>
             <xs:element ref="line" />
+            <xs:element ref="vspace" />
             <xs:element ref="align" />
             <xs:element ref="aq" />
             <xs:element ref="ul" />
@@ -37,6 +38,10 @@
             <xs:element ref="large" />
             <xs:element ref="ru" />
         </xs:choice>
+    </xs:group>
+
+    <xs:complexType name="inline" mixed="true">
+        <xs:group ref="lenz:inlineElements" minOccurs="0" maxOccurs="unbounded" />
     </xs:complexType>
 
     <xs:complexType name="inlineNoLine" mixed="true">
@@ -108,6 +113,13 @@
         </xs:complexType>
     </xs:element>
 
+    <!-- Vertical space measured in whole lines. -->
+    <xs:element name="vspace">
+        <xs:complexType>
+            <xs:attribute name="lines" type="xs:positiveInteger" use="required" />
+        </xs:complexType>
+    </xs:element>
+
     <!-- Line Element (various types) -->
     <xs:element name="line">
         <xs:complexType>
@@ -115,7 +127,6 @@
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="break" />
-                        <xs:enumeration value="empty" />
                         <xs:enumeration value="line" />
                     </xs:restriction>
                 </xs:simpleType>
@@ -215,16 +226,11 @@
 
     <xs:element name="tabs">
         <xs:complexType mixed="true">
-            <xs:complexContent>
-                <xs:extension base="lenz:textbase">
-                    <xs:choice minOccurs="0" maxOccurs="unbounded">
-                        <xs:element ref="lenz:tab" minOccurs="1" maxOccurs="unbounded" />
-                        <xs:element ref="lenz:line" />
-                        <xs:element ref="lenz:note" />
-                    </xs:choice>
-                    <xs:attribute name="extent" type="xs:positiveInteger" use="optional" />
-                </xs:extension>
-            </xs:complexContent>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:group ref="lenz:inlineElements" />
+                <xs:element ref="lenz:tab" />
+            </xs:choice>
+            <xs:attribute name="extent" type="xs:positiveInteger" use="optional" />
         </xs:complexType>
     </xs:element>
 
