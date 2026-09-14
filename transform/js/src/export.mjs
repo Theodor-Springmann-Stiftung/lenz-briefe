@@ -467,6 +467,35 @@ function buildReferenceMaps(referencesDoc) {
   return { personMap, locationMap, appMap };
 }
 
+function extractAnnotationParts(node) {
+  // Preserve mixed-content order and whitespace without exporting XML comments.
+  const parts = [];
+  function appendText(text) {
+    if (!text) return;
+    if (parts.at(-1)?.type === "text") {
+      parts.at(-1).text += text;
+    } else {
+      parts.push({ type: "text", text });
+    }
+  }
+  for (let child = node.firstChild; child; child = child.nextSibling) {
+    if (child.nodeType === 3 || child.nodeType === 4) {
+      appendText(child.data);
+    } else if (child.nodeType === 1) {
+      if (child.namespaceURI === NS && child.localName === "wwwlink") {
+        parts.push({
+          type: "wwwlink",
+          address: getAttribute(child, "address"),
+          children: extractAnnotationParts(child)
+        });
+      } else {
+        appendText(child.textContent);
+      }
+    }
+  }
+  return parts;
+}
+
 function resolveRefs(nodes, map) {
   return nodes.map((node) => {
     const ref = String(getAttribute(node, "ref", ""));
@@ -476,7 +505,9 @@ function resolveRefs(nodes, map) {
       cert: getAttribute(node, "cert"),
       erschlossen: getAttribute(node, "erschlossen"),
       label: resolved?.name ?? null,
-      resolved
+      resolved,
+      annotationText: textContent(node),
+      annotationParts: extractAnnotationParts(node)
     };
   });
 }
@@ -586,6 +617,7 @@ async function exportEdition({ outDir }) {
   const traditionsDoc = await timings.measure("readXml:traditions", async () => await readRequiredXml("traditions.xml"));
   const referencesDoc = await timings.measure("readXml:references", async () => await readRequiredXml("references.xml"));
   const refs = await timings.measure("buildReferenceMaps", async () => buildReferenceMaps(referencesDoc));
+  const appDefinitions = JSON.stringify(Object.fromEntries(refs.appMap));
 
   const warnings = []
     .concat(await timings.measure("validateXsd:briefe", async () => await validateXml("briefe.xml")))
@@ -637,7 +669,8 @@ async function exportEdition({ outDir }) {
           {
             sourceText: serializeNode(traditionNode),
             stylesheetParams: {
-              letter
+              letter,
+              appDefinitions
             }
           },
           timings
@@ -789,4 +822,4 @@ async function runExport({ outDir, generator = "js" }) {
   }
 }
 
-export { exportEdition, runExport };
+export { exportEdition, runExport, resolveRefs };

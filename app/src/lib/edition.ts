@@ -1,12 +1,18 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
+export type AnnotationPart =
+  | { type: "text"; text: string }
+  | { type: "wwwlink"; address: string | null; children: AnnotationPart[] };
+
 export type ResolvedRef = {
   ref: string;
   cert: string | null;
   erschlossen: string | null;
   label: string | null;
   resolved: Record<string, string | null> | null;
+  annotationText?: string;
+  annotationParts?: AnnotationPart[];
 };
 
 export type DateInfo = {
@@ -386,8 +392,24 @@ async function getNeighborMap(): Promise<Map<string, LetterNeighbors>> {
   return await neighborMapPromise;
 }
 
+function annotationPartsText(parts: AnnotationPart[]): string {
+  return parts.map((part) => part.type === "text" ? part.text : annotationPartsText(part.children)).join("");
+}
+
 export function joinLabels(items: ResolvedRef[]): string {
-  return items.map((item) => item.label).filter(Boolean).join(", ");
+  // Keep annotations as text: index entries are already links, and callers escape this string.
+  const entries = items.map((item) => {
+    const annotation = (item.annotationText ?? annotationPartsText(item.annotationParts ?? [])).trim();
+    return {
+      text: [item.label, annotation].filter(Boolean).join(" "),
+      continuesAlternative: /\boder$/iu.test(annotation)
+    };
+  }).filter((entry) => entry.text);
+
+  return entries.map((entry, index) => {
+    const separator = index === 0 ? "" : entries[index - 1].continuesAlternative ? " " : ", ";
+    return separator + entry.text;
+  }).join("");
 }
 
 export async function getGeneratedStatus(): Promise<GeneratedStatus> {

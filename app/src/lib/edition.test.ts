@@ -11,8 +11,10 @@ import {
   getGeneratedRoot,
   getLetterNeighbors,
   getYearGroupDefinitions,
+  joinLabels,
   type DateInfo,
-  type LetterMeta
+  type LetterMeta,
+  type ResolvedRef
 } from "./edition.ts";
 
 function makeDate(overrides: Partial<DateInfo> = {}): DateInfo {
@@ -53,6 +55,57 @@ function makeMeta(overrides: Partial<LetterMeta> = {}): LetterMeta {
     ...overrides
   };
 }
+
+function makeRef(label: string | null, overrides: Partial<ResolvedRef> = {}): ResolvedRef {
+  return { ref: "1", cert: null, erschlossen: null, label, resolved: null, ...overrides };
+}
+
+test("joinLabels supports older references and empty lists", () => {
+  assert.equal(joinLabels([]), "");
+  assert.equal(joinLabels([makeRef(null), makeRef("Lenz"), makeRef("Goethe")]), "Lenz, Goethe");
+  assert.equal(joinLabels([makeRef("Lenz", { annotationText: "", annotationParts: [] })]), "Lenz");
+});
+
+test("joinLabels retains metadata qualifiers without inferring annotations from certainty", () => {
+  assert.equal(joinLabels([
+    makeRef("Straßburg", { annotationText: "vmtl.", cert: "low" }),
+    makeRef("Weimar", { annotationText: "wahrscheinlich" }),
+    makeRef("Riga", { cert: "low", erschlossen: "true" })
+  ]), "Straßburg vmtl., Weimar wahrscheinlich, Riga");
+});
+
+test("joinLabels preserves trailing oder between alternatives rather than adding commas", () => {
+  assert.equal(joinLabels([
+    makeRef("A", { annotationText: "vmtl. oder " }),
+    makeRef("B", { annotationText: "oder" }),
+    makeRef("C"),
+    makeRef("D")
+  ]), "A vmtl. oder B oder C, D");
+  assert.equal(joinLabels([makeRef("A", { annotationText: "oder" })]), "A oder");
+  assert.equal(joinLabels([
+    makeRef("A", { annotationText: "Theodor" }), makeRef("B")
+  ]), "A Theodor, B");
+});
+
+test("joinLabels keeps annotations on unresolved references", () => {
+  assert.equal(joinLabels([
+    makeRef(null, { annotationText: "wahrscheinlich" })
+  ]), "wahrscheinlich");
+});
+
+test("joinLabels uses annotation text verbatim and falls back to nested parts as plain text", () => {
+  const reference = makeRef("A", { annotationParts: [
+    { type: "text", text: " vmtl. " },
+    { type: "wwwlink", address: "javascript:alert(1)", children: [
+      { type: "text", text: "<B> & " },
+      { type: "wwwlink", address: null, children: [{ type: "text", text: "C" }] }
+    ] },
+    { type: "text", text: " oder " }
+  ] });
+  assert.equal(joinLabels([reference, makeRef("D")]), "A vmtl. <B> & C oder D");
+  assert.equal(joinLabels([{ ...reference, annotationText: "wahrscheinlich" }]), "A wahrscheinlich");
+  assert.equal(joinLabels([{ ...reference, annotationText: "" }]), "A");
+});
 
 function compactHtml(html: string): string {
   return html.replace(/\s+/g, " ").trim();

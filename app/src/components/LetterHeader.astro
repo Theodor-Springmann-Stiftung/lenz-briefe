@@ -1,6 +1,6 @@
 ---
 import type { LetterMeta } from "../lib/edition";
-import { getLetterHref } from "../lib/edition";
+import { getLetterHref, joinLabels } from "../lib/edition";
 
 type Neighbors = {
   previous: LetterMeta | null;
@@ -13,6 +13,10 @@ type Props = {
 };
 
 const { meta, neighbors } = Astro.props;
+const senders = joinLabels(meta.sent.persons);
+const recipients = joinLabels(meta.received.persons);
+const sentPlaces = joinLabels(meta.sent.locations);
+const receivedPlaces = joinLabels(meta.received.locations);
 ---
 
 <div class="flex flx-row mb-1 border-b border-stone-200" data-pagefind-ignore>
@@ -20,25 +24,16 @@ const { meta, neighbors } = Astro.props;
 	<div class="flex flex-col grow-1" aria-label="Korrespondenzmetadaten">
 		<div class="italic" aria-label="Datum">{meta.sent.date?.text ?? "Ohne Datierung"}</div>
 
-			{(meta.sent.persons.length > 0 || meta.received.persons.length > 0) && (
+			{(senders || recipients || sentPlaces || receivedPlaces) && (
 				<div class="flex flex-row gap-x-2">
 					<div>
-						{meta.sent.persons.map((person) => (
-							<span>{person.label}</span>
-						))}
+						{senders && <span>{senders}</span>}
+						{sentPlaces && <span>{senders ? " " : ""}({sentPlaces})</span>}
 					</div>
 					<i class="ri-arrow-right-long-line" aria-label="An"></i>
 					<div>
-						{meta.received.persons.map((person) => (
-							<span>
-								<span>{person.label}</span>
-								{meta.received.locations.length > 0 && (
-									<span>
-										({meta.received.locations.map((location) => location.label).join(", ")})
-									</span>
-								)}
-							</span>
-						))}
+						{recipients && <span>{recipients}</span>}
+						{receivedPlaces && <span>{recipients ? " " : ""}({receivedPlaces})</span>}
 					</div>
 				</div>
 			)}

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import json
 from pathlib import Path
 import tempfile
 from time import perf_counter
@@ -82,6 +83,32 @@ def build_reference_maps(references_doc: etree._ElementTree) -> dict[str, dict[s
     return {"personMap": person_map, "locationMap": location_map, "appMap": app_map}
 
 
+def extract_annotation_parts(node: etree._Element) -> list[dict[str, Any]]:
+    """Preserve mixed-content order and whitespace without exporting XML comments."""
+    parts: list[dict[str, Any]] = []
+
+    def append_text(text: str | None) -> None:
+        if not text:
+            return
+        if parts and parts[-1]["type"] == "text":
+            parts[-1]["text"] += text
+        else:
+            parts.append({"type": "text", "text": text})
+
+    append_text(node.text)
+    for child in node:
+        if child.tag == f"{{{NSMAP['l']}}}wwwlink":
+            parts.append({
+                "type": "wwwlink",
+                "address": get_attribute(child, "address"),
+                "children": extract_annotation_parts(child),
+            })
+        elif isinstance(child.tag, str):
+            append_text("".join(child.itertext()))
+        append_text(child.tail)
+    return parts
+
+
 def resolve_refs(nodes: list[etree._Element], mapping: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
     resolved_nodes = []
     for node in nodes:
@@ -94,6 +121,8 @@ def resolve_refs(nodes: list[etree._Element], mapping: dict[str, dict[str, Any]]
                 "erschlossen": get_attribute(node, "erschlossen"),
                 "label": resolved["name"] if resolved else None,
                 "resolved": resolved,
+                "annotationText": text_content(node),
+                "annotationParts": extract_annotation_parts(node),
             }
         )
     return resolved_nodes
@@ -345,11 +374,12 @@ def export_edition(out_dir: str) -> dict[str, Any]:
         str(get_attribute(node, "letter")): node for node in tradition_letter_nodes
     }
 
+    app_definitions = json.dumps(refs["appMap"], ensure_ascii=False)
     index_entries: list[dict[str, Any]] = []
     for letter_text in letter_text_nodes:
         entry = timings.measure(
             "processLetter",
-            lambda lt=letter_text: _process_letter(lt, absolute_out_dir, runner, timings, meta_by_letter, traditions_by_letter),
+            lambda lt=letter_text: _process_letter(lt, absolute_out_dir, runner, timings, meta_by_letter, traditions_by_letter, app_definitions),
         )
         index_entries.append(entry)
 
@@ -397,6 +427,7 @@ def _process_letter(
     timings: Timings,
     meta_by_letter: dict[str, dict[str, Any]],
     traditions_by_letter: dict[str, etree._Element],
+    app_definitions: str,
 ) -> dict[str, Any]:
     letter = str(get_attribute(letter_text, "letter"))
     slug = slugify_letter(letter)
@@ -410,7 +441,7 @@ def _process_letter(
             traditions_html = runner.run_stylesheet(
                 "traditions",
                 serialize_node(tradition_node),
-                {"letter": letter},
+                {"letter": letter, "appDefinitions": app_definitions},
                 timings,
             )
         except PipelineFailure as error:
