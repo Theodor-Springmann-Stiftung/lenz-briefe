@@ -42,6 +42,7 @@
                 <xs:choice minOccurs="0" maxOccurs="unbounded">
                     <xs:element ref="page" />
                     <xs:element ref="line" />
+                    <xs:element ref="vspace" />
                     <xs:element ref="align" />
                     <xs:element ref="sidenote" />
                     <xs:element ref="aq" />

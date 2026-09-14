@@ -346,16 +346,18 @@
 				Weimar, Goethe- und Schiller-Archiv, GSA 25/XXXIV,9,4, Bl. 4–6. Die Außenseiten des gefalteten Quartblattes wurden für ein Personenregister zu „Hanswursts Hochzeit“ verwendet.
 			</app>
 			<app ref="11">
-				<line tab="1"/>Sie können sich auf mein Ehrenwort verlassen, dass besagtes Blatt niemals mit meiner Zustimmung 
+<line tab="1"/>Sie können sich auf mein Ehrenwort verlassen, dass besagtes Blatt niemals mit meiner Zustimmung 
 				veröffentlicht werden wird. Es wurde nur vom Standpunkt des Großteils Ihrer Leser aus geschrieben, 
 				deren Geschwätz über Sie und Ihre Schriften niemals bis zu Ihnen durchdringt. Ich hätte nicht 
 				geglaubt, dass Dir das Kummer bereiten könnte, ich habe es Dir auch nur mitgeteilt, um zu ergründen, 
 				wie Du zu diesen Dingen stehst, um in Zukunft etwas Vernünftigeres darüber sagen zu können. Das sind 
 				meine Absichten, ich habe alles getan, um es zu unterdrücken und kann Dir im Voraus versichern, 
-				dass es niemals das Licht der Welt erblicken wird. Wir werden noch darüber sprechen.<line type="break"/>
-				<align pos="right">Le.</align><line type="empty"/>
+				dass es niemals das Licht der Welt erblicken wird. Wir werden noch darüber sprechen.
+<line />
+				<align pos="right">Le.</align>
+<vspace lines="1"/>
 				
-				Vielen Dank für die Mühe, die Sie sich mit den Lindaviana gegeben haben</app>
+<line />Vielen Dank für die Mühe, die Sie sich mit den Lindaviana gegeben haben</app>
 		</letterTradition>
 
 		<letterTradition letter="55">
@@ -967,7 +969,7 @@
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 33, Nr. 5. Entwurf in Bleistift.
 			</app>
 			<app ref="11">
-				<line tab="1"/>Dies schreibt Ihnen ein Unbekannter, verstehen Sie das mehr als eine Warnung des 
+<line tab="1"/>Dies schreibt Ihnen ein Unbekannter, verstehen Sie das mehr als eine Warnung des 
 				Himmels. Ich kann daran kein Interesse haben, weil ich meinen Namen nicht nenne. 
 				Was werden Sie tun, allzu liebenswürdige und reizende Baronin! Einen Mann heiraten, 
 				der nicht von Ihrem Format ist, der gar nicht in der Lage ist, Sie zu schätzen. 
@@ -1206,15 +1208,17 @@
 			</app>.
 			<app ref="11">
 				<!-- Wird die Datierung des Briefs in der Übersetzung ausgelassen oder fehlt diese im Dokument? -->
-				<align pos="center">Mein Herr und lieber Freund.</align> <line type="empty"/>
+				<align pos="center">Mein Herr und lieber Freund.</align>
+<vspace lines="1"/>
 				
-				<line tab="1"/>Da die Nachricht von Ihrer plötzlichen Abreise aus Straßburg mir sehr großen Kummer bereitet 
+<line tab="1"/>Da die Nachricht von Ihrer plötzlichen Abreise aus Straßburg mir sehr großen Kummer bereitet 
 				hatte, hörte ich mit größtem Interesse die Neuigkeiten von Ihnen; mein Freund hat mir recht 
 				zufriedenstellende überbracht. Sie sind mit Ihrem berühmten Freund Goethe vereinigt und 
 				befinden sich unter den Augen und dem Schutz eines Fürsten, der Talente zu schätzen weiß 
 				und der ein bedeutender Mann wäre, auch wenn er kein Fürst wäre. Ich vergleiche die Vorstellung, 
 				die ich mir von seinem Hof mache, mit meiner tristen Bleibe. Talente brauchen eine Bühne und 
-				ich befinde mich in einer Wüste inmitten meiner lieben Mitbürger.<line type="break"/>
+				ich befinde mich in einer Wüste inmitten meiner lieben Mitbürger.
+<line />
 				Meiner kleinen Eigenliebe, mein lieber Freund, schmeichelt Ihre angenehme Art, sich an mich zu 
 				erinnern zu sehr, weswegen ich Ihrer Bitte sofort nachkomme; ich beauftrage meinen Freund, Ihnen 
 				mein Werk zu schicken; in vielerlei Hinsicht ist es das Ihrige, ich verdanke Ihnen Lektionen, ich 
@@ -1227,24 +1231,25 @@
 				gebührend zu loben; aber ich fürchte sehr, dass er meinen Zuspruch geringschätzt; was ist denn meine 
 				Stimme gegen die Stimme von ganz Deutschland und den aller empfindsamer Herzen? 
 				
-				<line tab="1"/>Herr Spehner aus Berlin übernimmt den Druck meines Dramas; ich wage es. Sie waren so gütig, mich zu 
+<line tab="1"/>Herr Spehner aus Berlin übernimmt den Druck meines Dramas; ich wage es. Sie waren so gütig, mich zu 
 				diesem Versuch zu ermutigen; ich habe mich allein auf Ihren Rat hin entschlossen; er wog alle anderen 
 				auf. 
 				
-				<line tab="1"/>Inzwischen habe ich eine neue Arbeit übernommen; sie wird kraftraubend werden. Und ich hielt sie für 
+<line tab="1"/>Inzwischen habe ich eine neue Arbeit übernommen; sie wird kraftraubend werden. Und ich hielt sie für 
 				geeignet, ein wenig Aufmerksamkeit zu erregen, wenigstens durch das Genre. Aber aus tausend Gründen muss 
 				ich meine Arbeit ständig unterbrechen. Inmitten meines stürmischen Lebens habe ich nur kurze Hoffnungsschimmer; 
 				mal sind es die Leiden des Geistes, mal die des Herzens, mal sind es Überdruss und Mutlosigkeit, und dann 
 				heißt es Abschied nehmen von der Traumwelt, die man sich geschaffen hatte. 
 				
-				<line tab="1"/>Sie sind nun ruhiger und glücklicher als ich. Pflegen Sie die Muse , um die empfindsamen Herzen zu bezaubern; 
+<line tab="1"/>Sie sind nun ruhiger und glücklicher als ich. Pflegen Sie die Muse , um die empfindsamen Herzen zu bezaubern; 
 				sie verdanken Ihnen schon viel. Geruhen Sie, sich meiner gelegentlich zu erinnern. Ich werde niemals die 
 				wenigen angenehmen Momente vergessen, die wir zusammen verbracht haben; damals glaubte ich nicht, dass es 
 				die letzten wären. 
 				
 				Ich verbleibe mit treuer und unerschütterlicher Verbundenheit, mein Herr und lieber Freund,
 				
-				<align pos="right">Ihr untertäniger und gehorsamer Diener.<line type="break"/>
+				<align pos="right">Ihr untertäniger und gehorsamer Diener.
+<line />
 				Ramond</align></app>
 		</letterTradition>
 
@@ -1377,14 +1382,14 @@
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 33, Nr. 3. Entwurf.
 			</app>
 			<app ref="11">
-				<line tab="1"/>Hier, Madame! ist nun die Fortsetzung des Gedichts von Herrn Wieland. Ich nehme 
+<line tab="1"/>Hier, Madame! ist nun die Fortsetzung des Gedichts von Herrn Wieland. Ich nehme 
 				mir die Freiheit, sie Ihnen selbst vorzulegen, um Sie nicht in die Verlegenheit zu 
 				bringen, ihm aus Gefälligkeit etwas Nettes sagen zu müssen. Gott gebe, dass Sie genug 
 				Vertrauen zu mir haben, mir mitzuteilen, was Sie über das Ende dieses Gedichts zu 
 				sagen haben, ich würde sicherlich nur mit klösterlicher Diskretion davon Gebrauch 
 				machen. 
 				
-				<line tab="1"/>Mein Freund Goethe wird bei seiner neuen Anstellung so sehr mit Beschäftigungen überladen, 
+<line tab="1"/>Mein Freund Goethe wird bei seiner neuen Anstellung so sehr mit Beschäftigungen überladen, 
 				dass er sich nicht einmal die anmutige Art zunutze machen kann, mit der Sie sich an ihn 
 				erinnert haben. Er macht Ihnen stattdessen seine ergebensten Komplimente und wartet auf 
 				die rechte Stimmung, um Ihnen irgendein neues Erzeugnis aus seiner Feder zukommen zu lassen. 
@@ -1392,14 +1397,14 @@
 				Stella Sie so sehr interessiert hat. Sie liegt neben ihrem Gemahl, dem Graf von Gleichen, 
 				und seiner Frau in Erfurt begraben. 
 				
-				<line tab="1"/>Ich würde hier gerne etwas aus der deutschen Literatur beifügen, das mir Ihrer Aufmerksamkeit 
+<line tab="1"/>Ich würde hier gerne etwas aus der deutschen Literatur beifügen, das mir Ihrer Aufmerksamkeit 
 				würdig erschiene, aber zum Unglück der Herren Buchhändler dieser Messe habe ich nichts finden 
 				können. Auch ist an unserem Hof gerade nur englische Lektüre in Mode. Ich habe tatsächlich 
 				die Beobachtung gemacht, dass diese Sprache für die Damen weniger schwer zu erlernen ist, 
 				als man sich vorstellt, vor allem für diejenigen, die das Deutsche und das Französische 
 				beherrschen, woraus das Englische zusammengesetzt ist. 
 				
-				<line tab="1"/>Herr Lavater hat mir den ersten Versuch Ihres gestochenen Porträts geschickt, der mir besser 
+<line tab="1"/>Herr Lavater hat mir den ersten Versuch Ihres gestochenen Porträts geschickt, der mir besser 
 				gefällt als derjenige, den mir Fräulein König gütigerweise zugesendet hat. Ich sehe jedoch, 
 				dass kein Künstler vermag, diese Züge wiederzugeben, die in Wahrheit nur für die Vorstellung 
 				sind.</app>
@@ -1410,7 +1415,7 @@
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 33, Nr. 2; Entwurf.
 			</app>
 			<app ref="11">
-				<line tab="1"/>Ich weiß nicht, allzu großzügige Freundin, was ich von der Silhouette halten soll, die 
+<line tab="1"/>Ich weiß nicht, allzu großzügige Freundin, was ich von der Silhouette halten soll, die 
 				Sie mir liebenswerterweise durch meinen Freund Röderer zukommen ließen. Es 
 				wäre zu anmaßend von mir, dem Märchen, das er mir darüber erzählt hat, Glauben 
 				zu schenken, ich wage jedoch nicht, mir die Wahrheit einzugestehen und mich 
@@ -1429,7 +1434,7 @@
 				tadeln kann, verzweifeln lassen, was dazu führt, dass der wahrhafte Ausdruck der 
 				bedeutsamsten Züge sich nur erraten lässt und eher dem Denken überlassen bleibt 
 				als vor die Augen zu treten.
-				<line tab="1"/>Geruhen Sie, hochgeschätzte Freundin, die beigefügten Fortsetzungen des Teutschen 
+<line tab="1"/>Geruhen Sie, hochgeschätzte Freundin, die beigefügten Fortsetzungen des Teutschen 
 				Merkur an Frau von Oberkirch weiterzuleiten; Herr Wieland, Herausgeber und Verfasser 
 				des Gedichts Liebe um Liebe, empfiehlt sich hierdurch ihrer Gunst und versucht, 
 				ihr seine tiefe Achtung vor allem auszudrücken, was er über sie gehört hat, vor 
@@ -1440,14 +1445,16 @@
 				Aufmerksamkeit verdienen könnte, noch nicht bis nach Straßburg durchgedrungen ist. 
 				Das wäre die größte Gunst eines Schicksals, das bis jetzt nur versucht hat, mich zu 
 				unterjochen.
-				<line tab="1"/>Erweisen Sie Frau von Oberkirch, falls sie es gestattet und sich zu meinem Glück 
+<line tab="1"/>Erweisen Sie Frau von Oberkirch, falls sie es gestattet und sich zu meinem Glück 
 				noch meines Namens erinnert, meine untertänigste Hochachtung. Ich bitte Sie außerdem, 
-				Ihre Frau Mutter und Ihr Fräulein Schwester nicht zu vergessen.<line type="break"/>
+				Ihre Frau Mutter und Ihr Fräulein Schwester nicht zu vergessen.
+<line />
 				Ich bitte Sie nochmals, mir mitzuteilen, ob irgendein neues Buch oder eine andere Neuigkeit 
 				vielleicht die Neugier von Frau von Oberkirch weckt. Nachrichten von Ihrer Cousine wüsste 
 				ich gerade keine, außer, dass sie mit der regierenden Herzogin in ihr Landhaus nach 
 				Belvedere gefahren ist; der Herzog ist in Ilmenau; wo ich ihn bald zu sehen hoffe, 
-				nachdem ich noch einige Wochen die süße Einsamkeit genieße.<line type="break"/>
+				nachdem ich noch einige Wochen die süße Einsamkeit genieße.
+<line />
 				<align pos="right">Lenz</align></app>
 		</letterTradition>
 
@@ -1456,8 +1463,8 @@
 				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 23; Entwurf. Briefentwurf am Ende der ersten Seite; andere Aufzeichnungen vgl. Schriften zur Sozialreform, Bd. 1, S. 394f.
 			</app>
 			<app ref="11">
-				<line tab="1"/>[Briefentwurf am Ende der ersten Seite:] Darf ich, gnädige Frau, Sie zu bitten wagen, die Fortsetzung des Teutschen Merkur entgegenzunehmen, mit tiefstem Respekt und der ausgezeichneten Hochachtung des Autors, Herrn Wieland.
-				<line tab="1"/>Sollte ich mit Ihrer Erlaubnis, was ich anzweifle, die Kopie einer gewissen Silhouette erhalten haben, so kann ich nicht um Verzeihung bitten für mein Schweigen, das nur ein Ausdruck von Dankbarkeit ist, die, wie die Sache, die es hervorrief, über das Sprechen wohl erhaben ist. Kaum etwas kostet mich mehr Mühe, als einen Brief an Sie zu verfassen; mag Ihnen das Geständnis auch harmlos erscheinen, so ist es doch wohl überlegt, bedenkt man die Gefahr, in die ich mich begebe, Sie vielleicht zu kränken. 
+<line tab="1"/>[Briefentwurf am Ende der ersten Seite:] Darf ich, gnädige Frau, Sie zu bitten wagen, die Fortsetzung des Teutschen Merkur entgegenzunehmen, mit tiefstem Respekt und der ausgezeichneten Hochachtung des Autors, Herrn Wieland.
+<line tab="1"/>Sollte ich mit Ihrer Erlaubnis, was ich anzweifle, die Kopie einer gewissen Silhouette erhalten haben, so kann ich nicht um Verzeihung bitten für mein Schweigen, das nur ein Ausdruck von Dankbarkeit ist, die, wie die Sache, die es hervorrief, über das Sprechen wohl erhaben ist. Kaum etwas kostet mich mehr Mühe, als einen Brief an Sie zu verfassen; mag Ihnen das Geständnis auch harmlos erscheinen, so ist es doch wohl überlegt, bedenkt man die Gefahr, in die ich mich begebe, Sie vielleicht zu kränken. 
 			</app>
 		</letterTradition>
 
@@ -1496,15 +1503,16 @@
 				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 22; Entwurf.
 			</app>
 			<app ref="11">
-				<line tab="1"/>Adieu, schöne Stiftsdame, denn so, wie ich Sie das letzte Mal gesehen habe, werde 
+<line tab="1"/>Adieu, schöne Stiftsdame, denn so, wie ich Sie das letzte Mal gesehen habe, werde 
 				ich Sie eines Tages wiedersehen, wenn nicht in dieser Welt, so doch in einer 
 				anderen. Seien Sie immer ebenso glücklich darüber, dass Sie von mir angebetet 
 				werden und glauben Sie ja nicht, dass man unglücklich sein könnte, wenn man 
-				solche Gefühle für Sie hegt.<line type="break"/>
+				solche Gefühle für Sie hegt.
+<line />
 				<align pos="right">Lenz</align>
-				<line type="break"/>An Ihrem Namenstag, dem 15. Juli 1776.
-				<line type="empty"/>
-				<line type="break"/>Ich hoffe wiederzukommen</app>
+<line />An Ihrem Namenstag, dem 15. Juli 1776.
+				<vspace lines="1"/>
+<line />Ich hoffe wiederzukommen</app>
 		</letterTradition>
 
 		<letterTradition letter="213">
@@ -1626,18 +1634,18 @@
 				15. Februar 1887, S. 28; hier ein Teil des ersten Absatzes. Der Rest nach FSt II, 28f.
 			</app>
 			<app ref="11">
-				<line tab="1"/>Tausend Dank für die vollkommen gelungene Zeichnung, die Sie freundlicherweise 
+<line tab="1"/>Tausend Dank für die vollkommen gelungene Zeichnung, die Sie freundlicherweise 
 				dem höflichen Brief beigelegt haben, mit dem Sie mich beehrten. Seien Sie 
 				versichert, mein Herr, dass ich das sehr zu schätzen weiß und dass es lange her ist, 
 				seit ich ein Bildnis gesehen habe, das dem Ideal so entspricht, mit dem sich mein 
 				Geist oft beschäftigt, einem düsteren und lieblichen Ort, an dem ich die für mein 
 				Herz köstlichsten Momente verbringen werde. 
 				
-				<line tab="1"/>Die Frau Herzogin dankt Ihnen für Ihr Andenken, aber Sie versteht überhaupt nichts 
+<line tab="1"/>Die Frau Herzogin dankt Ihnen für Ihr Andenken, aber Sie versteht überhaupt nichts 
 				von den Gnaden und Wohltaten, von denen Sie im Hinblick auf Ihre Person sprechen, 
 				sie hat mich beauftragt, Ihnen Grüße auszurichten. 
 				
-				<line tab="1"/>Ich freue mich immer sehr, von Ihnen Nachricht zu erhalten, besonders wenn Sie mir 
+<line tab="1"/>Ich freue mich immer sehr, von Ihnen Nachricht zu erhalten, besonders wenn Sie mir 
 				sagen werden, dass Ihre Gesundheit, um die wir uns sorgen, wieder vollständig 
 				hergestellt ist.</app>
 		</letterTradition>
@@ -1647,7 +1655,7 @@
 				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 28. Wohl Entwurf.
 			</app>
 			<app ref="11">
-				<line tab="1"/>Sie sprechen davon, mich meiner Einsamkeit zu entreißen – und geben mir dafür 
+<line tab="1"/>Sie sprechen davon, mich meiner Einsamkeit zu entreißen – und geben mir dafür 
 				ebenso beredte Gründe an. Haben Sie, Madame! als Sie diese Zeilen schrieben, 
 				auch bedacht, welchen Eindruck sie auf mich machen würden? Auf mich, der keine 
 				andere Erleichterung von den Übeln, die mich niederdrücken, kennt, als diese vor 
@@ -1662,7 +1670,7 @@
 				die sich früher meine Freunde nannten und die unter diesem Vorwand meinen, sich 
 				alles gegen mich erlauben zu können. 
 				
-				<line tab="1"/>Verraten Sie mich, falls Sie darin etwas finden, das Ihre Liebe zur Wahrheit und 
+<line tab="1"/>Verraten Sie mich, falls Sie darin etwas finden, das Ihre Liebe zur Wahrheit und 
 				Ihren Hass auf das Laster befriedigt, den ich Ihnen persönlich verkünde verschaffen 
 				Sie sich dieses Vergnügen der großen Seelen, dazu beizutragen, dass die eine über 
 				den anderen triumphiert, vor allem bei so glänzenden Gelegenheiten, bei denen der 
@@ -1829,7 +1837,7 @@
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 33, Nr. 4; Entwurf.
 			</app>
 			<app ref="11">
-				<line tab="1"/>Ich wage es schließlich, Madame, der Beilage von Herrn Wieland nur einige Zeilen 
+<line tab="1"/>Ich wage es schließlich, Madame, der Beilage von Herrn Wieland nur einige Zeilen 
 				hinzuzufügen, um Ihnen das Übermaß an Freude zu bezeugen, das ich empfand, als 
 				ich sah, dass Sie genug Vertrauen in mich haben, um mich zum Überbringer des 
 				Briefs zu machen, den Sie ihm gütigerweise geschickt hatten. Ich habe nie einen 
@@ -1921,7 +1929,7 @@
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 33, Nr. 1; Entwurf.
 			</app>
 			<app ref="11">
-				<line tab="1"/>Euer Gnaden verbannen mich durch Ihr letztes Schreiben wohl noch für einige Zeit aus Weimar. Dem 
+<line tab="1"/>Euer Gnaden verbannen mich durch Ihr letztes Schreiben wohl noch für einige Zeit aus Weimar. Dem 
 				habe ich gehorcht. Ich danke aber für den Brief, mit dem Sie mir den Kummer wenigstens  versüßt 
 				haben. Hoffnung sehe ich darin, dass Sie nicht den Plan aufgeben, dessen Verwirklichung den 
 				fühlbarsten Reiz meines Lebens ausmacht. Die Zweifel beiseite, die Herr von Einsiedel mir über 
@@ -2008,7 +2016,7 @@
 				2.
 			</app>
 			<app ref="11">
-				<line tab="1"/>In Straßburg habe ich, mein Herr und lieber Freund, von Ihrem Aufenthalt in Colmar 
+<line tab="1"/>In Straßburg habe ich, mein Herr und lieber Freund, von Ihrem Aufenthalt in Colmar 
 				erfahren und sehr bedauert, nicht mit Ihnen dort sein zu können. Die Wichtigkeit der 
 				Geschäfte, die mich zurückhielten, hinderte mich, Sie dort zu treffen. Was mich über 
 				dieses Missgeschick hinwegtrösten kann, ist allein die Hoffnung, die Sie den Herren 
@@ -2028,7 +2036,7 @@
 				Sie, mich ein wenig an Ihrem Ruhm teilhaben zu lassen. 
 			
 				
-				<line tab="1"/>Mein Freund Mathieu, der sich rühmt, der Ihre zu sein, lässt mich Ihnen die Versicherung seiner 
+<line tab="1"/>Mein Freund Mathieu, der sich rühmt, der Ihre zu sein, lässt mich Ihnen die Versicherung seiner 
 				zärtlichsten Zuneigung ausrichten. Er macht sich Vorwürfe, Ihnen so lange nicht geschrieben zu 
 				haben; aber Ihr ungewisser Aufenthaltsort und Ihr ungewisses Ziel haben ihn daran gehindert. 
 				Seit Ihrer Abreise aus Weimar hat er Sie immer in Straßburg erwartet, wo Sie durchgereist sind, 
@@ -2036,7 +2044,7 @@
 				deswegen tausend Vorwürfe machen. 
 			
 				
-				<line tab="1"/>Noch ein Wort. Ich war sehr geschmeichelt vom Zuspruch, mit dem Ihre Hoheiten die Herzoginnen von 
+<line tab="1"/>Noch ein Wort. Ich war sehr geschmeichelt vom Zuspruch, mit dem Ihre Hoheiten die Herzoginnen von 
 				Weimar mein Werk zu ehren geruhten, ich verdanke Ihnen, lieber Freund, diesen Triumph und schulde 
 				Ihnen Dank; es bleibt mir nur noch, Sie um Rat zu fragen, auf welche Weise ich an diesen Hof einige 
 				Exemplare, die ich als Huldigung schuldig bin, schicken kann. Sie hatten die Güte, meinem Bruder 
@@ -2044,27 +2052,29 @@
 				ich den Herzoginnen schreibe; oder nur an Madame die verwitwete Fürstin oder überhaupt nicht? Ich bitte 
 				Sie inständig, mich darüber aufzuklären, Sie werden mir einen großen Dienst erweisen. 
 				
-				<line tab="1"/>Herr Schlosser wird Ihnen, lieber Freund, dieses Paket hier übergeben. Ich habe die Ehre, ihm zu schreiben 
+<line tab="1"/>Herr Schlosser wird Ihnen, lieber Freund, dieses Paket hier übergeben. Ich habe die Ehre, ihm zu schreiben 
 				und ihm ein Exemplar meines Dramas zu schenken; ich bitte ihn gleichzeitig darum, sich Ihrer für einige Tage 
 				zu entledigen, und Sie zu Ihren Freunden aus Colmar zu schicken, die ihm dafür zu größtem Dank verpflichtet 
 				sein werden. 
 				
-				<line tab="1"/>Mein lieber Freund, ich erwarte gütigst Ihre Weisung, um mir die Freiheit zu erlauben, an Herrn Goethe zu 
+<line tab="1"/>Mein lieber Freund, ich erwarte gütigst Ihre Weisung, um mir die Freiheit zu erlauben, an Herrn Goethe zu 
 				schreiben und ihn zu bitten, einen Erweis meiner Verehrung seiner Person und seiner Schriften 
 				entgegenzunehmen. 
 				
-				<line tab="1"/>Ich verbleibe in aufrichtiger und größter Zuneigung, 
+<line tab="1"/>Ich verbleibe in aufrichtiger und größter Zuneigung, 
 				mein Herr und lieber Freund,
 				
-				Ihr Ihnen treu ergebener Diener<line type="break"/>
-				Ramond<line type="break"/>
+				Ihr Ihnen treu ergebener Diener
+<line />
+				Ramond
+<line />
 				
 				Anwalt am Conseil.</app>
 		</letterTradition>
 
 		<letterTradition letter="274">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 17. Rotes Siegel; handschriftliche Vermerke „v Emmendingen“, „frc. Ffurth“, „12“, „4 gl(?)“.
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 17. Rotes Siegel; handschriftliche Vermerke „v Emendingen“, „frc. Ffurth“, „12“, „4 gl(?)“.
 			</app>
 		</letterTradition>
 
@@ -2364,7 +2374,7 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 
 		<letterTradition letter="322">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 18.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 18. Beigelegtes Blatt nicht ermittelt.
 			</app>
 		</letterTradition>
 
@@ -2376,13 +2386,13 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 
 		<letterTradition letter="324">
 			<app ref="4">
-				Frankfurt/Main, Freies Deutsches Hochstift, Nr. 25663.
+				Frankfurt/Main, Freies Deutsches Hochstift, Nr. 25663. Roter Siegelrest; russische Postvermerke, u.a. „Профессоръ Ленцъ № 1“.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="325">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 38.
+				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 38. Beigelegter Brief nicht ermittelt. Roter Siegelrest. 
 			</app>
 		</letterTradition>
 
@@ -2402,13 +2412,13 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 
 		<letterTradition letter="328">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 21.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 21. Lenz schickt die Briefe an Christian und Friederike Brion vom 27. März 1780 zur Beförderung mit.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="329">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 44.
+				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 44. Roter Siegelrest. Handschriftlicher Vermerk „franco“. Beigelegte Briefe nicht ermittelt.
 			</app>
 		</letterTradition>
 
@@ -2438,7 +2448,7 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 
 		<letterTradition letter="334">
 			<app ref="4">
-				Frankfurt/Main, Freies Deutsches Hochstift, Nr. 12229.
+				Frankfurt/Main, Freies Deutsches Hochstift, Nr. 12229. Rotes Siegel.
 			</app>
 		</letterTradition>
 
@@ -2447,13 +2457,13 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 23. Der Brief an den Bruder
 				steht am
 				Rand der verso-Seite einer von Lenz selbst angefertigten Kopie seines Briefes an Freifrau von
-				Vietinghoff.
+				Vietinghoff. Einlage an Christian David Lenz nicht ermittelt.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="336">
 			<app ref="4">
-				Zürich, Zentralbibliothek, RP 20, Nr. 18.
+				Zürich, Zentralbibliothek, RP 20, Nr. 18. Beigelegte Silhouetten nicht ermittelt.
 			</app>
 		</letterTradition>
 
@@ -2477,13 +2487,13 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 
 		<letterTradition letter="339">
 			<app ref="4">
-				FSt II 178f.
+				FSt II 178f. Beilage nicht ermittelt.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="340">
 			<app ref="4">
-				Zürich, Zentralbibliothek, RP 20, Nr. 17.
+				Zürich, Zentralbibliothek, RP 20, Nr. 17. Beigelegte Silhouetten nicht ermittelt.
 			</app>
 		</letterTradition>
 
@@ -2518,7 +2528,7 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 
 		<letterTradition letter="345">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 22.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 22. Rotes Siegel.
 			</app>
 		</letterTradition>
 
@@ -2532,7 +2542,7 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 		<letterTradition letter="347">
 			<app ref="4">
 				Riga, Latvijas Valsts Vēstures Arhīvs, Fonda 4038, Aprakst 2, Lietas 1642, (Nr. 216), S.
-				797–800.
+				797–800. Rotes Siegel.
 			</app>
 		</letterTradition>
 		
@@ -2574,7 +2584,7 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 		
 		<letterTradition letter="354">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 25; zum Vermerk bei der Adresse „unter gütigem Einschluß“ vgl. Lenz im Urteil, Bd. 4, S. 290: Der Brief ist begleitet von einem Schreiben von Johann Michael Jerzembski: „Ich wünsche aufrichtigst, daß derselbe Ew. Hochwürden von seiner fühlbaren kindlichen Ehrfurcht überzeugen, und eine väterliche Zuneigung ja zur Unterstützung erwecken möge. Er ist es werth, ja um so mehr werth, weil Er auch bey seinem kränklichen Zustand, aus allen Kräften sich bewährt in der Lage, darinnen er gesetzet ist, im stillen und eingezogenen Leben nutzbar zu werden.“
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 25; rotes Siegel. Zum Vermerk bei der Adresse „unter gütigem Einschluß“ vgl. Lenz im Urteil, Bd. 4, S. 290: Der Brief ist begleitet von einem Schreiben von Johann Michael Jerzembski: „Ich wünsche aufrichtigst, daß derselbe Ew. Hochwürden von seiner fühlbaren kindlichen Ehrfurcht überzeugen, und eine väterliche Zuneigung ja zur Unterstützung erwecken möge. Er ist es werth, ja um so mehr werth, weil Er auch bey seinem kränklichen Zustand, aus allen Kräften sich bewährt in der Lage, darinnen er gesetzet ist, im stillen und eingezogenen Leben nutzbar zu werden.“
 			</app>
 		</letterTradition>
 		
@@ -2592,7 +2602,7 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 		
 		<letterTradition letter="357">
 			<app ref="4">
-				Euphorion 14 (1907), S. 614f.
+				Euphorion 14 (1907), S. 614f. Beigelegte Silhouetten nicht ermittelt.
 			</app>
 		</letterTradition>
 		
@@ -2607,9 +2617,11 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 				Berlin, Staatsbibliothek zu Berlin – Preußischer Kulturbesitz, NL Lenz, Bd. 2, (Nr. 235), Bl. 62–63.
 			</app>
 			<app ref="11">
-				<align pos="center">Mein Wohltäter!</align> <line type="empty"/><!-- Hier nicht zentriert? -->
-				<line type="empty"/>
-				<line tab="1"/>Die Reise, die Herr Reimann ohne mein Wissen und ohne mir zu erlauben, ihn zu 
+				<align pos="center">Mein Wohltäter!</align>
+<vspace lines="1"/>
+<!-- Hier nicht zentriert? -->
+				<vspace lines="1"/>
+<line tab="1"/>Die Reise, die Herr Reimann ohne mein Wissen und ohne mir zu erlauben, ihn zu 
 				begleiten, unternommen hat, gibt mir ein wenig Hoffnung; denn ehrlich gesagt war 
 				mein Herz recht bedrückt. Man behauptet hier, dass Ihre Hoheit Madame die 
 				Großherzogin sich sehr selten zu lachen erlaubt: dass sie aber bei der anmaßenden 
@@ -2617,46 +2629,70 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 				Fall verpflichte sich der Herzog von Suderm., mit den Türken über Frieden zu 
 				verhandeln, sich nicht habe enthalten können, laut herauszulachen. Diese Episode 
 				hat mir den Stoff für ein kleines Drama geliefert, das ich dem einzigen Zensor 
-				vorlege, den ich kenne. –<line type="break"/>
-				Weinender Czarlot und lachender Czarlot, kleines Drama über den Krieg der Schweden<line type="break"/> 
-				Lachender Czarlot: Man sagt, dass unsere ganze Armee die Waffen niedergelegt hat.<line type="break"/>
-				Weinender Czarlot: Ja, Mama, hiiiii.<line type="break"/>
-				Lachender Czarlot: Und die Schweden stehen weiter unter den Waffen<line type="break"/>
-				Weinender Czarlot: Ja da Mama, hiiiii<line type="break"/>
+				vorlege, den ich kenne. –
+<line />
+				Weinender Czarlot und lachender Czarlot, kleines Drama über den Krieg der Schweden
+<line /> 
+				Lachender Czarlot: Man sagt, dass unsere ganze Armee die Waffen niedergelegt hat.
+<line />
+				Weinender Czarlot: Ja, Mama, hiiiii.
+<line />
+				Lachender Czarlot: Und die Schweden stehen weiter unter den Waffen
+<line />
+				Weinender Czarlot: Ja da Mama, hiiiii
+<line />
 				Lachender Czarlot: Aber was gibt das? Unsere ganze Armee wird gefangengenommen: und 
 				mein Gatte, weit entfernt, die Schweden zu entwaffnen, wird ihnen noch neue Waffen 
-				liefern.<line type="break"/>
-				Weinender Czarlot: Das gibt eine schöne Geschichte, Mama hihiiiii<line type="break"/>
+				liefern.
+<line />
+				Weinender Czarlot: Das gibt eine schöne Geschichte, Mama hihiiiii
+<line />
 				Czarlot (ausbrechend): Aber habt ihr nicht gehört, dass die Waffen der Schweden Scheren 
 				und Maßbänder sind und dass sie gerade wie die Wahnsinnigen daran arbeiten, unsere ganze 
-				Armee und selbst meinen Gatten mit Hosen zu versorgen<line type="break"/>
-				Weinender Czarlot: Was soll das bedeuten, hiiiii – unsere ganze Armee entwaffnet<line type="break"/>
+				Armee und selbst meinen Gatten mit Hosen zu versorgen
+<line />
+				Weinender Czarlot: Was soll das bedeuten, hiiiii – unsere ganze Armee entwaffnet
+<line />
 				Lachender Czarlot: Aber begreifst Du Verrückte nicht, dass man ihnen keine Kleider machen
 				kann, während sie bewaffnet sind und kämpfen. Wenn nicht genug Scheren da sind, wird man 
-				welche aus Tula kommen lassen<line type="break"/>
+				welche aus Tula kommen lassen
+<line />
 				Weinender Czarlot: Aber der Herzog von Sudermannland will uns unser Land wegnehmen, das ist 
 				nicht zum Lachen!
-				<page index="2"/><line type="break"/>
+				<page index="2"/>
+<line />
 				Lachender Czarlot: Aber er gibt uns dafür Tuch und Eisen und dient selbst in unserer Armee, 
-				reicht das nicht? Er ist ein von Kopf bis Fuß bewaffneter Gefangener.<line type="break"/>
-				Weinender Czarlot: Hiiiii.<line type="break"/>
+				reicht das nicht? Er ist ein von Kopf bis Fuß bewaffneter Gefangener.
+<line />
+				Weinender Czarlot: Hiiiii.
+<line />
 				Lachender Czarlot: Du bist ja verrückt, hättest Du dafür Blut vergießen wollen. Es reicht 
-				jetzt mit deinem Geheule<line type="break"/>
-				Weinender Czarlot: Aber unser Land, unser Land<line type="break"/>
+				jetzt mit deinem Geheule
+<line />
+				Weinender Czarlot: Aber unser Land, unser Land
+<line />
 				Lachender Czarlot: Du Verrückte, unser Land gehört weiter uns: Wir leihen es einem Freund, 
 				der zu wenig davon hat, dafür aber zu viele Einwohner und Handwerker, die kein Brot haben. 
-				Mögen sie es in Russland suchen<line type="break"/>
-				Weinender Czarlot: Aber letztendlich werden wir so zu Schweden<line type="break"/>
+				Mögen sie es in Russland suchen
+<line />
+				Weinender Czarlot: Aber letztendlich werden wir so zu Schweden
+<line />
 				Lachender Czarot: Du Verrückte, die Schweden werden keine Russen werden und die Russen keine 
-				Schweden, aber sie werden von nun an in guter Freundschaft miteinander leben.<line type="break"/>
+				Schweden, aber sie werden von nun an in guter Freundschaft miteinander leben.
+<line />
 				Bote (ganz außer Atem): Oh weh oh weh, die Schweden haben unsere ganze Armee entwaffnet, und 
 				anstatt sich zu verteidigen, sind sie bis aufs Hemd ausgeplündert. Man ordne öffentliche 
-				Gebete an<line type="break"/>
-				Weinender Czarlot (lässt sich in einen Sessel fallen): Nun ist es also geschehen<line type="break"/>
-				Lachender Czarlot: Aber sie werden kommen und auch uns ausplündern.<line type="break"/>
-				Weinender Czarlot: Ich sterbe!<line type="break"/>
-				<page index="3"/><line type="break"/>
-				<line tab="1"/>Ich hatte wirklich mehr Recht als jeder andere, die Rolle des weinenden Czarlot zu spielen, 
+				Gebete an
+<line />
+				Weinender Czarlot (lässt sich in einen Sessel fallen): Nun ist es also geschehen
+<line />
+				Lachender Czarlot: Aber sie werden kommen und auch uns ausplündern.
+<line />
+				Weinender Czarlot: Ich sterbe!
+<line />
+				<page index="3"/>
+<line />
+<line tab="1"/>Ich hatte wirklich mehr Recht als jeder andere, die Rolle des weinenden Czarlot zu spielen, 
 				die mir vielleicht gar nicht schlecht gelungen ist, da ich meine Verhältnisse in ihrem ganzen 
 				Wert und Gewicht kenne. Das bedrückte mich, und ich gestehe, dass ich, wäre ich der Mann, 
 				meinen werten Landsleuten männlichen Geschlechts meine Gefühle einzuflößen, sie nicht so schnell 
@@ -2667,18 +2703,19 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 				dem legitimen Erbe der Rechte Peters des Großen entgegenbringen. Er hätte uns ein Tübingen geben 
 				können. 
 				
-				<line tab="1"/>Man hat mir berichtet, dass der auf der Insel Rügen geborene Herr Gadebusch gestorben ist; ich 
+<line tab="1"/>Man hat mir berichtet, dass der auf der Insel Rügen geborene Herr Gadebusch gestorben ist; ich 
 				bedaure das wegen der livländischen Annalen, die er mir gütigerweise geschickt hat, obwohl ich 
 				das Unglück hatte, dass die weinenden Herren Czarlots aus Moskau mich fast all meiner Bücher 
 				beraubt haben. Das wird mich nicht daran hindern, irgendeine Lektüre zu suchen, die mir Stoff 
 				für die Werke liefern könnte, die ich den jungen Hoheiten bei der ersten günstigen Gelegenheit 
-				zu Füßen legen werde.<line type="break"/>
+				zu Füßen legen werde.
+<line />
 				<align pos="right">Lenz.</align></app>
 		</letterTradition>
 		
 		<letterTradition letter="360">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 47. Lenz schickt ein Gedicht mit.
+				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 47. Beigelegtes Gedicht nicht ermittelt.
 			</app>
 		</letterTradition>
 		
@@ -2687,12 +2724,14 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 46
 			</app>
 			<app ref="11">
-				<align pos="center"><line tab="1"/>Antrag an meinen Bruder oder einen meiner Freunde in St. Petersburg, sich 
+				<align pos="center">
+<line tab="1"/>Antrag an meinen Bruder oder einen meiner Freunde in St. Petersburg, sich 
 				freundlicherweise bei Seiner Exzellenz dem Kanzler Besborodko für mich 
-				einzusetzen und den Hof um eine Pension zu bitten, sei sie auch noch so gering.</align> <line type="empty"/>
+				einzusetzen und den Hof um eine Pension zu bitten, sei sie auch noch so gering.</align>
+<vspace lines="1"/>
 			
 				
-				<line tab="1"/>Der Verfasser einiger Übersetzungen aus dem Russischen ins Deutsche, der sich 
+<line tab="1"/>Der Verfasser einiger Übersetzungen aus dem Russischen ins Deutsche, der sich 
 				bald sieben Jahre in Moskau aufhält und dessen einziger Lebensunterhalt die 
 				Unterstützung eines Vaters ist, der ihn aufgrund der Ausgaben für seine anderen 
 				Kinder lediglich mit 100 Rubel pro Jahr unterstützen kann, bittet Seine Exzellenz 
@@ -2704,7 +2743,7 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 				gehen, weil er glaubt, dass er dadurch den edlen und gerechtfertigten Stolz der 
 				Autoren besagter Werke verletzt, die nicht geschrieben haben, um sich dafür bezahlen 
 				zu lassen.
-				<line tab="1"/>Wenn es ihm möglich ist, eine Reise nach St. Petersburg oder Livland zu unternehmen, 
+<line tab="1"/>Wenn es ihm möglich ist, eine Reise nach St. Petersburg oder Livland zu unternehmen, 
 				könnte er vielleicht Herrn Weitbrecht oder Herrn Hartknoch dafür gewinnen, einige Auszüge 
 				der besten russischen Historiker und Philosophen zu drucken, die er Ihren Hoheiten den 
 				jungen Großherzögen zu widmen gedenkt. Vielleicht würde er den Adel Livlands dazu bringen 
@@ -2724,7 +2763,7 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 				und ich weiß von zwei oder drei adligen Eltern, die herzlich gerne bereit wären, ihre sehr jungen 
 				Kinder mit ihren Erziehern dort unterbringen und unterrichten lassen zu lassen. 
 				
-				<line tab="1"/>Herr Kitt hat, als er aus St. Petersburg kam, vorgeschlagen, einen Plan für eine neue Manufaktur 
+<line tab="1"/>Herr Kitt hat, als er aus St. Petersburg kam, vorgeschlagen, einen Plan für eine neue Manufaktur 
 				auszuarbeiten, die in St. Petersburg entstehen und mit diesem kleinen Versuch eines Erziehungstheaters 
 				in Nachahmung von Herrn Odinot aus Paris verbunden werden könnte. Dieser Plan würde dem russischen 
 				Handel vielleicht einen neuen Zweig eröffnen, und sollte deswegen nicht mit dieser Bitte verknüpft 
@@ -2759,7 +2798,7 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 		
 		<letterTradition letter="366">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 31.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 31. Lenz schickt seine Sprachenklaviatur mit.
 			</app>
 		</letterTradition>
 		
@@ -2810,7 +2849,7 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 30
 			</app>
 			<app ref="11">
-				<line tab="1"/>Im Vorbeigehen „würde ich mir gern, mein lieber Baron, die Frage erlauben, ob Sie 
+<line tab="1"/>Im Vorbeigehen „würde ich mir gern, mein lieber Baron, die Frage erlauben, ob Sie 
 				Verbindungen zu einer gewissen Dame von Stand, der Schwester des Generals 
 				Kurgunoffsky von der Flotte in St. Petersburg, haben. Ihre Schwester hat sich, wie 
 				sie sicher weiß, ein prachtvolles Haus zugelegt, und ich glaube, Frau von A** wäre 
