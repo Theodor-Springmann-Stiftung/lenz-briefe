@@ -11,11 +11,11 @@ COMMON_XSL_PATH = ROOT_DIR / "xslt" / "common.xsl"
 
 def get_inline_refs(xsd: str) -> list[str]:
     inline_match = re.search(
-        r'<xs:complexType name="inline"[\s\S]*?<xs:choice[^>]*>([\s\S]*?)</xs:choice>',
+        r'<xs:group name="inlineElements"[\s\S]*?<xs:choice[^>]*>([\s\S]*?)</xs:choice>',
         xsd,
     )
     if not inline_match:
-        raise RuntimeError("Could not locate inline complexType in textelements.xsd")
+        raise RuntimeError("Could not locate inlineElements group in textelements.xsd")
     return [match.group(1).split(":")[-1] for match in re.finditer(r'ref="([^"]+)"', inline_match.group(1))]
 
 

@@ -248,7 +248,7 @@
       "
     />
     <xsl:variable name="next-completed" as="element()*" select="
-      if (lb:has-meaningful-content($current-content))
+      if (lb:has-meaningful-content($current-content) or exists($current-type) or exists($current-tab))
       then (
         $completed,
         if (exists($current-type) or exists($current-tab))
@@ -265,7 +265,7 @@
       'completed': $next-completed,
       'currentType': (),
       'currentTab': (),
-      'currentContent': if (lb:has-meaningful-content($current-content)) then $trailing-markers else $current-content
+      'currentContent': if (lb:has-meaningful-content($current-content) or exists($current-type) or exists($current-tab)) then $trailing-markers else $current-content
     }" />
   </xsl:function>
 
@@ -319,10 +319,10 @@
             <xsl:with-param name="current-content" select="($current-content, node())" />
           </xsl:next-iteration>
         </xsl:when>
-        <xsl:when test="$line-type = ('empty', 'line')">
+        <xsl:when test="$line-type = ('empty', 'line', 'vspace')">
           <xsl:variable name="flushed" select="lb:flush-state($completed, $current-type, $current-tab, $current-content)" />
           <xsl:next-iteration>
-            <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, node()))" />
+            <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, ($flushed?currentContent, node())))" />
             <xsl:with-param name="current-type" select="()" />
             <xsl:with-param name="current-tab" select="()" />
             <xsl:with-param name="current-content" select="()" />
@@ -352,7 +352,8 @@
         <xsl:sequence select="
           for $line in $lines
           return
-            if ($line/@type = ('empty', 'line') and not(lb:has-meaningful-content($line/node())))
+            if ($line/@type = 'vspace') then $line
+            else if ($line/@type = ('empty', 'line') and not(lb:has-meaningful-content($line/node())))
             then lb:temp-explicit-line(string($line/@type), if ($line/@tab) then string($line/@tab) else (), ())
             else if (exists($line/@type) or exists($line/@tab))
             then lb:temp-explicit-line(
@@ -392,6 +393,9 @@
       <xsl:when test="$node/self::text()">
         <xsl:sequence select="lb:temp-line($node)" />
       </xsl:when>
+      <xsl:when test="$node/self::element(lb:vspace)">
+        <xsl:sequence select="lb:temp-explicit-line('vspace', (), $node)" />
+      </xsl:when>
       <xsl:when test="$node/self::element(lb:page)">
         <xsl:sequence select="lb:temp-line(lb:temp-page(string($node/@index)))" />
       </xsl:when>
@@ -425,7 +429,7 @@
             <xsl:variable name="line-tab" as="xs:string?" select="if (@tab) then string(@tab) else ()" />
             <xsl:variable name="flushed" select="lb:flush-state($completed, $current-type, $current-tab, $current-content)" />
             <xsl:choose>
-              <xsl:when test="$line-type = ('empty', 'line')">
+              <xsl:when test="$line-type = ('empty', 'line', 'vspace')">
                 <xsl:next-iteration>
                   <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, ()))" />
                   <xsl:with-param name="current-type" select="()" />
@@ -473,7 +477,7 @@
             <xsl:variable name="line-tab" as="xs:string?" select="if (@tab) then string(@tab) else ()" />
             <xsl:variable name="flushed" select="lb:flush-state($completed, $current-type, $current-tab, $current-content)" />
             <xsl:choose>
-              <xsl:when test="$line-type = ('empty', 'line')">
+              <xsl:when test="$line-type = ('empty', 'line', 'vspace')">
                 <xsl:next-iteration>
                   <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, ()))" />
                   <xsl:with-param name="current-type" select="()" />
@@ -529,6 +533,15 @@
     <span class="sidenote-marker" id="{@id}"></span>
   </xsl:template>
 
+  <xsl:template match="t:line[@type='vspace'] | t:row[@type='vspace']">
+    <xsl:apply-templates />
+  </xsl:template>
+
+  <xsl:template match="lb:vspace">
+    <xsl:variable name="lines" select="xs:positiveInteger(@lines)" />
+    <div class="lb-vspace" data-lines="{$lines}" style="height: {$lines}lh" aria-hidden="true"></div>
+  </xsl:template>
+
   <xsl:template match="t:line">
     <xsl:variable name="line-type" as="xs:string" select="if (@type) then string(@type) else 'break'" />
     <xsl:variable
@@ -539,7 +552,7 @@
     <xsl:variable
       name="has-align"
       as="xs:boolean"
-      select="exists($meaningful-content[self::lb:align or descendant::lb:align])"
+      select="exists($meaningful-content[self::lb:align or descendant::lb:align[not(ancestor::t:tabs)]])"
     />
     <div>
       <xsl:attribute name="class" select="

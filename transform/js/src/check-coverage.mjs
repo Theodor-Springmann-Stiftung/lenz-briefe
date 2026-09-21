@@ -9,10 +9,10 @@ const commonXslPath = path.join(ROOT_DIR, "xslt", "common.xsl");
 
 function getInlineRefs(xsd) {
   const inlineMatch = xsd.match(
-    /<xs:complexType name="inline"[\s\S]*?<xs:choice[^>]*>([\s\S]*?)<\/xs:choice>/
+    /<xs:group name="inlineElements"[\s\S]*?<xs:choice[^>]*>([\s\S]*?)<\/xs:choice>/
   );
   if (!inlineMatch) {
-    throw new Error("Could not locate inline complexType in textelements.xsd");
+    throw new Error("Could not locate inlineElements group in textelements.xsd");
   }
 
   return Array.from(

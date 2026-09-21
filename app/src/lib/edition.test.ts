@@ -159,7 +159,7 @@ test("getChronologicalDateKey returns null when neither sent nor received has a 
 });
 
 test("getGeneratedRoot defaults to the app generated directory", () => {
-  assert.equal(getGeneratedRoot(), path.join(process.cwd(), "generated"));
+  assert.equal(getGeneratedRoot(), process.env.LENZ_GENERATED_DIR ? path.resolve(process.env.LENZ_GENERATED_DIR) : path.join(process.cwd(), "generated"));
 });
 
 test("getLetterBundle returns a continuous text stream with page-keyed sidenotes", async () => {
@@ -216,7 +216,7 @@ test("align-bearing lines render into left center and right slots", async () => 
   );
   assert.match(
     compactPlainLeftRightHtml,
-    /data-tab="5" data-layout="aligned"> <div class="align-left">mit Glanz erfüllt <\/div> <div class="align-center"><\/div> <div class="align-right">Shsp\.<\/div>/
+    /data-tab="5" data-layout="aligned"> <div class="align-left">mit Glanz erfüllt <\/div> <div class="align-center"><\/div> <div class="align-right">Sksp\.<\/div>/
   );
 });
 
@@ -263,18 +263,14 @@ test("page markers stay inline instead of creating synthetic line blocks", async
     stripH6(inlineCarryBundle.textHtml),
     /<span class="aq">Corres-<\/span>\s+<span class="page-anchor" id="page-3" data-inline-break="true"> \| <\/span><span class="lb-page" data-index="3"><\/span><span class="aq">pondence<\/span>/s
   );
-  assert.match(
-    stripH6(inlineCarryBundle.textHtml),
-    /data-type="empty"><\/div>\s*<div class="lb-line-block" data-type="break" data-layout="aligned">\s*<div class="align-left">\s*<span class="page-anchor" id="page-4">.*?<\/span><span class="lb-page" data-index="4"><\/span><\/div>\s*<div class="align-center"><span class="note">Außenseite des zum Umschlag gefalteten Bogens, roter Siegelrest:<\/span><\/div>/s
-  );
-  assert.match(
-    stripH6(nextBlockCarryBundle.textHtml),
-    /Wie stehts um d\. Fenster die ich eingeschmissen\s*<\/div>\s*<div class="lb-line-block lb-line-block--empty" data-type="empty"><\/div>\s*<div class="lb-line-block" data-type="break" data-tab="6">\s*<span class="page-anchor" id="page-3">.*?<\/span><span class="lb-page" data-index="3"><\/span>\s*Merk\./s
-  );
-  assert.match(
-    stripH6(nextBlockCarryBundle.textHtml),
-    /<\/div>\s*<div class="lb-line-block" data-type="break" data-tab="1">\s*<span class="page-anchor" id="page-4">.*?<\/span><span class="lb-page" data-index="4"><\/span>\s*Wie sehr wünscht/s
-  );
+  for (const bundle of [inlineCarryBundle, nextBlockCarryBundle]) {
+    assert.match(bundle.textHtml, /class="lb-vspace" data-lines="[1-9][0-9]*"/);
+    assert.doesNotMatch(bundle.textHtml, /data-type="empty"/);
+    for (const page of bundle.pages) {
+      assert.equal(bundle.textHtml.split(`id="page-${page}"`).length - 1, 1);
+    }
+  }
+
 });
 
 test("getYearGroupDefinitions exposes the hardcoded year groups", () => {

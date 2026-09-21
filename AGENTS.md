@@ -62,13 +62,17 @@ The flow is `data/xml` + `data/xsd` + `xslt` → exporter → `app/generated` �
 static pages and Pagefind index. Edit the source layer responsible for a change;
 do not hand-edit generated HTML or JSON as a lasting fix.
 
-Successful exports include `status.json`, `stats.json`, `letters/index.json`, and
+Successful exports include `status.json`, `letters/index.json`, and
 per-letter `meta.json`, `text.html`, and `sidenotes.json`. Letter text is a continuous
 HTML stream with inline page markers; sidenotes are keyed by source page index.
 Rendered apparatus is carried in `meta.json` as `traditionsHtml`.
 
 - Preserve the contract between both exporters and `app/src/lib/edition.ts`.
   Update both exporters when changing the shared output format or semantics.
+- `<vspace lines="N"/>` renders N line-heights of vertical space. Every `<line/>`
+  is a required break; omitted `type` is equivalent to `type="break"`. Consecutive
+  breaks must survive. Letter and sidenote beginnings have an implicit first line.
+  The presence of `tab` enables one fixed indentation, regardless of its numeric value.
 - Keep XML-to-HTML rendering in the shared XSLT and presentation in Astro/CSS.
   New supported markup needs appropriate schema, XSLT, and display handling.
 - Retain stable page and sidenote anchors, including `.page-anchor` and `.lb-page`

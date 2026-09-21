@@ -18,7 +18,7 @@ const pageGroups = Object.entries(sidenotesByPage).sort(
     {pageGroups.flatMap(([page, notes]) =>
         notes.map((note) => (
             <section class="mt-4 first:mt-0" data-page={page}>
-                <div set:html={note.html} />
+                <div class="letter-body-prose" set:html={note.html} />
             </section>
         )),
     )}

@@ -32,13 +32,6 @@ const { bundle, neighbors } = Astro.props;
 <style is:global>
     .letter-body-prose {
         --lb-indent-1: 1.5rem;
-        --lb-indent-2: 3rem;
-        --lb-indent-3: 4.5rem;
-        --lb-indent-4: 6rem;
-        --lb-indent-5: 7.5rem;
-        --lb-indent-6: 9rem;
-        --lb-indent-7: 10.5rem;
-        --lb-indent-8: 12rem;
         color: #2d2417;
     }
 
@@ -64,9 +57,9 @@ const { bundle, neighbors } = Astro.props;
         min-height: 1lh;
     }
 
-    .letter-body-prose .lb-line-block--empty {
-        min-height: 1lh;
-        margin-block-end: 0.85rem;
+    .letter-body-prose .lb-vspace {
+        display: block;
+        flex: none;
     }
 
     .letter-body-prose .lb-rule {
@@ -127,108 +120,13 @@ const { bundle, neighbors } = Astro.props;
         text-align: right;
     }
 
-    .letter-body-prose
-        .lb-line-block:not([data-layout="aligned"])[data-tab="1"] {
+    .letter-body-prose .lb-line-block:not([data-layout="aligned"])[data-tab] {
         text-indent: var(--lb-indent-1);
     }
 
-    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="1"] {
+    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab],
+    .letter-body-prose .lb-tab-row[data-tab] {
         padding-inline-start: var(--lb-indent-1);
-    }
-
-    .letter-body-prose .lb-tab-row[data-tab="1"] {
-        padding-inline-start: var(--lb-indent-1);
-    }
-
-    .letter-body-prose
-        .lb-line-block:not([data-layout="aligned"])[data-tab="2"] {
-        text-indent: var(--lb-indent-2);
-    }
-
-    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="2"] {
-        padding-inline-start: var(--lb-indent-2);
-    }
-
-    .letter-body-prose .lb-tab-row[data-tab="2"] {
-        padding-inline-start: var(--lb-indent-2);
-    }
-
-    .letter-body-prose
-        .lb-line-block:not([data-layout="aligned"])[data-tab="3"] {
-        text-indent: var(--lb-indent-3);
-    }
-
-    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="3"] {
-        padding-inline-start: var(--lb-indent-3);
-    }
-
-    .letter-body-prose .lb-tab-row[data-tab="3"] {
-        padding-inline-start: var(--lb-indent-3);
-    }
-
-    .letter-body-prose
-        .lb-line-block:not([data-layout="aligned"])[data-tab="4"] {
-        text-indent: var(--lb-indent-4);
-    }
-
-    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="4"] {
-        padding-inline-start: var(--lb-indent-4);
-    }
-
-    .letter-body-prose .lb-tab-row[data-tab="4"] {
-        padding-inline-start: var(--lb-indent-4);
-    }
-
-    .letter-body-prose
-        .lb-line-block:not([data-layout="aligned"])[data-tab="5"] {
-        text-indent: var(--lb-indent-5);
-    }
-
-    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="5"] {
-        padding-inline-start: var(--lb-indent-5);
-    }
-
-    .letter-body-prose .lb-tab-row[data-tab="5"] {
-        padding-inline-start: var(--lb-indent-5);
-    }
-
-    .letter-body-prose
-        .lb-line-block:not([data-layout="aligned"])[data-tab="6"] {
-        text-indent: var(--lb-indent-6);
-    }
-
-    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="6"] {
-        padding-inline-start: var(--lb-indent-6);
-    }
-
-    .letter-body-prose .lb-tab-row[data-tab="6"] {
-        padding-inline-start: var(--lb-indent-6);
-    }
-
-    .letter-body-prose
-        .lb-line-block:not([data-layout="aligned"])[data-tab="7"] {
-        text-indent: var(--lb-indent-7);
-    }
-
-    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="7"] {
-        padding-inline-start: var(--lb-indent-7);
-    }
-
-    .letter-body-prose .lb-tab-row[data-tab="7"] {
-        padding-inline-start: var(--lb-indent-7);
-    }
-
-    .letter-body-prose
-        .lb-line-block:not([data-layout="aligned"])[data-tab="8"] {
-        text-indent: var(--lb-indent-8);
-    }
-
-    .letter-body-prose .lb-line-block[data-layout="aligned"][data-tab="8"] {
-        padding-inline-start: var(--lb-indent-8);
-    }
-
-    .letter-body-prose .lb-tab-row[data-tab="8"] {
-        padding-inline-start: var(--lb-indent-8);
     }
 
     .letter-body-prose .aq {
