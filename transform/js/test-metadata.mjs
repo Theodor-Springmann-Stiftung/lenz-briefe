@@ -45,3 +45,17 @@ test("mixed content preserves links, nesting and whitespace even for unresolved 
     { type: "text", text: " danach\n" }
   ]);
 });
+
+test("nested edition bases preserve original flag and source types", async () => {
+  const { extractMeta } = await import("./src/export.mjs");
+  const node = new DOMParser().parseFromString(
+    '<letterDesc xmlns="https://lenz-archiv.de" letter="1"><sent/><received/><traditions>' +
+    '<tradition isOriginal="0" type="print"/><tradition isOriginal="1" type="manuscript"/>' +
+    '</traditions></letterDesc>', "application/xml"
+  ).documentElement;
+  const result = extractMeta(node, { locationMap: new Map(), personMap: new Map() });
+  assert.equal(result.hasOriginal, true);
+  assert.deepEqual(result.traditions, [
+    { isOriginal: false, type: "print" }, { isOriginal: true, type: "manuscript" }
+  ]);
+});

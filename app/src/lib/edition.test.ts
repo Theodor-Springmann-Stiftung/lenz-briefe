@@ -44,6 +44,7 @@ function makeMeta(overrides: Partial<LetterMeta> = {}): LetterMeta {
       locations: [],
       persons: []
     },
+    traditions: [],
     hasOriginal: false,
     isProofread: false,
     isDraft: false,

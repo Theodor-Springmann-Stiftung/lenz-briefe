@@ -546,7 +546,11 @@ function extractMeta(letterDesc, refs) {
       locations: resolveRefs(select("./l:location", receivedNode), refs.locationMap),
       persons: resolveRefs(select("./l:person", receivedNode), refs.personMap)
     },
-    hasOriginal: getAttribute(select("./l:hasOriginal", letterDesc)[0] ?? null, "value") === "true",
+    traditions: select("./l:traditions/l:tradition", letterDesc).map(node => ({
+      isOriginal: ["true", "1"].includes(getAttribute(node, "isOriginal")),
+      type: getAttribute(node, "type")
+    })),
+    hasOriginal: select("./l:traditions/l:tradition", letterDesc).some(node => ["true", "1"].includes(getAttribute(node, "isOriginal"))),
     isProofread: getAttribute(select("./l:isProofread", letterDesc)[0] ?? null, "value") === "true",
     isDraft: getAttribute(select("./l:isDraft", letterDesc)[0] ?? null, "value") === "true"
   };
@@ -684,6 +688,7 @@ async function exportEdition({ outDir }) {
       slug,
       sent: { date: null, locations: [], persons: [] },
       received: { date: null, locations: [], persons: [] },
+      traditions: [],
       hasOriginal: false,
       isProofread: false,
       isDraft: false
@@ -822,4 +827,4 @@ async function runExport({ outDir, generator = "js" }) {
   }
 }
 
-export { exportEdition, runExport, resolveRefs };
+export { exportEdition, runExport, resolveRefs, extractMeta };

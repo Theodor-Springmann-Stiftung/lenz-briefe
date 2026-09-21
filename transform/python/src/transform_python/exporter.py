@@ -155,7 +155,9 @@ def extract_meta(letter_desc: etree._Element, refs: dict[str, dict[str, dict[str
             "locations": resolve_refs(received_locations, refs["locationMap"]),
             "persons": resolve_refs(received_persons, refs["personMap"]),
         },
-        "hasOriginal": get_attribute(_first_xpath(letter_desc, "./l:hasOriginal"), "value") == "true",
+        "traditions": [{"isOriginal": n.get("isOriginal") in ("true", "1"), "type": n.get("type")}
+                       for n in letter_desc.xpath("./l:traditions/l:tradition", namespaces=NSMAP)],
+        "hasOriginal": any(node.get("isOriginal") in ("true", "1") for node in letter_desc.xpath("./l:traditions/l:tradition", namespaces=NSMAP)),
         "isProofread": get_attribute(_first_xpath(letter_desc, "./l:isProofread"), "value") == "true",
         "isDraft": get_attribute(_first_xpath(letter_desc, "./l:isDraft"), "value") == "true",
     }
@@ -453,6 +455,7 @@ def _process_letter(
         "slug": slug,
         "sent": {"date": None, "locations": [], "persons": []},
         "received": {"date": None, "locations": [], "persons": []},
+        "traditions": [],
         "hasOriginal": False,
         "isProofread": False,
         "isDraft": False,

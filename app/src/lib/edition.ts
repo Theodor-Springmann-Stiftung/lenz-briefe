@@ -38,6 +38,7 @@ export type LetterMeta = {
     locations: ResolvedRef[];
     persons: ResolvedRef[];
   };
+  traditions: { isOriginal: boolean; type: "manuscript" | "print" | "unknown" }[];
   hasOriginal: boolean;
   isProofread: boolean;
   isDraft: boolean;

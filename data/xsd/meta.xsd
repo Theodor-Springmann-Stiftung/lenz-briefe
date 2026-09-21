@@ -39,10 +39,31 @@
 												</xsd:annotation>
 											</xsd:element>
 										</xsd:choice>
-										<xsd:element name="hasOriginal" type="lenz:booleanvalue">
+										<xsd:element name="traditions">
 											<xsd:annotation>
-												<xsd:documentation> Pflicht: Liegt das Original für die Edition vor? </xsd:documentation>
+												<xsd:documentation>Grundlagen des edierten Brieftextes, nicht sämtliche bekannten Textzeugen. Bibliographische Angaben verbleiben vorerst in traditions.xml.</xsd:documentation>
 											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="tradition" minOccurs="1" maxOccurs="unbounded">
+														<xsd:complexType>
+															<xsd:attribute name="isOriginal" type="xsd:boolean" use="required" />
+															<xsd:attribute name="type" use="required">
+																<xsd:annotation>
+																	<xsd:documentation>manuscript: Handschrift einschließlich Abschrift; print: Druck; unknown: Editionsgrundlage noch ungeklärt.</xsd:documentation>
+																</xsd:annotation>
+																<xsd:simpleType>
+																	<xsd:restriction base="xsd:string">
+																		<xsd:enumeration value="manuscript" />
+																		<xsd:enumeration value="print" />
+																		<xsd:enumeration value="unknown" />
+																	</xsd:restriction>
+																</xsd:simpleType>
+															</xsd:attribute>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
 										</xsd:element>
 										<xsd:element name="isProofread" type="lenz:booleanvalue">
 											<xsd:annotation>
