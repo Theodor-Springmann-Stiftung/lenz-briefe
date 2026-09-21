@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="https://lenz-archiv.de"
+    xmlns="https://lenz-archiv.de"
+    xmlns:lenz="https://lenz-archiv.de"
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="common.xsd"></xs:include>
+    <xs:include schemaLocation="textelements.xsd"></xs:include>
+    <!-- Root Element: opus -->
+    <xs:element name="opus">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="traditions" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Traditions Container -->
+    <xs:element name="traditions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="letterTradition" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Letter Tradition Entry -->
+    <xs:element name="letterTradition">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="app" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="letter" type="xs:nonNegativeInteger" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <!-- App Reference (within traditions) -->
+    <xs:element name="app">
+        <xs:complexType mixed="true">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:group ref="lenz:inlineElements" />
+                <xs:element ref="page" />
+            </xs:choice>
+            <xs:attribute name="ref" type="xs:nonNegativeInteger" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
