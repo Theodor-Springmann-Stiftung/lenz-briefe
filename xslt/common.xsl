@@ -6,12 +6,24 @@
   xmlns:t="urn:lenz-temp"
   exclude-result-prefixes="lb xs t">
 
-  <xsl:output method="html" encoding="UTF-8" omit-xml-declaration="yes" />
+  <xsl:output method="html" encoding="UTF-8" omit-xml-declaration="yes" indent="no" />
   <xsl:mode on-no-match="shallow-skip" />
+  <xsl:mode name="lb:classify-pages" on-no-match="shallow-copy" />
 
   <xsl:template name="lb:render-flow">
     <xsl:param name="nodes" as="node()*" />
-    <xsl:apply-templates select="lb:normalize-flow($nodes)" />
+    <xsl:param name="page-id-prefix" as="xs:string" select="'page-'" />
+    <!-- Classify milestones on the complete semantic lines, before alignment
+         distributes their content into separate regions. -->
+    <xsl:variable name="flow" as="element(t:flow)">
+      <t:flow><xsl:sequence select="lb:normalize-lines($nodes)" /></t:flow>
+    </xsl:variable>
+    <xsl:variable name="classified" as="element(t:flow)">
+      <xsl:apply-templates select="$flow" mode="lb:classify-pages" />
+    </xsl:variable>
+    <xsl:apply-templates select="$classified/node()">
+      <xsl:with-param name="page-id-prefix" select="$page-id-prefix" tunnel="yes" />
+    </xsl:apply-templates>
   </xsl:template>
 
   <xsl:function name="lb:has-meaningful-content" as="xs:boolean">
@@ -20,15 +32,10 @@
       exists(
         $nodes[
           self::text()[normalize-space()]
-          or self::*[not(self::t:page or self::t:sidenote-marker)]
+          or self::*[not(self::t:page)]
         ]
       )
     " />
-  </xsl:function>
-
-  <xsl:function name="lb:has-inline-markers" as="xs:boolean">
-    <xsl:param name="nodes" as="node()*" />
-    <xsl:sequence select="exists($nodes[self::t:page or self::t:sidenote-marker])" />
   </xsl:function>
 
   <xsl:function name="lb:temp-line" as="element(t:line)">
@@ -56,22 +63,6 @@
   <xsl:function name="lb:temp-page" as="element(t:page)">
     <xsl:param name="index" as="xs:string" />
     <t:page index="{$index}" />
-  </xsl:function>
-
-  <xsl:function name="lb:temp-sidenote-marker" as="element(t:sidenote-marker)">
-    <xsl:param name="node" as="element(lb:sidenote)" />
-    <t:sidenote-marker
-      id="{
-        concat(
-          'anchor-letter-',
-          format-integer(xs:integer(root($node)/*/@letter), '000'),
-          '-page-',
-          string($node/@page),
-          '-sidenote-',
-          string(count($node/preceding::lb:sidenote[@page = $node/@page]) + 1)
-        )
-      }"
-    />
   </xsl:function>
 
   <xsl:function name="lb:clone-element" as="element()">
@@ -103,9 +94,16 @@
       then 'left'
       else if ($node/self::text())
       then ()
-      else if ($node/self::t:page or $node/self::t:sidenote-marker)
+      else if ($node/self::t:page)
+      then (let $next := $node/following-sibling::node()[not(self::t:page or self::text()[not(normalize-space())])][1],
+                $previous := $node/preceding-sibling::node()[not(self::t:page or self::text()[not(normalize-space())])][1]
+            return (if ($next) then lb:node-slot($next) else if ($previous) then lb:node-slot($previous) else (), 'left')[1])
+      else if ($node/self::t:tabs or $node/self::lb:tab)
       then 'left'
-      else distinct-values(for $child in $node/node() return lb:slots-for-node($child))
+      else if ($node/self::element())
+      then (let $slots := distinct-values(for $child in $node/node() return lb:slots-for-node($child))
+            return if (exists($slots)) then $slots else 'left')
+      else ()
     " />
   </xsl:function>
 
@@ -168,6 +166,13 @@
             <xsl:sequence select="." />
           </xsl:if>
         </xsl:when>
+        <!-- A table/cell owns its alignment context. Do not distribute its
+             descendants into the surrounding line's regions. -->
+        <xsl:when test="self::t:tabs or self::lb:tab">
+          <xsl:if test="(if ($inherited-slot) then $inherited-slot else 'left') = $slot">
+            <xsl:sequence select="." />
+          </xsl:if>
+        </xsl:when>
         <xsl:when test="self::lb:align">
           <xsl:if test="lb:alignment-slot(string(@pos)) = $slot">
             <xsl:sequence select="lb:filter-slot-nodes(node(), $slot, $slot)" />
@@ -213,7 +218,7 @@
     <xsl:param name="current-tab" as="xs:string?" />
     <xsl:param name="current-content" as="node()*" />
     <xsl:variable
-      name="trailing-marker-start"
+      name="trailing-content-start"
       as="xs:integer?"
       select="
         (
@@ -221,7 +226,6 @@
           return
             if (
               $current-content[$index]/self::t:page
-              or $current-content[$index]/self::t:sidenote-marker
               or $current-content[$index]/self::text()[not(normalize-space())]
             )
             then ()
@@ -229,6 +233,11 @@
         )[1]
       "
     />
+    <!-- Only move a trailing milestone across a boundary. Whitespace at the
+         end of a formatting wrapper may separate words and must survive. -->
+    <xsl:variable name="trailing-marker-start" as="xs:integer?" select="
+      if (exists($current-content[position() ge $trailing-content-start][self::t:page]))
+      then $trailing-content-start else ()" />
     <xsl:variable
       name="leading-content"
       as="node()*"
@@ -269,28 +278,6 @@
     }" />
   </xsl:function>
 
-  <xsl:function name="lb:materialize-marker-state" as="map(*)">
-    <xsl:param name="completed" as="element()*" />
-    <xsl:param name="current-type" as="xs:string?" />
-    <xsl:param name="current-tab" as="xs:string?" />
-    <xsl:param name="current-content" as="node()*" />
-    <xsl:sequence select="
-      if (lb:has-inline-markers($current-content) and not(lb:has-meaningful-content($current-content)))
-      then map {
-        'completed': ($completed, $current-content[self::t:page or self::t:sidenote-marker]),
-        'currentType': $current-type,
-        'currentTab': $current-tab,
-        'currentContent': ()
-      }
-      else map {
-        'completed': $completed,
-        'currentType': $current-type,
-        'currentTab': $current-tab,
-        'currentContent': $current-content
-      }
-    " />
-  </xsl:function>
-
   <xsl:function name="lb:merge-lines-into-state" as="map(*)">
     <xsl:param name="completed" as="element()*" />
     <xsl:param name="current-type" as="xs:string?" />
@@ -319,7 +306,7 @@
             <xsl:with-param name="current-content" select="($current-content, node())" />
           </xsl:next-iteration>
         </xsl:when>
-        <xsl:when test="$line-type = ('empty', 'line', 'vspace')">
+        <xsl:when test="$line-type = ('line', 'vspace')">
           <xsl:variable name="flushed" select="lb:flush-state($completed, $current-type, $current-tab, $current-content)" />
           <xsl:next-iteration>
             <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, ($flushed?currentContent, node())))" />
@@ -334,11 +321,39 @@
             <xsl:with-param name="completed" select="$flushed?completed" />
             <xsl:with-param name="current-type" select="$line-type" />
             <xsl:with-param name="current-tab" select="$line-tab" />
-            <xsl:with-param name="current-content" select="node()" />
+            <xsl:with-param name="current-content" select="($flushed?currentContent, node())" />
           </xsl:next-iteration>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:iterate>
+  </xsl:function>
+
+  <!-- A phrasing wrapper cannot contain a generated table div. Split it
+       around flow containers and carry the formatting into their cells. -->
+  <xsl:function name="lb:wrap-content" as="element()*">
+    <xsl:param name="wrapper" as="element()" />
+    <xsl:param name="nodes" as="node()*" />
+    <xsl:choose>
+      <xsl:when test="$wrapper/self::lb:tab or empty($nodes)">
+        <xsl:sequence select="lb:clone-element($wrapper, $nodes)" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:for-each-group select="$nodes"
+          group-adjacent="self::t:tabs or self::t:row or self::lb:tab or self::lb:vspace">
+          <xsl:choose>
+            <xsl:when test="current-grouping-key()">
+              <xsl:for-each select="current-group()">
+                <xsl:sequence select="if (self::lb:vspace) then .
+                  else lb:clone-element(., lb:wrap-content($wrapper, node()))" />
+              </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:sequence select="lb:clone-element($wrapper, current-group())" />
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:for-each-group>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:function>
 
   <xsl:function name="lb:wrap-element-across-lines" as="element(t:line)*">
@@ -353,15 +368,15 @@
           for $line in $lines
           return
             if ($line/@type = 'vspace') then $line
-            else if ($line/@type = ('empty', 'line') and not(lb:has-meaningful-content($line/node())))
-            then lb:temp-explicit-line(string($line/@type), if ($line/@tab) then string($line/@tab) else (), ())
+            else if ($line/@type = 'line' and not(lb:has-meaningful-content($line/node())))
+            then lb:temp-explicit-line(string($line/@type), if ($line/@tab) then string($line/@tab) else (), $line/node())
             else if (exists($line/@type) or exists($line/@tab))
             then lb:temp-explicit-line(
               if ($line/@type) then string($line/@type) else (),
               if ($line/@tab) then string($line/@tab) else (),
-              lb:clone-element($element, $line/node())
+              lb:wrap-content($element, $line/node())
             )
-            else lb:temp-line(lb:clone-element($element, $line/node()))
+            else lb:temp-line(lb:wrap-content($element, $line/node()))
         " />
       </xsl:otherwise>
     </xsl:choose>
@@ -399,8 +414,11 @@
       <xsl:when test="$node/self::element(lb:page)">
         <xsl:sequence select="lb:temp-line(lb:temp-page(string($node/@index)))" />
       </xsl:when>
-      <xsl:when test="$node/self::element(lb:sidenote)">
-        <xsl:sequence select="lb:temp-line(lb:temp-sidenote-marker($node))" />
+      <xsl:when test="$node/self::element(lb:sidenote) or $node/self::comment() or $node/self::processing-instruction()">
+        <xsl:sequence select="()" />
+      </xsl:when>
+      <xsl:when test="$node/self::element(lb:address)">
+        <xsl:sequence select="lb:normalize-lines($node/node())" />
       </xsl:when>
       <xsl:when test="$node/self::element(lb:tabs)">
         <xsl:sequence select="lb:temp-line(lb:normalize-tabs($node))" />
@@ -422,67 +440,26 @@
         <xsl:param name="current-type" as="xs:string?" select="()" />
         <xsl:param name="current-tab" as="xs:string?" select="()" />
         <xsl:param name="current-content" as="node()*" select="()" />
-        <xsl:on-completion select="lb:materialize-marker-state(lb:flush-state($completed, $current-type, $current-tab, $current-content)?completed, (), (), lb:flush-state($completed, $current-type, $current-tab, $current-content)?currentContent)" />
+        <xsl:on-completion>
+          <xsl:variable name="flushed" select="lb:flush-state($completed, $current-type, $current-tab, $current-content)" />
+          <xsl:sequence select="map {
+            'completed': ($flushed?completed,
+              if (exists($flushed?currentContent))
+              then lb:temp-line($flushed?currentContent) else ())
+          }" />
+        </xsl:on-completion>
         <xsl:choose>
           <xsl:when test="self::element(lb:line)">
             <xsl:variable name="line-type" as="xs:string" select="if (@type) then string(@type) else 'break'" />
             <xsl:variable name="line-tab" as="xs:string?" select="if (@tab) then string(@tab) else ()" />
             <xsl:variable name="flushed" select="lb:flush-state($completed, $current-type, $current-tab, $current-content)" />
             <xsl:choose>
-              <xsl:when test="$line-type = ('empty', 'line', 'vspace')">
+              <xsl:when test="$line-type = ('line', 'vspace')">
                 <xsl:next-iteration>
-                  <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, ()))" />
+                  <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, $flushed?currentContent))" />
                   <xsl:with-param name="current-type" select="()" />
                   <xsl:with-param name="current-tab" select="()" />
-                  <xsl:with-param name="current-content" select="$flushed?currentContent" />
-                </xsl:next-iteration>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:next-iteration>
-                  <xsl:with-param name="completed" select="$flushed?completed" />
-                  <xsl:with-param name="current-type" select="$line-type" />
-                  <xsl:with-param name="current-tab" select="$line-tab" />
-                  <xsl:with-param name="current-content" select="$flushed?currentContent" />
-                </xsl:next-iteration>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:variable name="merged" select="lb:merge-lines-into-state($completed, $current-type, $current-tab, $current-content, lb:normalize-node-to-lines(.))" />
-            <xsl:next-iteration>
-              <xsl:with-param name="completed" select="$merged?completed" />
-              <xsl:with-param name="current-type" select="$merged?currentType" />
-              <xsl:with-param name="current-tab" select="$merged?currentTab" />
-              <xsl:with-param name="current-content" select="$merged?currentContent" />
-            </xsl:next-iteration>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:iterate>
-    </xsl:variable>
-    <xsl:sequence select="$state?completed" />
-  </xsl:function>
-
-  <xsl:function name="lb:normalize-flow" as="element()*">
-    <xsl:param name="nodes" as="node()*" />
-    <xsl:variable name="state" as="map(*)">
-      <xsl:iterate select="$nodes">
-        <xsl:param name="completed" as="element()*" select="()" />
-        <xsl:param name="current-type" as="xs:string?" select="()" />
-        <xsl:param name="current-tab" as="xs:string?" select="()" />
-        <xsl:param name="current-content" as="node()*" select="()" />
-        <xsl:on-completion select="lb:materialize-marker-state(lb:flush-state($completed, $current-type, $current-tab, $current-content)?completed, (), (), lb:flush-state($completed, $current-type, $current-tab, $current-content)?currentContent)" />
-        <xsl:choose>
-          <xsl:when test="self::element(lb:line)">
-            <xsl:variable name="line-type" as="xs:string" select="if (@type) then string(@type) else 'break'" />
-            <xsl:variable name="line-tab" as="xs:string?" select="if (@tab) then string(@tab) else ()" />
-            <xsl:variable name="flushed" select="lb:flush-state($completed, $current-type, $current-tab, $current-content)" />
-            <xsl:choose>
-              <xsl:when test="$line-type = ('empty', 'line', 'vspace')">
-                <xsl:next-iteration>
-                  <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, ()))" />
-                  <xsl:with-param name="current-type" select="()" />
-                  <xsl:with-param name="current-tab" select="()" />
-                  <xsl:with-param name="current-content" select="$flushed?currentContent" />
+                  <xsl:with-param name="current-content" select="()" />
                 </xsl:next-iteration>
               </xsl:when>
               <xsl:otherwise>
@@ -514,23 +491,27 @@
     <xsl:value-of select="." />
   </xsl:template>
 
-  <xsl:template match="t:page | lb:page">
-    <xsl:variable
-      name="is-inline-break"
-      as="xs:boolean"
-      select="lb:has-meaningful-content(preceding-sibling::node()) and lb:has-meaningful-content(following-sibling::node())"
-    />
-    <span class="page-anchor" id="{concat('page-', @index)}">
-      <xsl:if test="$is-inline-break">
-        <xsl:attribute name="data-inline-break">true</xsl:attribute>
-      </xsl:if>
-      <xsl:value-of select="if ($is-inline-break) then ' | ' else '&#x200C;'" />
-    </span>
-    <span class="lb-page" data-index="{@index}"></span>
+  <xsl:template match="t:page" mode="lb:classify-pages">
+    <xsl:variable name="page" select="." />
+    <xsl:variable name="line" select="ancestor::*[self::t:line or self::t:row][1]" />
+    <!-- Text and empty editorial elements both count as content. -->
+    <xsl:variable name="content" select="$line/descendant::node()[
+      self::text()[normalize-space()]
+      or self::lb:*[not(*) and not(self::lb:line or self::lb:vspace)
+                    and not(text()[normalize-space()])]
+    ]" />
+    <xsl:copy>
+      <xsl:copy-of select="@*" />
+      <xsl:attribute name="break" select="
+        if (exists($content[. &lt;&lt; $page]) and exists($content[. &gt;&gt; $page]))
+        then 'inline' else 'block'" />
+    </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="t:sidenote-marker">
-    <span class="sidenote-marker" id="{@id}"></span>
+  <xsl:template match="t:page">
+    <xsl:param name="page-id-prefix" as="xs:string" select="'page-'" tunnel="yes" />
+    <span class="page-anchor" id="{concat($page-id-prefix, @index)}"
+          data-index="{@index}" data-break="{@break}"></span>
   </xsl:template>
 
   <xsl:template match="t:line[@type='vspace'] | t:row[@type='vspace']">
@@ -542,56 +523,51 @@
     <div class="lb-vspace" data-lines="{$lines}" style="height: {$lines}lh" aria-hidden="true"></div>
   </xsl:template>
 
+  <xsl:function name="lb:has-align" as="xs:boolean">
+    <xsl:param name="nodes" as="node()*" />
+    <xsl:sequence select="some $node in $nodes satisfies
+      (if ($node/self::lb:align) then true()
+       else if ($node/self::t:tabs or $node/self::lb:tab) then false()
+       else lb:has-align($node/node()))" />
+  </xsl:function>
+
+  <xsl:template name="lb:render-regions">
+    <xsl:param name="nodes" as="node()*" />
+    <xsl:choose>
+      <xsl:when test="lb:has-align($nodes)">
+        <xsl:for-each select="('left', 'center', 'right')">
+          <xsl:variable name="content" select="lb:filter-slot-nodes($nodes, ., ())" />
+          <xsl:if test="exists($content[self::* or self::text()[normalize-space()]])">
+            <div class="align-{.}"><xsl:apply-templates select="$content" /></div>
+          </xsl:if>
+        </xsl:for-each>
+      </xsl:when>
+      <xsl:otherwise><xsl:apply-templates select="$nodes" /></xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   <xsl:template match="t:line">
-    <xsl:variable name="line-type" as="xs:string" select="if (@type) then string(@type) else 'break'" />
-    <xsl:variable
-      name="meaningful-content"
-      as="node()*"
-      select="node()[not(self::text()[not(normalize-space())]) and not(self::t:sidenote-marker or self::t:page)]"
-    />
-    <xsl:variable
-      name="has-align"
-      as="xs:boolean"
-      select="exists($meaningful-content[self::lb:align or descendant::lb:align[not(ancestor::t:tabs)]])"
-    />
-    <div>
-      <xsl:attribute name="class" select="
-        string-join(
-          (
-            'lb-line-block',
-            if ($line-type = 'empty') then 'lb-line-block--empty' else (),
-            if ($line-type = 'line') then 'lb-line-block--rule' else ()
-          ),
-          ' '
-        )
-      " />
-      <xsl:attribute name="data-type" select="$line-type" />
-      <xsl:if test="@tab">
-        <xsl:attribute name="data-tab" select="string(@tab)" />
-      </xsl:if>
-      <xsl:if test="$has-align and $line-type != 'line'">
-        <xsl:attribute name="data-layout">aligned</xsl:attribute>
-      </xsl:if>
-      <xsl:choose>
-        <xsl:when test="$line-type = 'line'">
-          <hr class="lb-rule" />
-        </xsl:when>
-        <xsl:when test="$has-align">
-          <div class="align-left">
-            <xsl:apply-templates select="lb:filter-slot-nodes(node(), 'left', ())" />
-          </div>
-          <div class="align-center">
-            <xsl:apply-templates select="lb:filter-slot-nodes(node(), 'center', ())" />
-          </div>
-          <div class="align-right">
-            <xsl:apply-templates select="lb:filter-slot-nodes(node(), 'right', ())" />
-          </div>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:apply-templates select="node()" />
-        </xsl:otherwise>
-      </xsl:choose>
-    </div>
+    <xsl:choose>
+      <!-- Milestones between semantic blocks do not create blank lines. -->
+      <xsl:when test="not(@type or @tab) and not(lb:has-meaningful-content(node()))">
+        <xsl:apply-templates />
+      </xsl:when>
+      <xsl:otherwise>
+        <div class="lb-line-block{if (@type = 'line') then ' lb-line-block--rule' else ''}">
+          <xsl:if test="@tab"><xsl:attribute name="data-tab" select="@tab" /></xsl:if>
+          <xsl:if test="lb:has-align(node())"><xsl:attribute name="data-layout">aligned</xsl:attribute></xsl:if>
+          <xsl:choose>
+            <xsl:when test="@type = 'line'">
+              <xsl:apply-templates select="node()" />
+              <hr class="lb-rule" />
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:call-template name="lb:render-regions"><xsl:with-param name="nodes" select="node()" /></xsl:call-template>
+            </xsl:otherwise>
+          </xsl:choose>
+        </div>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="t:tabs">
@@ -605,12 +581,12 @@
 
   <xsl:template match="t:row">
     <div class="lb-tab-row">
-      <xsl:attribute name="data-type" select="if (@type) then string(@type) else 'break'" />
       <xsl:if test="@tab">
         <xsl:attribute name="data-tab" select="string(@tab)" />
       </xsl:if>
       <xsl:choose>
         <xsl:when test="@type = 'line'">
+          <xsl:apply-templates />
           <hr class="lb-rule" />
         </xsl:when>
         <xsl:otherwise>
@@ -620,20 +596,8 @@
     </div>
   </xsl:template>
 
-  <xsl:template match="lb:sidenote">
-    <span class="sidenote-marker">
-      <xsl:attribute name="id" select="
-        concat(
-          'anchor-letter-',
-          format-integer(xs:integer(/*/@letter), '000'),
-          '-page-',
-          string(@page),
-          '-sidenote-',
-          string(count(preceding::lb:sidenote[@page = current()/@page]) + 1)
-        )
-      " />
-    </span>
-  </xsl:template>
+  <!-- Notes are rendered separately by sidenotes.xsl. -->
+  <xsl:template match="lb:sidenote" />
 
   <xsl:template match="lb:line">
     <xsl:sequence />
@@ -643,10 +607,6 @@
     <span class="align" data-pos="{@pos}">
       <xsl:apply-templates />
     </span>
-  </xsl:template>
-
-  <xsl:template match="lb:added">
-    <span class="added"><xsl:apply-templates /></span>
   </xsl:template>
 
   <xsl:template match="lb:aq">
@@ -666,7 +626,7 @@
   </xsl:template>
 
   <xsl:template match="lb:highlight">
-    <mark class="highlight" data-color="{@color}" style="background-color: {@color};">
+    <mark class="highlight" data-color="{@color}">
       <xsl:apply-templates />
     </mark>
   </xsl:template>
@@ -676,7 +636,7 @@
   </xsl:template>
 
   <xsl:template match="lb:address">
-    <address><xsl:apply-templates /></address>
+    <xsl:apply-templates />
   </xsl:template>
 
   <xsl:template match="lb:insertion">
@@ -684,8 +644,8 @@
       <xsl:if test="@pos">
         <xsl:attribute name="data-pos" select="@pos" />
       </xsl:if>
-      <xsl:if test="@pos = ('top', 'bottom', 'left', 'right')">
-        <span class="insertion-marker"></span>
+      <xsl:if test="@annotation">
+        <xsl:attribute name="data-annotation" select="@annotation" />
       </xsl:if>
       <xsl:apply-templates />
     </span>
@@ -720,11 +680,8 @@
   </xsl:template>
 
   <xsl:template match="lb:nr">
-    <span class="nr">
-      <xsl:if test="@extent">
-        <xsl:attribute name="data-extent" select="@extent" />
-      </xsl:if>
-      <xsl:apply-templates />
+    <span class="nr" data-extent="{if (@extent) then @extent else '1'}">
+      <xsl:apply-templates select="node()[not(self::text()[not(normalize-space())])]" />
     </span>
   </xsl:template>
 
@@ -742,14 +699,6 @@
 
   <xsl:template match="lb:hb">
     <span class="hb"><xsl:apply-templates /></span>
-  </xsl:template>
-
-  <xsl:template match="lb:sub">
-    <sub class="sub"><xsl:apply-templates /></sub>
-  </xsl:template>
-
-  <xsl:template match="lb:super">
-    <sup class="super"><xsl:apply-templates /></sup>
   </xsl:template>
 
   <xsl:template match="lb:er">
@@ -772,32 +721,14 @@
     <span class="subst"><xsl:apply-templates /></span>
   </xsl:template>
 
-  <xsl:template match="lb:ful">
-    <span class="ful"><xsl:apply-templates /></span>
-  </xsl:template>
-
-  <xsl:template match="lb:datum">
-    <span class="datum"><xsl:apply-templates /></span>
-  </xsl:template>
-
-  <xsl:template match="lb:ps">
-    <span class="ps"><xsl:apply-templates /></span>
-  </xsl:template>
-
-  <xsl:template match="lb:sal">
-    <span class="sal"><xsl:apply-templates /></span>
-  </xsl:template>
-
-  <xsl:template match="lb:sig">
-    <span class="sig"><xsl:apply-templates /></span>
-  </xsl:template>
-
   <xsl:template match="lb:tabs">
     <xsl:apply-templates select="lb:normalize-tabs(.)" />
   </xsl:template>
 
   <xsl:template match="lb:tab">
-    <div class="tab" data-value="{@value}"><xsl:apply-templates /></div>
+    <div class="tab" data-value="{@value}">
+      <xsl:call-template name="lb:render-regions"><xsl:with-param name="nodes" select="node()" /></xsl:call-template>
+    </div>
   </xsl:template>
 
 </xsl:stylesheet>

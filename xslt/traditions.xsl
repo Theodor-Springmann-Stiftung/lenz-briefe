@@ -49,6 +49,7 @@
       </xsl:if>
       <xsl:call-template name="lb:render-flow">
         <xsl:with-param name="nodes" select="node()" />
+        <xsl:with-param name="page-id-prefix" select="concat('app-', count(preceding-sibling::*[local-name()='app']) + 1, '-page-')" />
       </xsl:call-template>
     </div>
   </xsl:template>
