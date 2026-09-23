@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {noteTarget, freePosition, sidenoteOrder} from '../src/lib/margin-placement.mjs';
+import {placeMarginItem, sidenoteOrder} from '../src/lib/margin-placement.mjs';
 
 test('sidenotes sort top, sides, bottom while retaining order within each group', () => {
   const positions = ['bottom left', 'left', 'top right', 'right', 'top', 'bottom', 'top left', 'bottom right'];
@@ -8,27 +8,16 @@ test('sidenotes sort top, sides, bottom while retaining order within each group'
     ['top right', 'top', 'top left', 'left', 'right', 'bottom left', 'bottom', 'bottom right']);
 });
 
-test('notes end at the page bottom, accounting for the whole group height', () => {
-  assert.equal(noteTarget(100, 1000, 200), 782);
-  const groupHeight = 200 + 18 + 150;
-  assert.equal(noteTarget(100, 1000, groupHeight) + groupHeight, 982);
-  assert.equal(noteTarget(100, 200, 300), 100);
+test('an oversized note stays at its page start and continues across the boundary', () => {
+  assert.deepEqual(placeMarginItem(100, 300, -18, 200), {top:100, bottom:400, overflow:true});
 });
-test('page numbers and other notes remain clear of a note', () => {
-  const occupied = [{top:100, bottom:120}, {top:450, bottom:650}, {top:1000, bottom:1020}];
-  assert.equal(freePosition(100, 200, 100, 1000, occupied), 138);
-  assert.equal(freePosition(782, 200, 100, 1000, occupied), 782);
-  assert.equal(freePosition(450, 200, 100, 1000, occupied), 232);
+test('next-page notes follow overflow in order without reserving space or jumping pages', () => {
+  const first = placeMarginItem(100, 300, -18, 200);
+  const next = placeMarginItem(200, 80, first.bottom, 600, 6);
+  assert.deepEqual(next, {top:406, bottom:486, overflow:false});
+  assert.deepEqual(placeMarginItem(600, 50, next.bottom, 800), {top:600, bottom:650, overflow:false});
 });
-test('oversized notes survive without overlapping occupied positions', () => {
-  assert.equal(freePosition(0, 500, 0, 200, [{top:200, bottom:220}]), 238);
-});
-test('strict placement moves a whole note rather than crossing a page boundary', () => {
-  assert.equal(freePosition(100, 150, 100, 200, [], false), null);
-  assert.equal(freePosition(100, 80, 100, 200, [], false), 100);
-});
-test('overflow uses free space before the next page’s native notes', () => {
-  const occupied = [{top:300, bottom:320}, {top:650, bottom:780}];
-  assert.equal(freePosition(300, 200, 300, 800, occupied, false), 338);
-  assert.equal(freePosition(300, 400, 300, 800, occupied, false), null);
+test('hand labels follow a crossing note without forcing it to move', () => {
+  const note = placeMarginItem(0, 500, -18, 200);
+  assert.deepEqual(placeMarginItem(200, 20, note.bottom), {top:518, bottom:538, overflow:false});
 });

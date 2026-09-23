@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import LetterHeader from '../../components/LetterHeader.astro';
+import Icon from '../../components/Icon.astro';
 import SidenotePosition from '../../components/SidenotePosition.astro';
 import {sidenoteOrder} from '../../lib/margin-placement.mjs';
 import {catalog, letterFiles, letterUrl, titleFor, type Letter} from '../../lib/edition';
@@ -22,30 +23,34 @@ const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'hae
 <Layout wide title={`Brief ${letter.letter} · ${titleFor(letter)} · Lenz Briefe`}>
   <div class="letter-toolbar">
     <nav class="letter-navigation" aria-label="Briefnavigation">
-      {previous && <a href={letterUrl(previous.letter)} aria-label={`Vorheriger Brief: ${previous.letter}`}><span aria-hidden="true">←</span></a>}
+      {previous && <a href={letterUrl(previous.letter)} aria-label={`Vorheriger Brief: ${previous.letter}`}><Icon name="arrowLeft" /></a>}
       <span class="navigation-position">{index + 1} / {catalog.letters.length}</span>
-      {next && <a href={letterUrl(next.letter)} aria-label={`Nächster Brief: ${next.letter}`}><span aria-hidden="true">→</span></a>}
+      {next && <a href={letterUrl(next.letter)} aria-label={`Nächster Brief: ${next.letter}`}><Icon name="arrowRight" /></a>}
     </nav>
-    {sectionLinks.length > 0 && <nav class="reading-toolbar" aria-label="Abschnitte zum Brief"><p>{sectionLinks.map((item, i) => <Fragment>{i > 0 && ', '}<a href={`#${item.id}`}>{item.name}{i === sectionLinks.length - 1 && <Fragment> <span class="section-link-arrow" aria-hidden="true">↓</span></Fragment>}</a></Fragment>)}</p></nav>}
+    {sectionLinks.length > 0 && <nav class="reading-toolbar" aria-label="Abschnitte zum Brief"><a href="#ueberlieferung">{sectionLinks.map(item => item.name).join(', ')} <Icon name="arrowDown" class="section-link-arrow" /></a></nav>}
   </div>
-  <div class="detail-header"><LetterHeader letter={letter} /></div>
-  <div class="reading-layout" data-reading-layout>
-    <article class="edition-text letter-body" aria-label={`Text von Brief ${letter.letter}`} set:html={text} />
-    <aside class="marginalia" aria-label="Seitenzahlen und Randnotizen">
-      {letter.pages.map((page,i) => !(i === 0 && page === '1') && <div class="marginal-item page-number" data-anchor={`page-${page}`} data-priority="0"><a href={`#page-${page}`} aria-label={`Seite ${page}`}>{page}</a></div>)}
-      {placed.map(note => <div class="marginal-item margin-note sidenote-layout" data-anchor={note.anchorId!} data-priority="2"><SidenotePosition position={note.pos} /><div class="edition-text" set:html={note.html} /><p class="note-annotation">{note.annotation}</p></div>)}
-    </aside>
+  <div class="letter-content">
+    <div class="detail-header"><LetterHeader letter={letter} /></div>
+    <div class="reading-layout" data-reading-layout>
+      <article class="edition-text letter-body" aria-label={`Text von Brief ${letter.letter}`} set:html={text} />
+      <aside class="page-margin" aria-label="Seitenzahlen">
+        {letter.pages.map((page,i) => !(i === 0 && page === '1') && <div class="marginal-item page-number" data-anchor={`page-${page}`} data-priority="0"><a href={`#page-${page}`} aria-label={`Seite ${page}`}>{page}</a></div>)}
+      </aside>
+      <aside class="marginalia" aria-label="Randnotizen und Hände">
+        {placed.map(note => <div class="marginal-item margin-note sidenote-layout" data-anchor={note.anchorId!} data-priority="2"><SidenotePosition position={note.pos} /><div class="edition-text" set:html={note.html} /><div class="sidenote-details"><p class="note-annotation sidenote-description">{note.annotation}</p></div></div>)}
+      </aside>
+    </div>
+    {unplaced.length > 0 && <section class="unplaced-notes" aria-labelledby="unplaced-title"><p class="eyebrow" id="unplaced-title">Weitere Randnotizen</p>{unplaced.map(note => <div class="unplaced-note sidenote-layout"><SidenotePosition position={note.pos} /><div class="edition-text" set:html={note.html} /><div class="sidenote-details"><p class="note-annotation sidenote-description">{note.annotation}</p><p class="note-annotation">Seite {note.page} · Im Text ist keine zugehörige Seitenmarke verzeichnet.</p></div></div>)}</section>}
+    <section class="apparatus" id="ueberlieferung" aria-label="Überlieferung & Textkritik">
+      {traditions.length ? traditions.map(item => <Fragment>
+        <div class="apparatus-entry" id={item.id}>
+          {item.type === 'app' && <h2>{item.name}</h2>}
+          <div class="edition-text apparatus-text" set:html={item.html} />
+        </div>
+      </Fragment>) : <p>Keine Angaben zur Überlieferung vorhanden.</p>}
+      {letter.handRefs.length > 0 && <div class="apparatus-entry hand-key" id="haende"><h2>Hände im Brief</h2><ul class="edition-text apparatus-text">{Object.values(hands).map(name => <li><span class="hand-sample" aria-hidden="true">Aa</span><span>{name}</span></li>)}</ul></div>}
+    </section>
   </div>
-  {unplaced.length > 0 && <section class="unplaced-notes" aria-labelledby="unplaced-title"><p class="eyebrow" id="unplaced-title">Weitere Randnotizen</p>{unplaced.map(note => <div class="unplaced-note sidenote-layout"><SidenotePosition position={note.pos} /><p class="note-annotation">Seite {note.page} · Im Text ist keine zugehörige Seitenmarke verzeichnet.</p><div class="edition-text" set:html={note.html} /><p class="note-annotation">{note.annotation}</p></div>)}</section>}
-  <section class="apparatus" id="ueberlieferung" aria-label="Überlieferung & Textkritik">
-    {traditions.length ? traditions.map(item => <Fragment>
-      <div class="apparatus-entry" id={item.id}>
-        {item.type === 'app' && <h2>{item.name}</h2>}
-        <div class="edition-text apparatus-text" set:html={item.html} />
-      </div>
-    </Fragment>) : <p>Keine Angaben zur Überlieferung vorhanden.</p>}
-    {letter.handRefs.length > 0 && <div class="apparatus-entry hand-key" id="haende"><h2>Hände im Brief</h2><ul class="edition-text apparatus-text">{Object.values(hands).map(name => <li><span class="hand-sample" aria-hidden="true">Aa</span><span>{name}</span></li>)}</ul></div>}
-  </section>
   <script type="application/json" id="hand-data" set:html={JSON.stringify(hands).replace(/</g, '\\u003c')} />
   <script>import '../../scripts/margins';</script>
   <script>import '../../scripts/note-connections';</script>

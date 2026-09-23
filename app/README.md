@@ -3,8 +3,9 @@
 Astro renders the index, 374 letter pages and the reading guide. Python and Saxon/C
 transform the source XML before each build; the browser never transforms XML.
 Tailwind defines the theme, and `src/styles/global.css` styles the shared edition
-classes. Source Serif, Source Sans and Bodoni Moda are self-hosted under
-`public/fonts/`, alongside their OFL licenses.
+classes. Source Serif, Linux Biolinum and Bodoni Moda are self-hosted under
+`public/fonts/`, alongside their licenses. Linux Biolinum includes regular, italic, bold and
+bold oblique (used for bold italic), downloaded from the [CTAN Libertine package](https://mirrors.mit.edu/CTAN/fonts/libertine/opentype/).
 
 ## Run and build
 
@@ -41,8 +42,14 @@ otherwise `uv run`. An unsuccessful export stops the site build.
   keep their attributes; hand origins identify a single span across line breaks.
 - `sidenotes.json` retains all 215 notes. Notes without a matching page marker are
   shown after the text and reported in `status.json`; these currently occur in
-  letters 64 and 167. On desktop, page labels, hands and notes align with anchors
-  in the left margin. Colliding items move down. On smaller screens they follow
+  letters 64 and 167. On desktop, page labels remain in the left margin. Hands and notes occupy
+  the right margin, with notes starting at their source page’s beginning.
+  Metadata, letter text and apparatus share the same main column. Margin items
+  flow downward in order. Notes can continue across page boundaries; overflow
+  notes carry a “S. 1:” prefix in the position description. The icon hangs
+  to the left at the top of each note; descriptions, page labels and hand
+  information sit directly below the note’s text. Later notes and hand labels
+  follow without reserving space on subsequent pages. On smaller screens they follow
   the text in normal flow.
 - `traditions.json` provides ordered apparatus records, including text between
   entries. The same typography applies to letter, note and apparatus fragments.

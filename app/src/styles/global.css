@@ -2,11 +2,14 @@
 @import "tippy.js/dist/tippy.css";
 @font-face { font-family: "Source Serif"; src: url('/fonts/SourceSerif4.ttf') format('truetype'); font-weight: 200 900; font-style: normal; font-display: swap; }
 @font-face { font-family: "Source Serif"; src: url('/fonts/SourceSerif4-Italic.ttf') format('truetype'); font-weight: 200 900; font-style: italic; font-display: swap; }
-@font-face { font-family: "Source Sans"; src: url('/fonts/SourceSans3.ttf') format('truetype'); font-weight: 200 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Linux Biolinum"; src: url('/fonts/LinBiolinum_R.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Linux Biolinum"; src: url('/fonts/LinBiolinum_RI.otf') format('opentype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Linux Biolinum"; src: url('/fonts/LinBiolinum_RB.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Linux Biolinum"; src: url('/fonts/LinBiolinum_RBO.otf') format('opentype'); font-weight: 700; font-style: italic; font-display: swap; }
 @font-face { font-family: "Bodoni Moda"; src: url('/fonts/BodoniModa.ttf') format('truetype'); font-weight: 400 900; font-display: swap; }
 @theme {
   --font-serif: "Source Serif", Georgia, "Times New Roman", serif;
-  --font-sans: "Source Sans", Arial, sans-serif;
+  --font-sans: "Linux Biolinum", Arial, sans-serif;
   --font-hand: "Bodoni Moda", Didot, "Bodoni MT", serif;
   --color-paper: #fcfcfb;
   --color-filter: #eff1ef;
@@ -118,37 +121,42 @@
   .empty-state p { @apply text-muted; }
   .empty-state button { @apply underline mt-6; }
   .notice { @apply py-4 text-muted; }
-  .letter-toolbar { @apply flex flex-wrap justify-end items-center gap-x-8 gap-y-5 py-7; }
+  .letter-toolbar { @apply flex flex-col items-end gap-1 py-7 font-sans; }
   .letter-navigation { @apply flex items-center gap-5 text-sm text-muted; }
   .letter-navigation a { @apply inline-flex size-8 items-center justify-center; }
   .navigation-position { @apply text-xs; font-variant-numeric:tabular-nums; }
-  .detail-header { max-width: 900px; margin: 3rem auto 4rem; }
+  .letter-content { @apply font-serif; max-width:75ch; margin-inline:auto; --reading-columns:minmax(2rem, 1fr) minmax(0,75ch) minmax(10rem,1fr); font-size:1.125rem; }
+  .detail-header { @apply font-sans; margin: 3rem auto 4rem; }
   .detail-header .letter-header { --header-text-size:1.125rem; }
   .reading-toolbar { @apply flex justify-end text-sm text-right text-muted; }
   .reading-toolbar a:hover { text-decoration:underline; }
-  .section-link-arrow { position:relative; top:-.15em; font-size:.8em; }
+  .section-link-arrow { width:1em; height:1em; vertical-align:-.15em; }
   .reading-layout { @apply font-serif; position:relative; font-size: 1.125rem; }
-  .letter-body { width:100%; max-width:75ch; margin: 1rem auto 0; }
-  .marginalia { @apply pt-8 mt-10; }
+  .letter-body { width:100%; margin: 1rem auto 0; }
+  .marginalia, .page-margin { @apply pt-8 mt-10; }
   .marginal-item { @apply mb-5; }
   .margin-kicker { @apply block font-sans text-[.65rem] uppercase tracking-[.12em] text-muted mb-2; }
   .page-number { @apply font-sans text-muted text-xs text-right; }
   .page-number a { display:inline-block; }
   .margin-note { font-size: .9rem; line-height:1.6; }
+  .margin-note:has(+ .margin-note) { margin-bottom:6px; }
   .sidenote-layout { display:grid; grid-template-columns:.7rem minmax(0,1fr); column-gap:.65rem; text-align:left; }
-  .sidenote-layout > :not(.sidenote-position) { grid-column:2; }
-  .sidenote-layout > .sidenote-position { grid-column:1; grid-row:1; margin: .2rem 0 0; }
+  .sidenote-layout > .edition-text { grid-column:2; grid-row:1; }
+  .sidenote-details { grid-column:2; margin-top:.125rem; }
+  .sidenote-layout > .sidenote-position { grid-column:1; grid-row:1; align-self:start; margin:.2rem 0 0; }
   .sidenote-position { display:inline-block; width:.7rem; margin-left:.35em; vertical-align:-.15em; }
   .sidenote-position svg { display:block; width:100%; height:auto; overflow:visible; }
   .sidenote-position svg > g[data-active=false] { display:none !important; }
   .sidenote-position svg > g[data-active=true] { display:inline !important; }
   .note-annotation { @apply text-muted font-sans text-xs leading-relaxed mt-3; }
-  .sidenote-layout > .note-annotation { margin-top:.25rem; }
-  .sidenote-overflow-label { @apply font-sans text-xs text-muted; margin-bottom:.25rem; }
-  .hand-label { @apply font-sans text-xs leading-snug text-accent text-right; border-right: 2px solid #a8af9a; padding-right:.7rem; }
-  .unplaced-notes { @apply py-8 mt-12; max-width: 75ch; margin-inline:auto; }
+  .sidenote-details > .note-annotation { margin-top:.25rem; }
+  .sidenote-details > .sidenote-description { margin:0; }
+  .sidenote-overflow-label { @apply font-sans text-xs text-muted; margin:0; line-height:1.45; }
+  .hand-label { @apply font-sans text-xs leading-snug text-left; color:#000; border-left: 2px solid #000; padding-left:.7rem; }
+  .unplaced-notes { @apply py-8 mt-12; width:100%; margin-inline:auto; }
   .unplaced-note { @apply mt-5; }
-  .apparatus { @apply mt-20 pt-10 mx-auto font-serif; max-width:75ch; font-size:1.125rem; }
+  .unplaced-note + .unplaced-note { margin-top:6px; }
+  .apparatus { @apply mt-20 pt-10 mx-auto font-sans; width:100%; font-size:1.125rem; }
   .apparatus-entry { @apply mb-8; }
   .apparatus-entry > h2 { @apply font-sans text-sm text-muted mb-3; }
   .apparatus-text { font-size:1rem; }
@@ -177,6 +185,7 @@
 .fn[data-note-connected] { cursor:help; border-radius:2px; }
 /* Shared editorial semantics: these selectors also style imported XSLT HTML. */
 .edition-text { @apply font-serif; line-height:1.85; hyphens:none; overflow-wrap:break-word; }
+.apparatus .edition-text { @apply font-sans; }
 .margin-note .edition-text, .unplaced-note .edition-text { line-height:1.45; }
 .edition-text .lb-line-block { min-height: 1lh; }
 .edition-text .lb-line-block, .edition-text .lb-tab-row { text-indent:0; }
@@ -235,9 +244,13 @@
 .edition-text .tab:has(> [class^=align-]) { display:flex; flex-wrap:wrap; justify-content:space-between; }
 .edition-text mark { background:#eee0a7; color:inherit; }
 @media (min-width: 1100px) {
-  .reading-layout { display:grid; grid-template-columns:minmax(10rem, 1fr) minmax(0,75ch) minmax(2rem,1fr); column-gap:3rem; align-items:start; }
+  .letter-content { max-width:none; display:grid; grid-template-columns:var(--reading-columns); column-gap:3rem; }
+  .letter-content > .detail-header, .letter-content > .apparatus, .letter-content > .unplaced-notes { grid-column:2; width:100%; max-width:none; }
+  .reading-layout { grid-column:1 / -1; display:grid; grid-template-columns:subgrid; column-gap:3rem; align-items:start; }
   .letter-body { grid-column:2; grid-row:1; margin:0; }
-  .marginalia { grid-column:1; grid-row:1; margin:0; padding:0; border:0; position:relative; min-width:0; }
+  .marginalia, .page-margin { grid-row:1; margin:0; padding:0; border:0; position:relative; min-width:0; }
+  .page-margin { grid-column:1; }
+  .marginalia { grid-column:3; }
   .margin-ready .marginal-item { position:absolute; left:0; right:0; margin:0; }
   .margin-ready .page-number { padding-top:.35rem; }
   .margin-ready .hand-label { transform:translateY(.35rem); }
@@ -268,7 +281,7 @@
   [data-tippy-root], .note-connections { display:none; }
   .site-header nav, .letter-toolbar, .site-footer { display:none; }
   .site-shell { padding:0; }
-  .reading-layout { display:block; }
+  .letter-content, .reading-layout { display:block; }
   .margin-ready .marginal-item { position:static; }
-  .marginalia { height:auto !important; }
+  .marginalia, .page-margin { height:auto !important; }
 }

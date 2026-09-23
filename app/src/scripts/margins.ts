@@ -1,9 +1,10 @@
-import {noteTarget, freePosition} from '../lib/margin-placement.mjs';
+import {placeMarginItem} from '../lib/margin-placement.mjs';
 
 const layout = document.querySelector<HTMLElement>('[data-reading-layout]');
 if (layout) {
   const body = layout.querySelector<HTMLElement>('.letter-body')!;
   const margin = layout.querySelector<HTMLElement>('.marginalia')!;
+  const pageMargin = layout.querySelector<HTMLElement>('.page-margin')!;
   const names = JSON.parse(document.querySelector('#hand-data')?.textContent || '{}');
   const seen = new Set<string>();
   body.querySelectorAll<HTMLElement>('.hand').forEach((hand,index) => {
@@ -28,15 +29,15 @@ if (layout) {
     const label = document.createElement('p');
     label.className = 'note-annotation';
     label.textContent = `Hand: ${new Intl.ListFormat('de', {type:'conjunction'}).format([...refs].map(ref => names[ref] || 'Unbekannte Hand'))}`;
-    note.append(label);
+    note.querySelector('.sidenote-details')!.append(label);
   });
   const overflowLabels = new Map<HTMLElement, HTMLElement>();
   margin.querySelectorAll<HTMLElement>('.margin-note').forEach(note => {
-    const label = document.createElement('p');
+    const label = document.createElement('span');
     label.className = 'sidenote-overflow-label';
-    label.textContent = `Zu Seite ${note.querySelector<HTMLElement>('.sidenote')?.dataset.page}:`;
+    label.textContent = `S. ${note.querySelector<HTMLElement>('.sidenote')?.dataset.page}: `;
     label.hidden = true;
-    note.insertBefore(label, note.querySelector('.edition-text'));
+    note.querySelector('.sidenote-description')!.prepend(label);
     overflowLabels.set(note, label);
   });
   let scheduled = false;
@@ -44,6 +45,9 @@ if (layout) {
     scheduled = false;
     layout!.classList.remove('margin-ready');
     margin.style.height = '';
+    pageMargin.style.height = '';
+    const pageNumbers = [...pageMargin.querySelectorAll<HTMLElement>('.page-number')];
+    pageNumbers.forEach(item => {item.style.top = '';});
     const items = [...margin.querySelectorAll<HTMLElement>('.marginal-item')];
     items.forEach(item => {item.style.top = '';});
     overflowLabels.forEach(label => {label.hidden = true;});
@@ -55,64 +59,42 @@ if (layout) {
       start: Math.max(0, page.getBoundingClientRect().top - origin),
       end: (pages[index + 1]?.getBoundingClientRect().top ?? body.getBoundingClientRect().bottom) - origin,
     }]));
-    const occupied: {top:number; bottom:number}[] = [];
-    const fixed = items.filter(item => !item.classList.contains('margin-note')).map(item => {
+    // Page numbers occupy their own left margin, independently of right-hand notes.
+    let pageBottom = 0;
+    for (const item of pageNumbers) {
       const anchor = document.getElementById(item.dataset.anchor!);
-      return {item, anchor, top: anchor ? anchor.getBoundingClientRect().top - origin : 0};
-    }).filter(t => t.anchor).sort((a,b) => a.top - b.top || Number(a.item.dataset.priority) - Number(b.item.dataset.priority));
-    let bottom = 0;
-    for (const {item,top} of fixed) {
-      const position = Math.max(top, bottom, 0);
-      item.style.top = `${position}px`;
-      const end = position + item.getBoundingClientRect().height;
-      occupied.push({top:position, bottom:end});
-      bottom = end + 18;
-    }
-    const overflow: {item:HTMLElement; sourcePage:number}[] = [];
-    const boundsList = [...pageBounds.values()];
-    let pageIndex = 0;
-    for (const [pageId, bounds] of pageBounds) {
-      const notes = items.filter(item => item.classList.contains('margin-note') && item.dataset.anchor === pageId);
-      const heights = notes.map(item => item.getBoundingClientRect().height);
-      // Reserve native notes first so overflow cannot displace a later page's
-      // own notes. Keep the largest fitting prefix, moving whole notes only.
-      let count = notes.length;
-      for (; count > 0; count--) {
-        const height = heights.slice(0, count).reduce((sum, value) => sum + value, 0) + (count - 1) * 18;
-        const target = noteTarget(bounds.start, bounds.end, height);
-        let top = freePosition(target, height, bounds.start, bounds.end, occupied, false);
-        if (top === null) continue;
-        occupied.push({top, bottom:top + height});
-        for (let index = 0; index < count; index++) {
-          notes[index].style.top = `${top}px`;
-          top += heights[index] + 18;
-        }
-        break;
-      }
-      overflow.push(...notes.slice(count).map(item => ({item, sourcePage:pageIndex})));
-      pageIndex++;
-    }
-    let overflowEnd = 0;
-    for (const {item, sourcePage} of overflow) {
-      overflowLabels.get(item)!.hidden = false;
-      const height = item.getBoundingClientRect().height;
-      let top: number | null = null;
-      for (const bounds of boundsList.slice(sourcePage + 1)) {
-        const start = Math.max(bounds.start, overflowEnd);
-        top = freePosition(start, height, start, bounds.end - 18, occupied, false);
-        if (top !== null) break;
-      }
-      // If no remaining page can hold the whole note, retain it below the
-      // final page rather than letting a page marker cut through its text.
-      if (top === null) {
-        const start = Math.max(body.getBoundingClientRect().bottom - origin + 18, overflowEnd);
-        top = freePosition(start, height, start, Infinity, occupied)!;
-      }
+      if (!anchor) continue;
+      const top = Math.max(0, pageBottom, anchor.getBoundingClientRect().top - origin);
       item.style.top = `${top}px`;
-      occupied.push({top, bottom:top + height});
-      overflowEnd = top + height + 18;
+      pageBottom = top + item.getBoundingClientRect().height + 18;
     }
-    margin.style.height = `${Math.max(0, ...occupied.map(item => item.bottom))}px`;
+    pageMargin.style.height = `${Math.max(0, pageBottom - 18)}px`;
+    // One ordered stream: notes may cross page boundaries, and later items
+    // follow immediately after them instead of reserving or searching page slots.
+    const anchored = items.map(item => {
+      const anchor = document.getElementById(item.dataset.anchor!);
+      const bounds = pageBounds.get(item.dataset.anchor!);
+      return {item, anchor, target: bounds?.start ?? (anchor ? anchor.getBoundingClientRect().top - origin : 0),
+        pageEnd: bounds?.end ?? Infinity};
+    }).filter(entry => entry.anchor).sort((a, b) => a.target - b.target
+      || Number(a.item.dataset.priority) - Number(b.item.dataset.priority));
+    let bottom = -18;
+    let previousWasNote = false;
+    for (const {item, target, pageEnd} of anchored) {
+      const isNote = item.classList.contains('margin-note');
+      const gap = isNote && previousWasNote ? 6 : 18;
+      let placement = placeMarginItem(target, item.getBoundingClientRect().height, bottom, pageEnd, gap);
+      const label = overflowLabels.get(item);
+      if (label && placement.overflow) {
+        label.hidden = false;
+        // The page label may wrap the description; measure before placing the next item.
+        placement = placeMarginItem(target, item.getBoundingClientRect().height, bottom, pageEnd, gap);
+      }
+      item.style.top = `${placement.top}px`;
+      bottom = placement.bottom;
+      previousWasNote = isNote;
+    }
+    margin.style.height = `${Math.max(0, bottom)}px`;
     document.dispatchEvent(new Event('margins:arranged'));
   }
   function schedule() {if (!scheduled) {scheduled = true; requestAnimationFrame(arrange);}}
