@@ -67,13 +67,14 @@ class SiteExportTests(unittest.TestCase):
             self.assertTrue(any(r['type'] == 'text' and '.' in r['html'] for r in data))
 
     def test_languages_standalone_notes_and_hand_origins(self):
-        source = '''<letterText xmlns="https://lenz-archiv.de" letter="999"><page index="1"/>
+        source = '''<letterText xmlns="https://lenz-archiv.de" letter="999"><page index="1"/><note>At page marker</note>
         <line/><note>Alone</note><line/>Text <note>Inline</note>
-        <line/><hand ref="1">A<line/>B</hand><aq>Latin</aq><gr>Greek</gr><hb>Hebrew</hb><ru>Russian</ru><fr>French</fr>
+        <line tab="3"/><hand ref="1">A<line/>B</hand><aq>Latin</aq><gr>Greek</gr><hb>Hebrew</hb><ru>Russian</ru><fr>French</fr>
         <insertion pos="top">inserted</insertion><nr extent="4"/></letterText>'''
         result = self.runner.run_stylesheet('letter-text',source,{},Timings())
         tree = html.fragment_fromstring(result, create_parent='div')
-        self.assertEqual(len(tree.xpath('.//div[contains(@class,"lb-line-block--note")]')),1)
+        self.assertEqual(len(tree.xpath('.//div[contains(@class,"lb-line-block--note")]')),2)
+        self.assertEqual(tree.xpath('.//*[@data-tab="3"]/@style'),['--indent-units: 3'])
         self.assertEqual(tree.xpath('.//@lang'),['la','grc','he','ru','fr'])
         origins = tree.xpath('.//span[@class="hand"]/@data-origin')
         self.assertEqual(len(origins),2)

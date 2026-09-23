@@ -24,13 +24,18 @@ uv run transform --out ../../app/generated
 
 The exporter always publishes a `status.json` file into the output directory.
 Successful runs also publish the generated letter artifacts. Failed runs replace
-the output with failure metadata so the Astro app can build a generic failure site.
+the output with failure metadata. The Astro build stops if the export fails.
+
+The root `catalog.json` is the canonical catalog used by Astro. It includes all
+sending/receiving events and dates, derived sort keys and year groups, filter IDs,
+and reference dictionaries. The legacy index and metadata records remain available.
 
 Per letter, the successful export publishes:
 
 - `meta.json`
 - `text.html`
 - `sidenotes.json`
+- `traditions.json`
 
 `text.html` is a continuous letter-level stream with inline page markers derived
 from source `<page>` tags. `sidenotes.json` is keyed by source page index.
@@ -60,7 +65,9 @@ or invisible placeholder characters. Markers retain their order relative to
 vertical space. Apparatus markers use `app-N-page-M` IDs to avoid collisions with
 `page-M` in the letter body. A letter page should contain one letter's fragments.
 
-`line/@tab` becomes `data-tab` on its line; ordinary lines omit the redundant
+`line/@tab` becomes `data-tab` on its line. Site CSS uses it for first-line
+indentation only; automatically wrapped continuation lines remain at the left
+edge, rather than indenting the entire block. Ordinary lines omit the redundant
 `type="break"`. `line type="line"` produces `hr.lb-rule`. `vspace/@lines` becomes
 `data-lines` and a height in `lh`; it ends the line and resets indentation even
 without a following `line`. A following `line` adds no accidental blank line.
@@ -79,8 +86,11 @@ inserted. Insertion positions and annotations become `data-pos` and
 
 Sidenote contents remain exclusively in `sidenotes.json`, keyed by page. The main
 text no longer contains note-position markers; the later site positions notes
-using their page's marker. Traditions still live in `meta.json` as
-`traditionsHtml`; the proposed metadata/JSON restructuring is a separate change.
+using their page's marker. Every note is exported, including notes with unmatched
+targets: their `anchorId` is null and `status.json` reports the unresolved page.
+`sourceOrder` preserves note order across page groups. Ordered `traditions.json`
+records provide apparatus labels and body HTML, including interstitial text;
+`traditionsHtml` remains in `meta.json` for compatibility.
 
 Run the Python regression tests (including corpus nesting and marker checks):
 

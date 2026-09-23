@@ -1,55 +1,45 @@
 # Proposed Python export contract for the static Astro edition
 
-Status: design proposal from 22 September 2026. The subsequent XSLT fixes are now implemented; Python metadata restructuring, XSD changes and Astro remain pending. The JavaScript transforms are outside this review.
+Status: design proposal followed by implementation, 23 September 2026. The static site now lives in `app/`; see its [implementation README](../../app/README.md) for the current behavior and build instructions. The Python exporter now writes `catalog.json`, ordered events and `traditions.json`, preserves unmatched sidenotes, and emits the language and typography hooks. The review below records the pre-implementation findings and proposed contract, rather than a description of the current code. Actual records retain the existing `letter`, `persons`, `locations` and `traditions` field names; sidenotes remain keyed by page for compatibility.
 
-Implementation update: page markers now explicitly distinguish `data-break="inline"` from `data-break="block"`, without inserting a bar. The stylesheet also preserves empty marks/annotations, unwraps addresses, carries formatting into table cells, and shares one normalizer across contexts. See the [current fragment contract](../../transform/python/README.md#html-fragment-contract) for exact classes, attributes and IDs; examples below describe the broader proposal. The findings section records the pre-fix audit.
+**Recommendation: retain the existing line-based XSLT normalizer and improve the Python data contract.** It already handles the hard distinction between page milestones and semantic lines. Astro should receive complete header records, ready-to-render text fragments, and separate sidenote/apparatus records. It should not parse edition XML or infer textual structure.
 
-The current corpus also revealed repeated consecutive tab positions in letter 293. The XSLT preserves these cells in source order; the strict increasing-position rule proposed below cannot be assumed without resolving that source convention.
+The [styling checklist](letter-styling-checklist.md) is the companion document for the next formatting discussion. The [schema inventory](briefe-element-inventory.md) remains the exhaustive account of permitted elements and attributes.
 
-The existing architecture is close: Python resolves XML metadata and runs shared XSLT for letter text, sidenotes and traditions. Keep that division, but simplify the exported contract and rebuild the flow normalization around explicit boundaries. Astro should receive ready-to-render content and complete header records; it should not need to interpret edition XML or reconstruct semantic lines.
+## 1. Requirements versus current behavior
 
-“XSD” and “XSLT” have different jobs here: `data/xsd/` validates the source vocabulary; `xslt/` transforms it. Most of the proposed rewrite concerns Python and XSLT. Reducing the website implementation does not require deleting editorial distinctions from the source schema.
+XSD describes valid source structure; XSLT produces HTML. The runners live in `transform/python/`, while the stylesheets are in `xslt/`.
 
-## 1. Findings in the current implementation
-
-| Requirement | Current behavior | Proposed change |
+| Requirement | Current Python/XSLT behavior | Recommendation |
 | --- | --- | --- |
-| All sending/receiving events | `extract_meta` selects only the first of each; also only the first date | Export an ordered event array, with arrays for dates, people and places within each event |
-| Date sorting | Index sorted numerically by letter ID | Derive chronological sort keys using the agreed rules below |
-| Year groups and filters | No dedicated group or filter fields | Compute group IDs and distinct person/place IDs in Python |
-| Shared index/detail header | Resolved metadata exists, but is repeated in per-letter files and index | One canonical header record per letter in the catalog; one Astro header component |
-| Original/source/draft flags | Multiple source bases preserved correctly; `isDraft` accepts only `true`, not schema-valid `1` | Keep source array, normalize booleans correctly, do not collapse mixed sources |
-| Continuous text and page milestones | Already uses line blocks rather than page wrappers | Keep this design; simplify page markers and preserve their exact positions |
-| Formatting across lines | Splits/reopens wrappers across normalized lines | Keep the behavior; implement one shared flow normalizer |
-| Vertical space | Already breaks flow, including without a subsequent `line` | Keep; define indentation reset and boundary behavior explicitly |
-| Alignment | Three alignment regions already generated | Keep the concept; fix preservation of empty editorial elements and marker placement |
-| Tabs | Separate tab rows and cells, but no explicit offset/width contract | Export numeric start and width from the confirmed position rule |
-| Address | Emits HTML `address`, introducing block behavior | Treat XML `address` as transparent; keep its content and internal boundaries |
-| Sidenotes | Separate page-keyed JSON with rendered HTML; body also has note-position markers | Keep separate output, anchor notes to page milestones rather than XML note positions |
-| Traditions | HTML embedded in `meta.json`; XSLT chooses category grouping and h2/h3 | Export ordered entries with labels and independently rendered bodies |
-| Presentation | Literal page bars, inserted decoration spans, colors and headings partly baked in | Keep semantic classes/attributes; let site CSS and Astro own presentation |
-| Failure handling | Failure replaces output with status metadata for a failure website | Nonzero export exit; preserve last successful output; prevent the site build continuing |
+| Shared header on index and letter page | Metadata appears in both per-letter `meta.json` and `letters/index.json` | One canonical catalog record and one reusable Astro header component |
+| All sending/receiving events and dates | Only first event of each kind and first date within it are exported | Ordered `events[]`, each retaining all dates, people and places |
+| Literal date wording | Plain text is extracted and whitespace collapsed | Preserve source wording and ordered text/link content; never regenerate display dates from machine dates |
+| Chronological sorting | Letter index sorted by numeric ID | Precompute sort key using the requested attribute precedence |
+| Five year groups | Not exported explicitly | Precompute `groupId` and group definitions |
+| Person/place filtering | Resolved references are present, but no filter contract | Precompute deduplicated IDs across all sending/receiving events |
+| Original, source basis and draft status | Source arrays are retained; draft/proofread accepts only `true`, not `1` | Retain all source bases; normalize all XSD boolean spellings |
+| Continuous text, no page blocks | Already implemented | Keep |
+| Semantic lines, rules, vertical space | Already implemented | Keep existing classes and semantics |
+| Inline formatting across lines | Wrappers split/reopen inside line blocks | Keep; add language attributes to the reopened fragments |
+| Multiple alignment regions in a line | Already implemented, including nested marks | Keep; choose collision/wrapping rules in CSS later |
+| Tab positions | Source `value` retained; final widths undefined | Preserve values; do not invent a width algorithm before editorial clarification |
+| Transparent `address` | Already implemented | Keep |
+| Separate sidenotes | Rendered separately, selected by existing page indices | Export every source note, including unmatched page targets |
+| Apparatus below letter | One HTML string in `meta.json`, with headings/groups in XSLT | Ordered records with labels and body HTML; Astro owns headings |
+| Language attributes | `gr`, `hb`, `ru`, `aq` emit classes only; `fr` absent | Add agreed language mapping; decide explicit Latin encoding |
+| Tailwind styling | Semantic classes already available | Global edition CSS with `@apply`; font settings belong to the site theme |
 
-Relevant code: [metadata extraction](../../transform/python/src/transform_python/exporter.py#L131), [index ordering](../../transform/python/src/transform_python/exporter.py#L388), [flow normalization](../../xslt/common.xsl#L417), [alignment](../../xslt/common.xsl#L545), [traditions](../../xslt/traditions.xsl).
+The body transformation does not require a wholesale rewrite. The biggest implementation changes are complete metadata extraction, derived sorting/filter fields, lossless supplemental records and language output.
 
-### Verified behavior and gaps
+## 2. Build-time output
 
-Ran the current complete Python export for all 374 letters into `/tmp/lenz-current-export`; all 15 existing Python tests pass. Additional synthetic input probes establish:
-
-- `Wor<page index="2"/>d` currently becomes text containing `Wor | d`. The page milestone must not invent spaces or punctuation.
-- `A<nr extent="3"/><align pos="right">B</align>` loses the empty `nr` during alignment distribution. This is a schema-valid case. A count check found no missing `nr`/`tl` in the current corpus export; the failure is confirmed on the synthetic case.
-- `aq` around `tabs` produces a `span` containing `div` elements, which is not valid phrasing content. Formatting must be carried into cells, or represented on a suitable flow container.
-- `insertion/@annotation` is not exported. Retain it even if the first site only exposes it as additional information.
-- `A<vspace lines="2"/>B` correctly produces two blocks separated by a spacer, with no explicit `line` needed.
-- Underlining spanning a line break and vertical space is correctly reopened on later text blocks.
-
-The test environment used SaxonC 13.0.0 and lxml installed under `/tmp`, within the project's declared dependency ranges. This was not a locked-environment reproduction or browser layout test. The export emits three pre-existing XSD warnings in `traditions.xml`, documented in the element inventory.
-
-## 2. Minimal output files
+Proposed files:
 
 ```text
 generated/
   catalog.json
+  status.json
   letters/
     1/
       text.html
@@ -59,27 +49,31 @@ generated/
       ...
 ```
 
-- `catalog.json`: the complete header data, sorting/grouping fields, and filter options for all letters. No letter text or traditions HTML. This replaces both `letters/index.json` and repeated per-letter metadata files.
-- `text.html`: the continuous letter body only, without its header or page layout.
-- `sidenotes.json`: ordered sidenote records containing page targets, annotations and body HTML. Empty array when absent.
-- `traditions.json`: ordered apparatus entries containing category/name/ref and body HTML. Empty array when absent.
+| Artifact | Consumer and contents |
+| --- | --- |
+| `catalog.json` | Astro build: all canonical letter headers, chronological order, groups, reference dictionaries and filter IDs |
+| `text.html` | Letter page: continuous body fragment, without header, page-column layout or marginal notes |
+| `sidenotes.json` | Letter page: ordered notes with page targets, annotations and body HTML |
+| `traditions.json` | Letter page: ordered apparatus records with resolved labels and body HTML |
+| `status.json` | Build diagnostics/provenance; not required for the public UI |
 
-No header HTML export is necessary. Astro can build the index and detail-page headers from the same catalog objects using the same component. HTML fragments are ready for build-time inclusion; browser-side XSLT, Python and content fetching are unnecessary.
+`catalog.json` replaces the duplicated index/per-letter metadata as the authoritative header source. Empty note/apparatus collections are `[]`. No separate header HTML is needed.
 
-For the index, Astro can render all 374 list entries once. Small client-side code loads the catalog's IDs/groups, hides nonmatching rows, updates counts and selects year groups. This avoids a second JavaScript implementation of the header. Only catalog data needed for interaction needs to be shipped to the browser; letter bodies and traditions stay on their respective static pages.
+Astro reads these files at build time, produces the home page and one static page per letter, and includes the HTML fragments. A browser only needs the small derived filter records embedded in the index page, not the full catalog or letter text. Static route generation and HTML-fragment inclusion fit Astro's build model. [Astro routing](https://docs.astro.build/en/guides/routing/), [template directives](https://docs.astro.build/en/reference/directives-reference/#sethtml).
 
-## 3. Catalog and header model
+## 3. Catalog model
 
-Illustrative structure (names and dates shown for letter 1; optional fields omitted):
+An illustrative excerpt using letter 1 (not a complete generated file):
 
 ```json
 {
+  "schemaVersion": 1,
   "groups": [
-    {"id":"1756-1770","label":"1756–1770"},
-    {"id":"1771-1775","label":"1771–1775"},
-    {"id":"1776","label":"1776"},
-    {"id":"1777-1779","label":"1777–1779"},
-    {"id":"1780-1792","label":"1780–1792"}
+    {"id":"1756-1770","label":"1756–1770","fromYear":1756,"toYear":1770},
+    {"id":"1771-1775","label":"1771–1775","fromYear":1771,"toYear":1775},
+    {"id":"1776","label":"1776","fromYear":1776,"toYear":1776},
+    {"id":"1777-1779","label":"1777–1779","fromYear":1777,"toYear":1779},
+    {"id":"1780-1792","label":"1780–1792","fromYear":1780,"toYear":1792}
   ],
   "people": {
     "1":{"name":"Jakob Michael Reinhold Lenz"},
@@ -89,51 +83,55 @@ Illustrative structure (names and dates shown for letter 1; optional fields omit
   "letters": [
     {
       "id":"1",
-      "sortDate":"1765-01-02",
-      "group":"1756-1770",
+      "sort":{"key":[1765,1,2],"value":"1765-01-02","attribute":"when","eventIndex":0,"dateIndex":0},
+      "groupId":"1756-1770",
       "personIds":["1","2"],
       "placeIds":["1"],
       "isDraft":false,
+      "isProofread":true,
+      "hasOriginal":true,
       "sources":[{"isOriginal":true,"type":"manuscript"}],
       "events":[
         {
           "type":"sent",
-          "dates":[{"text":"Dorpat (Tartu), 2. Januar 1765","when":"1765-01-02"}],
-          "people":[{"ref":"1"}],
-          "places":[{"ref":"1"}]
+          "dates":[{
+            "content":[{"type":"text","text":"Dorpat (Tartu), 2. Januar 1765"}],
+            "when":"1765-01-02",
+            "cert":"high"
+          }],
+          "people":[{"ref":"1","cert":"high","erschlossen":false,"role":"autor","content":[]}],
+          "places":[{"ref":"1","cert":"high","erschlossen":false,"role":"entstehungsort","content":[]}]
         },
         {
           "type":"received",
           "dates":[],
-          "people":[{"ref":"2"}],
-          "places":[{"ref":"1","cert":"low"}]
+          "people":[{"ref":"2","cert":"high","erschlossen":false,"role":"autor","content":[]}],
+          "places":[{"ref":"1","cert":"low","erschlossen":false,"role":"entstehungsort","content":[]}]
         }
-      ]
+      ],
+      "pages":[{"index":"1","anchorId":"letter-1-page-1"},{"index":"2","anchorId":"letter-1-page-2"}]
     }
   ]
 }
 ```
 
-The example is a shortened catalog, not a new source format. IDs remain strings. People/place dictionaries store each label once. Do not repeat complete `resolved` authority records, external IDs, register IDs, or other unused authority fields in every event.
+IDs remain strings. `letters[]` is sorted chronologically. Dictionary entries can retain authority URLs and other available reference fields once per person/place, instead of duplicating complete resolved records in each event. Filter controls should include referenced correspondents/places, rather than every unused dictionary definition.
 
-Preserve all events in source order. Every event has its own dates, people and places. Never flatten their associations for display or zip the first sending event to the first receiving event: the XML does not establish those pairs. The separate `personIds` and `placeIds` arrays are intentionally flattened and deduplicated solely for filtering.
+`events[]` preserves all `sent` and `received` elements in source order. Each event retains its own arrays. Do not zip sending and receiving events into inferred pairs: the XML does not establish those pairs. The separate flat `personIds` and `placeIds` arrays are for filtering only. They include all participants/locations in all events, not unencoded mentions in letter prose or handwriting references.
 
-Within date records, preserve whichever `when`, `from`, `notBefore`, `to`, `notAfter` and `cert` attributes are present. `text` comes from the actual XML content, preserving wording, spelling and punctuation; do not reconstruct a German display date from the machine date. Whitespace can display with ordinary HTML whitespace collapse. For metadata containing `wwwlink`, preserve ordered text/link parts rather than flattening away the link.
+Within each date retain all supplied `when`, `from`, `notBefore`, `to`, `notAfter` values, even though only one is chosen for sorting. `content` preserves literal XML text and ordered links; a link can be represented as `{"type":"link","href":"…","children":[…]}`. Use the same structure for person/place annotations. XML comments are omitted. Ordinary browser whitespace collapse is acceptable; wording, spelling and punctuation remain unchanged.
 
-Person/place references retain `cert`, `erschlossen`, and meaningful annotation content when present. Keep the existing ability to represent mixed text/link annotations, but avoid exporting both a plain-text copy and a full structured copy without a consumer. Optional flags can be omitted with documented schema defaults (`cert=high`, `erschlossen=false`). Resolve missing references as a build diagnostic, not a silent blank label. Keep the explicit unknown-person entry where used.
+Normalize defaults into the data: `cert="high"`, `erschlossen=false`, and the schema's reference-role defaults. Preserve explicit `kat` as `role`; an event's `type` determines whether its people are displayed as senders or recipients. It is not inferred from that generic role default. Parse `true/1` and `false/0` consistently.
 
-### Sorting and year groups
+### Chronological sorting and groups
 
-Confirmed by the user:
+The user's required attribute priority is **`when → from → notBefore → to → notAfter`**. Apply it to each sending date. Recommended policy for future multiple dates/events: choose the earliest of the resulting keys across all sending events. This aggregation is a proposal, not an already confirmed editorial decision. Keep all events in source order for the header.
 
-1. For each sending-event date, take the first available attribute in the priority `when → from → notBefore → to → notAfter`.
-2. Across all dates of all sending events, choose the earliest resulting date.
-3. Sort letters by that value, then numeric letter ID for a stable tie-break.
-4. Derive the year group from that same date. Keep source event order in the header regardless of sorting.
+Use a numeric `(year, month, day)` sort tuple. Missing month/day in year-only or year-month values can sort as zero; this is a sorting convention, not an invented exact date. Retain the original date value and selected attribute in `sort` so the result is explainable. Break ties by numeric letter ID. Avoid browser `Date` parsing and timezone-dependent ordering; compute once in Python.
 
-Do not use received dates as an unrequested sorting fallback. For partial year/year-month values, use a sorting tuple with missing month/day set to zero, not a fabricated precise display date. A date without a year cannot determine these groups: place genuinely unsortable letters last in an undated group; retain any out-of-range letters in an additional group rather than dropping them. Neither fallback is needed by the current corpus.
+Dates without a usable year go to an undated group at the end. Out-of-range dates remain accessible in an additional group. An unusable selected value should produce a diagnostic rather than silently falling through to a lower-priority attribute. Received dates are not an implicit sorting fallback. The current corpus needs neither fallback group.
 
-Current group counts under the specified precedence:
+Recomputed group counts:
 
 | Group | Letters |
 | --- | ---: |
@@ -143,129 +141,165 @@ Current group counts under the specified precedence:
 | 1777–1779 | 53 |
 | 1780–1792 | 52 |
 
-212 of 374 positions differ from current letter-ID order. The selected machine attributes govern sorting even when the prose date suggests something else; for example letter 5's prose mentions likely January 1768, while its `notBefore` is `1767-11-24`. Do not silently correct source data while exporting.
+212 of 374 positions change from numeric letter-ID ordering. Chosen attributes are `when` for 200 letters, `notBefore` for 162, `from` for 2 and `notAfter` for 10. Dates in the prose are not used to override machine-readable source values.
 
-Suggested initial filter behavior: selected people match any sending/receiving event, as do selected places; OR within each selected category, AND between person and place categories and the year group. Dates remain ordered after filtering. The five groups are the pagination units, so no arbitrary additional page-size pagination is required. An “all years” selection is a useful option, not a new export format.
+### One header model for both views
 
-### Shared header behavior
+One Astro component receives one catalog letter plus the reference dictionaries. Use it both for the index row and detail-page header.
 
-Render sending events and receiving events separately, each preserving its own people and parenthesized places. Show the literal sending date text and receiving date text in square brackets when present; do not print empty brackets. Multiple events should appear as distinct event rows rather than one ambiguous sentence.
+- Display each sending event's literal dates, sender names and parenthesized places.
+- Display each receiving event's dates in square brackets, recipient names and parenthesized places. Omit brackets when there is no date.
+- Keep multiple events visibly distinct, preserving event associations. People and places within an event are lists; their order does not imply person/place pairs.
+- If any source basis has `isOriginal=true`, show that an original was available as an edition basis. Otherwise display all distinct recorded source types, including mixed manuscript/print and unknown cases.
+- Show draft status from `isDraft`. `false` encodes non-draft status, not independent proof of historical delivery. The final visible label is an editorial choice.
 
-Source basis is an array. If any basis has `isOriginal=true`, indicate that an original was available as an edition basis. Otherwise show all distinct types: manuscript, print, or unknown. Letter 39 already has both manuscript and print bases, so a single `sourceType` enum would lose information. This classification concerns the basis of the edition, not a claim that no original survives anywhere.
+Current source combinations: 288 original manuscripts; 49 non-original prints; 32 non-original manuscripts; 4 unknown bases; 1 mixed manuscript/print basis. There are 35 drafts. A single `sourceType` field would lose information.
 
-Use `isDraft` for the draft/non-draft distinction. It does not independently prove historical delivery. Parse both XML boolean spellings `true/1` and `false/0`. The current corpus has one sending event and one receiving event per letter and no receiving dates, so multiple-event/receiving-date behavior needs fixtures even though the schema already permits it.
+### Client-side navigation and query state
 
-## 4. Text model: flow blocks with inline page milestones
+Recommended URL form: `/?group=1776&person=1&person=12&place=1`. Repeated keys represent multiple selections. The group is the pagination unit; no additional arbitrary page size is needed for the stated requirements.
 
-A semantic line is a **flow block**, not a physical browser line. It may wrap naturally over many screen lines. A page is a milestone in that flow, never a container for it.
+Recommended behavior: OR between selected people, OR between selected places, AND between these two categories and the selected group. A person and place may match different events of the same letter; display still preserves event associations. Leave same-event filtering for an explicitly requested feature. Default to all letters, chronologically ordered, with links for the five groups.
 
-The internal normalizer only needs:
+Astro can prerender all 374 header rows in chronological order. A small browser script reads the query, validates IDs/group names against the catalog, hides unmatched rows, updates counts and active controls, and uses browser history for query changes. Back/Forward must reapply state via `popstate`; reloading a copied URL restores it. Unknown values should be removed or ignored consistently rather than creating inaccessible hidden state. Letter links navigate to already generated static pages.
 
-- Text and inline formatting, with an active formatting stack.
-- Semantic line boundaries with optional indent codes.
-- Vertical-space boundaries with a line count.
-- Horizontal-rule boundaries.
-- Page milestones that do not flush a line.
-- Alignment regions and tab cells within the applicable line context.
+No runtime server filtering or URL-specific HTML build is needed. A prerendered page cannot read each visitor's query at build time; browser-side URL handling is required. [Astro URL context](https://docs.astro.build/en/reference/api-reference/#url).
 
-This is an internal rendering model, not another exported JSON representation of the full letter. Walk content in order, close/reopen active formatting around real block boundaries, and emit valid HTML. Use the same normalizer for the main body, each sidenote and each apparatus body, with independent line contexts.
+## 4. The document model
 
-Example:
+Treat a letter as an **ordered flow of semantic line blocks, spacers, rules and page milestones**. Page milestones describe positions within that flow, not containers. Text marks decorate ranges within the flow; aligned regions and tab cells organize content within a line/row.
 
-```xml
-<page index="1"/><line tab="4"/>
-<ul>First part</ul><page index="2"/><ul> continues<line/>Second part</ul>
-<vspace lines="2"/>After the space
-```
-
-Proposed output, with insignificant source indentation omitted:
-
-```html
-<div class="text-line" data-indent="4"><span class="page-marker" id="letter-1-page-1" data-page="1"></span><span class="ul">First part</span><span class="page-marker" id="letter-1-page-2" data-page="2"></span><span class="ul"> continues</span></div>
-<div class="text-line"><span class="ul">Second part</span></div>
-<div class="vspace" style="--lines:2" aria-hidden="true"></div>
-<div class="text-line">After the space</div>
-```
-
-The source closes/reopens `ul` around the page milestone because the current XSD requires `page` directly under `letterText`. This introduces no semantic line break.
-
-Use neutral `div` line containers because aligned regions and cell layouts may be nested inside them. Use phrasing elements for inline marks. Never put generated block containers inside a `span`; propagate surrounding marks into cell/region content instead.
+The current XSLT already implements an intermediate representation using temporary `t:line`, `t:page`, `t:tabs` and `t:row` nodes. Keep it internal. Astro needs HTML, not a second JSON representation of every text node.
 
 ### Boundary rules
 
-- `line`: end the previous semantic line and begin a new one. Its `tab` sets the new line's indent code. A plain `line` resets indent. Do not derive poem semantics or invent indent sizes from the numbers.
-- `vspace`: end the current line, emit the exact requested spacer, reset indent, and start subsequent content in a new line. A following `line` initializes that new line and must not add an accidental blank one. Consecutive intentional `line` markers otherwise retain their empty lines; do not silently collapse them.
-- `line type="line"`: end current content, emit a horizontal-rule block, then continue in a fresh line. No need to export redundant `data-type="break"` on every ordinary line.
-- `page`: one empty, uniquely scoped inline marker. No visible text, spaces, punctuation, duplicate page spans or automatic block break. If it occurs between blocks, retain an appropriate boundary anchor without adding an empty text line. Its position relative to a spacer matters and must be preserved.
-- `sidenote`: extract it from main text; do not split the main line or insert a note-position marker unless a later interaction explicitly needs one. Position by its declared page.
-- `address`: unwrap it; process all children normally.
-- Preserve empty `nr` and `tl` as meaningful editorial marks. Empty content is not equivalent to an ignorable element.
-- Preserve textual whitespace between inline nodes; do not globally discard whitespace-only nodes or pretty-print HTML in ways that create or remove word spaces. XML formatting newlines are ordinary whitespace, never additional semantic line breaks.
+| XML event | Flow effect |
+| --- | --- |
+| Text or inline formatting | Append to current content; retain formatting context |
+| `line` / `line type="break"` | End previous semantic line and begin a new one; `tab` belongs to the new line |
+| `line type="line"` | End current line, emit horizontal-rule block, then continue in fresh flow |
+| `vspace lines="N"` | End current line, emit N line-heights of space, reset indent; following text begins a new semantic line |
+| `page index="N"` | Insert a zero-content anchor; never add spaces or a line break |
+| `sidenote` | Export separately; its XML position does not break the main line |
+| `address` | Remove wrapper, process all content normally |
 
-Keep classes for all requested editorial distinctions and relevant attributes (`hand` ref, `fn` index, `nr` extent, insertion position/annotation, highlight color). Decorative insertion markers, exact colors and loss/illegibility glyphs belong to the later formatting specification. Keep `fn` in flow at this stage; do not invent a footnote relocation/linking scheme from the unreferenced `anchor` element.
+The first text may start an implicit line. A normal `line` without `tab` resets indentation. A `line` immediately after `vspace` supplies the next line's attributes and must not add an accidental blank line. Intentional consecutive line markers otherwise retain empty semantic lines. Their eventual CSS needs a minimum line height; an empty `div` alone does not guarantee visible spacing.
 
-`fr` is mentioned in the requirements but is absent from the current XSD and corpus. Add it explicitly if it is intended source vocabulary. Preserve `gr`, `hb`, `ru` and future `fr` distinctions, but do not infer language from `aq`, which marks script/typeface. The later site supplies roughly `75ch` width and disables automatic hyphenation; these are not transform concerns.
+A semantic line can wrap into many browser lines within the approximately `75ch` body. Disable automatic hyphenation in CSS. Source punctuation and encoded literal hyphens remain text. Do not apply `white-space: pre` to the XML text: source formatting newlines are not semantic line breaks.
 
-## 5. Alignment and tabs
+### Page example
 
-A normal line has a default left region. Encountered `align` elements contribute content to left/center/right regions; unaligned text stays left. Multiple regions can coexist on one line, and inline marks spanning regions must be reproduced within each region. Preserve order within each region. Alignment changes layout, not text boundaries.
+Source:
 
-Emit only occupied regions, preserving empty editorial marks as content. Page milestones must remain attached to their source content position; do not blindly assign every page marker to the left region. Because alignment can affect visual order, retain stable source order on runs internally rather than repeatedly searching descendants to guess the region.
+```xml
+<page index="1"/><line tab="1"/><ul>First part
+<page index="2"/>continues<line/>Second line</ul>
+<vspace lines="2"/>Next paragraph
+```
 
-The later CSS can provide a shared full-width positioning frame for these regions. An equal-thirds grid must not accidentally force a lone right-aligned passage into only one third of the letter width. Collision/wrapping behavior for genuinely competing long regions remains a visual-layout decision for the site.
+Proposed fragment shape, using existing classes and a proposed letter-specific ID prefix:
 
-Confirmed tab rule: for `i-n`, start at `(i−1)/n` of the row width. A cell extends to the next cell's start; the last extends to the row end. For example:
+```html
+<div class="lb-line-block" data-tab="1">
+  <span class="page-anchor" id="letter-1-page-1" data-index="1" data-break="block"></span>
+  <span class="ul">First part
+<span class="page-anchor" id="letter-1-page-2" data-index="2" data-break="inline"></span>continues</span>
+</div>
+<div class="lb-line-block"><span class="ul">Second line</span></div>
+<div class="lb-vspace" data-lines="2" style="height: 2lh" aria-hidden="true"></div>
+<div class="lb-line-block">Next paragraph</div>
+```
 
-| Source values in one row | Starts | Widths |
-| --- | --- | --- |
-| `1-2`, `2-2` | 0%, 50% | 50%, 50% |
-| `1-8`, `3-8`, `4-8`, `7-8` | 0%, 25%, 37.5%, 75% | 25%, 12.5%, 37.5%, 25% |
+Illustration only: production serialization must not add indentation whitespace to mixed content. The original newline after “part” is preserved as source whitespace. A marker inside a word must leave that word untouched.
 
-Export the source value plus derived numeric CSS variables for offset and width. Leave the layout mechanics to the site's CSS. Validate increasing positions within a row; do not silently reorder cells or fabricate positive widths for invalid input. Row boundaries come from `line` and `vspace`. A cell has its own alignment context; an `align` inside one cell must not trigger redistribution of the outer letter line.
+`data-break="inline"` means meaningful content exists on both sides in the same semantic line. `block` means a semantic boundary. Classification must happen before alignment redistributes content; the current code does this. A standalone boundary anchor must not create an extra blank paragraph. Keep marker order relative to spacers.
 
-The schema's `inlineNoLine` restriction currently applies only to immediate children: a `line` can occur deeper inside an `aq` within `align`/`tab`. If “no breaks anywhere inside these regions” is an editorial invariant, enforce it with a small semantic validation check (or deliberately stricter types), rather than assuming the current XSD guarantees it. In current traditions, some direct `line` violations also need resolution before strict validation can pass.
+### Marks and inline regions
 
-## 6. Sidenotes
+Retain current semantic classes and data attributes. Reopen formatting inside each resulting line/region/cell so block elements never end up inside a `span`, `em`, `strong` or `del`. The XSLT already carries formatting around a table into its cells. `nr` defaults to extent 1; empty `nr` and `tl` remain meaningful.
 
-Example proposed record:
+A line can contain unaligned/left, center and right content simultaneously. Emit only occupied regions. Unaligned text belongs to the left region; preserve source order within each region. Alignment is not a new line boundary. The site must choose overlap/wrapping behavior; an equal-thirds layout is not automatically equivalent to full-width left/center/right alignment.
+
+`tabs` contains source-defined rows; `tab` retains `data-value="i-n"`. Preserve source row/cell ordering and raw `extent`. The requirements do not yet settle whether `i-n` specifies an offset, a fixed fraction or a next-cell width. In particular letter 293 repeats consecutive cell positions, so a “width to the next position” rule can create zero-width cells. Do not silently reorder or split them.
+
+The statement that `align` and `tab` cannot contain lines is only an immediate-child XSD restriction. Schema-valid aligned content crosses lines through nested `aq`/`ru` in letters **9, 92, 226, 358 and 374**. The existing normalizer supports it; retain support rather than tighten the schema without migrating those passages. Apparatus contains two additional direct `align/line` violations.
+
+### Language handling
+
+The requirement is language metadata without visual changes for `gr`, `fr`, `hb`, `ru`, with automatic hyphenation disabled. Proposed mappings: `ru → ru`, `hb → he`, `fr → fr`. For the inspected Ancient Greek quotations, `grc` is appropriate; the edition-wide meaning of `gr` should determine whether that is always the intended code.
+
+`fr` currently has no schema declaration or XSLT handler. No general `lang` attribute or `lang` element is currently defined for letter text. The intended representation of explicit Latin (`la`) is still open. `aq` must retain its Antiqua formatting distinction; its relationship to language needs confirmation, since existing `aq` passages include French. Do not label every Antiqua span Latin without that decision. Language attributes must survive line splitting and table-cell propagation. `lang="he"` does not by itself prescribe a right-to-left layout change; that is a separate display decision.
+
+## 5. Sidenotes as a separate collection
+
+Proposed record (illustrative):
 
 ```json
 {
   "id":"letter-2-sidenote-1",
+  "order":1,
   "page":"2",
   "anchorId":"letter-2-page-2",
   "pos":"left",
   "annotation":"am linken Rand der zweiten Seite, vertikal",
-  "html":"<div class=\"text-line\">…</div>"
+  "html":"<div class=\"lb-line-block\">…</div>"
 }
 ```
 
-The array preserves source order. HTML contains the note body, while Astro owns the surrounding `aside`. Retain source `pos` as descriptive metadata even though this design displays all notes in the left margin. Reject or report missing target pages rather than quietly omitting their notes; the current exporter only visits page IDs present in the letter.
+Export all notes in source order. Astro owns the `aside`; the fragment is the body, using the same line/space/alignment renderer as main text. Preserve source position and annotation even when all notes are displayed in the left margin.
 
-Build-time transformation cannot know final browser coordinates. For desktop alignment to the actual page-break height, the later static page needs a small layout script that measures page-marker positions after fonts load and on resize, then positions notes in the separate margin. No server is needed. Notes sharing a page stack in source order. To avoid overlap, a group can be pushed below preceding notes, so exact alignment is a target rather than an unconditional guarantee when the margin is crowded.
+**Current omission:** letters 64 and 167 each contain a note assigned to page 4, but only page indices 1–3. The existing exporter emits **213 of 215 notes** because it iterates existing pages. Keep these two records with `anchorId: null` and a build diagnostic; an unplaced-notes fallback prevents data loss. Do not invent a page marker or change the source page number. Editorial resolution is needed for their intended placement.
 
-On narrow screens and without that layout script, render notes in a normal-flow notes section with page labels/links. Page content must remain a continuous middle-column flow; never insert full-width page containers just to position marginalia.
+On desktop, a browser layout script can measure the page-anchor position after fonts load and on resize, then align the note group in a separate left column. Multiple notes at one page stack in source order. If groups would overlap, push later groups down; exact anchor alignment and non-overlap cannot both be guaranteed for arbitrarily long notes. This remains a static site: geometry measurement needs no server.
 
-## 7. Traditions
+Provide a normal-flow notes section with page links for narrow screens, unavailable anchors and a no-script fallback. Main text remains continuous. Do not add page wrappers to make marginal positioning easier.
 
-Export each `app` as a record with `ref`, resolved `name`, `category` and `html`. Preserve source order. Render its body using exactly the same flow rules as letter text. Astro chooses the section wrappers and heading levels, so the exporter no longer requires apparatus definitions passed into XSLT just to generate h2/h3.
+## 6. Apparatus records
 
-Preserve meaningful text between apps as `{ "type":"text", "html":"…" }` records, alongside `{ "type":"app", ... }` entries. This is required by existing content, not only the schema: letters 185 and 348 contain punctuation outside `app`. Do not discard it when moving from a single HTML fragment to entries.
+Proposed collection shape:
 
-The current traditions include a page marker at a location the XSD rejects. Resolve that source/schema mismatch before the rewrite; any legitimate page markers in apparatus must use an apparatus-specific ID scope to avoid collision with the main letter's pages.
+```json
+[
+  {"type":"app","id":"letter-1-app-1","ref":"4","name":"Provenienz","category":"Überlieferung & Textkritik","html":"<div class=\"lb-line-block\">…</div>"},
+  {"type":"text","html":"<div class=\"lb-line-block\">.</div>"}
+]
+```
 
-## 8. What to remove, retain and verify in the rewrite
+This illustrates record types, not letter 1's complete actual content. Each `app` body uses the same flow renderer. Astro adds headings and section wrappers below the letter. If grouping by category, group adjacent entries only to preserve ordering. Meaningful text between apps must remain a record: letters **185 and 348** contain punctuation outside `app` today.
 
-Remove legacy templates for elements outside the chosen vocabulary; compatibility branches for `line type="empty"`; duplicated main/nested line-normalization loops; unused note-position markers; duplicate page markers; full authority-record copies in headers; repeated per-letter metadata; generated header/category presentation; disk stylesheet-export caching and benchmark machinery from the MVP path; and the requirement to build a failure website.
+`hasTraditions` should include meaningful free text, not only the presence of an `app`. Resolve names/categories in Python once. Use distinct IDs for apparatus pages, such as `letter-1-app-1-page-2`, so they cannot collide with main-text pages. Footnote handling remains the same as in main text until a separate relocation/linking convention is specified.
 
-Retain compile-once stylesheet execution, XML/schema checks, reference diagnostics, staged output with atomic publication, safe output-path handling, and focused regression tests. A build error should leave prior successful output intact and stop the Astro build. Unknown editorial markup should be reported rather than silently swallowed by a generic shallow-skip rule.
+## 7. CSS and Astro responsibilities
 
-Rewrite sequence:
+Python owns metadata, joins, sort/filter derivations and validation. XSLT owns mixed-content normalization and stable semantic HTML. Astro owns the page/header structure. Browser scripts own index query state and marginal-note geometry. Site CSS owns fonts, column width, indentation amounts and editorial marks.
 
-1. Implement complete event metadata, date/group/filter derivation and the catalog contract.
-2. Replace the flow normalization with one explicit boundary/formatting model; preserve mixed text and empty marks.
-3. Emit line/region/cell HTML, page markers and the two supplemental JSON collections.
-4. Make only necessary schema/validation changes: resolve traditions errors, decide `fr`, and enforce the intended region restrictions. Keep editorial markup even when the initial visual treatment is simple.
-5. Verify fixtures for multiple events/dates, receiving dates, mixed source bases, partial dates, all boolean spellings, inline page boundaries, nested formatting across breaks/spacers, aligned empty marks, table cells, sidenote page references, and mixed apparatus content. Compare corpus counts and content preservation.
+Use a global stylesheet scoped by a stable ancestor such as `.edition-text`, containing rules like `.edition-text .ul` and `.edition-text .insertion[data-pos="top"]`. Generated HTML inserted through `set:html` is not compiled as an Astro template; do not rely on automatically attached Astro scoped-style attributes. Global styles or explicit global selectors are suitable. [Astro styling](https://docs.astro.build/en/guides/styling/).
 
-The result is a small build-time content pipeline: Python owns resolved data and normalization, XSLT renders reusable text fragments, Astro owns pages/headers/styles, and a small amount of browser code owns filtering and margin positioning.
+Tailwind theme variables can define fonts; `@apply` can supply utilities inside these semantic selectors. Use ordinary CSS where necessary for multiple underlines, manuscript signs or dynamically measured positions. Keep generated XSLT independent of theme utility names. If utilities are emitted directly into generated files, register their source path explicitly rather than relying on automatic detection of ignored/generated directories. Separately compiled component styles may need `@reference`; one global edition stylesheet avoids that complication. [Tailwind directives](https://tailwindcss.com/docs/functions-and-directives), [source detection](https://tailwindcss.com/docs/detecting-classes-in-source-files), [theme variables](https://tailwindcss.com/docs/theme).
+
+## 8. Implementation changes and verification plan
+
+Implement in this order after agreeing the remaining editorial details:
+
+1. Replace first-event metadata extraction with complete ordered events and a versioned catalog; derive chronological order, groups and filters.
+2. Export all sidenotes regardless of target validity; export ordered apparatus records, preserving text between entries.
+3. Reuse the shared XSLT flow renderer with body-only entry points for notes/apps; preserve existing classes, add agreed language attributes and scoped page IDs.
+4. Improve diagnostics: missing note targets, unknown element/attribute handling, namespaced reference checks and the apparatus schema choice. Keep staged output; a failed build should stop publication rather than silently advertise complete data.
+5. Test data invariants and text-flow behavior before beginning Astro presentation.
+
+Do not remove styling tags from the schema simply because the first website has no visible rule for them. Do not replace the working normalizer or remove unrelated tooling as part of this contract change.
+
+Current validation catches three apparatus issues because Python maps `traditions.xml` to `briefe.xsd`: direct `line` inside `align` at lines 1252 and 2728, and `page` inside `app` at line 2662. The separate `traditions.xsd` currently in the workspace allows that page marker and leaves the two line violations. Resolve these explicitly before enforcing strict schema success.
+
+The reference checker also uses unprefixed XPath expressions for `letterText`, `letterTradition`, `hand` and `app` despite the XML namespace. Those checks miss the namespaced elements. Correcting diagnostics is necessary if the build is to rely on them; it is not proof that the current references themselves are wrong.
+
+Verification in this review:
+
+- Read current Python extraction, reference checks and all shared stylesheets.
+- Scanned all 374 metadata records. Each currently has one sending event, one receiving event, one sending date and no receiving dates. Multiple-event support is still required by the schema and website requirements.
+- Ran a synthetic multi-event/multi-date extraction probe: later events/dates were dropped; boolean `1` was mishandled for draft/proofread.
+- Recomputed year groups, date precedence, source classifications and draft counts from the full corpus.
+- Exported all 374 letters to a fresh temporary directory; confirmed the 213/215 sidenote discrepancy and three reported XSD warnings.
+- Reused the existing flow/spacing/metadata/apparatus tests for regression evidence; browser geometry and final typography remain untested because they are not implemented here.
+
+Acceptance checks for the later implementation should include: one catalog record per source letter, every event/date retained, deterministic sorting, identical index/detail header inputs, every note retained, a valid or explicitly unresolved note target, one marker per source page, preservation of source characters and meaningful whitespace, no flow elements inside phrasing wrappers, and correct URL-state restoration. Add fixtures for future multiple events, receiving dates, partial dates and all boolean spellings. Browser checks will cover alignment collisions, repeated tab positions, font-driven reflow and marginal-note stacking.

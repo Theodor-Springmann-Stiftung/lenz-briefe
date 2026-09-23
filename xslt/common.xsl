@@ -562,10 +562,13 @@
         <xsl:apply-templates />
       </xsl:when>
       <xsl:otherwise>
-        <xsl:variable name="leaves" select=".//text()[normalize-space()] | .//lb:*[not(node())]" />
+        <xsl:variable name="leaves" select=".//text()[normalize-space()] | .//lb:*[not(node())][not(self::lb:page)]" />
         <xsl:variable name="note-only" select="exists(.//lb:note) and (every $leaf in $leaves satisfies exists($leaf/ancestor-or-self::lb:note))" />
         <div class="lb-line-block{if (@type = 'line') then ' lb-line-block--rule' else ''}{if ($note-only) then ' lb-line-block--note' else ''}">
-          <xsl:if test="@tab"><xsl:attribute name="data-tab" select="@tab" /></xsl:if>
+          <xsl:if test="@tab">
+            <xsl:attribute name="data-tab" select="@tab" />
+            <xsl:attribute name="style" select="concat('--indent-units: ', if (@tab castable as xs:positiveInteger) then xs:positiveInteger(@tab) else 0)" />
+          </xsl:if>
           <xsl:if test="lb:has-align(node())"><xsl:attribute name="data-layout">aligned</xsl:attribute></xsl:if>
           <xsl:choose>
             <xsl:when test="@type = 'line'">
@@ -594,6 +597,7 @@
     <div class="lb-tab-row">
       <xsl:if test="@tab">
         <xsl:attribute name="data-tab" select="string(@tab)" />
+        <xsl:attribute name="style" select="concat('--indent-units: ', if (@tab castable as xs:positiveInteger) then xs:positiveInteger(@tab) else 0)" />
       </xsl:if>
       <xsl:choose>
         <xsl:when test="@type = 'line'">

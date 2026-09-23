@@ -1,0 +1,36 @@
+---
+import { letterUrl, sourceLabel, richText, type Letter } from '../lib/edition';
+import ReferenceList from './ReferenceList.astro';
+import Icon from './Icon.astro';
+import Tooltip from './Tooltip.astro';
+interface Props { letter: Letter; compact?: boolean }
+const {letter, compact = false} = Astro.props;
+const Heading = compact ? 'h2' : 'h1';
+const sent = letter.events.filter(e => e.type === 'sent');
+const received = letter.events.filter(e => e.type === 'received');
+const dates = sent.flatMap(e => e.dates);
+---
+<header class:list={['letter-header', {'letter-header--compact': compact}]}>
+  <div class="letter-eyebrow"><span class="header-status">{sourceLabel(letter)}</span></div>
+  <Heading class="letter-date">
+    {compact ? <a href={letterUrl(letter.letter)}>{dates.length ? dates.map((d,i) => <Fragment>{i > 0 && ' · '}{d.text}</Fragment>) : 'Ohne Datierung'}</a>
+      : dates.length ? dates.map((d,i) => <Fragment>{i > 0 && ' · '}<Fragment set:html={richText(d.content)} /></Fragment>) : 'Ohne Datierung'}
+  </Heading>
+  <div class="letter-events">
+    {[sent, received].map((events, side) => <Fragment>
+      {side === 1 && <Fragment>
+        {letter.isDraft
+          ? <Tooltip content="Entwurf" class="correspondence-arrow correspondence-arrow--draft"><Icon name="arrowRight" /></Tooltip>
+          : <span class="correspondence-arrow" aria-hidden="true"><Icon name="arrowRight" /></span>}
+        <span class="sr-only"> an </span>
+      </Fragment>}
+      <span class:list={['correspondence-party', side === 0 ? 'correspondence-senders' : 'correspondence-recipients']}>
+        {events.map((event, i) => <Fragment>{i > 0 && '; '}<span class="letter-event">
+          <ReferenceList entries={event.persons} conjunction />{event.locations.length > 0 && <span class="event-place"> (<ReferenceList entries={event.locations} showAnnotations={false} />)</span>}
+          {sent.length > 1 && event.type === 'sent' && event.dates.map(date => <span class="event-date"> · {date.text}</span>)}
+          {event.type === 'received' && event.dates.map(date => <span class="event-date"> [<Fragment set:html={richText(date.content)} />]</span>)}
+        </span></Fragment>)}
+      </span>
+    </Fragment>)}
+  </div>
+</header>

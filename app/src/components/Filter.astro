@@ -1,0 +1,13 @@
+---
+import Icon from './Icon.astro';
+interface Props { kind: 'person'|'place'; label: string; options: {id:string;name:string}[] }
+const {kind,label,options} = Astro.props;
+---
+<details class="filter-menu" data-filter-menu={kind}>
+  <summary><span class="filter-menu-label"><Icon name={kind} /><span>{label}<span data-selected-count={kind}></span></span></span><Icon name="chevronDown" class="filter-menu-chevron" /></summary>
+  <div class="filter-panel">
+    <label class="sr-only" for={`search-${kind}`}>{label} durchsuchen</label>
+    <input type="search" id={`search-${kind}`} data-option-search={kind} placeholder={`${label} suchen …`} autocomplete="off" />
+    <div class="filter-options">{options.map(option => <label data-option={kind} data-name={option.name.toLocaleLowerCase('de')}><input type="checkbox" name={kind} value={option.id} /><span>{option.name}</span></label>)}</div>
+  </div>
+</details>

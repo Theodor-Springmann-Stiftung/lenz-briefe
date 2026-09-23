@@ -1,0 +1,30 @@
+---
+import source from '../../../Rastergrafik.svg?raw';
+
+interface Props { position: string }
+const {position} = Astro.props;
+const key = position.trim().toLowerCase().replace(/\s+/g, '-');
+const labels: Record<string, string> = {
+  top: 'oben', right: 'rechts', bottom: 'unten', left: 'links',
+  'top-right': 'oben rechts', 'top-left': 'oben links',
+  'bottom-right': 'unten rechts', 'bottom-left': 'unten links',
+};
+if (!labels[key]) throw new Error(`Unknown sidenote position: ${position}`);
+const layers = [...source.matchAll(/<g\b[^>]*inkscape:label="([^"]+)"[^>]*>/g)]
+  .map(match => match[1].toLowerCase());
+if (!layers.includes('page') || !layers.includes(key)) {
+  throw new Error(`Missing SVG layer for sidenote position: ${position}`);
+}
+// Keep the supplied drawing as the single source for all eight positions.
+// Its IDs are not referenced internally and must not repeat across icons.
+const svg = source
+  .replace(/<\?xml[^>]*\?>/g, '')
+  .replace(/<!--[\s\S]*?-->/g, '')
+  .replace(/<sodipodi:namedview\b[\s\S]*?<\/sodipodi:namedview>/g, '')
+  .replace(/\s+id="[^"]*"/g, '')
+  .replace(/<g\b([^>]*)>/g, (group, attributes: string) => {
+    const layer = attributes.match(/inkscape:label="([^"]+)"/)?.[1].toLowerCase();
+    return layer ? `<g${attributes} data-layer="${layer}" data-active="${layer === 'page' || layer === key}">` : group;
+  });
+---
+<span class="sidenote-position" role="img" aria-label={`Randnotiz: ${labels[key]}`} title={`Randnotiz: ${labels[key]}`} data-position={key} set:html={svg} />

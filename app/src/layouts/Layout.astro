@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+import { base, catalog, letterUrl } from '../lib/edition';
+interface Props { title?: string; description?: string; wide?: boolean }
+const {title = 'Briefe · Jacob Michael Reinhold Lenz', description = 'Die Briefe von und an Jacob Michael Reinhold Lenz. Digitale Edition.', wide = false} = Astro.props;
+const generatedAt = new Date();
+const generationMonth = new Intl.DateTimeFormat('de-DE', {month: 'long', year: 'numeric', timeZone: 'Europe/Berlin'}).format(generatedAt);
+const navigation = [
+  {label: 'Verzeichnis', href: base, active: Astro.url.pathname === base},
+  {label: 'Briefansicht', href: letterUrl(catalog.letters[0].letter), active: Astro.url.pathname.startsWith(`${base}briefe/`)},
+  {label: 'Zur Edition', href: `${base}edition/`, active: Astro.url.pathname.startsWith(`${base}edition/`)},
+];
+---
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#fcfcfb" />
+    <title>{title}</title>
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#inhalt">Zum Inhalt</a>
+    <header class="site-header">
+        <a class="wordmark" href={base} aria-label="Lenz Briefe – Übersicht">LENZ<span class="wordmark-divider" aria-hidden="true"></span><span>BRIEFE</span></a>
+        <nav aria-label="Hauptnavigation">{navigation.map(item => <a href={item.active ? undefined : item.href} role={item.active ? 'link' : undefined} aria-current={item.active ? 'page' : undefined} aria-disabled={item.active ? 'true' : undefined}>{item.label}</a>)}</nav>
+    </header>
+    <main id="inhalt" class:list={['site-shell', {'site-shell--wide': wide}]}><slot /></main>
+    <footer class="site-footer">
+        <p class="footer-license-line"><a class="footer-license" href="https://creativecommons.org/licenses/by/4.0/"><Icon name="creativeCommons" /><Icon name="creativeCommonsBy" /><span>CC BY 4.0</span></a><span aria-hidden="true">·</span><time datetime={generatedAt.toISOString()}>{generationMonth}</time></p>
+        <p class="text-right">lenz-briefe.de – ein Projekt der <a href="https://theodor-springmann-stiftung.de/">Theodor Springmann Stiftung</a> · <a href="https://dev.lenz-briefe.de/datenschutz/">Impressum &amp; Datenschutz</a> · <a href="https://github.com/Theodor-Springmann-Stiftung/lenz-web">Code</a></p>
+    </footer>
+    <script>import '../scripts/tooltips';</script>
+  </body>
+</html>

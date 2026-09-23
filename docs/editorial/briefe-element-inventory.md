@@ -1,6 +1,6 @@
 # Inventory of elements and attributes in briefe.xml
 
-Snapshot: 22 September 2026. Scope: the letter-text branch `/opus/document/letterText`, including its containers. **35 element names are allowed; 32 occur in the current 374 letters.** `highlight`, `tul`, and `undo` are allowed but unused.
+Snapshot: 23 September 2026. Scope: the letter-text branch `/opus/document/letterText`, including its containers. **35 element names are allowed; 32 occur in the current 374 letters.** `highlight`, `tul`, and `undo` are allowed but unused.
 
 This is an inventory for the subsequent formatting discussion, not a website or a formatting specification. The current XSD governs what is allowed; observed counts describe the current XML only. Attribute order and `<tag/>` versus `<tag></tag>` do not create different combinations.
 
@@ -13,7 +13,7 @@ This is an inventory for the subsequent formatting discussion, not a website or 
 
 The three letter collections each contain 374 records and associate records by `@letter`. The requested “meat.xml” is present as `meta.xml`.
 
-Read all five schemas: [briefe.xsd](../../data/xsd/briefe.xsd), [textelements.xsd](../../data/xsd/textelements.xsd), [common.xsd](../../data/xsd/common.xsd), [meta.xsd](../../data/xsd/meta.xsd), [references.xsd](../../data/xsd/references.xsd). `briefe.xsd` includes the common and text-element schemas. Inclusion alone does not make the metadata vocabulary valid inside letter texts.
+Read all six schemas: [traditions.xsd](../../data/xsd/traditions.xsd), [briefe.xsd](../../data/xsd/briefe.xsd), [textelements.xsd](../../data/xsd/textelements.xsd), [common.xsd](../../data/xsd/common.xsd), [meta.xsd](../../data/xsd/meta.xsd), [references.xsd](../../data/xsd/references.xsd). `briefe.xsd` includes the common and text-element schemas. Inclusion alone does not make the metadata vocabulary valid inside letter texts.
 
 All elements use namespace `https://lenz-archiv.de`. Domain attributes such as `letter`, `pos`, and `index` are unqualified. Namespace declarations are not editorial attributes.
 
@@ -124,6 +124,8 @@ note tl dul fn pe anchor nr b it gr hb subst tabs er ink large ru
 
 ## Observed combinations in the current letters
 
+The accompanying [exact observed combinations](briefe-observed-combinations.json) enumerate all 553 distinct element/explicit-attribute-value tuples, including all IDs and free-text annotations, with counts and first examples. This supplements the readable attribute-name table below; it does not limit schema-permitted future values.
+
 This table lists every distinct **attribute-name set** actually present, with a count and the source line of its first example. Attribute values are summarized separately below. These are observations, not additional restrictions.
 
 | Element | Attributes present | Count | First example in briefe.xml |
@@ -189,8 +191,20 @@ All eight `sidenote/@pos` values are used. Every current sidenote has `annotatio
 - Metadata elements such as `sent`, `received`, `date`, `person`, `location`, `tradition`, `isProofread`, and `isDraft`, and reference definitions, belong to separate schemas/files rather than the letter-text inventory.
 - The exact visual treatment of ink, pencil, erasure versus deletion, illegibility extent, text loss, footnotes, and table positions remains to be specified. The schema sets structure and value domains, not a complete rendering convention. Legacy notes refer `hand/@ref` to `handDefs`, but the current reference file has no such collection; resolving hand references should be explicitly settled later.
 
+For completeness, if “can occur in briefe.xml” means either branch accepted by `briefe.xsd`, the alternative branch adds these three names, making **38 names across both possible branches**:
+
+| Element | Complete domain-attribute combination | Content under briefe.xsd |
+| --- | --- | --- |
+| `traditions` | No attributes | Zero or more `letterTradition` children |
+| `letterTradition` | Required `letter="z"` | Mixed text and zero or more `app` children |
+| `app` | Required `ref="z"` | Mixed text and I children |
+
+Here `z` is a nonnegative integer. These three elements do not occur in the actual `briefe.xml`; they occur in `traditions.xml`. The separate `traditions.xsd` additionally permits `page` directly inside `app`.
+
 ## Verification
 
 Parsed the full current letter XML, counted elements/attributes without inserting schema defaults, and checked the inventory against every global declaration in the letter/text schemas. `briefe.xml`, `meta.xml`, and `references.xml` validate against their respective XSDs.
 
-The contextual validation of `traditions.xml` reports three existing failures: a disallowed `line` at source lines 1252 and 2728, and a disallowed `page` at line 2662. These do not affect the validated `briefe.xml` inventory. No source XML, schemas, or rendering code were changed.
+The contextual validation of `traditions.xml` against `briefe.xsd` (the schema currently selected by both exporters) reports three existing failures: a disallowed `line` inside `align` at source lines 1252 and 2728, and a disallowed `page` at line 2662. The separate `traditions.xsd` currently present in the workspace allows the apparatus page marker, leaving the two `align/line` failures. These do not affect the validated `briefe.xml` inventory. No source XML, schemas, or rendering code were changed.
+
+See [XSLT and exporter analysis](xslt-transform-analysis.md) for current HTML mappings, processing stages, and remaining rendering decisions.

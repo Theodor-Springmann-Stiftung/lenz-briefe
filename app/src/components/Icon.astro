@@ -1,0 +1,17 @@
+---
+import search from 'remixicon/icons/System/search-line.svg?raw';
+import filter from 'remixicon/icons/System/filter-line.svg?raw';
+import filterOff from 'remixicon/icons/System/filter-off-line.svg?raw';
+import reset from 'remixicon/icons/Device/restart-line.svg?raw';
+import person from 'remixicon/icons/User & Faces/user-line.svg?raw';
+import place from 'remixicon/icons/Map/map-pin-line.svg?raw';
+import chevronDown from 'remixicon/icons/Arrows/arrow-down-s-line.svg?raw';
+import sort from 'remixicon/icons/Arrows/arrow-up-down-line.svg?raw';
+import arrowRight from 'remixicon/icons/Arrows/arrow-right-long-line.svg?raw';
+import creativeCommons from 'remixicon/icons/Business/creative-commons-line.svg?raw';
+import creativeCommonsBy from 'remixicon/icons/Business/creative-commons-by-line.svg?raw';
+const icons = {search, filter, filterOff, reset, person, place, chevronDown, sort, arrowRight, creativeCommons, creativeCommonsBy};
+interface Props { name: keyof typeof icons; class?: string }
+const {name, class: className} = Astro.props;
+---
+<span class:list={['ui-icon', className]} aria-hidden="true" set:html={icons[name]} />
