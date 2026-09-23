@@ -9,14 +9,23 @@
   <xsl:output method="html" encoding="UTF-8" omit-xml-declaration="yes" indent="no" />
   <xsl:mode on-no-match="shallow-skip" />
   <xsl:mode name="lb:classify-pages" on-no-match="shallow-copy" />
+  <xsl:mode name="lb:prepare" on-no-match="shallow-copy" />
+  <xsl:template match="lb:hand" mode="lb:prepare">
+    <xsl:copy>
+      <xsl:copy-of select="@*" />
+      <xsl:attribute name="data-origin" select="generate-id()" />
+      <xsl:apply-templates mode="lb:prepare" />
+    </xsl:copy>
+  </xsl:template>
 
   <xsl:template name="lb:render-flow">
     <xsl:param name="nodes" as="node()*" />
     <xsl:param name="page-id-prefix" as="xs:string" select="'page-'" />
     <!-- Classify milestones on the complete semantic lines, before alignment
          distributes their content into separate regions. -->
+    <xsl:variable name="prepared" as="node()*"><xsl:apply-templates select="$nodes" mode="lb:prepare" /></xsl:variable>
     <xsl:variable name="flow" as="element(t:flow)">
-      <t:flow><xsl:sequence select="lb:normalize-lines($nodes)" /></t:flow>
+      <t:flow><xsl:sequence select="lb:normalize-lines($prepared)" /></t:flow>
     </xsl:variable>
     <xsl:variable name="classified" as="element(t:flow)">
       <xsl:apply-templates select="$flow" mode="lb:classify-pages" />
@@ -553,7 +562,9 @@
         <xsl:apply-templates />
       </xsl:when>
       <xsl:otherwise>
-        <div class="lb-line-block{if (@type = 'line') then ' lb-line-block--rule' else ''}">
+        <xsl:variable name="leaves" select=".//text()[normalize-space()] | .//lb:*[not(node())]" />
+        <xsl:variable name="note-only" select="exists(.//lb:note) and (every $leaf in $leaves satisfies exists($leaf/ancestor-or-self::lb:note))" />
+        <div class="lb-line-block{if (@type = 'line') then ' lb-line-block--rule' else ''}{if ($note-only) then ' lb-line-block--note' else ''}">
           <xsl:if test="@tab"><xsl:attribute name="data-tab" select="@tab" /></xsl:if>
           <xsl:if test="lb:has-align(node())"><xsl:attribute name="data-layout">aligned</xsl:attribute></xsl:if>
           <xsl:choose>
@@ -610,7 +621,7 @@
   </xsl:template>
 
   <xsl:template match="lb:aq">
-    <span class="aq"><xsl:apply-templates /></span>
+    <span class="aq" lang="la"><xsl:apply-templates /></span>
   </xsl:template>
 
   <xsl:template match="lb:ul">
@@ -647,6 +658,7 @@
       <xsl:if test="@annotation">
         <xsl:attribute name="data-annotation" select="@annotation" />
       </xsl:if>
+      <xsl:if test="@pos"><span class="insertion-arrow" aria-hidden="true"></span></xsl:if>
       <xsl:apply-templates />
     </span>
   </xsl:template>
@@ -656,7 +668,7 @@
   </xsl:template>
 
   <xsl:template match="lb:hand">
-    <span class="hand" data-ref="{@ref}"><xsl:apply-templates /></span>
+    <span class="hand" data-ref="{@ref}" data-origin="{@data-origin}"><xsl:apply-templates /></span>
   </xsl:template>
 
   <xsl:template match="lb:note">
@@ -680,7 +692,7 @@
   </xsl:template>
 
   <xsl:template match="lb:nr">
-    <span class="nr" data-extent="{if (@extent) then @extent else '1'}">
+    <span class="nr" data-extent="{if (@extent) then @extent else '1'}" style="--extent: {if (@extent castable as xs:positiveInteger) then xs:positiveInteger(@extent) else 1}">
       <xsl:apply-templates select="node()[not(self::text()[not(normalize-space())])]" />
     </span>
   </xsl:template>
@@ -694,11 +706,15 @@
   </xsl:template>
 
   <xsl:template match="lb:gr">
-    <span class="gr"><xsl:apply-templates /></span>
+    <span class="gr" lang="grc"><xsl:apply-templates /></span>
   </xsl:template>
 
   <xsl:template match="lb:hb">
-    <span class="hb"><xsl:apply-templates /></span>
+    <span class="hb" lang="he"><xsl:apply-templates /></span>
+  </xsl:template>
+
+  <xsl:template match="lb:fr">
+    <span lang="fr"><xsl:apply-templates /></span>
   </xsl:template>
 
   <xsl:template match="lb:er">
@@ -714,7 +730,7 @@
   </xsl:template>
 
   <xsl:template match="lb:ru">
-    <span class="ru"><xsl:apply-templates /></span>
+    <span class="ru" lang="ru"><xsl:apply-templates /></span>
   </xsl:template>
 
   <xsl:template match="lb:subst">
@@ -726,7 +742,14 @@
   </xsl:template>
 
   <xsl:template match="lb:tab">
-    <div class="tab" data-value="{@value}">
+    <xsl:variable name="parts" select="tokenize(@value, '-') ! xs:integer(.)" />
+    <xsl:variable name="start" select="($parts[1] - 1) div $parts[2]" />
+    <xsl:variable name="next" select="following-sibling::lb:tab[1]/@value" />
+    <xsl:variable name="previous" select="preceding-sibling::lb:tab[1]/@value" />
+    <xsl:variable name="end" select="if ($next) then (xs:integer(substring-before($next, '-')) - 1) div xs:integer(substring-after($next, '-')) else 1" />
+    <xsl:variable name="previous-start" select="if ($previous) then (xs:integer(substring-before($previous, '-')) - 1) div xs:integer(substring-after($previous, '-')) else 1" />
+    <div class="tab" data-value="{@value}" style="--cell-width: {(if ($end gt $start) then $end - $start else 1 - $start) * 100}%; --cell-gap: {(if ($previous-start ge $start) then $start else 0) * 100}%">
+
       <xsl:call-template name="lb:render-regions"><xsl:with-param name="nodes" select="node()" /></xsl:call-template>
     </div>
   </xsl:template>

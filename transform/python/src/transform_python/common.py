@@ -28,7 +28,7 @@ XSD_MAP = {
     "briefe.xml": "briefe.xsd",
     "meta.xml": "meta.xsd",
     "references.xml": "references.xsd",
-    "traditions.xml": "briefe.xsd",
+    "traditions.xml": "traditions.xsd",
 }
 
 

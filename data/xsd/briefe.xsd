@@ -64,6 +64,7 @@
                     <xs:element ref="b" />
                     <xs:element ref="it" />
                     <xs:element ref="gr" />
+                    <xs:element ref="fr" />
                     <xs:element ref="hb" />
                     <xs:element ref="subst" />
                     <xs:element ref="tabs" />

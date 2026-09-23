@@ -30,6 +30,7 @@
             <xs:element ref="b" />
             <xs:element ref="it" />
             <xs:element ref="gr" />
+            <xs:element ref="fr" />
             <xs:element ref="hb" />
             <xs:element ref="subst" />
             <xs:element ref="tabs" />
@@ -65,6 +66,7 @@
             <xs:element ref="b" />
             <xs:element ref="it" />
             <xs:element ref="gr" />
+            <xs:element ref="fr" />
             <xs:element ref="hb" />
             <xs:element ref="subst" />
             <xs:element ref="tabs" />
@@ -369,6 +371,7 @@
     <xs:element name="pe" type="lenz:textbase" />
     <xs:element name="anchor" type="lenz:textbase" />
     <xs:element name="gr" type="lenz:textbase" />
+    <xs:element name="fr" type="lenz:textbase" />
     <xs:element name="hb" type="lenz:textbase" />
     <xs:element name="ru" type="lenz:textbase" />
     <xs:element name="large" type="lenz:textbase" />

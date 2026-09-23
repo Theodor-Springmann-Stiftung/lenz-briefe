@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import json
+from html import escape
 from pathlib import Path
 import tempfile
 from time import perf_counter
@@ -44,7 +45,8 @@ def extract_date(node: etree._Element | None) -> dict[str, Any] | None:
         "notAfter": get_attribute(node, "notAfter"),
         "from": get_attribute(node, "from"),
         "to": get_attribute(node, "to"),
-        "cert": get_attribute(node, "cert"),
+        "cert": get_attribute(node, "cert", "high"),
+        "content": extract_annotation_parts(node),
     }
 
 
@@ -142,7 +144,18 @@ def extract_meta(letter_desc: etree._Element, refs: dict[str, dict[str, dict[str
     received_locations = received.xpath("./l:location", namespaces=NSMAP) if received is not None else []
     received_persons = received.xpath("./l:person", namespaces=NSMAP) if received is not None else []
 
+    events = []
+    for event in letter_desc:
+        if not isinstance(event.tag, str) or etree.QName(event).localname not in ("sent", "received"):
+            continue
+        events.append({
+            "type": etree.QName(event).localname,
+            "dates": [extract_date(n) for n in event.findall("l:date", NSMAP)],
+            "persons": resolve_refs(event.findall("l:person", NSMAP), refs["personMap"]),
+            "locations": resolve_refs(event.findall("l:location", NSMAP), refs["locationMap"]),
+        })
     return {
+        "events": events,
         "letter": letter,
         "slug": slugify_letter(letter),
         "sent": {
@@ -158,8 +171,8 @@ def extract_meta(letter_desc: etree._Element, refs: dict[str, dict[str, dict[str
         "traditions": [{"isOriginal": n.get("isOriginal") in ("true", "1"), "type": n.get("type")}
                        for n in letter_desc.xpath("./l:traditions/l:tradition", namespaces=NSMAP)],
         "hasOriginal": any(node.get("isOriginal") in ("true", "1") for node in letter_desc.xpath("./l:traditions/l:tradition", namespaces=NSMAP)),
-        "isProofread": get_attribute(_first_xpath(letter_desc, "./l:isProofread"), "value") == "true",
-        "isDraft": get_attribute(_first_xpath(letter_desc, "./l:isDraft"), "value") == "true",
+        "isProofread": get_attribute(_first_xpath(letter_desc, "./l:isProofread"), "value") in ("true", "1"),
+        "isDraft": get_attribute(_first_xpath(letter_desc, "./l:isDraft"), "value") in ("true", "1"),
     }
 
 
@@ -353,6 +366,14 @@ def export_edition(out_dir: str) -> dict[str, Any]:
     warnings += timings.measure("validateXsd:traditions", lambda: validate_xml(traditions_doc, "traditions.xml"))
     warnings += timings.measure("validateXsd:references", lambda: validate_xml(references_doc, "references.xml"))
     warnings += timings.measure("lintVerweise", lambda: check_verweise(briefe_doc, meta_doc, traditions_doc, references_doc))
+    for letter_node in briefe_doc.findall(".//l:letterText", NSMAP):
+        targets = set(letter_node.xpath("./l:page/@index", namespaces=NSMAP))
+        for note in letter_node.findall("l:sidenote", NSMAP):
+            if note.get("page") not in targets:
+                warnings.append({"kind": "unresolved-sidenote", "stage": "sidenoteTargets",
+                                 "letter": letter_node.get("letter"), "page": note.get("page"),
+                                 "line": note.sourceline,
+                                 "message": "Sidenote retained without a matching page marker."})
 
     timings.measure("resetOutDir", lambda: reset_dir(absolute_out_dir))
 
@@ -385,6 +406,9 @@ def export_edition(out_dir: str) -> dict[str, Any]:
         )
         index_entries.append(entry)
 
+    from .catalog import build_catalog
+    catalog = build_catalog(index_entries, refs)
+    write_json(absolute_out_dir / "catalog.json", catalog)
     index_entries.sort(key=lambda entry: int(entry["letter"]))
     timings.measure(
         "writeFile:indexJson",
@@ -453,6 +477,7 @@ def _process_letter(
     meta = meta_by_letter.get(letter) or {
         "letter": letter,
         "slug": slug,
+        "events": [],
         "sent": {"date": None, "locations": [], "persons": []},
         "received": {"date": None, "locations": [], "persons": []},
         "traditions": [],
@@ -476,7 +501,7 @@ def _process_letter(
     )
 
     sidenotes_by_page: dict[str, list[dict[str, Any]]] = {}
-    for page in pages:
+    for page in sorted(set(pages) | set(collect_sidenote_pages(letter_text)), key=int):
         sidenotes = timings.measure(
             "select:pageSidenotes",
             lambda page_value=page: letter_text.xpath(f"./l:sidenote[@page='{page_value}']", namespaces=NSMAP),
@@ -502,6 +527,9 @@ def _process_letter(
                 raise error.with_context(letter=letter, page=page) from error
             for index, html in enumerate(html_items):
                 records[index]["html"] = html
+        for record, node in zip(records, sidenotes):
+            record["anchorId"] = f"page-{page}" if page in pages else None
+            record["sourceOrder"] = len(node.xpath("preceding-sibling::l:sidenote", namespaces=NSMAP)) + 1
         sidenotes_by_page[page] = records
     timings.measure(
         "writeFile:sidenotesJson",
@@ -509,15 +537,38 @@ def _process_letter(
     )
 
     sidenote_pages = timings.measure("collectSidenotePages", lambda: collect_sidenote_pages(letter_text))
+    tradition_records = []
+    definitions = json.loads(app_definitions)
+    if tradition_node is not None:
+        def add_text(value):
+            if value and value.strip():
+                tradition_records.append({"type": "text", "html": '<div class="lb-line-block">' + escape(value) + '</div>'})
+        add_text(tradition_node.text)
+        app_index = 0
+        for app in tradition_node:
+            if isinstance(app.tag, str) and etree.QName(app).localname == "app":
+                app_index += 1
+                ref = app.get("ref", "")
+                definition = definitions.get(ref, {})
+                tradition_records.append({
+                    "type": "app", "id": f"app-{app_index}", "ref": ref,
+                    "name": definition.get("name") or f"Apparat {ref}",
+                    "category": definition.get("category") or "Weitere Angaben",
+                    "html": runner.run_stylesheet("app-body", serialize_node(app),
+                        {"pagePrefix": f"app-{app_index}-page-"}, timings),
+                })
+            add_text(app.tail)
+    write_json(letter_dir / "traditions.json", tradition_records)
     meta_output = {
         **meta,
         "letter": letter,
         "slug": slug,
         "hasText": True,
-        "hasTraditions": has_traditions,
+        "hasTraditions": bool(tradition_records),
         "hasSidenotes": len(sidenote_pages) > 0,
         "pageCount": len(pages),
         "pages": pages,
+        "handRefs": sorted(set(letter_text.xpath(".//l:hand/@ref", namespaces=NSMAP)), key=int),
         "traditionsHtml": traditions_html,
     }
     timings.measure(

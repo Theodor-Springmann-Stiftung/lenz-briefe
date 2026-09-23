@@ -46,12 +46,12 @@ def _check_doc_references(root: etree._Element, reference_data: dict[str, set[st
             }
         )
 
-    for letter_text in root.xpath("//letterText"):
+    for letter_text in root.xpath("//lenz:letterText", namespaces=NAMESPACE_MAP):
         letter_id = str(letter_text.get("letter"))
         if letter_id not in reference_data["letterDesc"]:
             add_error(letter_text, "letterText", letter_id)
 
-    for letter_tradition in root.xpath("//letterTradition"):
+    for letter_tradition in root.xpath("//lenz:letterTradition", namespaces=NAMESPACE_MAP):
         letter_id = str(letter_tradition.get("letter"))
         if letter_id not in reference_data["letterDesc"]:
             add_error(letter_tradition, "letterTradition", letter_id)
@@ -66,12 +66,12 @@ def _check_doc_references(root: etree._Element, reference_data: dict[str, set[st
         if ref not in reference_data["personDef"]:
             add_error(person_elem, "person", ref)
 
-    for hand_elem in root.xpath("//hand", namespaces=NAMESPACE_MAP):
+    for hand_elem in root.xpath("//lenz:hand", namespaces=NAMESPACE_MAP):
         ref = str(hand_elem.get("ref"))
         if ref not in reference_data["personDef"]:
             add_error(hand_elem, "person", ref)
 
-    for app_elem in root.xpath("//app"):
+    for app_elem in root.xpath("//lenz:app", namespaces=NAMESPACE_MAP):
         ref = str(app_elem.get("ref"))
         if ref not in reference_data["appDef"]:
             add_error(app_elem, "app", ref)
