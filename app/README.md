@@ -36,6 +36,35 @@ needed. Builds regenerate `app/generated/`; both directories are ignored by Git.
 The export script uses the workspace's Python virtual environment when present,
 otherwise `uv run`. An unsuccessful export stops the site build.
 
+## GitHub Pages development deployment
+
+`.github/workflows/pages.yml` validates all four XML documents against their XSDs
+before running the Python/Saxon XSLT export and the static Astro build. Any schema,
+test, export or build failure prevents deployment. Pushes to `main` publish
+`app/dist/`; pull requests targeting `main` validate and build without publishing.
+The workflow can also be run manually on `main`.
+
+The site URL is `https://dev.lenz-briefe.de`, served at `/` without a repository
+path prefix. For the initial setup:
+
+1. In the repository's **Settings → Pages**, select **GitHub Actions** as the source.
+2. Set the custom domain to `dev.lenz-briefe.de`.
+3. At the DNS provider, set the `dev` CNAME record to
+   `theodor-springmann-stiftung.github.io` (no repository path).
+4. Enable **Enforce HTTPS** once the certificate is available.
+
+With an Actions deployment, the custom domain must be configured in GitHub's
+settings; a `CNAME` file in the artifact does not configure it. See
+[GitHub's custom-domain instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+The development site's `robots.txt` and `noindex` meta tags are included in the
+published output.
+
+Run the same strict validation locally from the repository root:
+
+```sh
+uv run --project transform/python python -m transform_python.validate_schemas
+```
+
 ## Data and rendering
 
 - `generated/catalog.json` provides chronological headers, ordered sending and

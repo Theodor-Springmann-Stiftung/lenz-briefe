@@ -1,0 +1,82 @@
+name: Validate and publish edition
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Serialize runs on each branch so an older build cannot replace a newer deploy.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Validate XML and build site
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Python and uv
+        uses: astral-sh/setup-uv@v10
+        with:
+          python-version: '3.13'
+          enable-cache: true
+          cache-dependency-glob: transform/python/uv.lock
+
+      - name: Install locked transformation dependencies
+        run: uv sync --project transform/python --locked
+
+      - name: Validate all XML documents against their XSDs
+        run: uv run --project transform/python --no-sync python -m transform_python.validate_schemas
+
+      - name: Test the validation gate
+        working-directory: transform/python
+        run: uv run --no-sync python -m unittest test_validate_schemas
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install locked site dependencies
+        run: npm --prefix app ci
+
+      - name: Test site behavior
+        run: npm --prefix app test
+
+      # The build script runs Python/Saxon XSLT export, Astro check, then Astro build.
+      - name: Transform XML and build static Astro pages
+        run: npm --prefix app run build
+
+      - name: Upload static site
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: app/dist
+
+  deploy:
+    name: Publish to GitHub Pages
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy static site
+        id: deployment
+        uses: actions/deploy-pages@v4
