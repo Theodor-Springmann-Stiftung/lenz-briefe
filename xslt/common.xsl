@@ -594,6 +594,28 @@
   </xsl:template>
 
   <xsl:template match="t:row">
+    <!-- Text and editorial marks between stops belong to the preceding cell.
+         They must not become additional flex items that shift later stops. -->
+    <xsl:variable name="cells" as="element(t:row)">
+      <t:row>
+        <xsl:for-each-group select="node()" group-starting-with="lb:tab">
+          <xsl:choose>
+            <xsl:when test="current-group()[1]/self::lb:tab">
+              <xsl:for-each select="current-group()[1]">
+                <xsl:copy>
+                  <xsl:copy-of select="@*" />
+                  <xsl:sequence select="node(), current-group()[position() gt 1]" />
+                </xsl:copy>
+              </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="current-group()[self::* or self::text()[normalize-space()]]">
+              <t:tab-prefix><xsl:sequence select="current-group()" /></t:tab-prefix>
+            </xsl:when>
+            <xsl:otherwise><xsl:sequence select="current-group()" /></xsl:otherwise>
+          </xsl:choose>
+        </xsl:for-each-group>
+      </t:row>
+    </xsl:variable>
     <div class="lb-tab-row">
       <xsl:if test="@tab">
         <xsl:attribute name="data-tab" select="string(@tab)" />
@@ -601,14 +623,18 @@
       </xsl:if>
       <xsl:choose>
         <xsl:when test="@type = 'line'">
-          <xsl:apply-templates />
+          <xsl:apply-templates select="$cells/node()" />
           <hr class="lb-rule" />
         </xsl:when>
         <xsl:otherwise>
-          <xsl:apply-templates select="node()" />
+          <xsl:apply-templates select="$cells/node()" />
         </xsl:otherwise>
       </xsl:choose>
     </div>
+  </xsl:template>
+
+  <xsl:template match="t:tab-prefix">
+    <div class="lb-tab-prefix"><xsl:apply-templates /></div>
   </xsl:template>
 
   <!-- Notes are rendered separately by sidenotes.xsl. -->

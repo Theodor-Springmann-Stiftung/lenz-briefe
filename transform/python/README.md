@@ -77,6 +77,9 @@ when occupied. A cell owns its own alignment context. Cells retain `data-value`
 from `tab/@value`; their final layout belongs to the site. Source letter 293 has
 consecutive cells at the same position without intervening `line` markers, so
 cell positions must not be assumed to increase strictly on every source row.
+Text and editorial marks between tab elements are included in the preceding
+cell. Content before the first tab is wrapped in `div.lb-tab-prefix`, displayed
+at full row width, so neither can shift the encoded starting positions.
 
 `address` is transparent. Empty `nr` elements survive, including in aligned
 content; whitespace-only placeholder contents are removed, and `data-extent`

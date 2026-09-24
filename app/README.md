@@ -18,6 +18,12 @@ npm --prefix app ci
 npm --prefix app run dev
 ```
 
+While the dev server runs, saving files in `data/xml/`, `data/xsd/`, or `xslt/`
+automatically reruns the export and reloads the browser after it succeeds. Saves
+are debounced, and exports run one at a time. Changes made during an export queue
+another run. Export failures appear in the terminal and browser error overlay;
+fixing and saving the source retries automatically.
+
 For a production build and local preview:
 
 ```sh
@@ -68,13 +74,19 @@ otherwise `uv run`. An unsuccessful export stops the site build.
 
 Current layout conventions: one line-indent unit equals `2ch`; `tab value="i-n"`
 starts at fraction `(i-1)/n` of its row and occupies the space to the next cell.
+Text and editorial marks between tab elements remain in the preceding cell, so
+they cannot displace subsequent tab stops. Content before the first tab occupies
+a separate full-width line.
 A repeated or lower tab position wraps to a new row. On narrow screens line
 indentation is capped at 25% to keep the text readable.
 
 The language tags only set `lang`: `gr→grc`, `fr→fr`, `hb→he`, `ru→ru`;
 `aq→la` also changes to sans-serif. Edition marks are CSS decorations so they do
-not alter the source wording. `subst`, `undo` and their metadata survive without
-an additional visual style; `address` is transparent.
+not alter the source wording. Substitutions show inverse inserted text with ordinary
+insertion marks; hovering reveals the struck-through original, and clicking locks
+or toggles that view. Enter/Space also toggle it; Escape resets it. Each reading
+uses only its visible text's width. Without JavaScript, both remain
+visible. `undo` has no additional visual style; `address` is transparent.
 
 ## Verification
 

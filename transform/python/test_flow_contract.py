@@ -135,6 +135,30 @@ class FlowContractTests(unittest.TestCase):
         self.assertEqual(len(tree.xpath('.//div[@class="align-right"][text()="Outside"]')), 1)
         self.assertEqual(len(table.xpath('.//div[@class="tab"][.//text()="Other"]')), 1)
 
+    def test_interstitial_tab_content_stays_inside_preceding_cell(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            with self.subTest(kind=kind):
+                tree = self.render('<tabs><line/><tab value="3-8">1</tab> – <tab value="4-8">Draconer</tab><note>Remark</note><tab value="7-8">350.</tab></tabs>', kind)
+                row = tree.xpath('.//div[@class="lb-tab-row"]')[0]
+                cells = row.xpath('./div[@class="tab"]')
+                self.assertEqual([c.text_content() for c in cells], ['1 – ', 'DraconerRemark', '350.'])
+                self.assertEqual(len(row), 3)
+                self.assertEqual(cells[1].xpath('./span[@class="note"]/text()'), ['Remark'])
+                self.assertIn('--cell-gap: 25%', cells[0].get('style'))
+                self.assertIn('--cell-width: 12.5%', cells[0].get('style'))
+                self.assertIn('--cell-width: 37.5%', cells[1].get('style'))
+                self.assertIn('--cell-width: 25%', cells[2].get('style'))
+
+    def test_tab_preamble_and_repeated_stops_preserve_order(self):
+        tree = self.render('<tabs><note>Table</note><tab value="2-2">A</tab> tail<tab value="2-2">B</tab><tab value="1-2">C</tab></tabs>')
+        row = tree.xpath('.//div[@class="lb-tab-row"]')[0]
+        self.assertEqual(row[0].get('class'), 'lb-tab-prefix')
+        self.assertEqual(row[0].text_content(), 'Table')
+        cells = row.xpath('./div[@class="tab"]')
+        self.assertEqual([c.text_content() for c in cells], ['A tail', 'B', 'C'])
+        self.assertTrue(all('--cell-gap: 50%' in c.get('style') for c in cells[:2]))
+        self.assertIn('--cell-width: 50%', cells[1].get('style'))
+
     def test_vertical_space_is_a_boundary_without_an_extra_line(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:
             for after in ['B', '<line/>B']:
