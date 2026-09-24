@@ -1,0 +1,38 @@
+---
+import type { Letter } from '../lib/edition';
+import Tooltip from './Tooltip.astro';
+import Icon from './Icon.astro';
+import printIcon from '../assets/druck-2.svg?url';
+import manuscriptIcon from '../assets/manuskript-2.svg?url';
+import unknownIcon from '../assets/unbekannt.svg?url';
+
+interface Props { letter: Letter }
+const { letter } = Astro.props;
+const icons = {
+  print: {src: printIcon, label: 'im Druck'},
+  manuscript: {src: manuscriptIcon, label: 'als Manuskript'},
+  unknown: {src: unknownIcon, label: ''},
+};
+const hasOriginal = letter.hasOriginal || letter.traditions.some(source => source.isOriginal);
+const checkedOriginal = hasOriginal && letter.isProofread;
+const types = [...new Set(letter.traditions.filter(source => !source.isOriginal).map(source =>
+      source.type === 'print' || source.type === 'manuscript' ? source.type : 'unknown'
+    ))];
+if (!letter.hasOriginal && !letter.traditions.length) types.push('unknown');
+const knownSources = types.filter(type => type !== 'unknown').map(type => icons[type].label);
+const sourceList = new Intl.ListFormat('de', {type: 'conjunction'}).format(knownSources);
+const secondary = types.length
+  ? `${checkedOriginal ? 'Zusätzlich sekundär' : 'Brief sekundär'}${sourceList ? ` ${sourceList}` : ''} überliefert.${types.includes('unknown') ? (sourceList ? ' Details einer weiteren Überlieferung unbekannt.' : ' Details unbekannt.') : ''}`
+  : '';
+const description = [checkedOriginal ? 'Brief wurde anhand der Originalquelle kritisch geprüft.' : '', secondary].filter(Boolean).join(' ');
+---
+{(checkedOriginal || types.length > 0) && <span class="source-icons">
+<span class="source-separator" aria-hidden="true">·</span>
+<Tooltip content={description} class="source-combination" placement="right">
+{checkedOriginal && <span class="source-original"><Icon name="quillPen" />Orig.</span>}
+{types.map((type, index) => <Fragment>
+  {(checkedOriginal || index > 0) && <span class="source-plus" aria-hidden="true">+</span>}
+  <span class="source-icon"><img src={icons[type].src} alt="" aria-hidden="true" /></span>
+</Fragment>
+)}
+</Tooltip></span>}

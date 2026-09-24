@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
 import { base, catalog, letterUrl } from '../lib/edition';
+import { revision } from '../lib/revision';
 interface Props { title?: string; description?: string; wide?: boolean }
 const {title = 'Briefe · Jacob Michael Reinhold Lenz', description = 'Die Briefe von und an Jacob Michael Reinhold Lenz. Digitale Edition.', wide = false} = Astro.props;
 const generatedAt = new Date();
@@ -30,8 +31,8 @@ const navigation = [
     </header>
     <main id="inhalt" class:list={['site-shell', {'site-shell--wide': wide}]}><slot /></main>
     <footer class="site-footer">
-        <p class="footer-license-line"><a class="footer-license" href="https://creativecommons.org/licenses/by/4.0/"><Icon name="creativeCommons" /><Icon name="creativeCommonsBy" /><span>CC BY 4.0</span></a><span aria-hidden="true">·</span><time datetime={generatedAt.toISOString()}>{generationMonth}</time></p>
-        <p class="text-right">lenz-briefe.de – ein Projekt der <a href="https://theodor-springmann-stiftung.de/">Theodor Springmann Stiftung</a> · <a href="https://dev.lenz-briefe.de/datenschutz/">Impressum &amp; Datenschutz</a> · <a href="https://github.com/Theodor-Springmann-Stiftung/lenz-web">Code</a></p>
+        <p class="footer-license-line"><a class="footer-license" href="https://creativecommons.org/licenses/by/4.0/"><Icon name="creativeCommons" /><Icon name="creativeCommonsBy" /><span class="font-mono">CC BY 4.0</span></a><span aria-hidden="true">·</span><time datetime={generatedAt.toISOString()}>{generationMonth}</time></p>
+        <p class="text-right">lenz-briefe.de – ein Projekt der <a href="https://theodor-springmann-stiftung.de/">Theodor Springmann Stiftung</a> · <a href="https://dev.lenz-briefe.de/datenschutz/">Impressum &amp; Datenschutz</a> · Commit <a class="font-mono" href={revision.url}>{revision.shortHash.toUpperCase()}</a></p>
     </footer>
     <script>import '../scripts/tooltips';</script>
   </body>

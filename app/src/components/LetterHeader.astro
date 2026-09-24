@@ -1,5 +1,6 @@
 ---
-import { letterUrl, sourceLabel, richText, type Letter } from '../lib/edition';
+import { letterUrl, richText, type Letter } from '../lib/edition';
+import SourceIcons from './SourceIcons.astro';
 import ReferenceList from './ReferenceList.astro';
 import Icon from './Icon.astro';
 import Tooltip from './Tooltip.astro';
@@ -11,10 +12,10 @@ const received = letter.events.filter(e => e.type === 'received');
 const dates = sent.flatMap(e => e.dates);
 ---
 <header class:list={['letter-header', {'letter-header--compact': compact}]}>
-  <div class="letter-eyebrow"><span class="header-status">{sourceLabel(letter)}</span></div>
   <Heading class="letter-date">
-    {compact ? <a href={letterUrl(letter.letter)}>{dates.length ? dates.map((d,i) => <Fragment>{i > 0 && ' · '}{d.text}</Fragment>) : 'Ohne Datierung'}</a>
+    {compact ? <a class="letter-card-link" href={letterUrl(letter.letter)}>{dates.length ? dates.map((d,i) => <Fragment>{i > 0 && ' · '}{d.text}</Fragment>) : 'Ohne Datierung'}</a>
       : dates.length ? dates.map((d,i) => <Fragment>{i > 0 && ' · '}<Fragment set:html={richText(d.content)} /></Fragment>) : 'Ohne Datierung'}
+    <SourceIcons letter={letter} />
   </Heading>
   <div class="letter-events">
     {[sent, received].map((events, side) => <Fragment>

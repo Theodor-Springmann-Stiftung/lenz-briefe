@@ -1,5 +1,5 @@
 ---
-interface Props { content: string; class?: string }
-const { content, class: className } = Astro.props;
+interface Props { content: string; class?: string; placement?: 'top' | 'right' | 'bottom' | 'left' }
+const { content, class: className, placement } = Astro.props;
 ---
-<button type="button" class:list={['tooltip-trigger', className]} data-tooltip={content} aria-label={content}><slot /></button>
+<button type="button" class:list={['tooltip-trigger', className]} data-tooltip={content} data-tippy-placement={placement} aria-label={content}><slot /></button>
