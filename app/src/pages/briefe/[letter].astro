@@ -27,11 +27,11 @@ const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'hae
       <div class="letter-toolbar">
         <nav class="letter-navigation" aria-label="Briefnavigation">
           {previous && <a href={letterUrl(previous.letter)} aria-label={`Vorheriger Brief: ${previous.letter}`}><Icon name="arrowLeft" /></a>}
-          <span class="navigation-position">{index + 1} / {catalog.letters.length}</span>
+          <span class="navigation-position">LKB {letter.letter}</span>
           {next && <a href={letterUrl(next.letter)} aria-label={`Nächster Brief: ${next.letter}`}><Icon name="arrowRight" /></a>}
         </nav>
-        {sectionLinks.length > 0 && <nav class="reading-toolbar" aria-label="Abschnitte zum Brief"><a href="#ueberlieferung">{sectionLinks.map(item => item.name).join(', ')} <Icon name="arrowDown" class="section-link-arrow" /></a></nav>}
       </div>
+      {sectionLinks.length > 0 && <nav class="reading-toolbar" aria-label="Abschnitte zum Brief"><a href="#ueberlieferung">{sectionLinks.map(item => item.name).join(', ')} <Icon name="arrowDown" class="section-link-arrow" /></a></nav>}
     </div>
     <div class="reading-layout" data-reading-layout>
       <article class="edition-text letter-body" aria-label={`Text von Brief ${letter.letter}`} set:html={text} />

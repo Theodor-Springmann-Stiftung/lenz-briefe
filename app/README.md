@@ -82,11 +82,10 @@ indentation is capped at 25% to keep the text readable.
 
 The language tags only set `lang`: `gr→grc`, `fr→fr`, `hb→he`, `ru→ru`;
 `aq→la` also changes to sans-serif. Edition marks are CSS decorations so they do
-not alter the source wording. Substitutions show inverse inserted text with ordinary
-insertion marks; hovering reveals the struck-through original, and clicking locks
-or toggles that view. Enter/Space also toggle it; Escape resets it. Each reading
-uses only its visible text's width. Without JavaScript, both remain
-visible. `undo` has no additional visual style; `address` is transparent.
+not alter the source wording. Substitutions show the struck-through original immediately
+followed by the replacement in corner marks, with a small black square just after
+the opening mark to indicate overwriting. Both readings remain visible. Erasures (`er`)
+use inverse text. `undo` has no additional visual style; `address` is transparent.
 
 ## Verification
 

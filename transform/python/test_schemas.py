@@ -6,6 +6,24 @@ from transform_python.common import XSD_DIR, XSD_MAP
 
 
 class SeparateDocumentSchemaTests(unittest.TestCase):
+    def test_sup_and_sub_are_allowed_in_formatting_contexts(self):
+        content = (
+            '<sup><ul>hoch</ul></sup><sub><it>tief</it></sub>'
+            '<ul><sup>hoch</sup><sub>tief</sub></ul>'
+            '<align pos="right"><sup>hoch</sup><sub>tief</sub></align>'
+            '<undo><sup>hoch</sup><sub>tief</sub></undo>'
+        )
+        documents = {
+            'briefe.xsd': '<document><letterText letter="1"><page index="1"/>' + content +
+                '<sidenote pos="left" page="1">' + content + '</sidenote></letterText></document>',
+            'traditions.xsd': '<traditions><letterTradition letter="1"><app ref="4">' +
+                content + '</app></letterTradition></traditions>',
+        }
+        for name, body in documents.items():
+            with self.subTest(schema=name):
+                schema = etree.XMLSchema(etree.parse(str(XSD_DIR / name)))
+                schema.assertValid(etree.fromstring('<opus xmlns="https://lenz-archiv.de">' + body + '</opus>'))
+
     def test_each_schema_accepts_only_its_document_container(self):
         documents = {
             "briefe.xsd": '<document><letterText letter="1"><page index="1"/>Text</letterText></document>',

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<opus xmlns="https://lenz-archiv.de">
+<opus xmlns="https://lenz-archiv.de"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://lenz-archiv.de ../xsd/traditions.xsd">
 	<traditions>
 		<letterTradition letter="1">
 			<app ref="4">
@@ -1248,9 +1250,9 @@
 				
 				Ich verbleibe mit treuer und unerschütterlicher Verbundenheit, mein Herr und lieber Freund,
 				
-				<align pos="right">Ihr untertäniger und gehorsamer Diener.
+				<align pos="right">Ihr untertäniger und gehorsamer Diener.</align>
 <line />
-				Ramond</align></app>
+				<align pos="right">Ramond</align></app>
 		</letterTradition>
 
 		<letterTradition letter="186">
@@ -2724,8 +2726,8 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 46
 			</app>
 			<app ref="11">
-				<align pos="center">
-<line tab="1"/>Antrag an meinen Bruder oder einen meiner Freunde in St. Petersburg, sich 
+				<line tab="1"/><align pos="center">
+Antrag an meinen Bruder oder einen meiner Freunde in St. Petersburg, sich 
 				freundlicherweise bei Seiner Exzellenz dem Kanzler Besborodko für mich 
 				einzusetzen und den Hof um eine Pension zu bitten, sei sie auch noch so gering.</align>
 <vspace lines="1"/>

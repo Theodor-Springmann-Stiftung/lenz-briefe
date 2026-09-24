@@ -8,7 +8,7 @@ from transform_python.common import Timings, read_xml, serialize_node
 from transform_python.exporter import StylesheetRunner
 
 
-PHRASING = {'span', 'strong', 'em', 'mark', 'del'}
+PHRASING = {'span', 'strong', 'em', 'mark', 'del', 'sup', 'sub'}
 FLOW = {'div', 'aside', 'section', 'address', 'hr', 'h2', 'h3'}
 
 
@@ -54,6 +54,23 @@ class FlowContractTests(unittest.TestCase):
         self.assertEqual(self.page(tree).text_content(), '')
         self.assertEqual(self.page(tree, '1').get('data-break'), 'block')
         self.assertFalse(tree.xpath('.//*[@class="lb-page"]'))
+
+    def test_superscript_and_subscript_preserve_nested_formatting(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            with self.subTest(kind=kind):
+                tree = self.render('A<sup><ul>B</ul></sup>C<sub><it>D</it></sub>E', kind)
+                self.assertEqual(''.join(line.text_content() for line in self.lines(tree)), 'ABCDE')
+                self.assertEqual(tree.xpath('.//sup/span[@class="ul"]/text()'), ['B'])
+                self.assertEqual(tree.xpath('.//sub/em/text()'), ['D'])
+
+    def test_anchor_only_raises_explicit_superscript(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            with self.subTest(kind=kind):
+                tree = self.render('<anchor>A</anchor><anchor><sup>B</sup></anchor>', kind)
+                anchors = tree.xpath('.//span[@class="anchor"]')
+                self.assertEqual(anchors[0].text, 'A')
+                self.assertEqual(len(anchors[0]), 0)
+                self.assertEqual(anchors[1].xpath('./sup/text()'), ['B'])
 
     def test_semantic_page_boundaries(self):
         for body in [
@@ -117,6 +134,30 @@ class FlowContractTests(unittest.TestCase):
         self.assertEqual([n.text_content() for n in self.lines(tree)], ['AB', 'CD'])
         self.assertFalse(tree.xpath('.//address'))
         self.assertEqual(tree.xpath('.//span[@class="aq"]/text()'), ['AB', 'CD'])
+
+    def test_substitution_keeps_both_readings_but_omits_insertion_arrow(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            with self.subTest(kind=kind):
+                tree = self.render('<subst><del>old</del><insertion pos="top">new</insertion></subst><insertion pos="left">added</insertion>', kind)
+                subst = tree.xpath('.//span[@class="subst"]')[0]
+                self.assertEqual(subst.text_content(), 'oldnew')
+                self.assertEqual([child.tag for child in subst], ['del', 'span'])
+                self.assertEqual(subst[1].get('class'), 'insertion')
+                self.assertEqual(subst[1].get('data-pos'), 'top')
+                self.assertFalse(subst.xpath('.//span[@class="insertion-arrow"]'))
+                self.assertEqual(len(tree.xpath('.//span[@class="insertion-arrow"]')), 1)
+
+    def test_empty_footnote_marks_preserve_connection_without_inventing_text(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            for content in ['', '   ']:
+                with self.subTest(kind=kind, content=content):
+                    tree = self.render(f'A<fn index="2">{content}</fn>B<fn index="2"><anchor>*</anchor></fn>', kind)
+                    markers = tree.xpath('.//span[@class="fn"]')
+                    self.assertEqual([m.get('data-index') for m in markers], ['2', '2'])
+                    self.assertEqual(markers[0].get('data-empty'), 'true')
+                    self.assertEqual(markers[0].text_content(), '')
+                    self.assertIsNone(markers[1].get('data-empty'))
+                    self.assertEqual(''.join(line.text_content() for line in self.lines(tree)), 'AB*')
 
     def test_nested_formatting_is_carried_into_table_cells(self):
         for wrapper in ['aq', 'it', 'b', 'del', 'ul', 'undo']:

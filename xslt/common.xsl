@@ -658,6 +658,14 @@
     <span class="ul"><xsl:apply-templates /></span>
   </xsl:template>
 
+  <xsl:template match="lb:sup">
+    <sup><xsl:apply-templates /></sup>
+  </xsl:template>
+
+  <xsl:template match="lb:sub">
+    <sub><xsl:apply-templates /></sub>
+  </xsl:template>
+
   <xsl:template match="lb:tul">
     <span class="tul"><xsl:apply-templates /></span>
   </xsl:template>
@@ -688,7 +696,7 @@
       <xsl:if test="@annotation">
         <xsl:attribute name="data-annotation" select="@annotation" />
       </xsl:if>
-      <xsl:if test="@pos"><span class="insertion-arrow" aria-hidden="true"></span></xsl:if>
+      <xsl:if test="@pos and not(ancestor::lb:subst)"><span class="insertion-arrow" aria-hidden="true"></span></xsl:if>
       <xsl:apply-templates />
     </span>
   </xsl:template>
@@ -710,7 +718,14 @@
   </xsl:template>
 
   <xsl:template match="lb:fn">
-    <span class="fn" data-index="{@index}"><xsl:apply-templates /></span>
+    <span class="fn" data-index="{@index}">
+      <xsl:choose>
+        <xsl:when test="empty(node()[self::* or self::text()[normalize-space()]])">
+          <xsl:attribute name="data-empty">true</xsl:attribute>
+        </xsl:when>
+        <xsl:otherwise><xsl:apply-templates /></xsl:otherwise>
+      </xsl:choose>
+    </span>
   </xsl:template>
 
   <xsl:template match="lb:pe">
@@ -764,7 +779,9 @@
   </xsl:template>
 
   <xsl:template match="lb:subst">
-    <span class="subst"><xsl:apply-templates /></span>
+    <span class="subst">
+      <xsl:apply-templates />
+    </span>
   </xsl:template>
 
   <xsl:template match="lb:tabs">

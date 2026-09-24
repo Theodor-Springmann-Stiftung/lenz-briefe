@@ -13,6 +13,8 @@
             <xs:element ref="align" />
             <xs:element ref="aq" />
             <xs:element ref="ul" />
+            <xs:element ref="sup" />
+            <xs:element ref="sub" />
             <xs:element ref="tul" />
             <xs:element ref="highlight" />
             <xs:element ref="undo" />
@@ -50,6 +52,8 @@
             <xs:element ref="align" />
             <xs:element ref="aq" />
             <xs:element ref="ul" />
+            <xs:element ref="sup" />
+            <xs:element ref="sub" />
             <xs:element ref="tul" />
             <xs:element ref="highlight" />
             <xs:element ref="address" />
@@ -340,6 +344,8 @@
 
     <xs:element name="aq" type="lenz:textbase" />
     <xs:element name="ul" type="lenz:textbase" />
+    <xs:element name="sup" type="lenz:textbase" />
+    <xs:element name="sub" type="lenz:textbase" />
     <xs:element name="tul" type="lenz:textbase" />
     <xs:element name="highlight">
         <xs:complexType mixed="true">
@@ -355,6 +361,8 @@
             <xs:choice minOccurs="1" maxOccurs="unbounded">
                 <xs:element ref="lenz:del" />
                 <xs:element ref="lenz:ul" />
+                <xs:element ref="lenz:sup" />
+                <xs:element ref="lenz:sub" />
                 <xs:element ref="lenz:tul" />
                 <xs:element ref="lenz:dul" />
             </xs:choice>

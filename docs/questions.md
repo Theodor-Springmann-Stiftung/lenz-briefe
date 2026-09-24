@@ -21,7 +21,7 @@
 201: fn indx 5 is used two times
 214: kann ma modellieren
 240: Komisches ende?
-227: Oft: vspace nach Seitenumbruch; besonders wenn es um die Rückseite geht / Adressseite. Warum zählen wir die Seiten so? "Rückseite des gefalteten Bogens"
+227: Oft: vspace nach Seitenumbruch; besonders wenn es um die Rückseite geht / Adressseite. Warum zählen wir die Seiten so? Sind es wirrklich 1-4? "Rückseite des gefalteten Bogens". Andere Facette: 303: Gedichtanfang. 299: einfach so
 228: Oft: Lösung für Textverlust; bisher nur in den Provinienzdaten. Vielleicht einfach eigene <app>?
 // 230: Hand cant stretch page soe we have 2x Hand -- BAD
 // 240: Ende
@@ -32,3 +32,10 @@
 272: Ist modellierbar
 279: Was ist das für ein Brief von Lavater? Keine der Hand stammt von Lavater?
 281: Leere sidenote?
+312: <hand> nicht verwendet
+322: Anchor fehlt -- FIXED
+328: Footnote-Anchor
+349: Seite fgalsch zugeordnet
+372: Anchor fehlt
+
+Insgesamt: sub and sup? Fehlt nicht?

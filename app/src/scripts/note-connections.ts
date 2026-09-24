@@ -18,18 +18,42 @@ if (reading) {
   let scheduled = false;
 
   const trigger = (target: EventTarget | null): Element | null => target instanceof Element
-    ? target.closest('.fn[data-note-connected], .margin-note, .unplaced-note') : null;
+    ? target.closest('.fn[data-note-connected], .margin-note:has(.fn[data-note-connected] .anchor), .unplaced-note:has(.fn[data-note-connected] .anchor)') : null;
   const point = (marker: HTMLElement) => {
-    const rect = (marker.querySelector('.anchor') || marker).getBoundingClientRect();
-    return {x: rect.left + rect.width / 2, y: rect.top + rect.height / 2, radius:7};
+    const anchors = marker.querySelectorAll('.anchor');
+    if (!anchors.length) {
+      const rect = marker.getClientRects()[0] || marker.getBoundingClientRect();
+      return {x: rect.left + rect.width / 2, y: rect.top + rect.height / 2, radius:2, anchorless:true};
+    }
+    // Measure text runs individually: an inline wrapper's own box remains on
+    // the baseline even when its contents are raised, lowered, or mixed.
+    const rects: DOMRect[] = [];
+    for (const anchor of anchors) {
+      const walker = document.createTreeWalker(anchor, NodeFilter.SHOW_TEXT);
+      let text: Node | null;
+      while ((text = walker.nextNode())) {
+        if (!text.textContent?.trim()) continue;
+        const range = document.createRange();
+        range.selectNodeContents(text);
+        rects.push(...Array.from(range.getClientRects()).filter(rect => rect.width > 0 && rect.height > 0));
+      }
+    }
+    if (!rects.length) rects.push(anchors[0].getBoundingClientRect());
+    const left = Math.min(...rects.map(rect => rect.left));
+    const right = Math.max(...rects.map(rect => rect.right));
+    const top = Math.min(...rects.map(rect => rect.top));
+    const bottom = Math.max(...rects.map(rect => rect.bottom));
+    return {
+      x:(left + right) / 2, y:(top + bottom) / 2,
+      radius:Math.hypot(right - left, bottom - top) / 2 + 2,
+      anchorless:false,
+    };
   };
   function draw() {
     scheduled = false;
     overlay.replaceChildren();
-    const active = hovered || focused;
+    if (!hovered && !focused) return;
     for (const pair of pairs) {
-      const selected = !!active && pair.some(marker => active === marker || active.contains(marker));
-      if (!selected) continue;
       const [a, b] = pair.map(point);
       const direction = b.x >= a.x ? 1 : -1;
       const bend = Math.min(140, Math.max(40, Math.abs(b.x - a.x) / 3));
@@ -38,6 +62,7 @@ if (reading) {
       overlay.append(path);
       for (const p of [a, b]) {
         const circle = document.createElementNS(svgNS, 'circle');
+        if (p.anchorless) circle.classList.add('anchorless-endpoint');
         circle.setAttribute('cx', String(p.x));
         circle.setAttribute('cy', String(p.y));
         circle.setAttribute('r', String(p.radius));
@@ -52,7 +77,10 @@ if (reading) {
     for (const marker of pair) {
       marker.dataset.noteConnected = 'true';
       marker.tabIndex = 0;
-      marker.setAttribute('aria-label', `Fußnotenmarke ${marker.textContent?.trim()}: zugehörige Stelle hervorheben`);
+      const label = marker.textContent?.trim()
+        ? `Fußnotenmarke ${marker.textContent.trim()}`
+        : `Fußnotenstelle ${marker.dataset.index} ohne sichtbares Zeichen`;
+      marker.setAttribute('aria-label', `${label}: alle Verbindungen im Brief anzeigen`);
     }
   }
   document.addEventListener('pointerover', event => { hovered = trigger(event.target); schedule(); });

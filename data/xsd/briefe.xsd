@@ -47,6 +47,8 @@
                     <xs:element ref="sidenote" />
                     <xs:element ref="aq" />
                     <xs:element ref="ul" />
+                    <xs:element ref="sup" />
+                    <xs:element ref="sub" />
                     <xs:element ref="tul" />
                     <xs:element ref="highlight" />
                     <xs:element ref="undo" />
