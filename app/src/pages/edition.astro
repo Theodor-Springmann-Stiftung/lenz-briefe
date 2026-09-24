@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+const legend = [
+  {tag:'aq', xml:'<aq>', example:'<span class="aq" lang="la">Amice carissime</span>', meaning:'Serifenlose Schrift; zugleich als Latein ausgezeichnet.'},
+  {tag:'b', xml:'<b>', example:'<strong>Mein lieber Freund</strong>', meaning:'Fettdruck.'},
+  {tag:'it', xml:'<it>', example:'<em>Mein lieber Freund</em>', meaning:'Kursivschrift.'},
+  {tag:'large', xml:'<large>', example:'<span class="large">Mein lieber Freund</span>', meaning:'Vergrößerte Schrift.'},
+  {tag:'ul', xml:'<ul>', example:'<span class="ul">Mein lieber Freund</span>', meaning:'Einfache Unterstreichung.'},
+  {tag:'sup', xml:'<sup>', example:'Wort<sup>hoch</sup>', meaning:'Hochgestellter Text.'},
+  {tag:'sub', xml:'<sub>', example:'Wort<sub>tief</sub>', meaning:'Tiefgestellter Text.'},
+  {tag:'dul', xml:'<dul>', example:'<span class="dul">Mein lieber Freund</span>', meaning:'Doppelte Unterstreichung.'},
+  {tag:'tul', xml:'<tul>', example:'<span class="tul">Mein lieber Freund</span>', meaning:'Dreifache Unterstreichung.'},
+  {tag:'del', xml:'<del> / <del><del>…</del></del>', example:'<del>gestrichen</del><br><del><del>zweifach gestrichen</del></del>', meaning:'Durchstreichung; verschachtelte Tilgungen werden doppelt durchgestrichen.'},
+  {tag:'er', xml:'<er>', example:'<span class="er">getilgter Text</span>', meaning:'Tilgung. Der Text erscheint invers.'},
+  {tag:'insertion', xml:'<insertion> / <insertion pos="top|bottom|left|right">', example:'<span class="insertion">Zusatz</span><br><span class="insertion" data-pos="top"><span class="insertion-arrow" aria-hidden="true"></span>oben</span> · <span class="insertion" data-pos="bottom"><span class="insertion-arrow" aria-hidden="true"></span>unten</span><br><span class="insertion" data-pos="left"><span class="insertion-arrow" aria-hidden="true"></span>links</span> · <span class="insertion" data-pos="right"><span class="insertion-arrow" aria-hidden="true"></span>rechts</span>', meaning:'Einfügung zwischen kleinen Winkeln. Bei einer Positionsangabe weist ein kleiner Pfeil von der ursprünglichen Position zum Text.'},
+  {tag:'subst', xml:'<subst>', example:'<span class="subst"><del>altes Wort</del><span class="insertion">neues Wort</span></span>', meaning:'Ersetzung durch Überschreibung. Auf den gestrichenen ursprünglichen Text folgt unmittelbar der eingesetzte Text zwischen Einfügungswinkeln. Ein kleines schwarzes Quadrat nach dem öffnenden Winkel kennzeichnet die Überschreibung.'},
+  {tag:'undo', xml:'<undo>', example:'<span class="undo"><del>gestrichenes Wort</del></span>', meaning:'Derzeit keine eigene Gestaltung. Enthaltene Auszeichnungen bleiben sichtbar.'},
+  {tag:'ink', xml:'<ink>', example:'<span class="ink">Mein lieber Freund</span>', meaning:'Dunkelblaue Schrift.'},
+  {tag:'pe', xml:'<pe>', example:'<span class="pe">Mein lieber Freund</span>', meaning:'Graue Schrift für Bleistift.'},
+  {tag:'hand', xml:'<hand ref="…">', example:'<div class="legend-margin-example"><aside>Hand<br>Friedrich David Lenz</aside><span class="hand">Mein lieber Bruder</span></div>', meaning:'Abweichende Schrift (Bodoni) und Angabe der schreibenden Person am rechten Rand.'},
+  {tag:'highlight', xml:'<highlight color="…">', example:'<mark>hervorgehobener Text</mark>', meaning:'Hervorhebung; derzeit einheitlich gelb.'},
+  {tag:'note', xml:'<note>', example:'Text <span class="note">Anmerkung</span><div class="lb-line-block lb-line-block--note"><span class="note">alleinstehende Anmerkung</span></div>', meaning:'Grau und in eckigen Klammern. Steht die Anmerkung allein in einer Zeile, wird sie zentriert.'},
+  {tag:'tl', xml:'<tl>', example:'vor <span class="tl"></span> nach', meaning:'Textverlust, gekennzeichnet durch einen gepunkteten Kreis.'},
+  {tag:'nr', xml:'<nr/> / <nr extent="4"/>', example:'<span class="nr" data-extent="1" style="--extent:1"></span> / <span class="nr" data-extent="4" style="--extent:4"></span>', meaning:'Unleserliche Stelle zwischen hohlen Punkten. Der Abstand folgt dem Umfang in Zeichen; ohne Angabe eine Zeichenbreite.'},
+  {tag:'anchor', xml:'<anchor>', example:'Wort<span class="anchor">1</span> · Wort<span class="anchor"><sup>1</sup></span>', meaning:'Strukturelle Kennzeichnung eines Verweiszeichens, ohne eigene Formatierung. Hochstellung wird mit <sup> innerhalb von <anchor> ausgezeichnet.'},
+  {tag:'fn', xml:'<fn index="1">', example:'<span class="fn" data-index="1"><span class="anchor"><sup>1</sup></span> Eine Fußnote.</span>', meaning:'Fußnotentext im Textfluss. Die Nummer wird als Zuordnung beibehalten; keine zusätzliche Gestaltung des Textes.'},
+  {tag:'address', xml:'<address>', example:'An meinen lieben Freund', meaning:'Keine eigene Gestaltung; der Inhalt bleibt erhalten.'},
+  {tag:'gr', xml:'<gr>', example:'<span lang="grc">λόγος</span>', meaning:'Altgriechisch (lang="grc"); keine zusätzliche Formatierung.'},
+  {tag:'fr', xml:'<fr>', example:'<span lang="fr">Mon cher ami</span>', meaning:'Französisch (lang="fr"); keine zusätzliche Formatierung.'},
+  {tag:'hb', xml:'<hb>', example:'<span lang="he">שלום</span>', meaning:'Hebräisch (lang="he"); keine zusätzliche Formatierung.'},
+  {tag:'ru', xml:'<ru>', example:'<span lang="ru">Дорогой друг</span>', meaning:'Russisch (lang="ru"); keine zusätzliche Formatierung.'},
+  {tag:'line', xml:'<line/> / <line tab="2"/> / <line type="line"/>', example:'<div class="lb-line-block">Neue Zeile</div><div class="lb-line-block" data-tab="2" style="--indent-units:2">Nur die erste Zeile ist eingerückt. Automatisch umgebrochene Folgezeilen beginnen wieder am linken Rand.</div><div class="lb-line-block lb-line-block--rule"><hr class="lb-rule"></div>', meaning:'Semantischer Zeilenbeginn. „tab“ rückt nur die erste dargestellte Zeile ein, nicht den gesamten Absatz; „type=line“ ergänzt eine horizontale Linie.'},
+  {tag:'vspace', xml:'<vspace lines="1"/>', example:'<div class="lb-line-block">Vor dem Abstand</div><div class="lb-vspace" data-lines="1" style="height:1lh"></div><div class="lb-line-block">Nach dem Abstand</div>', meaning:'Vertikaler Abstand in Zeilenhöhen. Beendet den bisherigen Zeilenkontext; danach beginnt eine neue Zeile.'},
+  {tag:'align', xml:'<align pos="left|center|right">', example:'<div class="lb-line-block" data-layout="aligned"><div class="align-left">links</div><div class="align-center">mittig</div><div class="align-right">rechts</div></div>', meaning:'Linke, mittige oder rechte Ausrichtung innerhalb einer Zeile; mehrere Bereiche sind kombinierbar.'},
+  {tag:'tabs', xml:'<tabs>', example:'<div class="tabs"><div class="lb-tab-row"><div class="tab" style="--cell-width:50%">erste Spalte</div><div class="tab" style="--cell-width:50%">zweite Spalte</div></div><div class="lb-tab-row"><div class="tab" style="--cell-width:50%">darunter</div><div class="tab" style="--cell-width:50%">darunter</div></div></div>', meaning:'Zusammengehörige Zeilen mit frei positionierten Spalten.'},
+  {tag:'tab', xml:'<tab value="1-2"> / <tab value="2-2">', example:'<div class="lb-tab-row"><div class="tab" data-value="1-2" style="--cell-width:50%">links</div><div class="tab" data-value="2-2" style="--cell-width:50%">ab der Hälfte</div></div>', meaning:'Ein einzelner Spaltenbereich. Die Positionsangabe unterteilt die Zeile; hier beginnt die zweite Spalte bei der Hälfte.'},
+  {tag:'page', xml:'<page index="2"/>', example:'<div class="page-number">2</div><div>Der Text geht<span class="page-anchor" data-break="inline"></span>auf der neuen Seite weiter.</div>', meaning:'Kleine serifenlose Seitenzahl rechtsbündig in der linken Randspalte. Innerhalb eines Textblocks markiert „ | “ den Seitenwechsel; an einem Blockbeginn entfällt die Markierung. Eine erste Seite mit der Nummer 1 wird nicht beschriftet.'},
+  {tag:'sidenote', xml:'<sidenote page="2" pos="left">', example:'<div class="legend-margin-example"><aside>Randnotiz<br>zur Seite 2</aside><div>Brieftext auf der zugehörigen Seite.</div></div>', meaning:'Randnotiz am Beginn der zugehörigen Seite im rechten Rand. Auf schmalen Bildschirmen steht sie unter dem Brieftext; unzugeordnete Notizen bleiben ebenfalls erhalten.'},
+];
+---
+<Layout title="Zur Edition · Lenz Briefe">
+  <section class="about-page">
+    <h1>Zur Edition</h1>
+    <div class="legend-table-wrap" tabindex="0" role="region" aria-label="Formatierungslegende">
+      <table class="legend-table">
+        <caption>Formatierungslegende</caption>
+        <thead><tr><th scope="col">Auszeichnung</th><th scope="col">Beispiel</th><th scope="col">Darstellung</th></tr></thead>
+        <tbody>{legend.map(item => <tr data-tag={item.tag}><th scope="row"><code>{item.xml}</code></th><td><div class="edition-text legend-example" set:html={item.example} /></td><td>{item.meaning}</td></tr>)}</tbody>
+      </table>
+    </div>
+  </section>
+</Layout>

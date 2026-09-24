@@ -1,0 +1,6211 @@
+{
+  "snapshot": "2026-09-23",
+  "source": "data/xml/briefe.xml",
+  "namespace": "https://lenz-archiv.de",
+  "description": "Every observed element + exact explicit attribute-value tuple. Attribute order ignored; defaults not inserted; expanded names used for namespaced attributes. Counts include containers and sidenotes.",
+  "elementCount": 32,
+  "combinationCount": 553,
+  "combinations": [
+    {
+      "element": "opus",
+      "attributes": {
+        "{http://www.w3.org/2001/XMLSchema-instance}schemaLocation": "https://lenz-archiv.de ../xsd/briefe.xsd"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4,
+        "letter": null
+      }
+    },
+    {
+      "element": "document",
+      "attributes": {},
+      "count": 1,
+      "firstExample": {
+        "line": 5,
+        "letter": null
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "1"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 7,
+        "letter": "1"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "1"
+      },
+      "count": 374,
+      "firstExample": {
+        "line": 8,
+        "letter": "1"
+      }
+    },
+    {
+      "element": "line",
+      "attributes": {},
+      "count": 1679,
+      "firstExample": {
+        "line": 9,
+        "letter": "1"
+      }
+    },
+    {
+      "element": "align",
+      "attributes": {
+        "pos": "right"
+      },
+      "count": 519,
+      "firstExample": {
+        "line": 9,
+        "letter": "1"
+      }
+    },
+    {
+      "element": "aq",
+      "attributes": {},
+      "count": 845,
+      "firstExample": {
+        "line": 9,
+        "letter": "1"
+      }
+    },
+    {
+      "element": "line",
+      "attributes": {
+        "tab": "7"
+      },
+      "count": 20,
+      "firstExample": {
+        "line": 10,
+        "letter": "1"
+      }
+    },
+    {
+      "element": "vspace",
+      "attributes": {
+        "lines": "2"
+      },
+      "count": 68,
+      "firstExample": {
+        "line": 11,
+        "letter": "1"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "2"
+      },
+      "count": 217,
+      "firstExample": {
+        "line": 13,
+        "letter": "1"
+      }
+    },
+    {
+      "element": "vspace",
+      "attributes": {
+        "lines": "1"
+      },
+      "count": 655,
+      "firstExample": {
+        "line": 14,
+        "letter": "1"
+      }
+    },
+    {
+      "element": "vspace",
+      "attributes": {
+        "lines": "3"
+      },
+      "count": 24,
+      "firstExample": {
+        "line": 18,
+        "letter": "1"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "2"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 27,
+        "letter": "2"
+      }
+    },
+    {
+      "element": "align",
+      "attributes": {
+        "pos": "center"
+      },
+      "count": 411,
+      "firstExample": {
+        "line": 29,
+        "letter": "2"
+      }
+    },
+    {
+      "element": "subst",
+      "attributes": {},
+      "count": 32,
+      "firstExample": {
+        "line": 30,
+        "letter": "2"
+      }
+    },
+    {
+      "element": "del",
+      "attributes": {},
+      "count": 271,
+      "firstExample": {
+        "line": 30,
+        "letter": "2"
+      }
+    },
+    {
+      "element": "insertion",
+      "attributes": {},
+      "count": 36,
+      "firstExample": {
+        "line": 30,
+        "letter": "2"
+      }
+    },
+    {
+      "element": "line",
+      "attributes": {
+        "tab": "5"
+      },
+      "count": 841,
+      "firstExample": {
+        "line": 31,
+        "letter": "2"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand der zweiten Seite, vertikal",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 19,
+      "firstExample": {
+        "line": 77,
+        "letter": "2"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "3"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 83,
+        "letter": "3"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "3"
+      },
+      "count": 122,
+      "firstExample": {
+        "line": 89,
+        "letter": "3"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": " am linken Rand der dritten Seite, vertikal",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 96,
+        "letter": "3"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "4"
+      },
+      "count": 110,
+      "firstExample": {
+        "line": 97,
+        "letter": "3"
+      }
+    },
+    {
+      "element": "note",
+      "attributes": {},
+      "count": 154,
+      "firstExample": {
+        "line": 98,
+        "letter": "3"
+      }
+    },
+    {
+      "element": "address",
+      "attributes": {},
+      "count": 72,
+      "firstExample": {
+        "line": 99,
+        "letter": "3"
+      }
+    },
+    {
+      "element": "ul",
+      "attributes": {},
+      "count": 1027,
+      "firstExample": {
+        "line": 101,
+        "letter": "3"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "4"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 108,
+        "letter": "4"
+      }
+    },
+    {
+      "element": "line",
+      "attributes": {
+        "tab": "1"
+      },
+      "count": 1710,
+      "firstExample": {
+        "line": 114,
+        "letter": "4"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "3"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 126,
+        "letter": "4"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "5"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 129,
+        "letter": "5"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand der ersten Seite, vertikal",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 27,
+      "firstExample": {
+        "line": 135,
+        "letter": "5"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "7"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 171,
+        "letter": "5"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "6"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 180,
+        "letter": "6"
+      }
+    },
+    {
+      "element": "ink",
+      "attributes": {},
+      "count": 9,
+      "firstExample": {
+        "line": 181,
+        "letter": "6"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am oberen rechten Rand der ersten Seite",
+        "page": "1",
+        "pos": "top right"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 190,
+        "letter": "6"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "7"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 193,
+        "letter": "7"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "8"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 216,
+        "letter": "8"
+      }
+    },
+    {
+      "element": "line",
+      "attributes": {
+        "tab": "4"
+      },
+      "count": 108,
+      "firstExample": {
+        "line": 233,
+        "letter": "8"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "9"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 370,
+        "letter": "9"
+      }
+    },
+    {
+      "element": "it",
+      "attributes": {},
+      "count": 113,
+      "firstExample": {
+        "line": 381,
+        "letter": "9"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "10"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 389,
+        "letter": "10"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "11"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 396,
+        "letter": "11"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "12"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 407,
+        "letter": "12"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "13"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 414,
+        "letter": "13"
+      }
+    },
+    {
+      "element": "insertion",
+      "attributes": {
+        "pos": "top"
+      },
+      "count": 187,
+      "firstExample": {
+        "line": 420,
+        "letter": "13"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand der zweiten Seite, vertikal",
+        "page": "2",
+        "pos": "top left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 422,
+        "letter": "13"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "14"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 425,
+        "letter": "14"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "15"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 433,
+        "letter": "15"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "16"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 443,
+        "letter": "16"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "17"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 450,
+        "letter": "17"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "18"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 465,
+        "letter": "18"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "19"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 471,
+        "letter": "19"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "20"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 479,
+        "letter": "20"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "87"
+      },
+      "count": 3,
+      "firstExample": {
+        "line": 503,
+        "letter": "20"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "21"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 506,
+        "letter": "21"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "22"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 515,
+        "letter": "22"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "23"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 528,
+        "letter": "23"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "24"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 543,
+        "letter": "24"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "25"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 553,
+        "letter": "25"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "26"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 564,
+        "letter": "26"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "27"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 573,
+        "letter": "27"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "28"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 581,
+        "letter": "28"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "29"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 586,
+        "letter": "29"
+      }
+    },
+    {
+      "element": "gr",
+      "attributes": {},
+      "count": 27,
+      "firstExample": {
+        "line": 588,
+        "letter": "29"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "30"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 596,
+        "letter": "30"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "31"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 603,
+        "letter": "31"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "32"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 617,
+        "letter": "32"
+      }
+    },
+    {
+      "element": "dul",
+      "attributes": {},
+      "count": 55,
+      "firstExample": {
+        "line": 618,
+        "letter": "32"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "33"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 622,
+        "letter": "33"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am unteren Rand der zweiten Seite",
+        "page": "2",
+        "pos": "bottom"
+      },
+      "count": 4,
+      "firstExample": {
+        "line": 628,
+        "letter": "33"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "11"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 630,
+        "letter": "33"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "34"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 641,
+        "letter": "34"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "35"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 650,
+        "letter": "35"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "36"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 655,
+        "letter": "36"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am oberen Rand, horizontal gespiegelt",
+        "page": "1",
+        "pos": "top"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 678,
+        "letter": "36"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "37"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 681,
+        "letter": "37"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "38"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 706,
+        "letter": "38"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "39"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 732,
+        "letter": "39"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "40"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 747,
+        "letter": "40"
+      }
+    },
+    {
+      "element": "fn",
+      "attributes": {
+        "index": "5"
+      },
+      "count": 33,
+      "firstExample": {
+        "line": 750,
+        "letter": "40"
+      }
+    },
+    {
+      "element": "anchor",
+      "attributes": {},
+      "count": 63,
+      "firstExample": {
+        "line": 750,
+        "letter": "40"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": " am linken Rand der ersten Seite, vertikal",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 753,
+        "letter": "40"
+      }
+    },
+    {
+      "element": "insertion",
+      "attributes": {
+        "pos": "left"
+      },
+      "count": 30,
+      "firstExample": {
+        "line": 770,
+        "letter": "40"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "41"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 774,
+        "letter": "41"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "42"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 876,
+        "letter": "42"
+      }
+    },
+    {
+      "element": "line",
+      "attributes": {
+        "tab": "6"
+      },
+      "count": 46,
+      "firstExample": {
+        "line": 880,
+        "letter": "42"
+      }
+    },
+    {
+      "element": "line",
+      "attributes": {
+        "tab": "8"
+      },
+      "count": 6,
+      "firstExample": {
+        "line": 882,
+        "letter": "42"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand, vertikal",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 4,
+      "firstExample": {
+        "line": 902,
+        "letter": "42"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand, vertikal",
+        "page": "3",
+        "pos": "left"
+      },
+      "count": 3,
+      "firstExample": {
+        "line": 932,
+        "letter": "42"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand, vertikal",
+        "page": "4",
+        "pos": "left"
+      },
+      "count": 6,
+      "firstExample": {
+        "line": 944,
+        "letter": "42"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "43"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 947,
+        "letter": "43"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "44"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 957,
+        "letter": "44"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "45"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 972,
+        "letter": "45"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "46"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 989,
+        "letter": "46"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken unteren Rand der dritten Seite",
+        "page": "3",
+        "pos": "bottom left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 999,
+        "letter": "46"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand der vierten Seite, vertikal",
+        "page": "4",
+        "pos": "left"
+      },
+      "count": 12,
+      "firstExample": {
+        "line": 1004,
+        "letter": "46"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "47"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1011,
+        "letter": "47"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "48"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1087,
+        "letter": "48"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "49"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1106,
+        "letter": "49"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am oberen Rand der zweiten Seite, spiegelverkehrt",
+        "page": "2",
+        "pos": "bottom"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1116,
+        "letter": "49"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "50"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1120,
+        "letter": "50"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "51"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1127,
+        "letter": "51"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "52"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1134,
+        "letter": "52"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "53"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1139,
+        "letter": "53"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "54"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1146,
+        "letter": "54"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Am linken Rande, vertikal",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 1149,
+        "letter": "54"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "12"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 1152,
+        "letter": "54"
+      }
+    },
+    {
+      "element": "pe",
+      "attributes": {},
+      "count": 32,
+      "firstExample": {
+        "line": 1152,
+        "letter": "54"
+      }
+    },
+    {
+      "element": "nr",
+      "attributes": {},
+      "count": 77,
+      "firstExample": {
+        "line": 1167,
+        "letter": "54"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "55"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1181,
+        "letter": "55"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "56"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1194,
+        "letter": "56"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "57"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1202,
+        "letter": "57"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "58"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1211,
+        "letter": "58"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "59"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1219,
+        "letter": "59"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "60"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1225,
+        "letter": "60"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "61"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1237,
+        "letter": "61"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand, vertikal",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 35,
+      "firstExample": {
+        "line": 1242,
+        "letter": "61"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "62"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1245,
+        "letter": "62"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Am linken Rand der ersten Seite, vertikal",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1252,
+        "letter": "62"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "63"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1260,
+        "letter": "63"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "64"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1277,
+        "letter": "64"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "65"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1297,
+        "letter": "65"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "66"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1311,
+        "letter": "66"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "67"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1335,
+        "letter": "67"
+      }
+    },
+    {
+      "element": "nr",
+      "attributes": {
+        "extent": "1"
+      },
+      "count": 5,
+      "firstExample": {
+        "line": 1336,
+        "letter": "67"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "68"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1349,
+        "letter": "68"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "69"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1363,
+        "letter": "69"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "70"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1379,
+        "letter": "70"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "71"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1389,
+        "letter": "71"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "72"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1401,
+        "letter": "72"
+      }
+    },
+    {
+      "element": "fn",
+      "attributes": {
+        "index": "6"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 1416,
+        "letter": "72"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand der dritten Seite, vertikal",
+        "page": "3",
+        "pos": "left"
+      },
+      "count": 14,
+      "firstExample": {
+        "line": 1424,
+        "letter": "72"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "73"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1434,
+        "letter": "73"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "74"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1437,
+        "letter": "74"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "75"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1444,
+        "letter": "75"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am unteren Rand",
+        "page": "1",
+        "pos": "bottom"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 1449,
+        "letter": "75"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "76"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1463,
+        "letter": "76"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "21"
+      },
+      "count": 3,
+      "firstExample": {
+        "line": 1486,
+        "letter": "76"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "77"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1490,
+        "letter": "77"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "78"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1499,
+        "letter": "78"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "79"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1518,
+        "letter": "79"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "80"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1538,
+        "letter": "80"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "81"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1543,
+        "letter": "81"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "82"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1561,
+        "letter": "82"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "83"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1579,
+        "letter": "83"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "84"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1591,
+        "letter": "84"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "85"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1603,
+        "letter": "85"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Fortsetzung am linken Rand der zweiten Seite, vertikal",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 1608,
+        "letter": "85"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "86"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1611,
+        "letter": "86"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "87"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1628,
+        "letter": "87"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "88"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1642,
+        "letter": "88"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "89"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1649,
+        "letter": "89"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "20"
+      },
+      "count": 8,
+      "firstExample": {
+        "line": 1650,
+        "letter": "89"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Fortsetzung am linken Rand, vertikal",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1655,
+        "letter": "89"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "90"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1659,
+        "letter": "90"
+      }
+    },
+    {
+      "element": "large",
+      "attributes": {},
+      "count": 2,
+      "firstExample": {
+        "line": 1660,
+        "letter": "90"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "91"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1667,
+        "letter": "91"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "18"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 1667,
+        "letter": "91"
+      }
+    },
+    {
+      "element": "tl",
+      "attributes": {},
+      "count": 112,
+      "firstExample": {
+        "line": 1668,
+        "letter": "91"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Fortsetzung am linken Rand der ersten Seite, vertikal",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1677,
+        "letter": "91"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "92"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1686,
+        "letter": "92"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "93"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1715,
+        "letter": "93"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "94"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1737,
+        "letter": "94"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "95"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1747,
+        "letter": "95"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "96"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1755,
+        "letter": "96"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "97"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1764,
+        "letter": "97"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "98"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1777,
+        "letter": "98"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "99"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1789,
+        "letter": "99"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "100"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1819,
+        "letter": "100"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "101"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1840,
+        "letter": "101"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "102"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1851,
+        "letter": "102"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "103"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1875,
+        "letter": "103"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "104"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1908,
+        "letter": "104"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "105"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1916,
+        "letter": "105"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "106"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1926,
+        "letter": "106"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "107"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1931,
+        "letter": "107"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "108"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1947,
+        "letter": "108"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "109"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1959,
+        "letter": "109"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "110"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1982,
+        "letter": "110"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "111"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 1996,
+        "letter": "111"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "112"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2001,
+        "letter": "112"
+      }
+    },
+    {
+      "element": "nr",
+      "attributes": {
+        "extent": "4"
+      },
+      "count": 3,
+      "firstExample": {
+        "line": 2011,
+        "letter": "112"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "113"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2023,
+        "letter": "113"
+      }
+    },
+    {
+      "element": "nr",
+      "attributes": {
+        "extent": "3"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2027,
+        "letter": "113"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "114"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2030,
+        "letter": "114"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "115"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2040,
+        "letter": "115"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "116"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2049,
+        "letter": "116"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "117"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2052,
+        "letter": "117"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "118"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2056,
+        "letter": "118"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "119"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2064,
+        "letter": "119"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am oberen Rand",
+        "page": "1",
+        "pos": "top"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2064,
+        "letter": "119"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "120"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2075,
+        "letter": "120"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "121"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2080,
+        "letter": "121"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "122"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2112,
+        "letter": "122"
+      }
+    },
+    {
+      "element": "fn",
+      "attributes": {
+        "index": "8"
+      },
+      "count": 4,
+      "firstExample": {
+        "line": 2131,
+        "letter": "122"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "123"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2144,
+        "letter": "123"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "124"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2158,
+        "letter": "124"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "125"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2162,
+        "letter": "125"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "126"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2180,
+        "letter": "126"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "127"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2197,
+        "letter": "127"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "128"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2212,
+        "letter": "128"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am oberen Rand, spiegelverkehrt",
+        "page": "1",
+        "pos": "top"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2220,
+        "letter": "128"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "129"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2231,
+        "letter": "129"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "130"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2238,
+        "letter": "130"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "131"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2264,
+        "letter": "131"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "132"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2272,
+        "letter": "132"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "133"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2286,
+        "letter": "133"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "134"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2312,
+        "letter": "134"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "51"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2312,
+        "letter": "134"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rande, vertikal",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2324,
+        "letter": "134"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "135"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2335,
+        "letter": "135"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "136"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2349,
+        "letter": "136"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "137"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2357,
+        "letter": "137"
+      }
+    },
+    {
+      "element": "nr",
+      "attributes": {
+        "extent": "2"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 2366,
+        "letter": "137"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "138"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2370,
+        "letter": "138"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "139"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2386,
+        "letter": "139"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "140"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2390,
+        "letter": "140"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "141"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2401,
+        "letter": "141"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "142"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2414,
+        "letter": "142"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "143"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2421,
+        "letter": "143"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "144"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2429,
+        "letter": "144"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am oberen Rand, horizontal gespiegelt",
+        "page": "2",
+        "pos": "top"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2439,
+        "letter": "144"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand des ersten Absatzes der zweiten Seite, vertikal",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2441,
+        "letter": "144"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am äußeren linken Rand der zweiten Seite, vertikal",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2442,
+        "letter": "144"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am oberen Rand der dritten Seite, horizontal gespiegelt",
+        "page": "3",
+        "pos": "top"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2453,
+        "letter": "144"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "145"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2465,
+        "letter": "145"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "146"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2478,
+        "letter": "146"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "147"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2482,
+        "letter": "147"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "148"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2492,
+        "letter": "148"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Am linken Rand der vierten Seite, vertikal",
+        "page": "4",
+        "pos": "left"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 2501,
+        "letter": "148"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "149"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2504,
+        "letter": "149"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "33"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 2511,
+        "letter": "149"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "150"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2516,
+        "letter": "150"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "151"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2528,
+        "letter": "151"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "152"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2535,
+        "letter": "152"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "153"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2551,
+        "letter": "153"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "154"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2564,
+        "letter": "154"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "155"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2569,
+        "letter": "155"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "156"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2582,
+        "letter": "156"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "157"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2601,
+        "letter": "157"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "158"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2609,
+        "letter": "158"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken unteren Rand der zweiten Seite, vertikal",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2625,
+        "letter": "158"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "159"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2645,
+        "letter": "159"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "160"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2649,
+        "letter": "160"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am rechten Rand der ersten Seite, vertikal",
+        "page": "1",
+        "pos": "right"
+      },
+      "count": 3,
+      "firstExample": {
+        "line": 2657,
+        "letter": "160"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "161"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2664,
+        "letter": "161"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "9"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2664,
+        "letter": "161"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "162"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2680,
+        "letter": "162"
+      }
+    },
+    {
+      "element": "tabs",
+      "attributes": {},
+      "count": 6,
+      "firstExample": {
+        "line": 2690,
+        "letter": "162"
+      }
+    },
+    {
+      "element": "tab",
+      "attributes": {
+        "value": "1-2"
+      },
+      "count": 24,
+      "firstExample": {
+        "line": 2691,
+        "letter": "162"
+      }
+    },
+    {
+      "element": "tab",
+      "attributes": {
+        "value": "2-2"
+      },
+      "count": 25,
+      "firstExample": {
+        "line": 2691,
+        "letter": "162"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "163"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2705,
+        "letter": "163"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "164"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2719,
+        "letter": "164"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "5"
+      },
+      "count": 8,
+      "firstExample": {
+        "line": 2727,
+        "letter": "164"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "165"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2732,
+        "letter": "165"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "166"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2746,
+        "letter": "166"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "167"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2752,
+        "letter": "167"
+      }
+    },
+    {
+      "element": "insertion",
+      "attributes": {
+        "pos": "right"
+      },
+      "count": 6,
+      "firstExample": {
+        "line": 2760,
+        "letter": "167"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "168"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2768,
+        "letter": "168"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "169"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2787,
+        "letter": "169"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "170"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2802,
+        "letter": "170"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "171"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2810,
+        "letter": "171"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "172"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2872,
+        "letter": "172"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "173"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2886,
+        "letter": "173"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "174"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2894,
+        "letter": "174"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "175"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2903,
+        "letter": "175"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "176"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2916,
+        "letter": "176"
+      }
+    },
+    {
+      "element": "er",
+      "attributes": {},
+      "count": 10,
+      "firstExample": {
+        "line": 2923,
+        "letter": "176"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "1"
+      },
+      "count": 10,
+      "firstExample": {
+        "line": 2923,
+        "letter": "176"
+      }
+    },
+    {
+      "element": "nr",
+      "attributes": {
+        "extent": "30"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 2923,
+        "letter": "176"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "177"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2926,
+        "letter": "177"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "178"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2931,
+        "letter": "178"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "179"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2940,
+        "letter": "179"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "180"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2953,
+        "letter": "180"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "181"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2959,
+        "letter": "181"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "182"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2966,
+        "letter": "182"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "183"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2978,
+        "letter": "183"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "184"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 2994,
+        "letter": "184"
+      }
+    },
+    {
+      "element": "tab",
+      "attributes": {
+        "value": "1-8"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3002,
+        "letter": "184"
+      }
+    },
+    {
+      "element": "tab",
+      "attributes": {
+        "value": "3-8"
+      },
+      "count": 3,
+      "firstExample": {
+        "line": 3003,
+        "letter": "184"
+      }
+    },
+    {
+      "element": "tab",
+      "attributes": {
+        "value": "4-8"
+      },
+      "count": 5,
+      "firstExample": {
+        "line": 3003,
+        "letter": "184"
+      }
+    },
+    {
+      "element": "tab",
+      "attributes": {
+        "value": "7-8"
+      },
+      "count": 8,
+      "firstExample": {
+        "line": 3003,
+        "letter": "184"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand der vierten Seite vertikal",
+        "page": "4",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3044,
+        "letter": "184"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "185"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3072,
+        "letter": "185"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "unten links am Rand der ersten Seite",
+        "page": "1",
+        "pos": "bottom left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3078,
+        "letter": "185"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "186"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3089,
+        "letter": "186"
+      }
+    },
+    {
+      "element": "insertion",
+      "attributes": {
+        "pos": "bottom"
+      },
+      "count": 3,
+      "firstExample": {
+        "line": 3117,
+        "letter": "186"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "187"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3124,
+        "letter": "187"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "188"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3138,
+        "letter": "188"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "189"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3159,
+        "letter": "189"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "vertikal am linken Rand der vierten Seite",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3168,
+        "letter": "189"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "190"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3172,
+        "letter": "190"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "191"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3184,
+        "letter": "191"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "192"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3200,
+        "letter": "192"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "193"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3216,
+        "letter": "193"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "194"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3223,
+        "letter": "194"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "195"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3244,
+        "letter": "195"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "196"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3282,
+        "letter": "196"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "197"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3288,
+        "letter": "197"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Am oberen Rand",
+        "page": "1",
+        "pos": "top"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3289,
+        "letter": "197"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "über dem zweiten Absatz",
+        "page": "1",
+        "pos": "right"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3298,
+        "letter": "197"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "198"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3312,
+        "letter": "198"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "46"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3312,
+        "letter": "198"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "199"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3321,
+        "letter": "199"
+      }
+    },
+    {
+      "element": "tab",
+      "attributes": {
+        "value": "1-12"
+      },
+      "count": 12,
+      "firstExample": {
+        "line": 3342,
+        "letter": "199"
+      }
+    },
+    {
+      "element": "tab",
+      "attributes": {
+        "value": "5-12"
+      },
+      "count": 4,
+      "firstExample": {
+        "line": 3342,
+        "letter": "199"
+      }
+    },
+    {
+      "element": "tab",
+      "attributes": {
+        "value": "10-12"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 3344,
+        "letter": "199"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "25"
+      },
+      "count": 6,
+      "firstExample": {
+        "line": 3355,
+        "letter": "199"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "links, vertikal",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3424,
+        "letter": "199"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "oberhalb der Adresse, Bleistift heute stark verwischt, zitiert nach FSt II, S. 5",
+        "page": "4",
+        "pos": "top"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3430,
+        "letter": "199"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "rechts, um 90 Grad zur Adresse gedreht",
+        "page": "4",
+        "pos": "right"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3431,
+        "letter": "199"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "200"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3435,
+        "letter": "200"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "201"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3441,
+        "letter": "201"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "202"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3475,
+        "letter": "202"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "203"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3483,
+        "letter": "203"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "vertikal mit dunklerer Tinte",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3488,
+        "letter": "203"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "204"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3495,
+        "letter": "204"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "205"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3504,
+        "letter": "205"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "rechts unten am Rand",
+        "page": "1",
+        "pos": "bottom right"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3507,
+        "letter": "205"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "206"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3519,
+        "letter": "206"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 3529,
+        "letter": "206"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "207"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3532,
+        "letter": "207"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "208"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3543,
+        "letter": "208"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "209"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3551,
+        "letter": "209"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "210"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3558,
+        "letter": "210"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "211"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3569,
+        "letter": "211"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "212"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3576,
+        "letter": "212"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "213"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3588,
+        "letter": "213"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand, horizontal gespiegelt",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3596,
+        "letter": "213"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am rechten Rand, vertikal",
+        "page": "1",
+        "pos": "right"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 3600,
+        "letter": "213"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "214"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3608,
+        "letter": "214"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "215"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3612,
+        "letter": "215"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "216"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3628,
+        "letter": "216"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "217"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3652,
+        "letter": "217"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "218"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3668,
+        "letter": "218"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am unteren rechten Rand der ersten Seite Empfangsvermerk",
+        "page": "1",
+        "pos": "bottom right"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3672,
+        "letter": "218"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "219"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3688,
+        "letter": "219"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "220"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3698,
+        "letter": "220"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "221"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3711,
+        "letter": "221"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "222"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3725,
+        "letter": "222"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "223"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3755,
+        "letter": "223"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am oberen Rand Empfangsnotiz",
+        "page": "2",
+        "pos": "top"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3778,
+        "letter": "223"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "224"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3782,
+        "letter": "224"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am rechten Rand, vertikal",
+        "page": "2",
+        "pos": "right"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3790,
+        "letter": "224"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "225"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3812,
+        "letter": "225"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "226"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3827,
+        "letter": "226"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "227"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3837,
+        "letter": "227"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am unteren Rand der dritten Seite",
+        "page": "3",
+        "pos": "bottom"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3851,
+        "letter": "227"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "228"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3864,
+        "letter": "228"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "229"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3882,
+        "letter": "229"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "230"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3889,
+        "letter": "230"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "231"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3905,
+        "letter": "231"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "232"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3912,
+        "letter": "232"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand, vertikal, rechte Spalte",
+        "page": "4",
+        "pos": "left"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 3918,
+        "letter": "232"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand, vertikal, linke Spalte",
+        "page": "4",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3919,
+        "letter": "232"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am oberen Rand, spiegelverkehrt zum Haupttext",
+        "page": "4",
+        "pos": "top"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3920,
+        "letter": "232"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "233"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3923,
+        "letter": "233"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "234"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3936,
+        "letter": "234"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "235"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3960,
+        "letter": "235"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "236"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3968,
+        "letter": "236"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "237"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3987,
+        "letter": "237"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "238"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 3998,
+        "letter": "238"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am oberen Rand der zweiten Seite, spiegelverkehrt",
+        "page": "2",
+        "pos": "top"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4010,
+        "letter": "238"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "239"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4023,
+        "letter": "239"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "240"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4035,
+        "letter": "240"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "241"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4048,
+        "letter": "241"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "242"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4072,
+        "letter": "242"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "243"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4083,
+        "letter": "243"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "244"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4101,
+        "letter": "244"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "245"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4105,
+        "letter": "245"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "246"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4115,
+        "letter": "246"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "247"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4131,
+        "letter": "247"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "248"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4145,
+        "letter": "248"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "249"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4168,
+        "letter": "249"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "250"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4176,
+        "letter": "250"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "251"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4191,
+        "letter": "251"
+      }
+    },
+    {
+      "element": "b",
+      "attributes": {},
+      "count": 5,
+      "firstExample": {
+        "line": 4193,
+        "letter": "251"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "10"
+      },
+      "count": 4,
+      "firstExample": {
+        "line": 4197,
+        "letter": "251"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "252"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4208,
+        "letter": "252"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "253"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4212,
+        "letter": "253"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "254"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4216,
+        "letter": "254"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "255"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4230,
+        "letter": "255"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "256"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4236,
+        "letter": "256"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "257"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4246,
+        "letter": "257"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "258"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4251,
+        "letter": "258"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Empfangsnotiz am rechten Rand, vertikal",
+        "page": "4",
+        "pos": "right"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4268,
+        "letter": "258"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "259"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4273,
+        "letter": "259"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "260"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4289,
+        "letter": "260"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am oberen linken Rand der vierten Seite, spiegelverkehrt",
+        "page": "4",
+        "pos": "top left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4298,
+        "letter": "260"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "oben rechts am Rand der vierten Seite, spiegelverkehrt",
+        "page": "4",
+        "pos": "top right"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4300,
+        "letter": "260"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "261"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4308,
+        "letter": "261"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "262"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4314,
+        "letter": "262"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "263"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4334,
+        "letter": "263"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "264"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4342,
+        "letter": "264"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "265"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4350,
+        "letter": "265"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "266"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4356,
+        "letter": "266"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "267"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4377,
+        "letter": "267"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "268"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4404,
+        "letter": "268"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "269"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4416,
+        "letter": "269"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "270"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4426,
+        "letter": "270"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "271"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4433,
+        "letter": "271"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "272"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4477,
+        "letter": "272"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "273"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4491,
+        "letter": "273"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "links unten am Rand",
+        "page": "1",
+        "pos": "bottom left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4495,
+        "letter": "273"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "274"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4511,
+        "letter": "274"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "275"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4558,
+        "letter": "275"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "276"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4590,
+        "letter": "276"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "277"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4595,
+        "letter": "277"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "278"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4671,
+        "letter": "278"
+      }
+    },
+    {
+      "element": "align",
+      "attributes": {
+        "pos": "left"
+      },
+      "count": 4,
+      "firstExample": {
+        "line": 4682,
+        "letter": "278"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "279"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4691,
+        "letter": "279"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "280"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4706,
+        "letter": "280"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "281"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4713,
+        "letter": "281"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "282"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4734,
+        "letter": "282"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "6"
+      },
+      "count": 7,
+      "firstExample": {
+        "line": 4812,
+        "letter": "282"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "7"
+      },
+      "count": 7,
+      "firstExample": {
+        "line": 4838,
+        "letter": "282"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "8"
+      },
+      "count": 7,
+      "firstExample": {
+        "line": 4863,
+        "letter": "282"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "9"
+      },
+      "count": 4,
+      "firstExample": {
+        "line": 4889,
+        "letter": "282"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "283"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4909,
+        "letter": "283"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "284"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4915,
+        "letter": "284"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "285"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4925,
+        "letter": "285"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "286"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4937,
+        "letter": "286"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Am linken Rand",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4946,
+        "letter": "286"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "287"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4949,
+        "letter": "287"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "288"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4958,
+        "letter": "288"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "289"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4976,
+        "letter": "289"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "290"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 4987,
+        "letter": "290"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "291"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5006,
+        "letter": "291"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Am linken Rand, vertikal",
+        "page": "4",
+        "pos": "left"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 5015,
+        "letter": "291"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "292"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5018,
+        "letter": "292"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "293"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5043,
+        "letter": "293"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "294"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5156,
+        "letter": "294"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Am linken Rand, vertikal",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 6,
+      "firstExample": {
+        "line": 5163,
+        "letter": "294"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "295"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5168,
+        "letter": "295"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "296"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5181,
+        "letter": "296"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "297"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5188,
+        "letter": "297"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "298"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5252,
+        "letter": "298"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "299"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5267,
+        "letter": "299"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "300"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5279,
+        "letter": "300"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "301"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5298,
+        "letter": "301"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "10"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 5322,
+        "letter": "301"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "11"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5324,
+        "letter": "301"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "12"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5327,
+        "letter": "301"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand, vertikal",
+        "page": "12",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5332,
+        "letter": "301"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "13"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5333,
+        "letter": "301"
+      }
+    },
+    {
+      "element": "page",
+      "attributes": {
+        "index": "14"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5336,
+        "letter": "301"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "302"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5343,
+        "letter": "302"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "303"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5352,
+        "letter": "303"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "304"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5407,
+        "letter": "304"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "305"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5418,
+        "letter": "305"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "306"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5437,
+        "letter": "306"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "307"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5446,
+        "letter": "307"
+      }
+    },
+    {
+      "element": "vspace",
+      "attributes": {
+        "lines": "4"
+      },
+      "count": 9,
+      "firstExample": {
+        "line": 5448,
+        "letter": "307"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "308"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5457,
+        "letter": "308"
+      }
+    },
+    {
+      "element": "fn",
+      "attributes": {
+        "index": "3"
+      },
+      "count": 13,
+      "firstExample": {
+        "line": 5460,
+        "letter": "308"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5461,
+        "letter": "308"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "309"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5470,
+        "letter": "309"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "310"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5478,
+        "letter": "310"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "311"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5495,
+        "letter": "311"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "312"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5505,
+        "letter": "312"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "313"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5526,
+        "letter": "313"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "314"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5537,
+        "letter": "314"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "315"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5558,
+        "letter": "315"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "316"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5565,
+        "letter": "316"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "317"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5573,
+        "letter": "317"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "318"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5590,
+        "letter": "318"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "319"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5600,
+        "letter": "319"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "320"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5613,
+        "letter": "320"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "321"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5649,
+        "letter": "321"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "322"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5666,
+        "letter": "322"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand der sechsten Seite, vertikal",
+        "page": "6",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5681,
+        "letter": "322"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand der achten Seite, vertikal",
+        "page": "8",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5690,
+        "letter": "322"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "323"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5693,
+        "letter": "323"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "62"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5700,
+        "letter": "323"
+      }
+    },
+    {
+      "element": "hand",
+      "attributes": {
+        "ref": "4"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5705,
+        "letter": "323"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "324"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5709,
+        "letter": "324"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "325"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5728,
+        "letter": "325"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "326"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5756,
+        "letter": "326"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "327"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5766,
+        "letter": "327"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "328"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5788,
+        "letter": "328"
+      }
+    },
+    {
+      "element": "fn",
+      "attributes": {
+        "index": "1"
+      },
+      "count": 3,
+      "firstExample": {
+        "line": 5796,
+        "letter": "328"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand, vertikal, linke Spalte; die letzten beiden Absätze durch Linien abgetrennt",
+        "page": "4",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5808,
+        "letter": "328"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "329"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5814,
+        "letter": "329"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "330"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5829,
+        "letter": "330"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "331"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5850,
+        "letter": "331"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "332"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5868,
+        "letter": "332"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "333"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5892,
+        "letter": "333"
+      }
+    },
+    {
+      "element": "fn",
+      "attributes": {
+        "index": "2"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 5895,
+        "letter": "333"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am unteren Rand der ersten Seite",
+        "page": "1",
+        "pos": "bottom"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5898,
+        "letter": "333"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "334"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5912,
+        "letter": "334"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "335"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5928,
+        "letter": "335"
+      }
+    },
+    {
+      "element": "vspace",
+      "attributes": {
+        "lines": "5"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 5931,
+        "letter": "335"
+      }
+    },
+    {
+      "element": "vspace",
+      "attributes": {
+        "lines": "6"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 5938,
+        "letter": "335"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand, horizontal",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5944,
+        "letter": "335"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "336"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5949,
+        "letter": "336"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "337"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 5983,
+        "letter": "337"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand der ersten Seite, vertikal",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 5991,
+        "letter": "337"
+      }
+    },
+    {
+      "element": "fn",
+      "attributes": {
+        "index": "7"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 6006,
+        "letter": "337"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Am linken Rand, mit vertikalem Strich abgetrennt",
+        "page": "4",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6007,
+        "letter": "337"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "338"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6010,
+        "letter": "338"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "339"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6014,
+        "letter": "339"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "340"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6031,
+        "letter": "340"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Am linken Rand, vertikal",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6038,
+        "letter": "340"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "341"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6041,
+        "letter": "341"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "342"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6058,
+        "letter": "342"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "343"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6066,
+        "letter": "343"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Am linken Rand, vertikal",
+        "page": "8",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6198,
+        "letter": "343"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "344"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6201,
+        "letter": "344"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "345"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6224,
+        "letter": "345"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "346"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6233,
+        "letter": "346"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "347"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6249,
+        "letter": "347"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "348"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6274,
+        "letter": "348"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "349"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6296,
+        "letter": "349"
+      }
+    },
+    {
+      "element": "line",
+      "attributes": {
+        "tab": "2"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6301,
+        "letter": "349"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Am oberen Rand der zweiten Seite, spiegelverkehrt und eingerahmt",
+        "page": "2",
+        "pos": "top"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6318,
+        "letter": "349"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Am oberen Rand der zweiten Seite, vertikal",
+        "page": "2",
+        "pos": "top"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6319,
+        "letter": "349"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "Am linken Rand der zweiten Seite, vertikal",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6322,
+        "letter": "349"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "350"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6325,
+        "letter": "350"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "351"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6330,
+        "letter": "351"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "352"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6348,
+        "letter": "352"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "353"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6366,
+        "letter": "353"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "354"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6372,
+        "letter": "354"
+      }
+    },
+    {
+      "element": "fn",
+      "attributes": {
+        "index": "4"
+      },
+      "count": 4,
+      "firstExample": {
+        "line": 6375,
+        "letter": "354"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am unteren Rand der ersten Seite, horizontal",
+        "page": "1",
+        "pos": "bottom"
+      },
+      "count": 2,
+      "firstExample": {
+        "line": 6379,
+        "letter": "354"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "355"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6400,
+        "letter": "355"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "356"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6414,
+        "letter": "356"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "357"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6463,
+        "letter": "357"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "358"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6475,
+        "letter": "358"
+      }
+    },
+    {
+      "element": "ru",
+      "attributes": {},
+      "count": 34,
+      "firstExample": {
+        "line": 6479,
+        "letter": "358"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand der zweiten Seite die folgenden beiden Absätze, vertikal",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6489,
+        "letter": "358"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "359"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6503,
+        "letter": "359"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "360"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6540,
+        "letter": "360"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "361"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6559,
+        "letter": "361"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "362"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6577,
+        "letter": "362"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "363"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6603,
+        "letter": "363"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "364"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6633,
+        "letter": "364"
+      }
+    },
+    {
+      "element": "hb",
+      "attributes": {},
+      "count": 2,
+      "firstExample": {
+        "line": 6638,
+        "letter": "364"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "365"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6662,
+        "letter": "365"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "366"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6684,
+        "letter": "366"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand des letzten Abschnitts, vertikal",
+        "page": "3",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6709,
+        "letter": "366"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "367"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6725,
+        "letter": "367"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "368"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6884,
+        "letter": "368"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "369"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6906,
+        "letter": "369"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand der zweiten Seite, horizontal",
+        "page": "2",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6917,
+        "letter": "369"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am unteren linken Rand der zweiten Seite, vertikal",
+        "page": "2",
+        "pos": "bottom left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6918,
+        "letter": "369"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am oberen linken Rand der zweiten Seite, vertikal",
+        "page": "2",
+        "pos": "top left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6919,
+        "letter": "369"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "370"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6924,
+        "letter": "370"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "371"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6942,
+        "letter": "371"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am unteren Rand der zweiten Seite, spiegelverkehrt",
+        "page": "2",
+        "pos": "bottom"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6958,
+        "letter": "371"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "372"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6961,
+        "letter": "372"
+      }
+    },
+    {
+      "element": "sidenote",
+      "attributes": {
+        "annotation": "am linken Rand der ersten Seite",
+        "page": "1",
+        "pos": "left"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6968,
+        "letter": "372"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "373"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6983,
+        "letter": "373"
+      }
+    },
+    {
+      "element": "letterText",
+      "attributes": {
+        "letter": "374"
+      },
+      "count": 1,
+      "firstExample": {
+        "line": 6997,
+        "letter": "374"
+      }
+    }
+  ]
+}

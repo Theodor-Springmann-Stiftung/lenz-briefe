@@ -1,0 +1,8 @@
+# Local API credentials
+/jev_key.env
+.agents/
+skills-lock.json
+
+# Python bytecode
+__pycache__/
+*.py[cod]
