@@ -66,6 +66,24 @@ class SiteExportTests(unittest.TestCase):
             data = json.loads((self.output / f'letters/{letter}/traditions.json').read_text())
             self.assertTrue(any(r['type'] == 'text' and '.' in r['html'] for r in data))
 
+    def test_search_records_all_have_real_unique_destinations(self):
+        index = json.loads((self.output / 'search.json').read_text())
+        self.assertEqual(index['version'], 1)
+        self.assertEqual({r['kind'] for r in index['blocks']}, {'text', 'sidenote', 'tradition'})
+        self.assertEqual({r['letter'] for r in index['blocks']}, {str(n) for n in range(1, 375)})
+        for letter in self.catalog['letters']:
+            directory = self.output / 'letters' / letter['letter']
+            fragments = [(directory / 'text.html').read_text()]
+            fragments += [n['html'] for group in json.loads((directory / 'sidenotes.json').read_text()).values() for n in group]
+            fragments += [r['html'] for r in json.loads((directory / 'traditions.json').read_text())]
+            tree = html.fragment_fromstring(''.join(fragments), create_parent='div')
+            ids = tree.xpath('.//@id')
+            self.assertEqual(len(ids), len(set(ids)))
+            for record in (r for r in index['blocks'] if r['letter'] == letter['letter']):
+                self.assertIn(record['anchor'], ids)
+        # Sidenotes without matching page markers are still searchable.
+        self.assertTrue(any(r['kind'] == 'sidenote' and r['letter'] == '64' for r in index['blocks']))
+
     def test_languages_standalone_notes_and_hand_origins(self):
         source = '''<letterText xmlns="https://lenz-archiv.de" letter="999"><page index="1"/><note>At page marker</note>
         <line/><note>Alone</note><line/>Text <note>Inline</note>

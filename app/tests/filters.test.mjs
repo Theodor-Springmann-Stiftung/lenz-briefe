@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {readState,matches,queryFor,orderedRecords,hasFilters,withFilters,removeFilter,selectReferenceFilter} from '../src/lib/filters.mjs';
+import {readState,matches,queryFor,orderedRecords,hasFilters,withFilters,removeFilter,resetFilters,selectReferenceFilter} from '../src/lib/filters.mjs';
 const records = [
   {id:'1',group:'1776',people:['1','2'],places:['3']},
   {id:'2',group:'1776',people:['2','4'],places:['5']},
@@ -23,6 +23,25 @@ test('reference links replace all filters with the clicked person or place acros
 test('query state round-trips multiple filters and groups', () => {
   const state = {group:'1776',people:['1','4'],places:['3','5'],sort:'desc'};
   assert.deepEqual(readState(queryFor(state),records,['1776','1777-1779']),state);
+});
+test('search URLs survive filters, sorting and history, and default to all years', () => {
+  const state = readState('?q=Mein%2C+Freund!&person=2', records, ['1776','1777-1779']);
+  assert.equal(state.group, 'all');
+  assert.equal(state.q, 'Mein, Freund!');
+  assert.deepEqual(readState(queryFor(state), records, ['1776','1777-1779']), state);
+  assert.equal(withFilters(state, ['1'], []).q, state.q);
+  assert.equal(selectReferenceFilter(state, 'person', '1').q, undefined);
+});
+test('search pills can be removed independently, and reset clears every active filter', () => {
+  const state = {group:'1776', people:['1'], places:['3'], sort:'desc', q:'Mein Freund'};
+  const removed = removeFilter(state, 'search');
+  assert.deepEqual(removed, {group:'1776', people:['1'], places:['3'], sort:'desc'});
+  assert.equal(queryFor(removed).includes('q='), false);
+  assert.equal(removeFilter(state, 'person', '1').q, 'Mein Freund');
+  assert.deepEqual(resetFilters(state), {group:'all', people:[], places:[], sort:'desc'});
+  assert.equal(hasFilters({...state, people:[], places:[]}), true);
+  assert.equal(hasFilters({...state, people:[], places:[], q:'  '}), false);
+  assert.equal(state.q, 'Mein Freund');
 });
 test('OR within a filter, AND across filters and years', () => {
   const state = {group:'1776',people:['1','4'],places:['5']};

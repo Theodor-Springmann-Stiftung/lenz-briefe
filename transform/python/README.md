@@ -95,6 +95,13 @@ targets: their `anchorId` is null and `status.json` reports the unresolved page.
 records provide apparatus labels and body HTML, including interstitial text;
 `traditionsHtml` remains in `meta.json` for compatibility.
 
+`search.json` contains plain-text search units and anchors into the exported HTML.
+Letter and apparatus units follow semantic line boundaries; page milestones and
+inline formatting are transparent. Every table cell is a separate unit, including
+inside sidenotes. Otherwise each sidenote is one unit across its internal lines.
+Editorial notes and deleted wording remain included. The Astro index downloads
+this file on search focus, then normalizes and matches entirely in the browser.
+
 Run the Python regression tests (including corpus nesting and marker checks):
 
 ```bash

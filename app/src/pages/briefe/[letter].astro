@@ -18,9 +18,17 @@ const unplaced = orderedSidenotes.filter(note => !note.anchorId);
 const previous = catalog.letters[index - 1];
 const next = catalog.letters[index + 1];
 const hands = Object.fromEntries(letter.handRefs.map(ref => [ref, catalog.people[ref]?.name || `Unbekannte Hand (${ref})`]));
-const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'haende', name: 'Hände im Brief'}] : [])];
+const senderRefs = new Set(letter.events.filter(event => event.type === 'sent').flatMap(event => event.persons.map(person => person.ref)));
+// Keep hand markers for attribution, but use the regular typeface for senders.
+const senderHandSelectors = letter.handRefs.filter(ref => senderRefs.has(ref)).flatMap(ref => [
+  `.letter-content .edition-text .hand[data-ref=${JSON.stringify(ref)}]`,
+  `.letter-content .hand-sample[data-ref=${JSON.stringify(ref)}]`,
+]);
+const senderHandStyles = senderHandSelectors.length ? `${senderHandSelectors.join(', ')} { font-family: var(--font-serif); }` : '';
+const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'haende', name: 'Hände'}] : [])];
 ---
 <Layout wide title={`Brief ${letter.letter} · ${titleFor(letter)} · Lenz Briefe`}>
+  {senderHandStyles && <style is:inline set:html={senderHandStyles} />}
   <div class="letter-content">
     <div class="detail-header">
       <LetterHeader letter={letter} />
@@ -50,7 +58,7 @@ const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'hae
           <div class="edition-text apparatus-text" set:html={item.html} />
         </div>
       </Fragment>) : <p>Keine Angaben zur Überlieferung vorhanden.</p>}
-      {letter.handRefs.length > 0 && <div class="apparatus-entry hand-key" id="haende"><h2>Hände im Brief</h2><ul class="edition-text apparatus-text">{Object.values(hands).map(name => <li><span class="hand-sample" aria-hidden="true">Aa</span><span>{name}</span></li>)}</ul></div>}
+      {letter.handRefs.length > 0 && <div class="apparatus-entry hand-key" id="haende"><h2>Hände</h2><ul class="edition-text apparatus-text">{Object.entries(hands).map(([ref, name]) => <li><span class="hand-sample" data-ref={ref} aria-hidden="true">Aa</span><button type="button" data-hand-ref={ref}>{name}</button></li>)}</ul></div>}
     </section>
   </div>
   <script type="application/json" id="hand-data" set:html={JSON.stringify(hands).replace(/</g, '\\u003c')} />

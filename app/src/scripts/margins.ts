@@ -1,4 +1,5 @@
 import {placeMarginItem} from '../lib/margin-placement.mjs';
+import {createHandRangeHighlighter, handGroups} from './hand-ranges';
 
 const layout = document.querySelector<HTMLElement>('[data-reading-layout]');
 if (layout) {
@@ -6,30 +7,43 @@ if (layout) {
   const margin = layout.querySelector<HTMLElement>('.marginalia')!;
   const pageMargin = layout.querySelector<HTMLElement>('.page-margin')!;
   const names = JSON.parse(document.querySelector('#hand-data')?.textContent || '{}');
-  const seen = new Set<string>();
-  body.querySelectorAll<HTMLElement>('.hand').forEach((hand,index) => {
-    const origin = hand.dataset.origin || `mark-${index}`;
-    if (seen.has(origin)) return;
-    seen.add(origin);
+  const allHandGroups = [...document.querySelectorAll<HTMLElement>('.letter-body, .margin-note, .unplaced-note')]
+    .flatMap(container => handGroups(container));
+  const groupsForHand = (ref: string | undefined) => allHandGroups.filter(fragments => fragments[0].dataset.ref === ref);
+  const highlightHand = createHandRangeHighlighter();
+  handGroups(body).forEach((fragments,index) => {
+    const hand = fragments[0];
     const id = `hand-${index + 1}`;
     hand.id = id;
     const item = document.createElement('div');
     item.className = 'marginal-item hand-label';
     item.dataset.anchor = id;
     item.dataset.priority = '1';
-    const label = document.createElement('a');
-    label.href = `#${id}`;
+    const label = document.createElement('button');
+    label.type = 'button';
     label.textContent = names[hand.dataset.ref!] || 'Unbekannte Hand';
+    highlightHand(label, groupsForHand(hand.dataset.ref));
     item.append(label); margin.append(item);
   });
   // A note already occupies the margin; identify its hands within that note.
   document.querySelectorAll<HTMLElement>('.margin-note, .unplaced-note').forEach(note => {
-    const refs = new Set([...note.querySelectorAll<HTMLElement>('.hand')].map(hand => hand.dataset.ref!));
-    if (!refs.size) return;
+    const groups = handGroups(note);
+    if (!groups.length) return;
     const label = document.createElement('p');
     label.className = 'note-annotation';
-    label.textContent = `Hand: ${new Intl.ListFormat('de', {type:'conjunction'}).format([...refs].map(ref => names[ref] || 'Unbekannte Hand'))}`;
+    label.append('Hand: ');
+    groups.forEach((fragments, index) => {
+      if (index) label.append(index === groups.length - 1 ? ' und ' : ', ');
+      const trigger = document.createElement('button');
+      trigger.type = 'button';
+      trigger.textContent = names[fragments[0].dataset.ref!] || 'Unbekannte Hand';
+      highlightHand(trigger, groupsForHand(fragments[0].dataset.ref));
+      label.append(trigger);
+    });
     note.querySelector('.sidenote-details')!.append(label);
+  });
+  document.querySelectorAll<HTMLElement>('.hand-key [data-hand-ref]').forEach(trigger => {
+    highlightHand(trigger, groupsForHand(trigger.dataset.handRef));
   });
   const overflowLabels = new Map<HTMLElement, HTMLElement>();
   margin.querySelectorAll<HTMLElement>('.margin-note').forEach(note => {
@@ -99,6 +113,17 @@ if (layout) {
   }
   function schedule() {if (!scheduled) {scheduled = true; requestAnimationFrame(arrange);}}
   document.fonts.ready.then(schedule);
+  const initialTarget = document.getElementById(location.hash.slice(1));
+  if (initialTarget?.closest('.edition-text')) {
+    // Search links can target notes that move from normal flow into the margin.
+    // Wait for the browser's initial fragment jump as well as fonts and layout.
+    const jumpToTarget = () => document.fonts.ready.then(() => {
+      schedule();
+      requestAnimationFrame(() => initialTarget.scrollIntoView({behavior: 'instant', block: 'start'}));
+    });
+    if (document.readyState === 'complete') jumpToTarget();
+    else window.addEventListener('load', jumpToTarget, {once: true});
+  }
   document.fonts.addEventListener('loadingdone', schedule);
   window.addEventListener('resize', schedule);
   new ResizeObserver(schedule).observe(body);

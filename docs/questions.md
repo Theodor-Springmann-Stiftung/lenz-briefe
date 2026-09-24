@@ -1,11 +1,10 @@
 # Questions (from ~150-227)
 164: Gutes Beispiel für Notes, die vielleicht implizit sein müssten. Odfer explizit am Rand stehen. Aber im Text, den abruptten Start zu erklären finde ich kompliziert.
-158: keine Seitenmaerke zu Seite 4
-167: Same
+158: keine Seitenmaerke zu Seite 4, auch 64
 176: Schraffur ist weird? Sidenotte?
 158: Ist das obere verte eine sidenote? ist es einfach nachgebildet?
 163: Konzept Metadaten: Meta-Daten sind daten. Notizen müssen nicht wiederholen, was in Metadatan hinreichen klar ist.
-// 161: Konzept zwei Autoren und wird unterscheiden Autoren mit <hand>
+// 161: Konzept zwei Autoren und wird unterscheiden Autoren mit <hand> auch 312 auch 36
 // 186: Komischer Textverlust im letzten vers
 184:  am linken Rand der ersten Seite vertikal Kalkulationen von Lenz’ Hand: vertikal Kalkulationen; . Note in Hand
 184: Tabelle ist nicht nötig -- tab ist hier richtig verwendet
@@ -18,8 +17,6 @@
 199: geschweifte Klammer für die obigen beiden Einträge, daneben folgender Text: lässt sich moddellieren, ebenenso Abgrenzungsstrich
 // 199 ist schwer zu modellieren
 200: Aus einem Brief von Anton Matthias Sprickmann an Heinrich Christian Boie vom 18. Juli 1776:
-201: fn indx 5 is used two times
-214: kann ma modellieren
 240: Komisches ende?
 227: Oft: vspace nach Seitenumbruch; besonders wenn es um die Rückseite geht / Adressseite. Warum zählen wir die Seiten so? Sind es wirrklich 1-4? "Rückseite des gefalteten Bogens". Andere Facette: 303: Gedichtanfang. 299: einfach so
 228: Oft: Lösung für Textverlust; bisher nur in den Provinienzdaten. Vielleicht einfach eigene <app>?
@@ -32,7 +29,6 @@
 272: Ist modellierbar
 279: Was ist das für ein Brief von Lavater? Keine der Hand stammt von Lavater?
 281: Leere sidenote?
-312: <hand> nicht verwendet
 322: Anchor fehlt -- FIXED
 328: Footnote-Anchor
 349: Seite fgalsch zugeordnet

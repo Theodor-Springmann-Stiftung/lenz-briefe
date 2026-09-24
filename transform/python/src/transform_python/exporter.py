@@ -33,6 +33,7 @@ from .common import (
 )
 
 from .verweise import check_verweise
+from .search import index_fragment
 
 
 def extract_date(node: etree._Element | None) -> dict[str, Any] | None:
@@ -399,16 +400,19 @@ def export_edition(out_dir: str) -> dict[str, Any]:
 
     app_definitions = json.dumps(refs["appMap"], ensure_ascii=False)
     index_entries: list[dict[str, Any]] = []
+    search_records: list[dict[str, Any]] = []
     for letter_text in letter_text_nodes:
         entry = timings.measure(
             "processLetter",
-            lambda lt=letter_text: _process_letter(lt, absolute_out_dir, runner, timings, meta_by_letter, traditions_by_letter, app_definitions),
+            lambda lt=letter_text: _process_letter(lt, absolute_out_dir, runner, timings, meta_by_letter, traditions_by_letter, app_definitions, search_records),
         )
         index_entries.append(entry)
 
     from .catalog import build_catalog
     catalog = build_catalog(index_entries, refs)
     write_json(absolute_out_dir / "catalog.json", catalog)
+    write_text(absolute_out_dir / "search.json", json.dumps(
+        {"version": 1, "blocks": search_records}, ensure_ascii=False, separators=(",", ":")))
     index_entries.sort(key=lambda entry: int(entry["letter"]))
     timings.measure(
         "writeFile:indexJson",
@@ -454,6 +458,7 @@ def _process_letter(
     meta_by_letter: dict[str, dict[str, Any]],
     traditions_by_letter: dict[str, etree._Element],
     app_definitions: str,
+    search_records: list[dict[str, Any]],
 ) -> dict[str, Any]:
     letter = str(get_attribute(letter_text, "letter"))
     slug = slugify_letter(letter)
@@ -495,6 +500,8 @@ def _process_letter(
         )
     except PipelineFailure as error:
         raise error.with_context(letter=letter) from error
+    text_html, blocks = index_fragment(text_html, letter, "text", "text")
+    search_records.extend(blocks)
     timings.measure(
         "writeFile:textHtml",
         lambda text_value=text_html: write_text(letter_dir / "text.html", text_value + "\n"),
@@ -526,7 +533,10 @@ def _process_letter(
             except PipelineFailure as error:
                 raise error.with_context(letter=letter, page=page) from error
             for index, html in enumerate(html_items):
-                records[index]["html"] = html
+                records[index]["html"], blocks = index_fragment(
+                    html, letter, "sidenote", records[index]["id"],
+                    label=f"Randnotiz · Seite {page}", whole_block=True)
+                search_records.extend(blocks)
         for record, node in zip(records, sidenotes):
             record["anchorId"] = f"page-{page}" if page in pages else None
             record["sourceOrder"] = len(node.xpath("preceding-sibling::l:sidenote", namespaces=NSMAP)) + 1
@@ -558,6 +568,11 @@ def _process_letter(
                         {"pagePrefix": f"app-{app_index}-page-"}, timings),
                 })
             add_text(app.tail)
+    for index, record in enumerate(tradition_records):
+        record["html"], blocks = index_fragment(
+            record["html"], letter, "tradition", record.get("id", f"tradition-text-{index + 1}"),
+            label=record.get("name", "Überlieferungsdaten"))
+        search_records.extend(blocks)
     write_json(letter_dir / "traditions.json", tradition_records)
     meta_output = {
         **meta,
