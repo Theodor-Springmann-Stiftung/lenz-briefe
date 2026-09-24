@@ -1,7 +1,7 @@
 ---
-import { richText, type Reference } from '../lib/edition';
+import { base, richText, type Reference } from '../lib/edition';
 import Tooltip from './Tooltip.astro';
-interface Props { entries: Reference[]; showAnnotations?: boolean; conjunction?: boolean }
-const {entries, showAnnotations = true, conjunction = false} = Astro.props;
+interface Props { entries: Reference[]; kind: 'person' | 'place'; showAnnotations?: boolean; conjunction?: boolean }
+const {entries, kind, showAnnotations = true, conjunction = false} = Astro.props;
 ---
-{entries.map((entry, i) => <Fragment>{i > 0 && (conjunction && i === entries.length - 1 ? ' und ' : ', ')}<span>{entry.label || 'Unbekannt'}{entry.cert === 'low' && <sup class="uncertain"><Tooltip content="vermutlich">?</Tooltip></sup>}{showAnnotations && entry.annotationParts?.length > 0 && <span class="reference-annotation"> (<Fragment set:html={richText(entry.annotationParts)} />)</span>}</span></Fragment>)}
+{entries.map((entry, i) => <Fragment>{i > 0 && (conjunction && i === entries.length - 1 ? ' und ' : ', ')}<span><a class="reference-filter" href={`${base}?${new URLSearchParams({group:'all', [kind]:entry.ref})}`} data-reference-kind={kind} data-reference-id={entry.ref}>{entry.label || 'Unbekannt'}</a>{entry.cert === 'low' && <sup class="uncertain"><Tooltip content="vermutlich">?</Tooltip></sup>}{showAnnotations && entry.annotationParts?.length > 0 && <span class="reference-annotation"> (<Fragment set:html={richText(entry.annotationParts)} />)</span>}</span></Fragment>)}

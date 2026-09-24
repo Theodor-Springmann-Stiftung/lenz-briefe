@@ -19,7 +19,7 @@ const firstGroup = catalog.groups[0];
     </div>
     {(['person', 'place'] as const).map(kind => <template id={`filter-pill-${kind}`}><button type="button" class="filter-pill" data-filter-kind={kind}><Icon name="filter" class="filter-pill-icon" /><Icon name="filterOff" class="filter-pill-remove" /><span class="filter-pill-name"></span></button></template>)}
     <div class="filter-toolbar" role="group" aria-label="Filter und Sortierung">
-      <div class="filter-controls"><span class="filter-caption">Filtern nach</span><Filter kind="person" label="Personen" options={filterOptions('person')} /><Filter kind="place" label="Orten" options={filterOptions('place')} /></div>
+      <div class="filter-controls"><Filter kind="person" label="Personen" options={filterOptions('person')} /><Filter kind="place" label="Orte" options={filterOptions('place')} /></div>
       <label class="catalog-search"><span class="sr-only">Briefe durchsuchen</span><Icon name="search" /><input type="search" placeholder="Briefe durchsuchen …" aria-describedby="search-placeholder-note" autocomplete="off" /></label>
       <span id="search-placeholder-note" class="sr-only">Designvorschau: Die Suche ist noch nicht aktiv.</span>
       <div class="sort-control"><label class="sr-only" for="sort-order">Sortierung</label><Icon name="sort" /><select id="sort-order"><option value="asc">Chronologisch aufsteigend</option><option value="desc">Chronologisch absteigend</option></select></div>

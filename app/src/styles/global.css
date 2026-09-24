@@ -59,14 +59,14 @@
   .edition-count > span { @apply font-serif text-4xl tracking-tight; font-weight: 300; }
   .active-filters { @apply flex flex-wrap items-start gap-3 pb-6; }
   .active-filter-pills { @apply flex flex-wrap gap-2; flex:1 1 auto; min-width:0; }
-  .filter-pill { @apply inline-flex items-center gap-1.5 rounded-md border border-rule bg-filter px-2.5 py-1.5 text-sm text-ink; max-width:100%; min-height:34px; }
+  .filter-pill { @apply inline-flex items-center gap-1.5 border px-2.5 py-1.5 text-sm; border-radius:3px; background:#fff3e6; color:#9a4510; border-color:#9a4510; max-width:100%; min-height:34px; }
   .filter-pill-name { min-width:0; text-align:left; overflow-wrap:anywhere; }
-  .filter-pill > .ui-icon { @apply text-ink; }
+  .filter-pill > .ui-icon { color:inherit; }
   .filter-pill .filter-pill-remove { display:none; }
   .filter-pill:is(:hover, :focus-visible) .filter-pill-icon { display:none; }
   .filter-pill:is(:hover, :focus-visible) .filter-pill-remove { display:inline-flex; }
   .filter-pill .ui-icon, .reset-filters .ui-icon { width:1rem; height:1rem; }
-  .filter-pill:hover { @apply border-accent bg-white; }
+  .filter-pill:hover { background:#ffe7cc; }
   .year-navigation { @apply flex flex-wrap; border-bottom:1px solid var(--color-rule); }
   .year-navigation a { @apply px-5 pt-5 text-base flex items-center gap-3; padding-bottom:.45rem; border-bottom:3px solid transparent; margin-bottom:-1px; }
   .year-navigation a[data-group=all] { margin-left:auto; }
@@ -80,7 +80,6 @@
   .catalog-search { @apply flex items-center gap-2 border border-rule bg-white px-3 py-2 text-ink; flex:1 1 13rem; min-width:0; }
   .catalog-search input { @apply w-full min-w-0 bg-transparent text-sm text-ink; }
   .filter-controls { @apply flex flex-wrap items-center gap-3; flex-shrink:0; max-width:100%; }
-  .filter-caption { @apply text-sm text-ink mr-3; }
   .filter-menu { @apply relative; }
   .filter-menu, .filter-pill, .reset-filters, .sort-control, .sort-control select, .year-navigation { @apply select-none; }
   .filter-menu input[type=search] { @apply select-text; }
@@ -98,6 +97,9 @@
   .reset-filters:hover { @apply border-accent bg-filter; }
   .letter-list { @apply grid gap-4 mt-6; }
   .letter-list > li { @apply border border-rule bg-white p-5 sm:p-6; position:relative; isolation:isolate; }
+  @media (hover:hover) {
+    .letter-list > li:hover { box-shadow:2px 2px 0 #8f9489; }
+  }
   .letter-card-link::after { content:''; position:absolute; inset:0; }
   .letter-card-link:focus-visible::after { outline:2px solid var(--color-accent); outline-offset:3px; }
   .letter-list button, .letter-list a:not(.letter-card-link) { position:relative; z-index:1; }
@@ -114,13 +116,15 @@
   .source-icon img { display:block; width:auto; height:.9em; }
   .source-original { display:inline-flex; align-items:baseline; gap:.2em; }
   .source-original .ui-icon { width:.9em; height:.9em; align-self:center; }
-  .letter-date a:hover { text-decoration:underline; }
+  .letter-date a:hover { text-decoration:none; }
   .letter-events { font-size:var(--header-text-size); line-height:1.6; }
   .correspondence-arrow { @apply inline-flex items-center justify-center text-black; position:relative; width:1.25em; height:1.25em; margin-inline:.45em; vertical-align:-.275em; }
   .correspondence-arrow .ui-icon { width:100%; height:100%; }
   .correspondence-arrow--draft::after { content:''; position:absolute; width:.95em; height:2px; background:currentColor; transform:rotate(-55deg); pointer-events:none; }
   .event-place, .event-date, .reference-annotation { @apply text-ink; }
   .reference-annotation a { @apply underline; }
+  .reference-filter { text-decoration:none; }
+  .reference-filter:hover { text-decoration:underline; }
   .uncertain { font-size:.65em; margin-left:.15em; }
   .letter-header--compact .letter-events { grid-column:1 / -1; grid-row:2; }
   .tooltip-trigger { @apply cursor-help; font:inherit; line-height:1; }
@@ -284,7 +288,6 @@
   .wordmark { gap:.6rem; font-size:1rem; }
   .wordmark > span:last-child { font-size:.7rem; }
   .year-navigation a { padding:1rem .7rem .45rem; font-size:.85rem; gap:.4rem; }
-  .filter-caption { display:none; }
   .filter-menu summary { gap:.5rem; padding-inline:.75rem; }
   .filter-menu[data-filter-menu=place] .filter-panel { left:auto; right:0; }
   .catalog-search { order:-1; flex-basis:100%; max-width:none; }
@@ -298,7 +301,9 @@
   .site-footer { font-size:.75rem; }
 }
 html:has(#ueberlieferung:target) { scroll-behavior:auto; }
-@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+}
 @media print {
   [data-tippy-root], .note-connections { display:none; }
   .site-header nav, .letter-toolbar, .reading-toolbar, .site-footer { display:none; }

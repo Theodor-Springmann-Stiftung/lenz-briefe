@@ -27,7 +27,7 @@ const dates = sent.flatMap(e => e.dates);
       </Fragment>}
       <span class:list={['correspondence-party', side === 0 ? 'correspondence-senders' : 'correspondence-recipients']}>
         {events.map((event, i) => <Fragment>{i > 0 && '; '}<span class="letter-event">
-          <ReferenceList entries={event.persons} conjunction />{event.locations.length > 0 && <span class="event-place"> (&#8288;&#8202;&#8288;<ReferenceList entries={event.locations} showAnnotations={false} />&#8288;&#8202;&#8288;)</span>}
+          <ReferenceList entries={event.persons} kind="person" conjunction />{event.locations.length > 0 && <span class="event-place"> (&#8288;&#8202;&#8288;<ReferenceList entries={event.locations} kind="place" showAnnotations={false} />&#8288;&#8202;&#8288;)</span>}
           {sent.length > 1 && event.type === 'sent' && event.dates.map(date => <span class="event-date"> · {date.text}</span>)}
           {event.type === 'received' && event.dates.map(date => <span class="event-date"> [<Fragment set:html={richText(date.content)} />]</span>)}
         </span></Fragment>)}

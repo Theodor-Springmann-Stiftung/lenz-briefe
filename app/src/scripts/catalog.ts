@@ -1,9 +1,10 @@
-import {readState, matches, queryFor, orderedRecords, hasFilters, withFilters, removeFilter} from '../lib/filters.mjs';
+import {readState, matches, queryFor, orderedRecords, hasFilters, withFilters, removeFilter, selectReferenceFilter} from '../lib/filters.mjs';
 const data = JSON.parse(document.querySelector('#filter-data')!.textContent!);
 let state = readState(location.search, data.records, data.groups);
 const rows = new Map([...document.querySelectorAll<HTMLElement>('[data-letter]')].map(e => [e.dataset.letter, e]));
 const checkboxes = [...document.querySelectorAll<HTMLInputElement>('.filter-options input')];
 const list = document.querySelector<HTMLOListElement>('.letter-list')!;
+const referenceLinks = [...list.querySelectorAll<HTMLAnchorElement>('.reference-filter')];
 const sortControl = document.querySelector<HTMLSelectElement>('#sort-order')!;
 const activeFilters = document.querySelector<HTMLElement>('.active-filters')!;
 const pills = document.querySelector<HTMLElement>('.active-filter-pills')!;
@@ -41,6 +42,9 @@ function render() {
   document.querySelector('#result-count')!.textContent = `${count} ${count === 1 ? 'Brief' : 'Briefe'}`;
   document.querySelector<HTMLElement>('.empty-state')!.hidden = count > 0;
   renderFilterPills();
+  referenceLinks.forEach(link => {
+    link.href = `${location.pathname}?${queryFor(selectReferenceFilter(state, link.dataset.referenceKind!, link.dataset.referenceId!))}`;
+  });
   checkboxes.forEach(input => input.checked = (input.name === 'person' ? state.people : state.places).includes(input.value));
   for (const kind of ['person', 'place']) {
     const count = (kind === 'person' ? state.people : state.places).length;
@@ -77,6 +81,11 @@ checkboxes.forEach(input => input.addEventListener('change', () => navigate(with
   checkboxes.filter(i => i.name === 'person' && i.checked).map(i => i.value),
   checkboxes.filter(i => i.name === 'place' && i.checked).map(i => i.value),
 ))));
+referenceLinks.forEach(link => link.addEventListener('click', event => {
+  if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  navigate(selectReferenceFilter(state, link.dataset.referenceKind!, link.dataset.referenceId!));
+}));
 sortControl.addEventListener('change', () => navigate({...state, sort:sortControl.value === 'desc' ? 'desc' : 'asc'}));
 document.querySelectorAll<HTMLAnchorElement>('[data-group]').forEach(link => link.addEventListener('click', event => {
   if (link.getAttribute('aria-disabled') === 'true') {event.preventDefault(); return;}

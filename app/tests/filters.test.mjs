@@ -1,11 +1,25 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {readState,matches,queryFor,orderedRecords,hasFilters,withFilters,removeFilter} from '../src/lib/filters.mjs';
+import {readState,matches,queryFor,orderedRecords,hasFilters,withFilters,removeFilter,selectReferenceFilter} from '../src/lib/filters.mjs';
 const records = [
   {id:'1',group:'1776',people:['1','2'],places:['3']},
   {id:'2',group:'1776',people:['2','4'],places:['5']},
   {id:'3',group:'1777-1779',people:['1'],places:['5']},
 ];
+test('reference links replace all filters with the clicked person or place across all years', () => {
+  const state = {group:'1776',people:['2','4'],places:['3'],sort:'desc'};
+  const person = selectReferenceFilter(state,'person','1');
+  const place = selectReferenceFilter(state,'place','5');
+  assert.deepEqual(person,{group:'all',people:['1'],places:[],sort:'desc'});
+  assert.deepEqual(place,{group:'all',people:[],places:['5'],sort:'desc'});
+  assert.deepEqual(selectReferenceFilter(person,'person','1'),person);
+  assert.deepEqual(records.filter(r=>matches(r,person)).map(r=>r.id),['1','3']);
+  assert.deepEqual(records.filter(r=>matches(r,place)).map(r=>r.id),['2','3']);
+  for (const next of [person,place]) {
+    assert.deepEqual(readState(queryFor(next),records,['1776','1777-1779']),next);
+  }
+  assert.deepEqual(state,{group:'1776',people:['2','4'],places:['3'],sort:'desc'});
+});
 test('query state round-trips multiple filters and groups', () => {
   const state = {group:'1776',people:['1','4'],places:['3','5'],sort:'desc'};
   assert.deepEqual(readState(queryFor(state),records,['1776','1777-1779']),state);

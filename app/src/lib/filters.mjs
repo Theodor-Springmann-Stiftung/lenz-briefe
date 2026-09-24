@@ -20,6 +20,12 @@ export function hasFilters(state) {
 export function withFilters(state, people, places) {
   return {...state, group:'all', people, places};
 }
+export function selectReferenceFilter(state, kind, id) {
+  return withFilters(state,
+    kind === 'person' ? [id] : [],
+    kind === 'place' ? [id] : [],
+  );
+}
 export function removeFilter(state, kind, id) {
   return withFilters(state,
     kind === 'person' ? state.people.filter(value => value !== id) : state.people,
