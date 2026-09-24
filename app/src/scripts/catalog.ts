@@ -84,7 +84,9 @@ function render() {
 }
 function navigate(next: typeof state, replace = false) {
   clearTimeout(searchTimer);
-  state = next;
+  state = hasFilters(state) && !hasFilters(next)
+    ? {...next, group: data.groups[0] || 'all'}
+    : next;
   searchInput.value = state.q || '';
   const query = queryFor(state);
   const url = `${location.pathname}${query ? '?' + query : ''}`;
@@ -110,7 +112,7 @@ searchInput.addEventListener('input', () => {
   searchTimer = setTimeout(() => {
     const query = searchInput.value;
     const next = {...state, ...(!state.q && query.trim() ? {group: 'all'} : {})};
-    if (query) next.q = query; else delete next.q;
+    if (query.trim()) next.q = query; else delete next.q;
     navigate(next, Boolean(state.q) === Boolean(query));
   }, 100);
 });
@@ -130,10 +132,6 @@ pills.addEventListener('click', event => {
   const nextFocus = remaining[Math.min(index, remaining.length - 1)]
     || (kind === 'search' ? searchInput : document.querySelector<HTMLElement>(`[data-filter-menu="${kind}"] summary`)!);
   nextFocus.focus();
-});
-document.querySelector('.reset-filters')!.addEventListener('click', () => {
-  navigate(resetFilters(state));
-  document.querySelector<HTMLElement>('[data-filter-menu="person"] summary')!.focus();
 });
 document.querySelector('[data-reset]')!.addEventListener('click', () => navigate(resetFilters(state)));
 document.querySelectorAll<HTMLInputElement>('[data-option-search]').forEach(input => input.addEventListener('input', () => {
