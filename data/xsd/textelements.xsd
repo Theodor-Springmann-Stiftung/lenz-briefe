@@ -97,6 +97,14 @@
     <xs:element name="page">
         <xs:complexType>
             <xs:attribute name="index" type="xs:positiveInteger" use="required" />
+            <xs:attribute name="type" use="optional" default="inner">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="outer" />
+                        <xs:enumeration value="inner" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
 
@@ -205,11 +213,11 @@
 
     <xs:element name="hand">
         <xs:complexType mixed="true">
-            <xs:complexContent>
-                <xs:extension base="lenz:textbase">
-                    <xs:attribute name="ref" type="xs:positiveInteger" use="required" />
-                </xs:extension>
-            </xs:complexContent>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:group ref="lenz:inlineElements" />
+                <xs:element ref="page" />
+            </xs:choice>
+            <xs:attribute name="ref" type="xs:positiveInteger" use="required" />
         </xs:complexType>
     </xs:element>
 
@@ -245,7 +253,7 @@
     <xs:element name="tab">
         <xs:complexType mixed="true">
             <xs:complexContent>
-                <xs:extension base="lenz:textbaseNoLine">
+                <xs:extension base="lenz:textbase">
                     <xs:attribute name="value" use="required">
                         <xs:simpleType>
                             <xs:restriction base="xs:string">

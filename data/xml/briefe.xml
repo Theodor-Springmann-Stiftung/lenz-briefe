@@ -20,8 +20,6 @@
 <vspace lines="1"/>
 <line /><align pos="right">gehorsamsten Diener</align>
 <line /><align pos="right">Jacob Michael Reinhold Lenz</align>
-
-
 </letterText>
 
 <letterText letter="2">
@@ -865,12 +863,17 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="5"/><align pos="center">—</align>
 <vspace lines="1"/>
 <page index="4"/>
-<line /><note>linke Spalte</note>
+<tabs>
+<tab value="1-2">
 <line tab="1"/>Hier mein Bruder ein Brief den ich Dir schicken muß, warm wie er aus dem Herzen kommt Dich wird das Porto nicht dauren lieber obschon kein Geschäft drinnen ist ausser eine Commission von Hafner der mich lange gebethen hat. Ist doch uns kein höher Glück auf der Erde gegönnt als uns zu unterreden – mir ists das höchste. Denn alle meine Wirksamkeit ist für andre – aber mein Gefühl für Dich und einige Liebe ist für mich.
 <line tab="1"/>Warum giebst Du uns denn nicht Neuigkeiten von Dir. Haben genug in unsern Briefen itzt von meinen Schmieralien gesprochen – nun laß mich wieder ausgehen von dem kleinen Dreckhauffen Ich und Dich – finden
-<line /><align pos="right">Lenz.</align> <note>rechte Spalte</note>
+<line /><align pos="right">Lenz.</align>
+</tab>
+<tab value="2-2">
 <line tab="1"/>Ich habe viel in der Societät zu überwinden, auf einer Seite ists Unglauben Zerrüttetheit, vagues Geschnarch von Bellitteratur wo nichts dahinter ist als Nesselblüthen: auf der andern steife leise Schneckenmoralphilosophie die ihren grosmütterlichen Gang fortkriecht, daß ich oft drüber die Geduld verlieren möchte. Da konnte Götz nicht <ul>durch</ul> dringen, der <ul>beyden</ul> <ul>gleich</ul> abspricht. Daher fieng ich an <aq>ut vates</aq> den Leuten Standpunkt ihrer Religion einzustecken, das itzt unter viel Schwürigkeiten vollendt ist, die Erfolge wird die Zeit lehren. Und nun stürm ich mit Ossians Helden hinein das alte Erdengefühl in ihnen aufzuwecken, das ganz in französische Liqueurs <aq>evaporirt</aq> war. Daß wirs ausführen können was ich mit ganzer Seele strebe, auf Heyd und Hügel Deine Helden wieder naturalisiren.
 <line /><align pos="center">Addio –</align>
+</tab>
+</tabs>
 </letterText>
 
 <letterText letter="42"><page index="1"/><ink><align pos="right">D 8ten Aprill 1775.</align></ink>
@@ -1145,35 +1148,25 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/><aq>vous pouvez vous fier a ma parole d’honneur que ladite feuille ne sera jamais publiée avec <ul>ma bonne volonté.</ul> Aussi n’etoit elle ecrite qu’ <ul>après le point de vue d’une grande partie de vos lecteurs, dont</ul> les caquets au sujet de vous et de vos ecrits ne parviennent jamais jusqu’a vous. Je n’aurois pas crú, que cela pourroit te faire quelque peine, je ne te l’ ai communiqué que pour sonder tes façons d’envisager ces choses lá, pour pouvoir a l’ avenir dire quelque chose de plus raisonnable la dessuzis. Voila mes intentions, <ul>j’ai tout employé de</ul> supprimer cela et je te puis <ul>assurer d’ avance</ul> qu’il ne verra jamais le jour. Nous en parlerons davantage.</aq>
 <line /><align pos="right">Le.</align>
 <sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal"><aq>Remerciemens pour la peine que vous vous etes donnée avec les Lindaviana</aq></sidenote>
-<page index="2"/>
-<line /><note>linke Spalte</note>
-<line /><hand ref="12"><!-- Wie kann ich zwei Hände markieren, wenn das Element <hand> nur eine Referenz vorsieht? --> <pe>
-<line />Wurstfresser aus dem Scheishaus.
-<line /><ul>Piphahn.</ul>
-<line />Margaretlin Madre de tuti I Santi
-<line /><ul>Galloch Schalloch</ul>
-<line />Leisekentritt. Schleicher.
-<line />Lasueangel. Laus. Angel.
-<line />Hengst mensch von einer Prinzeß
 <vspace lines="1"/>
-<line /><note>rechte Spalte</note>
-<line /><del>Eulenspiegel
-<line />Fotzenhut
-<line />Dreckfincke
-<line />Saumagen
-<line />Faselhans
-<line />Blaufincke</del> – halb <nr> </nr>
-<line />klein Hanswurst
-<line />beym Freyschmausen <nr> </nr>
-<line />Hundsfut Gast Rolle
-<line />Ahlke Pöleke <nr> </nr> die dumm <nr> </nr> ist und war
-<line />n’a <nr> </nr> … <nr> </nr>
-<line />Kropfliesgen. von Harz
-<line />Metze <nr> </nr> Dreyhaar Alte Hure Kupplerin
-<line />Schlinschlanschlodi, kommt von Akademien
-<line />Metze Magen Regenwurm
-<line />Ganz Magen
-</pe></hand>
+<page index="2"/>
+<hand ref="12"><!-- Wie kann ich zwei Hände markieren, wenn das Element <hand> nur eine Referenz vorsieht? --> <pe>
+<line /><tabs><tab value="1-2">Wurstfresser aus dem Scheishaus.</tab><tab value="2-2"><del>Eulenspiegel</del></tab>
+<line /><tab value="1-2"><ul>Piphahn.</ul></tab><tab value="2-2"><del>Fotzenhut</del></tab>
+<line /><tab value="1-2">Margaretlin Madre de tuti I Santi</tab><tab value="2-2"><del>Dreckfincke</del></tab>
+<line /><tab value="1-2"><ul>Galloch Schalloch</ul></tab><tab value="2-2"><del>Saumagen</del></tab>
+<line /><tab value="1-2">Leisekentritt. Schleicher.</tab><tab value="2-2"><del>Faselhans</del></tab>
+<line /><tab value="1-2">Lasueangel. Laus. Angel.</tab><tab value="2-2"><del>Blaufincke</del> – halb <nr> </nr></tab>
+<line /><tab value="1-2">Hengst mensch von einer Prinzeß</tab><tab value="2-2">beym Freischmausen <nr> </nr></tab>
+<line /><tab value="2-2">Hundsfut Gast Rolle</tab>
+<line /><tab value="2-2">Ahlke Pöleke <nr> </nr> die dumm <nr> </nr> ist und war</tab>
+<line /><tab value="2-2">n’a <nr> </nr> … <nr> </nr></tab>
+<line /><tab value="2-2">Kropfliesgen. von Harz</tab>
+<line /><tab value="2-2">Metze <nr> </nr> Dreyhaar Alte Hure Kupplerin</tab>
+<line /><tab value="2-2">Schlinschlanschlodi, kommt von Akademien</tab>
+<line /><tab value="2-2">Metze Magen Regenwurm</tab>
+<line /><tab value="2-2">Ganz Magen</tab>
+</tabs></pe></hand>
 </letterText>
 
 <letterText letter="55"><page index="1"/>
@@ -2685,16 +2678,16 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/><aq>Apropo</aq> mit dem National Teater wirds hier zu Stand komen – habe einen Plan zur Anlegung einer Teater Schule machen müßen den ich Dir zuschicken will wenn Dus begehrst der Grund zu einem weitläuftigen prächtichen Schauspiel Hause wird in aller Hastigkeit gelegt diesen Sommer noch solls fertig seyn und zukünftigen January schon drauf gespielt werden.
 <line tab="1"/>Sag kannstu mir nicht <aq>Adreße</aq> geben wo ich indessen einige guthe brauchbare acteurs und actrißen anwerben könnte, je geschickter je beßer für uns – zum Exempel für folgende Rollen
 <vspace lines="1"/>
-<line /><note>Tabelle</note><tabs>
-<line /><tab value="1-2"><ul>Mannspersohnen</ul></tab><tab value="2-2"><ul>Frauenzimer</ul></tab>
+<tabs>
+<line /><tab value="1-2"><align pos="center"><ul>Mannspersohnen</ul></align></tab><tab value="2-2"><align pos="center"><ul>Frauenzimer</ul></align></tab>
 <line /><tab value="1-2">Erster Liebhaber</tab><tab value="2-2">Erste Liebhabrin</tab>
 <line /><tab value="1-2">Bediente</tab><tab value="2-2">Subrette</tab>
-<line /><tab value="1-2">Vatter</tab><tab value="2-2">Mutter.</tab>
+<page index="3"/><line /><tab value="1-2">Vatter</tab><tab value="2-2">Mutter.</tab>
 <line /><tab value="1-2">Zweyter Liebhaber</tab>
 <line /><tab value="1-2">oncle.</tab></tabs>
 <vspace lines="1"/>
 <line tab="1"/>Da ich den Auftrag vom Hofe habe, würd ich gleich mit Ihnen unterhandlen können, könnte mich auch dabey um so viel sichrer <del>sagen</del> <insertion pos="top">einlaßen</insertion>, da <del>ich</del> immer Deine Auswahl hierin die beste seyn wird – ein jeder der sich für hier <del>her</del> anwerben läßt soll nicht allein seine rechnung in ansehung der Besoldung finden, sondern auch, darauf hab ich in meinem Plane hauptsächlich loßgedrungen, erhält einen rang, der ihm bey einer guten Lebensarth erlaubt, die beste Gesellschaften zu besuchen.
-<line tab="1"/>Ich bitt Dich drum wenn Du kanst lieber sey nicht nachläßig – arbeithe mit es geht ja für die gemeine Sache – Schreib mir gleich wenn Du mir einige Schauspieler ausfündig gemacht die sich für mich schicken, daß ich mit Dir gleich unterhandle, oder sag ihnen daß Sie mir selbst schreiben <page index="3"/>– findet noch auswahl statt lieber Lenz so schicke mir diejenige, die am wenigsten Manier <del>an sich</del> angenommen wenn <del>Sie</del> <insertion pos="top">Ihnen</insertion> nur Feuer und natürliche Wärme vom HimmelsPapa im Busen angezündet ist –
+<line tab="1"/>Ich bitt Dich drum wenn Du kanst lieber sey nicht nachläßig – arbeithe mit es geht ja für die gemeine Sache – Schreib mir gleich wenn Du mir einige Schauspieler ausfündig gemacht die sich für mich schicken, daß ich mit Dir gleich unterhandle, oder sag ihnen daß Sie mir selbst schreiben <page index="4"/>– findet noch auswahl statt lieber Lenz so schicke mir diejenige, die am wenigsten Manier <del>an sich</del> angenommen wenn <del>Sie</del> <insertion pos="top">Ihnen</insertion> nur Feuer und natürliche Wärme vom HimmelsPapa im Busen angezündet ist –
 <line tab="1"/>An Eckhoff schreib ich so eben auch.
 <line tab="1"/>Den anticken Saal hastu doch der Zeit nicht vergeßen Lieber – Du bist zu ehrlich und ich traue Dir viel zu viel Gewißen zu, als daß Du nicht manches Stündchen meinem <del>L<nr> </nr></del> <insertion pos="left">armen</insertion> <aq>Laocon</aq> meiner lieben Niobe und meinem <del>arme</del> guten Glatiator widmen solltest – Sie sind mir gar zu lieb und ich könte Dir drum feind werden wenn ich je so was von Dir erführe – pfuy das wär auch zu undankbar für einen Lenz der süßen Augen Blicke so zu vergeßen, eher solltestu ein hundert von den <insertion pos="top">viele tausend</insertion> Grüßen und Küßen an meine Liebe Wieland und Göthe vergeßen die ich Dir mitgegeben und beym Himel das ist doch arg genug
 <line /><align pos="right">Frid. <ul>Müller</ul></align>
@@ -2998,14 +2991,14 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/>Lenz Lenz von der Vocation ins Philanthropin sag’ ich kein Wort, aber warum nimmst Du die zu <highlight color="red">Weimar</highlight> nicht an? warum? gieb Acht wo die Ursache her kommt und wo sie hin führt, Lenz mein theuerster, Liebster sey Lenz und vergieb meiner Liebe zu Dir, ich sage kein Wort mehr hievon, bin kein Redner für Dich. – Freilich sollst Du wieder einmal herkommen und ohn den Gedanken wäre mir Deine Entfernung sehr hart, aber fixiren kannstu Dich hier wohl schwerlich.
 <line tab="1"/>Viel politische Neuigkeiten kann ich Dir wirklich noch keine von hier melden. Vom Krieg wird nicht gesprochen, der Hof ist noch immer zu viel mit sich selbst beschäftigt und scheint alle auswärtigen Angelegenheiten von sich ablehnen zu wollen. <aq>Mr. Turgot</aq> hat seine Dimißion bekommen, vermuthlich daß er sich durch verschiedene <aq>Edicte</aq> viel Haßer gemacht denen seine ökonomischen Projekte (die an den meisten Orten bis zur Ausführung reif waren) – für ihre besondere Okonomie nicht anständig waren. Der König selbst soll, wie man mich zuverläßig versichert hat, sein letzteres <aq>Lit de justice</aq> bereuen.
 <line tab="1"/>Beym Franzosen bin ich gewesen und hab die Interessen mit 24 <aq>Sous</aq> besorgt, so bald es seyn kann will ich der Relation ein Ende machen, seh aber noch nicht wann.
-<line /><tabs> <note>Tabelle</note>
-<line /><tab value="1-8">Unsere Besatzung. 1 Regiment schwere <aq>Kavalerie</aq> von 350 Mann.</tab>
+<tabs>
+<line /><tab value="1-8">Unsere Besatzung.</tab><tab value="3-8">1 Regiment schwere <aq>Kavalerie</aq> von</tab><tab value="7-8">350 Mann.</tab>
 <line /><tab value="3-8">1</tab> – <tab value="4-8">Draconer</tab><tab value="7-8">350.</tab>
 <line /><tab value="3-8">1 Regiment Schweitzer <aq>Salis</aq></tab> <tab value="7-8">1032.</tab>
 <line /><tab value="4-8">Elsaß</tab> <tab value="7-8">1032.</tab>
 <line /><tab value="4-8">Anhalt</tab> <tab value="7-8">1032.</tab>
 <line /><tab value="4-8"><aq>Quercy</aq></tab> <tab value="7-8">1000.</tab>
-<line /><tab value="4-8"><aq>Lyonnais</aq> in der Citadelle</tab> <tab value="7-8">1000.</tab>
+<line /><tab value="4-8"><aq>Lyonnais</aq> in der Citadelle</tab> <tab value="7-8"><dul>1000.</dul></tab>
 <line /><tab value="3-8">Das Artillerie <aq>Corps</aq> nicht mitgerechnet.</tab> <tab value="7-8"><fn index="5"><anchor><sup>#</sup></anchor></fn><!-- Handelt es sich hier um ein Verweiszeichen? -->5796.</tab>
 <line /><tab value="7-8"><aq>5796 Verte</aq></tab></tabs>
 <vspace lines="1"/>
@@ -3038,16 +3031,17 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <vspace lines="1"/>
 <line /><hand ref="1">
 <line tab="5"/>Quisqui ubique habitat
-<line tab="5"/>Maxime nusquam habitat</hand>
+<line tab="5"/>Maxime nusquam habitat
 <vspace lines="1"/>
 <line />
-<sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite vertikal"><hand ref="1"><pe>schändliche kalte Tugend die uns zwingt Aufopferungen gegen einen Freund zu machen den wir hernach dafür nicht lieben könnten. Schicksal des Guten Einer der alles hingiebt zuletzt das Leben und nichts thut weil er nicht das Herz hat eines <nr> </nr>☓ stumm der Weg zum <ul>Vater.</ul></pe></hand></sidenote>
-<page index="4"/><hand ref="1">
+<page index="4"/>
 <vspace lines="1"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
 <vspace lines="1"/>
 <line ></line>hat sie mich davon vorher warnen lassen <insertion pos="top">durch ihn</insertion> und ich suchte das nicht zu hindern
 <line tab="1"/>nur wenn alles gethan ist den letzten Genuß um ihr sagen daß ich sie erwarte</hand>
+
+<sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite vertikal"><hand ref="1"><pe>schändliche kalte Tugend die uns zwingt Aufopferungen gegen einen Freund zu machen den wir hernach dafür nicht lieben könnten. Schicksal des Guten Einer der alles hingiebt zuletzt das Leben und nichts thut weil er nicht das Herz hat eines <nr> </nr>☓ stumm der Weg zum <ul>Vater.</ul></pe></hand></sidenote>
 <vspace lines="1"/>
 <line /> <address>An Herrn <dul><aq>Lentz</aq></dul>
 <line />bey Herrn <aq>Doctor Goethe</aq>
@@ -3061,10 +3055,10 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Sobald also dies gethan ist – geh ich. Es ist <ul>Gott der mich ruft.</ul>
 <line tab="1"/>Im Frieden ist auch im Mil. nichts zu thun für mich.
 <vspace lines="1"/>
-<line />1 Schnuptuch
-<line />2 Hemden
-<line />3 p. Strümpfe
-<line />3 Binden</hand>
+<line tab="12" />1 Schnuptuch
+<line tab="12" />2 Hemden
+<line tab="12" />3 p. Strümpfe
+<line tab="12" />3 Binden</hand>
 <vspace lines="1"/>
 <line /><align pos="center"><note>zwei Profilskizzen</note></align>
 </letterText>
@@ -3206,11 +3200,14 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Wer ist Deine Feindin hier red, so kann ich mich hüten ich kenne niemand. Mein Glaube an Dich wird nicht fallen, wann er’s sollte so werd’ ich Dich Bruder um Stärkung bitten.
 <line /><align pos="center">Lebe wohl. Dein alter Röderer.</align>
 <vspace lines="1"/>
-<line /><note>Tabelle linke Spalte</note>
+<tabs>
+<tab value="1-2">
 <line tab="1"/>Mache mit meinem Demosthenes was Du willst, nur wollt ich ihn bey Niemand eingebettelt haben, wanns nicht gern angenommen wird von Männern dies beßer als ich verstehn so zerreiß es.
-<vspace lines="1"/>
-<line /><note>Tabelle rechte Spalte</note>
+</tab>
+<tab value="2-2">
 <line tab="1"/>Zimmermann ist mit Häveli nach Zürich gangen. Kaufmann u Ehrmann werden Dich bald sehen. Lebe wohl.
+</tab>
+</tabs>
 <vspace lines="1"/>
 <line /><align pos="center">Strasb. d 4t Junius. 1776.</align>
 </letterText>
@@ -3898,8 +3895,8 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <line />2 Dem alten Vt. ein Explar <ul>meiner Sold.</ul> schicken sauber gebunden
 <line />Auch <del>m</del> 2 <ul>Fam. gemählde</ul> –
 <vspace lines="1"/>
-<line />Pack eines S. G. zu übermachen</pe></hand>
-<page index="2"/><hand ref="1"><pe>
+<line />Pack eines S. G. zu übermachen</pe>
+<page index="2"/><pe>
 <vspace lines="1"/>
 <line />Begreifl. machen daß er wohl noch mächtiger wäre durch Allianzen als zu <aq>re<del><nr></nr></del>pugniren a main forte</aq></pe></hand>
 </letterText>

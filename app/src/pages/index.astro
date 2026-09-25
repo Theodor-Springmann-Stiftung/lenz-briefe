@@ -18,10 +18,9 @@ const firstGroup = catalog.groups[0];
   </section>
   <section aria-label="Briefverzeichnis" class="catalog-section">
     {(['person', 'place', 'search'] as const).map(kind => <template id={`filter-pill-${kind}`}><button type="button" class="filter-pill" data-filter-kind={kind}><Icon name={kind === 'search' ? 'search' : 'filter'} class="filter-pill-icon" /><Icon name="filterOff" class="filter-pill-remove" /><span class="filter-pill-name"></span></button></template>)}
-    <div class="filter-toolbar" role="group" aria-label="Filter und Sortierung">
+    <div class="filter-toolbar" role="group" aria-label="Filter">
       <div class="filter-controls"><Filter kind="person" label="Personen" options={filterOptions('person')} /><Filter kind="place" label="Orte" options={filterOptions('place')} /></div>
       <label class="catalog-search"><span class="sr-only">Briefe durchsuchen</span><Icon name="search" /><input id="letter-search" type="search" placeholder="Briefe durchsuchen …" data-search-index={searchIndexUrl} aria-describedby="search-status" autocomplete="off" /><span class="search-spinner" aria-hidden="true" hidden /></label>
-      <div class="sort-control"><label class="sr-only" for="sort-order">Sortierung</label><Icon name="sort" /><select id="sort-order"><option value="asc">Chronologisch aufsteigend</option><option value="desc">Chronologisch absteigend</option></select></div>
       <button class="all-letters-link" type="button" hidden><Icon name="arrowLeft" />Alle Briefe</button>
     </div>
     <nav class="year-navigation" aria-label="Zeiträume">

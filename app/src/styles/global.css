@@ -83,12 +83,9 @@
   .all-letters-link:hover { background:var(--color-paper); box-shadow:2px 2px 0 var(--color-ink); }
   .all-letters-link:active { box-shadow:none; transform:translate(1px, 1px); }
   .filter-toolbar { @apply flex flex-wrap items-center gap-3 bg-filter p-4; }
-  .sort-control { position:relative; flex-shrink:0; }
-  .sort-control > .ui-icon { pointer-events:none; }
-  .sort-control select { @apply border bg-white pr-3 py-2 text-sm cursor-pointer; border-color:#000; padding-left:3.25rem; min-height:38px; }
   .catalog-search { @apply flex items-center gap-2 border bg-white px-3 py-2 text-ink; border-color:#000; flex:1 1 13rem; min-width:0; }
-  .sort-control > .ui-icon, .catalog-search > .ui-icon, .filter-menu-label > .ui-icon, .filter-panel-search > .ui-icon { position:absolute; top:0; bottom:0; left:0; width:2.75rem; height:auto; display:flex; align-items:center; justify-content:center; border-right:1px solid #000; }
-  .sort-control > .ui-icon > svg, .catalog-search > .ui-icon > svg, .filter-menu-label > .ui-icon > svg, .filter-panel-search > .ui-icon > svg { width:1.125rem; height:1.125rem; }
+  .catalog-search > .ui-icon, .filter-menu-label > .ui-icon, .filter-panel-search > .ui-icon { position:absolute; top:0; bottom:0; left:0; width:2.75rem; height:auto; display:flex; align-items:center; justify-content:center; border-right:1px solid #000; }
+  .catalog-search > .ui-icon > svg, .filter-menu-label > .ui-icon > svg, .filter-panel-search > .ui-icon > svg { width:1.125rem; height:1.125rem; }
   .catalog-search, .filter-menu summary, .filter-panel-search { position:relative; }
   .catalog-search input { @apply w-full min-w-0 bg-transparent text-sm text-ink; }
   .search-spinner { width:1rem; height:1rem; flex-shrink:0; border:2px solid var(--color-rule); border-top-color:var(--color-accent); border-radius:50%; animation:search-spin .8s linear infinite; }
@@ -115,7 +112,7 @@
   .search-more:is(:hover, :focus-visible) { @apply border-accent bg-filter; }
   .filter-controls { @apply relative flex flex-wrap items-center gap-3; flex-shrink:0; max-width:100%; }
   .filter-menu { @apply relative; }
-  .filter-menu, .filter-pill, .sort-control, .sort-control select, .year-navigation { @apply select-none; }
+  .filter-menu, .filter-pill, .year-navigation { @apply select-none; }
   .filter-menu input[type=search] { @apply select-text; }
   .filter-menu summary { @apply flex items-center justify-between gap-5 border bg-white px-4 py-2 text-sm; border-color:#000; list-style:none; min-width:125px; }
   .filter-menu summary::-webkit-details-marker { display:none; }
@@ -275,7 +272,9 @@ html:not(.search-highlight-active) .edition-text :is(.lb-line-block, .tab, .lb-t
 .edition-text mark.search-match { background:#f6dfb6; color:inherit; scroll-margin-top:3rem; }
 /* Collapse marker spacing with adjacent XML whitespace, including across inline wrappers. */
 .edition-text .page-anchor[data-break=inline]::before { content:' | '; white-space:normal; }
-.edition-text .aq { @apply font-sans; font-size:1.12em; }
+/* The containing line supplies the leading, including when aq fills every
+   wrapped line of a paragraph. Larger glyphs must not enlarge that leading. */
+.edition-text .aq { @apply font-sans; font-size:1.12em; line-height:1; }
 .edition-text .lb-ornament { display:block; width:5em; max-width:100%; height:1em; margin:.4em auto; background:currentColor; mask:url('../assets/line-tilde.svg') center / contain no-repeat; }
 .edition-text .lb-ornament--double-tilde { width:10.5em; mask-image:url('../assets/line-double-tilde.svg'); }
 .edition-text .aq .aq { font-size:1em; }
@@ -320,7 +319,7 @@ html:not(.search-highlight-active) .edition-text :is(.lb-line-block, .tab, .lb-t
 .edition-text .insertion[data-pos="bottom right"] { --insertion-arrow:url('remixicon/icons/Arrows/arrow-left-up-line.svg'); }
 .edition-text .insertion-arrow { display:inline-block; width:.55em; height:.55em; vertical-align:-.12em; margin-right:.08em; background:currentColor; mask:var(--insertion-arrow) center / contain no-repeat; }
 .edition-text .tabs { width:100%; text-indent:0; }
-.edition-text .lb-tab-row { display:flex; flex-wrap:wrap; min-height:1lh; }
+.edition-text .lb-tab-row { display:flex; flex-wrap:wrap; align-items:first baseline; min-height:1lh; }
 .edition-text .lb-tab-prefix { flex:0 0 100%; min-width:0; }
 .edition-text .tab { width:var(--cell-width,100%); margin-left:var(--cell-gap,0%); flex-shrink:0; padding-right:.8rem; }
 .edition-text .tab:last-child { padding-right:0; }
@@ -363,8 +362,6 @@ html:not(.search-highlight-active) .edition-text :is(.lb-line-block, .tab, .lb-t
   .filter-menu { position:static; }
   .filter-panel { left:0; right:auto; width:min(340px, calc(100vw - 5rem)); }
   .catalog-search { order:-1; flex-basis:100%; max-width:none; }
-  .sort-control { width:100%; }
-  .sort-control select { width:100%; }
   .letter-header--compact { grid-template-columns:minmax(0,1fr); }
   .detail-header { margin-top:1.5rem; grid-template-columns:minmax(0,1fr); gap:1.5rem; }
   .apparatus { grid-template-columns:minmax(5rem, 28%) minmax(0,1fr); column-gap:1rem; }

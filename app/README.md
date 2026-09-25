@@ -84,6 +84,11 @@ uv run --project transform/python python -m transform_python.validate_schemas
 - `letters/<id>/text.html` contains semantic line blocks, spacers and inline page
   milestones. A page break never creates a paragraph. Reopened formatting spans
   keep their attributes; hand origins identify a single span across line breaks.
+  Page markers accept optional `type="outer"` or `type="inner"` (default: `inner`),
+  retained as `data-type` on the HTML anchor. Indices remain positive integers;
+  the type does not change page identity, sidenote targets, or visual styling.
+  A `hand` may contain page markers without ending the handwriting range;
+  nested main-text pages are included in page navigation and sidenote targets.
 - `sidenotes.json` retains all 215 notes. Notes without a matching page marker are
   shown after the text and reported in `status.json`; these currently occur in
   letters 64 and 167. On desktop, page labels remain in the left margin. Hands and notes occupy
@@ -118,6 +123,8 @@ they cannot displace subsequent tab stops. Content before the first tab occupies
 a separate full-width line.
 A repeated or lower tab position wraps to a new row. On narrow screens line
 indentation is capped at 25% to keep the text readable.
+Inside a `tab`, `line` starts a new line within that cell. Between `tab` elements,
+it starts a new table row. Each cell supports its own formatting and vertical space.
 
 The language tags only set `lang`: `gr→grc`, `fr→fr`, `hb→he`, `ru→ru`;
 `aq→la` also changes to sans-serif. Edition marks are CSS decorations so they do

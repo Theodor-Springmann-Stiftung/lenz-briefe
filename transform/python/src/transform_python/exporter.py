@@ -190,7 +190,7 @@ def collect_sidenote_pages(letter_text: etree._Element) -> list[str]:
 
 
 def collect_letter_pages(letter_text: etree._Element) -> list[str]:
-    pages = [str(get_attribute(node, "index")) for node in letter_text.xpath("./l:page", namespaces=NSMAP)]
+    pages = [str(get_attribute(node, "index")) for node in letter_text.xpath(".//l:page[not(ancestor::l:sidenote)]", namespaces=NSMAP)]
     return sorted(pages, key=lambda page: int(page))
 
 
@@ -370,7 +370,7 @@ def export_edition(out_dir: str) -> dict[str, Any]:
     warnings += timings.measure("validateXsd:references", lambda: validate_xml(references_doc, "references.xml"))
     warnings += timings.measure("lintVerweise", lambda: check_verweise(briefe_doc, meta_doc, traditions_doc, references_doc))
     for letter_node in briefe_doc.findall(".//l:letterText", NSMAP):
-        targets = set(letter_node.xpath("./l:page/@index", namespaces=NSMAP))
+        targets = set(collect_letter_pages(letter_node))
         for note in letter_node.findall("l:sidenote", NSMAP):
             if note.get("page") not in targets:
                 warnings.append({"kind": "unresolved-sidenote", "stage": "sidenoteTargets",

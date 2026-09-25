@@ -5,7 +5,7 @@ import unittest
 from lxml import etree, html
 
 from transform_python.common import Timings, read_xml, serialize_node
-from transform_python.exporter import StylesheetRunner
+from transform_python.exporter import StylesheetRunner, collect_letter_pages
 
 
 PHRASING = {'span', 'strong', 'em', 'mark', 'del', 'sup', 'sub'}
@@ -54,6 +54,30 @@ class FlowContractTests(unittest.TestCase):
         self.assertEqual(self.page(tree).text_content(), '')
         self.assertEqual(self.page(tree, '1').get('data-break'), 'block')
         self.assertFalse(tree.xpath('.//*[@class="lb-page"]'))
+
+    def test_hand_spans_pages_without_losing_identity_or_page_targets(self):
+        body = '<page index="1"/><hand ref="3">Wor<page index="2" type="outer"/>d<line/>Next</hand>'
+        source = etree.fromstring(f'<letterText xmlns="https://lenz-archiv.de">{body}</letterText>')
+        self.assertEqual(collect_letter_pages(source), ['1', '2'])
+        tree = self.render(body)
+        self.assertEqual(tree.text_content(), 'WordNext')
+        self.assertEqual(len(self.lines(tree)), 2)
+        self.assertEqual(self.page(tree).get('data-type'), 'outer')
+        self.assertEqual(self.page(tree).get('data-break'), 'inline')
+        hands = tree.xpath('.//span[@class="hand"]')
+        self.assertTrue(all(hand.get('data-ref') == '3' for hand in hands))
+        self.assertEqual(len({hand.get('data-origin') for hand in hands}), 1)
+
+    def test_page_types_survive_normalization_without_changing_flow(self):
+        for kind in ['letter-text', 'traditions']:
+            with self.subTest(kind=kind):
+                tree = self.render('<page index="1"/><line/>A<page index="2" type="inner"/>B'
+                                   '<line/><page index="3" type="outer"/>C', kind)
+                self.assertEqual(''.join(line.text_content() for line in self.lines(tree)), 'ABC')
+                self.assertEqual(len(self.lines(tree)), 2)
+                self.assertEqual(tree.xpath('.//*[@class="page-anchor"]/@data-type'), ['inner', 'inner', 'outer'])
+                self.assertEqual(self.page(tree).get('data-break'), 'inline')
+                self.assertEqual(self.page(tree, '3').get('data-break'), 'block')
 
     def test_curved_rules_preserve_text_and_page_boundaries(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:
@@ -194,6 +218,21 @@ class FlowContractTests(unittest.TestCase):
                 self.assertEqual([c.text_content() for c in cells], ['A', 'B', 'C'])
                 self.assertTrue(all(c.xpath('.//span[@class="ul"]') for c in cells))
                 self.assertEqual(tree.text_content(), 'XABCY')
+
+    def test_cell_line_breaks_do_not_split_table_rows(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            with self.subTest(kind=kind):
+                tree = self.render('<tabs><tab value="1-2"><ul>A<line/>B</ul></tab>'
+                                   '<tab value="2-2">C<line/>D</tab><line/>'
+                                   '<tab value="1-2">E</tab><tab value="2-2">F</tab></tabs>', kind)
+                rows = tree.xpath('.//div[@class="lb-tab-row"]')
+                self.assertEqual(len(rows), 2)
+                cells = rows[0].xpath('./div[@class="tab"]')
+                self.assertEqual(len(cells), 2)
+                self.assertEqual([line.text_content() for line in self.lines(cells[0])], ['A', 'B'])
+                self.assertEqual([line.text_content() for line in self.lines(cells[1])], ['C', 'D'])
+                self.assertEqual(len(cells[0].xpath('.//span[@class="ul"]')), 2)
+                self.assertEqual([c.text_content() for c in rows[1]], ['E', 'F'])
 
     def test_nested_tables_and_cell_alignment_have_local_context(self):
         tree = self.render('<align pos="right">Outside</align><aq><tabs><tab value="1-2">Left<align pos="right">Right</align><tabs><tab value="1-2">Nested</tab></tabs></tab><tab value="2-2">Other</tab></tabs></aq>')

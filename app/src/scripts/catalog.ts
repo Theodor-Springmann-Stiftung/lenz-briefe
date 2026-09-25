@@ -6,7 +6,6 @@ const rows = new Map([...document.querySelectorAll<HTMLElement>('[data-letter]')
 const checkboxes = [...document.querySelectorAll<HTMLInputElement>('.filter-options input')];
 const list = document.querySelector<HTMLOListElement>('.catalog-letter-list')!;
 const referenceLinks = [...list.querySelectorAll<HTMLAnchorElement>('.reference-filter')];
-const sortControl = document.querySelector<HTMLSelectElement>('#sort-order')!;
 const activeFilters = document.querySelector<HTMLElement>('.active-filters')!;
 const pills = document.querySelector<HTMLElement>('.active-filter-pills')!;
 const allLettersLink = document.querySelector<HTMLButtonElement>('.all-letters-link')!;
@@ -52,7 +51,6 @@ function render() {
   const ordered = document.createDocumentFragment();
   orderedRecords(data.records, state.sort).forEach((record: {id: string}) => ordered.append(rows.get(record.id)!));
   list.append(ordered);
-  sortControl.value = state.sort;
   document.querySelector('#result-count')!.textContent = searching && hits === null ? '—' : `${count} ${count === 1 ? 'Brief' : 'Briefe'}`;
   document.querySelector<HTMLElement>('.empty-state')!.hidden = searching || count > 0;
   renderFilterPills();
@@ -119,7 +117,6 @@ searchInput.addEventListener('input', () => {
     navigate(next, Boolean(state.q) === Boolean(query));
   }, 100);
 });
-sortControl.addEventListener('change', () => navigate({...state, sort:sortControl.value === 'desc' ? 'desc' : 'asc'}));
 document.querySelectorAll<HTMLAnchorElement>('[data-group]').forEach(link => link.addEventListener('click', event => {
   if (link.hidden || link.getAttribute('aria-disabled') === 'true') {event.preventDefault(); return;}
   if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;

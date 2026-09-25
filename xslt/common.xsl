@@ -71,7 +71,8 @@
 
   <xsl:function name="lb:temp-page" as="element(t:page)">
     <xsl:param name="index" as="xs:string" />
-    <t:page index="{$index}" />
+    <xsl:param name="type" as="xs:string" />
+    <t:page index="{$index}" type="{$type}" />
   </xsl:function>
 
   <xsl:function name="lb:clone-element" as="element()">
@@ -421,7 +422,7 @@
         <xsl:sequence select="lb:temp-explicit-line('vspace', (), $node)" />
       </xsl:when>
       <xsl:when test="$node/self::element(lb:page)">
-        <xsl:sequence select="lb:temp-line(lb:temp-page(string($node/@index)))" />
+        <xsl:sequence select="lb:temp-line(lb:temp-page(string($node/@index), string(($node/@type, 'inner')[1])))" />
       </xsl:when>
       <xsl:when test="$node/self::element(lb:sidenote) or $node/self::comment() or $node/self::processing-instruction()">
         <xsl:sequence select="()" />
@@ -431,6 +432,10 @@
       </xsl:when>
       <xsl:when test="$node/self::element(lb:tabs)">
         <xsl:sequence select="lb:temp-line(lb:normalize-tabs($node))" />
+      </xsl:when>
+      <!-- A cell owns its line breaks; they must not split the surrounding row. -->
+      <xsl:when test="$node/self::element(lb:tab)">
+        <xsl:sequence select="lb:temp-line($node)" />
       </xsl:when>
       <xsl:when test="$node/self::element()">
         <xsl:sequence select="lb:wrap-element-across-lines($node, lb:normalize-lines($node/node()))" />
@@ -520,7 +525,7 @@
   <xsl:template match="t:page">
     <xsl:param name="page-id-prefix" as="xs:string" select="'page-'" tunnel="yes" />
     <span class="page-anchor" id="{concat($page-id-prefix, @index)}"
-          data-index="{@index}" data-break="{@break}"></span>
+          data-index="{@index}" data-type="{@type}" data-break="{@break}"></span>
   </xsl:template>
 
   <xsl:template match="t:line[@type='vspace'] | t:row[@type='vspace']">
@@ -813,7 +818,14 @@
     <xsl:variable name="previous-start" select="if ($previous) then (xs:integer(substring-before($previous, '-')) - 1) div xs:integer(substring-after($previous, '-')) else 1" />
     <div class="tab" data-value="{@value}" style="--cell-width: {(if ($end gt $start) then $end - $start else 1 - $start) * 100}%; --cell-gap: {(if ($previous-start ge $start) then $start else 0) * 100}%">
 
-      <xsl:call-template name="lb:render-regions"><xsl:with-param name="nodes" select="node()" /></xsl:call-template>
+      <xsl:choose>
+        <xsl:when test=".//lb:line or .//lb:vspace or .//lb:tabs">
+          <xsl:call-template name="lb:render-flow"><xsl:with-param name="nodes" select="node()" /></xsl:call-template>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:call-template name="lb:render-regions"><xsl:with-param name="nodes" select="node()" /></xsl:call-template>
+        </xsl:otherwise>
+      </xsl:choose>
     </div>
   </xsl:template>
 

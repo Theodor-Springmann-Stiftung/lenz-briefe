@@ -6,8 +6,35 @@ from transform_python.common import XSD_DIR, XSD_MAP
 
 
 class SeparateDocumentSchemaTests(unittest.TestCase):
+    def test_hand_can_cross_pages_but_page_indices_remain_unique(self):
+        schema = etree.XMLSchema(etree.parse(str(XSD_DIR / 'briefe.xsd')))
+        for index, valid in [('2', True), ('1', False)]:
+            with self.subTest(index=index):
+                doc = etree.fromstring(
+                    '<opus xmlns="https://lenz-archiv.de"><document><letterText letter="1">'
+                    '<page index="1"/><hand ref="1">Before'
+                    f'<page index="{index}" type="outer"/>After</hand>'
+                    '</letterText></document></opus>')
+                self.assertEqual(schema.validate(doc), valid)
+
+    def test_page_type_is_optional_and_restricted(self):
+        elements = etree.parse(str(XSD_DIR / 'textelements.xsd'))
+        self.assertEqual(elements.xpath('string(//xs:element[@name="page"]//xs:attribute[@name="type"]/@default)',
+                                        namespaces={'xs': 'http://www.w3.org/2001/XMLSchema'}), 'inner')
+        for name, wrapper in [
+            ('briefe.xsd', '<document><letterText letter="1">{}</letterText></document>'),
+            ('traditions.xsd', '<traditions><letterTradition letter="1"><app ref="4">{}</app></letterTradition></traditions>'),
+        ]:
+            schema = etree.XMLSchema(etree.parse(str(XSD_DIR / name)))
+            for attribute, expected in [('', 'inner'), (' type="outer"', 'outer'), (' type="inner"', 'inner'), (' type="other"', None), (' type=""', None)]:
+                with self.subTest(schema=name, attribute=attribute):
+                    body = wrapper.format(f'<page index="1"{attribute}/>')
+                    doc = etree.fromstring(f'<opus xmlns="https://lenz-archiv.de">{body}</opus>')
+                    self.assertEqual(schema.validate(doc), expected is not None)
+
     def test_sup_and_sub_are_allowed_in_formatting_contexts(self):
         content = (
+            '<tabs><tab value="1-2">A<line/>B</tab><tab value="2-2">C<line/>D</tab></tabs>'
             '<sup><ul>hoch</ul></sup><sub><it>tief</it></sub>'
             '<ul><sup>hoch</sup><sub>tief</sub></ul>'
             '<align pos="right"><sup>hoch</sup><sub>tief</sub></align>'

@@ -1,16 +1,41 @@
 # Questions
-184:  am linken Rand der ersten Seite vertikal Kalkulationen von Lenz’ Hand
-197: tout ou rien eingekreist
-199: geschweifte Klammer für die obigen beiden Einträge, daneben folgender Text: lässt sich moddellieren
-// 199 ist schwer zu modellieren
-240: Komisches ende?
-279: Was ist das für ein Brief von Lavater? Keine der Hand stammt von Lavater?
-281: Leere sidenote?
 
+## Gregor
+- 281: Leere sidenote?
+- Neue Tags <vspace> <sub> <sup>, Meta-Struktur, Gruppen
+- Briefnummer und Brieflink
+- 72, 122: Sidenote Bottom?
+- 266, 95: Gutes Beispiel für verwirrende <tl>: 
+  Lässt sich automatisieren nach <app ref="tl">. Regex: Textverlust[^(.|;)]*
+- 164, 163, 200: zu explizite Notes
+- 281: keine Sidenote
+- 279: Brief von Lavater? Keine der Hände stammt von Lavater?
+- 240: Komisches ende?
+- Absender / Empfänger im Suchfilter unterscheiden. Ebenso die Orte; 
+  -> Schwierigkeit im Modell; UND oder ODER Verknüpfungen?
+- 184: cant find the sidenote on page 4 in der HS
+- 192: Strasb. etc.. evtl 2te Spalte?
+- 199 -> handschrift, 224 -> Handscrift, 366 -> Handschrift
 
+## TODO ME
+- Bodoni kleiner / andere Typen / drei Typen für alle Hände (erste Hand normal)
+  -> 161, 312, 36
+- 293: Tabelle 
+- Doppelte Auszeichnung von <hand> über Seitengrenzen -- maybe XML Fix?
+- <vspace> nach Seitenumbruch
+- Übersetzung und "Zusatzmaterial" in Serifen
+- Design/Hintergrund
+- Zusatzseiten
 
-- Antiqua größer, Bodoni kleiner
-- Fremde Hände unterschiedliche Schriften, bis drei
-- 41, 54, 162, 184, 192, 199, 224, 366, 293: tabelle
-- Absender / Empfänger im Suchfilter unterscheiden. Ebenso die Orte
-- Überschriften für Orte
+## ME (WÜRDE ANDERS)
+- 266: verte
+- 227 u.a.: Außenseite des zum Umschlag gefalteten Briefes
+
+## ME (Later)
+- CMIF
+
+## NB
+- 184:  am linken Rand der ersten Seite vertikal Kalkulationen von Lenz’ Hand
+- 197: tout ou rien eingekreist
+- 199: geschweifte Klammer für die obigen beiden Einträge, daneben folgender Text: lässt sich moddellieren
+  199 ist schwer zu modellieren
