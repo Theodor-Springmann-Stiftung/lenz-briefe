@@ -2847,7 +2847,9 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/><aq>Adieu</aq> – Ihr guten Lieben!
 <line tab="1"/>Laßt uns würken, weils Tag ist! Es kommt die Nacht, da niemand würken kann. Amen. Den 27. Apr. 76. J. C. <ul>Lavat.</ul>
 <vspace lines="1"/>
-<line /><note>zwei Abgrenzungsstriche</note>
+<line type="line"/>
+<line type="line"/>
+<vspace lines="1"/>
 <line tab="1"/>Der Wielandin Kuß für mein Weibchen hab ich noch in Petto – wollen erst eine Menge andre einziehen. Hab aber schon ein Lächeln zum voraus durch die Ankündigung erhohlt.
 <vspace lines="1"/>
 <line /><align pos="center"><ul>Wieland.</ul></align>
@@ -3189,7 +3191,9 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Nach seinem Tode wird meine Mutter krank auf 18 Wochen für Kummer Wir Kinder all, und fremde Leute nahmen das bisgen weg das noch übrig war. Meine Mutter von der Liebe zu uns gestärkt ermunterte sich. Arbeitet mit ihren Händen, ernährt drey unmündige Kinder, ohne zu vermeiden, nicht in Schulden zu kommen. Als ich heranwuchs bat und flehte ich mich in die Lateinische Schule zu halten. Das geschah, sie konnte mir nichts abschlagen. Noch erinnere mich daß sie mein erstes Schulgeld nicht bezahlen konnte und es borgen mußte. Das gieng so fort. Sie erhielt mich bis ins 19 Jahr in allem, denn was ich mit Informiren und vom Chor bekam war sehr gering. Zwey Jahr erhielt ich mich und gab ihr was ich konnte. Nun wollte
 <page index="2"/>ich auf Akademieen gehn, hatte keine 100 fl. Ich ward mit Goethe bekannt. Das war die erste frohe Stunde meiner Jugend. Er bot mir seine Hülfe an. Ich sagte nicht alles und gieng so, weil ich lieber sterben wollte als unverdient was annehmen. Die 100 fl. waren bald all. Der grosse Goethe drang in mich, machte mir Vorwürfe und nun leb ich schon ein ganzes Jahr von seiner Güte – O Lenz, bin ich Ihnen nicht verächtlich? Ich wäre tausendmal lieber gestorben, kann ich Ihnen sagen was michs kostete. Aber Goethe, oh wenn ich seiner werth würde, wenn ichs ihm erstatten könnte, um froh zu sterben. Ich <aq><del>etc</del></aq> bin nicht Herr über mich bis das geschehen ist. Und die Angst er möchte sich manchmal einfallen lassen, meine Liebe zu ihm rühre aus Intresse her. Liebster, bin ich nicht unglücklich? Und meine von Schulden u. Elend gedrückte Mutter, meine leidende Schwestern wovon die eine ein herrliches Geschöpf ist, die alle auf mich warten <aq>etc.</aq>
 <vspace lines="1"/>
-<line /><note>zwei Abgrenzungsstriche</note>
+<line type="line"/>
+<line type="line"/>
+<vspace lines="1"/>
 <line tab="1"/>Lassen Sie Goethen nicht merken gnädige Frau! daß ich Ihnen das verrathen habe.
 <line /><align pos="right">L.</align>
 <vspace lines="1"/>
@@ -3372,7 +3376,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <vspace lines="1"/>
 <line />Pappier, auch Postpappier
 <vspace lines="1"/>
-<line /><align pos="center"><note>Abgrenzungsstrich</note></align>
+<line type="line"/>
 <vspace lines="1"/>
 <line /><hand ref="25"><pe>Siegellak</pe></hand>
 <line />
@@ -3410,7 +3414,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line />Sporen
 <line />Ein Pak Pappier im Boden des Coffers der nicht e<tl></tl> wird – Widderhörner
 <vspace lines="1"/>
-<line /><align pos="center"><note>Abgrenzungsstrich</note></align>
+<line type="line"/>
 <vspace lines="1"/>
 <line/> 1 Degen
 <line />1 Klinge vom Herzog
@@ -4482,7 +4486,9 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line tab="1"/>Ich weis nicht was Du über Kleinjopp von mir forderst. Ich war ein einzig mal bey dem Menschen aber im Taumel und andern Gefühlen und würde auch nie ein Wort über solch einen Menschen wagen. Du bist bey Schlossern der bey ihm war und der Mann darzu ist Dir viel über ihn zu sagen. Es gibt so viel ich weiß keinen Menschen hier der was zu leisten im Stand wäre wenn Schlosser nichts kann. Ich will aber noch mit Lavatern drüber reden der heut nicht hier ist.
 <line />Adieu jezt. 20 Febr Nachts.
 <vspace lines="1"/>
-<line /><note>zwei Abgrenzungsstriche</note>
+<line type="line"/>
+<line type="line"/>
+<vspace lines="1"/>
 <line tab="1"/>Das ist traurig daß nichts von Gluck da sey. Kaufmann hat mir doch so was gesagt vom Singen der Mad. Schlosser daß ich vermuthete sie hätte was das ich noch nicht hab. Wann Du leichtsinnig über meine Wünsche weggehst oder mir vorent-
 <page index="3"/>hälst, thust Du übel an mir!
 <vspace lines="1"/>
@@ -5907,7 +5913,8 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 <line /><align pos="center">Diener</align>
 <line /><align pos="center">J M R Lenz.</align>
 <vspace lines="1"/>
-<line /><note>Abgrenzungsstrich</note>
+<line type="line"/>
+<vspace lines="1"/>
 <line tab="1"/>Herrn D. Hirzel – allen Herrn Pfenninger – Herrn Schultheß und Gemalin Herrn Füeßli und Breiting, Herrn Schick Herrn Bodmer, Herrn Landvogt Lavater.</sidenote>
 </letterText>
 
@@ -6984,7 +6991,7 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 
 <letterText letter="373"><page index="1"/>
 <line tab="1"/>Tausend Dank für die Note meinem werthen Herrn Schottländer, woraus wie aus kleinem vermoderten Saamkörngen der so aus Nichts alles macht, viele Frucht schaffen kann. Nun in <aq>puncto</aq> der Musik der Gandarwen welches im Orient die Musik und der Taktschlag himmlischer Harfen war die die gewöhnlichen Ohren nicht berühren.
-<line /><align pos="center">—</align>
+<line type="line"/>
 <line tab="1"/>Sie gehen nie in die Bosen oder Börse oder Gostinnaja und wissen auch wohl nicht wie manchen dieser armen Leute zu Muth seyn mag, die theure Zobel zu 100 150 Rubel mit grossen <ul>Reisekosten</ul> in Sibirien aufkauffen und nicht wissen wie ihrer loß zu werden, denn sie stehen! Arme Kaufleute! wie Pferde auf einem Flek und warten daß man sie sucht. Durch <aq>colporteurs</aq> werden sie sie auch schwerlich in der Stadt los werden.
 <line tab="1"/>Ich habe die Akten eines seltsamen Processes unter der Feder in Absicht der liefländischen und Pleskauischen Universitäten die noch blosse Wesen der Einbildungskraft sind, unterdessen im Cabinet schon ihre Wirklichkeit haben, wenn von unsrer Seite nur ein <ul>wenig</ul> – ein klein wenig Hebammenkunst angewandt wird. Sie sind niemals in Derpt auf dem Jahrmarkt gewesen edler Freund? Und wissen also nicht, daß dort Kaufleute aus Ost und West 4 Wochen nach Weyhnachten ausstehen. Daß ich dort aus Frankreich und der Schweitz und Italien Kaufleute gefunden erinnere mich aus Kinderjahren. Nun steht unser Zobelverkäuffer hier u bethet zu Gott und niemand erhört ihn weil man seine Sprache nicht kennt. Er machte eine Reise die ihm mit eignen Pferden (nach Ihrer Ausrechnung wieviel?) auf der Post nach der Tage 16 Rubel kostete. Vielleicht wäre ihm Hin und Rükreise mit 30 Rbln. über und über bezalt denn Sie wissen wie Russen reisen
 <sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal">ich habe Karamsin davon benachrichtigt u im Enricoffschen Haus</sidenote>
