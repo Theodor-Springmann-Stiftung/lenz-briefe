@@ -22,10 +22,14 @@ const firstGroup = catalog.groups[0];
       <div class="filter-controls"><Filter kind="person" label="Personen" options={filterOptions('person')} /><Filter kind="place" label="Orte" options={filterOptions('place')} /></div>
       <label class="catalog-search"><span class="sr-only">Briefe durchsuchen</span><Icon name="search" /><input id="letter-search" type="search" placeholder="Briefe durchsuchen …" data-search-index={searchIndexUrl} aria-describedby="search-status" autocomplete="off" /><span class="search-spinner" aria-hidden="true" hidden /></label>
       <div class="sort-control"><label class="sr-only" for="sort-order">Sortierung</label><Icon name="sort" /><select id="sort-order"><option value="asc">Chronologisch aufsteigend</option><option value="desc">Chronologisch absteigend</option></select></div>
+      <button class="all-letters-link" type="button" hidden><Icon name="arrowLeft" />Alle Briefe</button>
     </div>
     <nav class="year-navigation" aria-label="Zeiträume">
-      {catalog.groups.map(group => <a href={`?group=${group.id}`} data-group={group.id} aria-current={group.id === firstGroup.id ? 'page' : undefined}>{group.label}<span>{group.count}</span></a>)}
-      <a href={`${base}?group=all`} data-group="all">Alle Jahre <span>{catalog.letters.length}</span></a>
+      <div class="year-tabs">
+        {catalog.groups.map(group => <a href={`?group=${group.id}`} data-group={group.id} aria-current={group.id === firstGroup.id ? 'page' : undefined}>{group.label}</a>)}
+        <a href={`${base}?group=all`} data-group="all">Alle Jahre</a>
+      </div>
+      <span id="result-count" class="year-count" role="status" aria-live="polite">{firstGroup.count} {firstGroup.count === 1 ? 'Brief' : 'Briefe'}</span>
     </nav>
     <div class="search-feedback" hidden><p id="search-status" role="status" aria-live="polite"></p><button class="search-retry" type="button" hidden>Erneut laden</button></div>
     <div class="search-results" aria-label="Suchergebnisse" hidden>
@@ -37,7 +41,6 @@ const firstGroup = catalog.groups[0];
       </section>)}
     </div>
     <noscript><style is:inline>.letter-list > [hidden] { display: block !important; }</style><p class="notice">Alle Briefe sind unten chronologisch aufgeführt. Zum Filtern bitte JavaScript aktivieren.</p></noscript>
-    <span id="result-count" class="sr-only" role="status" aria-live="polite">{firstGroup.count} Briefe</span>
     <ol class="letter-list catalog-letter-list">{catalog.letters.map(letter => <li data-letter={letter.letter} hidden={letter.groupId !== firstGroup.id}><LetterHeader letter={letter} compact /></li>)}</ol>
     <div class="empty-state" hidden><h2>Keine Briefe gefunden.</h2><p>Wählen Sie einen anderen Zeitraum oder weniger Filter.</p><button type="button" data-reset>Alle Briefe anzeigen</button></div>
   </section>

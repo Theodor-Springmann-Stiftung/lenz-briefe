@@ -37,7 +37,7 @@ jobs:
 
       - name: Test the validation gate and search boundaries
         working-directory: transform/python
-        run: uv run --no-sync python -m unittest test_validate_schemas test_search
+        run: uv run --no-sync python -m unittest test_validate_schemas test_search test_year_groups
 
       - name: Set up Node.js
         uses: actions/setup-node@v7

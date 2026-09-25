@@ -58,8 +58,10 @@
   .edition-count { @apply text-right; grid-column:3; grid-row:1; white-space:nowrap; }
   .edition-count > span { @apply font-serif text-4xl tracking-tight; font-weight: 300; }
   .active-filters { @apply flex items-baseline; grid-column:2; grid-row:1; min-width:0; transform:translateY(-.3rem); }
-  .active-filter-pills { @apply flex flex-wrap items-baseline gap-2; flex:1 1 auto; min-width:0; }
-  .filter-pill { @apply inline-flex items-center gap-1.5 border px-2.5 py-1.5 text-sm; border-radius:3px; background:#fff3e6; color:#9a4510; border-color:#9a4510; max-width:100%; min-height:34px; }
+  .active-filter-pills { @apply flex flex-wrap items-center gap-3; flex:1 1 auto; min-width:0; }
+  .filter-pill { @apply inline-flex items-center gap-1.5 border-2 px-2.5 py-1.5 text-sm; --pill-background:#fff3e6; position:relative; isolation:isolate; border-radius:0; background:var(--pill-background); color:#9a4510; border-color:#9a4510; max-width:100%; min-height:34px; }
+  .filter-pill::before { content:''; position:absolute; inset:-2px; z-index:-1; border:2px solid currentColor; background:var(--pill-background); pointer-events:none; }
+  .filter-pill::after { content:''; position:absolute; inset:0 -2px -2px 0; z-index:-2; transform:translate(4px, 4px); background:#fff url('../assets/shadow-crosshatch.svg') repeat; background-size:6px 6px; pointer-events:none; }
   .active-filter-pills .filter-pill { flex-shrink:0; }
   .filter-pill-name { min-width:0; text-align:left; overflow-wrap:anywhere; }
   .filter-pill > .ui-icon { color:inherit; }
@@ -67,18 +69,26 @@
   .filter-pill:is(:hover, :focus-visible) .filter-pill-icon { display:none; }
   .filter-pill:is(:hover, :focus-visible) .filter-pill-remove { display:inline-flex; }
   .filter-pill .ui-icon { width:1rem; height:1rem; }
-  .filter-pill:hover { background:#ffe7cc; }
-  .year-navigation { @apply flex flex-wrap; border-bottom:1px solid var(--color-rule); }
-  .year-navigation a { @apply px-5 pt-5 text-base flex items-center gap-3; padding-bottom:.45rem; border-bottom:3px solid transparent; margin-bottom:-1px; }
-  .year-navigation a[data-group=all] { margin-left:auto; }
+  .filter-pill:hover { --pill-background:#ffe7cc; }
+  .year-navigation { display:grid; grid-template-columns:minmax(0, 1fr) auto; column-gap:.5rem; align-items:end; border-bottom:1px solid #000; }
+  .year-tabs { @apply flex flex-wrap gap-x-3; }
+  .year-navigation a { @apply px-2 pt-5 text-base text-ink flex items-center gap-3; padding-bottom:.45rem; border-bottom:3px solid transparent; margin-bottom:-1px; }
+  .year-navigation a:hover:not([aria-current]):not([aria-disabled=true]) { border-bottom-color:#999; }
   .year-navigation a[aria-current] { @apply text-accent font-bold; border-bottom-color: var(--color-accent); }
-  .year-navigation a span { @apply text-xs text-ink font-normal border border-rule rounded-sm px-1.5 py-0.5; font-variant-numeric: tabular-nums; }
-  .year-navigation a[aria-disabled=true] { @apply text-ink; opacity:.4; cursor:default; }
+  .year-count { @apply text-xs text-ink font-normal border border-ink px-1.5 py-0.5; margin-bottom:.45rem; border-radius:2px; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .year-navigation a[aria-disabled=true] { @apply text-ink; cursor:default; }
+  .filter-selected-count { display:inline-flex; align-items:center; justify-content:center; min-width:1rem; height:1rem; padding:0 .2rem; border-radius:0; background:#9a4510; color:#fff; font-size:.65rem; font-weight:700; font-variant-numeric:tabular-nums; }
+  .all-letters-link { @apply inline-flex items-center justify-center gap-2 border bg-white px-4 py-2 text-sm font-bold text-ink; border-color:#000; margin-left:auto; flex-shrink:0; white-space:nowrap; }
+  .all-letters-link:hover { background:var(--color-paper); box-shadow:2px 2px 0 var(--color-ink); }
+  .all-letters-link:active { box-shadow:none; transform:translate(1px, 1px); }
   .filter-toolbar { @apply flex flex-wrap items-center gap-3 bg-filter p-4; }
   .sort-control { position:relative; flex-shrink:0; }
-  .sort-control > .ui-icon { @apply text-ink; position:absolute; left:.75rem; top:50%; transform:translateY(-50%); pointer-events:none; }
-  .sort-control select { @apply border border-rule bg-white pr-3 pl-9 py-2 text-sm cursor-pointer; min-height: 38px; }
-  .catalog-search { @apply flex items-center gap-2 border border-rule bg-white px-3 py-2 text-ink; flex:1 1 13rem; min-width:0; }
+  .sort-control > .ui-icon { pointer-events:none; }
+  .sort-control select { @apply border bg-white pr-3 py-2 text-sm cursor-pointer; border-color:#000; padding-left:3.25rem; min-height:38px; }
+  .catalog-search { @apply flex items-center gap-2 border bg-white px-3 py-2 text-ink; border-color:#000; flex:1 1 13rem; min-width:0; }
+  .sort-control > .ui-icon, .catalog-search > .ui-icon, .filter-menu-label > .ui-icon, .filter-panel-search > .ui-icon { position:absolute; top:0; bottom:0; left:0; width:2.75rem; height:auto; display:flex; align-items:center; justify-content:center; border-right:1px solid #000; }
+  .sort-control > .ui-icon > svg, .catalog-search > .ui-icon > svg, .filter-menu-label > .ui-icon > svg, .filter-panel-search > .ui-icon > svg { width:1.125rem; height:1.125rem; }
+  .catalog-search, .filter-menu summary, .filter-panel-search { position:relative; }
   .catalog-search input { @apply w-full min-w-0 bg-transparent text-sm text-ink; }
   .search-spinner { width:1rem; height:1rem; flex-shrink:0; border:2px solid var(--color-rule); border-top-color:var(--color-accent); border-radius:50%; animation:search-spin .8s linear infinite; }
   .search-feedback { @apply flex flex-wrap items-baseline gap-3 text-sm text-muted; margin-top:1.25rem; }
@@ -101,20 +111,34 @@
   .search-empty { @apply py-6 text-sm text-muted; }
   .search-more { @apply mt-5 inline-flex items-center justify-center border border-rule bg-white px-4 py-2 text-base font-bold; min-height:44px; }
   .search-more:is(:hover, :focus-visible) { @apply border-accent bg-filter; }
-  .filter-controls { @apply flex flex-wrap items-center gap-3; flex-shrink:0; max-width:100%; }
+  .filter-controls { @apply relative flex flex-wrap items-center gap-3; flex-shrink:0; max-width:100%; }
   .filter-menu { @apply relative; }
   .filter-menu, .filter-pill, .sort-control, .sort-control select, .year-navigation { @apply select-none; }
   .filter-menu input[type=search] { @apply select-text; }
-  .filter-menu summary { @apply flex items-center justify-between gap-5 border border-rule bg-white px-4 py-2 text-sm; list-style:none; min-width:125px; }
+  .filter-menu summary { @apply flex items-center justify-between gap-5 border bg-white px-4 py-2 text-sm; border-color:#000; list-style:none; min-width:125px; }
   .filter-menu summary::-webkit-details-marker { display:none; }
   .filter-menu-label { @apply inline-flex items-center gap-2; }
-  .filter-menu[open] summary { @apply border-accent; }
+  .filter-menu summary:hover { border-color:#000; }
+  .filter-menu[open] summary { border-color:#000; background:var(--color-paper); }
   .filter-menu[open] .filter-menu-chevron { transform:rotate(180deg); }
-  .filter-panel { @apply absolute top-full left-0 mt-2 z-20 border border-rule bg-paper p-4 shadow-lg; width: min(340px, calc(100vw - 3rem)); }
-  .filter-panel input[type=search] { @apply w-full border-b border-rule bg-transparent py-2 mb-3 text-base; }
-  .filter-options { @apply overflow-y-auto; max-height: 280px; }
-  .filter-options label { @apply flex items-start gap-3 py-2 pr-2 text-sm cursor-pointer; }
-  .filter-options input { @apply mt-1; accent-color:var(--color-accent); }
+  .filter-panel { @apply absolute top-full left-0 mt-2 z-20 bg-white; border:1.5px solid #000; width:min(340px, calc(100vw - 3rem)); border-radius:0; }
+  .filter-panel::before { content:''; position:absolute; inset:-1.5px; z-index:-1; border:1.5px solid #000; border-radius:inherit; background:#fff; pointer-events:none; box-shadow:0 1px 3px rgb(41 45 39 / .08); }
+  .filter-panel::after { content:''; position:absolute; inset:4.5px -1.5px -1.5px 4.5px; z-index:-2; transform:translate(12px, 12px); border-radius:inherit; pointer-events:none; background:#fff url('../assets/shadow-crosshatch.svg') repeat; background-size:6px 6px; }
+  .filter-panel-search { @apply flex items-center gap-2 px-3; border-bottom:1.5px solid #000; background:var(--color-paper); }
+  .catalog-search, .filter-menu summary, .filter-panel-search { padding-left:3.25rem; }
+  .filter-panel-search > .ui-icon { flex-shrink:0; color:var(--color-muted); border-right-width:1.5px; }
+  .filter-panel input[type=search] { @apply w-full min-w-0 bg-transparent py-3 text-sm text-ink; border:0; }
+  .filter-panel input[type=search]:focus-visible { outline:none; }
+  .filter-panel-search:focus-within { box-shadow:inset 0 0 0 2px var(--color-accent); }
+  .filter-options { @apply overflow-y-auto; max-height:min(300px, 50dvh); padding:.35rem; overscroll-behavior:contain; }
+  .filter-no-matches { @apply px-4 py-6 text-sm text-muted; margin:0; line-height:1.5; }
+  .filter-options label { @apply flex items-start gap-3 px-2.5 py-2 text-sm cursor-pointer; min-height:38px; line-height:1.5; border-radius:1px; }
+  .filter-options label:hover { background:var(--color-filter); }
+  .filter-options label:has(input:checked) { background:#fff3e6; color:#9a4510; }
+  .filter-options label:has(input:checked):hover { background:#ffe7cc; }
+  .filter-options label:focus-within { outline:2px solid var(--color-accent); outline-offset:-2px; }
+  .filter-options label > span { overflow-wrap:anywhere; }
+  .filter-options input { width:1rem; height:1rem; margin-top:.15rem; flex-shrink:0; accent-color:#9a4510; }
   .letter-list { @apply grid gap-4 mt-6; }
   .letter-list > li { @apply border border-rule bg-white p-5 sm:p-6; position:relative; isolation:isolate; }
   @media (hover:hover) {
@@ -321,9 +345,10 @@ button.hand-range-trigger { font:inherit; text-align:inherit; }
   .site-header nav { gap:1rem; font-size:.75rem; }
   .wordmark { gap:.6rem; font-size:1rem; }
   .wordmark > span:last-child { font-size:.7rem; }
-  .year-navigation a { padding:1rem .7rem .45rem; font-size:.85rem; gap:.4rem; }
-  .filter-menu summary { gap:.5rem; padding-inline:.75rem; }
-  .filter-menu[data-filter-menu=place] .filter-panel { left:auto; right:0; }
+  .year-navigation a { padding:1rem .5rem .45rem; font-size:.85rem; gap:.4rem; }
+  .filter-menu summary { gap:.5rem; padding-right:.75rem; padding-left:3.25rem; }
+  .filter-menu { position:static; }
+  .filter-panel { left:0; right:auto; width:min(340px, calc(100vw - 5rem)); }
   .catalog-search { order:-1; flex-basis:100%; max-width:none; }
   .sort-control { width:100%; }
   .sort-control select { width:100%; }

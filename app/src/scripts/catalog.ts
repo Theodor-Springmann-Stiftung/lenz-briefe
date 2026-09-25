@@ -9,11 +9,13 @@ const referenceLinks = [...list.querySelectorAll<HTMLAnchorElement>('.reference-
 const sortControl = document.querySelector<HTMLSelectElement>('#sort-order')!;
 const activeFilters = document.querySelector<HTMLElement>('.active-filters')!;
 const pills = document.querySelector<HTMLElement>('.active-filter-pills')!;
+const allLettersLink = document.querySelector<HTMLButtonElement>('.all-letters-link')!;
 const searchInput = document.querySelector<HTMLInputElement>('#letter-search')!;
 searchInput.value = state.q || '';
 const search = createCatalogSearch(rows, () => render());
 function renderFilterPills() {
   activeFilters.hidden = !hasFilters(state);
+  allLettersLink.hidden = !hasFilters(state);
   const fragment = document.createDocumentFragment();
   for (const kind of ['person', 'place', 'search'] as const) {
     const template = document.querySelector<HTMLTemplateElement>(`#filter-pill-${kind}`)!;
@@ -51,7 +53,7 @@ function render() {
   orderedRecords(data.records, state.sort).forEach((record: {id: string}) => ordered.append(rows.get(record.id)!));
   list.append(ordered);
   sortControl.value = state.sort;
-  document.querySelector('#result-count')!.textContent = searching ? '' : `${count} ${count === 1 ? 'Brief' : 'Briefe'}`;
+  document.querySelector('#result-count')!.textContent = searching && hits === null ? '—' : `${count} ${count === 1 ? 'Brief' : 'Briefe'}`;
   document.querySelector<HTMLElement>('.empty-state')!.hidden = searching || count > 0;
   renderFilterPills();
   referenceLinks.forEach(link => {
@@ -60,7 +62,10 @@ function render() {
   checkboxes.forEach(input => input.checked = (input.name === 'person' ? state.people : state.places).includes(input.value));
   for (const kind of ['person', 'place']) {
     const count = (kind === 'person' ? state.people : state.places).length;
-    document.querySelector(`[data-selected-count="${kind}"]`)!.textContent = count ? ` (${count})` : '';
+    const badge = document.querySelector<HTMLElement>(`[data-selected-count="${kind}"]`)!;
+    badge.hidden = count === 0;
+    badge.textContent = String(count);
+    badge.setAttribute('aria-label', `${count} ausgewählt`);
   }
   document.querySelectorAll<HTMLAnchorElement>('[data-group]').forEach(link => {
     const group = link.dataset.group!;
@@ -78,7 +83,6 @@ function render() {
       link.href = `${location.pathname}?${queryFor(next)}`;
     }
     if (group === state.group) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
-    link.querySelector('span')!.textContent = String(count);
   });
   search.render(query, hits, orderedRecords(data.records, state.sort).filter((record: any) => matches(record, state)).map((record: any) => record.id));
 }
@@ -134,9 +138,15 @@ pills.addEventListener('click', event => {
   nextFocus.focus();
 });
 document.querySelector('[data-reset]')!.addEventListener('click', () => navigate(resetFilters(state)));
+allLettersLink.addEventListener('click', () => navigate(resetFilters(state)));
 document.querySelectorAll<HTMLInputElement>('[data-option-search]').forEach(input => input.addEventListener('input', () => {
   const value = input.value.toLocaleLowerCase('de');
-  document.querySelectorAll<HTMLElement>(`[data-option="${input.dataset.optionSearch}"]`).forEach(option => option.hidden = !option.dataset.name!.includes(value));
+  const options = [...document.querySelectorAll<HTMLElement>(`[data-option="${input.dataset.optionSearch}"]`)];
+  options.forEach(option => option.hidden = !option.dataset.name!.includes(value));
+  const noMatches = options.every(option => option.hidden);
+  const panel = input.closest('.filter-panel')!;
+  panel.querySelector<HTMLElement>('.filter-options')!.hidden = noMatches;
+  panel.querySelector<HTMLElement>('[data-option-empty]')!.hidden = !noMatches;
 }));
 document.addEventListener('click', event => {
   document.querySelectorAll<HTMLDetailsElement>('[data-filter-menu]').forEach(menu => {if (!menu.contains(event.target as Node)) menu.open = false;});

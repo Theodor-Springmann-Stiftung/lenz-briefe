@@ -67,6 +67,15 @@ uv run --project transform/python python -m transform_python.validate_schemas
 
 ## Data and rendering
 
+- Year navigation is defined by `yearGroups/yearGroup` in `data/xml/references.xml`.
+  Each group has inclusive `fromYear` and `toYear` bounds and a phase `label`.
+  XML order controls display order; the index shows “years · label”. The exporter
+  rejects reversed or overlapping ranges. Range-derived URLs remain stable when
+  only a label changes. The XSD requires at least one group and all attributes.
+- Filter controls use black borders and separated icon compartments. Selected
+  counts are compact orange badges; selected pills and popup boxes have opaque
+  crosshatched shadows. The active result count appears at the right of the year
+  navigation, and “Alle Briefe” clears active filters from the toolbar.
 - `generated/catalog.json` provides chronological headers, ordered sending and
   receiving events, source/draft flags, person/place dictionaries and year groups.
   Dates retain their XML wording. Sorting uses `when`, `from`, `notBefore`, `to`,

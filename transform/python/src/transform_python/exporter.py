@@ -33,6 +33,7 @@ from .common import (
 )
 
 from .verweise import check_verweise
+from .catalog import read_year_groups
 from .search import index_fragment
 
 
@@ -51,7 +52,7 @@ def extract_date(node: etree._Element | None) -> dict[str, Any] | None:
     }
 
 
-def build_reference_maps(references_doc: etree._ElementTree) -> dict[str, dict[str, dict[str, Any]]]:
+def build_reference_maps(references_doc: etree._ElementTree) -> dict[str, Any]:
     person_map: dict[str, dict[str, Any]] = {}
     location_map: dict[str, dict[str, Any]] = {}
     app_map: dict[str, dict[str, Any]] = {}
@@ -83,7 +84,8 @@ def build_reference_maps(references_doc: etree._ElementTree) -> dict[str, dict[s
             "category": get_attribute(node, "category"),
         }
 
-    return {"personMap": person_map, "locationMap": location_map, "appMap": app_map}
+    return {"personMap": person_map, "locationMap": location_map, "appMap": app_map,
+            "yearGroups": read_year_groups(references_doc)}
 
 
 def extract_annotation_parts(node: etree._Element) -> list[dict[str, Any]]:

@@ -107,6 +107,27 @@
 								</xsd:unique>
 							</xsd:element>
 
+							<xsd:element name="yearGroups">
+								<xsd:annotation>
+									<xsd:documentation>Phasen im Briefverzeichnis in Anzeigereihenfolge. Jahresgrenzen sind einschließlich; Bereiche dürfen sich nicht überschneiden.</xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="yearGroup" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:attribute name="fromYear" type="xsd:positiveInteger" use="required" />
+												<xsd:attribute name="toYear" type="xsd:positiveInteger" use="required" />
+												<xsd:attribute name="label" type="lenz:NonEmptyString" use="required" />
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+								<xsd:unique name="uniqueYearGroupStart">
+									<xsd:selector xpath="lenz:yearGroup" />
+									<xsd:field xpath="@fromYear" />
+								</xsd:unique>
+							</xsd:element>
+
 						</xsd:sequence>
 					</xsd:complexType>
 				</xsd:element>

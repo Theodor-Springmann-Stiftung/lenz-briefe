@@ -427,5 +427,12 @@
 			<appDef index="10" name="Entwürfe" category="Entwürfe" />
 			<appDef index="11" name="Übersetzung" category="Übersetzung" />
 		</appDefs>
+		<yearGroups>
+			<yearGroup fromYear="1756" toYear="1770" label="Livland und Königsberg" />
+			<yearGroup fromYear="1771" toYear="1775" label="Elsass" />
+			<yearGroup fromYear="1776" toYear="1776" label="Weimar" />
+			<yearGroup fromYear="1777" toYear="1779" label="Schweiz, Emmendingen und Livland" />
+			<yearGroup fromYear="1780" toYear="1792" label="Russland" />
+		</yearGroups>
 	</definitions>
 </opus>
