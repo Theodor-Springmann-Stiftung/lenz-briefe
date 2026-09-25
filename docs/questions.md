@@ -37,10 +37,8 @@
 Insgesamt: sub and sup? Fehlt nicht?
 
 
-- Datum doppelt
 - Antiqua größer, Bodoni kleiner
-- Frmde Hände unterschiedliche Schriften, bis drei
-- 36: original und Druck
+- Fremde Hände unterschiedliche Schriften, bis drei
 - undo: gestrichelt unterstrichen
 - 41, 54, 162, 184, 192, 199, 224, 366, 293: tabelle
 

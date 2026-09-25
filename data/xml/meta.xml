@@ -625,6 +625,7 @@
 			</received>
 			<traditions>
 				<tradition isOriginal="true" type="manuscript" />
+				<tradition isOriginal="false" type="print" />
 			</traditions>
 			<isProofread value="true" />
 			<isDraft value="false" />

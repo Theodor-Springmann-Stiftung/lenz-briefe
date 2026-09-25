@@ -28,7 +28,9 @@ const secondary = transmission
   ? `${hasOriginal ? 'Der' : 'Original verschollen; der'} Brief wurde sekundär ${transmission} überliefert`
   : types.length ? `${hasOriginal ? '' : 'Original verschollen; '}Details der sekundären Überlieferung unbekannt.` : '';
 const unknownDetails = transmission && types.includes('unknown') ? 'Details einer weiteren Überlieferung unbekannt.' : '';
-const description = [checkedOriginal ? 'Der Brief wurde anhand des Originals kritisch geprüft.' : '', secondary, unknownDetails].filter(Boolean).join(' ');
+const description = checkedOriginal && hasPrint && !hasManuscript
+  ? ['Der Brief wurde teils im Original, teils sekundär im Druck überliefert.', unknownDetails].filter(Boolean).join(' ')
+  : [checkedOriginal ? 'Der Brief wurde anhand des Originals kritisch geprüft.' : '', secondary, unknownDetails].filter(Boolean).join(' ');
 ---
 {(checkedOriginal || types.length > 0) && <span class="source-icons">
 <span class="source-separator" aria-hidden="true">·</span>

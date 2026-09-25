@@ -291,6 +291,7 @@ button.hand-range-trigger { font:inherit; text-align:inherit; }
 .edition-text .tul { text-decoration:underline double; text-underline-offset:.14em; text-decoration-skip-ink:none; border-bottom:1px solid currentColor; padding-bottom:.22em; }
 .edition-text del { text-decoration:line-through; }
 .edition-text del del { text-decoration:line-through double; }
+.edition-text .undo { text-decoration:underline dotted; text-underline-offset:.2em; text-decoration-skip-ink:none; }
 .edition-text .er { color:var(--color-paper); background:var(--color-ink); padding-inline:.08em; box-decoration-break:clone; }
 .edition-text .er * { color:inherit; }
 .edition-text .nr { display:inline-block; min-width:calc(var(--extent,1) * 1ch); white-space:pre; text-indent:0; text-align:center; vertical-align:baseline; }
