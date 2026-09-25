@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {readState,matches,queryFor,orderedRecords,hasFilters,withFilters,removeFilter,resetFilters,selectReferenceFilter} from '../src/lib/filters.mjs';
+import {readState,matches,queryFor,orderedRecords,hasFilters,withFilters,removeFilter,resetFilters,selectReferenceFilter,normalizeYearGroup} from '../src/lib/filters.mjs';
 const records = [
   {id:'1',group:'1776',people:['1','2'],places:['3']},
   {id:'2',group:'1776',people:['2','4'],places:['5']},
@@ -21,7 +21,7 @@ test('reference links replace all filters with the clicked person or place acros
   assert.deepEqual(state,{group:'1776',people:['2','4'],places:['3'],sort:'desc'});
 });
 test('query state round-trips multiple filters and groups', () => {
-  const state = {group:'1776',people:['1','4'],places:['3','5'],sort:'desc'};
+  const state = {group:'all',people:['1','4'],places:['3','5'],sort:'desc'};
   assert.deepEqual(readState(queryFor(state),records,['1776','1777-1779']),state);
 });
 test('search URLs survive filters, sorting and history, and default to all years', () => {
@@ -48,13 +48,33 @@ test('OR within a filter, AND across filters and years', () => {
   assert.deepEqual(records.filter(r=>matches(r,state)).map(r=>r.id),['2']);
 });
 test('unknown and duplicate parameters are normalized', () => {
-  assert.deepEqual(readState('?group=no&person=2&person=2&person=999&place=5&sort=invalid',records,['1776']),{group:'1776',people:['2'],places:['5'],sort:'asc'});
+  assert.deepEqual(readState('?group=no&person=2&person=2&person=999&place=5&sort=invalid',records,['1776']),{group:'all',people:['2'],places:['5'],sort:'asc'});
 });
-test('the first year group is the default and all years is an explicit shareable choice', () => {
-  assert.equal(readState('',records,['1776','1777-1779']).group,'1776');
-  const state = {group:'all',people:[],places:[],sort:'asc'};
-  assert.equal(queryFor(state),'group=all');
-  assert.deepEqual(readState(queryFor(state),records,['1776','1777-1779']),state);
+test('all years is selected exactly while a person, place or search filter is active', () => {
+  const groups = ['1776','1777-1779'];
+  for (const query of ['', '?group=all', '?group=all&person=999', '?group=all&q=++', '?sort=desc']) {
+    assert.equal(readState(query,records,groups).group,'1776');
+  }
+  assert.equal(readState('?group=1777-1779&sort=desc',records,groups).group,'1777-1779');
+  for (const filter of ['person=1','place=5','q=Freund']) {
+    const state = readState(`?group=1776&${filter}`,records,groups);
+    assert.equal(state.group,'all');
+    assert.equal(hasFilters(state),true);
+    assert.deepEqual(readState(queryFor(state),records,groups),state);
+    assert.equal(normalizeYearGroup({...state,group:'1777-1779'},groups).group,'all');
+    assert.equal(normalizeYearGroup(resetFilters(state),groups).group,'1776');
+  }
+});
+test('removing the last filter restores the first group; remaining filters keep all years', () => {
+  const groups = ['1776','1777-1779'];
+  const initial = readState('?person=1&place=5&q=Freund&sort=desc',records,groups);
+  const noPerson = normalizeYearGroup(removeFilter(initial,'person','1'),groups);
+  const noPlace = normalizeYearGroup(removeFilter(noPerson,'place','5'),groups);
+  const noSearch = normalizeYearGroup(removeFilter(noPlace,'search'),groups);
+  assert.deepEqual([initial.group,noPerson.group,noPlace.group,noSearch.group],['all','all','all','1776']);
+  assert.equal(noSearch.sort,'desc');
+  assert.deepEqual(readState(queryFor(initial),records,groups),initial);
+  assert.deepEqual(readState(queryFor(noSearch),records,groups),noSearch);
 });
 test('chronological sorting reverses filtered results without mutating the catalog', () => {
   const state = {group:'all',people:['1'],places:[],sort:'desc'};
@@ -72,11 +92,11 @@ test('years and sorting alone never count as an active filter', () => {
   assert.equal(hasFilters({people:['1'],places:[]}),true);
   assert.equal(hasFilters({people:[],places:['3']}),true);
 });
-test('adding, changing and clearing filters returns to all years and preserves sorting', () => {
+test('filter changes preserve sorting and normalize the active year selection', () => {
   const state = {group:'1777-1779',people:['1'],places:[],sort:'desc'};
   for (const [people,places] of [[['2'],[]],[['1'],['3']],[[],[]]]) {
-    const next = withFilters(state,people,places);
-    assert.deepEqual(next,{group:'all',people,places,sort:'desc'});
+    const next = normalizeYearGroup(withFilters(state,people,places),['1776','1777-1779']);
+    assert.deepEqual(next,{group:people.length || places.length ? 'all' : '1776',people,places,sort:'desc'});
     assert.deepEqual(readState(queryFor(next),records,['1776','1777-1779']),next);
   }
   assert.equal(state.group,'1777-1779');

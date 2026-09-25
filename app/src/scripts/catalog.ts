@@ -1,4 +1,4 @@
-import {readState, matches, queryFor, orderedRecords, hasFilters, withFilters, removeFilter, resetFilters, selectReferenceFilter} from '../lib/filters.mjs';
+import {readState, matches, queryFor, orderedRecords, hasFilters, withFilters, removeFilter, resetFilters, selectReferenceFilter, normalizeYearGroup} from '../lib/filters.mjs';
 import {createCatalogSearch} from './catalog-search';
 const data = JSON.parse(document.querySelector('#filter-data')!.textContent!);
 let state = readState(location.search, data.records, data.groups);
@@ -69,9 +69,10 @@ function render() {
   }
   document.querySelectorAll<HTMLAnchorElement>('[data-group]').forEach(link => {
     const group = link.dataset.group!;
+    link.hidden = group === 'all' ? !hasFilters(state) : hasFilters(state);
     const next = {...state, group};
     const count = data.records.filter((r: any) => matches(r, next) && matchesSearch(r.id)).length;
-    if (group !== 'all' && count === 0) {
+    if (link.hidden || (group !== 'all' && count === 0)) {
       link.setAttribute('aria-disabled', 'true');
       link.setAttribute('role', 'link');
       link.tabIndex = -1;
@@ -88,9 +89,7 @@ function render() {
 }
 function navigate(next: typeof state, replace = false) {
   clearTimeout(searchTimer);
-  state = hasFilters(state) && !hasFilters(next)
-    ? {...next, group: data.groups[0] || 'all'}
-    : next;
+  state = normalizeYearGroup(next, data.groups);
   searchInput.value = state.q || '';
   const query = queryFor(state);
   const url = `${location.pathname}${query ? '?' + query : ''}`;
@@ -122,7 +121,7 @@ searchInput.addEventListener('input', () => {
 });
 sortControl.addEventListener('change', () => navigate({...state, sort:sortControl.value === 'desc' ? 'desc' : 'asc'}));
 document.querySelectorAll<HTMLAnchorElement>('[data-group]').forEach(link => link.addEventListener('click', event => {
-  if (link.getAttribute('aria-disabled') === 'true') {event.preventDefault(); return;}
+  if (link.hidden || link.getAttribute('aria-disabled') === 'true') {event.preventDefault(); return;}
   if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   event.preventDefault(); navigate({...state, group:link.dataset.group!});
 }));

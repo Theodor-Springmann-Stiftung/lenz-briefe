@@ -100,15 +100,16 @@ uv run --project transform/python python -m transform_python.validate_schemas
 - The index embeds only IDs and filter fields for browser navigation. Repeated
   `person` and `place` query parameters combine with OR within each category and
   AND between categories. `group` selects a year group; the first group is the
-  default, while `group=all` explicitly selects all years. `sort=desc` reverses
-  the chronological order; ascending is the default. Changing or clearing a
-  person/place filter switches to all years. Reset is offered only for those
-  filters: removable pills and an “Alle zurücksetzen” button appear below the
-  heading, outside the toolbar. Year groups with no matches are dimmed and
-  disabled. Remix Icons supplies the interface icons as embedded SVGs. Reload, shared URLs and
-  Back/Forward restore filters and sorting. The search field is currently a
-  design placeholder with no search behavior. The unfiltered catalog remains readable
-  without JavaScript.
+  default. With any person, place or search filter active, all years are selected
+  and “Alle Jahre” is the only visible and selectable year option. Without
+  filters, “Alle Jahre” is hidden and the year groups are available again;
+  clearing the last filter returns to the first group. Shared URLs and browser
+  history follow the same rules, including conflicting year/filter parameters.
+  `sort=desc` reverses chronological order; sorting alone is not an active filter.
+  Removable pills appear beside the heading, and “Alle Briefe” in the toolbar
+  clears all filters. Remix Icons supplies the interface icons as embedded SVGs.
+  Reload, shared URLs and Back/Forward restore filters and sorting. Search updates
+  while typing. The unfiltered catalog remains readable without JavaScript.
 
 Current layout conventions: one line-indent unit equals `2ch`; `tab value="i-n"`
 starts at fraction `(i-1)/n` of its row and occupies the space to the next cell.

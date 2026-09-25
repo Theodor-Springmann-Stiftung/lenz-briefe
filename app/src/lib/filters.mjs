@@ -2,13 +2,17 @@ export function readState(search, records, groups) {
   const query = new URLSearchParams(search);
   const people = new Set(records.flatMap(r => r.people));
   const places = new Set(records.flatMap(r => r.places));
-  return {
-    group: query.get('group') === 'all' || groups.includes(query.get('group')) ? query.get('group') : (query.get('q') ? 'all' : groups[0] || 'all'),
+  return normalizeYearGroup({
+    group: query.get('group'),
     people: [...new Set(query.getAll('person'))].filter(id => people.has(id)),
     places: [...new Set(query.getAll('place'))].filter(id => places.has(id)),
     sort: query.get('sort') === 'desc' ? 'desc' : 'asc',
     ...(query.get('q') ? {q: query.get('q')} : {}),
-  };
+  }, groups);
+}
+export function normalizeYearGroup(state, groups) {
+  return {...state, group: hasFilters(state) ? 'all'
+    : groups.includes(state.group) ? state.group : groups[0] || 'all'};
 }
 export function matches(record, state, includeGroup = true) {
   return (!includeGroup || state.group === 'all' || record.group === state.group)

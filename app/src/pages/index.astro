@@ -27,7 +27,7 @@ const firstGroup = catalog.groups[0];
     <nav class="year-navigation" aria-label="Zeiträume">
       <div class="year-tabs">
         {catalog.groups.map(group => <a href={`?group=${group.id}`} data-group={group.id} aria-current={group.id === firstGroup.id ? 'page' : undefined}>{group.label}</a>)}
-        <a href={`${base}?group=all`} data-group="all">Alle Jahre</a>
+        <a href={`${base}?group=all`} data-group="all" hidden>Alle Jahre</a>
       </div>
       <span id="result-count" class="year-count" role="status" aria-live="polite">{firstGroup.count} {firstGroup.count === 1 ? 'Brief' : 'Briefe'}</span>
     </nav>
