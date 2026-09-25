@@ -39,14 +39,7 @@ Insgesamt: sub and sup? Fehlt nicht?
 
 - Antiqua größer, Bodoni kleiner
 - Fremde Hände unterschiedliche Schriften, bis drei
-- undo: gestrichelt unterstrichen
 - 41, 54, 162, 184, 192, 199, 224, 366, 293: tabelle
-
 - 121, 274, 303: "Tilde" -- geschwungene linie einfach und doppelt
 - Absender / Empfänger im Suchfilter unterscheiden. Ebenso die Orte
 - Überschriften für Orte
-- 296 Druck
-- 96 Ns + indirekt
-- 56: Druck indirekt
-- 338: Ms indrekt
-- 251: Gedrucker Brief

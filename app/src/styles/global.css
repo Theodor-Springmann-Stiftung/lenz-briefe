@@ -272,7 +272,8 @@ button.hand-range-trigger { font:inherit; text-align:inherit; }
 .edition-text :is(.lb-line-block, .tab, .lb-tab-prefix, .sidenote):target { background:#fff3e6; }
 /* Collapse marker spacing with adjacent XML whitespace, including across inline wrappers. */
 .edition-text .page-anchor[data-break=inline]::before { content:' | '; white-space:normal; }
-.edition-text .aq { @apply font-sans; }
+.edition-text .aq { @apply font-sans; font-size:1.12em; }
+.edition-text .aq .aq { font-size:1em; }
 .edition-text .hand { @apply font-hand; }
 .edition-text .ink { color:#163e78; }
 .edition-text .pe, .edition-text .note { color:#74746d; }

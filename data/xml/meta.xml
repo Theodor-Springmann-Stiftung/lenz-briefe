@@ -969,7 +969,7 @@
 				<person ref="19" />
 			</received>
 			<traditions>
-				<tradition isOriginal="false" type="unknown" />
+				<tradition isOriginal="false" type="print" />
 			</traditions>
 			<isProofread value="true" />
 			<isDraft value="false" />
@@ -5080,7 +5080,7 @@
 				<person ref="41" />
 			</received>
 			<traditions>
-				<tradition isOriginal="false" type="unknown" />
+				<tradition isOriginal="false" type="print" />
 			</traditions>
 			<isProofread value="true" />
 			<isDraft value="true" />
@@ -5799,7 +5799,7 @@
 				<person ref="3" />
 			</received>
 			<traditions>
-				<tradition isOriginal="false" type="unknown" />
+				<tradition isOriginal="false" type="manuscript" />
 			</traditions>
 			<isProofread value="true" />
 			<isDraft value="false" />
