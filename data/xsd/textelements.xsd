@@ -134,6 +134,8 @@
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="break" />
                         <xs:enumeration value="line" />
+                        <xs:enumeration value="tilde" />
+                        <xs:enumeration value="double-tilde" />
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>

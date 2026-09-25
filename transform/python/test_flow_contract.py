@@ -55,6 +55,19 @@ class FlowContractTests(unittest.TestCase):
         self.assertEqual(self.page(tree, '1').get('data-break'), 'block')
         self.assertFalse(tree.xpath('.//*[@class="lb-page"]'))
 
+    def test_curved_rules_preserve_text_and_page_boundaries(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            for line_type in ['tilde', 'double-tilde']:
+                with self.subTest(kind=kind, line_type=line_type):
+                    tree = self.render(f'A<line type="{line_type}"/><page index="2"/>B', kind)
+                    self.assertEqual(''.join(line.text_content() for line in self.lines(tree)), 'AB')
+                    ornaments = tree.xpath('.//span[@role="img"]')
+                    self.assertEqual(len(ornaments), 1)
+                    self.assertEqual(ornaments[0].get('class'), f'lb-ornament lb-ornament--{line_type}')
+                    self.assertTrue(ornaments[0].get('aria-label'))
+                    self.assertEqual(self.page(tree).get('data-break'), 'block')
+                    self.assertFalse(tree.xpath('.//hr'))
+
     def test_superscript_and_subscript_preserve_nested_formatting(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:
             with self.subTest(kind=kind):

@@ -463,7 +463,7 @@
             <xsl:variable name="line-tab" as="xs:string?" select="if (@tab) then string(@tab) else ()" />
             <xsl:variable name="flushed" select="lb:flush-state($completed, $current-type, $current-tab, $current-content)" />
             <xsl:choose>
-              <xsl:when test="$line-type = ('line', 'vspace')">
+              <xsl:when test="$line-type = ('line', 'tilde', 'double-tilde', 'vspace')">
                 <xsl:next-iteration>
                   <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, $flushed?currentContent))" />
                   <xsl:with-param name="current-type" select="()" />
@@ -564,16 +564,16 @@
       <xsl:otherwise>
         <xsl:variable name="leaves" select=".//text()[normalize-space()] | .//lb:*[not(node())][not(self::lb:page)]" />
         <xsl:variable name="note-only" select="exists(.//lb:note) and (every $leaf in $leaves satisfies exists($leaf/ancestor-or-self::lb:note))" />
-        <div class="lb-line-block{if (@type = 'line') then ' lb-line-block--rule' else ''}{if ($note-only) then ' lb-line-block--note' else ''}">
+        <div class="lb-line-block{if (@type = ('line', 'tilde', 'double-tilde')) then ' lb-line-block--rule' else ''}{if ($note-only) then ' lb-line-block--note' else ''}">
           <xsl:if test="@tab">
             <xsl:attribute name="data-tab" select="@tab" />
             <xsl:attribute name="style" select="concat('--indent-units: ', if (@tab castable as xs:positiveInteger) then xs:positiveInteger(@tab) else 0)" />
           </xsl:if>
           <xsl:if test="lb:has-align(node())"><xsl:attribute name="data-layout">aligned</xsl:attribute></xsl:if>
           <xsl:choose>
-            <xsl:when test="@type = 'line'">
+            <xsl:when test="@type = ('line', 'tilde', 'double-tilde')">
               <xsl:apply-templates select="node()" />
-              <hr class="lb-rule" />
+              <xsl:call-template name="lb:render-rule" />
             </xsl:when>
             <xsl:otherwise>
               <xsl:call-template name="lb:render-regions"><xsl:with-param name="nodes" select="node()" /></xsl:call-template>
@@ -622,15 +622,25 @@
         <xsl:attribute name="style" select="concat('--indent-units: ', if (@tab castable as xs:positiveInteger) then xs:positiveInteger(@tab) else 0)" />
       </xsl:if>
       <xsl:choose>
-        <xsl:when test="@type = 'line'">
+        <xsl:when test="@type = ('line', 'tilde', 'double-tilde')">
           <xsl:apply-templates select="$cells/node()" />
-          <hr class="lb-rule" />
+          <xsl:call-template name="lb:render-rule" />
         </xsl:when>
         <xsl:otherwise>
           <xsl:apply-templates select="$cells/node()" />
         </xsl:otherwise>
       </xsl:choose>
     </div>
+  </xsl:template>
+
+  <xsl:template name="lb:render-rule">
+    <xsl:choose>
+      <xsl:when test="@type = ('tilde', 'double-tilde')">
+        <span class="lb-ornament lb-ornament--{@type}" role="img"
+          aria-label="{if (@type = 'double-tilde') then 'Doppelter geschwungener Strich' else 'Geschwungener Strich'}"></span>
+      </xsl:when>
+      <xsl:otherwise><hr class="lb-rule" /></xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="t:tab-prefix">

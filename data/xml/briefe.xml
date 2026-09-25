@@ -2090,14 +2090,13 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/>Doch hab ich einen grossen alten Drachen in mir, mit dem ich noch viel zu ringen haben werde. Er soll immer hinunter.
 <page index="3"/>Ich hoffe ich glaube ich lebe. Komm bald Herr Jesu!
 <vspace lines="1"/>
-<line /><align pos="center">～</align>
+<line type="tilde"/>
 <vspace lines="1"/>
 <line tab="1"/>Aus Deiner Göttingerstelle nichts geworden? Schüttle den Staub über sie!!!
 <line tab="1"/>
 <line tab="1"/>Ist denn die Regierung Gottes arm? Oder fehlts ihm an Werkzeug und Mittel? Bedaur und belächle der ohnmächtigen Thorheit Rache.
 <vspace lines="1"/>
-<line /><align pos="center">～</align>
-<align pos="center">～</align>
+<line type="double-tilde"/>
 <vspace lines="1"/>
 <line /><align pos="right">Lenz.</align>
 <vspace lines="1"/>
@@ -4550,7 +4549,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line tab="5"/>Das war mein Wunsch – das ist mein Grämen –
 <line tab="5"/>Und soll mir doch kein Schicksal nehmen.
 <vspace lines="1"/>
-<line /><align pos="center"><note>Schmuckzeichen</note></align>
+<line type="tilde"/>
 <page index="4"/>
 <vspace lines="1"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
@@ -5406,7 +5405,7 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 <line tab="5"/>Der Welten ohne Trost durchirrt –
 <line tab="5"/>Wie wirst du ihn erfrischen!
 <vspace lines="1"/>
-<line /><align pos="center">～</align>
+<line type="tilde"/>
 <vspace lines="1"/>
 <line tab="1"/>Viel Empfehlungen Ihren kleinen Eydgenossen in Pumphosen. Auch deren Namen schreiben Sie mir doch einmahl auf.
 <line tab="1"/>Ich bitte die Verse nicht weiter zu weisen.

@@ -273,6 +273,8 @@ button.hand-range-trigger { font:inherit; text-align:inherit; }
 /* Collapse marker spacing with adjacent XML whitespace, including across inline wrappers. */
 .edition-text .page-anchor[data-break=inline]::before { content:' | '; white-space:normal; }
 .edition-text .aq { @apply font-sans; font-size:1.12em; }
+.edition-text .lb-ornament { display:block; width:5em; max-width:100%; height:1em; margin:.4em auto; background:currentColor; mask:url('../assets/line-tilde.svg') center / contain no-repeat; }
+.edition-text .lb-ornament--double-tilde { width:10.5em; mask-image:url('../assets/line-double-tilde.svg'); }
 .edition-text .aq .aq { font-size:1em; }
 .edition-text .hand { @apply font-hand; }
 .edition-text .ink { color:#163e78; }
