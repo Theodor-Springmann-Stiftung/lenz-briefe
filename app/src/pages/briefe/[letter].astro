@@ -62,6 +62,7 @@ const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'hae
     </section>
   </div>
   <script type="application/json" id="hand-data" set:html={JSON.stringify(hands).replace(/</g, '\\u003c')} />
+  <script>import '../../scripts/search-highlight';</script>
   <script>import '../../scripts/margins';</script>
   <script>import '../../scripts/note-connections';</script>
 </Layout>

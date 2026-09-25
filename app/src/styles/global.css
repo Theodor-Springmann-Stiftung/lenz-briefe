@@ -100,11 +100,12 @@
   .search-section-heading h2 { @apply font-serif text-2xl; }
   .search-section-count { @apply text-sm text-muted; }
   .search-previews { @apply grid gap-3 mt-5; }
-  .search-hit { display:grid; grid-template-columns:3.75rem minmax(0,1fr); column-gap:.75rem; align-items:baseline; }
-  .search-hit-label { @apply text-sm text-muted; font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+  .search-hit { display:grid; grid-template-columns:3.75rem minmax(0,1fr); column-gap:.35rem; align-items:baseline; padding:.65rem .8rem; background:#fdfcf9; }
+  .search-previews > li:nth-child(even) .search-hit { background:#faf8f3; }
+  .search-hit-label { @apply text-sm text-ink; font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
   .search-hit-pages { display:block; }
   .search-hit-context { @apply font-sans text-sm text-muted; }
-  .search-hit-text { @apply font-serif text-base leading-relaxed; max-width:75ch; overflow-wrap:anywhere; }
+  .search-hit-text { @apply font-serif text-base leading-relaxed; max-width:85ch; overflow-wrap:anywhere; }
   [data-search-section=tradition] .search-hit-text { @apply font-sans; }
   [data-search-section=tradition] .search-hit { grid-template-columns:min(8rem, 28%) minmax(0,1fr); }
   .search-hit:hover .search-hit-text { text-decoration:underline; text-decoration-color:var(--color-rule); }
@@ -143,10 +144,10 @@
   .letter-list { @apply grid gap-4 mt-6; }
   .letter-list > li { @apply border border-rule bg-white p-5 sm:p-6; position:relative; isolation:isolate; }
   @media (hover:hover) {
-    .letter-list > li:hover { box-shadow:2px 2px 0 #8f9489; }
+    .catalog-letter-list > li:hover { box-shadow:3px 3px 0 #454940, -1px -1px 3px rgb(41 45 39 / .04); }
   }
-  .letter-card-link::after { content:''; position:absolute; inset:0; }
-  .letter-card-link:focus-visible::after { outline:2px solid var(--color-accent); outline-offset:3px; }
+  .catalog-letter-list .letter-card-link::after { content:''; position:absolute; inset:0; }
+  .catalog-letter-list .letter-card-link:focus-visible::after { outline:2px solid var(--color-accent); outline-offset:3px; }
   .letter-list button, .letter-list a:not(.letter-card-link) { position:relative; z-index:1; }
   .letter-header { --header-text-size:1rem; }
   .letter-header--compact { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:.15rem 2rem; }
@@ -160,6 +161,7 @@
   .source-icon img { display:block; width:auto; height:.9em; }
   .source-icon--original img { height:1.05em; }
   .letter-date a:hover { text-decoration:none; }
+  .letter-date .reference-filter:hover { color:inherit; text-decoration:underline; }
   .letter-events { font-size:var(--header-text-size); line-height:1.6; }
   .correspondence-arrow { @apply inline-flex items-center justify-center text-black; position:relative; width:1.25em; height:1.25em; margin-inline:.45em; vertical-align:-.275em; }
   .correspondence-arrow .ui-icon { width:100%; height:100%; }
@@ -269,7 +271,8 @@ button.hand-range-trigger { font:inherit; text-align:inherit; }
 .edition-text .lb-rule { width:40%; border:0; border-top:1px solid currentColor; margin: .9em auto; }
 .edition-text .page-anchor { scroll-margin-top:3rem; }
 .edition-text [id] { scroll-margin-top:3rem; }
-.edition-text :is(.lb-line-block, .tab, .lb-tab-prefix, .sidenote):target { background:#fff3e6; }
+html:not(.search-highlight-active) .edition-text :is(.lb-line-block, .tab, .lb-tab-prefix, .sidenote):target { background:#fff3e6; }
+.edition-text mark.search-match { background:#f6dfb6; color:inherit; scroll-margin-top:3rem; }
 /* Collapse marker spacing with adjacent XML whitespace, including across inline wrappers. */
 .edition-text .page-anchor[data-break=inline]::before { content:' | '; white-space:normal; }
 .edition-text .aq { @apply font-sans; font-size:1.12em; }
@@ -284,7 +287,7 @@ button.hand-range-trigger { font:inherit; text-align:inherit; }
 .edition-text .tl::before { content:'◌'; }
 .edition-text strong { @apply font-bold; }
 .edition-text em { @apply italic; }
-.edition-text .large { font-size:1.25em; }
+.edition-text .large { font-size:1.25em; line-height:0; }
 .edition-text sup, .edition-text sub { font-size:.75em; line-height:0; position:relative; vertical-align:baseline; }
 .edition-text sup { top:-.5em; }
 .edition-text sub { bottom:-.25em; }

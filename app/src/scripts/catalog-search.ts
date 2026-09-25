@@ -116,7 +116,7 @@ export function createCatalogSearch(rows: Map<string | undefined, HTMLElement>, 
           const preview = document.createElement('li');
           const link = document.createElement('a');
           link.className = 'search-hit';
-          link.href = `${url}#${hit.anchor}`;
+          link.href = `${url}?${new URLSearchParams({q: query})}#${hit.anchor}`;
           const label = document.createElement('span');
           label.className = 'search-hit-label';
           const pages = matchPages(hit, query) as string[];

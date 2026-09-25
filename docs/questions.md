@@ -40,6 +40,5 @@ Insgesamt: sub and sup? Fehlt nicht?
 - Antiqua größer, Bodoni kleiner
 - Fremde Hände unterschiedliche Schriften, bis drei
 - 41, 54, 162, 184, 192, 199, 224, 366, 293: tabelle
-- 121, 274, 303: "Tilde" -- geschwungene linie einfach und doppelt
 - Absender / Empfänger im Suchfilter unterscheiden. Ebenso die Orte
 - Überschriften für Orte

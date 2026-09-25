@@ -119,7 +119,7 @@ if (layout) {
     // Wait for the browser's initial fragment jump as well as fonts and layout.
     const jumpToTarget = () => document.fonts.ready.then(() => {
       schedule();
-      requestAnimationFrame(() => initialTarget.scrollIntoView({behavior: 'instant', block: 'start'}));
+      requestAnimationFrame(() => (initialTarget.querySelector('.search-match') || initialTarget).scrollIntoView({behavior: 'instant', block: 'start'}));
     });
     if (document.readyState === 'complete') jumpToTarget();
     else window.addEventListener('load', jumpToTarget, {once: true});
