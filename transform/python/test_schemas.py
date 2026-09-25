@@ -6,6 +6,16 @@ from transform_python.common import XSD_DIR, XSD_MAP
 
 
 class SeparateDocumentSchemaTests(unittest.TestCase):
+    def test_tabs_can_cross_pages(self):
+        content = '<tabs><tab value="1-2">A</tab><tab value="2-2">B</tab><page index="2"/><line/><tab value="1-2">C</tab></tabs>'
+        for name, body in [
+            ('briefe.xsd', f'<document><letterText letter="1"><page index="1"/>{content}</letterText></document>'),
+            ('traditions.xsd', f'<traditions><letterTradition letter="1"><app ref="4">{content}</app></letterTradition></traditions>'),
+        ]:
+            with self.subTest(schema=name):
+                schema = etree.XMLSchema(etree.parse(str(XSD_DIR / name)))
+                schema.assertValid(etree.fromstring(f'<opus xmlns="https://lenz-archiv.de">{body}</opus>'))
+
     def test_hand_can_cross_pages_but_page_indices_remain_unique(self):
         schema = etree.XMLSchema(etree.parse(str(XSD_DIR / 'briefe.xsd')))
         for index, valid in [('2', True), ('1', False)]:

@@ -234,6 +234,19 @@ class FlowContractTests(unittest.TestCase):
                 self.assertEqual(len(cells[0].xpath('.//span[@class="ul"]')), 2)
                 self.assertEqual([c.text_content() for c in rows[1]], ['E', 'F'])
 
+    def test_page_between_table_rows_preserves_cells_and_anchor(self):
+        body = '<page index="1"/><tabs><tab value="1-2">A</tab><tab value="2-2">B</tab><page index="2"/><line/><tab value="1-2">C</tab><tab value="2-2">D</tab></tabs>'
+        source = etree.fromstring(f'<letterText xmlns="https://lenz-archiv.de">{body}</letterText>')
+        self.assertEqual(collect_letter_pages(source), ['1', '2'])
+        for kind in ['letter-text', 'traditions']:
+            with self.subTest(kind=kind):
+                tree = self.render(body, kind)
+                rows = tree.xpath('.//div[@class="lb-tab-row"]')
+                self.assertEqual(len(rows), 2)
+                self.assertEqual([[c.text_content() for c in row.xpath('./div[@class="tab"]')] for row in rows], [['A', 'B'], ['C', 'D']])
+                self.assertEqual(self.page(tree).get('data-break'), 'block')
+                self.assertEqual(len(rows[1].xpath('.//span[@data-index="2"]')), 1)
+
     def test_nested_tables_and_cell_alignment_have_local_context(self):
         tree = self.render('<align pos="right">Outside</align><aq><tabs><tab value="1-2">Left<align pos="right">Right</align><tabs><tab value="1-2">Nested</tab></tabs></tab><tab value="2-2">Other</tab></tabs></aq>')
         table = tree.xpath('.//div[@class="tabs"]')[0]

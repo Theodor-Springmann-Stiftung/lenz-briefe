@@ -131,6 +131,7 @@
     <xs:element name="vspace">
         <xs:complexType>
             <xs:attribute name="lines" type="xs:positiveInteger" use="required" />
+            <xs:attribute name="presentational" type="xs:boolean" use="optional" default="false" />
         </xs:complexType>
     </xs:element>
 
@@ -245,6 +246,7 @@
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                 <xs:group ref="lenz:inlineElements" />
                 <xs:element ref="lenz:tab" />
+                <xs:element ref="lenz:page" />
             </xs:choice>
             <xs:attribute name="extent" type="xs:positiveInteger" use="optional" />
         </xs:complexType>
