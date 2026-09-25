@@ -1,0 +1,10 @@
+---
+import { base, letterUrl, type DateRecord, type Reference } from '../lib/edition';
+import { dateLocationParts } from '../lib/date-locations.mjs';
+interface Props { date: DateRecord; locations: Reference[]; letter: string; compact: boolean }
+const { date, locations, letter, compact } = Astro.props;
+const parts: {text: string; placeId?: string}[] = dateLocationParts(date.text, locations);
+---
+{parts.map(part => part.placeId
+  ? <a class="reference-filter" href={`${base}?${new URLSearchParams({group:'all', place:part.placeId})}`} data-reference-kind="place" data-reference-id={part.placeId}>{part.text}</a>
+  : compact ? <a class="letter-card-link" href={letterUrl(letter)}>{part.text}</a> : part.text)}

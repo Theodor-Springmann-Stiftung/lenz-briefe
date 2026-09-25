@@ -1,4 +1,5 @@
 import {normalizeSearch, prepareSearch, searchBlocks, searchPreview, matchPages} from '../lib/search.mjs';
+import {initializeTooltips, destroyTooltips} from './tooltips';
 
 interface SearchBlock { letter: string; kind: 'text' | 'sidenote' | 'tradition'; anchor: string; text: string; label?: string; pages?: [number, string][] }
 type IndexedBlock = SearchBlock & {normalized: string};
@@ -107,10 +108,6 @@ export function createCatalogSearch(rows: Map<string | undefined, HTMLElement>, 
         heading.className = oldHeading.className;
         heading.append(...oldHeading.childNodes);
         oldHeading.replaceWith(heading);
-        header.querySelectorAll<HTMLElement>('[data-tooltip]').forEach(element => {
-          element.title = element.dataset.tooltip!;
-          element.removeAttribute('aria-describedby');
-        });
         item.append(header);
         const previews = document.createElement('ul');
         previews.className = 'search-previews';
@@ -159,7 +156,10 @@ export function createCatalogSearch(rows: Map<string | undefined, HTMLElement>, 
         item.append(previews);
         fragment.append(item);
       }
-      group.querySelector('.search-letter-list')!.replaceChildren(fragment);
+      const list = group.querySelector('.search-letter-list')!;
+      destroyTooltips(list);
+      list.replaceChildren(fragment);
+      initializeTooltips(list);
       group.querySelector<HTMLElement>('.search-more')!.hidden = ids.length <= limits.get(group)!;
     }
     if (active && hits && normalizeSearch(query) && phase === 'ready') {

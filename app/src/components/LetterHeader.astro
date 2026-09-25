@@ -4,17 +4,18 @@ import SourceIcons from './SourceIcons.astro';
 import ReferenceList from './ReferenceList.astro';
 import Icon from './Icon.astro';
 import Tooltip from './Tooltip.astro';
+import LetterDate from './LetterDate.astro';
 interface Props { letter: Letter; compact?: boolean }
 const {letter, compact = false} = Astro.props;
 const Heading = compact ? 'h2' : 'h1';
 const sent = letter.events.filter(e => e.type === 'sent');
 const received = letter.events.filter(e => e.type === 'received');
-const dates = sent.flatMap(e => e.dates);
+const dates = sent.flatMap(event => event.dates.map(date => ({date, locations: event.locations})));
 ---
 <header class:list={['letter-header', {'letter-header--compact': compact}]}>
   <Heading class="letter-date">
-    {compact ? <a class="letter-card-link" href={letterUrl(letter.letter)}>{dates.length ? dates.map((d,i) => <Fragment>{i > 0 && ' · '}{d.text}</Fragment>) : 'Ohne Datierung'}</a>
-      : dates.length ? dates.map((d,i) => <Fragment>{i > 0 && ' · '}<Fragment set:html={richText(d.content)} /></Fragment>) : 'Ohne Datierung'}
+    {dates.length ? dates.map(({date, locations}, i) => <Fragment>{i > 0 && ' · '}<LetterDate date={date} locations={locations} letter={letter.letter} compact={compact} /></Fragment>)
+      : compact ? <a class="letter-card-link" href={letterUrl(letter.letter)}>Ohne Datierung</a> : 'Ohne Datierung'}
     <SourceIcons letter={letter} />
   </Heading>
   <div class="letter-events">
@@ -27,7 +28,7 @@ const dates = sent.flatMap(e => e.dates);
       </Fragment>}
       <span class:list={['correspondence-party', side === 0 ? 'correspondence-senders' : 'correspondence-recipients']}>
         {events.map((event, i) => <Fragment>{i > 0 && '; '}<span class="letter-event">
-          <ReferenceList entries={event.persons} kind="person" conjunction />{event.locations.length > 0 && <span class="event-place"> (&#8288;&#8202;&#8288;<ReferenceList entries={event.locations} kind="place" showAnnotations={false} />&#8288;&#8202;&#8288;)</span>}
+          <ReferenceList entries={event.persons} kind="person" conjunction />{event.type === 'received' && event.locations.length > 0 && <span class="event-place"> (&#8288;&#8202;&#8288;<ReferenceList entries={event.locations} kind="place" showAnnotations={false} />&#8288;&#8202;&#8288;)</span>}
           {sent.length > 1 && event.type === 'sent' && event.dates.map(date => <span class="event-date"> · {date.text}</span>)}
           {event.type === 'received' && event.dates.map(date => <span class="event-date"> [<Fragment set:html={richText(date.content)} />]</span>)}
         </span></Fragment>)}

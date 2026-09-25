@@ -1,16 +1,42 @@
-import tippy, { hideAll } from 'tippy.js';
+import tippy, { hideAll, type Instance } from 'tippy.js';
 
-tippy('[data-tooltip]', {
-  content: reference => reference.getAttribute('data-tooltip') || '',
-  theme: 'edition',
-  trigger: 'mouseenter focus click',
-  animation: false,
-  duration: 0,
-  offset: [0, 8],
-  interactive: true,
-  appendTo: () => document.body,
-  aria: { content: 'describedby', expanded: false },
-});
+const instances = new WeakMap<HTMLElement, Instance>();
+
+export function initializeTooltips(root: ParentNode = document) {
+  const elements = [...root.querySelectorAll<HTMLElement>('[data-tooltip]')].filter(element => !instances.has(element));
+  for (const element of elements) {
+    element.removeAttribute('title');
+    element.removeAttribute('aria-describedby');
+  }
+  for (const instance of tippy(elements, {
+    content: reference => reference.getAttribute('data-tooltip') || '',
+    theme: 'edition',
+    maxWidth: 'calc(100vw - 32px)',
+    arrow: true,
+    popperOptions: {
+      modifiers: [
+        { name: 'flip', options: { fallbackPlacements: ['top', 'bottom', 'left', 'right'], padding: 16 } },
+        { name: 'preventOverflow', options: { padding: 16 } },
+      ],
+    },
+    trigger: 'mouseenter focus click',
+    animation: false,
+    duration: 0,
+    offset: [0, 8],
+    interactive: true,
+    appendTo: () => document.body,
+    aria: { content: 'describedby', expanded: false },
+  })) instances.set(instance.reference as HTMLElement, instance);
+}
+
+export function destroyTooltips(root: ParentNode) {
+  root.querySelectorAll<HTMLElement>('[data-tooltip]').forEach(element => {
+    instances.get(element)?.destroy();
+    instances.delete(element);
+  });
+}
+
+initializeTooltips();
 
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') hideAll({ duration: 0 });
