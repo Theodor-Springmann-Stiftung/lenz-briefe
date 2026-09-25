@@ -68,6 +68,20 @@ class FlowContractTests(unittest.TestCase):
                     self.assertEqual(self.page(tree).get('data-break'), 'block')
                     self.assertFalse(tree.xpath('.//hr'))
 
+    def test_erasure_markers_are_hidden_only_without_character_data(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            with self.subTest(kind=kind):
+                tree = self.render('<er> \n<hand ref="1"><nr extent="30"> </nr></hand></er>'
+                                   '<er><nr/> <it>Text</it><nr/></er>', kind)
+                empty, readable = tree.xpath('.//span[@class="er"]')
+                self.assertEqual(empty.get('data-empty'), 'true')
+                self.assertEqual(empty.get('aria-hidden'), 'true')
+                self.assertEqual(empty.xpath('.//span[@class="nr"]/@data-extent'), ['30'])
+                self.assertIsNone(readable.get('data-empty'))
+                self.assertIsNone(readable.get('aria-hidden'))
+                self.assertEqual(readable.xpath('./em/text()'), ['Text'])
+                self.assertEqual(len(readable.xpath('./span[@class="nr"]')), 2)
+
     def test_superscript_and_subscript_preserve_nested_formatting(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:
             with self.subTest(kind=kind):

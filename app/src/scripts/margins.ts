@@ -45,15 +45,6 @@ if (layout) {
   document.querySelectorAll<HTMLElement>('.hand-key [data-hand-ref]').forEach(trigger => {
     highlightHand(trigger, groupsForHand(trigger.dataset.handRef));
   });
-  const overflowLabels = new Map<HTMLElement, HTMLElement>();
-  margin.querySelectorAll<HTMLElement>('.margin-note').forEach(note => {
-    const label = document.createElement('span');
-    label.className = 'sidenote-overflow-label';
-    label.textContent = `S. ${note.querySelector<HTMLElement>('.sidenote')?.dataset.page}: `;
-    label.hidden = true;
-    note.querySelector('.sidenote-description')!.prepend(label);
-    overflowLabels.set(note, label);
-  });
   let scheduled = false;
   function arrange() {
     scheduled = false;
@@ -64,7 +55,6 @@ if (layout) {
     pageNumbers.forEach(item => {item.style.top = '';});
     const items = [...margin.querySelectorAll<HTMLElement>('.marginal-item')];
     items.forEach(item => {item.style.top = '';});
-    overflowLabels.forEach(label => {label.hidden = true;});
     if (!matchMedia('(min-width: 1100px)').matches) return;
     const origin = body.getBoundingClientRect().top;
     layout!.classList.add('margin-ready');
@@ -97,13 +87,7 @@ if (layout) {
     for (const {item, target, pageEnd} of anchored) {
       const isNote = item.classList.contains('margin-note');
       const gap = isNote && previousWasNote ? 6 : 18;
-      let placement = placeMarginItem(target, item.getBoundingClientRect().height, bottom, pageEnd, gap);
-      const label = overflowLabels.get(item);
-      if (label && placement.overflow) {
-        label.hidden = false;
-        // The page label may wrap the description; measure before placing the next item.
-        placement = placeMarginItem(target, item.getBoundingClientRect().height, bottom, pageEnd, gap);
-      }
+      const placement = placeMarginItem(target, item.getBoundingClientRect().height, bottom, pageEnd, gap);
       item.style.top = `${placement.top}px`;
       bottom = placement.bottom;
       previousWasNote = isNote;

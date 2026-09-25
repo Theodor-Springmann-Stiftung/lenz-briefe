@@ -773,7 +773,13 @@
   </xsl:template>
 
   <xsl:template match="lb:er">
-    <span class="er"><xsl:apply-templates /></span>
+    <span class="er">
+      <xsl:if test="not(normalize-space(.))">
+        <xsl:attribute name="data-empty">true</xsl:attribute>
+        <xsl:attribute name="aria-hidden">true</xsl:attribute>
+      </xsl:if>
+      <xsl:apply-templates />
+    </span>
   </xsl:template>
 
   <xsl:template match="lb:ink">

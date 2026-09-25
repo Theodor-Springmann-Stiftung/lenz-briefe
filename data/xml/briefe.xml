@@ -2701,7 +2701,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 </letterText>
 
 <letterText letter="163"><page index="1"/>
-<line /><align pos="center"><note>Empfangsnotiz Boies:</note></align><align pos="right"><hand ref="20">Den 26 Apr. 76.</hand></align>
+<line /><align pos="right"><hand ref="20">Den 26 Apr. 76.</hand></align>
 <vspace lines="1"/>
 <line tab="1"/>Vernichten Sie die Wolken Boje und wenn Sie ein oder zwey Exemplare übrig behalten so lassen Sie sie keinem menschlichen Geschöpf zu Augen kommen weil sie mir zur Schande gereichen.
 <line tab="1"/>Ich bin hier unendlich wohl. Die vorzügliche Gnade des Hofes und die Freundschaft so vieler herrlichen Geschöpfe Gottes beysammen machen mich in einem gewissen Grad seelig den nur mein eigen Herz mir verderben kann.
@@ -2920,7 +2920,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <page index="2"/>
 <vspace lines="1"/>
 <line /><align pos="center"><note>vertikal:</note></align>
-<line /><er><hand ref="1"><del><nr extent="30"></nr></del></hand></er>
+<line /><er><hand ref="1"><nr extent="30"></nr></hand></er>
 </letterText>
 
 <letterText letter="177"><page index="1"/>
@@ -3165,7 +3165,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Auch Sie werden die traurige Neuigkeit von der rußischen Großfürstinn wohl gehört haben, die ein gewisser Herr v. Edelsheim, Regierungsrath am Carlsruher Hofe, ein artiger Mann und der sich einen Freund von Klopstock sagte, hieher gebracht hat. Der Herzog, besonders aber die Herzoginn sind in der lebhaftesten Betrübniß darüber.
 <line tab="1"/>Die Fremden gehen jetzt hier sehr häuffig. Ich habe auch unter denen viele wunderbare Gelegenheiten gefunden, Personen die ich zu sehen aufgegeben hatte wiederzusehen. So den geheimen Rath Vietinghof aus Liefland zum Exempel, der ins Bad und von da nach Frankreich England und Italien geht und durch den ich vielleicht meine Schrift in Paris überreichen lassen werde, wenn ich sie nur noch aufs höchste gegen den Oktober fertig gedruckt haben kann denn er bleibt nur die eine Hälfte des Winters dort, die andere Hälfte passirt er in Italien.
 <line tab="1"/>Herder und Stollberg sind noch nicht hier, der letzte kommt erst auf den Herbst, warum der erste aber zögert begreiffe ich nicht. Ich wünsche ihn aus allen Kräften hieher, hoffe auch daß die letzten Steinchen des Anstosses bald weggeräumt seyn werden. Der Herzog ehrt ihn ungemein.
-<sidenote pos="left" page="1" annotation="vertikal am linken Rand der vierten Seite">
+<sidenote pos="left" page="4" annotation="vertikal am linken Rand der vierten Seite">
 <line tab="1"/>Im Merkur werden Sie künftig auch mich zuweilen sehen. Was ist doch die Frau v. Stein für ein Engel, deren Schatten Sie uns in Strasbg. wiesen.</sidenote>
 </letterText>
 
@@ -3596,11 +3596,10 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <sidenote pos="top" page="1" annotation="am oberen Rand der ersten Seite, horizontal gespiegelt">
 <line tab="1"/><del>sie</del> Charakter von Sienas Freundin – tief – verb. – um sie nicht zu verderben will sie ihr nicht ihre Neigung zugestehen, weil sie wohl sieht daß jene als Delikatesse für sie gl. abtreten würde und ihr wie natürlich Liebe für ihn zutraut. Sie begegnet also Truf. mit der äussersten Inegalität. Die falsche Delikatesse kreuzt sich wun-</sidenote>
 <sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, horizontal gespiegelt">
-<vspace lines="1"/>
 <line tab="1"/>derbar mit Cath. an der es ihr immer ärgert daß sie Tr. nach ihrer Meynung nicht freundl. genug und zwar aus <aq>pruderie</aq> denkt sie, begegnet. Endl. kommt sie zum Ausbruch und zu <ul>Vorwürfen.</ul></sidenote>
-<line tab="1"/>(Grosser Krieg gegen die falsche moralische Delikatesse die die Herzen soweit entfernt und ihren Grund in Stolz haben. ☓ ☓
+<line tab="1"/>(Grosser Krieg gegen die falsche moralische Delikatesse die die Herzen soweit entfernt und ihren Grund in Stolz haben. <fn index="1"><anchor>☓ ☓</anchor></fn>
 <sidenote pos="right" page="1" annotation="am rechten Rand der ersten Seite, vertikal">
-<line tab="1"/>☓ ☓ was es der Freundin kostet endl. <ul>zu gestehen daß sie ihn liebt.</ul> wohin es im Stük doch getrieben wird.</sidenote>
+    <line tab="1"/><fn index="1"><anchor>☓ ☓</anchor></fn> was es der Freundin kostet endl. <ul>zu gestehen daß sie ihn liebt.</ul> wohin es im Stük doch getrieben wird.</sidenote>
 <page index="2"/>
 <vspace lines="1"/>
 <line /><align pos="center"><note>Zeichnung eines liegenden Soldaten</note></align>
@@ -4045,7 +4044,7 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <page index="4"/>
 <vspace lines="1"/>
 <pe>
-<line /><line tab="1"/><nr extent="5"> </nr> 
+<line /><line tab="1"/><nr extent="5"> </nr>
 <line tab="1"/><nr extent="3"> </nr> <nr extent="7"></nr></pe>
 </letterText>
 
@@ -6979,8 +6978,8 @@ Ich denke Ihre Schwester in Apollo Corilla soll nicht mehr gefährlich seyn. Sie
 <page index="3"/>
 <line tab="1"/>Es ist nun das 10te Jahr daß ich in Moskau an einem Mißverständnisse <ul>arbeite das ich nicht überwinden kann,</ul> und das wie ich neulich – wirst du lächeln, oder auch zweiffeln? wirklich wunderbare weise – in meinem Pult nach alten Puppieren krabelte – mir <ul>durch ein Blatt</ul> das ich den drey Fräulein <ul>Beharrn,</ul> die aus dem Lande nach Zweybrük giengen über eine Theaterpiése eines Freundes bey Hofe zustellte, ganz besonders aufgieng. Dieses waren 3 Schwestern, an die ich die gewöhnlichen Floskeln verschwendete und die wahrscheinlich von diesem Wisch Gebrauch gemacht. Es war in Petersb. in einem Hause das viel Verbindungen hat – alle diese Umstände machten mich erst nach vielen Jahren aufmerksam; besonders da ihr Vater in Moskau einer der ersten Rechtsgelehrten gewesen, wo man gern allerley kleine Quinten drehen mag, um zu zeigen daß man den Justinian gelesen. Ich kann vor Gott bezeugen daß ich an nichts arges gedacht habe; ausser meinem Freunde Vergnügen zu machen
 <line tab="1"/>Doch genug davon und von der Art wie in Rußland <insertion pos="right">(Liefland)</insertion> gelesen wird. Habe die Gutheit mir nur recht umständlich zu melden, was unser lieber Vater macht, ob Mama noch munter ist, ob sie Freunde haben die sie besuchen ob du offt bey ihnen bist, ob unsere Schwester Elisabeth nicht wieder an eine Heurath denkt und das dasige <aq>Liceum</aq> noch keinen neuen Regenten erhalten?
-<line tab="1"/>Ich bitte knieend alle lieben Geschwister, <ul><ru>христа ради</ru>, mich</ul> mit allem was Schulen und <ul>Erziehung</ul> betrift zu verschonen.<fn index="3"><anchor>☓</anchor></fn>
-<sidenote pos="left" page="3" annotation="am linken Rand der dritten Seite, vertikal"><fn index="3"><anchor>☓</anchor></fn>Ist dir niemals eine Familie Grefnitz aus Oesel bekannt geworden. Es war hier ein Obristl. von diesem Namen, den ich allemal mit einem v. Krefting verwechselte mit dem ich zusammenstudiert habe. Er hatte einen sehr artigen Gesellschafter aus Sachsen bey sich, aber aus <ul>Chur</ul>sachsen aus Leipzig, der ein Jurist war.</sidenote>
+<line tab="1"/>Ich bitte knieend alle lieben Geschwister, <ul><ru>христа ради</ru>, mich</ul> mit allem was Schulen und <ul>Erziehung</ul> betrift zu verschonen.<fn index="4"><anchor>☓</anchor></fn>
+<sidenote pos="left" page="3" annotation="am linken Rand der dritten Seite, vertikal"><fn index="4"><anchor>☓</anchor></fn>Ist dir niemals eine Familie Grefnitz aus Oesel bekannt geworden. Es war hier ein Obristl. von diesem Namen, den ich allemal mit einem v. Krefting verwechselte mit dem ich zusammenstudiert habe. Er hatte einen sehr artigen Gesellschafter aus Sachsen bey sich, aber aus <ul>Chur</ul>sachsen aus Leipzig, der ein Jurist war.</sidenote>
 <page index="4"/>
 <line tab="1"/>Da ich hoffentlich Deinen Freund in dessen Nachbarschafft ein besonders lieber Gönner von mir Güter hat, auch einmal sehen werde, so gestehe Dir gern lieber Bruder daß mich gegenwärtig in einiger Verlegenheit befinde. Die letzthin aus eurer Güte mir übermachten 25 Rbl. mußte zu einem Kleide verwenden und bin seit der Zeit nicht wenig an Leib und Seel angegriffen worden von allerley wunderlichen Sorgen; so daß dein Freund mich auch vielleicht ein wenig melankolisch dir abgeschildert haben wird. Sollte der Ueberbringer eines langen weitläuftigen Briefes, aus <aq>Kadom,</aq> ein geborner Curländer der über Pleskau reisete, sich auch wohl bey dir eingefunden haben? Er verreisete ohne daß ich ihm Reisegeld ausmitteln konnte, und es war ziemlich kalt, daß ich für ihn viel Unruhe gehabt. Allein ob derselbe in Liefland oder Pleskau geblieben, ist mir unbekannt. Ob er mit dem Bruder in Derpt gesprochen ist noch zweiffelhafter. Und doch hätte es gewünscht weil ein hiesiger sehr artiger junger Russischer Gelehrter der aber verheurathet ist und ein <aq>Dictionnär</aq> herausgiebt, einige Offiziere hier beherbergte, die dahin giengen um die Aufsicht über ein <aq>Gymnasium</aq> zu übernehmen. Man sagt die Monarchin werde dasselbe in eine hohe Schule verwandeln. – Sollte Papa von dem <ul>neuen Bibelwerk meine Ideen gut gefunden haben</ul> und sich Unterschriften auch in Liefland hoffen lassen? Doch ich breche hier ab um Dich und deine würdige Gemalinn unbekannt aufs zärtlichste zu umarmen, noch immer verfolgt vom <ul>Asmodi</ul> der <ul>Göthen </ul>und allen seinen Freunden einen <ul>Junoneyd </ul>scheint geschworen zu haben. Aber auch betrübt
 <line /><align pos="center">Dein treuer Bruder</align>

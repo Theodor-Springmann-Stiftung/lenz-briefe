@@ -6,11 +6,22 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from transform_python.common import DATA_DIR, XSD_MAP
+from transform_python.common import DATA_DIR, XSD_MAP, read_xml, validate_xml
 from transform_python.validate_schemas import main
 
 
 class ValidationGateTests(unittest.TestCase):
+    def test_highlight_colors_are_restricted(self):
+        for color, valid in [('yellow', True), ('red', True), ('blue', False), ('#ff0000', False), (None, False)]:
+            with self.subTest(color=color):
+                document = read_xml('briefe.xml')
+                highlight = document.xpath('//*[local-name()="highlight"]')[0]
+                if color is None:
+                    del highlight.attrib['color']
+                else:
+                    highlight.set('color', color)
+                self.assertEqual(not validate_xml(document, 'briefe.xml'), valid)
+
     def test_current_edition_passes(self):
         with contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(main(), 0)
