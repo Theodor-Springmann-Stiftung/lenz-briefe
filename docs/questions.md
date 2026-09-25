@@ -4,7 +4,7 @@
 176: Schraffur ist weird? Sidenotte?
 158: Ist das obere verte eine sidenote? ist es einfach nachgebildet?
 163: Konzept Metadaten: Meta-Daten sind daten. Notizen müssen nicht wiederholen, was in Metadatan hinreichen klar ist.
-// 161: Konzept zwei Autoren und wird unterscheiden Autoren mit <hand> auch 312 auch 36
+// 161: Konzept zwei Autoren und wird unterscheiden Autoren mit <hand> auch 312 auch 36: Zurück zu frmede hand 
 // 186: Komischer Textverlust im letzten vers
 184:  am linken Rand der ersten Seite vertikal Kalkulationen von Lenz’ Hand: vertikal Kalkulationen; . Note in Hand
 184: Tabelle ist nicht nötig -- tab ist hier richtig verwendet
@@ -35,3 +35,20 @@
 372: Anchor fehlt
 
 Insgesamt: sub and sup? Fehlt nicht?
+
+
+- Datum doppelt
+- Antiqua größer, Bodoni kleiner
+- Frmde Hände unterschiedliche Schriften, bis drei
+- 36: original und Druck
+- undo: gestrichelt unterstrichen
+- 41, 54, 162, 184, 192, 199, 224, 366, 293: tabelle
+
+- 121, 274, 303: "Tilde" -- geschwungene linie einfach und doppelt
+- Absender / Empfänger im Suchfilter unterscheiden. Ebenso die Orte
+- Überschriften für Orte
+- 296 Druck
+- 96 Ns + indirekt
+- 56: Druck indirekt
+- 338: Ms indrekt
+- 251: Gedrucker Brief
