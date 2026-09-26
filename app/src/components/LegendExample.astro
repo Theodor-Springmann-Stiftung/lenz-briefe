@@ -3,7 +3,7 @@ import SidenotePosition from './SidenotePosition.astro';
 import type {LegendEntry} from '../lib/legend';
 interface Props { item: LegendEntry }
 const {item} = Astro.props;
-const positions = ['top left', 'top', 'top right', 'left', 'right', 'bottom left', 'bottom', 'bottom right'];
+const positions = ['top left', 'top', 'top right', 'right', 'left', 'bottom left', 'bottom', 'bottom right'];
 ---
 {item.tag === 'sidenote'
   ? <div class="quick-legend-positions">{positions.map(position => <SidenotePosition position={position} />)}</div>

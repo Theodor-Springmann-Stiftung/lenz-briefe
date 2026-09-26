@@ -17,6 +17,14 @@ if (letter && header && footer && body && spine) {
     line.style.left = `${textBounds.left - bounds.left - gap / 2}px`;
     line.style.top = `${headerBounds.bottom - bounds.top}px`;
     line.style.height = `${Math.max(0, footerBounds.top - headerBounds.bottom)}px`;
+    const ticks = [...container.querySelectorAll<HTMLElement>('.page-number a')].map(number => {
+      const bounds = number.getBoundingClientRect();
+      const tick = document.createElement('span');
+      tick.className = 'letter-spine-tick';
+      tick.style.top = `${bounds.top + bounds.height / 2 - headerBounds.bottom}px`;
+      return tick;
+    });
+    line.replaceChildren(...ticks);
   }
   function schedule() {
     if (scheduled) return;

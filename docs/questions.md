@@ -15,6 +15,7 @@
   -> Schwierigkeit im Modell; UND oder ODER Verknüpfungen?
 - 184: cant find the sidenote on page 4 in der HS
 - 192: Strasb. etc.. evtl 2te Spalte?
+- Die geplante Zitierempfehlung klappt nicht, weil wir den Absendeort im geschriebenen Datum haben ([Verfasser], [Absendeort], an [Empfänger], [Empfangsort], [Datum], in: Jakob Michael Reinhold Lenz: Kritische Briefausgabe, hrsg. v. Gregor Babelotzky (Heidelberg 2026ff.). [URL, abgerufen am DATUM])
 
 ## Handschrift
 - 199, 224, 366: Tabellen
@@ -29,8 +30,6 @@
 - Übersetzung und "Zusatzmaterial" in Serifen
 - Design/Hintergrund
 - Zusatzseiten
-- 91: Hände schief durch Sidenote (FIX in XML?)
-- 186: line break im vers?
 
 ## ME (WÜRDE ANDERS)
 - 266: verte
@@ -38,6 +37,7 @@
 
 ## ME (Later)
 - <hand> vs. <sidenote> (nested hand problem)
+- 186: line break im vers?
 - CMIF
 
 ## NB
