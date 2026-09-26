@@ -1,4 +1,27 @@
-interface HandRange { trigger: HTMLElement; groups: HTMLElement[][] }
+type HandFragment = HTMLElement | Range;
+interface HandRange { trigger: HTMLElement; groups: HandFragment[][] }
+
+/** Measure implicit handwriting without inserting wrappers or changing layout. */
+export function implicitHandGroups(container: HTMLElement): Range[][] {
+  const groups: Range[][] = [];
+  let current: Range[] = [];
+  const flush = () => { if (current.length) groups.push(current); current = []; };
+  function visit(node: Node) {
+    if (node instanceof Element && node.matches('.hand, .note, .pe, .hand-range-background')) {
+      flush();
+      return;
+    }
+    if (node.nodeType === Node.TEXT_NODE && node.textContent?.trim()) {
+      const range = document.createRange();
+      range.selectNodeContents(node);
+      current.push(range);
+    }
+    node.childNodes.forEach(visit);
+  }
+  visit(container);
+  flush();
+  return groups;
+}
 
 /** XSLT reopens one source hand across lines; data-origin reunites those spans. */
 export function handGroups(container: HTMLElement) {
@@ -21,7 +44,9 @@ export function createHandRangeHighlighter() {
     highlighted?.groups.forEach((fragments, index) => {
       const rects = fragments.flatMap(fragment => [...fragment.getClientRects()])
         .filter(rect => rect.width > 0 && rect.height > 0);
-      const container = fragments[0]?.closest<HTMLElement>('.edition-text');
+      const first = fragments[0];
+      const element = first instanceof Range ? first.startContainer.parentElement : first;
+      const container = element?.closest<HTMLElement>('.edition-text');
       if (!rects.length || !container) return;
       const background = backgrounds[index] ||= document.createElement('div');
       background.className = 'hand-range-background';
@@ -53,7 +78,7 @@ export function createHandRangeHighlighter() {
     if (event.key === 'Escape') { hovered = null; focused = null; update(); }
   });
 
-  return (trigger: HTMLElement, groups: HTMLElement[][]) => {
+  return (trigger: HTMLElement, groups: HandFragment[][]) => {
     const range = {trigger, groups};
     trigger.classList.add('hand-range-trigger');
     trigger.addEventListener('pointerenter', () => { hovered = range; update(); });

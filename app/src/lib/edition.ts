@@ -8,7 +8,7 @@ export interface Event { type: 'sent' | 'received'; dates: DateRecord[]; persons
 export interface Letter {
   letter: string; events: Event[]; groupId: string; personIds: string[]; placeIds: string[];
   traditions: {isOriginal: boolean; type: string}[]; hasOriginal: boolean; isProofread: boolean; isDraft: boolean;
-  pages: string[]; handRefs: string[]; sort: {key: number[]; value: string} | null;
+  pages: string[]; handRefs: string[]; handOrder: string[]; sort: {key: number[]; value: string} | null;
 }
 export interface Sidenote { id: string; page: string; pos: string; annotation: string; html: string; anchorId: string | null; sourceOrder: number }
 export interface Tradition { type: string; id?: string; ref?: string; name?: string; category?: string; html: string }

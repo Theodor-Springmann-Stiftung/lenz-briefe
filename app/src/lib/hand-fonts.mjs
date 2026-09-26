@@ -1,3 +1,14 @@
+/** Include the implicit base writer whenever tagged hands are listed.
+ * @param {string[]} handRefs
+ * @param {Set<string>} senderRefs
+ * @param {string[]} [documentOrder]
+ */
+export function handKeyRefs(handRefs, senderRefs, documentOrder = []) {
+  const baseRef = senderRefs.values().next().value;
+  const refs = new Set([...(baseRef ? [baseRef] : []), ...handRefs]);
+  return handRefs.length ? [...new Set([...documentOrder.filter(ref => refs.has(ref)), ...refs])] : [];
+}
+
 /** Assign distinct typefaces to the tagged writers in one letter.
  * @param {string[]} handRefs
  * @param {Set<string>} senderRefs

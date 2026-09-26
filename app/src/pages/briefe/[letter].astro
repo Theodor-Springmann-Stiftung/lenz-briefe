@@ -4,7 +4,7 @@ import LetterHeader from '../../components/LetterHeader.astro';
 import Icon from '../../components/Icon.astro';
 import SidenotePosition from '../../components/SidenotePosition.astro';
 import {sidenoteOrder} from '../../lib/margin-placement.mjs';
-import {handFonts} from '../../lib/hand-fonts.mjs';
+import {handFonts, handKeyRefs} from '../../lib/hand-fonts.mjs';
 import {catalog, letterFiles, letterUrl, titleFor, type Letter} from '../../lib/edition';
 export function getStaticPaths() {
   return catalog.letters.map((letter,index) => ({params:{letter:letter.letter}, props:{letter,index}}));
@@ -18,9 +18,10 @@ const placed = orderedSidenotes.filter(note => note.anchorId);
 const unplaced = orderedSidenotes.filter(note => !note.anchorId);
 const previous = catalog.letters[index - 1];
 const next = catalog.letters[index + 1];
-const hands = Object.fromEntries(letter.handRefs.map(ref => [ref, catalog.people[ref]?.name || `Unbekannte Hand (${ref})`]));
 const senderRefs = new Set(letter.events.filter(event => event.type === 'sent').flatMap(event => event.persons.map(person => person.ref)));
-const handStyles = [...handFonts(letter.handRefs, senderRefs)].map(([ref, font]) => {
+const handRefs = handKeyRefs(letter.handRefs, senderRefs, letter.handOrder);
+const hands = Object.fromEntries(handRefs.map(ref => [ref, catalog.people[ref]?.name || `Unbekannte Hand (${ref})`]));
+const handStyles = [...handFonts(handRefs, senderRefs)].map(([ref, font]) => {
   const textSelector = `.letter-content .edition-text .hand[data-ref=${JSON.stringify(ref)}]`;
   const sampleSelector = `.letter-content .hand-sample[data-ref=${JSON.stringify(ref)}]`;
   const thirdHand = font === 'var(--font-hand-second)';
@@ -45,7 +46,7 @@ const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'hae
       </div>
       {sectionLinks.length > 0 && <nav class="reading-toolbar" aria-label="Abschnitte zum Brief"><a href="#ueberlieferung">{sectionLinks.map(item => item.name).join(', ')} <Icon name="arrowDown" class="section-link-arrow" /></a></nav>}
     </div>
-    <div class="reading-layout" data-reading-layout>
+    <div class="reading-layout" data-reading-layout data-base-hand={senderRefs.values().next().value}>
       <article class="edition-text letter-body" aria-label={`Text von Brief ${letter.letter}`} set:html={text} />
       <aside class="page-margin" aria-label="Seitenzahlen">
         {letter.pages.map((page,i) => !(i === 0 && page === '1') && <div class="marginal-item page-number" data-anchor={`page-${page}`} data-priority="0"><a href={`#page-${page}`} aria-label={`Seite ${page}`}>{page}</a></div>)}
@@ -62,7 +63,7 @@ const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'hae
           <div class="edition-text apparatus-text" set:html={item.html} />
         </div>
       </Fragment>) : <p>Keine Angaben zur Überlieferung vorhanden.</p>}
-      {letter.handRefs.length > 0 && <div class="apparatus-entry hand-key" id="haende"><h2>Hände</h2><ul class="edition-text apparatus-text">{Object.entries(hands).map(([ref, name]) => <li><span class="hand-sample" data-ref={ref} aria-hidden="true">Aa</span><button type="button" data-hand-ref={ref}>{name}</button></li>)}</ul></div>}
+      {handRefs.length > 0 && <div class="apparatus-entry hand-key" id="haende"><h2>Hände</h2><ul class="edition-text apparatus-text">{handRefs.map(ref => <li><span class="hand-sample" data-ref={ref} aria-hidden="true">Aa</span><button type="button" data-hand-ref={ref}>{hands[ref]}</button></li>)}</ul></div>}
     </section>
   </div>
   <script type="application/json" id="hand-data" set:html={JSON.stringify(hands).replace(/</g, '\\u003c')} />

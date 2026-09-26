@@ -6,10 +6,18 @@ from unittest.mock import patch
 from lxml import etree, html
 from transform_python.catalog import date_sort
 from transform_python.common import Timings, read_xml, NSMAP
-from transform_python.exporter import extract_meta, run_export, StylesheetRunner
+from transform_python.exporter import collect_hand_order, extract_meta, run_export, StylesheetRunner
 
 
 class SiteExportTests(unittest.TestCase):
+    def test_hand_order_includes_implicit_text_and_sidenotes_in_source_order(self):
+        source = etree.fromstring('''<letterText xmlns="https://lenz-archiv.de">
+          <page index="1"/><note>Editorial text is not a base-hand occurrence.</note>
+          <hand ref="18">First<sidenote page="1" pos="left"><hand ref="12">Second</hand></sidenote></hand>
+          Base text<hand ref="18">Repeated</hand><hand ref="1">Explicit base</hand>
+        </letterText>''')
+        self.assertEqual(collect_hand_order(source, '1'), ['18', '12', '1'])
+
     @classmethod
     def setUpClass(cls):
         cls.temp = TemporaryDirectory()

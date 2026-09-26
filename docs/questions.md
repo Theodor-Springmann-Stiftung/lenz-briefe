@@ -15,11 +15,14 @@
   -> Schwierigkeit im Modell; UND oder ODER Verknüpfungen?
 - 184: cant find the sidenote on page 4 in der HS
 - 192: Strasb. etc.. evtl 2te Spalte?
-- 199 -> handschrift, 224 -> Handscrift, 366 -> Handschrift
+
+## Handschrift
+- 199, 224, 366: Tabellen
+- 324: Adresse auf der dritten Seite 
+- 261: Kleienr entwurf
+
 
 ## TODO ME
-- Bodoni kleiner / andere Typen / drei Typen für alle Hände (erste Hand normal)
-  -> 161, 312, 36, 91 (3)
 - 293: Tabelle 
 - Übersetzung und "Zusatzmaterial" in Serifen
 - Design/Hintergrund

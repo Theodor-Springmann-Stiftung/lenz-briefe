@@ -184,6 +184,30 @@ def _first_xpath(node: etree._Element, expr: str) -> etree._Element | None:
     return matches[0] if matches else None
 
 
+def collect_hand_order(letter_text: etree._Element, base_ref: str | None) -> list[str]:
+    refs: dict[str, None] = {}
+
+    def visit(node: etree._Element, hand: str | None) -> None:
+        if not isinstance(node.tag, str):
+            return
+        tag = etree.QName(node).localname
+        if tag in ('note', 'pe'):
+            return
+        if tag == 'hand':
+            hand = node.get('ref')
+            if hand:
+                refs[hand] = None
+        if node.text and node.text.strip() and hand:
+            refs[hand] = None
+        for child in node:
+            visit(child, hand)
+            if child.tail and child.tail.strip() and hand:
+                refs[hand] = None
+
+    visit(letter_text, base_ref)
+    return list(refs)
+
+
 def collect_sidenote_pages(letter_text: etree._Element) -> list[str]:
     pages = {str(get_attribute(note, "page")) for note in letter_text.xpath(".//l:sidenote", namespaces=NSMAP)}
     return sorted(pages, key=lambda page: int(page))
@@ -589,6 +613,8 @@ def _process_letter(
         "pageCount": len(pages),
         "pages": pages,
         "handRefs": sorted(set(letter_text.xpath(".//l:hand/@ref", namespaces=NSMAP)), key=int),
+        "handOrder": collect_hand_order(letter_text, next((person['ref'] for event in meta['events']
+            if event['type'] == 'sent' for person in event['persons']), None)),
         "traditionsHtml": traditions_html,
     }
     timings.measure(

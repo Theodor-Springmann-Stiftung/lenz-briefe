@@ -72,6 +72,11 @@ uv run --project transform/python python -m transform_python.validate_schemas
   All other tagged writers receive Roboto Slab or Cormorant Garamond in person-ID order.
   Untagged text retains Source Serif. The corpus currently needs at most two
   additional fonts; font assignment fails explicitly if that limit is exceeded.
+  When hands are listed, the footer includes the first sender as the base hand,
+  even without an explicit hand tag. Its highlight includes untagged letter and
+  sidenote text, excluding other hands and editorial notes.
+  Footer entries follow each hand's first appearance in the XML document,
+  including implicit base-hand text and sidenotes at their source positions.
 
 - Year navigation is defined by `yearGroups/yearGroup` in `data/xml/references.xml`.
   Each group has inclusive `fromYear` and `toYear` bounds and a phase `label`.

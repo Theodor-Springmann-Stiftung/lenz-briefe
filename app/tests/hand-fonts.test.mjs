@@ -1,6 +1,18 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {handFonts} from '../src/lib/hand-fonts.mjs';
+import {handFonts, handKeyRefs} from '../src/lib/hand-fonts.mjs';
+
+test('letter 20 lists its implicit base hand before the tagged additional writer', () => {
+  const refs = handKeyRefs(['87'], new Set(['8']));
+  assert.deepEqual(refs, ['8', '87']);
+  assert.deepEqual([...handFonts(refs, new Set(['8']))], [
+    ['8', 'var(--font-serif)'], ['87', 'var(--font-hand)'],
+  ]);
+  assert.deepEqual(handKeyRefs(['1', '9'], new Set(['9', '1'])), ['9', '1']);
+  assert.deepEqual(handKeyRefs([], new Set(['8'])), []);
+  assert.deepEqual(handKeyRefs(['1', '12', '18'], new Set(['1', '12', '18']), ['18', '1', '12']), ['18', '1', '12']);
+  assert.deepEqual(handKeyRefs(['87'], new Set(['8']), ['87', '8']), ['87', '8']);
+});
 
 test('three co-senders have distinct hands, with the first sender in Source Serif', () => {
   assert.deepEqual([...handFonts(['18', '1', '12'], new Set(['1', '12', '18']))], [
