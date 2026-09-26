@@ -39,14 +39,17 @@ const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'hae
 <Layout wide title={`Brief ${letter.letter} · ${titleFor(letter)} · Lenz Briefe`}>
   {handStyles && <style is:inline set:html={handStyles} />}
   <div class="letter-content">
-    <div class="detail-header">
-      <LetterHeader letter={letter} />
+    <div class="letter-spine" aria-hidden="true"></div>
+    <div class="detail-header-group">
       <div class="letter-toolbar">
         <nav class="letter-navigation" aria-label="Briefnavigation">
           {previous && <a href={letterUrl(previous.letter)} rel="prev" aria-label={`Vorheriger Brief: ${previous.letter}`}><Icon name="arrowLeft" /></a>}
           <span class="navigation-position" id="letter-number" data-search-target>LKB {letter.letter}</span>
           {next && <a href={letterUrl(next.letter)} rel="next" aria-label={`Nächster Brief: ${next.letter}`}><Icon name="arrowRight" /></a>}
         </nav>
+      </div>
+      <div class="detail-header">
+        <LetterHeader letter={letter} />
       </div>
       {sectionLinks.length > 0 && <nav class="reading-toolbar" aria-label="Abschnitte zum Brief"><a href="#ueberlieferung">{sectionLinks.map(item => item.name).join(', ')} <Icon name="arrowDown" class="section-link-arrow" /></a></nav>}
     </div>
@@ -74,5 +77,6 @@ const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'hae
   <script type="application/json" id="hand-data" set:html={JSON.stringify(hands).replace(/</g, '\\u003c')} />
   <script>import '../../scripts/search-highlight';</script>
   <script>import '../../scripts/margins';</script>
+  <script>import '../../scripts/letter-spine';</script>
   <script>import '../../scripts/note-connections';</script>
 </Layout>
