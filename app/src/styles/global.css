@@ -283,6 +283,7 @@
   .legend-margin-example > aside { @apply font-sans text-xs text-ink; }
   .quick-legend-toggle { position:fixed; left:max(var(--floating-inset), env(safe-area-inset-left)); bottom:max(var(--floating-bottom), env(safe-area-inset-bottom)); z-index:30; display:flex; align-items:center; justify-content:center; width:2.25rem; height:2.25rem; padding:0; border:1px solid var(--color-muted); background:var(--color-paper); color:var(--color-ink); font-family:var(--font-serif); font-size:1.25rem; font-style:italic; line-height:1; box-shadow:1px 1px 0 #b7b9b2; }
   .quick-legend-toggle:hover { background:#e0e3da; border-color:var(--color-ink); font-style:normal; }
+  .quick-legend-toggle:has(+ .quick-legend:popover-open) { font-style:normal; }
   .quick-legend { position:fixed; inset:auto auto calc(max(var(--floating-bottom), env(safe-area-inset-bottom)) + 3rem) max(var(--floating-inset), env(safe-area-inset-left)); margin:0; width:min(33rem, calc(100vw - 2 * max(var(--floating-inset), env(safe-area-inset-left)))); max-height:min(36rem, calc(100dvh - max(var(--floating-bottom), env(safe-area-inset-bottom)) - 4.5rem)); padding:0; border:1px solid var(--color-ink); background:var(--color-paper); color:var(--color-ink); box-shadow:4px 4px 0 var(--color-ink); }
   .quick-legend:popover-open { display:flex; flex-direction:column; }
   .quick-legend-header { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.55rem .9rem; border-bottom:1px solid var(--color-ink); background:#eff0eb; flex-shrink:0; }
@@ -374,12 +375,16 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 .edition-text sup { top:-.5em; }
 .edition-text sub { bottom:-.25em; }
 .edition-text .fn[data-empty] { display:inline-block; width:0; height:1em; vertical-align:middle; }
-.edition-text .ul { text-decoration:underline; text-underline-offset:.14em; text-decoration-skip-ink:none; }
-.edition-text .dul { text-decoration:underline double; text-underline-offset:.14em; text-decoration-skip-ink:none; }
-.edition-text .tul { text-decoration:underline double; text-underline-offset:.14em; text-decoration-skip-ink:none; border-bottom:1px solid currentColor; padding-bottom:.22em; }
+.edition-text :is(.ul, .dul, .tul, .tul-second, .tul-third, .undo) { text-decoration-skip-ink:auto; }
+.edition-text .ul { text-decoration:underline; text-underline-offset:.14em; }
+.edition-text .dul { text-decoration:underline double; text-underline-offset:.14em; }
+.edition-text :is(.tul, .tul-second, .tul-third) { text-decoration:underline; text-decoration-thickness:.05em; }
+.edition-text .tul { text-underline-offset:.14em; }
+.edition-text .tul-second { text-underline-offset:.27em; }
+.edition-text .tul-third { text-underline-offset:.4em; }
 .edition-text del { text-decoration:line-through; }
 .edition-text del del { text-decoration:line-through double; }
-.edition-text .undo { text-decoration:underline dotted; text-underline-offset:.2em; text-decoration-skip-ink:none; }
+.edition-text .undo { text-decoration:underline dotted; text-underline-offset:.2em; }
 .edition-text .er { color:var(--color-paper); background:var(--color-ink); padding-inline:.08em; box-decoration-break:clone; }
 .edition-text .er * { color:inherit; }
 .edition-text .er[data-empty] * { visibility:hidden; }
@@ -390,7 +395,7 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 .edition-text del del .nr { background-image:linear-gradient(to bottom,currentColor 0 1px,transparent 1px 2px,currentColor 2px 3px); background-size:100% 3px; }
 .edition-text .insertion::before { content:'⌞'; }
 .edition-text .insertion::after { content:'⌟'; }
-.edition-text .subst .insertion::before { content:'⌞▪\2009'; letter-spacing:-.12em; padding-inline-end:.12em; }
+.edition-text .subst .insertion::before { content:'⌞'; display:inline-block; background:linear-gradient(currentColor, currentColor) .22em calc(100% - .2em) / .14em .14em no-repeat; line-height:1; padding-inline-end:.1em; }
 .edition-text .insertion[data-pos] { --insertion-arrow:none; }
 .edition-text .insertion[data-pos=top] { --insertion-arrow:url('remixicon/icons/Arrows/arrow-down-line.svg'); }
 .edition-text .insertion[data-pos=bottom] { --insertion-arrow:url('remixicon/icons/Arrows/arrow-up-line.svg'); }

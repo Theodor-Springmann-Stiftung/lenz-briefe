@@ -46,6 +46,16 @@ class FlowContractTests(unittest.TestCase):
         self.assertEqual(len(pages), 1)
         return pages[0]
 
+    def test_triple_underline_preserves_text_and_nested_formatting_across_lines(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            with self.subTest(kind=kind):
+                tree = self.render('<line/><tul>Wor<it>t</it><line/>weiter</tul>', kind)
+                self.assertEqual(''.join(line.text_content() for line in self.lines(tree)), 'Wortweiter')
+                self.assertEqual(len(self.lines(tree)), 2)
+                underlines = tree.xpath('.//span[@class="tul"]/span[@class="tul-second"]/span[@class="tul-third"]')
+                self.assertEqual([node.text_content() for node in underlines], ['Wort', 'weiter'])
+                self.assertEqual(underlines[0].xpath('./em/text()'), ['t'])
+
     def test_inline_milestone_does_not_modify_a_word(self):
         tree = self.render('<page index="1"/><line/>Wor<page index="2"/>d')
         self.assertEqual(tree.text_content(), 'Word')

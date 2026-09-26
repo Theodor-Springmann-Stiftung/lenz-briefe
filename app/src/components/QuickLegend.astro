@@ -1,0 +1,29 @@
+---
+import Icon from './Icon.astro';
+import SidenotePosition from './SidenotePosition.astro';
+import { quickLegend } from '../lib/legend';
+import { base } from '../lib/edition';
+const groups = ['Im Druck', 'In der Handschrift', 'Editorische Hinweise', 'Layout'];
+const notePositions = ['top left', 'top', 'top right', 'left', 'right', 'bottom left', 'bottom', 'bottom right'];
+---
+<button class="quick-legend-toggle" type="button" popovertarget="quick-legend" aria-label="Schnelle Legende öffnen" title="Schnelle Legende">
+  <span aria-hidden="true">?</span>
+</button>
+<aside id="quick-legend" class="quick-legend" popover="auto" role="dialog" aria-labelledby="quick-legend-title">
+  <header class="quick-legend-header">
+    <h2 id="quick-legend-title">Schnelle Legende</h2>
+    <button type="button" popovertarget="quick-legend" popovertargetaction="hide" aria-label="Legende schließen" autofocus><Icon name="close" /></button>
+  </header>
+  <div class="quick-legend-body" tabindex="0" role="region" aria-label="Auszeichnungen und Beispiele">
+    {groups.map(group => <section>
+      <h3>{group}</h3>
+      <dl>{quickLegend.filter(item => item.group === group).map(item => <div class="quick-legend-entry">
+        <dt><span>{item.label}</span>{item.short && <small>{item.short}</small>}</dt>
+        {item.tag === 'sidenote'
+          ? <dd class="quick-legend-positions">{notePositions.map(position => <SidenotePosition position={position} />)}</dd>
+          : <dd class="edition-text" set:html={item.quickExample ?? item.example} />}
+      </div>)}</dl>
+    </section>)}
+  </div>
+  <footer class="quick-legend-footer"><a href={`${base}edition/richtlinien/`}>Ausführliche Editionsrichtlinien <Icon name="arrowRight" /></a></footer>
+</aside>

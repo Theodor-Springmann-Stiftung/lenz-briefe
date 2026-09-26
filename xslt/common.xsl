@@ -695,7 +695,7 @@
   </xsl:template>
 
   <xsl:template match="lb:tul">
-    <span class="tul"><xsl:apply-templates /></span>
+    <span class="tul"><span class="tul-second"><span class="tul-third"><xsl:apply-templates /></span></span></span>
   </xsl:template>
 
   <xsl:template match="lb:dul">

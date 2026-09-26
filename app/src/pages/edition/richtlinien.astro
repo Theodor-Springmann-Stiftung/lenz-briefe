@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { legend } from '../../lib/legend';
+---
+<Layout title="Editionsrichtlinien · Lenz Briefe">
+  <section class="about-page">
+    <h1>Editionsrichtlinien</h1>
+    <div class="legend-table-wrap" tabindex="0" role="region" aria-label="Formatierungslegende">
+      <table class="legend-table">
+        <caption>Formatierungslegende</caption>
+        <thead><tr><th scope="col">Auszeichnung</th><th scope="col">Beispiel</th><th scope="col">Darstellung</th></tr></thead>
+        <tbody>{legend.map(item => <tr data-tag={item.tag}><th scope="row"><code>{item.xml}</code></th><td><div class="edition-text legend-example" set:html={item.example} /></td><td>{item.meaning}</td></tr>)}</tbody>
+      </table>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,20 @@
+---
+import Icon from './Icon.astro';
+---
+<button class="back-to-top" type="button" aria-label="Nach oben" title="Nach oben" hidden>
+  <Icon name="arrowDown" />
+</button>
+<script>
+  const button = document.querySelector<HTMLButtonElement>('.back-to-top');
+  if (button) {
+    const update = () => { button.hidden = window.scrollY < 200; };
+    window.addEventListener('scroll', update, {passive: true});
+    window.addEventListener('resize', update);
+    window.addEventListener('pageshow', update);
+    button.addEventListener('click', () => {
+      document.querySelector<HTMLAnchorElement>('.wordmark')?.focus({preventScroll: true});
+      window.scrollTo({top: 0, behavior: 'instant'});
+    });
+    update();
+  }
+</script>

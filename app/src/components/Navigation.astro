@@ -1,0 +1,45 @@
+---
+import Icon from './Icon.astro';
+import { base, catalog, letterUrl } from '../lib/edition';
+const path = Astro.url.pathname;
+const navigation = [
+  {label: 'Verzeichnis', href: base, active: path === base},
+  {label: 'Briefansicht', href: letterUrl(catalog.letters[0].letter), active: path.startsWith(`${base}briefe/`)},
+];
+const editionPages = [
+  {label: 'Editionsrichtlinien', href: `${base}edition/richtlinien/`},
+  {label: 'Briefumschläge', href: `${base}edition/briefumschlaege/`},
+  {label: 'Zitierempfehlung', href: `${base}edition/zitierempfehlung/`},
+  {label: 'Kontakt', href: `${base}edition/kontakt/`},
+];
+const inEdition = path.startsWith(`${base}edition/`);
+---
+<nav class="main-navigation" aria-label="Hauptnavigation">
+  {navigation.map(item => <a class="main-navigation-link" href={item.active ? undefined : item.href} role={item.active ? 'link' : undefined} aria-disabled={item.active ? 'true' : undefined} aria-current={item.active ? 'page' : undefined}>{item.label}</a>)}
+  <details class="edition-menu">
+    <summary class:list={['main-navigation-link', {'is-current': inEdition}]}>
+      Zur Edition <Icon name="chevronDown" />
+    </summary>
+    <ul class="edition-menu-panel">
+      {editionPages.map(item => <li><a href={path === item.href ? undefined : item.href} role={path === item.href ? 'link' : undefined} aria-disabled={path === item.href ? 'true' : undefined} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a></li>)}
+    </ul>
+  </details>
+</nav>
+<script>
+  document.querySelectorAll<HTMLDetailsElement>('.edition-menu').forEach(menu => {
+    const summary = menu.querySelector('summary');
+    document.addEventListener('click', event => {
+      if (event.target instanceof Node && !menu.contains(event.target)) menu.open = false;
+    });
+    menu.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.open) {
+        menu.open = false;
+        summary?.focus();
+        event.preventDefault();
+      }
+    });
+    menu.addEventListener('focusout', event => {
+      if (event.relatedTarget instanceof Node && !menu.contains(event.relatedTarget)) menu.open = false;
+    });
+  });
+</script>
