@@ -19,13 +19,14 @@
 
 ## TODO ME
 - Bodoni kleiner / andere Typen / drei Typen für alle Hände (erste Hand normal)
-  -> 161, 312, 36
+  -> 161, 312, 36, 91 (3)
 - 293: Tabelle 
 - Doppelte Auszeichnung von <hand> über Seitengrenzen -- maybe XML Fix?
 - <vspace> nach Seitenumbruch
 - Übersetzung und "Zusatzmaterial" in Serifen
 - Design/Hintergrund
 - Zusatzseiten
+- 32
 
 ## ME (WÜRDE ANDERS)
 - 266: verte
