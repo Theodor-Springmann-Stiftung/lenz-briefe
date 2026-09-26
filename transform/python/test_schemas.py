@@ -6,6 +6,13 @@ from transform_python.common import XSD_DIR, XSD_MAP
 
 
 class SeparateDocumentSchemaTests(unittest.TestCase):
+    def test_sidenote_is_allowed_inside_hand(self):
+        schema = etree.XMLSchema(etree.parse(str(XSD_DIR / 'briefe.xsd')))
+        schema.assertValid(etree.fromstring('''<opus xmlns="https://lenz-archiv.de"><document>
+          <letterText letter="1"><page index="1"/><hand ref="1">Before
+          <sidenote page="1" pos="left">Inherited handwriting</sidenote>
+          After</hand></letterText></document></opus>'''))
+
     def test_tabs_can_cross_pages(self):
         content = '<tabs><tab value="1-2">A</tab><tab value="2-2">B</tab><page index="2"/><line/><tab value="1-2">C</tab></tabs>'
         for name, body in [

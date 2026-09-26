@@ -3,7 +3,7 @@
 Astro renders the index, 374 letter pages and the reading guide. Python and Saxon/C
 transform the source XML before each build; the browser never transforms XML.
 Tailwind defines the theme, and `src/styles/global.css` styles the shared edition
-classes. Source Serif, Linux Biolinum and Bodoni Moda are self-hosted under
+classes. Source Serif, Linux Biolinum, Roboto Slab and Cormorant Garamond are self-hosted under
 `public/fonts/`, alongside their licenses. Linux Biolinum includes regular, italic, bold and
 bold oblique (used for bold italic), downloaded from the [CTAN Libertine package](https://mirrors.mit.edu/CTAN/fonts/libertine/opentype/).
 
@@ -67,6 +67,12 @@ uv run --project transform/python python -m transform_python.validate_schemas
 
 ## Data and rendering
 
+- Tagged hands use distinct fonts within each letter, also in sidenotes and the
+  hand key. Person 1 (J. M. R. Lenz) uses Source Serif when among the senders;
+  all other tagged writers receive Roboto Slab or Cormorant Garamond in person-ID order.
+  Untagged text retains Source Serif. The corpus currently needs at most two
+  additional fonts; font assignment fails explicitly if that limit is exceeded.
+
 - Year navigation is defined by `yearGroups/yearGroup` in `data/xml/references.xml`.
   Each group has inclusive `fromYear` and `toYear` bounds and a phase `label`.
   XML order controls display order; the index shows “years · label”. The exporter
@@ -89,7 +95,11 @@ uv run --project transform/python python -m transform_python.validate_schemas
   the type does not change page identity, sidenote targets, or visual styling.
   A `hand` may contain page markers without ending the handwriting range;
   nested main-text pages are included in page navigation and sidenote targets.
-- `sidenotes.json` retains all 215 notes. Notes without a matching page marker are
+- `sidenotes.json` retains all 215 notes, including notes nested inside a `hand`.
+  They inherit the nearest enclosing hand. The current corpus has no nested
+  hands within sidenotes, and a regression test checks the rendered notes for
+  such nesting. Notes remain separate from the main text, in their XML source order.
+  Notes without a matching page marker are
   shown after the text and reported in `status.json`; all current notes have matching
   targets. On desktop, page labels remain in the left margin. Hands and notes occupy
   the right margin, with notes starting at their source page’s beginning.

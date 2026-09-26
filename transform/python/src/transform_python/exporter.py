@@ -185,7 +185,7 @@ def _first_xpath(node: etree._Element, expr: str) -> etree._Element | None:
 
 
 def collect_sidenote_pages(letter_text: etree._Element) -> list[str]:
-    pages = {str(get_attribute(note, "page")) for note in letter_text.xpath("./l:sidenote", namespaces=NSMAP)}
+    pages = {str(get_attribute(note, "page")) for note in letter_text.xpath(".//l:sidenote", namespaces=NSMAP)}
     return sorted(pages, key=lambda page: int(page))
 
 
@@ -371,7 +371,7 @@ def export_edition(out_dir: str) -> dict[str, Any]:
     warnings += timings.measure("lintVerweise", lambda: check_verweise(briefe_doc, meta_doc, traditions_doc, references_doc))
     for letter_node in briefe_doc.findall(".//l:letterText", NSMAP):
         targets = set(collect_letter_pages(letter_node))
-        for note in letter_node.findall("l:sidenote", NSMAP):
+        for note in letter_node.findall(".//l:sidenote", NSMAP):
             if note.get("page") not in targets:
                 warnings.append({"kind": "unresolved-sidenote", "stage": "sidenoteTargets",
                                  "letter": letter_node.get("letter"), "page": note.get("page"),
@@ -510,10 +510,12 @@ def _process_letter(
     )
 
     sidenotes_by_page: dict[str, list[dict[str, Any]]] = {}
+    all_sidenotes = letter_text.findall('.//l:sidenote', NSMAP)
+    source_orders = {node: index + 1 for index, node in enumerate(all_sidenotes)}
     for page in sorted(set(pages) | set(collect_sidenote_pages(letter_text)), key=int):
         sidenotes = timings.measure(
             "select:pageSidenotes",
-            lambda page_value=page: letter_text.xpath(f"./l:sidenote[@page='{page_value}']", namespaces=NSMAP),
+            lambda page_value=page: [node for node in all_sidenotes if node.get('page') == page_value],
         )
         records = build_sidenote_records(
             sidenotes,
@@ -527,7 +529,8 @@ def _process_letter(
                     runner.run_stylesheet(
                         "sidenotes",
                         serialize_node(sidenote),
-                        {"letter": letter, "sidenoteId": records[index]["id"]},
+                        {"letter": letter, "sidenoteId": records[index]["id"],
+                         "inheritedHand": sidenote.xpath('string(ancestor::l:hand[1]/@ref)', namespaces=NSMAP)},
                         timings,
                     )
                     for index, sidenote in enumerate(sidenotes)
@@ -541,7 +544,7 @@ def _process_letter(
                 search_records.extend(blocks)
         for record, node in zip(records, sidenotes):
             record["anchorId"] = f"page-{page}" if page in pages else None
-            record["sourceOrder"] = len(node.xpath("preceding-sibling::l:sidenote", namespaces=NSMAP)) + 1
+            record["sourceOrder"] = source_orders[node]
         sidenotes_by_page[page] = records
     timings.measure(
         "writeFile:sidenotesJson",

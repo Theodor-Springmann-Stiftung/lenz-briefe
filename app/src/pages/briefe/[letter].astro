@@ -4,6 +4,7 @@ import LetterHeader from '../../components/LetterHeader.astro';
 import Icon from '../../components/Icon.astro';
 import SidenotePosition from '../../components/SidenotePosition.astro';
 import {sidenoteOrder} from '../../lib/margin-placement.mjs';
+import {handFonts} from '../../lib/hand-fonts.mjs';
 import {catalog, letterFiles, letterUrl, titleFor, type Letter} from '../../lib/edition';
 export function getStaticPaths() {
   return catalog.letters.map((letter,index) => ({params:{letter:letter.letter}, props:{letter,index}}));
@@ -19,16 +20,14 @@ const previous = catalog.letters[index - 1];
 const next = catalog.letters[index + 1];
 const hands = Object.fromEntries(letter.handRefs.map(ref => [ref, catalog.people[ref]?.name || `Unbekannte Hand (${ref})`]));
 const senderRefs = new Set(letter.events.filter(event => event.type === 'sent').flatMap(event => event.persons.map(person => person.ref)));
-// Keep hand markers for attribution, but use the regular typeface for senders.
-const senderHandSelectors = letter.handRefs.filter(ref => senderRefs.has(ref)).flatMap(ref => [
+const handStyles = [...handFonts(letter.handRefs, senderRefs)].map(([ref, font]) => `${[
   `.letter-content .edition-text .hand[data-ref=${JSON.stringify(ref)}]`,
   `.letter-content .hand-sample[data-ref=${JSON.stringify(ref)}]`,
-]);
-const senderHandStyles = senderHandSelectors.length ? `${senderHandSelectors.join(', ')} { font-family: var(--font-serif); }` : '';
+].join(', ')} { font-family: ${font};${font === 'var(--font-hand-second)' ? ' font-weight: 600; font-variant-numeric: lining-nums;' : ''} }`).join('\n');
 const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'haende', name: 'Hände'}] : [])];
 ---
 <Layout wide title={`Brief ${letter.letter} · ${titleFor(letter)} · Lenz Briefe`}>
-  {senderHandStyles && <style is:inline set:html={senderHandStyles} />}
+  {handStyles && <style is:inline set:html={handStyles} />}
   <div class="letter-content">
     <div class="detail-header">
       <LetterHeader letter={letter} />

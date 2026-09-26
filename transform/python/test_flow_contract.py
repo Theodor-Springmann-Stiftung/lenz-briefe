@@ -326,6 +326,12 @@ class FlowContractTests(unittest.TestCase):
         self.assertEqual(len(self.lines(tree)), 1)
         self.assertFalse(tree.xpath('.//*[@class="sidenote-marker"]'))
 
+    def test_hand_containing_only_sidenote_leaves_no_main_text_label(self):
+        tree = self.render('A<hand ref="1"> <sidenote page="1" pos="left">Note</sidenote> </hand>B')
+        self.assertEqual(tree.text_content(), 'A  B')
+        self.assertEqual(len(self.lines(tree)), 1)
+        self.assertFalse(tree.xpath('.//span[@class="hand"]'))
+
     def test_apparatus_page_ids_do_not_collide_with_main_text(self):
         tree = self.render('A<page index="2"/>B', 'traditions')
         self.assertEqual(self.page(tree).get('id'), 'app-1-page-2')

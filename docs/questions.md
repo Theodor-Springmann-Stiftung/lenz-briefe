@@ -24,13 +24,13 @@
 - Übersetzung und "Zusatzmaterial" in Serifen
 - Design/Hintergrund
 - Zusatzseiten
-- 32
 
 ## ME (WÜRDE ANDERS)
 - 266: verte
 - 227 u.a.: Außenseite des zum Umschlag gefalteten Briefes
 
 ## ME (Later)
+- <hand> vs. <sidenote> (nested hand problem)
 - CMIF
 
 ## NB

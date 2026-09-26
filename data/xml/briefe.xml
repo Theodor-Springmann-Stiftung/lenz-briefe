@@ -107,7 +107,7 @@
 
 <letterText letter="4">
 <page index="1" />
-<line /><align pos="center">Verehrungswürdigster Herr Papa!</align>
+<hand ref="1"><line /><align pos="center">Verehrungswürdigster Herr Papa!</align>
 <vspace lines="3"/>
 <line />Ich weiß nicht, ob der Bruder bey seinen Amtsgeschäften, Catechisiren <aq>etc.</aq> Zeit haben wird, an Sie zu schreiben: ich nehme mir also die Freyheit, Ihnen abermals von dem was uns angeht, gehorsamst Nachricht zu geben. Der Bruder ist wie gesagt, sehr beschäftig, befindet sich aber bey seinen Arbeiten noch immer Gottlob! recht gesund und vergnügt. Auch mir bekommt meine Kur recht gut und ausser der kleinen Unbequemlichkeit, die mir der <aq>Diät</aq>, das Warmhalten, das Laxiren u. dgl.
 <page index="2" />machen, bin ich hier so vergnügt, wie man es in der Einsamkeit seyn kann. Ich lese, oder schreibe, oder studire, oder tapeziere oder purgiere, nachdem es die Noth erfodert. Uebrigens hoffen und wünschen wir beyde von ganzem Herzen, daß dieser Brief sowohl Sie, als meine hochzuehrende Frau Mamma recht gesund, vergnügt und zufrieden antreffen möge.
@@ -122,13 +122,13 @@ ohne-<page index="3" />dem ausgegeben haben, <insertion>so</insertion> daß ich 
 <vspace lines="1"/>
 <page index="4" />
 <line />P. S. Der Bruder läßt sich nochmals gehorsamst entschuldigen, daß er dismal nicht mit geschrieben. Er hat gestern den ganzen Tag mit Brautsleuten und Lehrlingen zu thun gehabt, gestern Abend um 12 Uhr in aller möglichen Eile noch nach Reval geschrieben, welchen Brief er gehorsamst zu bestellen bittet und ist heut früh schon bey dem scharfen Frost den wir seit einiger Zeit gehabt haben und bey dem Schnee und Sturm der verwichenen Nacht, catechisiren mit Schlitten gefahren. Er läßt unterdessen Ihnen und seiner würdigsten Frau Mama seinen kindlichen Handkuß und allen seinen Geschwistern besonders dem jungen Paar, wie auch allen guten Freunden seinen zärtlichsten Gruß versichern.
-<line tab="1" />
+</hand><line tab="1" />
 <hand ref="3">P. S. Theurester Papa. Diesen Augenblick komme von der <aq>Catechesation</aq>. Von 8 Uhr heute Morgen bis 4 Uhr Nachmittag habe ich in der Kälte zugebracht, und bin vom Frost und Ungestüm so durchgenommen, daß ich kaum die Fingern rühren kann. Ich bin sonst Gottlob gesund, und werde mich innigst freuen, wenn Sie und meine geliebteste Frau Mama es auch sind. Sie haben doch meiner gehorsamsten Bitte gemäß schon nach Reval an meine Schwieger-Eltern geschrieben, und für mich eine Vorbitte in puncto der Hochzeit im Januario eingelegt? 100000 Grüße und Küße an <insertion>Sie beyde verehrungswürdigten</insertion> alle Geschwister Freunde und Gönner von Ihrem gehorsamsten Sohn. F. D. Lenz. Mit steifen Fingern </hand>
 </letterText>
 
 <letterText letter="5">
 <page index="1" />
-<line /><align pos="center">Mein liebstes junges Paar!</align>
+<hand ref="1"><line /><align pos="center">Mein liebstes junges Paar!</align>
 <vspace lines="2"/>
 <line />Wie sind Sie angekommen? Wieviel Glieder und Sinne haben sie noch übrig? (denn ihren Leuten wird wohl Verstand und alle Sinne erfroren seyn). Wie haben Sies zu Wasser und zu Lande gehabt? Sind Sie auch geirret? Und wie haben Sie alles zu Hause gefunden? Wie lassen sich die schwedischen Reichsräthe an? Und wie gefällt Ihnen, meine liebe junge Frau, das einsame Tarwast?
 <line tab="1" />Zum andern befinden wir uns alle so, wie Sie uns gelassen haben. Papa ist Papa, und Mamma ist Mamma, und Moritz und seine Frau und alle übrige sind gesund und vergnügt, und ich, ich sey Jacob.
@@ -168,14 +168,14 @@ ohne-<page index="3" />dem ausgegeben haben, <insertion>so</insertion> daß ich 
 <line tab="1" />Neuigkeiten! <aq>Madem. Smoljan</aq> und die Majorin Graß sind weggereiset. Die Oldekoppin ist recht böse auf Dich, lieber Bruder, und auf Deine junge Frau, daß ihr nicht bey ihr gewesen seyd. –
 <line tab="1" />Papa und Mamma, die sich Gottlob! noch erträglich befinden, Moritz und seine Frau, die vielleicht selbst auch schreiben werden, Lieschen, Christian und die kleinen Geschwister, alle Freunde besonders die Frau Obristin und die Fräuleins grüssen und küssen 1000mal Fräu- und Männlein. Auch wird die alte Jungfer begrüßt. Leben Sie gesund und vergnügt mein liebstes Paar! und behalten Sie immer lieb
 <line /><align pos="center">Ihren</align>
-<hand ref="7">
+</hand><hand ref="7">
 <line tab="1" />Ihres Herrn Bruders seine grüsse von mich sind zu kalt, hier folgen die zärtlichsten die aufrichtigsten die feurigsten von mich und meiner Tochter, von meiner eigenen Hand. <ul> <aq>Albedyll</aq></ul> </hand>
-<line /><align pos="right">zärtlichsten Bruder</align>
+<hand ref="1"><line /><align pos="right">zärtlichsten Bruder</align>
 <line /><align pos="right">Jacob Michael Reinhold Lenz</align>
 <line />Am Geburtstage. 1768.
 <line />
 <line tab="1" />P.S. Wenn Du, liebster Bruder! einige <aq>Exemplare</aq> von <insertion> den</insertion> hochzeitlichen Gedichten hast, so schike sie mir doch, ich habe kein einziges. Onkel Kellner vergaß auch uns welche mitzugeben. Die <aq>Capit. Sege</aq> und die Lieutnantin Brandt von Fetenhof und die Majorin Toll von Wissus haben junge Söhne. Die alte Oldenkoppin ist ziemlich krank. Heut hat H. Rektor für Reichenberg gepredigt. <aq>Adieu!</aq> Dieses am Sonntage.
-</letterText>
+</hand></letterText>
 
 <letterText letter="6">
 <page index="1" /><ink><aq>Königsberg 1769. Octbr 14.</aq></ink>
@@ -621,22 +621,22 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 
 <letterText letter="33">
 <page index="1" />
-<line tab="1"/>Wir haben Deinen Brief vom 29ten zwey Tage später erhalten als den vom 4ten Junii – Mein ganz Conzept ist verrückt durch Deine beschleunigte Kunft. Neue Geduldübung für Dich – ich sehe Du kennst weder mich noch Röderer der Situation – nur dem Herzen nach. Und wir haben beyde oft die Augen grösser als den Bauch. Ich bin Gesellschafter eines Curländischen Cavaliers der im Begrif steht nach Hause zurückzugehen, mich hierzulassen. Ich zählte drauf wenn Du laut Deiner vorigen Briefe in drey vier Wochen abreisetest, er würde gegen diese Zeit verreist und ich frey – seyn. Also würden wir Dir förmlich entgegen reisen, dich herholen können <aq>etc.</aq> So aber muß grad itzt das Schicksal seinen jüngern Bruder der bey einem andern Regiment steht mit seinem Regiment gegen den Tag Deiner Abreise hieherführen (den 11ten haben sie <aq>Ordre</aq> erhalten auszumarschiren) Der Bruder erwartet ihn um ihn noch das letzte mal vor seiner Heimreise zu sprechen und ich in die allergeringsten ihrer beyden Geschäfte verwickelt darf mich nicht von ihnen trennen – besonders da diese Reise in dem ganzen Lebenslauf des ältesten Epoque macht. Jetzt mein lieber theurer Lavater – wirst Du noch zürnen daß ich nicht Wort halten kann? Die Deutschen faßten ihre Entschlüsse im Rausch und überlegten sie nüchtern. Aber hör etwas. Wir wollen uns – so Gott will – mit Röderer
+<hand ref="1"><line tab="1"/>Wir haben Deinen Brief vom 29ten zwey Tage später erhalten als den vom 4ten Junii – Mein ganz Conzept ist verrückt durch Deine beschleunigte Kunft. Neue Geduldübung für Dich – ich sehe Du kennst weder mich noch Röderer der Situation – nur dem Herzen nach. Und wir haben beyde oft die Augen grösser als den Bauch. Ich bin Gesellschafter eines Curländischen Cavaliers der im Begrif steht nach Hause zurückzugehen, mich hierzulassen. Ich zählte drauf wenn Du laut Deiner vorigen Briefe in drey vier Wochen abreisetest, er würde gegen diese Zeit verreist und ich frey – seyn. Also würden wir Dir förmlich entgegen reisen, dich herholen können <aq>etc.</aq> So aber muß grad itzt das Schicksal seinen jüngern Bruder der bey einem andern Regiment steht mit seinem Regiment gegen den Tag Deiner Abreise hieherführen (den 11ten haben sie <aq>Ordre</aq> erhalten auszumarschiren) Der Bruder erwartet ihn um ihn noch das letzte mal vor seiner Heimreise zu sprechen und ich in die allergeringsten ihrer beyden Geschäfte verwickelt darf mich nicht von ihnen trennen – besonders da diese Reise in dem ganzen Lebenslauf des ältesten Epoque macht. Jetzt mein lieber theurer Lavater – wirst Du noch zürnen daß ich nicht Wort halten kann? Die Deutschen faßten ihre Entschlüsse im Rausch und überlegten sie nüchtern. Aber hör etwas. Wir wollen uns – so Gott will – mit Röderer
 <page index="2"/>aufmachen und nach Colmar gehn, wo Du Donnerstags (falls Du mit der <aq>Diligence</aq>) zu Mittag eintreffen mußt. Da essen wir zusammen und reisen bequemlich nach Strasburg wo Du nichts desto weniger (wenn nicht in meinem Hause, in dem anstossenden, das schon gerüstet dazu und noch bequemer weil Du keine Treppen zu steigen und bessere Aussicht hast) absteigst, damit wir allein – seyn, frey ununterbrochen. Siehst Du da feyren wir den ganzen ersten Abend und drauf folgenden Morgen in süsser stiller Einsamkeit, hernach wird freilich das Geräusch Deiner Bekanntschaften angehn, das Du nicht ganz vermeiden kannst. Das Begleiten ins Schwalbacher Bad ist nun ganz unmöglich, mein Herz und alle meine Wünsche sollen Dich begleiten, aber – ich bin nicht frey – ich bin vieles nicht. Nimm vorlieb wie ich bin, Du der Du vom Apostel Paulus auch Verträglichkeit mußt gelernt haben, meine Freiheitsstunde (das hoff ich zu Gott) wird auch schon einmal schlagen und dann will ich anders seyn. Das Gesicht von Deinem verklärten Vater hab ich alleweile vor mir und kann mich nicht satt dran sehen. Solche Köpfe können nur in einer Republick gebildet werden, das sind
 <page index="3"/>Züge die in keinem monarchischen Staat gesehen noch gehört noch empfunden werden können. Ach daß er lebte! Hat er uns doch seinen Sohn gelassen und ein Brutusherz in ihm. Lebe wohl!
 <line /><align pos="right">JMRlenz</align>
 <sidenote pos="bottom" page="2" annotation="am unteren Rand der zweiten Seite"> <align pos="center">ich wünscht ich könnte den Kopf in mein innerstes Herz hineinzeichnen damit er mir zu allen Stunden und Augenblicken gegenwärtig wäre</align> </sidenote>
 <line tab="1"/>Sollte das Schicksal meinen Willen bis auf den Grad zwingen – daß ich auch nicht bis Colmar entgegen, wie denn grad die Tage kritisch sind und überhaupt ich nicht gern mehr versprechen als halten mag – so kommt doch Röderer gewiß, der kein Diener des göttlichen Worts noch – doch seine Verhältnisse wird er Dir selbst detailliren.
-<line tab="1"/><hand ref="11">
+</hand><line tab="1"/><hand ref="11">
 <line tab="1"/>Ich Röderer umarme Sie tausendmal und will auch itzt lernen zufrieden seyn in mancherley Fügungen – Es genese Ihr Knabe! Guter Gott erfreue einen Vater der schon manche Freude manchen denen Kindern gemacht hat. </hand>
 <vspace lines="1"/>
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<line /><address>An Herrn
+<hand ref="1"><line /><address>An Herrn
 <line />Herrn Diaconus Lavater
 <line />zu Zürich</address>
-</letterText>
+</hand></letterText>
 
 <letterText letter="34"><page index="1"/>
 <line tab="1"/>Morgen also, Sonntags den 12. und nicht Montags vereis ich auf Basel – bin ich nicht wenn ihr kommt, Brüder, bey den 3. Königen, so bin ich bey Hrn. Wilhelm Brenner bey der St. Clara in Basel. <it>Ihr</it> seyd das Ziel meines Verlangens – Ihr – meine künftigen baldigen Mitarbeiter – Kommt sobald ihr könnt, trefft ihr mich nicht mehr in Basel an, weil ich Euch entgegen eile, so ists auf dem Wege, daß ich Euch treffe – am Staub Eures Wagens werd ich Euch kennen und das Schnauben Eurer Rosse wird auch nicht täuschen. – Am Montag Mittag bin ich q. g. in Basel – also verlirt keine Zeit, wenn ihr mich sehen wollt. Lebet und liebet
@@ -1660,13 +1660,13 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/>Mein lieber Lindau; <tl></tl> zu Herrn v. Kniestätt. Er ist der einzige am Hof den ich kenne, und der wird Sie mit allen ehrlichen Leuten bekannt machen! – Ich küße Sie herzlich; hier haben Sie einen Brief für ihn – Leben Sie wohl. Schl.
 <line />E. d 2<subst><del>4</del><insertion>3</insertion></subst> Dec: 1775.</hand>
 <vspace lines="1"/>
-<line tab="1"/>Den Einschluß gieb doch Zuckerpüppgen unserm Goethe ab. Sollt er noch nicht da seyn, laß es nur seinen Eltern
-<vspace lines="1"/>
+<hand ref="1"><line tab="1"/>Den Einschluß gieb doch Zuckerpüppgen unserm Goethe ab. Sollt er noch nicht da seyn, laß es nur seinen Eltern
+</hand><vspace lines="1"/>
 <line /><hand ref="18"><align pos="center">vive St. Thomas!</align></hand>
 <line />
-<line tab="1"/>Hier bester Lindau ein Paar Zeilen von Schlossern von denen ich wünschte, daß sie Dich noch vor Carlsruh ereilten. Ich hatte die Nacht mit jungen Franzosen geschwärmt und nach der Mette mit ihnen frühstücken müssen. Nach dem Frühstück legt’ ich mich schlaffen und erwachte erst um zehn, da ichs denn für zu spät hielt, zu Dir zu gehen. Deine Bestellungen zeugen von der Güte Deines Herzens, leyder hab ich bey all unsern drey Buchhändlern nach den angezeigten Büchern vergebens gefragt. Einer aber hat mir versprochen, sie mir aufs höchste in drey Wochen aus Leipzig kommen zu lassen. Solltest Du Deine Meynung ändern, so schreib mirs daß Schlosser das Geld abgeben kann. Er kommt vielleicht auf die Neujahr hieher.
+<hand ref="1"><line tab="1"/>Hier bester Lindau ein Paar Zeilen von Schlossern von denen ich wünschte, daß sie Dich noch vor Carlsruh ereilten. Ich hatte die Nacht mit jungen Franzosen geschwärmt und nach der Mette mit ihnen frühstücken müssen. Nach dem Frühstück legt’ ich mich schlaffen und erwachte erst um zehn, da ichs denn für zu spät hielt, zu Dir zu gehen. Deine Bestellungen zeugen von der Güte Deines Herzens, leyder hab ich bey all unsern drey Buchhändlern nach den angezeigten Büchern vergebens gefragt. Einer aber hat mir versprochen, sie mir aufs höchste in drey Wochen aus Leipzig kommen zu lassen. Solltest Du Deine Meynung ändern, so schreib mirs daß Schlosser das Geld abgeben kann. Er kommt vielleicht auf die Neujahr hieher.
 <line tab="1"/>Ich habe auch noch das Original des Briefes von Deinem treflichen Freunde Greven hier, von dem Du mir erlauben wirst, eine Kopey zu nehmen. Ich schick es durch Goethen, versiegelt wieder; ihn hab ihn 2, 3 mal durchgelesen und kann mich nicht ge<tl></tl> weiden daran. Dein Peter ist mir <fn index="5"><anchor><sup>#</sup></anchor></fn>
-<sidenote pos="left" page="1" annotation="Fortsetzung am linken Rand der ersten Seite, vertikal">auch immer vor den Augen und ich beneide Dich um den ganzen <del>Fu</del> Stolz solch eines Funds und solch eines Projekts. Denk an mich, wenn Du Deine Schwester umarmst. Hernach vergiß mich, ich werde drum nie weniger seyn aus ganzer Seele Dein Freund Lenz</sidenote>
+<sidenote pos="left" page="1" annotation="Fortsetzung am linken Rand der ersten Seite, vertikal"><fn index="5"/>auch immer vor den Augen und ich beneide Dich um den ganzen <del>Fu</del> Stolz solch eines Funds und solch eines Projekts. Denk an mich, wenn Du Deine Schwester umarmst. Hernach vergiß mich, ich werde drum nie weniger seyn aus ganzer Seele Dein Freund Lenz</sidenote></hand>
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>in der Mitte des zum Umschlag gefalteten Blattes:</note></align>
@@ -3313,9 +3313,9 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Lieber Bruder! hier bin ich seit zwey Tagen unter den großen Himmels Göttern und kann Dir fast nichts reden, so reich, so arm, so voll, so leer bin ich an Worten – an Gefühl. Ich pakte auf einmal zusammen u machte mich fort, und bin iezt hier gehalten. Was soll ich Dir sagen, von Goethe, von Wieland? Am Montag kam ich hier an – lag an Goethes Hals u er umfaßte mich inniger mit aller Liebe „Närrischer Junge! und kriegte Küße von ihm. „Toller Junge! und immer mehr Liebe. Denn er wusste kein Wort von meinem Kommen, so kannst Du denken wie ich ihn überraschte. O was von Goethe ist zu sagen! ich wollte eher Sonn und Meer verschlingen! Gestern brachte ich den ganzen Tag mit Wielanden zu. Er ist der grösste Mensch den ich nach Goethe gesehen hab, den Du nie immaginiren kanst als von Angesicht zu Angesicht. Größe, Liebe, Güte, Bescheidenheit – Steinige den Kerl der ihn verkennt wenn er ihn gesehen, an seiner Brust geliegen hat, sein Geist umfasste u ihn begriff. Hier sind die Götter! Hier ist der Siz des Großen! <er>Goethe ist Geheimer Legations Rath mit 2000 Thalern<nr> </nr></er> Auch hab ich einen großen Menschen am Presidenten von Kalb gefunden – Lenz wohnt unter mir u ist in ewiger Dämmerung. Der Herzog ist vortreflich u werd ihn bald sehen. Glaub von allem nichts was über das Leben hier geredet wird, es ist kein wahres Wort dran. Es geht alles den großen, simplen Gang u Goethe ist so groß in seinem politschen Leben daß wirs nicht begreifen – u Wieland: glaub nicht daß ich überspannt bin – ich häng an dem Menschen so stark daß ichs nie möglich hielt an einem Menschen so zu hängen, er will mich nicht mehr fortlaßen. Weiß viel von Dir u liebt Dich – Laß Dich von nichts drüken u quälen – sie werden mich hier ruhig machen. Wo ich hin seh ist Heilbalsam für meinen Geist u Herz – Adieu! Kl.</hand>
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
-<line tab="1"/>Entschuldige mich doch guter Kaiser bey unserm theuren Lavater, von dem ich durch Ehrmann viel erfreuliches gehört, daß ich in einer Seelenlage bin, in der ich ihm lange nichts werde schreiben können, wo michs aber immer stärken und aufmuntern wird, von andern gute Nachrichten von seinem Befinden zu hören Ich danke ihm tausendmal für alle Proben seiner Güte gegen mich, die sichtbaren und unsichtbaren, bitte nochmals <ul>sobald es möglich seyn wird</ul> um das ihm bewußte Päckgen dessen Adresse er nur an Goethen macht (weil ich aufs Land gehe) und mir zur Stärkung ein Paar Worte von sich und seinem Befinden beylegt. Gleicherweise empfiel mich Pfenningern. Und behalt auch Du mich lieb
+<hand ref="1"><line tab="1"/>Entschuldige mich doch guter Kaiser bey unserm theuren Lavater, von dem ich durch Ehrmann viel erfreuliches gehört, daß ich in einer Seelenlage bin, in der ich ihm lange nichts werde schreiben können, wo michs aber immer stärken und aufmuntern wird, von andern gute Nachrichten von seinem Befinden zu hören Ich danke ihm tausendmal für alle Proben seiner Güte gegen mich, die sichtbaren und unsichtbaren, bitte nochmals <ul>sobald es möglich seyn wird</ul> um das ihm bewußte Päckgen dessen Adresse er nur an Goethen macht (weil ich aufs Land gehe) und mir zur Stärkung ein Paar Worte von sich und seinem Befinden beylegt. Gleicherweise empfiel mich Pfenningern. Und behalt auch Du mich lieb
 <line /><align pos="right">L.</align>
-</letterText>
+</hand></letterText>
 
 <letterText letter="199"><page index="1"/>
 <line /><align pos="center">Sachen die hier bleiben</align>

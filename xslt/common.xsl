@@ -438,6 +438,13 @@
       <xsl:when test="$node/self::element(lb:tab)">
         <xsl:sequence select="lb:temp-line($node)" />
       </xsl:when>
+      <xsl:when test="$node/self::element(lb:hand) and $node/descendant::lb:sidenote">
+        <xsl:variable name="lines" select="lb:normalize-lines($node/node())" />
+        <!-- A hand used only for marginal text must not leave a phantom
+             handwriting label or blank line in the main text. Keep whitespace. -->
+        <xsl:sequence select="if (exists($lines[@type or @tab]) or exists($lines/node()[self::* or self::text()[normalize-space()]]))
+          then lb:wrap-element-across-lines($node, $lines) else $lines" />
+      </xsl:when>
       <xsl:when test="$node/self::element()">
         <xsl:sequence select="lb:wrap-element-across-lines($node, lb:normalize-lines($node/node()))" />
       </xsl:when>

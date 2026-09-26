@@ -217,6 +217,7 @@
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                 <xs:group ref="lenz:inlineElements" />
                 <xs:element ref="page" />
+                <xs:element ref="sidenote" />
             </xs:choice>
             <xs:attribute name="ref" type="xs:positiveInteger" use="required" />
         </xs:complexType>

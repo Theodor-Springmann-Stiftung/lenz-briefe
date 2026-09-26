@@ -31,6 +31,18 @@ class SiteExportTests(unittest.TestCase):
         self.assertEqual(warnings, [])
         self.assertTrue(all(n['html'].strip() for n in notes))
 
+    def test_current_sidenotes_render_without_nested_hands(self):
+        for path in self.output.glob('letters/*/sidenotes.json'):
+            for group in json.loads(path.read_text()).values():
+                for note in group:
+                    with self.subTest(letter=path.parent.name, sourceOrder=note['sourceOrder']):
+                        tree = html.fragment_fromstring(note['html'], create_parent='div')
+                        hands = tree.xpath('.//*[contains(concat(" ", normalize-space(@class), " "), " hand ")]')
+                        self.assertFalse([
+                            hand for hand in hands
+                            if any(ancestor in hands for ancestor in hand.iterancestors())
+                        ])
+
     def test_unresolved_sidenote_is_retained_and_reported(self):
         def read_with_unmatched_note(filename):
             doc = read_xml(filename)
@@ -50,6 +62,49 @@ class SiteExportTests(unittest.TestCase):
             self.assertEqual(len(notes), 1)
             self.assertIsNone(notes[0]['anchorId'])
             self.assertIn('Unmatched note retained for readers.', notes[0]['html'])
+
+    def test_nested_sidenotes_inherit_nearest_hand_and_keep_source_order(self):
+        def read_with_nested_notes(filename):
+            doc = read_xml(filename)
+            if filename == 'briefe.xml':
+                letter = doc.find('.//l:letterText', NSMAP)
+                for child in list(letter):
+                    letter.remove(child)
+                letter.text = None
+                fragment = etree.fromstring('''<body xmlns="https://lenz-archiv.de">
+                  <page index="1"/>
+                  <sidenote page="1" pos="left">First note</sidenote>
+                  <hand ref="1">Before<sidenote page="1" pos="right">Inherited<line/>
+                    <ul>Still inherited</ul>Inherited again
+                  </sidenote>After
+                    <hand ref="3"><sidenote page="9999" pos="top">Nearest hand</sidenote></hand>
+                  </hand>
+                  <sidenote page="1" pos="bottom">Last note</sidenote>
+                </body>''')
+                for child in list(fragment):
+                    letter.append(child)
+            return doc
+
+        with TemporaryDirectory() as directory, patch('transform_python.exporter.read_xml', side_effect=read_with_nested_notes):
+            result = run_export(directory)
+            grouped = json.loads((Path(directory) / 'letters/1/sidenotes.json').read_text())
+            notes = sorted((note for group in grouped.values() for note in group), key=lambda note: note['sourceOrder'])
+            self.assertEqual([note['sourceOrder'] for note in notes], [1, 2, 3, 4])
+            self.assertEqual([note['anchorId'] for note in notes], ['page-1', 'page-1', None, 'page-1'])
+            inherited = html.fragment_fromstring(notes[1]['html'], create_parent='div')
+            self.assertEqual(set(inherited.xpath('.//span[@class="hand"]/@data-ref')), {'1'})
+            self.assertFalse(inherited.xpath('.//span[@class="hand"]//span[@class="hand"]'))
+            self.assertIn('Inherited again', ''.join(inherited.xpath('.//span[@class="hand"][@data-ref="1"]//text()')))
+            origins = inherited.xpath('.//span[@class="hand"][@data-ref="1"]/@data-origin')
+            self.assertEqual(len(set(origins)), 1)
+            nearest = html.fragment_fromstring(notes[2]['html'], create_parent='div')
+            self.assertEqual(nearest.xpath('.//span[@class="hand"]/@data-ref'), ['3'])
+            main = html.fragment_fromstring((Path(directory) / 'letters/1/text.html').read_text(), create_parent='div')
+            self.assertFalse(main.xpath('.//span[@class="hand"][@data-ref="3"]'))
+            text = main.text_content()
+            self.assertIn('BeforeAfter', text)
+            self.assertNotIn('Inherited', text)
+            self.assertEqual([w['page'] for w in result['warnings'] if w['kind'] == 'unresolved-sidenote'], ['9999'])
 
     def test_catalog_chronology_groups_and_filters(self):
         letters = self.catalog['letters']
