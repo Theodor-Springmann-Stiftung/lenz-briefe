@@ -18,7 +18,7 @@ concurrency:
 jobs:
   build:
     name: Validate XML and build site
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
 
@@ -66,7 +66,7 @@ jobs:
     name: Publish to GitHub Pages
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       pages: write
