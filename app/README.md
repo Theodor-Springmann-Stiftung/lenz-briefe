@@ -107,13 +107,15 @@ uv run --project transform/python python -m transform_python.validate_schemas
   Notes without a matching page marker are
   shown after the text and reported in `status.json`; all current notes have matching
   targets. On desktop, page labels remain in the left margin. Hands and notes occupy
-  the right margin, with notes starting at their source page’s beginning.
-  Metadata, letter text and apparatus share the same main column. Margin items
-  flow downward in order. Notes can continue across page boundaries; overflow
+  the right margin. Hand labels are placed first and remain aligned with their
+  text lines. Each note then takes the first free vertical gap at or after its
+  source page's beginning that fits its full height, with clearance around labels
+  and other notes. Smaller later notes can fill gaps skipped by larger notes.
+  Metadata, letter text and apparatus share the same main column.
+  Notes can continue across page boundaries; overflow
   notes carry a “S. 1:” prefix in the position description. The icon hangs
   to the left at the top of each note; descriptions, page labels and hand
-  information sit directly below the note’s text. Later notes and hand labels
-  follow without reserving space on subsequent pages. On smaller screens they follow
+  information sit directly below the note’s text. On smaller screens they follow
   the text in normal flow.
 - `traditions.json` provides ordered apparatus records, including text between
   entries. The same typography applies to letter, note and apparatus fragments.

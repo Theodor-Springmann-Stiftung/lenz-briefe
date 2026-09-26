@@ -1,12 +1,17 @@
-/** Stack margin items forward, allowing notes to continue beyond their page.
+/** Find the first gap that fits a complete note without moving reserved items.
  * @param {number} target
  * @param {number} height
- * @param {number} previousBottom
+ * @param {{top: number, bottom: number, gap: number}[]} occupied
  * @param {number} [pageEnd]
  * @param {number} [gap]
  */
-export function placeMarginItem(target, height, previousBottom, pageEnd = Infinity, gap = 18) {
-  const top = Math.max(0, target, previousBottom + gap);
+export function placeMarginItem(target, height, occupied, pageEnd = Infinity, gap = 6) {
+  let top = Math.max(0, target);
+  for (const slot of [...occupied].sort((a, b) => a.top - b.top)) {
+    const clearance = Math.max(gap, slot.gap);
+    if (top + height + clearance <= slot.top) break;
+    if (top < slot.bottom + clearance) top = slot.bottom + clearance;
+  }
   const bottom = top + height;
   return {top, bottom, overflow: bottom > pageEnd};
 }

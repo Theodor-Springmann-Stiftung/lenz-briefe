@@ -344,9 +344,14 @@ html:not(.search-highlight-active) .edition-text :is(.lb-line-block, .tab, .lb-t
   .marginalia, .page-margin { grid-row:1; margin:0; padding:0; border:0; position:relative; min-width:0; }
   .page-margin { grid-column:1; }
   .marginalia { grid-column:3; }
+  html.js .reading-layout:not(.margins-visible) :is(.marginalia, .page-margin) { opacity:0; visibility:hidden; }
+  html.js .reading-layout.margins-visible :is(.marginalia, .page-margin) { opacity:1; visibility:visible; transition:opacity .15s ease-out; }
   .margin-ready .marginal-item { position:absolute; left:0; right:0; margin:0; }
   .margin-ready .page-number { padding-top:.35rem; }
   .margin-ready .hand-label { transform:translateY(.35rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.js .reading-layout.margins-visible :is(.marginalia, .page-margin) { transition:none; }
 }
 @media (max-width: 959px) {
   /* Reserve one compact filter row and allow additional lines when needed. */

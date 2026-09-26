@@ -60,7 +60,10 @@ if (layout) {
     pageNumbers.forEach(item => {item.style.top = '';});
     const items = [...margin.querySelectorAll<HTMLElement>('.marginal-item')];
     items.forEach(item => {item.style.top = '';});
-    if (!matchMedia('(min-width: 1100px)').matches) return;
+    if (!matchMedia('(min-width: 1100px)').matches) {
+      layout!.classList.remove('margins-visible');
+      return;
+    }
     const origin = body.getBoundingClientRect().top;
     layout!.classList.add('margin-ready');
     const pages = [...body.querySelectorAll<HTMLElement>('.page-anchor')];
@@ -78,8 +81,7 @@ if (layout) {
       pageBottom = top + item.getBoundingClientRect().height + 18;
     }
     pageMargin.style.height = `${Math.max(0, pageBottom - 18)}px`;
-    // One ordered stream: notes may cross page boundaries, and later items
-    // follow immediately after them instead of reserving or searching page slots.
+    // Reserve hand labels at their text lines before finding space for notes.
     const anchored = items.map(item => {
       const anchor = document.getElementById(item.dataset.anchor!);
       const bounds = pageBounds.get(item.dataset.anchor!);
@@ -87,17 +89,21 @@ if (layout) {
         pageEnd: bounds?.end ?? Infinity};
     }).filter(entry => entry.anchor).sort((a, b) => a.target - b.target
       || Number(a.item.dataset.priority) - Number(b.item.dataset.priority));
-    let bottom = -18;
-    let previousWasNote = false;
-    for (const {item, target, pageEnd} of anchored) {
-      const isNote = item.classList.contains('margin-note');
-      const gap = isNote && previousWasNote ? 6 : 18;
-      const placement = placeMarginItem(target, item.getBoundingClientRect().height, bottom, pageEnd, gap);
-      item.style.top = `${placement.top}px`;
-      bottom = placement.bottom;
-      previousWasNote = isNote;
+    const occupied: {top: number; bottom: number; gap: number}[] = [];
+    for (const {item, target} of anchored.filter(entry => entry.item.classList.contains('hand-label'))) {
+      item.style.top = `${Math.max(0, target)}px`;
+      // Include the label's visual baseline adjustment in its reserved space.
+      const rect = item.getBoundingClientRect();
+      occupied.push({top: rect.top - origin, bottom: rect.bottom - origin, gap: 18});
     }
-    margin.style.height = `${Math.max(0, bottom)}px`;
+    for (const {item, target, pageEnd} of anchored.filter(entry => entry.item.classList.contains('margin-note'))) {
+      const placement = placeMarginItem(target, item.getBoundingClientRect().height, occupied, pageEnd);
+      item.style.top = `${placement.top}px`;
+      occupied.push({top: placement.top, bottom: placement.bottom, gap: 6});
+    }
+    margin.style.height = `${Math.max(0, ...occupied.map(slot => slot.bottom))}px`;
+    // Keep the initial layout hidden until both fonts and placement are ready.
+    if (document.fonts.status === 'loaded') layout!.classList.add('margins-visible');
     document.dispatchEvent(new Event('margins:arranged'));
   }
   function schedule() {if (!scheduled) {scheduled = true; requestAnimationFrame(arrange);}}
