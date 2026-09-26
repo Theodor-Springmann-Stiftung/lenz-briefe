@@ -182,6 +182,20 @@ class FlowContractTests(unittest.TestCase):
             tree = self.render(body)
             self.assertEqual(tree.xpath('.//*[@class="page-anchor" or @class="lb-vspace"]/@class'), expected)
 
+    def test_page_after_empty_line_moves_to_following_text(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            for whitespace in ['', '\n  ']:
+                for marginal in ['', '<sidenote page="1" pos="left">Marginal text</sidenote>']:
+                    with self.subTest(kind=kind, whitespace=whitespace, marginal=marginal):
+                        tree = self.render(
+                            f'<line/>Before<line/>{marginal}{whitespace}'
+                            f'<page index="2"/>{whitespace}<line tab="1"/>After', kind)
+                        lines = self.lines(tree)
+                        self.assertEqual([line.text_content().strip() for line in lines], ['Before', '', 'After'])
+                        self.assertEqual(self.page(tree).getparent(), lines[2])
+                        self.assertEqual(self.page(tree).get('data-break'), 'block')
+                        self.assertEqual(lines[2].get('data-tab'), '1')
+
     def test_table_after_page_marker_is_a_block_boundary(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:
             for body in [

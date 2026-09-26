@@ -232,7 +232,7 @@
       name="trailing-content-start"
       as="xs:integer?"
       select="
-        (
+        ((
           for $index in reverse(1 to count($current-content))
           return
             if (
@@ -241,10 +241,12 @@
             )
             then ()
             else $index + 1
-        )[1]
+        )[1], 1)[1]
       "
     />
-    <!-- Only move a trailing milestone across a boundary. Whitespace at the
+    <!-- A marker-only line also has trailing milestones, starting at 1.
+         Preserve an explicit empty line, but carry its markers forward.
+         Only move a trailing milestone across a boundary. Whitespace at the
          end of a formatting wrapper may separate words and must survive. -->
     <xsl:variable name="trailing-marker-start" as="xs:integer?" select="
       if (exists($current-content[position() ge $trailing-content-start][self::t:page]))
