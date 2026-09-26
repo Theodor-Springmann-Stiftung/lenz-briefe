@@ -20,7 +20,7 @@ function renderFilterPills() {
     const template = document.querySelector<HTMLTemplateElement>(`#filter-pill-${kind}`)!;
     const selected = kind === 'search' ? (state.q?.trim() ? [state.q] : []) : kind === 'person' ? state.people : state.places;
     for (const id of selected) {
-      const name = kind === 'search' ? `Suche: „${id.trim()}“`
+      const name = kind === 'search' ? `Suche: »${id.trim()}«`
         : checkboxes.find(input => input.name === kind && input.value === id)!.closest('label')!.querySelector('span')!.textContent!;
       const pill = template.content.firstElementChild!.cloneNode(true) as HTMLButtonElement;
       pill.dataset.filterId = id;

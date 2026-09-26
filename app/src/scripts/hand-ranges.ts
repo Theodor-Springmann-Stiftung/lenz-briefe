@@ -78,8 +78,9 @@ export function createHandRangeHighlighter() {
     if (event.key === 'Escape') { hovered = null; focused = null; update(); }
   });
 
-  return (trigger: HTMLElement, groups: HandFragment[][]) => {
-    const range = {trigger, groups};
+  return (trigger: HTMLElement, groups: HandFragment[][] | (() => HandFragment[][])) => {
+    // Search marks can split or merge text nodes; measure the current text.
+    const range = {trigger, get groups() { return typeof groups === 'function' ? groups() : groups; }};
     trigger.classList.add('hand-range-trigger');
     trigger.addEventListener('pointerenter', () => { hovered = range; update(); });
     trigger.addEventListener('pointerleave', () => { if (hovered === range) hovered = null; update(); });

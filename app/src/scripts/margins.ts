@@ -9,11 +9,11 @@ if (layout) {
   const names = JSON.parse(document.querySelector('#hand-data')?.textContent || '{}');
   const allHandGroups = [...document.querySelectorAll<HTMLElement>('.letter-body, .margin-note, .unplaced-note')]
     .flatMap(container => handGroups(container));
-  const implicitGroups = [...document.querySelectorAll<HTMLElement>('.letter-body, .margin-note > .edition-text, .unplaced-note > .edition-text')]
-    .flatMap(container => implicitHandGroups(container));
   const groupsForHand = (ref: string | undefined) => [
     ...allHandGroups.filter(fragments => fragments[0].dataset.ref === ref),
-    ...(ref && ref === layout.dataset.baseHand ? implicitGroups : []),
+    ...(ref && ref === layout.dataset.baseHand
+      ? [...document.querySelectorAll<HTMLElement>('.letter-body, .margin-note > .edition-text, .unplaced-note > .edition-text')]
+        .flatMap(container => implicitHandGroups(container)) : []),
   ];
   const highlightHand = createHandRangeHighlighter();
   handGroups(body).forEach((fragments,index) => {
@@ -27,7 +27,7 @@ if (layout) {
     const label = document.createElement('button');
     label.type = 'button';
     label.textContent = names[hand.dataset.ref!] || 'Unbekannte Hand';
-    highlightHand(label, groupsForHand(hand.dataset.ref));
+    highlightHand(label, () => groupsForHand(hand.dataset.ref));
     item.append(label); margin.append(item);
   });
   // A note already occupies the margin; identify its hands within that note.
@@ -42,13 +42,13 @@ if (layout) {
       const trigger = document.createElement('button');
       trigger.type = 'button';
       trigger.textContent = names[fragments[0].dataset.ref!] || 'Unbekannte Hand';
-      highlightHand(trigger, groupsForHand(fragments[0].dataset.ref));
+      highlightHand(trigger, () => groupsForHand(fragments[0].dataset.ref));
       label.append(trigger);
     });
     note.querySelector('.sidenote-details')!.append(label);
   });
   document.querySelectorAll<HTMLElement>('.hand-key [data-hand-ref]').forEach(trigger => {
-    highlightHand(trigger, groupsForHand(trigger.dataset.handRef));
+    highlightHand(trigger, () => groupsForHand(trigger.dataset.handRef));
   });
   let scheduled = false;
   function arrange() {
