@@ -26,6 +26,7 @@ if (layout) {
     item.dataset.priority = '1';
     const label = document.createElement('button');
     label.type = 'button';
+    label.dataset.handRef = hand.dataset.ref;
     label.textContent = names[hand.dataset.ref!] || 'Unbekannte Hand';
     highlightHand(label, () => groupsForHand(hand.dataset.ref));
     item.append(label); margin.append(item);
@@ -41,6 +42,7 @@ if (layout) {
       if (index) label.append(index === groups.length - 1 ? ' und ' : ', ');
       const trigger = document.createElement('button');
       trigger.type = 'button';
+      trigger.dataset.handRef = fragments[0].dataset.ref;
       trigger.textContent = names[fragments[0].dataset.ref!] || 'Unbekannte Hand';
       highlightHand(trigger, () => groupsForHand(fragments[0].dataset.ref));
       label.append(trigger);

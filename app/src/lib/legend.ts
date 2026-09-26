@@ -4,9 +4,9 @@ export interface LegendEntry {
 }
 
 export const legend: LegendEntry[] = [
-  {tag:'aq',group:"Schrift", label:"Latein", short:"In serifenloser Schrift.",  xml:'<aq>', example:'<span class="aq" lang="la">Amice carissime</span>', meaning:'Leicht vergrößerte serifenlose Schrift zum optischen Ausgleich; zugleich als Latein ausgezeichnet.'},
-  {tag:'b',group:"Im Druck", label:"Fettdruck", short:"", quickExample:"<strong>Wort</strong>",  xml:'<b>', example:'<strong>Mein lieber Freund</strong>', meaning:'Fettdruck.'},
-  {tag:'it',group:"Im Druck", label:"Kursivdruck", short:"", quickExample:"<em>Wort</em>",  xml:'<it>', example:'<em>Mein lieber Freund</em>', meaning:'Kursivschrift.'},
+  {tag:'aq',group:"In der Handschrift", label:"Text in lateinischer Schrift", short:"",  xml:'<aq>', example:'<span class="aq" lang="la">Amice carissime</span>', meaning:'Leicht vergrößerte serifenlose Schrift zum optischen Ausgleich; zugleich als Latein ausgezeichnet.'},
+  {tag:'b',group:"Hauptsächlich im Druck", label:"Fettdruck", short:"", quickExample:"<strong>Wort</strong>",  xml:'<b>', example:'<strong>Mein lieber Freund</strong>', meaning:'Fettdruck.'},
+  {tag:'it',group:"Hauptsächlich im Druck", label:"Kursivdruck", short:"", quickExample:"<em>Wort</em>",  xml:'<it>', example:'<em>Mein lieber Freund</em>', meaning:'Kursivschrift.'},
   {tag:'large',group:"Schrift", label:"Größere Schrift", short:"", quickExample:"<span class=\"large\">Wort</span>",  xml:'<large>', example:'<span class="large">Mein lieber Freund</span>', meaning:'Vergrößerte Schrift.'},
   {tag:'ul',group:"In der Handschrift", label:"Unterstrichen", short:"", quickExample:'<div class="quick-legend-variants"><span class="ul">Einfach</span><span class="dul">Zweifach</span><span class="tul"><span class="tul-second"><span class="tul-third">Dreifach</span></span></span></div>',  xml:'<ul>', example:'<span class="ul">Mein lieber Freund</span>', meaning:'Einfache Unterstreichung.'},
   {tag:'sup',group:"Schrift", label:"Hochgestellt", short:"",  xml:'<sup>', example:'Wort<sup>hoch</sup>', meaning:'Hochgestellter Text.'},
@@ -20,7 +20,7 @@ export const legend: LegendEntry[] = [
   {tag:'undo',group:"In der Handschrift", label:"Rücknahme", short:"", quickExample:"<span class=\"undo\"><del>Wort</del></span>",  xml:'<undo>', example:'<span class="undo"><del>gestrichenes Wort</del></span>', meaning:'Gepunktete Unterstreichung kennzeichnet die Rücknahme einer Auszeichnung. Die ursprüngliche Auszeichnung bleibt sichtbar.'},
   {tag:'ink',group:"In der Handschrift", label:"Tinte", short:"", quickExample:"<span class=\"ink\">Wort</span>",  xml:'<ink>', example:'<span class="ink">Mein lieber Freund</span>', meaning:'Dunkelblaue Schrift.'},
   {tag:'pe',group:"In der Handschrift", label:"Bleistift", short:"", quickExample:"<span class=\"pe\">Wort</span>",  xml:'<pe>', example:'<span class="pe">Mein lieber Freund</span>', meaning:'Graue Schrift für Bleistift.'},
-  {tag:'hand',group:"In der Handschrift", label:"Verschiedene Hände", short:"Unterschiedliche Schriften; Namen am Rand.", quickExample:"<span>Aa</span> <span style=\"font-family:var(--font-hand);font-size:.95em\">Aa</span> <span style=\"font-family:var(--font-hand-second);font-size:1.1em;font-weight:600\">Aa</span>",  xml:'<hand ref="…">', example:'<div class="legend-margin-example"><aside>Hand<br>Friedrich David Lenz</aside><span class="hand">Mein lieber Bruder</span></div>', meaning:'Unterscheidung der Hände durch verschiedene Schriftarten und Angabe der schreibenden Person am rechten Rand.'},
+  {tag:'hand',group:"In der Handschrift", label:"Unterschiedene Hände", short:"Unterschiedliche Schriften; Namen am Rand.", quickExample:"<span>Aa</span> <span style=\"font-family:var(--font-hand);font-size:.95em\">Aa</span> <span style=\"font-family:var(--font-hand-second);font-size:1.1em;font-weight:600\">Aa</span>",  xml:'<hand ref="…">', example:'<div class="legend-margin-example"><aside>Hand<br>Friedrich David Lenz</aside><span class="hand">Mein lieber Bruder</span></div>', meaning:'Unterscheidung der Hände durch verschiedene Schriftarten und Angabe der schreibenden Person am rechten Rand.'},
   {tag:'highlight',group:"In der Handschrift", label:"Farbige Hervorhebung", short:"", quickExample:"<mark class=\"highlight\" data-color=\"yellow\">Wort</mark> <mark class=\"highlight\" data-color=\"red\">Wort</mark>",  xml:'<highlight color="yellow|red">', example:'<mark class="highlight" data-color="yellow">gelb hervorgehobener Text</mark><br><mark class="highlight" data-color="red">rot hervorgehobener Text</mark>', meaning:'Farbige Hervorhebung. Erlaubte Werte für „color“: „yellow“ (gelb) und „red“ (rot).'},
   {tag:'note',group:"Editorische Hinweise", label:"Anmerkungen der Editoren", short:"", quickExample:"<span class=\"note\">Anmerkung</span>",  xml:'<note>', example:'Text <span class="note">Anmerkung</span><div class="lb-line-block lb-line-block--note"><span class="note">alleinstehende Anmerkung</span></div>', meaning:'Grau und in eckigen Klammern. Steht die Anmerkung allein in einer Zeile, wird sie zentriert.'},
   {tag:'tl',group:"Editorische Hinweise", label:"Textverlust", short:"Der jeweilige Grund für den Textverlust ist in den Anmerkungen erläutert.",  xml:'<tl>', example:'vor <span class="tl"></span> nach', meaning:'Textverlust, gekennzeichnet durch einen gepunkteten Kreis.'},
@@ -45,7 +45,7 @@ export const legend: LegendEntry[] = [
 
 // The compact reading aid deliberately shows only the selected styles.
 const quickLegendTags = new Set([
-  'b', 'it', 'ink', 'pe', 'hand', 'ul', 'highlight', 'del', 'er',
+  'b', 'it', 'aq', 'ink', 'pe', 'hand', 'ul', 'highlight', 'del', 'er',
   'insertion', 'subst', 'undo', 'note', 'tl', 'nr', 'vspace', 'page', 'sidenote',
 ]);
 export const quickLegend = legend.filter(item => quickLegendTags.has(item.tag));
