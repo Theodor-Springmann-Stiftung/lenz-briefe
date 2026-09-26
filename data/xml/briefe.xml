@@ -5157,7 +5157,9 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
     <line tab="1"/>Hals u: Magen verwahrt.
     <line tab="1"/>Den Magen bey der Hize nie überladen, u: das Eiß geflohen.
 </tab>
-<tab value="2-2"></tab>
+<tab value="2-2">
+    <!-- Leer, damit sich die erste Spalte nicht streckt -->
+</tab>
 </tabs>
 <vspace lines="1" presentational="true"/>
 <page index="9"/>
