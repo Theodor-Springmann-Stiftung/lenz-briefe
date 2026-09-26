@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {handFonts} from '../src/lib/hand-fonts.mjs';
 
-test('three co-senders have distinct hands, with only Lenz in Source Serif', () => {
+test('three co-senders have distinct hands, with the first sender in Source Serif', () => {
   assert.deepEqual([...handFonts(['18', '1', '12'], new Set(['1', '12', '18']))], [
     ['1', 'var(--font-serif)'],
     ['12', 'var(--font-hand)'],
@@ -16,8 +16,18 @@ test('Lenz as a non-sender and another writer both differ from the implicit base
   ]);
 });
 
-test('being a sender does not exempt another tagged writer', () => {
-  assert.equal(handFonts(['3'], new Set(['3'])).get('3'), 'var(--font-hand)');
+test('letter 161 uses the first sender as the base hand when Lenz is not a sender', () => {
+  assert.deepEqual([...handFonts(['9', '11'], new Set(['9', '11']))], [
+    ['9', 'var(--font-serif)'], ['11', 'var(--font-hand)'],
+  ]);
+});
+
+test('base hand follows sender order without special priority for Lenz', () => {
+  assert.equal(handFonts(['9', '11'], new Set(['11', '9'])).get('11'), 'var(--font-serif)');
+  assert.deepEqual([...handFonts(['1', '9'], new Set(['9', '1']))], [
+    ['1', 'var(--font-hand)'], ['9', 'var(--font-serif)'],
+  ]);
+  assert.equal(handFonts(['3'], new Set(['3'])).get('3'), 'var(--font-serif)');
 });
 
 test('repeated tags keep one font and excess writers cannot silently share a font', () => {

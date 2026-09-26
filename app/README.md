@@ -68,8 +68,8 @@ uv run --project transform/python python -m transform_python.validate_schemas
 ## Data and rendering
 
 - Tagged hands use distinct fonts within each letter, also in sidenotes and the
-  hand key. Person 1 (J. M. R. Lenz) uses Source Serif when among the senders;
-  all other tagged writers receive Roboto Slab or Cormorant Garamond in person-ID order.
+  hand key. The first sender in metadata order always uses Source Serif.
+  All other tagged writers receive Roboto Slab or Cormorant Garamond in person-ID order.
   Untagged text retains Source Serif. The corpus currently needs at most two
   additional fonts; font assignment fails explicitly if that limit is exceeded.
 
