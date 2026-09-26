@@ -172,6 +172,21 @@ class FlowContractTests(unittest.TestCase):
             tree = self.render(body)
             self.assertEqual(tree.xpath('.//*[@class="page-anchor" or @class="lb-vspace"]/@class'), expected)
 
+    def test_table_after_page_marker_is_a_block_boundary(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            for body in [
+                'A<page index="2"/><tabs><tab value="1-2">B</tab></tabs>',
+                'A<page index="2"/> \n<!-- editorial comment --><hand ref="1"><tabs><tab value="1-2">B</tab></tabs></hand>',
+                '<tabs><tab value="1-2">A</tab><page index="2"/><tab value="2-2">B</tab></tabs>',
+            ]:
+                with self.subTest(kind=kind, body=body):
+                    tree = self.render(body, kind)
+                    self.assertEqual(self.page(tree).get('data-break'), 'block')
+                    expected = 'WeitereAngabenApparat4AB' if kind == 'traditions' else 'AB'
+                    self.assertEqual(''.join(tree.text_content().split()), expected)
+            tree = self.render('A<page index="2"/>B<tabs><tab value="1-2">C</tab></tabs>', kind)
+            self.assertEqual(self.page(tree).get('data-break'), 'inline')
+
     def test_classification_precedes_alignment_distribution(self):
         tree = self.render('<align pos="right"><ul>A</ul></align><page index="2"/><align pos="right">B</align>')
         marker = self.page(tree)

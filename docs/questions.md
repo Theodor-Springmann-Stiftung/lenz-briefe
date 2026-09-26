@@ -20,13 +20,17 @@
 - 199, 224, 366: Tabellen
 - 324: Adresse auf der dritten Seite 
 - 261: Kleienr entwurf
-
+- 164: Orig ohne Anfang
+- 81: Only pg 4
+- 367: address on the last page -- 1 and 4 onnly -- Klaviatur anschauen
+- 216, (2 Außenseite, aber keine Adresse?), 374 (Außenseite mit Text), 242 (Außenseite?), 228 (Außenseite?), 141 (Außenseite?), 216 (Außenseite?)
 
 ## TODO ME
-- 293: Tabelle 
 - Übersetzung und "Zusatzmaterial" in Serifen
 - Design/Hintergrund
 - Zusatzseiten
+- 91: Hände schief durch Sidenote (FIX in XML?)
+- 186: line break im vers?
 
 ## ME (WÜRDE ANDERS)
 - 266: verte

@@ -522,10 +522,15 @@
       or self::lb:*[not(*) and not(self::lb:line or self::lb:vspace)
                     and not(text()[normalize-space()])]
     ]" />
+    <!-- A following table/cell starts a block, even without an explicit line. -->
+    <xsl:variable name="next" select="($line/descendant::node()[. &gt;&gt; $page][
+      self::t:tabs or self::lb:tab or exists(. intersect $content)
+    ])[1]" />
     <xsl:copy>
       <xsl:copy-of select="@*" />
       <xsl:attribute name="break" select="
-        if (exists($content[. &lt;&lt; $page]) and exists($content[. &gt;&gt; $page]))
+        if (not($next/self::t:tabs or $next/self::lb:tab)
+            and exists($content[. &lt;&lt; $page]) and exists($content[. &gt;&gt; $page]))
         then 'inline' else 'block'" />
     </xsl:copy>
   </xsl:template>
