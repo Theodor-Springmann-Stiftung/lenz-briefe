@@ -293,7 +293,7 @@ html:not(.search-highlight-active) .edition-text :is(.lb-line-block, .tab, .lb-t
 .edition-text sup, .edition-text sub { font-size:.75em; line-height:0; position:relative; vertical-align:baseline; }
 .edition-text sup { top:-.5em; }
 .edition-text sub { bottom:-.25em; }
-.edition-text .fn[data-empty] { display:inline-block; width:1ch; height:1em; vertical-align:middle; }
+.edition-text .fn[data-empty] { display:inline-block; width:0; height:1em; vertical-align:middle; }
 .edition-text .ul { text-decoration:underline; text-underline-offset:.14em; text-decoration-skip-ink:none; }
 .edition-text .dul { text-decoration:underline double; text-underline-offset:.14em; text-decoration-skip-ink:none; }
 .edition-text .tul { text-decoration:underline double; text-underline-offset:.14em; text-decoration-skip-ink:none; border-bottom:1px solid currentColor; padding-bottom:.22em; }

@@ -20,10 +20,15 @@ const previous = catalog.letters[index - 1];
 const next = catalog.letters[index + 1];
 const hands = Object.fromEntries(letter.handRefs.map(ref => [ref, catalog.people[ref]?.name || `Unbekannte Hand (${ref})`]));
 const senderRefs = new Set(letter.events.filter(event => event.type === 'sent').flatMap(event => event.persons.map(person => person.ref)));
-const handStyles = [...handFonts(letter.handRefs, senderRefs)].map(([ref, font]) => `${[
-  `.letter-content .edition-text .hand[data-ref=${JSON.stringify(ref)}]`,
-  `.letter-content .hand-sample[data-ref=${JSON.stringify(ref)}]`,
-].join(', ')} { font-family: ${font};${font === 'var(--font-hand-second)' ? ' font-weight: 600; font-variant-numeric: lining-nums;' : ''} }`).join('\n');
+const handStyles = [...handFonts(letter.handRefs, senderRefs)].map(([ref, font]) => {
+  const textSelector = `.letter-content .edition-text .hand[data-ref=${JSON.stringify(ref)}]`;
+  const sampleSelector = `.letter-content .hand-sample[data-ref=${JSON.stringify(ref)}]`;
+  const thirdHand = font === 'var(--font-hand-second)';
+  const scale = thirdHand ? 1.1 : font === 'var(--font-hand)' ? 0.95 : 1;
+  return `${textSelector}, ${sampleSelector} { font-family: ${font};${thirdHand ? ' font-weight: 600; font-variant-numeric: lining-nums;' : ''} }
+    ${scale !== 1 ? `${textSelector} { font-size: ${scale}em; line-height: 1; }
+    ${sampleSelector} { font-size: ${1.25 * scale}rem; }` : ''}`;
+}).join('\n');
 const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'haende', name: 'Hände'}] : [])];
 ---
 <Layout wide title={`Brief ${letter.letter} · ${titleFor(letter)} · Lenz Briefe`}>
