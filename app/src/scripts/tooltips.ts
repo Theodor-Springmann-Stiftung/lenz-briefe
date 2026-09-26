@@ -24,6 +24,10 @@ export function initializeTooltips(root: ParentNode = document) {
     duration: 0,
     offset: [0, 8],
     interactive: true,
+    onShow(instance) {
+      const target = instance.reference.getAttribute('popovertarget');
+      if (target && document.getElementById(target)?.matches(':popover-open')) return false;
+    },
     appendTo: () => document.body,
     aria: { content: 'describedby', expanded: false },
   })) instances.set(instance.reference as HTMLElement, instance);
@@ -37,6 +41,12 @@ export function destroyTooltips(root: ParentNode) {
 }
 
 initializeTooltips();
+
+document.getElementById('quick-legend')?.addEventListener('beforetoggle', event => {
+  if ((event as ToggleEvent).newState !== 'open') return;
+  const button = document.querySelector<HTMLElement>('.quick-legend-toggle');
+  if (button) instances.get(button)?.hide();
+});
 
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') hideAll({ duration: 0 });

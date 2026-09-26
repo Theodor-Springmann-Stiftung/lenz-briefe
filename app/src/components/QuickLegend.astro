@@ -1,10 +1,9 @@
 ---
 import Icon from './Icon.astro';
-import SidenotePosition from './SidenotePosition.astro';
-import { quickLegend } from '../lib/legend';
+import LegendExample from './LegendExample.astro';
+import { quickLegend, legendGroups } from '../lib/legend';
 import { base } from '../lib/edition';
-const groups = ['Hauptsächlich im Druck', 'In der Handschrift', 'Editorische Hinweise', 'Layout'];
-const notePositions = ['top left', 'top', 'top right', 'left', 'right', 'bottom left', 'bottom', 'bottom right'];
+
 ---
 <button class="quick-legend-toggle" type="button" popovertarget="quick-legend" aria-label="Schnelle Legende öffnen" title="Schnelle Legende" data-tooltip="Schnelle Legende" data-tippy-placement="top" data-tippy-trigger="mouseenter focus">
   <span aria-hidden="true">?</span>
@@ -15,13 +14,11 @@ const notePositions = ['top left', 'top', 'top right', 'left', 'right', 'bottom 
     <button type="button" popovertarget="quick-legend" popovertargetaction="hide" aria-label="Legende schließen" autofocus><Icon name="close" /></button>
   </header>
   <div class="quick-legend-body" tabindex="0" role="region" aria-label="Auszeichnungen und Beispiele">
-    {groups.map(group => <section>
+    {legendGroups.map(group => <section>
       <h3>{group}</h3>
       <dl>{quickLegend.filter(item => item.group === group).map(item => <div class="quick-legend-entry" data-legend-tag={item.tag} tabindex="0">
         <dt><span>{item.label}</span>{item.short && <small>{item.short}</small>}</dt>
-        {item.tag === 'sidenote'
-          ? <dd class="quick-legend-positions">{notePositions.map(position => <SidenotePosition position={position} />)}</dd>
-          : <dd class="edition-text" set:html={item.quickExample ?? item.example} />}
+        <dd class="edition-text"><LegendExample item={item} /></dd>
       </div>)}</dl>
     </section>)}
   </div>

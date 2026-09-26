@@ -1,16 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { legend } from '../../lib/legend';
+import LegendExample from '../../components/LegendExample.astro';
+import { quickLegend, legendGroups } from '../../lib/legend';
 ---
 <Layout title="Editionsrichtlinien · Lenz Briefe">
-  <section class="about-page">
+  <section class="about-page edition-guidelines">
     <h1>Editionsrichtlinien</h1>
-    <div class="legend-table-wrap" tabindex="0" role="region" aria-label="Formatierungslegende">
-      <table class="legend-table">
-        <caption>Formatierungslegende</caption>
-        <thead><tr><th scope="col">Auszeichnung</th><th scope="col">Beispiel</th><th scope="col">Darstellung</th></tr></thead>
-        <tbody>{legend.map(item => <tr data-tag={item.tag}><th scope="row"><code>{item.xml}</code></th><td><div class="edition-text legend-example" set:html={item.example} /></td><td>{item.meaning}</td></tr>)}</tbody>
+    <label class="legend-tag-toggle"><input type="checkbox" id="show-legend-tags" /> XML-Tags anzeigen</label>
+    {legendGroups.map(group => <section class="guideline-section" aria-label={group}>
+      <h2>{group}</h2>
+      <table class="guideline-table">
+        <thead class="sr-only"><tr><th scope="col">Auszeichnung</th><th scope="col">Beispiel</th></tr></thead>
+        <tbody>{quickLegend.filter(item => item.group === group).map(item => <tr data-tag={item.tag}>
+          <th scope="row"><span>{item.label}</span>{item.short && <p>{item.short}</p>}<code class="legend-xml">{item.xml}</code></th>
+          <td><div class="edition-text legend-example"><LegendExample item={item} /></div></td>
+        </tr>)}</tbody>
       </table>
-    </div>
+    </section>)}
   </section>
 </Layout>
