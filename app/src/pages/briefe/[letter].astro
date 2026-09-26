@@ -5,6 +5,7 @@ import Icon from '../../components/Icon.astro';
 import QuickLegend from '../../components/QuickLegend.astro';
 import SidenotePosition from '../../components/SidenotePosition.astro';
 import {sidenoteOrder} from '../../lib/margin-placement.mjs';
+import {handDeclarations} from '../../lib/hand-settings.mjs';
 import {handFonts, handKeyRefs} from '../../lib/hand-fonts.mjs';
 import {catalog, letterFiles, letterUrl, titleFor, type Letter} from '../../lib/edition';
 export function getStaticPaths() {
@@ -22,15 +23,17 @@ const next = catalog.letters[index + 1];
 const senderRefs = new Set(letter.events.filter(event => event.type === 'sent').flatMap(event => event.persons.map(person => person.ref)));
 const handRefs = handKeyRefs(letter.handRefs, senderRefs, letter.handOrder);
 const hands = Object.fromEntries(handRefs.map(ref => [ref, catalog.people[ref]?.name || `Unbekannte Hand (${ref})`]));
-const handStyles = [...handFonts(handRefs, senderRefs)].map(([ref, font]) => {
-  const textSelector = `.letter-content .edition-text .hand[data-ref=${JSON.stringify(ref)}]`;
-  const sampleSelector = `.letter-content .hand-sample[data-ref=${JSON.stringify(ref)}]`;
-  const thirdHand = font === 'var(--font-hand-second)';
-  const scale = thirdHand ? 1.1 : font === 'var(--font-hand)' ? 0.95 : 1;
-  return `${textSelector}, ${sampleSelector} { font-family: ${font};${thirdHand ? ' font-weight: 600; font-variant-numeric: lining-nums;' : ''} }
-    ${scale !== 1 ? `${textSelector} { font-size: ${scale}em; line-height: 1; }
-    ${sampleSelector} { font-size: ${1.25 * scale}rem; }` : ''}`;
-}).join('\n');
+const handStyles = [
+  // Also apply the base settings to the untagged main hand.
+  `.letter-content .edition-text { ${handDeclarations('base')} }`,
+  ...[...handFonts(handRefs, senderRefs)].map(([ref, font]) => {
+    const textSelector = `.letter-content .edition-text .hand[data-ref=${JSON.stringify(ref)}]`;
+    const sampleSelector = `.letter-content .hand-sample[data-ref=${JSON.stringify(ref)}]`;
+    const settings = font === 'var(--font-hand-second)' ? 'third'
+      : font === 'var(--font-hand)' ? 'second' : 'base';
+    return `${textSelector}, ${sampleSelector} { font-family:${font}; ${handDeclarations(settings)} font-variant-numeric:lining-nums; }`;
+  }),
+].join('\n');
 const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'haende', name: 'Hände'}] : [])];
 ---
 <Layout wide title={`Brief ${letter.letter} · ${titleFor(letter)} · Lenz Briefe`}>

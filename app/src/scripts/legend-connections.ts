@@ -24,6 +24,11 @@ if (legend && letter) {
   type Circle = {x: number; y: number; radius: number};
   let scheduled = false;
 
+  function fontIdentity(element: HTMLElement): string {
+    const style = getComputedStyle(element);
+    return `${style.fontFamily}|${style.fontWeight}|${style.fontVariationSettings}`;
+  }
+
   function visibleCircle(rect: DOMRect, target: HTMLElement, panelBounds: DOMRect, extraRadius = 0): Circle | null {
     if (rect.height <= 0) return null;
     const circle = {
@@ -69,12 +74,12 @@ if (legend && letter) {
     }
     // Select a visible word, rather than encircling an entire paragraph/hand.
     const walker = document.createTreeWalker(target, NodeFilter.SHOW_TEXT);
-    const font = target.matches('.aq, .hand') ? getComputedStyle(target).fontFamily : null;
+    const font = target.matches('.aq, .hand') ? fontIdentity(target) : null;
     let node: Node | null;
     while ((node = walker.nextNode())) {
       const parent = node.parentElement;
       if (!parent || parent.closest('[aria-hidden="true"]')) continue;
-      if (font && getComputedStyle(parent).fontFamily !== font) continue;
+      if (font && fontIdentity(parent) !== font) continue;
       for (const match of node.textContent!.matchAll(/\S+/gu)) {
         const range = document.createRange();
         range.setStart(node, match.index!);
@@ -104,7 +109,7 @@ if (legend && letter) {
       const hand = target.matches('.hand') ? target : [...content.querySelectorAll<HTMLElement>('.hand')]
         .find(hand => hand.dataset.ref === target.dataset.handRef);
       return [...example.querySelectorAll<HTMLElement>('span')]
-        .find(sample => hand && getComputedStyle(sample).fontFamily === getComputedStyle(hand).fontFamily) || example;
+        .find(sample => hand && fontIdentity(sample) === fontIdentity(hand)) || example;
     }
     return (selector && example.querySelector<HTMLElement>(selector)) || example;
   }

@@ -14,8 +14,8 @@
 @theme {
   --font-serif: "Source Serif", Georgia, "Times New Roman", serif;
   --font-sans: "Linux Biolinum", Arial, sans-serif;
-  --font-hand: "Roboto Slab", Rockwell, serif;
-  --font-hand-second: "Cormorant Garamond", Georgia, serif;
+  --font-hand: var(--font-serif);
+  --font-hand-second: var(--font-serif);
   --color-paper: #fcfcfb;
   --color-filter: #eff1ef;
   --color-ink: #292d27;
@@ -331,7 +331,7 @@
 button.hand-range-trigger { font:inherit; text-align:inherit; }
 .hand-range-background { position:absolute; background:rgb(52 88 117 / .065); border-radius:3px; pointer-events:none; z-index:-1; }
 /* Shared editorial semantics: these selectors also style imported XSLT HTML. */
-.edition-text { @apply font-serif; position:relative; isolation:isolate; line-height:1.85; hyphens:none; overflow-wrap:break-word; }
+.edition-text { @apply font-serif; font-weight:var(--hand-base-weight); font-variation-settings:var(--hand-base-optical); position:relative; isolation:isolate; line-height:1.85; hyphens:none; overflow-wrap:break-word; }
 .quick-legend .edition-text { font-size:1rem; line-height:1.5; }
 .apparatus .edition-text { @apply font-sans; }
 .margin-note .edition-text, .unplaced-note .edition-text { line-height:1.45; }
@@ -367,11 +367,15 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 .edition-text .page-anchor[data-break=inline]::before { content:' | '; white-space:normal; }
 /* The containing line supplies the leading, including when aq fills every
    wrapped line of a paragraph. Larger glyphs must not enlarge that leading. */
-.edition-text .aq { @apply font-sans; font-size:1.12em; line-height:1; }
+.edition-text .aq { @apply font-sans; font-weight:400; font-variation-settings:normal; font-size:1.12em; line-height:1; }
+.edition-text strong .aq { font-weight:700; }
 .edition-text .lb-ornament { display:block; width:5em; max-width:100%; height:1em; margin:.4em auto; background:currentColor; mask:url('../assets/line-tilde.svg') center / contain no-repeat; }
 .edition-text .lb-ornament--double-tilde { width:10.5em; mask-image:url('../assets/line-double-tilde.svg'); }
 .edition-text .aq .aq { font-size:1em; }
-.edition-text .hand { @apply font-hand; }
+.edition-text .hand { @apply font-hand; font-weight:var(--hand-second-weight); font-variation-settings:var(--hand-second-optical); }
+.edition-text [data-hand-style="base"] { font-family:var(--font-serif); font-weight:var(--hand-base-weight); font-variation-settings:var(--hand-base-optical); }
+.edition-text [data-hand-style="second"] { font-family:var(--font-hand); font-weight:var(--hand-second-weight); font-variation-settings:var(--hand-second-optical); }
+.edition-text [data-hand-style="third"] { font-family:var(--font-hand-second); font-weight:var(--hand-third-weight); font-variation-settings:var(--hand-third-optical); }
 .edition-text .ink { color:#163e78; }
 .edition-text .pe, .edition-text .note { color:#74746d; }
 .edition-text .note::before { content:'['; }

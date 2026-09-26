@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import {handSettingsVariables} from '../lib/hand-settings.mjs';
 import Icon from '../components/Icon.astro';
 import { base } from '../lib/edition';
 import Navigation from '../components/Navigation.astro';
@@ -14,6 +15,7 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {month: 'long', year: '
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
+    <style is:inline set:html={`:root { ${handSettingsVariables()} }`} />
     <script is:inline>document.documentElement.classList.add('js');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
