@@ -1,7 +1,8 @@
-import {normalizeSearch, prepareSearch, searchBlocks, searchPreview, matchPages} from '../lib/search.mjs';
+import {normalizeSearch, prepareSearch, searchBlocks, searchPreview, matchPages, searchSection, defaultSearchSection} from '../lib/search.mjs';
 import {initializeTooltips, destroyTooltips} from './tooltips';
+import {highlightText} from './highlight-text';
 
-interface SearchBlock { letter: string; kind: 'text' | 'sidenote' | 'tradition'; anchor: string; text: string; label?: string; pages?: [number, string][] }
+interface SearchBlock { letter: string; kind: 'metadata' | 'text' | 'sidenote' | 'tradition'; anchor: string; text: string; label?: string; pages?: [number, string][] }
 type IndexedBlock = SearchBlock & {normalized: string};
 
 export function createCatalogSearch(rows: Map<string | undefined, HTMLElement>, changed: () => void) {
@@ -17,7 +18,13 @@ export function createCatalogSearch(rows: Map<string | undefined, HTMLElement>, 
   let phase: 'idle' | 'loading' | 'ready' | 'error' = 'idle';
   let cachedQuery = '', cachedHits: IndexedBlock[] = [];
   let viewKey = '';
+  let accordionKey = '';
   const limits = new Map(groups.map(group => [group, 20]));
+  for (const group of groups) {
+    group.querySelector('summary')!.addEventListener('click', event => {
+      if (group.classList.contains('search-section-empty')) event.preventDefault();
+    });
+  }
 
   function load() {
     if (request || index || phase === 'error') return;
@@ -28,7 +35,8 @@ export function createCatalogSearch(rows: Map<string | undefined, HTMLElement>, 
         if (!response.ok) throw new Error('Search download failed');
         const data = await response.json();
         if (data.version !== 1 || !Array.isArray(data.blocks)) throw new Error('Invalid search index');
-        index = prepareSearch(data.blocks);
+        const metadata = JSON.parse(document.querySelector('#metadata-search-data')!.textContent!);
+        index = prepareSearch([...metadata, ...data.blocks]);
         phase = 'ready';
       } catch {
         phase = 'error';
@@ -84,10 +92,9 @@ export function createCatalogSearch(rows: Map<string | undefined, HTMLElement>, 
     for (const group of groups) {
       group.hidden = !active || !hits || !normalizeSearch(query);
       if (group.hidden) continue;
-      const traditions = group.dataset.searchSection === 'tradition';
       const byLetter = new Map<string, IndexedBlock[]>();
       for (const hit of hits!) {
-        if ((hit.kind === 'tradition') !== traditions) continue;
+        if (searchSection(hit.kind) !== group.dataset.searchSection) continue;
         if (!byLetter.has(hit.letter)) byLetter.set(hit.letter, []);
         byLetter.get(hit.letter)!.push(hit);
       }
@@ -95,8 +102,20 @@ export function createCatalogSearch(rows: Map<string | undefined, HTMLElement>, 
       const count = ids.reduce((n, id) => n + byLetter.get(id)!.length, 0);
       total += count;
       ids.forEach(id => matchedLetters.add(id));
-      group.querySelector('.search-section-count')!.textContent = `${count} ${count === 1 ? 'Fundstelle' : 'Fundstellen'} · ${ids.length} ${ids.length === 1 ? 'Brief' : 'Briefe'}`;
-      group.querySelector<HTMLElement>('.search-empty')!.hidden = count > 0;
+      group.classList.toggle('search-section-empty', count === 0);
+      const summary = group.querySelector('summary')!;
+      const details = group.querySelector('details')!;
+      if (count === 0) {
+        details.open = false;
+        summary.setAttribute('aria-disabled', 'true');
+        summary.tabIndex = -1;
+      } else {
+        summary.removeAttribute('aria-disabled');
+        summary.removeAttribute('tabindex');
+      }
+      group.querySelector('.search-section-count')!.textContent = count
+        ? `${count} ${count === 1 ? 'Fundstelle' : 'Fundstellen'} · ${ids.length} ${ids.length === 1 ? 'Brief' : 'Briefe'}`
+        : 'Keine Fundstellen';
       const fragment = document.createDocumentFragment();
       for (const id of ids.slice(0, limits.get(group))) {
         const row = rows.get(id)!;
@@ -112,7 +131,33 @@ export function createCatalogSearch(rows: Map<string | undefined, HTMLElement>, 
         const previews = document.createElement('ul');
         previews.className = 'search-previews';
         const url = row.querySelector<HTMLAnchorElement>('.letter-card-link')!.getAttribute('href')!;
+        const metadata = group.dataset.searchSection === 'metadata';
+        const destination = `${url}?${new URLSearchParams({q: query})}#${byLetter.get(id)![0].anchor}`;
+        if (metadata) {
+          item.classList.add('metadata-result-card');
+          highlightText(header, query);
+          header.querySelectorAll<HTMLAnchorElement>('a').forEach(link => {
+            link.href = destination;
+            link.classList.remove('reference-filter');
+          });
+          const cardLink = document.createElement('a');
+          cardLink.className = 'metadata-card-link';
+          cardLink.href = destination;
+          cardLink.setAttribute('aria-label', `Brief ${id} öffnen`);
+          item.append(cardLink);
+        }
         for (const hit of byLetter.get(id)!) {
+          if (metadata) {
+            const selectors: Record<string, string> = {
+              Absender: '.correspondence-senders', Empfänger: '.correspondence-recipients',
+              Absendeort: '.letter-date', Empfangsort: '.correspondence-recipients .event-place',
+              Absendedatum: '.letter-date, .correspondence-senders .event-date',
+              Empfangsdatum: '.correspondence-recipients .event-date',
+            };
+            const selector = selectors[hit.label || ''];
+            if (selector && [...header.querySelectorAll(selector)].some(element =>
+              normalizeSearch(element.textContent || '').includes(normalizeSearch(query)))) continue;
+          }
           const preview = document.createElement('li');
           const link = document.createElement('a');
           link.className = 'search-hit';
@@ -122,8 +167,8 @@ export function createCatalogSearch(rows: Map<string | undefined, HTMLElement>, 
           const pages = matchPages(hit, query) as string[];
           const consecutive = pages.every((page, i) => i === 0 || Number(page) === Number(pages[i - 1]) + 1);
           const pageLabel = pages.length ? `S. ${pages.length > 1 && consecutive ? `${pages[0]}–${pages.at(-1)}` : pages.join(', ')}` : '';
-          if (hit.kind === 'tradition') {
-            label.textContent = hit.label || 'Überlieferungsdaten';
+          if (hit.kind === 'tradition' || hit.kind === 'metadata') {
+            label.textContent = hit.label || (hit.kind === 'metadata' ? 'Metadaten' : 'Überlieferungsdaten');
             if (pageLabel) {
               const page = document.createElement('span');
               page.className = 'search-hit-pages';
@@ -153,7 +198,7 @@ export function createCatalogSearch(rows: Map<string | undefined, HTMLElement>, 
           preview.append(link);
           previews.append(preview);
         }
-        item.append(previews);
+        if (previews.childElementCount) item.append(previews);
         fragment.append(item);
       }
       const list = group.querySelector('.search-letter-list')!;
@@ -163,7 +208,16 @@ export function createCatalogSearch(rows: Map<string | undefined, HTMLElement>, 
       group.querySelector<HTMLElement>('.search-more')!.hidden = ids.length <= limits.get(group)!;
     }
     if (active && hits && normalizeSearch(query) && phase === 'ready') {
+      if (accordionKey !== key) {
+        accordionKey = key;
+        const preferred = defaultSearchSection(hits, orderedIds);
+        groups.forEach(group => { group.querySelector('details')!.open = false; });
+        const selected = groups.find(group => group.dataset.searchSection === preferred);
+        if (selected) selected.querySelector('details')!.open = true;
+      }
       status.textContent = `${total} ${total === 1 ? 'Fundstelle' : 'Fundstellen'} in ${matchedLetters.size} ${matchedLetters.size === 1 ? 'Brief' : 'Briefen'}`;
+    } else {
+      accordionKey = '';
     }
   }
   return {find, render};

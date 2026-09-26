@@ -132,6 +132,10 @@ uv run --project transform/python python -m transform_python.validate_schemas
   clears all filters. Remix Icons supplies the interface icons as embedded SVGs.
   Reload, shared URLs and Back/Forward restore filters and sorting. Search updates
   while typing. The unfiltered catalog remains readable without JavaScript.
+  Search results show metadata first, followed by letter text (including sidenotes)
+  and transmission records. Metadata search covers correspondents, places, displayed
+  dates, letter numbers, source types and editorial status; all sections share the
+  same person, place and year filters.
 
 Current layout conventions: one line-indent unit equals `2ch`; `tab value="i-n"`
 starts at fraction `(i-1)/n` of its row and occupies the space to the next cell.

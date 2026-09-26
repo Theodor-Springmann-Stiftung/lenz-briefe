@@ -1,6 +1,59 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {normalizeSearch, prepareSearch, searchBlocks, matchRanges, searchPreview, matchPages} from '../src/lib/search.mjs';
+import {normalizeSearch, prepareSearch, searchBlocks, matchRanges, searchPreview, matchPages, metadataSearchBlocks, searchSection, defaultSearchSection} from '../src/lib/search.mjs';
+
+test('accordion defaults to text, then transmission, then metadata within the active filters', () => {
+  const hits = [{letter:'1',kind:'metadata'}, {letter:'2',kind:'tradition'}, {letter:'3',kind:'text'}];
+  assert.equal(defaultSearchSection(hits, ['1','2','3']), 'text');
+  assert.equal(defaultSearchSection(hits, ['1','2']), 'tradition');
+  assert.equal(defaultSearchSection(hits, ['1']), 'metadata');
+  assert.equal(defaultSearchSection(hits, ['4']), null);
+  assert.equal(defaultSearchSection([{letter:'1',kind:'sidenote'}], ['1']), 'text');
+});
+
+test('metadata search covers correspondents, places, dates, number and sources', () => {
+  const letter = {letter:'20', hasOriginal:true, isDraft:true, isProofread:true,
+    traditions:[{isOriginal:true, type:'manuscript'}, {isOriginal:false, type:'print'}],
+    events:[
+      {type:'sent', persons:[{label:'Johann Christian Lenz', annotationText:'Bruder'}],
+        locations:[{label:'Arensburg [Kuressaare]'}], dates:[{text:'24. September 1772'}]},
+      {type:'received', persons:[{label:'Jakob Michael Reinhold Lenz'}],
+        locations:[{label:'Fort Louis'}], dates:[]},
+    ]};
+  const blocks = prepareSearch(metadataSearchBlocks([letter]));
+  for (const [query, label] of [['Christian Lenz','Absender'], ['Reinhold','Empfänger'],
+    ['kuressaare','Absendeort'], ['Fort Louis','Empfangsort'], ['September 1772','Absendedatum'],
+    ['LKB 20','Briefnummer'], ['Original','Quelle'], ['Druck','Quelle'], ['Entwurf','Status']]) {
+    const hits = searchBlocks(blocks, query);
+    assert.equal(hits.length, 1, query);
+    assert.equal(hits[0].label, label);
+    assert.equal(hits[0].kind, 'metadata');
+    assert.equal(hits[0].letter, '20');
+  }
+  assert.equal(searchBlocks(blocks, '1772 Jakob').length, 0);
+});
+
+test('letter numbers require an exact number, with or without the LKB prefix', () => {
+  const blocks = prepareSearch(metadataSearchBlocks(['2', '20', '120', '201'].map(letter => ({
+    letter, events: [], traditions: [],
+  }))));
+  for (const query of ['20', 'LKB 20', 'lkb 20']) {
+    assert.deepEqual(searchBlocks(blocks, query).map(hit => hit.letter), ['20']);
+  }
+  assert.deepEqual(searchBlocks(blocks, '2').map(hit => hit.letter), ['2']);
+  for (const query of ['LKB', '0', '12', '020']) {
+    assert.equal(searchBlocks(blocks, query).length, 0, query);
+  }
+});
+
+test('metadata precedes text hits and is not included in the text section', () => {
+  const blocks = prepareSearch([
+    ...metadataSearchBlocks([{letter:'1', events:[{type:'sent', persons:[{label:'Goethe'}], locations:[], dates:[]}], traditions:[]}]),
+    {letter:'2', kind:'text', text:'Goethe'}, {letter:'3', kind:'sidenote', text:'Goethe'},
+    {letter:'4', kind:'tradition', text:'Goethe'},
+  ]);
+  assert.deepEqual(searchBlocks(blocks, 'Goethe').map(hit => searchSection(hit.kind)), ['metadata','text','text','tradition']);
+});
 
 test('literal substring search ignores case, Unicode punctuation and whitespace', () => {
   const blocks = prepareSearch([{text: 'Mein, lieber\u00a0Freund!'}, {text: 'Kein Freund'}]);

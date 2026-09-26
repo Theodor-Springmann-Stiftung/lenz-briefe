@@ -7,9 +7,49 @@ export function prepareSearch(blocks) {
   return blocks.map(block => ({...block, normalized: normalizeSearch(block.text)}));
 }
 
+export function metadataSearchBlocks(letters) {
+  return letters.flatMap(letter => {
+    const blocks = [];
+    const add = (label, text, anchor = 'letter-metadata') => {
+      if (text?.trim()) blocks.push({letter: letter.letter, kind: 'metadata', anchor, label, text: text.trim()});
+    };
+    add('Briefnummer', `LKB ${letter.letter}`, 'letter-number');
+    for (const event of letter.events) {
+      const sent = event.type === 'sent';
+      for (const person of event.persons) {
+        add(sent ? 'Absender' : 'Empfänger', [person.label, person.annotationText].filter(Boolean).join(' · '));
+      }
+      for (const place of event.locations) add(sent ? 'Absendeort' : 'Empfangsort', place.label);
+      for (const date of event.dates) add(sent ? 'Absendedatum' : 'Empfangsdatum', date.text);
+    }
+    const sourceNames = {manuscript: 'Handschrift', print: 'Druck', unknown: 'Quelle ungeklärt'};
+    const sources = [...new Set(letter.traditions.map(source => source.isOriginal ? 'Original' : sourceNames[source.type]))];
+    if (letter.hasOriginal && !sources.includes('Original')) sources.unshift('Original');
+    for (const source of sources) add('Quelle', source);
+    if (letter.isDraft) add('Status', 'Entwurf');
+    if (letter.isProofread) add('Status', 'Kritisch geprüft');
+    return blocks;
+  });
+}
+
+export function searchSection(kind) {
+  return kind === 'sidenote' ? 'text' : kind;
+}
+
+export function defaultSearchSection(hits, orderedIds) {
+  const allowed = new Set(orderedIds);
+  const available = new Set(hits.filter(hit => allowed.has(hit.letter)).map(hit => searchSection(hit.kind)));
+  return ['text', 'tradition', 'metadata'].find(kind => available.has(kind)) || null;
+}
+
 export function searchBlocks(blocks, query) {
   const needle = normalizeSearch(query);
-  return needle ? blocks.filter(block => block.normalized.includes(needle)) : [];
+  return needle ? blocks.filter(block => {
+    if (block.kind === 'metadata' && block.anchor === 'letter-number') {
+      return needle === normalizeSearch(String(block.letter)) || needle === block.normalized;
+    }
+    return block.normalized.includes(needle);
+  }) : [];
 }
 
 const graphemes = new Intl.Segmenter('de', {granularity: 'grapheme'});

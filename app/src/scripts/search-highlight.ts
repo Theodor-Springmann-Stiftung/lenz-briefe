@@ -1,4 +1,5 @@
-import {matchRanges, normalizeSearch} from '../lib/search.mjs';
+import {normalizeSearch} from '../lib/search.mjs';
+import {highlightText} from './highlight-text';
 import filterOffIcon from 'remixicon/icons/System/filter-off-line.svg?raw';
 import searchIcon from 'remixicon/icons/System/search-line.svg?raw';
 
@@ -27,6 +28,23 @@ function positionDismissButton() {
   dismissButton.hidden = false;
   dismissButton.style.maxWidth = `${sidebar.width}px`;
   const center = rect.top + rect.height / 2;
+  const metadata = match.closest<HTMLElement>('[data-search-target]');
+  if (metadata) {
+    const bounds = metadata.getBoundingClientRect();
+    const edge = Math.min(sidebar.right, bounds.left - 16);
+    const available = edge - Math.max(8, sidebar.left);
+    if (available >= 100) {
+      dismissButton.style.maxWidth = `${available}px`;
+      dismissButton.style.left = `${edge + scrollX - dismissButton.offsetWidth}px`;
+      dismissButton.style.top = `${center + scrollY - dismissButton.offsetHeight / 2}px`;
+    } else {
+      // The header can extend into the text margin; keep the pill above it.
+      dismissButton.style.maxWidth = `${bounds.width}px`;
+      dismissButton.style.left = `${bounds.left + scrollX}px`;
+      dismissButton.style.top = `${bounds.top + scrollY - dismissButton.offsetHeight - 12}px`;
+    }
+    return;
+  }
   let right = sidebar.right;
   // Keep the highlight's vertical position; reserve horizontal room for numbers.
   const numbers = [...pageMargin.querySelectorAll('.page-number a')].map(number => number.getBoundingClientRect());
@@ -61,34 +79,9 @@ function highlightSearchTarget() {
   let id: string;
   try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
   const target = document.getElementById(id);
-  if (!target?.closest('.edition-text')) return;
+  if (!target?.closest('.edition-text, [data-search-target]')) return;
 
-  // Match across inline markup, then wrap each text fragment separately so
-  // italics, deletions, links and other editorial formatting stay intact.
-  const walker = document.createTreeWalker(target, NodeFilter.SHOW_TEXT);
-  const nodes: {node: Text; start: number; end: number}[] = [];
-  let text = '';
-  while (walker.nextNode()) {
-    const node = walker.currentNode as Text;
-    if (node.parentElement?.closest('script, style, [aria-hidden="true"]')) continue;
-    const start = text.length;
-    text += node.data;
-    nodes.push({node, start, end: text.length});
-  }
-  const ranges: {start: number; end: number}[] = matchRanges(text, query);
-  for (const {node, start, end} of nodes) {
-    for (const range of [...ranges].reverse()) {
-      const from = Math.max(start, range.start) - start;
-      const to = Math.min(end, range.end) - start;
-      if (from >= to) continue;
-      if (to < node.length) node.splitText(to);
-      const match = from > 0 ? node.splitText(from) : node;
-      const mark = document.createElement('mark');
-      mark.className = 'search-match';
-      match.replaceWith(mark);
-      mark.append(match);
-    }
-  }
+  highlightText(target, query);
   if (document.querySelector('mark.search-match')) {
     dismissButton = document.createElement('button');
     dismissButton.type = 'button';

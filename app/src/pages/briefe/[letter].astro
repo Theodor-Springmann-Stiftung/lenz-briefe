@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import LetterHeader from '../../components/LetterHeader.astro';
 import Icon from '../../components/Icon.astro';
+import QuickLegend from '../../components/QuickLegend.astro';
 import SidenotePosition from '../../components/SidenotePosition.astro';
 import {sidenoteOrder} from '../../lib/margin-placement.mjs';
 import {handFonts, handKeyRefs} from '../../lib/hand-fonts.mjs';
@@ -40,7 +41,7 @@ const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'hae
       <div class="letter-toolbar">
         <nav class="letter-navigation" aria-label="Briefnavigation">
           {previous && <a href={letterUrl(previous.letter)} aria-label={`Vorheriger Brief: ${previous.letter}`}><Icon name="arrowLeft" /></a>}
-          <span class="navigation-position">LKB {letter.letter}</span>
+          <span class="navigation-position" id="letter-number" data-search-target>LKB {letter.letter}</span>
           {next && <a href={letterUrl(next.letter)} aria-label={`Nächster Brief: ${next.letter}`}><Icon name="arrowRight" /></a>}
         </nav>
       </div>
@@ -66,6 +67,7 @@ const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'hae
       {handRefs.length > 0 && <div class="apparatus-entry hand-key" id="haende"><h2>Hände</h2><ul class="edition-text apparatus-text">{handRefs.map(ref => <li><span class="hand-sample" data-ref={ref} aria-hidden="true">Aa</span><button type="button" data-hand-ref={ref}>{hands[ref]}</button></li>)}</ul></div>}
     </section>
   </div>
+  <QuickLegend />
   <script type="application/json" id="hand-data" set:html={JSON.stringify(hands).replace(/</g, '\\u003c')} />
   <script>import '../../scripts/search-highlight';</script>
   <script>import '../../scripts/margins';</script>

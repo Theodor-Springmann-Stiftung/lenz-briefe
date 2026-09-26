@@ -12,7 +12,7 @@ const sent = letter.events.filter(e => e.type === 'sent');
 const received = letter.events.filter(e => e.type === 'received');
 const dates = sent.flatMap(event => event.dates.map(date => ({date, locations: event.locations})));
 ---
-<header class:list={['letter-header', {'letter-header--compact': compact}]}>
+<header id={compact ? undefined : 'letter-metadata'} data-search-target={compact ? undefined : ''} class:list={['letter-header', {'letter-header--compact': compact}]}>
   <Heading class="letter-date">
     {dates.length ? dates.map(({date, locations}, i) => <Fragment>{i > 0 && ' · '}<LetterDate date={date} locations={locations} letter={letter.letter} compact={compact} /></Fragment>)
       : compact ? <a class="letter-card-link" href={letterUrl(letter.letter)}>Ohne Datierung</a> : 'Ohne Datierung'}

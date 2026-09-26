@@ -5,6 +5,7 @@ import Filter from '../components/Filter.astro';
 import Icon from '../components/Icon.astro';
 import {catalog, filterOptions, base} from '../lib/edition';
 import searchIndexUrl from '../../generated/search.json?url';
+import {metadataSearchBlocks} from '../lib/search.mjs';
 const records = catalog.letters.map(l => ({id: l.letter, group: l.groupId, people:l.personIds, places:l.placeIds}));
 const firstGroup = catalog.groups[0];
 ---
@@ -32,11 +33,12 @@ const firstGroup = catalog.groups[0];
     </nav>
     <div class="search-feedback" hidden><p id="search-status" role="status" aria-live="polite"></p><button class="search-retry" type="button" hidden>Erneut laden</button></div>
     <div class="search-results" aria-label="Suchergebnisse" hidden>
-      {([{kind: 'text', location: 'Brieftexten'}, {kind: 'tradition', location: 'Überlieferungsdaten'}]).map(section => <section class="search-section" data-search-section={section.kind} aria-labelledby={`search-heading-${section.kind}`}>
-        <div class="search-section-heading"><h2 id={`search-heading-${section.kind}`}>Treffer in {section.location}</h2><span class="search-section-count" /></div>
-        <ol class="letter-list search-letter-list" />
-        <p class="search-empty">Keine Fundstellen.</p>
-        <button class="search-more" type="button" hidden>Weitere Treffer in {section.location} anzeigen</button>
+      {([{kind: 'metadata', location: 'Metadaten'}, {kind: 'tradition', location: 'Überlieferungsdaten'}, {kind: 'text', location: 'Brieftexten'}]).map(section => <section class="search-section" data-search-section={section.kind} aria-labelledby={`search-heading-${section.kind}`}>
+        <details>
+          <summary class="search-section-heading"><h2 id={`search-heading-${section.kind}`}>Treffer in {section.location}</h2><span class="search-section-count" /><Icon name="chevronDown" class="search-section-chevron" /></summary>
+          <ol class="letter-list search-letter-list" />
+          <button class="search-more" type="button" hidden><span class="search-more-label">Weitere Treffer in {section.location} anzeigen</span></button>
+        </details>
       </section>)}
     </div>
     <noscript><style is:inline>.letter-list > [hidden] { display: block !important; }</style><p class="notice">Alle Briefe sind unten chronologisch aufgeführt. Zum Filtern bitte JavaScript aktivieren.</p></noscript>
@@ -44,5 +46,6 @@ const firstGroup = catalog.groups[0];
     <div class="empty-state" hidden><h2>Keine Briefe gefunden.</h2><p>Wählen Sie einen anderen Zeitraum oder weniger Filter.</p><button type="button" data-reset>Alle Briefe anzeigen</button></div>
   </section>
   <script type="application/json" id="filter-data" set:html={JSON.stringify({records, groups:catalog.groups.map(g=>g.id)}).replace(/</g, '\\u003c')} />
+  <script type="application/json" id="metadata-search-data" set:html={JSON.stringify(metadataSearchBlocks(catalog.letters)).replace(/</g, '\\u003c')} />
   <script>import '../scripts/catalog';</script>
 </Layout>
