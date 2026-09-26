@@ -12,12 +12,12 @@ if (legend && letter) {
   const svgNS = 'http://www.w3.org/2000/svg';
   const textMeasure = document.createElement('canvas').getContext('2d')!;
   const selectors: Record<string, string> = {
-    b: 'strong', it: 'em', aq: '.aq', ink: '.ink', pe: '.pe',
+    b: 'strong', it: 'em', aq: '.aq', large: '.large', ink: '.ink', pe: '.pe',
     hand: '.hand, .hand-label [data-hand-ref], .sidenote-details [data-hand-ref], .hand-key [data-hand-ref]',
     ul: '.ul, .dul, .tul', highlight: '.highlight',
     del: 'del:not(del del, .subst del, .undo del)', er: '.er',
     insertion: '.insertion:not(.subst .insertion)', subst: '.subst', undo: '.undo',
-    note: '.note', tl: '.tl', nr: '.nr', vspace: '.lb-vspace',
+    note: '.note', tl: '.tl', nr: '.nr', vspace: '.lb-vspace:not([data-presentational="true"])',
     page: '.page-anchor[data-break="inline"], .page-number a',
     sidenote: '.sidenote-position',
   };
@@ -109,6 +109,36 @@ if (legend && letter) {
     return (selector && example.querySelector<HTMLElement>(selector)) || example;
   }
 
+  function presentationalSpacing(panelBounds: DOMRect): DocumentFragment {
+    const annotations = document.createDocumentFragment();
+    const label = 'Abstand zur Verständnishilfe';
+    textMeasure.font = `14px ${getComputedStyle(panel).fontFamily}`;
+    const labelWidth = textMeasure.measureText(label).width;
+    for (const gap of content.querySelectorAll<HTMLElement>('.lb-vspace[data-presentational="true"]')) {
+      if (!gap.closest('.letter-body, .margin-note, .unplaced-note') || !gap.checkVisibility({checkVisibilityCSS: true, checkOpacity: true})) continue;
+      const bounds = gap.getBoundingClientRect();
+      if (bounds.height < 12 || bounds.top < 6 || bounds.bottom > innerHeight - 6) continue;
+      const besidePanel = bounds.bottom > panelBounds.top && bounds.top < panelBounds.bottom;
+      const x = Math.max(bounds.left + 12, besidePanel ? panelBounds.right + 20 : 12);
+      if (x + 12 + labelWidth > Math.min(bounds.right, innerWidth - 8)) continue;
+      const middle = bounds.top + bounds.height / 2;
+      const atPoint = document.elementFromPoint(x, middle);
+      if (!atPoint || !(gap.contains(atPoint) || atPoint.contains(gap))) continue;
+      const group = document.createElementNS(svgNS, 'g');
+      group.classList.add('legend-presentational-spacing');
+      const ruler = document.createElementNS(svgNS, 'path');
+      const top = bounds.top + 3, bottom = bounds.bottom - 3;
+      ruler.setAttribute('d', `M ${x} ${top} V ${bottom} M ${x - 5} ${top} H ${x + 5} M ${x - 5} ${bottom} H ${x + 5}`);
+      const text = document.createElementNS(svgNS, 'text');
+      text.setAttribute('x', String(x + 12));
+      text.setAttribute('y', String(middle));
+      text.textContent = label;
+      group.append(ruler, text);
+      annotations.append(group);
+    }
+    return annotations;
+  }
+
   function draw() {
     scheduled = false;
     overlay.replaceChildren();
@@ -119,6 +149,7 @@ if (legend && letter) {
     const panelBounds = panel.getBoundingClientRect();
     const clip = scroller.getBoundingClientRect();
     const paths = document.createDocumentFragment();
+    if (activeRow.dataset.legendTag === 'vspace') paths.append(presentationalSpacing(panelBounds));
     for (const row of rows) {
       if (row !== activeRow) continue;
       const rowBounds = row.getBoundingClientRect();

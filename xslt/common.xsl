@@ -547,7 +547,7 @@
 
   <xsl:template match="lb:vspace">
     <xsl:variable name="lines" select="xs:positiveInteger(@lines)" />
-    <div class="lb-vspace" data-lines="{$lines}" style="height: {$lines}lh" aria-hidden="true"></div>
+    <div class="lb-vspace" data-lines="{$lines}" data-presentational="{@presentational = ('true', '1')}" style="height: {$lines}lh" aria-hidden="true"></div>
   </xsl:template>
 
   <xsl:function name="lb:has-align" as="xs:boolean">

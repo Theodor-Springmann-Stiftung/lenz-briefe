@@ -39,6 +39,17 @@ class SpacingTests(unittest.TestCase):
         self.assertEqual(tree.xpath('.//*[@id="page-1"]/@id'), ['page-1'])
         self.assertEqual(len(self.blocks(tree)), 1)
 
+    def test_presentational_spacing_is_identifiable_in_html(self):
+        for sidenote in [False, True]:
+            with self.subTest(sidenote=sidenote):
+                tree = self.render('A<vspace lines="1" presentational="true"/><page index="2"/>'
+                                   'B<vspace lines="1" presentational="1"/>C'
+                                   '<vspace lines="1"/>D<vspace lines="1" presentational="false"/>'
+                                   'E<vspace lines="1" presentational="0"/>F', sidenote)
+                self.assertEqual(tree.xpath('.//*[@class="lb-vspace"]/@data-presentational'),
+                                 ['true', 'true', 'false', 'false', 'false'])
+                self.assertEqual(tree.xpath('.//*[@class="lb-vspace"]/@style'), ['height: 1lh'] * 5)
+
     def test_wrapped_text_and_table_spacing(self):
         tree = self.render('<aq>A<vspace lines="2"/><line/>B</aq><tabs><tab value="1-2">C</tab><vspace lines="1"/><line/><tab value="1-2">D</tab></tabs>')
         self.assertEqual(tree.xpath('.//*[@class="lb-vspace"]/@data-lines'), ['2', '1'])

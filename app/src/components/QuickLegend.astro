@@ -6,7 +6,7 @@ import { base } from '../lib/edition';
 const groups = ['Hauptsächlich im Druck', 'In der Handschrift', 'Editorische Hinweise', 'Layout'];
 const notePositions = ['top left', 'top', 'top right', 'left', 'right', 'bottom left', 'bottom', 'bottom right'];
 ---
-<button class="quick-legend-toggle" type="button" popovertarget="quick-legend" aria-label="Schnelle Legende öffnen" title="Schnelle Legende">
+<button class="quick-legend-toggle" type="button" popovertarget="quick-legend" aria-label="Schnelle Legende öffnen" title="Schnelle Legende" data-tooltip="Schnelle Legende" data-tippy-placement="top" data-tippy-trigger="mouseenter focus">
   <span aria-hidden="true">?</span>
 </button>
 <aside id="quick-legend" class="quick-legend" popover="auto" role="dialog" aria-labelledby="quick-legend-title">

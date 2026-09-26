@@ -7,7 +7,7 @@ export const legend: LegendEntry[] = [
   {tag:'aq',group:"In der Handschrift", label:"Text in lateinischer Schrift", short:"",  xml:'<aq>', example:'<span class="aq" lang="la">Amice carissime</span>', meaning:'Leicht vergrößerte serifenlose Schrift zum optischen Ausgleich; zugleich als Latein ausgezeichnet.'},
   {tag:'b',group:"Hauptsächlich im Druck", label:"Fettdruck", short:"", quickExample:"<strong>Wort</strong>",  xml:'<b>', example:'<strong>Mein lieber Freund</strong>', meaning:'Fettdruck.'},
   {tag:'it',group:"Hauptsächlich im Druck", label:"Kursivdruck", short:"", quickExample:"<em>Wort</em>",  xml:'<it>', example:'<em>Mein lieber Freund</em>', meaning:'Kursivschrift.'},
-  {tag:'large',group:"Schrift", label:"Größere Schrift", short:"", quickExample:"<span class=\"large\">Wort</span>",  xml:'<large>', example:'<span class="large">Mein lieber Freund</span>', meaning:'Vergrößerte Schrift.'},
+  {tag:'large',group:"In der Handschrift", label:"Größere Schrift", short:"", quickExample:"<span class=\"large\">Wort</span>",  xml:'<large>', example:'<span class="large">Mein lieber Freund</span>', meaning:'Vergrößerte Schrift.'},
   {tag:'ul',group:"In der Handschrift", label:"Unterstrichen", short:"", quickExample:'<div class="quick-legend-variants"><span class="ul">Einfach</span><span class="dul">Zweifach</span><span class="tul"><span class="tul-second"><span class="tul-third">Dreifach</span></span></span></div>',  xml:'<ul>', example:'<span class="ul">Mein lieber Freund</span>', meaning:'Einfache Unterstreichung.'},
   {tag:'sup',group:"Schrift", label:"Hochgestellt", short:"",  xml:'<sup>', example:'Wort<sup>hoch</sup>', meaning:'Hochgestellter Text.'},
   {tag:'sub',group:"Schrift", label:"Tiefgestellt", short:"",  xml:'<sub>', example:'Wort<sub>tief</sub>', meaning:'Tiefgestellter Text.'},
@@ -40,12 +40,15 @@ export const legend: LegendEntry[] = [
   {tag:'tabs',group:"Anordnung", label:"Spalten", short:"Mehrere Zeilen in Spalten.",  xml:'<tabs>', example:'<div class="tabs"><div class="lb-tab-row"><div class="tab" style="--cell-width:50%">erste Spalte</div><div class="tab" style="--cell-width:50%">zweite Spalte</div></div><div class="lb-tab-row"><div class="tab" style="--cell-width:50%">darunter</div><div class="tab" style="--cell-width:50%">darunter</div></div></div>', meaning:'Zusammengehörige Zeilen mit frei positionierten Spalten.'},
   {tag:'tab',group:"Anordnung", label:"Spaltenbereich", short:"Text beginnt an einer festen Position.",  xml:'<tab value="1-2"> / <tab value="2-2">', example:'<div class="lb-tab-row"><div class="tab" data-value="1-2" style="--cell-width:50%">links</div><div class="tab" data-value="2-2" style="--cell-width:50%">ab der Hälfte</div></div>', meaning:'Ein einzelner Spaltenbereich. Die Positionsangabe unterteilt die Zeile; hier beginnt die zweite Spalte bei der Hälfte.'},
   {tag:'page',group:"Layout", label:"Seitenwechsel", short:"Seitenzahlen links; ein Strich markiert den Wechsel im laufenden Text.", quickExample:"<span style=\"font-family:var(--font-sans)\">2</span> &nbsp; Text<span class=\"page-anchor\" data-break=\"inline\"></span>Text",  xml:'<page index="2"/>', example:'<div class="page-number">2</div><div>Der Text geht<span class="page-anchor" data-break="inline"></span>auf der neuen Seite weiter.</div>', meaning:'Kleine serifenlose Seitenzahl rechtsbündig in der linken Randspalte. Innerhalb eines Textblocks markiert „ | “ den Seitenwechsel; an einem Blockbeginn entfällt die Markierung. Eine erste Seite mit der Nummer 1 wird nicht beschriftet.'},
-  {tag:'sidenote',group:"Layout", label:"Randnotizen", short:"Die Symbole zeigen die Position auf der Briefseite.", quickExample:"<div class=\"quick-legend-margin-sample\"><span>Brieftext</span><aside>Randnotiz</aside></div>",  xml:'<sidenote page="2" pos="left">', example:'<div class="legend-margin-example"><aside>Randnotiz<br>zur Seite 2</aside><div>Brieftext auf der zugehörigen Seite.</div></div>', meaning:'Randnotiz am Beginn der zugehörigen Seite im rechten Rand. Auf schmalen Bildschirmen steht sie unter dem Brieftext; unzugeordnete Notizen bleiben ebenfalls erhalten.'},
+  {tag:'sidenote',group:"Layout", label:"Randnotizen", short:"Möglichst zu Anfang der Seite. Die Symbole zeigen die Position auf der Briefseite.", quickExample:"<div class=\"quick-legend-margin-sample\"><span>Brieftext</span><aside>Randnotiz</aside></div>",  xml:'<sidenote page="2" pos="left">', example:'<div class="legend-margin-example"><aside>Randnotiz<br>zur Seite 2</aside><div>Brieftext auf der zugehörigen Seite.</div></div>', meaning:'Randnotiz am Beginn der zugehörigen Seite im rechten Rand. Auf schmalen Bildschirmen steht sie unter dem Brieftext; unzugeordnete Notizen bleiben ebenfalls erhalten.'},
 ];
 
-// The compact reading aid deliberately shows only the selected styles.
-const quickLegendTags = new Set([
-  'b', 'it', 'aq', 'ink', 'pe', 'hand', 'ul', 'highlight', 'del', 'er',
-  'insertion', 'subst', 'undo', 'note', 'tl', 'nr', 'vspace', 'page', 'sidenote',
-]);
-export const quickLegend = legend.filter(item => quickLegendTags.has(item.tag));
+// Most frequent first within each section, counted in briefe.xml (including
+// sidenotes). Underlining combines ul/dul/tul; spacing excludes presentational gaps.
+const quickLegendTags = [
+  'it', 'b',
+  'ul', 'aq', 'del', 'insertion', 'hand', 'pe', 'subst', 'er', 'ink', 'highlight', 'large', 'undo',
+  'note', 'tl', 'nr',
+  'page', 'vspace', 'sidenote',
+];
+export const quickLegend = quickLegendTags.flatMap(tag => legend.filter(item => item.tag === tag));

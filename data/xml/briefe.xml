@@ -95,7 +95,7 @@
 <vspace lines="1" presentational="true"/>
 <page index="4" />
 <line /><align pos="center"> <note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <address>
 <line /><aq>A Monsieur
 <line />Monsieur <ul>Lenz</ul>
@@ -492,7 +492,7 @@ darf den Bogen nicht zu hoch spannen, weil er dir in d. Noth geholfen p. Du hast
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
 <line />
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>A Monsieur
 <line />Monsieur J. M. R. Lenz.
 <line />Kandidat der Theologie,
@@ -968,7 +968,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line /><align pos="center">Zürich, Donnerstags, Abends nach 3 uhr.</align>
 <vspace lines="1"/>
 <line /><align pos="center"><note>Adresse:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>An den Verfasser der <it>Meynungen eines Layen</it> schleunigst – abzugeben.</address>
 </letterText>
 
@@ -1171,7 +1171,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 
 <letterText letter="55"><page index="1"/>
 <line /><align pos="center"><note>Luise Königs Hand:</note></align>
-    <vspace lines="1"/>
+    <vspace lines="1" presentational="true"/>
 <line /><align pos="right">Strass. d. 13t julii 75</align>
 <line tab="1"/>Eben komme ich von Buchsweiler zurück. desswegen eine so späte Antwort auf Ihr liebes herrliches Briefchen – ja wohl Briefchen! aber liegt nicht dein gantzes, liebendes Hertz darinne, dies ersetzt mir alles – meine gantze Seele umfasst dich dafür, u seegnet laut. Amen Amen! – ich habe Freunde in Buchs. verlassen – den würdigen Rathsamhausen verlassen, ländliche Freuden – u doch ist mir wohl dass ich hier bin – ich bin in <it>meinem Eigenthum</it>. diess geht mir über alles – Raths. will ich soll ihn in Ihr Andencken zurückrufen, es ist ihm kostbar, er verehrt Sie, dann er kennt Ihren gantzen Werth – er hat es mir oft wiederholt ihn nicht bey Ihnen zu vergessen – diesser liebe Man! warum kan ich nicht immer um ihn leben! so einen Man – u ich heurathe noch – unsre Rehfeldin ist noch immer das muntre schwindliche Weib, aber dabey redlich u gut – ich habe ihr die Stelle aus Ihrem Brief <it>für sie</it> gelesen u es hat ihr wohl gethan – sie wollte mir einen Brief für Sie mitgeben, aber unter den Freuden u Herrlichkeiten des Lebens, vergass sie ihn. unsre beyden jüngern Printzen waren da, die haben alles froh gemacht – hat Ihnen unsre Hessin die Stelle aus Lentzens Brief an mich, ausgeschrieben? hier ist noch einmahl „ich bitte sie sagen Sie doch der theuren Herderin viel Gutes von mir, u welche Aufmunterung u Erquickung mir ihr Beyfall ist. ich wünschte ich kennete ihren Geschmack u könte für sie allein ein Stück schreiben, sie sollte mir so viel werth sein als das ganze Publicum. sagen Sie ihr ich habe eine Lucretia geschrieben, vieleicht dass Götte sie drucken lässt, sie möge alsdann auf die Sceenen acht haben in welchen Flavia vorkommt u mir ihre Meinung drüber wissen lassen. ihr Gefühl allein soll mir der Probierstein all der weiblichen Characktere sein die ich mir vorzüglich geglückt glaube“ – u dencken Sie diessen neuen lieben Freund verliehre ich vieleicht bald – u auf lange – hier fühle ich mich wieder in der Welt, ob ich schon in Augenblicken von oben herunter auf sie blicke – ich soll eine Fürbitte bey Ihnen für ihn einlegen – eurer beyden Schattenriss soll ihm Stärkung Trost u Freude auf seiner langen Reise seyn – wären sie auch nur halb gut – er will das übrige hinzusetzen u glücklich dabey seyn – doch hier kommt er selbst, zu bitten – zu flehen – ich will ihm noch einmahl die Conditionen weisen unter welchen er sie haben soll – aber dafür will <it>ich</it> davon frey sein – selbst mein Gesicht <it> das Sie kennen,</it> sagt Ihnen warum – u dazu – habe ich es unsrer Fridericke abgeschlagen, sie hat die Ursachen gebilligt, sie mag sie Ihnen sagen – kriechet immer mit eurem Buben auf Teppichen herum – da wo Agesilaus unter seinen Kindern auf einem Steckenpferde herum reitet, ist er mir am grössten
 <line /><align pos="right">Luise.</align>
@@ -1340,7 +1340,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <letterText letter="68"><page index="1"/>
 <line /><align pos="center"><note>Vermerk der Abschrift: („Der Anfang dieses Briefes betrift eine Erzählung der Fr. v. L. R., <ul>‚Der weibliche
     Werther‘</ul> die <ul>Lenz</ul> handschriftlich erhalten hatte.)</note></align>
-    <vspace lines="1"/>
+    <vspace lines="1" presentational="true"/>
 <line tab="1"/>– – Indessen deucht mich, ist doch die Natur der meisten Leidenschaften gewöhnlicher Seelen, nur ein vermischtes Gewebe von Eitelkeit und Gefühl des Werths im Gegenstande. Und ich kann doch antworten, dieser Mensch liebt – aber eigennützig. Ich unterscheide ihn von dem hartherzigen M., der bloß aus Eitelkeit, geliebt zu werden wünschte. Dieser wünscht bloß zu erfahren, ob und wie das Herz empfinde, um es lieben zu können. Freilich bleibt’s unredlich. –
 <line tab="1"/>Ach! gnädige Frau! Wie oft liebte ich ohne Hoffnung! Wie oft mit der Hoffnung, und immer unglücklich! Meine gefährlichsten Bekanntschaften sind allezeit mit den liebenswürdigsten Personen Ihres Geschlechts gewesen. Jede neue Freundin kostet mich einen Theil meines Lebens. Doch kenn’ ich keinen glücklichern Tod. Kenne sonst kein Glück auf dieser Altagswelt.
 <line tab="1"/>Was aber meines Herzens Geheimniß betrifft, so wird es mit mir begraben werden. Verzeihen Sie meine Offenherzigkeit und meine Discretion. Oder vielmehr, lassen Sie diesen schwachen Augenblick Niemanden bekannt von mir werden.
@@ -1386,7 +1386,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>in der unteren Hälfte des Blattes:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line tab="1"/><align pos="right">Es will und <ul>darf</ul> kein Mensch meine <ul>Wolken</ul> drucken lassen Sobald ich aber zu Gelde komme laß ichs auf meine Kosten drucken in Kehl, wo ich Götter Helden und Wieland drucken ließ. Dann sollst Dus haben Bis dahin – ich beschwöre Dich – schweig davon.</align>
 </letterText>
 
@@ -2212,7 +2212,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/>Wegen der Soldaten sey ruhig. Ists <dul>wahr</dul> daß Du nach Weymar kommst so werde ich wieder einmal eine Freude haben. Eine.</sidenote>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn <ul>Herder</ul>
 <line />Oberkonsistoralrath
@@ -2445,7 +2445,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn Oberkonsistorialrath <dul>Herder</dul>
 <line />in Bückeburg.</address>
@@ -2582,7 +2582,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn <ul>Lenz,</ul> Gelehrten
 <line />Bey Dr. Göthen zu erfragen.
@@ -2768,7 +2768,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn <ul>Gotter</ul>
 <line />Archivarius
@@ -2785,7 +2785,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>An Lenz oder Göthe
 <line />Weymar.</address>
 </letterText>
@@ -2945,7 +2945,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 
 <letterText letter="180"><page index="1"/>
 <line /><align pos="center"><note>Zitat aus einem Fremdbrief. „So schreibt er, unter andern, ganz cavaliérement:“</note></align>
-   <vspace lines="1"/>
+   <vspace lines="1" presentational="true"/>
 <line tab="1"/>Madame! Schicken Sie mir doch einige französische Chansons; ich wünschte mich in den Abendstunden damit zu delassiren.
 </letterText>
 
@@ -2978,7 +2978,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn Archivarius <ul>Gotter</ul>
 <line />in Gotha.</address>
@@ -3017,7 +3017,7 @@ davon eine Compagnie aus Grenadirs besteht. Die 4 andern aus Gemeinen. Das zweit
 <line />
 <vspace lines="1"/>
 <line /><align pos="center"><note>am linken Rand der zweiten Seite vertikal Kalkulationen von Lenz’ Hand</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <!-- Die Berechnungen von Lenz sind hier nicht abgebildet -->
 <page index="3"/>
 <line tab="1"/>Wohl bekom Dir Dein <aq>Bucephalus!</aq> Bücher schik ich Dir keine der Porto kommt Dich höher als sie werth sind. <aq>Shakespear</aq> und mein Homer sind hier geblieben, ich hab dem Hr. Schloßer geschrieben daß er sie haben kann, ich warte auf Antwort. Er ist aber zu Anfang des Monds nach Helvetien gereißt. Die Frau Hofräthin ist allein vielleicht komm’ ich hin ich werd’ ohn das in die Gegend kommen. Wenns möglich ist so abonnire mich für den Merkur auf dies Jahr. Hier ist alles voll Sehnsucht.
@@ -3037,7 +3037,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line ></line>hat sie mich davon vorher warnen lassen <insertion pos="top">durch ihn</insertion> und ich suchte das nicht zu hindern
 <line tab="1"/>nur wenn alles gethan ist den letzten Genuß um ihr sagen daß ich sie erwarte</hand>
 
@@ -3143,7 +3143,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn <dul>JC. Lavater</dul>
 <line />Pfarrer am Waysenhause
@@ -3232,7 +3232,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line /><sidenote pos="left" page="2" annotation="am linken Rand der ersten Seite, vertikal">Dürft ich doch fragen ob Zimmermann oder Merk die Exemplare von den Soldaten bekommen hat. Ich habe selbst keins, auch niemand schicken können und hier sind sie auch im Buchladen nicht. Nach Strasb. dürfen sie nicht gehen.</sidenote>
 <vspace lines="1"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn <dul>Herder</dul>
 <line />Consistorialrath
@@ -3254,7 +3254,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Bey Herrn D. Göthe.
 <line /><ul>Weym</ul><tl></tl>
 <vspace lines="1"/>
@@ -3324,7 +3324,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line />Instruktion des Königs v. Preussen
 <line />Ray de St. Genie
 <line /><align pos="center"><note>geschweifte Klammer für die obigen beiden Einträge, daneben folgender Text:</note></align>
-    <vspace lines="1"/>
+    <vspace lines="1" presentational="true"/>
 <line />schickst Du an Mühlgau.
 <vspace lines="1"/>
 <line />Theuerdank (Bertuchen)
@@ -3419,7 +3419,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal"><pe>grüß Klinger vielmalen</pe>
 <line tab="1"/>Wenn ein Vorhängeschloß vor meinen Coffre hättest wegen der Papiere wäre mirs sehr lieb. Dies schließt nicht ich habe den Schlüssel verlorren
 </sidenote>
@@ -3600,7 +3600,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>Zeichnung eines liegenden Soldaten</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><aq>des pouvraint revendiquent leurs <del>droit</del> pretensions avec main forte</aq>
 </letterText>
 
@@ -3700,7 +3700,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>Kalkulationen</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><aq>Les petits dearcharges dans les viles pas les grandes pertes larges</aq>
 <line />Das Zeughaus besuchen und mich nach allem erkundigen.
 <line />Ganz kurze <nr> </nr> darauf im Merkur.
@@ -3766,7 +3766,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn <ul>Weidmanns</ul>
 <line />Erben und <ul>Reich,</ul> berühmten
@@ -3852,7 +3852,7 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn Stab<subst><del>h</del><insertion>s</insertion></subst>ekretär
 <line /><ul>Boje</ul>
@@ -3948,7 +3948,7 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn Heinrich
 <line />Jakob Lenz
@@ -4121,7 +4121,7 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>
 <line />Herrn
 <line />Herrn Generalsuperintendenten <dul>Herder</dul>
@@ -4138,7 +4138,7 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens, vertikal:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>An Herdern!</address>
 </letterText>
 
@@ -4158,7 +4158,7 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>
 <line />Herrn
 <line />Herrn <aq>Lenz</aq> abzugeben bey
@@ -4200,7 +4200,7 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <vspace lines="1" presentational="true"/>
     <page index="2"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <hand ref="10">
 <line /><address> <ul>an Lenzn.</ul></address></hand>
 </letterText>
@@ -4261,7 +4261,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn Hofrath <dul>Pfeffel</dul>
 <line />zu <ul>Colmar.</ul></address>
@@ -4367,7 +4367,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>An Herrn
 <line /><tl></tl>rn <ul><aq>Lenz</aq></ul> abzugeben bey
 <line />Herrn <aq>Hofrath Wieland</aq>
@@ -4394,7 +4394,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn <ul>Hafner</ul>
 <line />Candidaten der Theologie
@@ -4549,7 +4549,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn Staabssekretär
 <line /><ul>Boje</ul>
@@ -4576,12 +4576,12 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line /><align pos="right"><aq> <nr></nr> Gedeon Bourcard.</aq></align>
 <vspace lines="1"/>
 <line /><align pos="center"><note>Schmuckzeichen</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line />Baßel d. 9. Aprill <ul>1777.</ul>
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address><aq>Monsieur
 <line />Monsieur Lenz
 <line />Pascus. a chez Monsieur Schlosser.
@@ -4726,7 +4726,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn Stabssekretär
 <line /><ul>Boje</ul>
@@ -4931,7 +4931,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>An
 <line />Herrn Pfarrer Lavater
 <line />in Zürch</address>
@@ -4999,7 +4999,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn <ul>Füesli</ul>
 <line />Professor der Geschichte
@@ -5034,7 +5034,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn Gerichtsherr
 <line /><ul>Sarasi</ul>
@@ -5064,7 +5064,6 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line /><align pos="right"><aq>Jacob Sarasin.</aq></align>
 <vspace lines="1" presentational="true"/>
 <page index="5"/>
-<line /><note>Tabelle</note>
 <line /><align pos="center"><aq>Pro Memoria</aq></align>
 <vspace lines="1"/>
 <line /><align pos="center">Zu einer Reiße nach Italien von Sarasin an Lenz</align>
@@ -5443,7 +5442,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>An Herrn
 <line />Herrn Lenz
 <line />bey Herrn Lavater
@@ -5562,7 +5561,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>An Herrn
 <line />Herrn <ul>Jakob</ul>  <dul>Sarasi.</dul>
 <line />Gerichtsherrn in Basel.</address>
@@ -5732,7 +5731,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="3"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn Oberpastor <ul>Lenz</ul>
 <line />Assessor des Consistoriums und Inspekter der Schulen
@@ -5760,7 +5759,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address><aq>A Monsieur
 <line />Monsieur Peuker
 <line />Translateur du College des Affaires Etrangers – Maitre des Postes.
@@ -5835,7 +5834,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Herrn
 <line />Herrn F. D. Lenz
 <line />Oberpastor und Assessor des Consistoriums
@@ -5935,7 +5934,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address><aq>Monsieur
 <line />Monsieur <ul>F. D. Lenz.</ul>
 <line />Premier pasteur et Assesseur au Consistoire de &amp;
@@ -6281,7 +6280,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>Sr. HochEdelgebornen
 <line />dem Herrn Herrn K. F. Gadebusch
 <line />Hochachtbaren Justiz-Bürgermeister der Kaiserlichen Stadt Derpt
@@ -6404,7 +6403,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>
 <line />Sr. Magnifizenz
 <line />Herrn Herrn Christian David Lenz.
@@ -6727,7 +6726,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line /><address>
 <line />Herrn Burner
 <line />bey den Bezkischen Anstalten
@@ -6758,7 +6757,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line /><align pos="center">Auf das <insertion pos="top">kleine</insertion> Kraut Reinefarth an die Rosengesellschaft</align>
 <vspace lines="1"/>
 <line /><note>Tabelle linke Spalte</note>
-<vspace lines="1"/>
+<vspace lines="1" presentational="true"/>
 <line tab="5"/>Kleines Kraut der bösen Geister
 <line tab="5"/>Gegengift, der treuen Meister
 <line tab="5"/>Einzig ächte Panazee

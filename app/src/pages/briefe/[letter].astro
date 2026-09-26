@@ -40,9 +40,9 @@ const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'hae
       <LetterHeader letter={letter} />
       <div class="letter-toolbar">
         <nav class="letter-navigation" aria-label="Briefnavigation">
-          {previous && <a href={letterUrl(previous.letter)} aria-label={`Vorheriger Brief: ${previous.letter}`}><Icon name="arrowLeft" /></a>}
+          {previous && <a href={letterUrl(previous.letter)} rel="prev" aria-label={`Vorheriger Brief: ${previous.letter}`}><Icon name="arrowLeft" /></a>}
           <span class="navigation-position" id="letter-number" data-search-target>LKB {letter.letter}</span>
-          {next && <a href={letterUrl(next.letter)} aria-label={`Nächster Brief: ${next.letter}`}><Icon name="arrowRight" /></a>}
+          {next && <a href={letterUrl(next.letter)} rel="next" aria-label={`Nächster Brief: ${next.letter}`}><Icon name="arrowRight" /></a>}
         </nav>
       </div>
       {sectionLinks.length > 0 && <nav class="reading-toolbar" aria-label="Abschnitte zum Brief"><a href="#ueberlieferung">{sectionLinks.map(item => item.name).join(', ')} <Icon name="arrowDown" class="section-link-arrow" /></a></nav>}
