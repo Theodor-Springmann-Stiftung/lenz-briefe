@@ -2,9 +2,10 @@ import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import patch
 from lxml import etree, html
 from transform_python.catalog import date_sort
-from transform_python.common import Timings
+from transform_python.common import Timings, read_xml, NSMAP
 from transform_python.exporter import extract_meta, run_export, StylesheetRunner
 
 
@@ -21,14 +22,34 @@ class SiteExportTests(unittest.TestCase):
     def tearDownClass(cls):
         cls.temp.cleanup()
 
-    def test_all_sidenotes_survive_with_explicit_unresolved_targets(self):
+    def test_all_current_sidenotes_survive_with_resolved_targets(self):
         notes = [n for p in self.output.glob('letters/*/sidenotes.json')
                  for group in json.loads(p.read_text()).values() for n in group]
         self.assertEqual(len(notes), 215)
-        self.assertEqual({n['letter'] for n in notes if n['anchorId'] is None}, {'64','167'})
+        self.assertTrue(all(n['anchorId'] == f"page-{n['page']}" for n in notes))
         warnings = [w for w in self.result['warnings'] if w['kind'] == 'unresolved-sidenote']
-        self.assertEqual({w['letter'] for w in warnings}, {'64','167'})
+        self.assertEqual(warnings, [])
         self.assertTrue(all(n['html'].strip() for n in notes))
+
+    def test_unresolved_sidenote_is_retained_and_reported(self):
+        def read_with_unmatched_note(filename):
+            doc = read_xml(filename)
+            if filename == 'briefe.xml':
+                letter = doc.find('.//l:letterText', NSMAP)
+                note = etree.SubElement(letter, '{https://lenz-archiv.de}sidenote', page='9999', pos='left')
+                note.text = 'Unmatched note retained for readers.'
+            return doc
+
+        with TemporaryDirectory() as directory, patch('transform_python.exporter.read_xml', side_effect=read_with_unmatched_note):
+            result = run_export(directory)
+            warnings = [w for w in result['warnings'] if w['kind'] == 'unresolved-sidenote']
+            self.assertEqual(len(warnings), 1)
+            self.assertEqual(warnings[0]['page'], '9999')
+            letter = warnings[0]['letter']
+            notes = json.loads((Path(directory) / 'letters' / letter / 'sidenotes.json').read_text())['9999']
+            self.assertEqual(len(notes), 1)
+            self.assertIsNone(notes[0]['anchorId'])
+            self.assertIn('Unmatched note retained for readers.', notes[0]['html'])
 
     def test_catalog_chronology_groups_and_filters(self):
         letters = self.catalog['letters']

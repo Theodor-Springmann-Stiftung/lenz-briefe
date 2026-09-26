@@ -552,7 +552,7 @@
 				<person ref="11" />
 			</received>
 			<traditions>
-				<tradition isOriginal="false" type="unknown" />
+				<tradition isOriginal="false" type="manuscript" />
 			</traditions>
 			<isProofread value="true" />
 			<isDraft value="false" />

@@ -90,8 +90,8 @@ uv run --project transform/python python -m transform_python.validate_schemas
   A `hand` may contain page markers without ending the handwriting range;
   nested main-text pages are included in page navigation and sidenote targets.
 - `sidenotes.json` retains all 215 notes. Notes without a matching page marker are
-  shown after the text and reported in `status.json`; these currently occur in
-  letters 64 and 167. On desktop, page labels remain in the left margin. Hands and notes occupy
+  shown after the text and reported in `status.json`; all current notes have matching
+  targets. On desktop, page labels remain in the left margin. Hands and notes occupy
   the right margin, with notes starting at their source page’s beginning.
   Metadata, letter text and apparatus share the same main column. Margin items
   flow downward in order. Notes can continue across page boundaries; overflow
@@ -143,8 +143,7 @@ uv run python -m unittest discover -p 'test_*.py'
 ```
 
 The export regressions cover all sidenotes, chronology, multiple metadata events,
-apparatus content and semantic flow. The complete Python suite currently has one
-existing failure: `SeparateDocumentSchemaTests` expects `briefe.xsd` to reject a
-`traditions` container, but that schema still explicitly permits it. Two apparatus
-schema warnings and the two unmatched sidenote targets are retained in export
-diagnostics; they do not discard the associated content.
+apparatus content and semantic flow, including handwriting identity and apparatus
+page anchors through nested multiline cells. An injected unmatched sidenote checks
+that missing targets are reported without discarding content. Letter and apparatus
+documents are validated against their separate schemas.

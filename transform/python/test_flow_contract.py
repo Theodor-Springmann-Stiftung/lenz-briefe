@@ -79,6 +79,33 @@ class FlowContractTests(unittest.TestCase):
                 self.assertEqual(self.page(tree).get('data-break'), 'inline')
                 self.assertEqual(self.page(tree, '3').get('data-break'), 'block')
 
+    def test_multiline_cells_preserve_one_hand_range_across_the_table(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            with self.subTest(kind=kind):
+                tree = self.render('<hand ref="1">Before<tabs>'
+                                   '<tab value="1-2">A<line/>B<tabs><tab value="1-2">C<line/>D</tab></tabs></tab>'
+                                   '<tab value="2-2">E</tab></tabs>After</hand>'
+                                   '<hand ref="1">Separate</hand>', kind)
+                hands = tree.xpath('.//span[@class="hand"]')
+                self.assertEqual(''.join(h.text_content() for h in hands), 'BeforeABCDEAfterSeparate')
+                origins = [hand.get('data-origin') for hand in hands]
+                self.assertTrue(all(origins))
+                self.assertEqual(len(set(origins[:-1])), 1)
+                self.assertNotEqual(origins[0], origins[-1])
+
+    def test_nested_multiline_cells_keep_apparatus_page_prefix(self):
+        body = ('<tabs><tab value="1-2"><hand ref="1">A<page index="2"/>B<line/>C</hand>'
+                '<tabs><tab value="1-2"><hand ref="1">D<page index="3"/><line/>E</hand></tab></tabs>'
+                '</tab></tabs>')
+        tree = self.render(body, 'traditions')
+        self.assertEqual(self.page(tree).get('id'), 'app-1-page-2')
+        self.assertEqual(self.page(tree, '3').get('id'), 'app-1-page-3')
+        source = f'<app xmlns="https://lenz-archiv.de" ref="4">{body}</app>'
+        result = self.runner.run_stylesheet('app-body', source, {'pagePrefix': 'app-7-page-'}, Timings())
+        self.assert_valid_nesting(result)
+        tree = html.fragment_fromstring(result, create_parent='div')
+        self.assertEqual(tree.xpath('.//*[@class="page-anchor"]/@id'), ['app-7-page-2', 'app-7-page-3'])
+
     def test_curved_rules_preserve_text_and_page_boundaries(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:
             for line_type in ['tilde', 'double-tilde']:

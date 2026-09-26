@@ -35,9 +35,9 @@ jobs:
       - name: Validate all XML documents against their XSDs
         run: uv run --project transform/python --no-sync python -m transform_python.validate_schemas
 
-      - name: Test the validation gate and search boundaries
+      - name: Test the complete transformation suite
         working-directory: transform/python
-        run: uv run --no-sync python -m unittest test_validate_schemas test_search test_year_groups
+        run: uv run --no-sync python -m unittest discover -p 'test_*.py'
 
       - name: Set up Node.js
         uses: actions/setup-node@v7

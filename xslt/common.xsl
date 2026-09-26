@@ -13,7 +13,8 @@
   <xsl:template match="lb:hand" mode="lb:prepare">
     <xsl:copy>
       <xsl:copy-of select="@*" />
-      <xsl:attribute name="data-origin" select="generate-id()" />
+      <!-- A cell may prepare fragments of an already prepared hand again. -->
+      <xsl:attribute name="data-origin" select="if (@data-origin) then string(@data-origin) else generate-id()" />
       <xsl:apply-templates mode="lb:prepare" />
     </xsl:copy>
   </xsl:template>
@@ -810,6 +811,7 @@
   </xsl:template>
 
   <xsl:template match="lb:tab">
+    <xsl:param name="page-id-prefix" as="xs:string" select="'page-'" tunnel="yes" />
     <xsl:variable name="parts" select="tokenize(@value, '-') ! xs:integer(.)" />
     <xsl:variable name="start" select="($parts[1] - 1) div $parts[2]" />
     <xsl:variable name="next" select="following-sibling::lb:tab[1]/@value" />
@@ -820,7 +822,10 @@
 
       <xsl:choose>
         <xsl:when test=".//lb:line or .//lb:vspace or .//lb:tabs">
-          <xsl:call-template name="lb:render-flow"><xsl:with-param name="nodes" select="node()" /></xsl:call-template>
+          <xsl:call-template name="lb:render-flow">
+            <xsl:with-param name="nodes" select="node()" />
+            <xsl:with-param name="page-id-prefix" select="$page-id-prefix" />
+          </xsl:call-template>
         </xsl:when>
         <xsl:otherwise>
           <xsl:call-template name="lb:render-regions"><xsl:with-param name="nodes" select="node()" /></xsl:call-template>
