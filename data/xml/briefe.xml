@@ -6712,16 +6712,24 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 </letterText>
 
 <letterText letter="366"><page index="1"/>
-<line /><tabs><note>Tabelle</note>
-<line />
-<line /><tab value="1-2"><aq>kin burn</aq></tab> <tab value="2-2"><aq>Kin <ul>burn</ul></aq></tab>
-<line /><tab value="1-2">ein Kind brannte !!!!!!</tab> <tab value="2-2">aber, aber <aq>Kin</aq> und <aq>burn</aq> nicht <aq>Kil</aq></tab>
-<line /><tab value="1-2">aber wie und wofür?</tab> <tab value="2-2"><aq>burn</aq> denn das heißt auf Englisch</tab>
-<vspace lines="1"/>
-<line /><tab value="2-2">sengen und brennen.</tab></tabs>
-<vspace lines="1"/>
-<line /><align pos="center"><gr>α/ω</gr></align>
-<vspace lines="1"/>
+<tabs>
+<tab value="1-3">
+    <line/><aq>kin burn</aq>
+    <line/>ein Kind brannte!!!!!!
+    <line/>aber wie und wofür?
+</tab>
+<tab value="2-3">
+    <vspace lines="1.5"/>
+    <align pos="center"><gr>α/ω</gr></align>
+</tab>
+<tab value="3-3">
+    <line/><align pos="center">Kin <ul>burn</ul></align>
+    <line/>aber aber <aq>Kin</aq> und <aq>burn</aq> nicht <aq>Kil</aq> <aq>burn</aq> denn das heißt auf Englisch sengen und brennen.
+</tab>
+</tabs>
+<sidenote pos="top" page="1" annotation="">
+    <line/><note>Die beiden Textfragmente rechts und links des <gr>α/ω</gr> wurden nachträglich an den oberen Rand der Seite geschrieben</note>
+</sidenote>
 <line tab="1"/>Ueberbringer dieses möchte gern Ihre Kirche besehen, auch wohl wenn Herrn Bergwitz ihn seiner Schwester empfelen will mit jungen Herrn in Dienste treten, ist aber seines Gewerks ein Schneider, wenn er schon auch frisirt und vielleicht auf Kundschaft spekuliert. Wenn Sie ihm erlauben wollen mit Ihrem <ru>надзиратель</ru> oder Aufseher der Knaben die Kirche (die aber keinen Lehrstul hat) zu besehen würde dieses als einen Beweis Ihrer noch nicht erloschenen Freundschaft für mich ansehen.
 <line tab="1"/>Man verwirrt in Moskau immer den Grafen Münnich der den Ladogaschen Canal anlegte und dessen Sohn im Conseil des berühmten Cadetten <ul><aq>corpus</aq></ul> ist, das meines Erachtens in unsenn Jahrhundert ein andres Gesicht macht als da Peter erst kürzlich Militärschulen einzurichten anfieng mit den Anstalten des hiesigen Gouvernements auch für öffentliche und die Erziehung des Adels an verschiedenen Plätzen, besonders zur <ul>Bildung des Mittelstands</ul> für welchen unser <aq>house of commons</aq> oder Unterhaus bereits lang fertig ist, aber einer Kanzel ermangelt, wo auch adliche Kinder bisweilen anfahren und den Erziehungen könnten abgegeben werden. Es ist der Walm, als ob der Kanal zwischen dem Dnepr und der Düna würde durch junge Herrn und Fräulein oder ihre Schulmeister (wie man sie sich vorstellt) allein in Gang gebracht werden, welches eine Verblendung ist.
 <sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal">Die Deutschen verwechseln immer das Wort <ru>ясли</ru> welches eine Krippe mit <ru>скрипка</ru> eine Geige – und thun sich selbst damit den grössesten Schaden</sidenote>
