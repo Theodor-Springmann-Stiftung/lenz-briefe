@@ -18,12 +18,12 @@ if (reading) {
   let scheduled = false;
 
   const trigger = (target: EventTarget | null): Element | null => target instanceof Element
-    ? target.closest('.fn[data-note-connected], .margin-note:has(.fn[data-note-connected]), .unplaced-note:has(.fn[data-note-connected])') : null;
+    ? target.closest('.fn[data-note-connected], .margin-note:has(.fn[data-note-connected]), .unplaced-note:has(.fn[data-note-connected]), .inpos-note:has(.fn[data-note-connected])') : null;
   const point = (marker: HTMLElement) => {
     const anchors = marker.querySelectorAll('.anchor');
     if (!anchors.length) {
       const rect = marker.getClientRects()[0] || marker.getBoundingClientRect();
-      const offset = marker.hasAttribute('data-empty') && marker.closest('.margin-note, .unplaced-note') ? 5 : 0;
+      const offset = marker.hasAttribute('data-empty') && marker.closest('.margin-note, .unplaced-note, .inpos-note') ? 5 : 0;
       return {x: rect.left + rect.width / 2 - offset, y: rect.top + rect.height / 2, radius:2, anchorless:true};
     }
     // Measure text runs individually: an inline wrapper's own box remains on

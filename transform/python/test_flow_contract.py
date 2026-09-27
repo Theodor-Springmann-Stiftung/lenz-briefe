@@ -321,10 +321,26 @@ class FlowContractTests(unittest.TestCase):
         self.assertEqual(len(tree.xpath('.//div[@class="align-right"][text()="Outside"]')), 1)
         self.assertEqual(len(table.xpath('.//div[@class="tab"][.//text()="Other"]')), 1)
 
+    def test_inpos_sidenote_is_a_block_between_hand_fragments(self):
+        for after in ['After', '<line/>After']:
+            with self.subTest(after=after):
+                tree = self.render('<page index="1"/><hand ref="3">Before'
+                                   '<sidenote type="inpos" page="1" pos="left" '
+                                   'data-sidenote-id="note-1">Note text</sidenote>'
+                                   f'{after}</hand>')
+                self.assertEqual(tree.xpath('.//*[@class="sidenote-slot"]/@data-sidenote-id'), ['note-1'])
+                self.assertEqual([n.text_content() for n in tree if n.get('class') == 'lb-line-block'],
+                                 ['Before', 'After'])
+                slot = tree.xpath('.//*[@class="sidenote-slot"]')[0]
+                self.assertIs(slot.getparent(), tree)
+                self.assertNotIn('Note text', tree.text_content())
+                self.assertEqual(tree.xpath('.//span[@class="hand"]/@data-ref'), ['3', '3'])
+
     def test_tab_border_survives_multiline_formatting(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:
             for border in ['right-virgil-inwards', 'left-virgil-inwards',
-                           'right-virgil-outwards', 'left-virgil-outwards']:
+                           'right-virgil-outwards', 'left-virgil-outwards',
+                           'line', 'line-left', 'line-right']:
                 with self.subTest(kind=kind, border=border):
                     tree = self.render(f'<ul><tabs><tab value="1-2" type="{border}">'
                                        'A<line/>B<vspace lines="1.5"/>C</tab>'

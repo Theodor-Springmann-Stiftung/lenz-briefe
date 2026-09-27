@@ -7,8 +7,10 @@ Optional `<tab value="1-2" type="right-virgil-inwards">…</tab>` exports
 cell's right edge, spanning its height and pointing inward. The mirrored type
 `left-virgil-inwards` draws `}` along the left edge. Outward-pointing variants
 are `left-virgil-outwards` (`{` on the left) and `right-virgil-outwards`
-(`}` on the right). Untyped cells keep
-their existing appearance; the brace adds no character to copied or searched text.
+(`}` on the right). `type="line-left"` and `type="line-right"` draw a straight
+vertical divider along the corresponding cell edge; `type="line"` remains an alias
+for the right divider. Untyped cells keep their existing appearance; these decorations
+add no characters to copied or searched text.
 
 ## Usage
 
@@ -96,7 +98,12 @@ always contains the source extent or its default `1`. No illegibility glyph is
 inserted. Insertion positions and annotations become `data-pos` and
 `data-annotation`; no decoration is inserted. Highlights retain `data-color`.
 
-Sidenote contents remain exclusively in `sidenotes.json`, keyed by page. The main
+Sidenote contents remain exclusively in `sidenotes.json`, keyed by page.
+Optional `type="inpos"` leaves a block slot at the note's XML position in
+`text.html`; Astro fills it with the note, its left-hand position icon and its
+annotation, and excludes it from the margin. `pos` and `page` remain required.
+The note retains its inherited hand and its own search record and anchor.
+Ordinary sidenotes keep their existing margin placement. The main
 text no longer contains note-position markers; the later site positions notes
 using their page's marker. Every note is exported, including notes with unmatched
 targets: their `anchorId` is null and `status.json` reports the unresolved page.

@@ -100,7 +100,9 @@ uv run --project transform/python python -m transform_python.validate_schemas
   the type does not change page identity, sidenote targets, or visual styling.
   A `hand` may contain page markers without ending the handwriting range;
   nested main-text pages are included in page navigation and sidenote targets.
-- `sidenotes.json` retains all 215 notes, including notes nested inside a `hand`.
+- `sidenotes.json` retains all notes, including notes nested inside a `hand`.
+  Optional `type="inpos"` displays the note as a block at its XML position, with
+  the position icon on the left and annotation below, instead of in the margin.
   They inherit the nearest enclosing hand. The current corpus has no nested
   hands within sidenotes, and a regression test checks the rendered notes for
   such nesting. Notes remain separate from the main text, in their XML source order.

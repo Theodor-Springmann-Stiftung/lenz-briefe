@@ -229,6 +229,7 @@ def build_sidenote_records(
             "page": str(page),
             "pos": get_attribute(node, "pos"),
             "annotation": get_attribute(node, "annotation"),
+            "type": get_attribute(node, "type"),
             "html": html_items[index] if index < len(html_items) else "",
         }
         for index, node in enumerate(sidenotes)
@@ -517,6 +518,14 @@ def _process_letter(
         "isDraft": False,
     }
 
+    all_sidenotes = letter_text.findall('.//l:sidenote', NSMAP)
+    page_note_counts: dict[str, int] = {}
+    for note in all_sidenotes:
+        page = note.get('page')
+        page_note_counts[page] = page_note_counts.get(page, 0) + 1
+        if note.get('type') == 'inpos':
+            note.set('data-sidenote-id', f'{slugify_letter(letter)}-page-{page}-sidenote-{page_note_counts[page]}')
+
     try:
         text_html = runner.run_stylesheet(
             "letter-text",
@@ -534,7 +543,6 @@ def _process_letter(
     )
 
     sidenotes_by_page: dict[str, list[dict[str, Any]]] = {}
-    all_sidenotes = letter_text.findall('.//l:sidenote', NSMAP)
     source_orders = {node: index + 1 for index, node in enumerate(all_sidenotes)}
     for page in sorted(set(pages) | set(collect_sidenote_pages(letter_text)), key=int):
         sidenotes = timings.measure(

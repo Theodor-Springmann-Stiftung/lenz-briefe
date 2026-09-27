@@ -6,6 +6,16 @@ from transform_python.common import XSD_DIR, XSD_MAP
 
 
 class SeparateDocumentSchemaTests(unittest.TestCase):
+    def test_sidenote_inpos_type_is_optional_and_restricted(self):
+        schema = etree.XMLSchema(etree.parse(str(XSD_DIR / 'briefe.xsd')))
+        for attribute, valid in [('', True), (' type="inpos"', True), (' type="other"', False)]:
+            with self.subTest(attribute=attribute):
+                doc = etree.fromstring('<opus xmlns="https://lenz-archiv.de"><document>'
+                    '<letterText letter="1"><page index="1"/><hand ref="1">Before'
+                    f'<sidenote page="1" pos="left"{attribute}>Note</sidenote>'
+                    'After</hand></letterText></document></opus>')
+                self.assertEqual(schema.validate(doc), valid)
+
     def test_tab_border_type_is_optional_and_restricted(self):
         for name, wrapper in [
             ('briefe.xsd', '<document><letterText letter="1"><page index="1"/>{}</letterText></document>'),
@@ -16,6 +26,9 @@ class SeparateDocumentSchemaTests(unittest.TestCase):
                                      (' type="left-virgil-inwards"', True),
                                      (' type="left-virgil-outwards"', True),
                                      (' type="right-virgil-outwards"', True),
+                                     (' type="line"', True),
+                                     (' type="line-left"', True),
+                                     (' type="line-right"', True),
                                      (' type="unknown"', False)]:
                 with self.subTest(schema=name, attribute=attribute):
                     body = wrapper.format(f'<tabs><tab value="1-2"{attribute}>Text</tab></tabs>')

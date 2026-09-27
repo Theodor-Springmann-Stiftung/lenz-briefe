@@ -319,7 +319,7 @@
             <xsl:with-param name="current-content" select="($current-content, node())" />
           </xsl:next-iteration>
         </xsl:when>
-        <xsl:when test="$line-type = ('line', 'vspace')">
+        <xsl:when test="$line-type = ('line', 'vspace', 'inpos')">
           <xsl:variable name="flushed" select="lb:flush-state($completed, $current-type, $current-tab, $current-content)" />
           <xsl:next-iteration>
             <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, ($flushed?currentContent, node())))" />
@@ -380,7 +380,7 @@
         <xsl:sequence select="
           for $line in $lines
           return
-            if ($line/@type = 'vspace') then $line
+            if ($line/@type = ('vspace', 'inpos')) then $line
             else if ($line/@type = 'line' and not(lb:has-meaningful-content($line/node())))
             then lb:temp-explicit-line(string($line/@type), if ($line/@tab) then string($line/@tab) else (), $line/node())
             else if (exists($line/@type) or exists($line/@tab))
@@ -426,6 +426,12 @@
       </xsl:when>
       <xsl:when test="$node/self::element(lb:page)">
         <xsl:sequence select="lb:temp-line(lb:temp-page(string($node/@index), string(($node/@type, 'inner')[1])))" />
+      </xsl:when>
+      <xsl:when test="$node/self::lb:sidenote[@type='inpos']">
+        <xsl:variable name="slot" as="element(t:sidenote-slot)">
+          <t:sidenote-slot id="{$node/@data-sidenote-id}" />
+        </xsl:variable>
+        <xsl:sequence select="lb:temp-explicit-line('inpos', (), $slot)" />
       </xsl:when>
       <xsl:when test="$node/self::element(lb:sidenote) or $node/self::comment() or $node/self::processing-instruction()">
         <xsl:sequence select="()" />
@@ -543,8 +549,12 @@
           data-index="{@index}" data-type="{@type}" data-break="{@break}"></span>
   </xsl:template>
 
-  <xsl:template match="t:line[@type='vspace'] | t:row[@type='vspace']">
+  <xsl:template match="t:line[@type=('vspace', 'inpos')] | t:row[@type=('vspace', 'inpos')]">
     <xsl:apply-templates />
+  </xsl:template>
+
+  <xsl:template match="t:sidenote-slot">
+    <div class="sidenote-slot" data-sidenote-id="{@id}"></div>
   </xsl:template>
 
   <xsl:template match="lb:vspace">

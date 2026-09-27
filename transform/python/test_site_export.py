@@ -33,7 +33,7 @@ class SiteExportTests(unittest.TestCase):
     def test_all_current_sidenotes_survive_with_resolved_targets(self):
         notes = [n for p in self.output.glob('letters/*/sidenotes.json')
                  for group in json.loads(p.read_text()).values() for n in group]
-        self.assertEqual(len(notes), 215)
+        self.assertEqual(len(notes), len(read_xml('briefe.xml').findall('.//l:sidenote', NSMAP)))
         self.assertTrue(all(n['anchorId'] == f"page-{n['page']}" for n in notes))
         warnings = [w for w in self.result['warnings'] if w['kind'] == 'unresolved-sidenote']
         self.assertEqual(warnings, [])
@@ -70,6 +70,37 @@ class SiteExportTests(unittest.TestCase):
             self.assertEqual(len(notes), 1)
             self.assertIsNone(notes[0]['anchorId'])
             self.assertIn('Unmatched note retained for readers.', notes[0]['html'])
+
+    def test_inpos_sidenote_preserves_position_hand_and_single_search_record(self):
+        def read_with_inpos_note(filename):
+            doc = read_xml(filename)
+            if filename == 'briefe.xml':
+                letter = doc.find('.//l:letterText', NSMAP)
+                hand = etree.SubElement(letter, '{https://lenz-archiv.de}hand', ref='3')
+                hand.text = 'Before inline note'
+                note = etree.SubElement(hand, '{https://lenz-archiv.de}sidenote',
+                                        page='1', pos='left', type='inpos')
+                note.text = 'Unique in-position sidenote text'
+                note.tail = 'After inline note'
+            return doc
+
+        with TemporaryDirectory() as directory, patch('transform_python.exporter.read_xml', side_effect=read_with_inpos_note):
+            run_export(directory)
+            root = Path(directory)
+            notes = json.loads((root / 'letters/1/sidenotes.json').read_text())['1']
+            note = next(n for n in notes if n['type'] == 'inpos')
+            main = html.fragment_fromstring((root / 'letters/1/text.html').read_text(), create_parent='div')
+            slot = main.xpath('.//*[@class="sidenote-slot"]')[0]
+            self.assertEqual(slot.get('data-sidenote-id'), note['id'])
+            self.assertIn('Before inline note', slot.getprevious().text_content())
+            self.assertIn('After inline note', slot.getnext().text_content())
+            rendered = html.fragment_fromstring(note['html'], create_parent='div')
+            self.assertEqual(rendered.xpath('.//span[@class="hand"]/@data-ref'), ['3'])
+            self.assertNotIn('Unique in-position sidenote text', main.text_content())
+            search = json.loads((root / 'search.json').read_text())
+            matches = [r for r in search['blocks'] if 'Unique in-position sidenote text' in r['text']]
+            self.assertEqual(len(matches), 1)
+            self.assertEqual(matches[0]['kind'], 'sidenote')
 
     def test_nested_sidenotes_inherit_nearest_hand_and_keep_source_order(self):
         def read_with_nested_notes(filename):

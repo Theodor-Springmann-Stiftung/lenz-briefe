@@ -10,7 +10,7 @@ export interface Letter {
   traditions: {isOriginal: boolean; type: string}[]; hasOriginal: boolean; isProofread: boolean; isDraft: boolean;
   pages: string[]; handRefs: string[]; handOrder: string[]; sort: {key: number[]; value: string} | null;
 }
-export interface Sidenote { id: string; page: string; pos: string; annotation: string; html: string; anchorId: string | null; sourceOrder: number }
+export interface Sidenote { id: string; page: string; pos: string; annotation: string; type?: string | null; html: string; anchorId: string | null; sourceOrder: number }
 export interface Tradition { type: string; id?: string; ref?: string; name?: string; category?: string; html: string }
 interface Definition { name: string; index: string }
 interface Catalog {

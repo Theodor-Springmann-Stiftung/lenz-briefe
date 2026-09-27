@@ -7,12 +7,12 @@ if (layout) {
   const margin = layout.querySelector<HTMLElement>('.marginalia')!;
   const pageMargin = layout.querySelector<HTMLElement>('.page-margin')!;
   const names = JSON.parse(document.querySelector('#hand-data')?.textContent || '{}');
-  const allHandGroups = [...document.querySelectorAll<HTMLElement>('.letter-body, .margin-note, .unplaced-note')]
+  const allHandGroups = [...document.querySelectorAll<HTMLElement>('.letter-body, .margin-note, .unplaced-note, .inpos-note')]
     .flatMap(container => handGroups(container));
   const groupsForHand = (ref: string | undefined) => [
     ...allHandGroups.filter(fragments => fragments[0].dataset.ref === ref),
     ...(ref && ref === layout.dataset.baseHand
-      ? [...document.querySelectorAll<HTMLElement>('.letter-body, .margin-note > .edition-text, .unplaced-note > .edition-text')]
+      ? [...document.querySelectorAll<HTMLElement>('.letter-body, .margin-note > .edition-text, .unplaced-note > .edition-text, .inpos-note > .edition-text')]
         .flatMap(container => implicitHandGroups(container)) : []),
   ];
   const highlightHand = createHandRangeHighlighter();
@@ -32,7 +32,7 @@ if (layout) {
     item.append(label); margin.append(item);
   });
   // A note already occupies the margin; identify its hands within that note.
-  document.querySelectorAll<HTMLElement>('.margin-note, .unplaced-note').forEach(note => {
+  document.querySelectorAll<HTMLElement>('.margin-note, .unplaced-note, .inpos-note').forEach(note => {
     const groups = handGroups(note);
     if (!groups.length) return;
     const label = document.createElement('p');

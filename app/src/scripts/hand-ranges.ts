@@ -7,7 +7,7 @@ export function implicitHandGroups(container: HTMLElement): Range[][] {
   let current: Range[] = [];
   const flush = () => { if (current.length) groups.push(current); current = []; };
   function visit(node: Node) {
-    if (node instanceof Element && node.matches('.hand, .note, .pe, .hand-range-background')) {
+    if (node instanceof Element && node.matches('.hand, .note, .pe, .hand-range-background, .inpos-note')) {
       flush();
       return;
     }
@@ -27,6 +27,7 @@ export function implicitHandGroups(container: HTMLElement): Range[][] {
 export function handGroups(container: HTMLElement) {
   const groups = new Map<string, HTMLElement[]>();
   container.querySelectorAll<HTMLElement>('.hand').forEach((hand, index) => {
+    if (hand.closest('.inpos-note') && !container.closest('.inpos-note')) return;
     const origin = hand.dataset.origin || `hand-${index}`;
     groups.set(origin, [...(groups.get(origin) || []), hand]);
   });
