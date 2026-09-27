@@ -28,13 +28,17 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {month: 'long', year: '
   <body>
     <a class="skip-link" href="#inhalt">Zum Inhalt</a>
     <header class="site-header">
+      <div class="site-header-inner">
         <a class="wordmark" href={base} aria-label="Lenz – Kritische Briefausgabe – Übersicht"><span class="wordmark-name">Lenz</span><span class="wordmark-caption">Kritische Briefausgabe</span></a>
         <Navigation />
+      </div>
     </header>
     <main id="inhalt" class:list={['site-shell', {'site-shell--wide': wide}]}><slot /></main>
     <footer class="site-footer">
+      <div class="site-footer-inner">
         <p class="footer-license-line"><a class="footer-license" href="https://creativecommons.org/licenses/by/4.0/"><Icon name="creativeCommons" /><Icon name="creativeCommonsBy" /><span class="font-sans">CC BY 4.0</span></a><span aria-hidden="true">·</span><time datetime={generatedAt.toISOString()}>{generationMonth}</time></p>
-        <p class="text-right">lenz-briefe.de – ein Projekt der <a href="https://theodor-springmann-stiftung.de/">Theodor Springmann Stiftung</a> · <a href="https://dev.lenz-briefe.de/datenschutz/">Impressum &amp; Datenschutz</a> · Commit <a class="font-mono" href={revision.url}>{revision.shortHash.toUpperCase()}</a></p>
+        <p class="text-right">lenz-briefe.de – ein Projekt der <a href="https://theodor-springmann-stiftung.de/">Theodor Springmann Stiftung</a> · <a href="https://dev.lenz-briefe.de/datenschutz/">Impressum &amp; Datenschutz</a> <Icon name="code" class="footer-code-icon" /> <a class="font-mono" href={revision.url} aria-label={`Commit ${revision.shortHash.toUpperCase()}`}>{revision.shortHash.toUpperCase()}</a></p>
+      </div>
     </footer>
     <BackToTop />
     <script>import '../scripts/tooltips';</script>

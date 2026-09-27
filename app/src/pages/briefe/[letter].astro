@@ -67,7 +67,7 @@ const sectionLinks = [...traditionLinks, ...(letter.handRefs.length ? [{id: 'hae
       {traditions.length ? traditions.map(item => <Fragment>
         <div class="apparatus-entry" id={item.id}>
           {item.type === 'app' && <h2>{item.name}</h2>}
-          <div class="edition-text apparatus-text" set:html={item.html} />
+          <div class="edition-text apparatus-text apparatus-xml-text" set:html={item.html} />
         </div>
       </Fragment>) : <p>Keine Angaben zur Überlieferung vorhanden.</p>}
       {handRefs.length > 0 && <div class="apparatus-entry hand-key" id="haende"><h2>Hände</h2><ul class="edition-text apparatus-text">{handRefs.map(ref => <li><span class="hand-sample" data-ref={ref} aria-hidden="true">Aa</span><button type="button" data-hand-ref={ref}>{hands[ref]}</button></li>)}</ul></div>}
