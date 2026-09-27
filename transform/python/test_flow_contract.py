@@ -321,6 +321,20 @@ class FlowContractTests(unittest.TestCase):
         self.assertEqual(len(tree.xpath('.//div[@class="align-right"][text()="Outside"]')), 1)
         self.assertEqual(len(table.xpath('.//div[@class="tab"][.//text()="Other"]')), 1)
 
+    def test_tab_border_survives_multiline_formatting(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            for border in ['right-virgil-inwards', 'left-virgil-inwards',
+                           'right-virgil-outwards', 'left-virgil-outwards']:
+                with self.subTest(kind=kind, border=border):
+                    tree = self.render(f'<ul><tabs><tab value="1-2" type="{border}">'
+                                       'A<line/>B<vspace lines="1.5"/>C</tab>'
+                                       '<tab value="2-2">D</tab></tabs></ul>', kind)
+                    cells = tree.xpath('.//div[@class="tab"]')
+                    self.assertEqual(cells[0].get('data-type'), border)
+                    self.assertIsNone(cells[1].get('data-type'))
+                    self.assertEqual(cells[0].text_content(), 'ABC')
+                    self.assertEqual(cells[1].text_content(), 'D')
+
     def test_interstitial_tab_content_stays_inside_preceding_cell(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:
             with self.subTest(kind=kind):

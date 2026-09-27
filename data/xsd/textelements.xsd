@@ -127,10 +127,16 @@
         </xs:complexType>
     </xs:element>
 
-    <!-- Vertical space measured in whole lines. -->
+    <!-- Vertical space measured in positive, optionally fractional line heights. -->
     <xs:element name="vspace">
         <xs:complexType>
-            <xs:attribute name="lines" type="xs:positiveInteger" use="required" />
+            <xs:attribute name="lines" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minExclusive value="0" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
             <xs:attribute name="presentational" type="xs:boolean" use="optional" default="false" />
         </xs:complexType>
     </xs:element>
@@ -337,6 +343,16 @@
                                 <xs:enumeration value="10-12" />
                                 <xs:enumeration value="11-12" />
                                 <xs:enumeration value="12-12" />
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                    <xs:attribute name="type" use="optional">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="right-virgil-inwards" />
+                                <xs:enumeration value="left-virgil-inwards" />
+                                <xs:enumeration value="left-virgil-outwards" />
+                                <xs:enumeration value="right-virgil-outwards" />
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:attribute>

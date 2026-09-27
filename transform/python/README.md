@@ -2,6 +2,14 @@
 
 Native XML export pipeline for the Lenz edition.
 
+Optional `<tab value="1-2" type="right-virgil-inwards">…</tab>` exports
+`data-type="right-virgil-inwards"`. The site draws a decorative `{` along the
+cell's right edge, spanning its height and pointing inward. The mirrored type
+`left-virgil-inwards` draws `}` along the left edge. Outward-pointing variants
+are `left-virgil-outwards` (`{` on the left) and `right-virgil-outwards`
+(`}` on the right). Untyped cells keep
+their existing appearance; the brace adds no character to copied or searched text.
+
 ## Usage
 
 Install dependencies:
@@ -69,7 +77,8 @@ vertical space. Apparatus markers use `app-N-page-M` IDs to avoid collisions wit
 indentation only; automatically wrapped continuation lines remain at the left
 edge, rather than indenting the entire block. Ordinary lines omit the redundant
 `type="break"`. `line type="line"` produces `hr.lb-rule`. `vspace/@lines` becomes
-`data-lines` and a height in `lh`; it ends the line and resets indentation even
+`data-lines` and a height in `lh`; positive decimals such as `lines="1.5"` are
+supported alongside whole numbers. It ends the line and resets indentation even
 without a following `line`. A following `line` adds no accidental blank line.
 
 Alignment regions (`align-left`, `align-center`, `align-right`) are emitted only

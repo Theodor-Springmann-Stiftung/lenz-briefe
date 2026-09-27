@@ -6,6 +6,38 @@ from transform_python.common import XSD_DIR, XSD_MAP
 
 
 class SeparateDocumentSchemaTests(unittest.TestCase):
+    def test_tab_border_type_is_optional_and_restricted(self):
+        for name, wrapper in [
+            ('briefe.xsd', '<document><letterText letter="1"><page index="1"/>{}</letterText></document>'),
+            ('traditions.xsd', '<traditions><letterTradition letter="1"><app ref="4">{}</app></letterTradition></traditions>'),
+        ]:
+            schema = etree.XMLSchema(etree.parse(str(XSD_DIR / name)))
+            for attribute, valid in [('', True), (' type="right-virgil-inwards"', True),
+                                     (' type="left-virgil-inwards"', True),
+                                     (' type="left-virgil-outwards"', True),
+                                     (' type="right-virgil-outwards"', True),
+                                     (' type="unknown"', False)]:
+                with self.subTest(schema=name, attribute=attribute):
+                    body = wrapper.format(f'<tabs><tab value="1-2"{attribute}>Text</tab></tabs>')
+                    doc = etree.fromstring(f'<opus xmlns="https://lenz-archiv.de">{body}</opus>')
+                    self.assertEqual(schema.validate(doc), valid)
+
+    def test_vspace_requires_positive_decimal_lines(self):
+        for name, wrapper in [
+            ('briefe.xsd', '<document><letterText letter="1"><page index="1"/>{}</letterText></document>'),
+            ('traditions.xsd', '<traditions><letterTradition letter="1"><app ref="4">{}</app></letterTradition></traditions>'),
+        ]:
+            schema = etree.XMLSchema(etree.parse(str(XSD_DIR / name)))
+            for value, valid in [('1', True), ('1.5', True), ('0.5', True),
+                                 ('0', False), ('-1.5', False), ('NaN', False),
+                                 ('INF', False), ('1e2', False), ('1,5', False),
+                                 ('', False), (None, False)]:
+                with self.subTest(schema=name, value=value):
+                    attribute = '' if value is None else f' lines="{value}"'
+                    body = wrapper.format(f'<vspace{attribute}/>')
+                    doc = etree.fromstring(f'<opus xmlns="https://lenz-archiv.de">{body}</opus>')
+                    self.assertEqual(schema.validate(doc), valid)
+
     def test_sidenote_is_allowed_inside_hand(self):
         schema = etree.XMLSchema(etree.parse(str(XSD_DIR / 'briefe.xsd')))
         schema.assertValid(etree.fromstring('''<opus xmlns="https://lenz-archiv.de"><document>

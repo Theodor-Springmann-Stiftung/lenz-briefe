@@ -371,7 +371,8 @@ button.hand-range-trigger { font:inherit; text-align:inherit; }
 .edition-text [class^=align-] { max-width:100%; }
 .edition-text .lb-line-block--note { text-align:center; }
 .edition-text .lb-line-block--note > div { text-align:center; width:100%; }
-.edition-text .lb-rule { width:40%; border:0; border-top:1px solid currentColor; margin: .9em auto; }
+.edition-text :is(.lb-line-block, .lb-tab-row):has(> .lb-rule) { min-height:0; }
+.edition-text .lb-rule { width:40%; border:0; border-top:1px solid currentColor; margin:.2em auto; }
 .edition-text .page-anchor { scroll-margin-top:3rem; }
 .edition-text [id] { scroll-margin-top:3rem; }
 html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-text :is(.lb-line-block, .tab, .lb-tab-prefix, .sidenote):target { background:#fff3e6; }
@@ -448,10 +449,15 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 .edition-text .insertion-arrow::after { content:'\2060'; }
 .edition-text .insertion:not(.subst .insertion) > .insertion-arrow { margin-left:-.12em; }
 .edition-text .tabs { width:100%; text-indent:0; }
-.edition-text .lb-tab-row { display:flex; flex-wrap:wrap; align-items:first baseline; min-height:1lh; }
+.edition-text .lb-tab-row { display:flex; flex-wrap:wrap; align-items:flex-start; min-height:1lh; }
 .edition-text .lb-tab-prefix { flex:0 0 100%; min-width:0; }
 .edition-text .tab { width:var(--cell-width,100%); margin-left:var(--cell-gap,0%); flex-shrink:0; padding-right:.8rem; }
 .edition-text .tab:last-child { padding-right:0; }
+.edition-text .tab:is([data-type="right-virgil-inwards"], [data-type="right-virgil-outwards"]) { position:relative; padding-right:1.5rem; }
+.edition-text .tab:is([data-type="left-virgil-inwards"], [data-type="left-virgil-outwards"]) { position:relative; padding-left:1.5rem; }
+.edition-text .tab:is([data-type="right-virgil-inwards"], [data-type="left-virgil-inwards"], [data-type="right-virgil-outwards"], [data-type="left-virgil-outwards"])::after { content:''; position:absolute; top:0; bottom:0; right:.3rem; width:.8rem; background:currentColor; mask:url('../assets/tab-right-virgil-inwards.svg') center / 100% 100% no-repeat; pointer-events:none; }
+.edition-text .tab:is([data-type="left-virgil-inwards"], [data-type="left-virgil-outwards"])::after { left:.3rem; right:auto; }
+.edition-text .tab:is([data-type="left-virgil-inwards"], [data-type="right-virgil-outwards"])::after { transform:scaleX(-1); }
 .edition-text .tab:has(> [class^=align-]) { display:flex; flex-wrap:wrap; justify-content:space-between; }
 .edition-text mark { background:#eee0a7; color:inherit; }
 .edition-text .highlight[data-color="yellow"] { background:#eee0a7; }

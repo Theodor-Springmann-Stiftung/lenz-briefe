@@ -39,6 +39,24 @@ class SpacingTests(unittest.TestCase):
         self.assertEqual(tree.xpath('.//*[@id="page-1"]/@id'), ['page-1'])
         self.assertEqual(len(self.blocks(tree)), 1)
 
+    def test_fractional_spacing_preserves_flow(self):
+        for sidenote in [False, True]:
+            for following in ['B', '<line/>B']:
+                with self.subTest(sidenote=sidenote, following=following):
+                    tree = self.render('<line tab="4"/><hand ref="1">A<page index="2"/>'
+                                       '<vspace lines="1.5" presentational="true"/>'
+                                       f'{following}</hand>', sidenote)
+                    blocks = self.blocks(tree)
+                    self.assertEqual([n.text_content().strip() for n in blocks], ['A', 'B'])
+                    self.assertEqual(blocks[0].get('data-tab'), '4')
+                    self.assertIsNone(blocks[1].get('data-tab'))
+                    self.assertEqual(tree.xpath('.//*[@class="lb-vspace"]/@style'), ['height: 1.5lh'])
+                    self.assertEqual(tree.xpath('.//*[@class="lb-vspace"]/@data-lines'), ['1.5'])
+                    self.assertEqual(tree.xpath('.//*[@class="lb-vspace"]/@data-presentational'), ['true'])
+                    self.assertEqual(tree.xpath('.//*[@class="page-anchor" or @class="lb-vspace"]/@class'),
+                                     ['page-anchor', 'lb-vspace'])
+                    self.assertTrue(all(block.xpath('./span[@class="hand"]') for block in blocks))
+
     def test_presentational_spacing_is_identifiable_in_html(self):
         for sidenote in [False, True]:
             with self.subTest(sidenote=sidenote):
@@ -59,6 +77,20 @@ class SpacingTests(unittest.TestCase):
         tree = self.render('<tabs><tab value="1-2"><align pos="center">Heading</align></tab><line/><line/><tab value="1-2">A</tab><vspace lines="2"/><line/><tab value="1-2">B</tab></tabs>')
         self.assertEqual(tree.xpath('.//*[@class="lb-vspace"]/@data-lines'), ['2'])
         self.assertEqual(len(tree.xpath('.//*[@class="lb-tab-row"]')), 4)
+
+    def test_leading_fractional_space_stays_in_its_cell(self):
+        tree = self.render('<tabs><tab value="1-2"><line/>Regenschirm'
+                           '<line/>Instruktion<line/>Ray</tab><tab value="2-2">'
+                           '<vspace lines="1.5"/><line/><line/>schickst Du an Mühlgau.'
+                           '</tab></tabs>')
+        rows = tree.xpath('.//*[@class="lb-tab-row"]')
+        self.assertEqual(len(rows), 1)
+        left, right = rows[0].xpath('./div[@class="tab"]')
+        self.assertFalse(left.xpath('.//*[@class="lb-vspace"]'))
+        self.assertEqual(right[0].get('class'), 'lb-vspace')
+        self.assertEqual(right[0].get('style'), 'height: 1.5lh')
+        self.assertEqual([n.text_content().strip() for n in self.blocks(right)],
+                         ['', 'schickst Du an Mühlgau.'])
 
 
 if __name__ == '__main__':

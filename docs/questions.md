@@ -18,7 +18,7 @@
 - Die geplante Zitierempfehlung klappt nicht, weil wir den Absendeort im geschriebenen Datum haben ([Verfasser], [Absendeort], an [Empfänger], [Empfangsort], [Datum], in: Jakob Michael Reinhold Lenz: Kritische Briefausgabe, hrsg. v. Gregor Babelotzky (Heidelberg 2026ff.). [URL, abgerufen am DATUM])
 
 ## Handschrift
-- 199, 224, 366: Tabellen
+- 224, 366: Tabellen
 - 324: Adresse auf der dritten Seite 
 - 261: Kleienr entwurf
 - 164: Orig ohne Anfang
@@ -37,7 +37,7 @@
 
 ## ME (Later)
 - <hand> vs. <sidenote> (nested hand problem)
-- 186: line break im vers?
+- SVG in XML?
 - CMIF
 
 ## NB

@@ -548,7 +548,7 @@
   </xsl:template>
 
   <xsl:template match="lb:vspace">
-    <xsl:variable name="lines" select="xs:positiveInteger(@lines)" />
+    <xsl:variable name="lines" select="xs:decimal(@lines)" />
     <div class="lb-vspace" data-lines="{$lines}" data-presentational="{@presentational = ('true', '1')}" style="height: {$lines}lh" aria-hidden="true"></div>
   </xsl:template>
 
@@ -833,7 +833,9 @@
     <xsl:variable name="end" select="if ($next) then (xs:integer(substring-before($next, '-')) - 1) div xs:integer(substring-after($next, '-')) else 1" />
     <xsl:variable name="previous-start" select="if ($previous) then (xs:integer(substring-before($previous, '-')) - 1) div xs:integer(substring-after($previous, '-')) else 1" />
     <div class="tab" data-value="{@value}" style="--cell-width: {(if ($end gt $start) then $end - $start else 1 - $start) * 100}%; --cell-gap: {(if ($previous-start ge $start) then $start else 0) * 100}%">
-
+      <xsl:if test="@type">
+        <xsl:attribute name="data-type" select="@type" />
+      </xsl:if>
       <xsl:choose>
         <xsl:when test=".//lb:line or .//lb:vspace or .//lb:tabs">
           <xsl:call-template name="lb:render-flow">

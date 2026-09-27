@@ -3302,11 +3302,16 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line /><align pos="center">Sachen die hier bleiben</align>
 <vspace lines="1"/>
 <line />Regenschirm (Philipp in die Post)
-<line />Instruktion des Königs v. Preussen
-<line />Ray de St. Genie
-<line /><align pos="center"><note>geschweifte Klammer für die obigen beiden Einträge, daneben folgender Text:</note></align>
-    <vspace lines="1" presentational="true"/>
-<line />schickst Du an Mühlgau.
+<tabs>
+<tab value="1-2" type="right-virgil-inwards">
+    <line />Instruktion des Königs v. Preussen
+    <line />Ray de St. Genie
+</tab>
+<tab value="2-2">
+    <vspace lines="0.5" />
+    <line />schickst Du an Mühlgau.
+</tab>
+</tabs>
 <vspace lines="1"/>
 <line />Theuerdank (Bertuchen)
 <line /><ul>Die Zigeuner</ul> (dem Herzog)
@@ -3314,50 +3319,94 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line /><ul>Wielands</ul> Schriften an Wieland
 <line /><ul>Der Hut u. die Strumfbänder</ul> (an Goethen)
 <line /><ul>Yärros Ufer</ul> (Goethen, dem Herzog vorzulesen)
-<line /><aq>Ramonds Drame</aq> und den <aq>Soulier mordoré</aq> (den die Herzoginn Mutter hat, der regierenden Herzoginn zu bringen)
+<tabs>
+<tab value="1-3">
+    <aq>Ramonds Drame</aq> und den <aq>Soulier mordoré</aq>
+</tab>
+<tab value="2-3">
+    (den die Herzoginn Mutter hat, der regierenden Herzoginn zu bringen)
+</tab>
+</tabs>
 <vspace lines="2"/>
 <line /><align pos="center">Sachen die ich mir ausbitte</align>
-<line />Alle Bücher auf dem Stuhl
-<line /><tabs><note>zweispaltige Tabelle, zunächst die rechte Spalte</note>
-<line /><tab value="1-12">Polyb</tab> <tab value="5-12"><aq>vies des peintres.</aq></tab>
-<line /><tab value="1-12">Stuart</tab> <tab value="5-12">Büschings Geographie der Theil v. Frankreich</tab>
-<line /><tab value="1-12"><aq>Comte de Saxe</aq></tab> <tab value="5-12">Einige Karten</tab><note>geschweifte Klammer für die obigen beiden Einträge</note> <tab value="10-12">die mir Bertuch verschafft</tab>
-<line /><tab value="1-12"><aq>Dictionnaire</aq></tab><tab value="5-12">Abbt St. Pierre</tab><note>geschweifte Klammer für die obigen beiden Einträge</note> <tab value="10-12"></tab>
-<line /><tab value="1-12"><aq>Girards Grammaire</aq></tab>
-<line /><tab value="1-12"><aq>Hamilton</aq></tab>
-<line /><tab value="1-12"><aq>Crebillon</aq></tab>
-<line /><tab value="1-12"><aq>Guibert</aq> (wozu ich wenns seyn kann, den 1sten Theil u. die Kupfer</tab>
-<line /><tab value="1-12">Instruktion der französischen Truppen</tab>
-<line /><tab value="1-12"><aq>Chevalier d’Eon.</aq> Vor allen Dingen u. <del>mit dem drin liegendem Pappier</del></tab>
-<line /><tab value="1-12">Kriegsbaukunst</tab>
-<line /><tab value="1-12"><ul>Homer.</ul></tab></tabs>
-<vspace lines="1"/>
-<line /><hand ref="25"> <pe><aq>Julius Caesar</aq></pe></hand>
-<line /><ul>Das Pack mit meinen 2 Brieftaschen</ul> (unaufgemacht)
-<line /><ul>Das Päckgen Catharina</ul> v. Siena vor allen Dingen und unaufgemacht.
-<vspace lines="1"/>
-<line />Siegellak. Chokolate. Feuerwerke. Soldatenpuppen für die Baurenkinder
-<vspace lines="1"/>
-<line />Wäsche was die Wäscherin hat, 1 Hemd. 1 Schnuptuch 1 P seidne Strümpfe einige Binden
+<line tab="5" />Alle Bücher auf dem Stuhl
+<tabs>
 <line />
-<line tab="1"/>was da ist ein Hemd, 3 Binden, 1 Schnuptuch 1 P seidne Strümf 1 Nachtmütze. 1 P. zwirn Strümfe 1 P. schwarzseidne
-<vspace lines="1"/>
-<line /><hand ref="25"><pe> noch nicht da.</pe></hand>
-<vspace lines="1"/>
+    <tab value="1-12"><hand ref="25"><pe>⸺</pe></hand></tab>
+    <tab value="2-12">Polyb</tab>
+    <tab value="6-12"><aq>vies des peintres.</aq></tab>
+<line />
+    <tab value="1-12"><hand ref="25"><pe>⸺</pe></hand></tab>
+    <tab value="2-12">Stuart</tab>
+    <tab value="6-12">Büschings Geographie der Theil v. Frankreich</tab>
+<tab value="1-12">
+    <line/><hand ref="25"><pe>⸺</pe></hand>
+    <line/><hand ref="25"><pe>⸺</pe></hand>
+</tab>
+<tab value="2-12">
+    <line/><aq>Comte de Saxe</aq>
+    <line/><aq>Dictionnaire</aq>
+</tab>
+<tab value="6-12" type="right-virgil-inwards">
+    <line/>Einige Karten
+    <line/>Abbt St. Pierre
+</tab>
+<tab value="10-12">
+    <line/>die mir Bertuch verschafft
+</tab>
+</tabs>
+<tabs>
+<line />
+    <tab value="1-12"><hand ref="25"><pe>⸺</pe></hand></tab>
+    <tab value="2-12"><aq>Girards Grammaire</aq></tab>
+<line />
+    <tab value="1-12"><align pos="right"><hand ref="25"><pe>⨯</pe></hand></align></tab>
+    <tab value="2-12"><aq>Hamilton</aq></tab>
+<line />
+    <tab value="1-12"><align pos="right"><hand ref="25"><pe>⨯</pe></hand></align></tab>
+    <tab value="2-12"><aq>Crebillon</aq></tab>
+<line />
+    <tab value="1-12"><align pos="right"><hand ref="25"><pe>⨯</pe></hand></align></tab>
+    <tab value="2-12"><aq>Guibert</aq> (wozu ich wenns seyn kann, den 1sten Theil u. die Kupfer</tab>
+<line />
+    <tab value="1-12"><hand ref="25"><pe>⸺</pe></hand></tab>
+    <tab value="2-12"><aq>Instruktion der französischen Truppen</aq></tab>
+<line />
+    <tab value="1-12"><hand ref="25"><pe>⸺</pe></hand></tab>
+    <tab value="2-12"><aq>Chevalier d’Eon.</aq> Vor allen Dingen u. <del>mit dem drin liegendem Pappier</del></tab>
+<line />
+    <tab value="1-12"><hand ref="25"><pe>⸺</pe></hand></tab>
+    <tab value="2-12"><aq>Kriegsbaukunst</aq></tab>
+<line />
+    <tab value="1-12"><hand ref="25"><pe>⸺</pe></hand></tab>
+    <tab value="2-12"><ul>Homer.</ul></tab>
+<line />
+    <tab value="1-12"><hand ref="25"><pe>⸺</pe></hand></tab>
+    <tab value="2-12"><ul>Das Pack mit meinen 2 Brieftaschen</ul> (unaufgemacht)</tab>
+<line />
+    <tab value="1-12"><hand ref="25"><pe>⸺</pe></hand></tab>
+    <tab value="2-12"><ul>Das Päckgen Catharina</ul> v. Siena vor allen Dingen und unaufgemacht.</tab>
+<line />
+    <tab value="1-12"><hand ref="25"><pe>Julius Caesar</pe></hand></tab>
+    <tab value="3-12"><ul>Siegellak. Chokolate. Feuerwerke. Soldatenpuppen für die Baurenkinder</ul></tab>
+<line/>
+    <tab value="1-12"><hand ref="25"><pe><align pos="center">noch nicht da</align></pe></hand></tab>
+    <tab value="3-12">Wäsche</tab>
+    <tab value="5-12" type="left-virgil-outwards">
+        <line/>was die Wäscherin hat, 1 Hemd. 1 Schnuptuch 1 P seidne Strümpfe einige Binden
+        <line/>was da ist ein Hemd, 3 Binden, 1 Schnuptuch 1 P seidne Strümf 1 Nachtmütze. 1 P. zwirn Strümfe 1 P. schwarzseidne
+    </tab>
+</tabs>
 <line />Meinen Strasburger Frak mit Weste. Mein Nachtwämsgen u. Ueberrok
-<line />
-<line tab="1"/>Meinen Corsenhut Stiefel u. 2 Paar Schuh. Auch die neue Schuh die mir
+<line />Meinen Corsenhut Stiefel u. 2 Paar Schuh. Auch die neue Schuh die mir
 <page index="2"/>der Schuster bringen wird der bey Krausen wohnt.
-<vspace lines="1"/>
-<line /><hand ref="25"><pe> nicht fertig</pe></hand>
-<vspace lines="1"/>
-<line />Pappier, auch Postpappier
-<vspace lines="1"/>
+<sidenote page="2" pos="top right" annotation="am rechten oberen Rand der zweiten Seite">
+    <line /><hand ref="25"><pe> nicht fertig</pe></hand>
+</sidenote>
+<line/><hand ref="25"><pe>⸺</pe></hand> Pappier, auch Postpappier
+<line tab="2" /><hand ref="25"><pe>Siegellak</pe></hand>
 <line type="line"/>
-<vspace lines="1"/>
-<line /><hand ref="25"><pe>Siegellak</pe></hand>
-<line />
-<line/> <hand ref="25"> <pe>Seife</pe></hand>
+<line tab="2" /> <hand ref="25"> <pe>Seife</pe></hand>
 <vspace lines="1"/>
 <line />Einen Haarkam hätte noch nöthig und ein Scheermesser, weil ich mich sonst vor mir selber fürchten muß.
 <line /><hand ref="25"><pe> 2 Schnupftücher v. mir
@@ -3401,13 +3450,13 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
 <vspace lines="1" presentational="true"/>
-<sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal"><pe>grüß Klinger vielmalen</pe>
+<sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite, vertikal"><pe>grüß Klinger vielmalen</pe>
 <line tab="1"/>Wenn ein Vorhängeschloß vor meinen Coffre hättest wegen der Papiere wäre mirs sehr lieb. Dies schließt nicht ich habe den Schlüssel verlorren
 </sidenote>
-<line /><address>Herrn
-<line />Geh. Leg. Rath
-<line />Goethe</address>
-<sidenote pos="top" page="4" annotation="oberhalb der Adresse auf der vierten Seite, Bleistift heute stark verwischt, zitiert nach FSt II, S. 5">: <pe>Vor allen Dingen bitte Wieland die […] sobald er sie missen</pe></sidenote>
+<line /><address><align pos="center">Herrn</align>
+<line /><align pos="center">Geh. Leg. Rath</align>
+<line /><align pos="center">Goethe</align></address>
+<sidenote pos="top" page="4" annotation="oberhalb der Adresse auf der vierten Seite, Bleistift heute stark verwischt, zitiert nach FSt II, S. 5"><pe>Vor allen Dingen bitte Wieland die […] sobald er sie missen</pe></sidenote>
 <sidenote pos="right" page="4" annotation="rechts, um 90 Grad zur Adresse gedreht, auf der vierten Seite">Bitte mir alles aufs bäldeste zu schicken
 <line />Um die Wäsche bitte aufs eheste</sidenote>
 </letterText>
