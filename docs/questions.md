@@ -15,18 +15,13 @@
   -> Schwierigkeit im Modell; UND oder ODER Verknüpfungen?
 - Die geplante Zitierempfehlung klappt nicht, weil wir den Absendeort im geschriebenen Datum haben ([Verfasser], [Absendeort], an [Empfänger], [Empfangsort], [Datum], in: Jakob Michael Reinhold Lenz: Kritische Briefausgabe, hrsg. v. Gregor Babelotzky (Heidelberg 2026ff.). [URL, abgerufen am DATUM])
 - 367: Sprachenklaviatur?
-- Arcxchiv link with/without text
+- Archiv link with/without text
 
 ## Handschrift
-- 224, 366: Tabellen
-- 184: cant find the sidenote on page 4 in der HS
-- 192: Strasb. etc.. evtl 2te Spalte?
 - 324: Adresse auf der dritten Seite 
-- 261: Kleienr entwurf
-- 164: Orig ohne Anfang
 - 81: Only pg 4
-- 367: address on the last page -- 1 and 4 onnly -- Klaviatur anschauen
-- 216, (2 Außenseite, aber keine Adresse?), 374 (Außenseite mit Text), 242 (Außenseite?), 228 (Außenseite?), 141 (Außenseite?), 216 (Außenseite?)
+- 216: Witziger Ausriss: passt in den Text oben der Kinder Straße
+- 228: kein Seitenumbruch? ist es die 2te oder 4te Seite?
 
 ## TODO ME
 - Übersetzung und "Zusatzmaterial" in Serifen
