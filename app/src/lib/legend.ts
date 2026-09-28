@@ -54,3 +54,9 @@ const quickLegendTags = [
 export const quickLegend = quickLegendTags.flatMap(tag => legend.filter(item => item.tag === tag));
 
 export const legendGroups = ['Hauptsächlich im Druck', 'Hauptsächlich in der Handschrift', 'Editorische Hinweise', 'Layout'];
+
+// Both presentations use exactly the same sections, entries and examples.
+export const legendSections = legendGroups.map(title => ({
+  title,
+  entries: quickLegend.filter(item => item.group === title),
+}));

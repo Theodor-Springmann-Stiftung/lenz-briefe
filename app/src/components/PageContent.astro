@@ -1,0 +1,13 @@
+---
+import EditionGuidelines from './EditionGuidelines.astro';
+import { legendMarker } from '../../scripts/page-legend.mjs';
+
+interface Props { legacyLegend?: boolean }
+const html = await Astro.slots.render('default');
+const parts = html.split(legendMarker);
+---
+{parts.map((part, index) => <>
+  {part.trim() && <div class="page-prose" set:html={part} />}
+  {index < parts.length - 1 && <EditionGuidelines />}
+</>)}
+{Astro.props.legacyLegend && parts.length === 1 && <EditionGuidelines />}

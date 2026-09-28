@@ -73,11 +73,30 @@ The root-level [`seiten/`](../seiten/) directory is an Astro content
 collection. Each top-level `.md` file supplies an Edition menu entry and a page
 at `/edition/<filename>/`; `README.md` and `_*.md` are excluded. Required
 frontmatter is `menu`, `title`, and `description`. Optional `order` controls menu
-order; `legend: true` appends the existing interactive guidelines. The quick
-legend links to the first such page, and `/edition/` redirects to the first menu
+order. The quick legend links to the first page containing a legend, and `/edition/` redirects to the first menu
 entry. `title` sets the browser title only; visible headings are authored in the
 Markdown (for example, `# Heading`). The template does not insert an H1.
 The collection schema checks frontmatter during development and builds.
+Set `inMenu: false` to keep a page out of the Edition menu, such as
+`seiten/datenschutz.md`, which is linked from the footer. The older `/datenschutz/`
+address redirects to that page.
+
+Long pages automatically show a contents navigation built from Markdown H1–H3
+headings. It appears when a page has at least two H2 sections and either 400 words
+or an embedded legend. It sits on the right on wide screens (from 1200px), stays
+visible while scrolling, and moves above the text on narrower screens.
+
+Insert the shared legend anywhere between Markdown blocks, on its own line with
+blank lines before and after it:
+
+```html
+<lkb-legende></lkb-legende>
+```
+
+It is rendered into the page at build time, works without JavaScript, and uses
+the same sections, descriptions and examples as “Schnelle Legende”.
+Code examples of the tag stay literal. The older
+`legend: true` frontmatter still appends a legend if no embed is present.
 
 Astro watches the Markdown collection directly, without rerunning the XML export.
 Local Markdown images under `seiten/assets/` use Astro's image optimization.

@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import EditionGuidelines from '../../components/EditionGuidelines.astro';
+import PageContent from '../../components/PageContent.astro';
 import { editionPages } from '../../lib/pages';
 
 export async function getStaticPaths() {
@@ -11,11 +11,60 @@ export async function getStaticPaths() {
 
 interface Props { page: CollectionEntry<'pages'> }
 const { page } = Astro.props;
-const { Content } = await render(page);
+const { Content, headings, remarkPluginFrontmatter } = await render(page);
+const tocHeadings = headings.filter(heading => heading.depth <= 3);
+const wordCount = (page.body ?? '').split(/\s+/).filter(Boolean).length;
+const showToc = headings.filter(heading => heading.depth === 2).length >= 2
+  && (wordCount >= 400 || page.data.legend || remarkPluginFrontmatter.hasLegend);
 ---
 <Layout title={`${page.data.title} · Lenz Briefe`} description={page.data.description}>
-  <article class="about-page">
-    <div class="page-prose"><Content /></div>
-    {page.data.legend && <EditionGuidelines />}
+  <article class:list={['about-page', { 'about-page--with-toc': showToc }]}>
+    {showToc && <nav class="page-toc" aria-label="Inhaltsverzeichnis">
+      <p class="page-toc-title">Inhalt</p>
+      <ol>{tocHeadings.map(heading => <li class:list={{ 'page-toc-subheading': heading.depth === 3 }}>
+        <a href={`#${heading.slug}`}>{heading.text}</a>
+      </li>)}</ol>
+    </nav>}
+    <div class="about-page-content">
+      <PageContent legacyLegend={page.data.legend}><Content /></PageContent>
+    </div>
   </article>
 </Layout>
+<script>
+  const tocLinks = [...document.querySelectorAll<HTMLAnchorElement>('.page-toc a')];
+  const sections = tocLinks.flatMap(link => {
+    const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+    return heading ? [{ link, heading }] : [];
+  });
+  if (sections.length) {
+    let activeLink: HTMLAnchorElement | undefined;
+    let pending = false;
+    const updateToc = () => {
+      pending = false;
+      // Match the anchor offset below the sticky site header.
+      const threshold = (parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0) + 1;
+      let active = sections[0];
+      for (const section of sections) {
+        if (section.heading.getBoundingClientRect().top <= threshold) active = section;
+      }
+      const remaining = document.documentElement.scrollHeight - window.innerHeight - window.scrollY;
+      if (window.scrollY > 0 && remaining <= 2) active = sections[sections.length - 1];
+      if (active.link === activeLink) return;
+      activeLink?.removeAttribute('aria-current');
+      active.link.setAttribute('aria-current', 'location');
+      activeLink = active.link;
+    };
+    const scheduleUpdate = () => {
+      if (pending) return;
+      pending = true;
+      requestAnimationFrame(updateToc);
+    };
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+    window.addEventListener('hashchange', scheduleUpdate);
+    window.addEventListener('pageshow', scheduleUpdate);
+    const observer = new ResizeObserver(scheduleUpdate);
+    for (const element of document.querySelectorAll('.site-header, .about-page-content')) observer.observe(element);
+    scheduleUpdate();
+  }
+</script>

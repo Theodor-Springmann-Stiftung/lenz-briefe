@@ -6,6 +6,7 @@ import { base } from '../lib/edition';
 import Navigation from '../components/Navigation.astro';
 import BackToTop from '../components/BackToTop.astro';
 import { revision } from '../lib/revision';
+import { pageUrl } from '../lib/pages';
 interface Props { title?: string; description?: string; wide?: boolean }
 const {title = 'Briefe · Jacob Michael Reinhold Lenz', description = 'Die Briefe von und an Jacob Michael Reinhold Lenz. Digitale Edition.', wide = false} = Astro.props;
 const generatedAt = new Date();
@@ -29,7 +30,7 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {month: 'long', year: '
     <a class="skip-link" href="#inhalt">Zum Inhalt</a>
     <header class="site-header">
       <div class="site-header-inner">
-        <a class="wordmark" href={base} aria-label="Lenz – Kritische Briefausgabe – Übersicht"><span class="wordmark-name">Lenz</span><span class="wordmark-caption">Kritische Briefausgabe</span></a>
+        <a class="wordmark" href={base} aria-label="J. M. R. Lenz – Kritische Briefausgabe – Übersicht"><span class="wordmark-name">J. M. R. LENZ</span><span aria-hidden="true">|</span><span class="wordmark-caption">KRITISCHE BRIEFAUSGABE</span></a>
         <Navigation />
       </div>
     </header>
@@ -37,7 +38,7 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {month: 'long', year: '
     <footer class="site-footer">
       <div class="site-footer-inner">
         <p class="footer-license-line"><a class="footer-license" href="https://creativecommons.org/licenses/by/4.0/"><Icon name="creativeCommons" /><Icon name="creativeCommonsBy" /><span class="font-sans">CC BY 4.0</span></a><span aria-hidden="true">·</span><time datetime={generatedAt.toISOString()}>{generationMonth}</time></p>
-        <p class="text-right">lenz-briefe.de – ein Projekt der <a href="https://theodor-springmann-stiftung.de/">Theodor Springmann Stiftung</a> · <a href="https://dev.lenz-briefe.de/datenschutz/">Impressum &amp; Datenschutz</a> <Icon name="code" class="footer-code-icon" /> <a class="font-mono" href={revision.url} aria-label={`Commit ${revision.shortHash.toUpperCase()}`}>{revision.shortHash.toUpperCase()}</a></p>
+        <p class="text-right">lenz-briefe.de – ein Projekt der <a href="https://theodor-springmann-stiftung.de/">Theodor Springmann Stiftung</a> · <a href={pageUrl('datenschutz')}>Impressum &amp; Datenschutz</a> <Icon name="code" class="footer-code-icon" /> <a class="font-mono" href={revision.url} aria-label={`Commit ${revision.shortHash.toUpperCase()}`}>{revision.shortHash.toUpperCase()}</a></p>
       </div>
     </footer>
     <BackToTop />

@@ -1,9 +1,14 @@
 ---
 import Icon from './Icon.astro';
 import LegendExample from './LegendExample.astro';
-import { quickLegend, legendGroups } from '../lib/legend';
+import { render } from 'astro:content';
+import { legendSections } from '../lib/legend';
 import { editionPages, pageUrl } from '../lib/pages';
-const guidelines = (await editionPages()).find(page => page.data.legend);
+const pages = await editionPages();
+const legends = await Promise.all(pages.map(async page =>
+  page.data.legend || Boolean((await render(page)).remarkPluginFrontmatter.hasLegend),
+));
+const guidelines = pages.find((_, index) => legends[index]);
 
 ---
 <button class="quick-legend-toggle" type="button" popovertarget="quick-legend" aria-label="Schnelle Legende öffnen" title="Schnelle Legende" data-tooltip="Schnelle Legende" data-tippy-placement="top" data-tippy-trigger="mouseenter focus">
@@ -15,9 +20,9 @@ const guidelines = (await editionPages()).find(page => page.data.legend);
     <button type="button" popovertarget="quick-legend" popovertargetaction="hide" aria-label="Legende schließen" autofocus><Icon name="close" /></button>
   </header>
   <div class="quick-legend-body" tabindex="0" role="region" aria-label="Auszeichnungen und Beispiele">
-    {legendGroups.map(group => <section>
-      <h3>{group}</h3>
-      <dl>{quickLegend.filter(item => item.group === group).map(item => <div class="quick-legend-entry" data-legend-tag={item.tag} tabindex="0">
+    {legendSections.map(({ title, entries }) => <section>
+      <h3>{title}</h3>
+      <dl>{entries.map(item => <div class="quick-legend-entry" data-legend-tag={item.tag} tabindex="0">
         <dt><span>{item.label}</span>{item.short && <small>{item.short}</small>}</dt>
         <dd class="edition-text"><LegendExample item={item} /></dd>
       </div>)}</dl>

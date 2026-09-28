@@ -14,6 +14,7 @@ const pages = defineCollection({
     title: z.string().trim().min(1),
     description: z.string().trim().min(1),
     order: z.number().int().default(100),
+    inMenu: z.boolean().default(true),
     legend: z.boolean().default(false),
   }),
 });
