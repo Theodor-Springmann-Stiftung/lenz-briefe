@@ -17,9 +17,10 @@ add no characters to copied or searched text.
 
 ## Usage
 
-Install dependencies:
+From the repository root, enter the transformation workspace and install dependencies:
 
 ```bash
+cd scripts/transform/python
 uv sync
 ```
 
@@ -32,7 +33,7 @@ uv run check-coverage
 Run the exporter:
 
 ```bash
-uv run transform --out ../../app/generated
+uv run transform --out ../../../app/generated
 ```
 
 The exporter always publishes a `status.json` file into the output directory.

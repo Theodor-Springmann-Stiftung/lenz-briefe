@@ -11,7 +11,7 @@ import tempfile
 import time
 from pathlib import Path
 
-from .common import ROOT_DIR
+from .common import PACKAGE_DIR
 
 HTML_JSON_KEYS = {"traditionsHtml", "html"}
 
@@ -83,7 +83,7 @@ def main() -> int:
         node_started = time.perf_counter()
         subprocess.run(
             ["node", "./src/cli.mjs", "--out", str(node_out)],
-            cwd=ROOT_DIR / "transform" / "js",
+            cwd=PACKAGE_DIR.parent / "js",
             check=True,
         )
         node_ms = (time.perf_counter() - node_started) * 1000.0
@@ -91,7 +91,7 @@ def main() -> int:
         python_started = time.perf_counter()
         subprocess.run(
             ["uv", "run", "transform", "--out", str(python_out)],
-            cwd=ROOT_DIR / "transform" / "python",
+            cwd=PACKAGE_DIR,
             check=True,
         )
         python_ms = (time.perf_counter() - python_started) * 1000.0

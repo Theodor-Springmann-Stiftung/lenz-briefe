@@ -1,9 +1,9 @@
 import sys
-from pathlib import Path
 import unittest
 from lxml import etree
+from transform_python.common import ROOT_DIR
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
+sys.path.insert(0, str(ROOT_DIR / 'scripts'))
 from compare_traditions import clean_metadata, build_inputs, ROOT, NS
 
 

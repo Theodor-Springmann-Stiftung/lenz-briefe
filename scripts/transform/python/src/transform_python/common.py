@@ -18,7 +18,7 @@ NS = "https://lenz-archiv.de"
 NSMAP = {"l": NS}
 
 PACKAGE_DIR = Path(__file__).resolve().parents[2]
-ROOT_DIR = PACKAGE_DIR.parent.parent
+ROOT_DIR = PACKAGE_DIR.parents[2]
 DATA_DIR = ROOT_DIR / "data" / "xml"
 XSLT_DIR = ROOT_DIR / "data" / "xslt"
 XSD_DIR = ROOT_DIR / "data" / "xsd"

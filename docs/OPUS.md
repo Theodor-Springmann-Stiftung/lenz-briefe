@@ -503,8 +503,8 @@ der aktuellen Lenz-Quellen:
 Alle vier Quelldokumente gegen ihre XSDs prüfen (vom Repository-Stamm aus):
 
 ```sh
-uv run --project transform/python python -m transform_python.validate_schemas
+uv run --project scripts/transform/python python -m transform_python.validate_schemas
 ```
 
-Weitere technische Details: [Python-Export](../transform/python/README.md)
+Weitere technische Details: [Python-Export](../scripts/transform/python/README.md)
 und [Website](../app/README.md).

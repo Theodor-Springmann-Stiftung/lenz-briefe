@@ -27,16 +27,16 @@ jobs:
         with:
           python-version: '3.13'
           enable-cache: true
-          cache-dependency-glob: transform/python/uv.lock
+          cache-dependency-glob: scripts/transform/python/uv.lock
 
       - name: Install locked transformation dependencies
-        run: uv sync --project transform/python --locked
+        run: uv sync --project scripts/transform/python --locked
 
       - name: Validate all XML documents against their XSDs
-        run: uv run --project transform/python --no-sync python -m transform_python.validate_schemas
+        run: uv run --project scripts/transform/python --no-sync python -m transform_python.validate_schemas
 
       - name: Test the complete transformation suite
-        working-directory: transform/python
+        working-directory: scripts/transform/python
         run: uv run --no-sync python -m unittest discover -p 'test_*.py'
 
       - name: Set up Node.js

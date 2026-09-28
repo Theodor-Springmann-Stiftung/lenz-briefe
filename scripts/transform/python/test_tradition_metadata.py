@@ -1,10 +1,9 @@
 import importlib.util
-from pathlib import Path
 import unittest
 from lxml import etree
+from transform_python.common import ROOT_DIR as ROOT
 from transform_python.exporter import extract_meta
 
-ROOT = Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location('classify', ROOT / 'scripts/classify_traditions.py')
 classify = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(classify)

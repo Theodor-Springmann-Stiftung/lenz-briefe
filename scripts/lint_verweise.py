@@ -5,7 +5,7 @@ from lxml import etree
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 XML_DIR = os.path.join(REPO_ROOT, "data", "xml")
 
-sys.path.insert(0, os.path.join(REPO_ROOT, "transform", "python", "src"))
+sys.path.insert(0, os.path.join(REPO_ROOT, "scripts", "transform", "python", "src"))
 
 from transform_python.verweise import check_verweise
 

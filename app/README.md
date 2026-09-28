@@ -13,7 +13,7 @@ Use a Node version supported by Astro 7 and Python 3.13. Install `uv` for
 the Python workspace, then run from the repository root:
 
 ```sh
-uv sync --project transform/python
+uv sync --project scripts/transform/python
 npm --prefix app ci
 npm --prefix app run dev
 ```
@@ -62,7 +62,7 @@ published output.
 Run the same strict validation locally from the repository root:
 
 ```sh
-uv run --project transform/python python -m transform_python.validate_schemas
+uv run --project scripts/transform/python python -m transform_python.validate_schemas
 ```
 
 ## Data and rendering
@@ -220,7 +220,7 @@ use inverse text. `undo` has no additional visual style; `address` is transparen
 ```sh
 npm --prefix app test
 npm --prefix app run check
-cd transform/python
+cd scripts/transform/python
 uv run python -m unittest discover -p 'test_*.py'
 ```
 
