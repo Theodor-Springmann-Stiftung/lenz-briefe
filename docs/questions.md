@@ -16,6 +16,7 @@
 - 184: cant find the sidenote on page 4 in der HS
 - 192: Strasb. etc.. evtl 2te Spalte?
 - Die geplante Zitierempfehlung klappt nicht, weil wir den Absendeort im geschriebenen Datum haben ([Verfasser], [Absendeort], an [Empfänger], [Empfangsort], [Datum], in: Jakob Michael Reinhold Lenz: Kritische Briefausgabe, hrsg. v. Gregor Babelotzky (Heidelberg 2026ff.). [URL, abgerufen am DATUM])
+- 367: Sprachenklaviatur
 
 ## Handschrift
 - 224, 366: Tabellen
