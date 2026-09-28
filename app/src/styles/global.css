@@ -430,6 +430,9 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 .edition-text .nr { display:inline-block; min-width:calc(var(--extent,1) * 1ch); white-space:pre; text-indent:0; text-align:center; vertical-align:baseline; }
 .edition-text .nr::before, .edition-text .nr::after { content:'⸰'; }
 .edition-text .nr:empty::before { margin-inline-end:calc(var(--extent,1) * 1ch); }
+.edition-text .nr[data-wrap] { display:inline; min-width:0; white-space:normal; overflow-wrap:anywhere; }
+.edition-text .nr-space { display:inline-block; width:1ch; }
+.edition-text .nr-space::before { content:'\00a0'; }
 .edition-text del .nr { background-image:linear-gradient(currentColor,currentColor); background-size:100% 1px; background-position:center; background-repeat:no-repeat; }
 .edition-text del del .nr { background-image:linear-gradient(to bottom,currentColor 0 1px,transparent 1px 2px,currentColor 2px 3px); background-size:100% 3px; }
 .edition-text .insertion::before { content:'⌞\2060'; }

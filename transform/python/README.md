@@ -94,8 +94,10 @@ at full row width, so neither can shift the encoded starting positions.
 
 `address` is transparent. Empty `nr` elements survive, including in aligned
 content; whitespace-only placeholder contents are removed, and `data-extent`
-always contains the source extent or its default `1`. No illegibility glyph is
-inserted. Insertion positions and annotations become `data-pos` and
+always contains the source extent or its default `1`. Extents above 20 carry
+`data-wrap`; empty ones contain character-width `nr-space` spans so the gap
+can wrap within a line, including inside erasures, without adding text.
+No illegibility glyph is inserted. Insertion positions and annotations become `data-pos` and
 `data-annotation`; no decoration is inserted. Highlights retain `data-color`.
 
 Sidenote contents remain exclusively in `sidenotes.json`, keyed by page.

@@ -2,7 +2,7 @@
 
 ## Gregor
 - 281: Leere sidenote?
-- Neue Tags <vspace> <sub> <sup>, Meta-Struktur, Gruppen
+- Neue Tags <vspace> <sub> <sup>, <tab>-type-Attribute, <sidenote>-type-Atrribute, Meta-Struktur, Gruppen
 - Briefnummer und Brieflink
 - 72, 122: Sidenote Bottom?
 - 266, 95: Gutes Beispiel für verwirrende <tl>: 

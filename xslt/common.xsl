@@ -777,8 +777,20 @@
   </xsl:template>
 
   <xsl:template match="lb:nr">
-    <span class="nr" data-extent="{if (@extent) then @extent else '1'}" style="--extent: {if (@extent castable as xs:positiveInteger) then xs:positiveInteger(@extent) else 1}">
-      <xsl:apply-templates select="node()[not(self::text()[not(normalize-space())])]" />
+    <xsl:variable name="extent" select="if (@extent castable as xs:positiveInteger) then xs:positiveInteger(@extent) else 1" />
+    <xsl:variable name="content" select="node()[not(self::text()[not(normalize-space())])]" />
+    <span class="nr" data-extent="{if (@extent) then @extent else '1'}" style="--extent: {$extent}">
+      <xsl:if test="$extent gt 20">
+        <xsl:attribute name="data-wrap">true</xsl:attribute>
+      </xsl:if>
+      <xsl:choose>
+        <xsl:when test="$extent gt 20 and empty($content)">
+          <!-- Separate character-width boxes allow the blank extent to wrap
+               without inserting characters into copied or searched text. -->
+          <xsl:for-each select="1 to $extent"><span class="nr-space" aria-hidden="true"></span></xsl:for-each>
+        </xsl:when>
+        <xsl:otherwise><xsl:apply-templates select="$content" /></xsl:otherwise>
+      </xsl:choose>
     </span>
   </xsl:template>
 

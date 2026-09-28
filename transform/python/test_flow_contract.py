@@ -143,6 +143,28 @@ class FlowContractTests(unittest.TestCase):
                 self.assertEqual(readable.xpath('./em/text()'), ['Text'])
                 self.assertEqual(len(readable.xpath('./span[@class="nr"]')), 2)
 
+    def test_long_illegible_extents_can_wrap_without_adding_text(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            for extent in [20, 21, 30, 105]:
+                for erased in [False, True]:
+                    with self.subTest(kind=kind, extent=extent, erased=erased):
+                        body = f'<nr extent="{extent}"> </nr>'
+                        if erased:
+                            body = f'<er><hand ref="1">{body}</hand></er>'
+                        tree = self.render(f'A{body}B', kind)
+                        mark = tree.xpath('.//span[@class="nr"]')[0]
+                        self.assertEqual(mark.get('data-wrap'), 'true' if extent > 20 else None)
+                        spaces = mark.xpath('./span[@class="nr-space"][@aria-hidden="true"]')
+                        self.assertEqual(len(spaces), extent if extent > 20 else 0)
+                        self.assertEqual(''.join(line.text_content() for line in self.lines(tree)), 'AB')
+                        if erased:
+                            self.assertEqual(tree.xpath('.//span[@class="er"]/@data-empty'), ['true'])
+            tree = self.render('<nr extent="21">Some <it>readable</it> text</nr>', kind)
+            self.assertEqual(''.join(line.text_content() for line in self.lines(tree)), 'Some readable text')
+            self.assertEqual(tree.xpath('.//span[@class="nr"]/@data-wrap'), ['true'])
+            self.assertFalse(tree.xpath('.//span[@class="nr-space"]'))
+            self.assertEqual(tree.xpath('.//em/text()'), ['readable'])
+
     def test_superscript_and_subscript_preserve_nested_formatting(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:
             with self.subTest(kind=kind):
