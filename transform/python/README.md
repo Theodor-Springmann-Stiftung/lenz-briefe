@@ -2,6 +2,9 @@
 
 Native XML export pipeline for the Lenz edition.
 
+Source XML lives in `data/xml/`, schemas in `data/xsd/`, and stylesheets in
+`data/xslt/`, relative to the repository root.
+
 Optional `<tab value="1-2" type="right-virgil-inwards">…</tab>` exports
 `data-type="right-virgil-inwards"`. The site draws a decorative `{` along the
 cell's right edge, spanning its height and pointing inward. The mirrored type

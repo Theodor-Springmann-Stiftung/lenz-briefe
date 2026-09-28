@@ -3,10 +3,10 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-from .common import ROOT_DIR
+from .common import XSD_DIR, XSLT_DIR
 
-TEXTELEMENTS_PATH = ROOT_DIR / "data" / "xsd" / "textelements.xsd"
-COMMON_XSL_PATH = ROOT_DIR / "xslt" / "common.xsl"
+TEXTELEMENTS_PATH = XSD_DIR / "textelements.xsd"
+COMMON_XSL_PATH = XSLT_DIR / "common.xsl"
 
 
 def get_inline_refs(xsd: str) -> list[str]:

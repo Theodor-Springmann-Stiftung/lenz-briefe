@@ -39,7 +39,7 @@ export function createExportQueue({run, success, failure, delay = 200}) {
 
 export default function watchEdition() {
   const root = fileURLToPath(new URL('../../', import.meta.url));
-  const sources = ['data/xml', 'data/xsd', 'xslt'].map(dir => path.join(root, dir));
+  const sources = ['data/xml', 'data/xsd', 'data/xslt'].map(dir => path.join(root, dir));
   const editionModule = path.join(root, 'app/src/lib/edition.ts');
   return {
     name: 'lenz:watch-edition',

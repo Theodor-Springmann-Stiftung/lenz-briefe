@@ -1,18 +1,13 @@
 ---
 import Icon from './Icon.astro';
 import { base, catalog, letterUrl } from '../lib/edition';
+import { editionPages, pageUrl } from '../lib/pages';
 const path = Astro.url.pathname;
 const navigation = [
   {label: 'Verzeichnis', href: base, active: path === base},
   {label: 'Briefansicht', href: letterUrl(catalog.letters[0].letter), active: path.startsWith(`${base}briefe/`)},
 ];
-const editionPages = [
-  {label: 'Zur Edition', href: `${base}edition/richtlinien/`},
-  {label: 'Briefumschläge', href: `${base}edition/briefumschlaege/`},
-  {label: 'Siglen', href: `${base}edition/siglen/`},
-  {label: 'Zitierempfehlung', href: `${base}edition/zitierempfehlung/`},
-  {label: 'Kontakt', href: `${base}edition/kontakt/`},
-];
+const pages = (await editionPages()).map(page => ({ label: page.data.menu, href: pageUrl(page.id) }));
 const inEdition = path.startsWith(`${base}edition/`);
 ---
 <button class="navigation-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Menü öffnen">
@@ -21,14 +16,14 @@ const inEdition = path.startsWith(`${base}edition/`);
 </button>
 <nav id="main-navigation" class="main-navigation" aria-label="Hauptnavigation">
   {navigation.map(item => <a class="main-navigation-link" href={item.active ? undefined : item.href} role={item.active ? 'link' : undefined} aria-disabled={item.active ? 'true' : undefined} aria-current={item.active ? 'page' : undefined}>{item.label}</a>)}
-  <details class="edition-menu">
+  {pages.length > 0 && <details class="edition-menu">
     <summary class:list={['main-navigation-link', {'is-current': inEdition}]}>
       Edition <Icon name="chevronDown" />
     </summary>
     <ul class="edition-menu-panel">
-      {editionPages.map(item => <li><a href={path === item.href ? undefined : item.href} role={path === item.href ? 'link' : undefined} aria-disabled={path === item.href ? 'true' : undefined} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a></li>)}
+      {pages.map(item => <li><a href={path === item.href ? undefined : item.href} role={path === item.href ? 'link' : undefined} aria-disabled={path === item.href ? 'true' : undefined} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a></li>)}
     </ul>
-  </details>
+  </details>}
   <a class="main-navigation-link archive-link" href="https://lenz-archiv.de/">
     <span class="archive-link-label"><img src={`${base}lenz-archiv-icon.png`} width="20" height="20" alt="" />Jakob Lenz Archiv</span>
     <Icon name="arrowRightUp" class="archive-link-arrow" />

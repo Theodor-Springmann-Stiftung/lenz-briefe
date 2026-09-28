@@ -1,4 +1,6 @@
 ---
 import { base } from '../lib/edition';
-return Astro.redirect(`${base}edition/richtlinien/`);
+import { editionPages, pageUrl } from '../lib/pages';
+const [firstPage] = await editionPages();
+return Astro.redirect(firstPage ? pageUrl(firstPage.id) : base);
 ---

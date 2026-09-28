@@ -1,0 +1,17 @@
+---
+import LegendExample from './LegendExample.astro';
+import { quickLegend, legendGroups } from '../lib/legend';
+---
+<div class="edition-guidelines">
+  <label class="legend-tag-toggle"><input type="checkbox" id="show-legend-tags" /> XML-Tags anzeigen</label>
+  {legendGroups.map(group => <section class="guideline-section" aria-label={group}>
+    <h2>{group}</h2>
+    <table class="guideline-table">
+      <thead class="sr-only"><tr><th scope="col">Auszeichnung</th><th scope="col">Beispiel</th></tr></thead>
+      <tbody>{quickLegend.filter(item => item.group === group).map(item => <tr data-tag={item.tag}>
+        <th scope="row"><span>{item.label}</span>{item.short && <p>{item.short}</p>}<code class="legend-xml">{item.xml}</code></th>
+        <td><div class="edition-text legend-example"><LegendExample item={item} /></div></td>
+      </tr>)}</tbody>
+    </table>
+  </section>)}
+</div>

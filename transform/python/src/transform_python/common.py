@@ -20,7 +20,7 @@ NSMAP = {"l": NS}
 PACKAGE_DIR = Path(__file__).resolve().parents[2]
 ROOT_DIR = PACKAGE_DIR.parent.parent
 DATA_DIR = ROOT_DIR / "data" / "xml"
-XSLT_DIR = ROOT_DIR / "xslt"
+XSLT_DIR = ROOT_DIR / "data" / "xslt"
 XSD_DIR = ROOT_DIR / "data" / "xsd"
 CACHE_DIR = PACKAGE_DIR / ".cache"
 

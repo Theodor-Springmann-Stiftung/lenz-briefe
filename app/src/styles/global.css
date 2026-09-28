@@ -289,6 +289,31 @@
   .hand-sample { @apply font-hand text-xl text-ink; }
   .about-page { @apply mx-auto pb-12; padding-top:var(--page-top-space); max-width: 1120px; }
   .about-page h1 { @apply font-serif text-5xl tracking-tight mb-6 leading-tight; }
+  .page-prose { max-width:75ch; font-size:1.125rem; line-height:1.65; overflow-wrap:anywhere; }
+  .page-prose:has(> *) { margin-bottom:2.5rem; }
+  .page-prose :is(p, ul, ol, dl, blockquote, pre, table, figure) { margin-block:1.25em; }
+  .page-prose > :first-child { margin-top:0; }
+  .page-prose :is(h2, h3, h4, h5, h6) { margin-block:1.75em .6em; font-family:var(--font-serif); line-height:1.3; }
+  .page-prose h2 { font-size:1.75rem; }
+  .page-prose h3 { font-size:1.4rem; }
+  .page-prose :is(h4, h5, h6) { font-size:1.125rem; font-weight:600; }
+  .page-prose a { text-decoration:underline; }
+  .page-prose ul { list-style:disc; padding-left:1.5em; }
+  .page-prose ol { list-style:decimal; padding-left:1.5em; }
+  .page-prose li + li { margin-top:.35em; }
+  .page-prose li > :is(ul, ol) { margin-block:.35em; }
+  .page-prose dt { font-weight:600; }
+  .page-prose dd { margin-left:1.5em; }
+  .page-prose blockquote { border-left:3px solid var(--color-rule); padding-left:1.25em; }
+  .page-prose :is(code, pre) { font-family:var(--font-mono); font-size:.9em; }
+  .page-prose pre { padding:1em; overflow-x:auto; }
+  .page-prose table { display:block; width:100%; overflow-x:auto; border-collapse:collapse; }
+  .page-prose :is(th, td) { padding:.6em .9em; border-bottom:1px solid var(--color-rule); text-align:left; vertical-align:top; }
+  .page-prose img { max-width:100%; height:auto; margin-block:1.5em; }
+  .page-prose .page-portrait { max-width:18rem; }
+  .page-prose .page-portrait img { margin-block:0; }
+  .page-prose figcaption { font-size:.9em; color:var(--color-muted); }
+  .page-prose hr { margin-block:2em; border-color:var(--color-rule); }
   .legend-table-wrap { @apply overflow-x-auto mt-10; }
   .legend-table { @apply w-full border-collapse text-sm; min-width: 42rem; }
   .legend-table caption { @apply text-left font-serif text-2xl mb-6; }

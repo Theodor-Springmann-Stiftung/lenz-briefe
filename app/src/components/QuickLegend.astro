@@ -2,7 +2,8 @@
 import Icon from './Icon.astro';
 import LegendExample from './LegendExample.astro';
 import { quickLegend, legendGroups } from '../lib/legend';
-import { base } from '../lib/edition';
+import { editionPages, pageUrl } from '../lib/pages';
+const guidelines = (await editionPages()).find(page => page.data.legend);
 
 ---
 <button class="quick-legend-toggle" type="button" popovertarget="quick-legend" aria-label="Schnelle Legende öffnen" title="Schnelle Legende" data-tooltip="Schnelle Legende" data-tippy-placement="top" data-tippy-trigger="mouseenter focus">
@@ -22,7 +23,7 @@ import { base } from '../lib/edition';
       </div>)}</dl>
     </section>)}
   </div>
-  <footer class="quick-legend-footer"><a href={`${base}edition/richtlinien/`}>Ausführliche Editionsrichtlinien <Icon name="arrowRight" /></a></footer>
+  {guidelines && <footer class="quick-legend-footer"><a href={pageUrl(guidelines.id)}>Ausführliche Editionsrichtlinien <Icon name="arrowRight" /></a></footer>}
   <svg class="legend-connections" aria-hidden="true" />
 </aside>
 <script>import '../scripts/legend-connections';</script>

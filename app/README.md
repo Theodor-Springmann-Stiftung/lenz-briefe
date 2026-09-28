@@ -18,7 +18,7 @@ npm --prefix app ci
 npm --prefix app run dev
 ```
 
-While the dev server runs, saving files in `data/xml/`, `data/xsd/`, or `xslt/`
+While the dev server runs, saving files in `data/xml/`, `data/xsd/`, or `data/xslt/`
 automatically reruns the export and reloads the browser after it succeeds. Saves
 are debounced, and exports run one at a time. Changes made during an export queue
 another run. Export failures appear in the terminal and browser error overlay;
@@ -66,6 +66,28 @@ uv run --project transform/python python -m transform_python.validate_schemas
 ```
 
 ## Data and rendering
+
+### Editable Edition pages
+
+The root-level [`seiten/`](../seiten/) directory is an Astro content
+collection. Each top-level `.md` file supplies an Edition menu entry and a page
+at `/edition/<filename>/`; `README.md` and `_*.md` are excluded. Required
+frontmatter is `menu`, `title`, and `description`. Optional `order` controls menu
+order; `legend: true` appends the existing interactive guidelines. The quick
+legend links to the first such page, and `/edition/` redirects to the first menu
+entry. `title` sets the browser title only; visible headings are authored in the
+Markdown (for example, `# Heading`). The template does not insert an H1.
+The collection schema checks frontmatter during development and builds.
+
+Astro watches the Markdown collection directly, without rerunning the XML export.
+Local Markdown images under `seiten/assets/` use Astro's image optimization.
+The `scripts/page-assets.mjs` integration publishes originals, including
+PDFs and other downloads, under `/seiten-assets/` with no server required. `scripts/page-links.mjs`
+rewrites relative Markdown page and download links and checks their targets;
+image references remain local for Astro. The assets integration also serves these
+files and reloads the preview when they are added, edited or removed in development.
+
+### Letters
 
 - Tagged hands use distinct fonts within each letter, also in sidenotes and the
   hand key. The first sender in metadata order always uses Source Serif.
