@@ -1,11 +1,12 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createSatteriMarkdownProcessor } from '@astrojs/markdown-satteri';
-import pageLegend, { legendMarker } from '../scripts/page-legend.mjs';
+import pageComponents, { componentMarker } from '../scripts/page-components.mjs';
+const legendMarker = componentMarker('lkb-legende');
 
 const processor = await createSatteriMarkdownProcessor({
   syntaxHighlight: false,
-  mdastPlugins: [pageLegend()],
+  mdastPlugins: [pageComponents()],
 });
 
 test('standalone legend embeds retain their position and support multiple instances', async () => {
@@ -30,4 +31,16 @@ test('embeds must occupy a whole top-level block', async () => {
   );
   assert.ok(!code.includes(legendMarker));
   assert.ok(!metadata.frontmatter.hasLegend);
+});
+
+test('any lowercase custom-element name can refer to a Markdown component', async () => {
+  const { code, metadata } = await processor.render('Before\n\n<lkb-kontakt></lkb-kontakt>\n\n<edition-info-box>\n</edition-info-box>');
+  assert.ok(code.includes(componentMarker('lkb-kontakt')));
+  assert.ok(code.includes(componentMarker('edition-info-box')));
+  assert.ok(!metadata.frontmatter.hasLegend);
+});
+
+test('ordinary HTML and custom elements with attributes or content stay unchanged', async () => {
+  const { code } = await processor.render('<div></div>\n\n<lkb-info title="Title"></lkb-info>\n\n<lkb-info>Content</lkb-info>');
+  assert.ok(!code.includes('<!--lkb:component:'));
 });

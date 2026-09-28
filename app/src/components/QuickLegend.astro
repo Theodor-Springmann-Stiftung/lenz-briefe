@@ -1,8 +1,7 @@
 ---
 import Icon from './Icon.astro';
-import LegendExample from './LegendExample.astro';
+import PageComponent from './PageComponent.astro';
 import { render } from 'astro:content';
-import { legendSections } from '../lib/legend';
 import { editionPages, pageUrl } from '../lib/pages';
 const pages = await editionPages();
 const legends = await Promise.all(pages.map(async page =>
@@ -20,13 +19,7 @@ const guidelines = pages.find((_, index) => legends[index]);
     <button type="button" popovertarget="quick-legend" popovertargetaction="hide" aria-label="Legende schließen" autofocus><Icon name="close" /></button>
   </header>
   <div class="quick-legend-body" tabindex="0" role="region" aria-label="Auszeichnungen und Beispiele">
-    {legendSections.map(({ title, entries }) => <section>
-      <h3>{title}</h3>
-      <dl>{entries.map(item => <div class="quick-legend-entry" data-legend-tag={item.tag} tabindex="0">
-        <dt><span>{item.label}</span>{item.short && <small>{item.short}</small>}</dt>
-        <dd class="edition-text"><LegendExample item={item} /></dd>
-      </div>)}</dl>
-    </section>)}
+    <PageComponent name="lkb-legende" class="quick-legend-content" />
   </div>
   {guidelines && <footer class="quick-legend-footer"><a href={pageUrl(guidelines.id)}>Ausführliche Editionsrichtlinien <Icon name="arrowRight" /></a></footer>}
   <svg class="legend-connections" aria-hidden="true" />

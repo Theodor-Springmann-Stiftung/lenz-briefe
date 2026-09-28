@@ -26,7 +26,7 @@ export function rewritePageLink(url, file, directory, base = '/') {
 
 export default function pageLinks({ directory, base = '/' }) {
   return ({ fileURL }) => {
-    if (!fileURL || path.dirname(fileURLToPath(fileURL)) !== directory) return null;
+    if (!fileURL || ![directory, path.join(directory, 'components')].includes(path.dirname(fileURLToPath(fileURL)))) return null;
     return {
       name: 'lenz:page-links',
       element: {
@@ -46,7 +46,7 @@ export default function pageLinks({ directory, base = '/' }) {
 // images before that pass so both standard Markdown spellings are optimized.
 export function pageImageReferences({ directory }) {
   return ({ fileURL }) => {
-    if (!fileURL || path.dirname(fileURLToPath(fileURL)) !== directory) return null;
+    if (!fileURL || ![directory, path.join(directory, 'components')].includes(path.dirname(fileURLToPath(fileURL)))) return null;
     const definitions = new Map();
     return {
       name: 'lenz:page-image-references',

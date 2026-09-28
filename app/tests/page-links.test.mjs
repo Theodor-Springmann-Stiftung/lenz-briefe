@@ -55,3 +55,11 @@ test('missing local pages and downloads fail with the source and target in the e
   await assert.rejects(render('[Fehlt](./fehlt.md)'), /Missing linked file.*fehlt\.md.*test\.md/);
   await assert.rejects(render('[Fehlt](./assets/fehlt.pdf)'), /Missing linked file.*fehlt\.pdf.*test\.md/);
 });
+
+test('component links and image references resolve relative to the components directory', async t => {
+  const render = await fixture(t);
+  const { code, metadata } = await render('[Kontakt](../kontakt.md)\n\n[Download](../assets/scan.png)\n\n![Bild][scan]\n\n[scan]: ../assets/scan.png', 'components/lkb-test.md');
+  assert.match(code, /href="\/edition\/kontakt\/"/);
+  assert.match(code, /href="\/seiten-assets\/scan.png"/);
+  assert.deepEqual(metadata.localImagePaths, ['../assets/scan.png']);
+});

@@ -1,0 +1,145 @@
+---
+prose: false
+class: edition-guidelines
+---
+
+<!-- Shared by the full legend and Schnelle Legende. Keep data-legend-tag for the connecting lines. -->
+<section class="legend-section"><h3>Hauptsächlich im Druck</h3>
+<dl>
+<div class="quick-legend-entry" data-legend-tag="it" tabindex="0">
+  <dt><span>Kursivdruck</span></dt>
+  <dd class="edition-text"><em>Wort</em></dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="b" tabindex="0">
+  <dt><span>Fettdruck</span></dt>
+  <dd class="edition-text"><strong>Wort</strong></dd>
+</div>
+</dl></section>
+
+<section class="legend-section"><h3>Hauptsächlich in der Handschrift</h3>
+<dl>
+<div class="quick-legend-entry" data-legend-tag="ul" tabindex="0">
+  <dt><span>Unterstrichen</span></dt>
+  <dd class="edition-text"><div class="quick-legend-variants">
+<span class="ul">Einfach</span><span class="dul">Zweifach</span><span class="tul"><span class="tul-second"><span class="tul-third">Dreifach</span></span></span>
+</div></dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="aq" tabindex="0">
+  <dt><span>Text in lateinischer Schrift</span></dt>
+  <dd class="edition-text"><span class="aq" lang="la">Amice carissime</span></dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="del" tabindex="0">
+  <dt><span>Streichungen</span></dt>
+  <dd class="edition-text"><div class="quick-legend-variants">
+<del>gestrichen</del><del><del>zweifach</del></del>
+</div></dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="insertion" tabindex="0">
+  <dt>
+<span>Einfügung</span><small>Pfeile zeigen die Position der Einfügung.</small>
+</dt>
+  <dd class="edition-text">
+<span class="insertion">Zusatz</span><br><span class="insertion" data-pos="top"><span class="insertion-arrow" aria-hidden="true"></span>oben</span>
+</dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="hand" tabindex="0">
+  <dt>
+<span>Unterschiedliche Schriftschnitte</span><small>Hände mit Namen am Rand.</small>
+</dt>
+  <dd class="edition-text">
+<span data-hand-style="base">Aa</span> <span data-hand-style="second">Aa</span> <span data-hand-style="third">Aa</span>
+</dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="pe" tabindex="0">
+  <dt><span>Bleistift</span></dt>
+  <dd class="edition-text"><span class="pe">Wort</span></dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="subst" tabindex="0">
+  <dt><span>Überschreibung</span></dt>
+  <dd class="edition-text"><span class="subst"><del>alt</del><span class="insertion">neu</span></span></dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="er" tabindex="0">
+  <dt>
+<span>Tilgung</span><small>Gegebenenfalls mit lesbarem Text.</small>
+</dt>
+  <dd class="edition-text">
+<span class="er" data-empty="true" role="img" aria-label="Tilgung ohne lesbaren Text"><span aria-hidden="true">getilgter Text</span></span><br><span class="er">getilgter Text</span>
+</dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="ink" tabindex="0">
+  <dt><span>Tinte</span></dt>
+  <dd class="edition-text"><span class="ink">Wort</span></dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="highlight" tabindex="0">
+  <dt><span>Farbige Hervorhebung</span></dt>
+  <dd class="edition-text">
+<mark class="highlight" data-color="yellow">Wort</mark> <mark class="highlight" data-color="red">Wort</mark>
+</dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="large" tabindex="0">
+  <dt><span>Größere Schrift</span></dt>
+  <dd class="edition-text"><span class="large">Wort</span></dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="undo" tabindex="0">
+  <dt><span>Rücknahme</span></dt>
+  <dd class="edition-text"><span class="undo"><del>Wort</del></span></dd>
+</div>
+</dl></section>
+
+<section class="legend-section"><h3>Editorische Hinweise</h3>
+<dl>
+<div class="quick-legend-entry" data-legend-tag="note" tabindex="0">
+  <dt><span>Anmerkungen der Editoren</span></dt>
+  <dd class="edition-text"><span class="note">Anmerkung</span></dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="tl" tabindex="0">
+  <dt>
+<span>Textverlust</span><small>Der jeweilige Grund für den Textverlust ist in den Anmerkungen erläutert.</small>
+</dt>
+  <dd class="edition-text">vor <span class="tl"></span> nach</dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="nr" tabindex="0">
+  <dt>
+<span>Unentziffert</span><small>Der Abstand der Marker entspricht dem ungefähren Umfang der unentzifferten Stelle.</small>
+</dt>
+  <dd class="edition-text">
+<span class="nr" data-extent="1" style="--extent:1"></span> / <span class="nr" data-extent="4" style="--extent:4"></span>
+</dd>
+</div>
+</dl></section>
+
+<section class="legend-section"><h3>Layout</h3>
+<dl>
+<div class="quick-legend-entry" data-legend-tag="page" tabindex="0">
+  <dt>
+<span>Seitenwechsel</span><small>Seitenzahlen links; ein vertikaler Strich markiert den Wechsel im laufenden Text.</small>
+</dt>
+  <dd class="edition-text">
+<span style="font-family:var(--font-sans)">2</span>   Text<span class="page-anchor" data-break="inline"></span>Text</dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="vspace" tabindex="0">
+  <dt>
+<span>Leerräume</span><small>Außer zwischen Seitenumbrüchen bildet der Leerraum die edierte Quelle mimetisch ab.</small>
+</dt>
+  <dd class="edition-text">
+<div>Text</div>
+<div class="lb-vspace" style="height:.6lh"></div>
+<div>Text</div>
+</dd>
+</div>
+<div class="quick-legend-entry" data-legend-tag="sidenote" tabindex="0">
+  <dt>
+<span>Randnotizen</span><small>Möglichst zu Anfang der Seite. Die Symbole zeigen die Position auf der Briefseite.</small>
+</dt>
+  <dd class="edition-text"><div class="quick-legend-positions">
+<lkb-sidenote-position position="top-left"></lkb-sidenote-position>
+<lkb-sidenote-position position="top"></lkb-sidenote-position>
+<lkb-sidenote-position position="top-right"></lkb-sidenote-position>
+<lkb-sidenote-position position="right"></lkb-sidenote-position>
+<lkb-sidenote-position position="left"></lkb-sidenote-position>
+<lkb-sidenote-position position="bottom-left"></lkb-sidenote-position>
+<lkb-sidenote-position position="bottom"></lkb-sidenote-position>
+<lkb-sidenote-position position="bottom-right"></lkb-sidenote-position>
+</div></dd>
+</div>
+</dl></section>

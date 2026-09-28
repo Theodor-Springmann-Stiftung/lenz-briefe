@@ -1,0 +1,15 @@
+---
+import { getEntry, render } from 'astro:content';
+import PageContent from './PageContent.astro';
+
+interface Props { name: string; stack?: string[]; class?: string }
+const { name, stack = [] } = Astro.props;
+if (stack.includes(name)) throw new Error(`Circular Markdown components: ${[...stack, name].join(' → ')}`);
+const component = await getEntry('components', name);
+if (!component) throw new Error(`Missing Markdown component: seiten/components/${name}.md`);
+const { Content } = await render(component);
+const Tag = name;
+---
+<Tag class:list={['page-component', { 'page-prose': component.data.prose }, Astro.props.class ?? component.data.class]}>
+  <PageContent prose={false} stack={[...stack, name]}><Content /></PageContent>
+</Tag>

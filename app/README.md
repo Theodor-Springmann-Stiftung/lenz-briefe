@@ -86,17 +86,35 @@ headings. It appears when a page has at least two H2 sections and either 400 wor
 or an embedded legend. It sits on the right on wide screens (from 1200px), stays
 visible while scrolling, and moves above the text on narrower screens.
 
-Insert the shared legend anywhere between Markdown blocks, on its own line with
-blank lines before and after it:
+Reusable components live in `seiten/components/`. The filename is the HTML element
+name: `lkb-legende.md` supplies `<lkb-legende></lkb-legende>`. Names must be lowercase
+and include a hyphen. These files never become pages or menu entries. Put a component
+tag on its own line, with blank lines before and after it:
 
 ```html
 <lkb-legende></lkb-legende>
 ```
 
-It is rendered into the page at build time, works without JavaScript, and uses
-the same sections, descriptions and examples as “Schnelle Legende”.
-Code examples of the tag stay literal. The older
+Components accept Markdown and HTML and are rendered at build time without browser
+JavaScript. No frontmatter is required; optional `prose: false` disables the standard
+prose styling, and `class` sets a wrapper CSS class. Components can embed other
+components using the same standalone syntax. Missing files and circular references
+fail with an explanatory error. Code examples of tags stay literal; attributes,
+slots and embeds inside other HTML blocks are not supported.
+
+Both the full legend and “Schnelle Legende” render `seiten/components/lkb-legende.md`,
+so editing its labels, descriptions, examples or order changes both. The
+`data-legend-tag` attributes connect rows to letter highlights. Keep HTML sections
+free of blank lines so Markdown does not insert paragraphs into SVGs or list markup.
+The built-in `<lkb-sidenote-position position="top-left"></lkb-sidenote-position>`
+also works inside HTML blocks. It uses `app/src/assets/SidenotePos.svg` and the same
+renderer as letter sidenotes; no SVG data needs to be copied into Markdown.
+Positions: `top-left`, `top`, `top-right`, `right`, `left`, `bottom-left`, `bottom`,
+`bottom-right`. The older
 `legend: true` frontmatter still appends a legend if no embed is present.
+
+Component links and images resolve relative to their file: use `../assets/scan.png`
+or `../kontakt.md`. Markdown images receive the same Astro optimization as page images.
 
 Astro watches the Markdown collection directly, without rerunning the XML export.
 Local Markdown images under `seiten/assets/` use Astro's image optimization.
