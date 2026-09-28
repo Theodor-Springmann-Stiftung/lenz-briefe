@@ -53,10 +53,16 @@
   .back-to-top:hover { background:#e0e3da; color:var(--color-ink); box-shadow:1px 1px 0 var(--color-ink); }
   .back-to-top:active { box-shadow:none; }
   .site-header nav { @apply ml-auto flex items-center text-ink; gap:.5rem; font-size:1rem; }
+  .navigation-toggle { display:none; }
   .main-navigation-link { display:flex; align-items:center; justify-content:center; gap:.6rem; min-height:2.75rem; padding:.55rem .85rem; border:1px solid transparent; white-space:nowrap; }
   .main-navigation-link:hover:not([aria-current]):not(.is-current) { color:var(--color-ink); background:#e0e3da; }
   .main-navigation-link[aria-current=page], .main-navigation-link.is-current { color:var(--color-paper); background:var(--color-ink); border-color:var(--color-ink); }
   .site-header nav [aria-disabled=true] { cursor:default; }
+  .site-header .archive-link { margin-left:auto; background:#cdd6cc; border-radius:2px; }
+  .site-header .archive-link:is(:hover, :focus-visible):not([aria-current]):not(.is-current) { background:#becabb; }
+  .archive-link-label { display:inline-flex; align-items:center; gap:.6rem; }
+  .archive-link img { width:1.25rem; height:1.25rem; object-fit:contain; flex-shrink:0; }
+  .archive-link:is(:hover, :focus-visible) .archive-link-arrow { animation:archive-arrow-jump .45s ease-out; }
   .edition-menu { position:relative; }
   .edition-menu > summary { list-style:none; }
   .edition-menu > summary::-webkit-details-marker { display:none; }
@@ -505,11 +511,24 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .edition-count > span { font-size:clamp(1.25rem, 4vw, 2.25rem); }
   .active-filters { grid-column:1 / -1; grid-row:2; transform:none; }
 }
+@media (max-width: 959px) {
+  .site-header-inner { gap:.75rem; }
+  .site-header[data-menu-ready] .navigation-toggle { display:flex; align-items:center; justify-content:center; width:2.75rem; height:2.75rem; margin-left:auto; border:1px solid var(--color-ink); cursor:pointer; }
+  .navigation-toggle:hover { background:#e0e3da; }
+  .navigation-toggle .ui-icon { width:1.5rem; height:1.5rem; }
+  .navigation-toggle .navigation-close-icon, .navigation-toggle[aria-expanded=true] .navigation-open-icon { display:none; }
+  .navigation-toggle[aria-expanded=true] .navigation-close-icon { display:block; }
+  .site-header nav { width:100%; margin-left:0; flex-direction:column; align-items:stretch; gap:.25rem; padding-top:.75rem; border-top:1px solid #a8b2a8; max-height:calc(100dvh - 6rem); overflow-y:auto; }
+  .site-header[data-menu-ready]:not([data-menu-open]) nav { display:none; }
+  .site-header .main-navigation-link { justify-content:space-between; white-space:normal; }
+  .site-header .archive-link { margin-left:0; }
+  .edition-menu-panel { position:static; width:100%; max-width:none; margin:.25rem 0; box-shadow:none; }
+}
 @media (max-width: 639px) {
   .site-shell { --page-top-space:4rem; }
   .site-header { padding-top:.6rem; padding-bottom:.6rem; }
   .site-header-inner { gap:.75rem; }
-  .site-header nav { width:100%; margin-left:0; justify-content:space-between; gap:.25rem; font-size:.875rem; }
+  .site-header nav { font-size:.875rem; }
   .main-navigation-link { padding:.5rem .55rem; gap:.3rem; }
   .year-navigation a { padding:1rem .5rem .45rem; font-size:.85rem; gap:.4rem; }
   .filter-menu summary { gap:.5rem; padding-right:.75rem; padding-left:3.25rem; }
@@ -526,14 +545,16 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 }
 html:has(#ueberlieferung:target) { scroll-behavior:auto; }
 @keyframes search-spin { to { transform:rotate(360deg); } }
+@keyframes archive-arrow-jump { 50% { transform:translate(3px, -3px); } }
 @media (prefers-reduced-motion:reduce) {
+  .archive-link:is(:hover, :focus-visible) .archive-link-arrow { animation:none; }
   html { scroll-behavior:auto; }
   .search-spinner { animation:none; }
 }
 @media print {
   .site-header { position:static; }
   [data-tippy-root], .note-connections, .hand-range-background { display:none; }
-  .site-header nav, .letter-toolbar, .reading-toolbar, .site-footer, .back-to-top, .quick-legend-toggle, .quick-legend:popover-open { display:none; }
+  .site-header nav, .site-header[data-menu-ready] .navigation-toggle, .letter-toolbar, .reading-toolbar, .site-footer, .back-to-top, .quick-legend-toggle, .quick-legend:popover-open { display:none; }
   .site-shell { padding:0; }
   .letter-content, .reading-layout { display:block; }
   .margin-ready .marginal-item { position:static; }

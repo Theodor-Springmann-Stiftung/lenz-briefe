@@ -15,6 +15,7 @@
   -> Schwierigkeit im Modell; UND oder ODER Verknüpfungen?
 - Die geplante Zitierempfehlung klappt nicht, weil wir den Absendeort im geschriebenen Datum haben ([Verfasser], [Absendeort], an [Empfänger], [Empfangsort], [Datum], in: Jakob Michael Reinhold Lenz: Kritische Briefausgabe, hrsg. v. Gregor Babelotzky (Heidelberg 2026ff.). [URL, abgerufen am DATUM])
 - 367: Sprachenklaviatur?
+- Arcxchiv link with/without text
 
 ## Handschrift
 - 224, 366: Tabellen

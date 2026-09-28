@@ -7,23 +7,32 @@ const navigation = [
   {label: 'Briefansicht', href: letterUrl(catalog.letters[0].letter), active: path.startsWith(`${base}briefe/`)},
 ];
 const editionPages = [
-  {label: 'Editionsrichtlinien', href: `${base}edition/richtlinien/`},
+  {label: 'Zur Edition', href: `${base}edition/richtlinien/`},
   {label: 'Briefumschläge', href: `${base}edition/briefumschlaege/`},
+  {label: 'Siglen', href: `${base}edition/siglen/`},
   {label: 'Zitierempfehlung', href: `${base}edition/zitierempfehlung/`},
   {label: 'Kontakt', href: `${base}edition/kontakt/`},
 ];
 const inEdition = path.startsWith(`${base}edition/`);
 ---
-<nav class="main-navigation" aria-label="Hauptnavigation">
+<button class="navigation-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Menü öffnen">
+  <Icon name="menu" class="navigation-open-icon" />
+  <Icon name="close" class="navigation-close-icon" />
+</button>
+<nav id="main-navigation" class="main-navigation" aria-label="Hauptnavigation">
   {navigation.map(item => <a class="main-navigation-link" href={item.active ? undefined : item.href} role={item.active ? 'link' : undefined} aria-disabled={item.active ? 'true' : undefined} aria-current={item.active ? 'page' : undefined}>{item.label}</a>)}
   <details class="edition-menu">
     <summary class:list={['main-navigation-link', {'is-current': inEdition}]}>
-      Zur Edition <Icon name="chevronDown" />
+      Edition <Icon name="chevronDown" />
     </summary>
     <ul class="edition-menu-panel">
       {editionPages.map(item => <li><a href={path === item.href ? undefined : item.href} role={path === item.href ? 'link' : undefined} aria-disabled={path === item.href ? 'true' : undefined} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a></li>)}
     </ul>
   </details>
+  <a class="main-navigation-link archive-link" href="https://lenz-archiv.de/">
+    <span class="archive-link-label"><img src={`${base}lenz-archiv-icon.png`} width="20" height="20" alt="" />Jakob Lenz Archiv</span>
+    <Icon name="arrowRightUp" class="archive-link-arrow" />
+  </a>
 </nav>
 <script>
   document.querySelectorAll<HTMLDetailsElement>('.edition-menu').forEach(menu => {
@@ -36,6 +45,7 @@ const inEdition = path.startsWith(`${base}edition/`);
         menu.open = false;
         summary?.focus();
         event.preventDefault();
+        event.stopPropagation();
       }
     });
     menu.addEventListener('focusout', event => {

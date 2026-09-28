@@ -8,14 +8,16 @@ import place from 'remixicon/icons/Map/map-pin-line.svg?raw';
 import chevronDown from 'remixicon/icons/Arrows/arrow-down-s-line.svg?raw';
 import sort from 'remixicon/icons/Arrows/arrow-up-down-line.svg?raw';
 import arrowRight from 'remixicon/icons/Arrows/arrow-right-long-line.svg?raw';
+import arrowRightUp from 'remixicon/icons/Arrows/arrow-right-up-line.svg?raw';
 import arrowLeft from 'remixicon/icons/Arrows/arrow-left-long-line.svg?raw';
 import arrowDown from 'remixicon/icons/Arrows/arrow-down-line.svg?raw';
 import creativeCommons from 'remixicon/icons/Business/creative-commons-line.svg?raw';
 import creativeCommonsBy from 'remixicon/icons/Business/creative-commons-by-line.svg?raw';
 import help from 'remixicon/icons/System/question-line.svg?raw';
 import close from 'remixicon/icons/System/close-line.svg?raw';
+import menu from 'remixicon/icons/System/menu-line.svg?raw';
 import code from 'remixicon/icons/Development/code-line.svg?raw';
-const icons = {search, filter, filterOff, reset, person, place, chevronDown, sort, arrowRight, arrowLeft, arrowDown, creativeCommons, creativeCommonsBy, help, close, code};
+const icons = {search, filter, filterOff, reset, person, place, chevronDown, sort, arrowRight, arrowRightUp, arrowLeft, arrowDown, creativeCommons, creativeCommonsBy, help, close, menu, code};
 interface Props { name: keyof typeof icons; class?: string }
 const {name, class: className} = Astro.props;
 ---
