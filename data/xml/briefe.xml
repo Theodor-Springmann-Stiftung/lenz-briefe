@@ -6245,7 +6245,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line tab="5"/>Die den in <ul>ihr</ul> verehrt, durch den die Erde lachet
 <line tab="5"/>Der keines Staubs darauf vergißt.
     <vspace lines="1"/>
-<line /><align pos="center">～</align>
+<line type="tilde"/>
 <vspace lines="1"/>
 <line /><align pos="right">Lenz.</align>
 <vspace lines="1" presentational="true" />
