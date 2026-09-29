@@ -1,0 +1,27 @@
+{
+  "id": "./",
+  "name": "J. M. R. Lenz – Kritische Briefausgabe",
+  "short_name": "Lenz-Briefe",
+  "description": "Die Briefe von und an Jacob Michael Reinhold Lenz. Digitale Edition.",
+  "lang": "de",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#fcfcfb",
+  "background_color": "#fcfcfb",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
