@@ -35,7 +35,7 @@ async function control(initial = paused, replyError, pageVersion = versionA) {
   const location = { origin: 'https://edition.test', href: 'https://edition.test/?person=7#brief-3', reload: () => { reloads++; } };
   const fields = {
     '[data-offline-toggle]': target({ checked: true }),
-    '[data-offline-label]': target({ textContent: 'Offline nutzen (~40 MB)' }),
+    '[data-offline-label]': target({ textContent: 'Offline nutzen (~9 MB)' }),
     '.offline-feedback': target({ hidden: true }),
     '[data-offline-progress]': target({ hidden: true }),
     '[data-offline-retry]': target({ hidden: true }),
@@ -155,7 +155,7 @@ test('unchecking cancels recovery and stale worker messages cannot restart it', 
   assert.equal(ui.label.textContent, 'Wird entfernt …');
   await change;
   assert.equal(ui.timers.size, 0);
-  assert.equal(ui.label.textContent, 'Offline nutzen (~40 MB)');
+  assert.equal(ui.label.textContent, 'Offline nutzen (~9 MB)');
   await ui.broadcast(paused);
   assert.equal(ui.checkbox.checked, false);
   assert.equal(ui.timers.size, 0);
