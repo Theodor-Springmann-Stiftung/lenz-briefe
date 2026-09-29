@@ -85,7 +85,9 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {
           <a href="https://theodor-springmann-stiftung.de/">Theodor Springmann Stiftung</a> ·{' '}
           <a href={pageUrl('datenschutz')}>Impressum &amp; Datenschutz</a>{' '}
           <span class="footer-tools">
+            <span aria-hidden="true">·</span>
             <OfflineToggle />
+            <span class="footer-offline-separator" aria-hidden="true">·</span>
             <span class="footer-code">
               <Icon name="code" class="footer-code-icon" />
               <a
