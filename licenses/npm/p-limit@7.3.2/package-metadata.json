@@ -1,0 +1,11 @@
+{
+  "name": "p-limit",
+  "version": "7.3.2",
+  "license": "MIT",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "repository": "sindresorhus/p-limit"
+}

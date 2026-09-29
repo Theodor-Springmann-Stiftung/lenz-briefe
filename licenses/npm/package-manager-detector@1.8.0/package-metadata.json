@@ -1,0 +1,11 @@
+{
+  "name": "package-manager-detector",
+  "version": "1.8.0",
+  "license": "MIT",
+  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "homepage": "https://github.com/antfu-collective/package-manager-detector#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antfu-collective/package-manager-detector.git"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "mdn-data",
+  "version": "2.27.1",
+  "license": "CC0-1.0",
+  "author": "Mozilla Developer Network",
+  "homepage": "https://developer.mozilla.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdn/data.git"
+  }
+}

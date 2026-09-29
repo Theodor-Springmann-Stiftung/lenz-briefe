@@ -1,0 +1,10 @@
+{
+  "name": "resolve-pkg-maps",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Hiroki Osame",
+    "email": "hiroki.osame@gmail.com"
+  },
+  "repository": "privatenumber/resolve-pkg-maps"
+}

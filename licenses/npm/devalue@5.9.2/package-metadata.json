@@ -1,0 +1,6 @@
+{
+  "name": "devalue",
+  "version": "5.9.2",
+  "license": "MIT",
+  "repository": "sveltejs/devalue"
+}

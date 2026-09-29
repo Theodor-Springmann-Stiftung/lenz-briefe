@@ -1,0 +1,11 @@
+{
+  "name": "@emnapi/core",
+  "version": "1.11.1",
+  "license": "MIT",
+  "author": "toyobayashi",
+  "homepage": "https://github.com/toyobayashi/emnapi#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toyobayashi/emnapi.git"
+  }
+}

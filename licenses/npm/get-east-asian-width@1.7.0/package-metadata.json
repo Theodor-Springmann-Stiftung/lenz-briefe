@@ -1,0 +1,11 @@
+{
+  "name": "get-east-asian-width",
+  "version": "1.7.0",
+  "license": "MIT",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "repository": "sindresorhus/get-east-asian-width"
+}

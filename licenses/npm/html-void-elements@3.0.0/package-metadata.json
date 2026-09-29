@@ -1,0 +1,10 @@
+{
+  "name": "html-void-elements",
+  "version": "3.0.0",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "repository": "wooorm/html-void-elements"
+}

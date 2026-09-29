@@ -1,0 +1,14 @@
+{
+  "name": "@capsizecss/unpack",
+  "version": "4.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Michael Taranto",
+    "homepage": "https://github.com/michaeltaranto"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seek-oss/capsize.git",
+    "directory": "packages/unpack"
+  }
+}

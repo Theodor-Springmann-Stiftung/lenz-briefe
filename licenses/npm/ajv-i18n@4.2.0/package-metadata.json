@@ -1,0 +1,11 @@
+{
+  "name": "ajv-i18n",
+  "version": "4.2.0",
+  "license": "MIT",
+  "author": "Evgeny Poberezkin",
+  "homepage": "https://github.com/epoberezkin/ajv-i18n#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epoberezkin/ajv-i18n.git"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "retext-smartypants",
+  "version": "6.2.0",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "repository": "retextjs/retext-smartypants"
+}

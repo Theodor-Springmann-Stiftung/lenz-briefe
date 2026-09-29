@@ -1,0 +1,10 @@
+{
+  "name": "trim-lines",
+  "version": "3.0.1",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "repository": "wooorm/trim-lines"
+}

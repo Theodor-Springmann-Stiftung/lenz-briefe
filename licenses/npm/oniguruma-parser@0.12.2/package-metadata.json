@@ -1,0 +1,10 @@
+{
+  "name": "oniguruma-parser",
+  "version": "0.12.2",
+  "license": "MIT",
+  "author": "Steven Levithan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slevithan/oniguruma-parser.git"
+  }
+}

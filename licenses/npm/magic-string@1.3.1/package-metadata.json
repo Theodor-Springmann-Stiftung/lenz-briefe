@@ -1,0 +1,10 @@
+{
+  "name": "magic-string",
+  "version": "1.3.1",
+  "license": "MIT",
+  "author": "Rich Harris",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rich-Harris/magic-string.git"
+  }
+}

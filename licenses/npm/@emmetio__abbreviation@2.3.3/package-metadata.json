@@ -1,0 +1,11 @@
+{
+  "name": "@emmetio/abbreviation",
+  "version": "2.3.3",
+  "license": "MIT",
+  "author": "Sergey Chikuyonok <serge.che@gmail.com>",
+  "homepage": "https://github.com/emmetio/emmet#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmetio/emmet.git"
+  }
+}

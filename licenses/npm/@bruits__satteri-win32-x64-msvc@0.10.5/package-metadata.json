@@ -1,0 +1,9 @@
+{
+  "name": "@bruits/satteri-win32-x64-msvc",
+  "version": "0.10.5",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruits/satteri.git"
+  }
+}

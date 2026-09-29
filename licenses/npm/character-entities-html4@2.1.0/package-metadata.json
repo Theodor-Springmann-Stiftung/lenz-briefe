@@ -1,0 +1,10 @@
+{
+  "name": "character-entities-html4",
+  "version": "2.1.0",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "repository": "wooorm/character-entities-html4"
+}

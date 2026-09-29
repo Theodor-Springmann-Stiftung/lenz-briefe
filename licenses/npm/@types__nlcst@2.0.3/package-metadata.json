@@ -1,0 +1,28 @@
+{
+  "name": "@types/nlcst",
+  "version": "2.0.3",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Titus Wormer",
+      "githubUsername": "wooorm",
+      "url": "https://github.com/wooorm"
+    },
+    {
+      "name": "Christian Murphy",
+      "githubUsername": "ChristianMurphy",
+      "url": "https://github.com/ChristianMurphy"
+    },
+    {
+      "name": "Remco Haszing",
+      "githubUsername": "remcohaszing",
+      "url": "https://github.com/remcohaszing"
+    }
+  ],
+  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/nlcst",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "directory": "types/nlcst"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "ci-info",
+  "version": "4.4.0",
+  "license": "MIT",
+  "author": "Thomas Watson Steen <w@tson.dk> (https://twitter.com/wa7son)",
+  "contributors": [
+    {
+      "name": "Sibiraj",
+      "url": "https://github.com/sibiraj-s"
+    }
+  ],
+  "homepage": "https://github.com/watson/ci-info",
+  "repository": "github:watson/ci-info"
+}

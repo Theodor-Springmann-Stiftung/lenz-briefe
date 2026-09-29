@@ -1,0 +1,11 @@
+{
+  "name": "@astrojs/internal-helpers",
+  "version": "0.11.0",
+  "license": "MIT",
+  "author": "withastro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withastro/astro.git",
+    "directory": "packages/internal-helpers"
+  }
+}

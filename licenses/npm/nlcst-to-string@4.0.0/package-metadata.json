@@ -1,0 +1,11 @@
+{
+  "name": "nlcst-to-string",
+  "version": "4.0.0",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+    "Kenichiro Murata <kenichiro.murata@gmail.com>"
+  ],
+  "repository": "syntax-tree/nlcst-to-string"
+}

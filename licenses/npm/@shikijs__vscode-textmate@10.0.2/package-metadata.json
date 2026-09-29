@@ -1,0 +1,12 @@
+{
+  "name": "@shikijs/vscode-textmate",
+  "version": "10.0.2",
+  "license": "MIT",
+  "author": {
+    "name": "Microsoft Corporation"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shikijs/vscode-textmate"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "process-ancestry",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Matt Kane",
+  "homepage": "https://github.com/ascorbic/process-ancestry",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ascorbic/process-ancestry.git",
+    "directory": "packages/process-ancestry"
+  }
+}

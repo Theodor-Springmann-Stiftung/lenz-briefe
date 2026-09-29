@@ -1,0 +1,11 @@
+{
+  "name": "@emnapi/wasi-threads",
+  "version": "1.2.2",
+  "license": "MIT",
+  "author": "toyobayashi",
+  "homepage": "https://github.com/toyobayashi/emnapi#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toyobayashi/emnapi.git"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "@popperjs/core",
+  "version": "2.11.8",
+  "license": "MIT",
+  "author": "Federico Zivolo <federico.zivolo@gmail.com>",
+  "repository": "github:popperjs/popper-core"
+}

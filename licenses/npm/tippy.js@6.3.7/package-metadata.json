@@ -1,0 +1,14 @@
+{
+  "name": "tippy.js",
+  "version": "6.3.7",
+  "license": "MIT",
+  "author": "atomiks",
+  "contributors": [
+    "Brett Zamir"
+  ],
+  "homepage": "https://atomiks.github.io/tippyjs/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atomiks/tippyjs.git"
+  }
+}

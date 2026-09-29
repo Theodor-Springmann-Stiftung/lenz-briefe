@@ -1,0 +1,12 @@
+{
+  "name": "@astrojs/markdown-satteri",
+  "version": "0.4.1",
+  "license": "MIT",
+  "author": "withastro",
+  "homepage": "https://astro.build",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withastro/astro.git",
+    "directory": "packages/markdown/satteri"
+  }
+}

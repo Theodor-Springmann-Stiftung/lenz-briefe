@@ -1,0 +1,11 @@
+{
+  "name": "obug",
+  "version": "2.2.1",
+  "license": "MIT",
+  "author": "Kevin Deng <sxzz@sxzz.moe>",
+  "homepage": "https://github.com/sxzz/obug#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sxzz/obug.git"
+  }
+}

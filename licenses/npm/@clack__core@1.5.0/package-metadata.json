@@ -1,0 +1,16 @@
+{
+  "name": "@clack/core",
+  "version": "1.5.0",
+  "license": "MIT",
+  "author": {
+    "name": "Nate Moore",
+    "email": "nate@natemoo.re",
+    "url": "https://twitter.com/n_moore"
+  },
+  "homepage": "https://github.com/bombshell-dev/clack/tree/main/packages/core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bombshell-dev/clack.git",
+    "directory": "packages/core"
+  }
+}

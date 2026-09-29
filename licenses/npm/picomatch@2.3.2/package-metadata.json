@@ -1,0 +1,8 @@
+{
+  "name": "picomatch",
+  "version": "2.3.2",
+  "license": "MIT",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "homepage": "https://github.com/micromatch/picomatch",
+  "repository": "micromatch/picomatch"
+}

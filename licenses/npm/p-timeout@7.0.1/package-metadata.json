@@ -1,0 +1,11 @@
+{
+  "name": "p-timeout",
+  "version": "7.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "repository": "sindresorhus/p-timeout"
+}

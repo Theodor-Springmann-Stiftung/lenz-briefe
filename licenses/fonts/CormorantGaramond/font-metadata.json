@@ -1,0 +1,54 @@
+[
+  {
+    "file": "CormorantGaramond.ttf",
+    "nameTable": {
+      "0": [
+        "Copyright 2015 The Cormorant Project Authors (github.com/CatharsisFonts/Cormorant)"
+      ],
+      "1": [
+        "Cormorant Garamond Light"
+      ],
+      "5": [
+        "Version 4.001"
+      ],
+      "8": [
+        "Catharsis Fonts"
+      ],
+      "9": [
+        "Christian Thalmann (Catharsis Fonts)"
+      ],
+      "13": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+      ],
+      "14": [
+        "https://openfontlicense.org"
+      ]
+    }
+  },
+  {
+    "file": "CormorantGaramond-Italic.ttf",
+    "nameTable": {
+      "0": [
+        "Copyright 2015 The Cormorant Project Authors (github.com/CatharsisFonts/Cormorant)"
+      ],
+      "1": [
+        "Cormorant Garamond Light"
+      ],
+      "5": [
+        "Version 4.001"
+      ],
+      "8": [
+        "Catharsis Fonts"
+      ],
+      "9": [
+        "Christian Thalmann (Catharsis Fonts)"
+      ],
+      "13": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+      ],
+      "14": [
+        "https://openfontlicense.org"
+      ]
+    }
+  }
+]

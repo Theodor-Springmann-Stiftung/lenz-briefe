@@ -1,0 +1,6 @@
+{
+  "name": "node-fetch-native",
+  "version": "1.6.7",
+  "license": "MIT",
+  "repository": "unjs/node-fetch-native"
+}

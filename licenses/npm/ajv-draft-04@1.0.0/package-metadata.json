@@ -1,0 +1,11 @@
+{
+  "name": "ajv-draft-04",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Evgeny Poberezkin",
+  "homepage": "https://github.com/ajv-validator/ajv-draft-04#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajv-validator/ajv-draft-04.git"
+  }
+}

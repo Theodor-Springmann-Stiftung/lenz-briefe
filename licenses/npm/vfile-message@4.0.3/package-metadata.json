@@ -1,0 +1,10 @@
+{
+  "name": "vfile-message",
+  "version": "4.0.3",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "repository": "vfile/vfile-message"
+}

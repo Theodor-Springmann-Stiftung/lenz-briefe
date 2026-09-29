@@ -1,0 +1,18 @@
+{
+  "name": "@types/estree",
+  "version": "1.0.9",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "RReverser",
+      "githubUsername": "RReverser",
+      "url": "https://github.com/RReverser"
+    }
+  ],
+  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/estree",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "directory": "types/estree"
+  }
+}

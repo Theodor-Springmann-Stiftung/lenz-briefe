@@ -1,0 +1,8 @@
+{
+  "name": "prettier",
+  "version": "3.9.9",
+  "license": "MIT",
+  "author": "James Long",
+  "homepage": "https://prettier.io",
+  "repository": "prettier/prettier"
+}

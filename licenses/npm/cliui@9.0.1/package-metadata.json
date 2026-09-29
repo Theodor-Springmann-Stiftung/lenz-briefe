@@ -1,0 +1,7 @@
+{
+  "name": "cliui",
+  "version": "9.0.1",
+  "license": "ISC",
+  "author": "Ben Coe <ben@npmjs.com>",
+  "repository": "yargs/cliui"
+}

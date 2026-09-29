@@ -1,0 +1,15 @@
+{
+  "name": "path-browserify",
+  "version": "1.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "homepage": "https://github.com/browserify/path-browserify",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/browserify/path-browserify.git"
+  }
+}

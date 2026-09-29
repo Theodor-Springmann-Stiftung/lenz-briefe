@@ -1,0 +1,12 @@
+{
+  "name": "astro",
+  "version": "7.3.2",
+  "license": "MIT",
+  "author": "withastro",
+  "homepage": "https://astro.build",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withastro/astro.git",
+    "directory": "packages/astro"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@types/hast",
+  "version": "3.0.5",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "lukeggchapman",
+      "githubUsername": "lukeggchapman",
+      "url": "https://github.com/lukeggchapman"
+    },
+    {
+      "name": "Junyoung Choi",
+      "githubUsername": "rokt33r",
+      "url": "https://github.com/rokt33r"
+    },
+    {
+      "name": "Christian Murphy",
+      "githubUsername": "ChristianMurphy",
+      "url": "https://github.com/ChristianMurphy"
+    },
+    {
+      "name": "Remco Haszing",
+      "githubUsername": "remcohaszing",
+      "url": "https://github.com/remcohaszing"
+    },
+    {
+      "name": "Titus Wormer",
+      "githubUsername": "wooorm",
+      "url": "https://github.com/wooorm"
+    }
+  ],
+  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/hast",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "directory": "types/hast"
+  }
+}

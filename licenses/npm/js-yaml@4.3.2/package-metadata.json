@@ -1,0 +1,12 @@
+{
+  "name": "js-yaml",
+  "version": "4.3.2",
+  "license": "MIT",
+  "author": "Vladimir Zapparov <dervus.grim@gmail.com>",
+  "contributors": [
+    "Aleksey V Zapparov <ixti@member.fsf.org> (http://www.ixti.net/)",
+    "Vitaly Puzrin <vitaly@rcdesign.ru> (https://github.com/puzrin)",
+    "Martin Grenfell <martin.grenfell@gmail.com> (http://got-ravings.blogspot.com)"
+  ],
+  "repository": "nodeca/js-yaml"
+}

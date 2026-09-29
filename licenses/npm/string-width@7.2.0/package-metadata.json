@@ -1,0 +1,11 @@
+{
+  "name": "string-width",
+  "version": "7.2.0",
+  "license": "MIT",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com"
+  },
+  "repository": "sindresorhus/string-width"
+}

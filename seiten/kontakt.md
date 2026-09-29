@@ -9,7 +9,7 @@ order: 50
 
 <figure class="page-portrait">
 
-![Schattenriss von Jakob Michael Reinhold Lenz](./assets/jakob-lenz-schattenriss.png)
+![Schattenriss von Jakob Michael Reinhold Lenz](../assets/jakob-lenz-schattenriss.png)
 
 </figure>
 

@@ -1,0 +1,10 @@
+{
+  "name": "css-select",
+  "version": "6.0.0",
+  "license": "BSD-2-Clause",
+  "author": "Felix Boehm <me@feedic.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fb55/css-select.git"
+  }
+}

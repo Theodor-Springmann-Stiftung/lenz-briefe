@@ -1,0 +1,10 @@
+{
+  "name": "xxhash-wasm",
+  "version": "1.1.0",
+  "license": "MIT",
+  "author": "Michael Jungo <michaeljungo92@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jungomi/xxhash-wasm.git"
+  }
+}

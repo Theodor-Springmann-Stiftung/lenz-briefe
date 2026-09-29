@@ -1,0 +1,17 @@
+{
+  "name": "parse5",
+  "version": "8.0.1",
+  "license": "MIT",
+  "author": "Ivan Nikulin <ifaaan@gmail.com> (https://github.com/inikulin)",
+  "contributors": [
+    "James Garbutt (https://github.com/43081j)",
+    "Felix Boehm (https://github.com/fb55)",
+    "Ivan Nikulin (https://github.com/inikulin)",
+    "Titus (https://github.com/wooorm)"
+  ],
+  "homepage": "https://parse5.js.org",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/inikulin/parse5.git"
+  }
+}

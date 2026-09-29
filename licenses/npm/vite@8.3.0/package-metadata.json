@@ -1,0 +1,12 @@
+{
+  "name": "vite",
+  "version": "8.3.0",
+  "license": "MIT",
+  "author": "Evan You",
+  "homepage": "https://vite.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitejs/vite.git",
+    "directory": "packages/vite"
+  }
+}

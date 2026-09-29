@@ -1,0 +1,38 @@
+{
+  "name": "@types/mdast",
+  "version": "4.0.4",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Christian Murphy",
+      "githubUsername": "ChristianMurphy",
+      "url": "https://github.com/ChristianMurphy"
+    },
+    {
+      "name": "Jun Lu",
+      "githubUsername": "lujun2",
+      "url": "https://github.com/lujun2"
+    },
+    {
+      "name": "Remco Haszing",
+      "githubUsername": "remcohaszing",
+      "url": "https://github.com/remcohaszing"
+    },
+    {
+      "name": "Titus Wormer",
+      "githubUsername": "wooorm",
+      "url": "https://github.com/wooorm"
+    },
+    {
+      "name": "Remco Haszing",
+      "githubUsername": "remcohaszing",
+      "url": "https://github.com/remcohaszing"
+    }
+  ],
+  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/mdast",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "directory": "types/mdast"
+  }
+}

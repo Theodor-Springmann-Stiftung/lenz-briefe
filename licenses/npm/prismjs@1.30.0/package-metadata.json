@@ -1,0 +1,10 @@
+{
+  "name": "prismjs",
+  "version": "1.30.0",
+  "license": "MIT",
+  "author": "Lea Verou",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrismJS/prism.git"
+  }
+}

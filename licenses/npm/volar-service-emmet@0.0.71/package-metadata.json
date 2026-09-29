@@ -1,0 +1,16 @@
+{
+  "name": "volar-service-emmet",
+  "version": "0.0.71",
+  "license": "MIT",
+  "author": {
+    "name": "Johnson Chu",
+    "email": "johnsoncodehk@gmail.com",
+    "url": "https://github.com/johnsoncodehk"
+  },
+  "homepage": "https://github.com/volarjs/services/tree/master/packages/emmet",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/volarjs/services.git",
+    "directory": "packages/emmet"
+  }
+}

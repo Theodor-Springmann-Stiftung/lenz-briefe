@@ -1,0 +1,11 @@
+{
+  "name": "axobject-query",
+  "version": "4.1.0",
+  "license": "Apache-2.0",
+  "author": "Jesse Beach <splendidnoise@gmail.com>",
+  "homepage": "https://github.com/A11yance/axobject-query#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A11yance/axobject-query.git"
+  }
+}

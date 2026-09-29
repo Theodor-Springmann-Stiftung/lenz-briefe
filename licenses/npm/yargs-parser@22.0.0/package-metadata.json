@@ -1,0 +1,10 @@
+{
+  "name": "yargs-parser",
+  "version": "22.0.0",
+  "license": "ISC",
+  "author": "Ben Coe <ben@npmjs.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yargs/yargs-parser.git"
+  }
+}

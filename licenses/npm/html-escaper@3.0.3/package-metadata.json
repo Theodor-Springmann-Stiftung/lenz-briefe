@@ -1,0 +1,11 @@
+{
+  "name": "html-escaper",
+  "version": "3.0.3",
+  "license": "MIT",
+  "author": "Andrea Giammarchi",
+  "homepage": "https://github.com/WebReflection/html-escaper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WebReflection/html-escaper.git"
+  }
+}

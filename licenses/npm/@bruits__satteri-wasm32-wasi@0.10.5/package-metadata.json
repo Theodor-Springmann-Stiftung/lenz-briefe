@@ -1,0 +1,9 @@
+{
+  "name": "@bruits/satteri-wasm32-wasi",
+  "version": "0.10.5",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruits/satteri.git"
+  }
+}

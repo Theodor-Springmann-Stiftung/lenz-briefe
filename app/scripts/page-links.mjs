@@ -9,10 +9,11 @@ export function rewritePageLink(url, file, directory, base = '/') {
   const resolved = new URL(url, pathToFileURL(file));
   const target = fileURLToPath(resolved);
   const relative = path.relative(directory, target).split(path.sep).join('/');
+  const asset = path.relative(path.resolve(directory, '../assets'), target).split(path.sep).join('/');
   const suffix = resolved.search + resolved.hash;
   let href;
-  if (relative.startsWith('assets/') && !relative.split('/').some(part => part.startsWith('.'))) {
-    href = `${base}seiten-assets/${relative.slice('assets/'.length).split('/').map(encodeURIComponent).join('/')}${suffix}`;
+  if (asset && !path.isAbsolute(asset) && !asset.split('/').some(part => part.startsWith('.'))) {
+    href = `${base}${asset.split('/').map(encodeURIComponent).join('/')}${suffix}`;
   } else if (/^[^/]+\.md$/.test(relative) && relative !== 'README.md' && !relative.startsWith('_')) {
     href = `${base}edition/${encodeURIComponent(relative.slice(0, -3))}/${suffix}`;
   } else {

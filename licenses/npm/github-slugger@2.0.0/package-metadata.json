@@ -1,0 +1,15 @@
+{
+  "name": "github-slugger",
+  "version": "2.0.0",
+  "license": "ISC",
+  "author": "Dan Flettre <flettre@gmail.com>",
+  "contributors": [
+    "Dan Flettre <flettre@gmail.com>",
+    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
+  ],
+  "homepage": "https://github.com/Flet/github-slugger",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Flet/github-slugger.git"
+  }
+}

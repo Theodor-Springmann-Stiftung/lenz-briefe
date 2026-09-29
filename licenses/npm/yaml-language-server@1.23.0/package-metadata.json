@@ -1,0 +1,19 @@
+{
+  "name": "yaml-language-server",
+  "version": "1.23.0",
+  "license": "MIT",
+  "author": "Red Hat",
+  "contributors": [
+    {
+      "name": "Muthurajan Sivasubramanian",
+      "email": "msivasub@redhat.com"
+    },
+    {
+      "name": "Google LLC"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redhat-developer/yaml-language-server.git"
+  }
+}

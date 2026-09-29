@@ -1,0 +1,10 @@
+{
+  "name": "devlop",
+  "version": "1.1.0",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "repository": "wooorm/devlop"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@shikijs/primitive",
+  "version": "4.4.3",
+  "license": "MIT",
+  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "homepage": "https://github.com/shikijs/shiki#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shikijs/shiki.git",
+    "directory": "packages/primitive"
+  }
+}

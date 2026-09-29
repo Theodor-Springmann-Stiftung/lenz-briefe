@@ -1,0 +1,10 @@
+{
+  "name": "common-ancestor-path",
+  "version": "2.0.0",
+  "license": "BlueOak-1.0.0",
+  "author": "Isaac Z. Schlueter <i@izs.me> (https://izs.me)",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:isaacs/common-ancestor-path"
+  }
+}

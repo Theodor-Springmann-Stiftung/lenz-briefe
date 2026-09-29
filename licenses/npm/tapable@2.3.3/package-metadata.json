@@ -1,0 +1,11 @@
+{
+  "name": "tapable",
+  "version": "2.3.3",
+  "license": "MIT",
+  "author": "Tobias Koppers @sokra",
+  "homepage": "https://github.com/webpack/tapable",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/webpack/tapable.git"
+  }
+}

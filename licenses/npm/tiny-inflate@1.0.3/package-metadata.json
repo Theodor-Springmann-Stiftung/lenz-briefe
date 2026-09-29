@@ -1,0 +1,11 @@
+{
+  "name": "tiny-inflate",
+  "version": "1.0.3",
+  "license": "MIT",
+  "author": "Devon Govett <devongovett@gmail.com>",
+  "homepage": "https://github.com/devongovett/tiny-inflate",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/devongovett/tiny-inflate.git"
+  }
+}

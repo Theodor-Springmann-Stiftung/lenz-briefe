@@ -1,0 +1,11 @@
+{
+  "name": "es-module-lexer",
+  "version": "2.3.2",
+  "license": "MIT",
+  "author": "Guy Bedford",
+  "homepage": "https://github.com/guybedford/es-module-lexer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guybedford/es-module-lexer.git"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@tailwindcss/oxide-darwin-x64",
+  "version": "4.3.3",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tailwindlabs/tailwindcss.git",
+    "directory": "crates/node/npm/darwin-x64"
+  }
+}

@@ -54,6 +54,10 @@ Hirschgasse 2\
 Telefon +49 6221 5996810\
 Email lenz-archiv@tss-hd.de
 
+## Lizenzen und Drittanbieter
+
+Informationen zur Lizenz der Website und der XML-Daten sowie zu verwendeter Software, Schriftarten und Icons finden Sie unter [Lizenzen und Drittanbieter](/edition/lizenzen/).
+
 ## Datenschutzerklärung
 
 ## Präambel

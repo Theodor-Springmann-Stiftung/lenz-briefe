@@ -1,0 +1,10 @@
+{
+  "name": "domhandler",
+  "version": "5.0.3",
+  "license": "BSD-2-Clause",
+  "author": "Felix Boehm <me@feedic.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fb55/domhandler.git"
+  }
+}

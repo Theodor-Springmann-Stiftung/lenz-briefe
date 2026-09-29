@@ -1,0 +1,10 @@
+{
+  "name": "unist-util-position",
+  "version": "5.0.0",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "repository": "syntax-tree/unist-util-position"
+}

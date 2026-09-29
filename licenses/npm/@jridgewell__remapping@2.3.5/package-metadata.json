@@ -1,0 +1,12 @@
+{
+  "name": "@jridgewell/remapping",
+  "version": "2.3.5",
+  "license": "MIT",
+  "author": "Justin Ridgewell <justin@ridgewell.name>",
+  "homepage": "https://github.com/jridgewell/sourcemaps/tree/main/packages/remapping",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jridgewell/sourcemaps.git",
+    "directory": "packages/remapping"
+  }
+}

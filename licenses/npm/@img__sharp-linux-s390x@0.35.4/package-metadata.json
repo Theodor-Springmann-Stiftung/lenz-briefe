@@ -1,0 +1,12 @@
+{
+  "name": "@img/sharp-linux-s390x",
+  "version": "0.35.4",
+  "license": "Apache-2.0",
+  "author": "Lovell Fuller <npm@lovell.info>",
+  "homepage": "https://sharp.pixelplumbing.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lovell/sharp.git",
+    "directory": "npm/linux-s390x"
+  }
+}

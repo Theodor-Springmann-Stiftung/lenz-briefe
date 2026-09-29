@@ -1,0 +1,10 @@
+{
+  "name": "eventemitter3",
+  "version": "5.0.4",
+  "license": "MIT",
+  "author": "Arnout Kazemier",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/primus/eventemitter3.git"
+  }
+}

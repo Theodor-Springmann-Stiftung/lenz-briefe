@@ -3,9 +3,23 @@
 Astro renders the index, 374 letter pages and the reading guide. Python and Saxon/C
 transform the source XML before each build; the browser never transforms XML.
 Tailwind defines the theme, and `src/styles/global.css` styles the shared edition
-classes. Source Serif, Linux Biolinum, Roboto Slab and Cormorant Garamond are self-hosted under
-`public/fonts/`, alongside their licenses. Linux Biolinum includes regular, italic, bold and
+classes. Source Serif, Linux Biolinum, Roboto Slab and Cormorant Garamond are self-hosted through Astro’s built-in local Fonts API. Font files live in
+`src/assets/fonts/`; their notices live in the repository-root `licenses/fonts/` folder.
+`astro.config.mjs` registers the variants and `Layout.astro` emits font CSS and
+preloads the regular interface and reading fonts. This works entirely with the
+static build, with no font service or browser JavaScript required. Linux Biolinum includes regular, italic, bold and
 bold oblique (used for bold italic), downloaded from the [CTAN Libertine package](https://mirrors.mit.edu/CTAN/fonts/libertine/opentype/).
+
+Third-party package and font notices are indexed in [../licenses/README.md](../licenses/README.md).
+The build copies the complete root `licenses/` folder to `dist/licenses/`, including
+the index and all notices. These files are served at `/licenses/…` in the deployed
+site and build preview; the development server does not serve this extra folder.
+The static page `/edition/lizenzen/` is generated from the license index at build
+time and linked from the Impressum. It documents MIT for the original application
+code, CC BY 4.0 for editorial content and XML data, and third-party notices.
+Browser-delivered dependencies appear first, followed by build dependencies.
+The notice checklist for the published site is in
+[../licenses/WEBSITE-NOTICES.md](../licenses/WEBSITE-NOTICES.md).
 
 ## Run and build
 
@@ -135,9 +149,9 @@ to update their shared definition list. Its labels stay left-aligned, and the li
 uses the same full content width as the legend.
 
 In Markdown components, links and images resolve relative to their file: use
-`../assets/scan.png` or `../kontakt.md`. Markdown images receive the same Astro
+`../../assets/scan.png` or `../kontakt.md`. Markdown images receive the same Astro
 optimization as page images. HTML snippets use ordinary browser URLs, for example
-`/seiten-assets/scan.png` and `/edition/kontakt/`.
+`/scan.png` and `/edition/kontakt/`.
 
 Tailwind scans all files in `seiten/`, including both component formats. Use full
 class names on HTML elements, for example `<div class="rounded-lg bg-amber-50 p-4">`.
@@ -145,12 +159,13 @@ Classes assembled dynamically in JavaScript, such as `bg-${color}-50`, are not
 detected; write out each possible class name instead.
 
 Astro watches Markdown and HTML components directly, without rerunning the XML export.
-Local Markdown images under `seiten/assets/` use Astro's image optimization.
-The `scripts/page-assets.mjs` integration publishes originals, including
-PDFs and other downloads, under `/seiten-assets/` with no server required. `scripts/page-links.mjs`
-rewrites relative Markdown page and download links and checks their targets;
-image references remain local for Astro. The assets integration also serves these
-files and reloads the preview when they are added, edited or removed in development.
+All public files live in the repository-root `assets/` folder, configured as Astro's
+`publicDir`. Astro serves them directly in development and copies them into the
+static build, preserving paths: `assets/scan.png` becomes `/scan.png`. No symlinks or asset-serving integration are needed.
+Use `../assets/scan.png` in a page's Markdown (or `../../assets/scan.png` in a
+component). Local Markdown images use Astro's image optimization.
+`scripts/page-links.mjs` rewrites relative Markdown page and download links to
+their public URLs and checks their targets; image references remain local for Astro.
 
 ### Letters
 

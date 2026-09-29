@@ -1,0 +1,11 @@
+{
+  "name": "@astrojs/language-server",
+  "version": "2.17.1",
+  "license": "MIT",
+  "author": "withastro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withastro/astro.git",
+    "directory": "packages/language-tools/language-server"
+  }
+}

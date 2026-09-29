@@ -1,0 +1,10 @@
+{
+  "name": "@oslojs/encoding",
+  "version": "1.1.0",
+  "license": "MIT",
+  "author": "pilcrowOnPaper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oslo-project/encoding"
+  }
+}

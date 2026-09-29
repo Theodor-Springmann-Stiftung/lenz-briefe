@@ -1,0 +1,12 @@
+{
+  "name": "@astrojs/astro2tsx",
+  "version": "0.1.1",
+  "license": "MIT",
+  "author": "Astro contributors",
+  "homepage": "https://astro.build",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withastro/compiler-rs.git",
+    "directory": "crates/astro2tsx"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@clack/prompts",
+  "version": "1.8.0",
+  "license": "MIT",
+  "author": {
+    "name": "Nate Moore",
+    "email": "nate@natemoo.re",
+    "url": "https://twitter.com/n_moore"
+  },
+  "homepage": "https://github.com/bombshell-dev/clack/tree/main/packages/prompts#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bombshell-dev/clack.git",
+    "directory": "packages/prompts"
+  }
+}

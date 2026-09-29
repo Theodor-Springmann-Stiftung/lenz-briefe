@@ -1,0 +1,11 @@
+{
+  "name": "nth-check",
+  "version": "2.1.1",
+  "license": "BSD-2-Clause",
+  "author": "Felix Boehm <me@feedic.com>",
+  "homepage": "https://github.com/fb55/nth-check",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fb55/nth-check"
+  }
+}

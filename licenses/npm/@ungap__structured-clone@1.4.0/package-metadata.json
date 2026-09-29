@@ -1,0 +1,11 @@
+{
+  "name": "@ungap/structured-clone",
+  "version": "1.4.0",
+  "license": "ISC",
+  "author": "Andrea Giammarchi",
+  "homepage": "https://github.com/ungap/structured-clone#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ungap/structured-clone.git"
+  }
+}

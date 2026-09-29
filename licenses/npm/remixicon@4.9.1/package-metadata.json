@@ -1,0 +1,14 @@
+{
+  "name": "remixicon",
+  "version": "4.9.1",
+  "license": "Apache-2.0",
+  "contributors": [
+    "Wendy Gao <wendygaoyuan@163.com>",
+    "Jimmy Cheung <jimmy@remixdesign.cn>"
+  ],
+  "homepage": "https://remixicon.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Remix-Design/remixicon.git"
+  }
+}

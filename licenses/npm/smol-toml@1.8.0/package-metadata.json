@@ -1,0 +1,10 @@
+{
+  "name": "smol-toml",
+  "version": "1.8.0",
+  "license": "BSD-3-Clause",
+  "author": "Cynthia Rey <cynthia@cynthia.dev>",
+  "repository": {
+    "type": "git",
+    "url": "github:squirrelchat/smol-toml"
+  }
+}

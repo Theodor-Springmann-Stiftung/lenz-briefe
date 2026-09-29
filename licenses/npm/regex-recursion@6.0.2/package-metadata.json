@@ -1,0 +1,10 @@
+{
+  "name": "regex-recursion",
+  "version": "6.0.2",
+  "license": "MIT",
+  "author": "Steven Levithan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slevithan/regex-recursion.git"
+  }
+}

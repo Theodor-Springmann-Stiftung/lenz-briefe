@@ -1,0 +1,15 @@
+{
+  "name": "ultrahtml",
+  "version": "1.7.0",
+  "license": "MIT",
+  "author": {
+    "name": "Nate Moore",
+    "email": "nate@natemoo.re",
+    "url": "https://twitter.com/n_moore"
+  },
+  "homepage": "https://github.com/natemoo-re/ultrahtml#README",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natemoo-re/ultrahtml"
+  }
+}

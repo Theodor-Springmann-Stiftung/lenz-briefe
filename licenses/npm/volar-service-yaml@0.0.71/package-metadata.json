@@ -1,0 +1,16 @@
+{
+  "name": "volar-service-yaml",
+  "version": "0.0.71",
+  "license": "MIT",
+  "author": {
+    "name": "Remco Haszing",
+    "email": "remcohaszing@gmail.com",
+    "url": "https://github.com/remcohaszing"
+  },
+  "homepage": "https://github.com/volarjs/services/tree/master/packages/yaml",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/volarjs/services.git",
+    "directory": "packages/yaml"
+  }
+}

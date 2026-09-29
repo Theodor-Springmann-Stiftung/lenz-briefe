@@ -1,0 +1,10 @@
+{
+  "name": "@vscode/l10n",
+  "version": "0.0.18",
+  "license": "MIT",
+  "author": "Microsoft Corporation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microsoft/vscode-l10n.git"
+  }
+}

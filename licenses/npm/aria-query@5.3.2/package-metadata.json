@@ -1,0 +1,11 @@
+{
+  "name": "aria-query",
+  "version": "5.3.2",
+  "license": "Apache-2.0",
+  "author": "Jesse Beach <splendidnoise@gmail.com>",
+  "homepage": "https://github.com/A11yance/aria-query#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A11yance/aria-query.git"
+  }
+}

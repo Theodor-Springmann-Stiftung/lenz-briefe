@@ -1,0 +1,12 @@
+{
+  "name": "@astrojs/telemetry",
+  "version": "3.3.3",
+  "license": "MIT",
+  "author": "withastro",
+  "homepage": "https://astro.build",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withastro/astro.git",
+    "directory": "packages/telemetry"
+  }
+}

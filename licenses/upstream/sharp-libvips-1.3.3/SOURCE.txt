@@ -1,0 +1,2 @@
+https://raw.githubusercontent.com/lovell/sharp-libvips/v1.3.3/LICENSE
+https://raw.githubusercontent.com/lovell/sharp-libvips/v1.3.3/THIRD-PARTY-NOTICES.md

@@ -1,0 +1,10 @@
+{
+  "name": "mdast-util-to-hast",
+  "version": "13.2.1",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "repository": "syntax-tree/mdast-util-to-hast"
+}

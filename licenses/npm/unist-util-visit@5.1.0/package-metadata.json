@@ -1,0 +1,12 @@
+{
+  "name": "unist-util-visit",
+  "version": "5.1.0",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+    "Eugene Sharygin <eush77@gmail.com>",
+    "Richard Gibson <richard.gibson@gmail.com>"
+  ],
+  "repository": "syntax-tree/unist-util-visit"
+}

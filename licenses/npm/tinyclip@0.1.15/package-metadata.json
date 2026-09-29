@@ -1,0 +1,11 @@
+{
+  "name": "tinyclip",
+  "version": "0.1.15",
+  "license": "MIT",
+  "author": "Tinylibs Maintainers (https://github.com/tinylibs)",
+  "homepage": "https://github.com/tinylibs/tinyclip#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinylibs/tinyclip.git"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "svgo",
+  "version": "4.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Kir Belevich",
+    "email": "kir@belevi.ch",
+    "url": "https://github.com/deepsweet"
+  },
+  "contributors": [
+    {
+      "name": "Sergey Belov",
+      "email": "peimei@ya.ru",
+      "url": "https://github.com/arikon"
+    },
+    {
+      "name": "Lev Solntsev",
+      "email": "lev.sun@ya.ru",
+      "url": "https://github.com/GreLI"
+    },
+    {
+      "name": "Bogdan Chadkin",
+      "email": "opensource@trysound.io",
+      "url": "https://github.com/TrySound"
+    },
+    {
+      "name": "Seth Falco",
+      "email": "seth@falco.fun",
+      "url": "https://falco.fun/"
+    }
+  ],
+  "homepage": "https://svgo.dev",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/svg/svgo.git"
+  }
+}

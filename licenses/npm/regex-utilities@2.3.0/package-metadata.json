@@ -1,0 +1,10 @@
+{
+  "name": "regex-utilities",
+  "version": "2.3.0",
+  "license": "MIT",
+  "author": "Steven Levithan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slevithan/regex-utilities.git"
+  }
+}

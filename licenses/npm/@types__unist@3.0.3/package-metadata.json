@@ -1,0 +1,53 @@
+{
+  "name": "@types/unist",
+  "version": "3.0.3",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "bizen241",
+      "githubUsername": "bizen241",
+      "url": "https://github.com/bizen241"
+    },
+    {
+      "name": "Jun Lu",
+      "githubUsername": "lujun2",
+      "url": "https://github.com/lujun2"
+    },
+    {
+      "name": "Hernan Rajchert",
+      "githubUsername": "hrajchert",
+      "url": "https://github.com/hrajchert"
+    },
+    {
+      "name": "Titus Wormer",
+      "githubUsername": "wooorm",
+      "url": "https://github.com/wooorm"
+    },
+    {
+      "name": "Junyoung Choi",
+      "githubUsername": "rokt33r",
+      "url": "https://github.com/rokt33r"
+    },
+    {
+      "name": "Ben Moon",
+      "githubUsername": "GuiltyDolphin",
+      "url": "https://github.com/GuiltyDolphin"
+    },
+    {
+      "name": "JounQin",
+      "githubUsername": "JounQin",
+      "url": "https://github.com/JounQin"
+    },
+    {
+      "name": "Remco Haszing",
+      "githubUsername": "remcohaszing",
+      "url": "https://github.com/remcohaszing"
+    }
+  ],
+  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/unist",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "directory": "types/unist"
+  }
+}

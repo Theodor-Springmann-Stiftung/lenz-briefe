@@ -1,0 +1,10 @@
+{
+  "name": "css-what",
+  "version": "7.0.0",
+  "license": "BSD-2-Clause",
+  "author": "Felix Böhm <me@feedic.com> (http://feedic.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fb55/css-what"
+  }
+}

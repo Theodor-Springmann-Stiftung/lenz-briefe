@@ -1,0 +1,7 @@
+{
+  "name": "csso",
+  "version": "5.0.5",
+  "license": "MIT",
+  "author": "Sergey Kryzhanovsky <skryzhanovsky@ya.ru> (https://github.com/afelix)",
+  "repository": "css/csso"
+}

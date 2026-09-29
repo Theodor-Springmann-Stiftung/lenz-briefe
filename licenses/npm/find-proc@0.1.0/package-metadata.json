@@ -1,0 +1,10 @@
+{
+  "name": "find-proc",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "gameroman",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gameroman-npm/find-proc.git"
+  }
+}

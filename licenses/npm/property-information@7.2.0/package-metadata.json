@@ -1,0 +1,12 @@
+{
+  "name": "property-information",
+  "version": "7.2.0",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Andrew Burgess <andrew@andrewburgess.io>",
+    "Dustin Deus <deusdustin@gmail.com> (http://starptech.de)",
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "repository": "wooorm/property-information"
+}

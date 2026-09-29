@@ -1,0 +1,11 @@
+{
+  "name": "json-schema-traverse",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Evgeny Poberezkin",
+  "homepage": "https://github.com/epoberezkin/json-schema-traverse#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epoberezkin/json-schema-traverse.git"
+  }
+}

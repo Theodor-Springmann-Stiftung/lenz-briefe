@@ -1,0 +1,9 @@
+{
+  "name": "unifont",
+  "version": "0.7.5",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unjs/unifont.git"
+  }
+}

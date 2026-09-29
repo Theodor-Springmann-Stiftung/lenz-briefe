@@ -1,0 +1,8 @@
+{
+  "source": "https://registry.npmjs.org/@img/sharp-libvips-linux-arm/-/sharp-libvips-linux-arm-1.3.3.tgz",
+  "copiedFrom": "lockfile archive (integrity verified)",
+  "supplementSource": [
+    "https://raw.githubusercontent.com/lovell/sharp-libvips/v1.3.3/LICENSE",
+    "https://raw.githubusercontent.com/lovell/sharp-libvips/v1.3.3/THIRD-PARTY-NOTICES.md"
+  ]
+}

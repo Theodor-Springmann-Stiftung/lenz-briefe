@@ -1,0 +1,10 @@
+{
+  "name": "http-cache-semantics",
+  "version": "4.2.0",
+  "license": "BSD-2-Clause",
+  "author": "Kornel Lesiński <npms2@geekhood.net> (https://kornel.ski/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kornelski/http-cache-semantics.git"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "hast-util-to-html",
+  "version": "9.0.5",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "repository": "syntax-tree/hast-util-to-html"
+}

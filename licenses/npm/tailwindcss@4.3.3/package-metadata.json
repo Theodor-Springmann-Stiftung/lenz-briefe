@@ -1,0 +1,11 @@
+{
+  "name": "tailwindcss",
+  "version": "4.3.3",
+  "license": "MIT",
+  "homepage": "https://tailwindcss.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tailwindlabs/tailwindcss.git",
+    "directory": "packages/tailwindcss"
+  }
+}

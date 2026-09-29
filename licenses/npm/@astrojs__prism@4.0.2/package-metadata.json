@@ -1,0 +1,12 @@
+{
+  "name": "@astrojs/prism",
+  "version": "4.0.2",
+  "license": "MIT",
+  "author": "withastro",
+  "homepage": "https://docs.astro.build/en/reference/api-reference/#prism-",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withastro/astro.git",
+    "directory": "packages/astro-prism"
+  }
+}

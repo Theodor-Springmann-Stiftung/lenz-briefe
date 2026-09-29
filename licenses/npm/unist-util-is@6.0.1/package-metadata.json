@@ -1,0 +1,12 @@
+{
+  "name": "unist-util-is",
+  "version": "6.0.1",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+    "Christian Murphy <christian.murphy.42@gmail.com>",
+    "Lucas Brandstaetter <lucas@brandstaetter.tech> (https://github.com/Roang-zero1)"
+  ],
+  "repository": "syntax-tree/unist-util-is"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@astrojs/compiler-binding-linux-x64-gnu",
+  "version": "0.4.0",
+  "license": "MIT",
+  "author": "Astro contributors",
+  "homepage": "https://astro.build",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withastro/compiler-rs.git",
+    "directory": "crates/astro_napi"
+  }
+}

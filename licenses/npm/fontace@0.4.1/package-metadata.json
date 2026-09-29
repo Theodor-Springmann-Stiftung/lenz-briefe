@@ -1,0 +1,11 @@
+{
+  "name": "fontace",
+  "version": "0.4.1",
+  "license": "MIT",
+  "author": "delucis",
+  "homepage": "https://github.com/delucis/fontace#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delucis/fontace.git"
+  }
+}

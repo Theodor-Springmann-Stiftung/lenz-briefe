@@ -15,7 +15,6 @@
     "@astrojs/markdown-satteri": "0.4.1",
     "@tailwindcss/vite": "4.3.3",
     "astro": "7.3.2",
-    "mrmime": "2.0.1",
     "parse5": "8.0.1",
     "remixicon": "^4.9.1",
     "tailwindcss": "4.3.3",

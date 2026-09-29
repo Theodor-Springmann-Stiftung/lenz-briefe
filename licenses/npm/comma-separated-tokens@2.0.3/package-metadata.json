@@ -1,0 +1,10 @@
+{
+  "name": "comma-separated-tokens",
+  "version": "2.0.3",
+  "license": "MIT",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "repository": "wooorm/comma-separated-tokens"
+}

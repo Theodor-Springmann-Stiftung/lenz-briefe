@@ -1,0 +1,18 @@
+{
+  "name": "@types/estree-jsx",
+  "version": "1.0.5",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Tony Ross",
+      "githubUsername": "antross",
+      "url": "https://github.com/antross"
+    }
+  ],
+  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/estree-jsx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "directory": "types/estree-jsx"
+  }
+}

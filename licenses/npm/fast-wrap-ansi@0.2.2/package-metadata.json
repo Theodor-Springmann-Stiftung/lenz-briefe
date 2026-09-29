@@ -1,0 +1,11 @@
+{
+  "name": "fast-wrap-ansi",
+  "version": "0.2.2",
+  "license": "MIT",
+  "author": "James Garbutt (https://github.com/43081j)",
+  "homepage": "https://github.com/43081j/fast-wrap-ansi#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/43081j/fast-wrap-ansi.git"
+  }
+}
