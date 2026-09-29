@@ -6,22 +6,25 @@ interface Props {
   kind: 'person' | 'place';
   showAnnotations?: boolean;
   conjunction?: boolean;
+  linked?: boolean;
 }
-const { entries, kind, showAnnotations = true, conjunction = false } = Astro.props;
+const { entries, kind, showAnnotations = true, conjunction = false, linked = true } = Astro.props;
 ---
 
 {entries.map((entry, i) => (
   <Fragment>
     {i > 0 && (conjunction && i === entries.length - 1 ? ' und ' : ', ')}
     <span>
-      <a
-        class="reference-filter"
-        href={`${base}?${new URLSearchParams({ group: 'all', [kind]: entry.ref })}`}
-        data-reference-kind={kind}
-        data-reference-id={entry.ref}
-      >
-        {entry.label || 'Unbekannt'}
-      </a>
+      {linked ? (
+        <a
+          class="reference-filter"
+          href={`${base}?${new URLSearchParams({ group: 'all', [kind]: entry.ref })}`}
+          data-reference-kind={kind}
+          data-reference-id={entry.ref}
+        >
+          {entry.label || 'Unbekannt'}
+        </a>
+      ) : (entry.label || 'Unbekannt')}
       {entry.cert === 'low' && (
         <sup class="uncertain">
           <Tooltip content="vermutlich">?</Tooltip>

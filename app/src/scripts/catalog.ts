@@ -7,7 +7,6 @@ import {
   withFilters,
   removeFilter,
   resetFilters,
-  selectReferenceFilter,
   normalizeYearGroup,
 } from '../lib/filters.mjs';
 import { createCatalogSearch } from './catalog-search';
@@ -18,7 +17,6 @@ const rows = new Map(
 );
 const checkboxes = [...document.querySelectorAll<HTMLInputElement>('.filter-options input')];
 const list = document.querySelector<HTMLOListElement>('.catalog-letter-list')!;
-const referenceLinks = [...list.querySelectorAll<HTMLAnchorElement>('.reference-filter')];
 const activeFilters = document.querySelector<HTMLElement>('.active-filters')!;
 const pills = document.querySelector<HTMLElement>('.active-filter-pills')!;
 const allLettersLink = document.querySelector<HTMLButtonElement>('.all-letters-link')!;
@@ -84,9 +82,6 @@ function render() {
     searching && hits === null ? '—' : `${count} ${count === 1 ? 'Brief' : 'Briefe'}`;
   document.querySelector<HTMLElement>('.empty-state')!.hidden = searching || count > 0;
   renderFilterPills();
-  referenceLinks.forEach((link) => {
-    link.href = `${location.pathname}?${queryFor(selectReferenceFilter(state, link.dataset.referenceKind!, link.dataset.referenceId!))}`;
-  });
   checkboxes.forEach(
     (input) =>
       (input.checked = (input.name === 'person' ? state.people : state.places).includes(
@@ -148,15 +143,6 @@ checkboxes.forEach((input) =>
     ),
   ),
 );
-document.querySelector('.catalog-section')!.addEventListener('click', (event) => {
-  const link = (event.target as Element).closest<HTMLAnchorElement>('.reference-filter');
-  if (!link) return;
-  const mouse = event as MouseEvent;
-  if (mouse.button !== 0 || mouse.metaKey || mouse.ctrlKey || mouse.shiftKey || mouse.altKey)
-    return;
-  event.preventDefault();
-  navigate(selectReferenceFilter(state, link.dataset.referenceKind!, link.dataset.referenceId!));
-});
 let searchTimer: ReturnType<typeof setTimeout>;
 searchInput.addEventListener('input', () => {
   clearTimeout(searchTimer);

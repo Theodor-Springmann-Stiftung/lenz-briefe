@@ -228,6 +228,15 @@ their public URLs and checks their targets; image references remain local for As
   text or search offsets. Subsequent fragments of the same hand are not labelled again.
 - `traditions.json` provides ordered apparatus records, including text between
   entries. The same typography applies to letter, note and apparatus fragments.
+- Letter pages have two independent navigations above the header: all letters
+  by date on the right, and the current correspondence on the left. Correspondents
+  are the people opposite person `1` (Lenz) in the sent/received events; co-authors
+  on his own side are excluded. Shared letters offer a correspondent selector;
+  people without another letter are disabled. The first available correspondence
+  is selected by default, and the entire correspondence navigation is omitted
+  when none has another letter.
+  Both directions use catalogue date order, and correspondence links retain the
+  selection via `?correspondent=<person ID>`, including on reload and Back/Forward.
 - The index embeds only IDs and filter fields for browser navigation. Repeated
   `person` and `place` query parameters combine with OR within each category and
   AND between categories. `group` selects a year group; the first group is the
@@ -241,6 +250,9 @@ their public URLs and checks their targets; image references remain local for As
   clears all filters. Remix Icons supplies the interface icons as embedded SVGs.
   Reload, shared URLs and Back/Forward restore filters and sorting. Search updates
   while typing. The unfiltered catalog remains readable without JavaScript.
+  Catalog and search-result headings show names and places as plain text; cards
+  link to their letters. Person and place filter links appear only in the
+  single-letter heading.
   Search results show metadata first, followed by letter text (including sidenotes)
   and transmission records. Metadata search covers correspondents, places, displayed
   dates, letter numbers, source types and editorial status; all sections share the

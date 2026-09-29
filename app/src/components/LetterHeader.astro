@@ -74,12 +74,12 @@ const dates = sent.flatMap((event) =>
             <Fragment>
               {i > 0 && '; '}
               <span class="letter-event">
-                <ReferenceList entries={event.persons} kind="person" conjunction />
+                <ReferenceList entries={event.persons} kind="person" conjunction linked={!compact} />
                 {event.type === 'received' && event.locations.length > 0 && (
                   <span class="event-place">
                     {' '}
                     (&#8288;&#8202;&#8288;
-                    <ReferenceList entries={event.locations} kind="place" showAnnotations={false} />
+                    <ReferenceList entries={event.locations} kind="place" showAnnotations={false} linked={!compact} />
                     &#8288;&#8202;&#8288;)
                   </span>
                 )}

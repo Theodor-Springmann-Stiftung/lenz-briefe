@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import LetterCitation from '../../components/LetterCitation.astro';
 import LetterHeader from '../../components/LetterHeader.astro';
+import CorrespondenceNavigation from '../../components/CorrespondenceNavigation.astro';
 import Icon from '../../components/Icon.astro';
 import QuickLegend from '../../components/QuickLegend.astro';
 import Sidenote from '../../components/Sidenote.astro';
@@ -83,6 +84,7 @@ const sectionLinks = [
     <div class="letter-spine" aria-hidden="true"></div>
     <div class="detail-header-group">
       <div class="letter-toolbar">
+        <CorrespondenceNavigation letter={letter} />
         <nav class="letter-navigation" aria-label="Briefnavigation">
           {previous && (
             <a

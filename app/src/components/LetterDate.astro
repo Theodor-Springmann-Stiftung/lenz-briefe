@@ -18,6 +18,7 @@ const textParts = (text: string) => {
 ---
 
 {parts.map((part) => {
+  if (part.placeId && compact) return part.text;
   if (part.placeId)
     return (
       <a
