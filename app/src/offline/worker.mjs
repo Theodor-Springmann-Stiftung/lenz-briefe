@@ -83,7 +83,35 @@ export function createOfflineWorker(worker) {
     }
   }
 
+  function retryDelay(milliseconds, signal) {
+    return new Promise((resolve, reject) => {
+      if (signal.aborted) { reject(signal.reason); return; }
+      const cancel = () => {
+        worker.clearTimeout(timer);
+        signal.removeEventListener('abort', cancel);
+        reject(signal.reason);
+      };
+      const timer = worker.setTimeout(() => {
+        signal.removeEventListener('abort', cancel);
+        resolve();
+      }, milliseconds);
+      signal.addEventListener('abort', cancel, { once: true });
+    });
+  }
+
   async function download(url, signal) {
+    // Retry the failed request, including a reset while reading its body. Keep
+    // the completed files and stop promptly if the user turns offline use off.
+    for (let attempt = 0; ; attempt++) {
+      try { return await requestDownload(url, signal); }
+      catch (error) {
+        if (signal.aborted || stopping || attempt === 3) throw error;
+        await retryDelay(1000 * 2 ** attempt, signal);
+      }
+    }
+  }
+
+  async function requestDownload(url, signal) {
     const requestAbort = new AbortController();
     const cancel = () => requestAbort.abort();
     if (signal.aborted) cancel();
@@ -158,37 +186,41 @@ export function createOfflineWorker(worker) {
     await broadcast(true);
     const cache = await worker.caches.open(`${prefix}files`);
     const missing = manifest.entries.filter((entry) => !keys.has(key(entry)));
-    let cursor = 0;
-    let failure;
-    // Bound network and memory use. A completed cache.put is the durable
-    // checkpoint; no page-owned queue or long-lived worker is required.
-    await Promise.all(Array.from({ length: Math.min(4, missing.length) }, async () => {
-      while (!failure && !signal.aborted && !stopping && cursor < missing.length) {
-        const entry = missing[cursor++];
-        try {
-          const { response, body } = await download(new URL(entry.url, scope).href, signal);
-          const digest = await worker.crypto.subtle.digest('SHA-256', body);
-          const hash = [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
-          if (hash !== entry.hash || body.byteLength !== entry.bytes) {
-            const error = new Error('Deployment changed during download');
-            error.name = 'EditionChangedError';
-            throw error;
-          }
-          if (signal.aborted || stopping) return;
-          // fetch() has decoded transfer compression; don't persist those
-          // transfer headers with the decoded response body.
-          const headers = new Headers(response.headers);
-          headers.delete('content-encoding');
-          headers.delete('content-length');
-          await cache.put(key(entry), new Response(body, { status: 200, headers }));
-          progress.done++;
-          progress.bytes += entry.bytes;
-          await broadcast();
-        } catch (error) { failure ||= error; }
-      }
-    }));
-    if (signal.aborted || stopping) return;
-    if (failure) throw failure;
+    // Sorting alone isn't enough: a fast request could start HTML while a slow
+    // font or image is still downloading. Finish and verify every asset first.
+    for (const batch of [missing.filter((entry) => !entry.page), missing.filter((entry) => entry.page)]) {
+      let cursor = 0;
+      let failure;
+      // Bound network and memory use. A completed cache.put is the durable
+      // checkpoint; no page-owned queue or long-lived worker is required.
+      await Promise.all(Array.from({ length: Math.min(4, batch.length) }, async () => {
+        while (!failure && !signal.aborted && !stopping && cursor < batch.length) {
+          const entry = batch[cursor++];
+          try {
+            const { response, body } = await download(new URL(entry.url, scope).href, signal);
+            const digest = await worker.crypto.subtle.digest('SHA-256', body);
+            const hash = [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
+            if (hash !== entry.hash || body.byteLength !== entry.bytes) {
+              const error = new Error('Deployment changed during download');
+              error.name = 'EditionChangedError';
+              throw error;
+            }
+            if (signal.aborted || stopping) return;
+            // fetch() has decoded transfer compression; don't persist those
+            // transfer headers with the decoded response body.
+            const headers = new Headers(response.headers);
+            headers.delete('content-encoding');
+            headers.delete('content-length');
+            await cache.put(key(entry), new Response(body, { status: 200, headers }));
+            progress.done++;
+            progress.bytes += entry.bytes;
+            await broadcast();
+          } catch (error) { failure ||= error; }
+        }
+      }));
+      if (signal.aborted || stopping) return;
+      if (failure) throw failure;
+    }
 
     // Publish only a complete version. The previous generation also retains
     // hashed assets needed by pages that were already open during the update.
