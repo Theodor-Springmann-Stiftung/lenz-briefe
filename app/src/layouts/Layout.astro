@@ -3,6 +3,7 @@ import '../styles/global.css';
 import { Font } from 'astro:assets';
 import { handSettingsVariables } from '../lib/hand-settings.mjs';
 import Icon from '../components/Icon.astro';
+import OfflineToggle from '../components/OfflineToggle.astro';
 import { base } from '../lib/edition';
 import Navigation from '../components/Navigation.astro';
 import BackToTop from '../components/BackToTop.astro';
@@ -81,14 +82,19 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {
           lenz-briefe.de – ein Projekt der{' '}
           <a href="https://theodor-springmann-stiftung.de/">Theodor Springmann Stiftung</a> ·{' '}
           <a href={pageUrl('datenschutz')}>Impressum &amp; Datenschutz</a>{' '}
-          <Icon name="code" class="footer-code-icon" />{' '}
-          <a
-            class="font-mono"
-            href={revision.url}
-            aria-label={`Commit ${revision.shortHash.toUpperCase()}`}
-          >
-            {revision.shortHash.toUpperCase()}
-          </a>
+          <span class="footer-tools">
+            <OfflineToggle />
+            <span class="footer-code">
+              <Icon name="code" class="footer-code-icon" />
+              <a
+                class="font-mono"
+                href={revision.url}
+                aria-label={`Commit ${revision.shortHash.toUpperCase()}`}
+              >
+                {revision.shortHash.toUpperCase()}
+              </a>
+            </span>
+          </span>
         </p>
       </div>
     </footer>

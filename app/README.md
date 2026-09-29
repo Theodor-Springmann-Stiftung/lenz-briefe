@@ -50,6 +50,65 @@ needed. Builds regenerate `app/generated/`; both directories are ignored by Git.
 The export script uses the workspace's Python virtual environment when present,
 otherwise `uv run`. An unsuccessful export stops the site build.
 
+## Optional offline edition
+
+The footer checkbox **Offline nutzen (~40 MB)**, immediately before the code/commit link,
+downloads the complete built edition into browser Cache Storage. It shows compact
+download/update progress, changes its label to **Offline verfügbar** after completion, and shows a resume
+button if the network or browser storage interrupts the download. Unchecking it
+stops pending requests, removes this edition's caches, and unregisters its worker.
+It does not touch other applications' caches.
+
+`scripts/offline-build.mjs` runs after the license files have been copied. It emits
+`offline-manifest.json` with canonical URLs, byte sizes and SHA-256 hashes for all
+built pages and assets, including fonts and the full-text search index. The
+rendered license page is included, but the separate `licenses/` directory of
+source notices and package metadata is excluded from the offline download.
+Its version identifies the actual output, independently of the Git commit. The
+same hook emits `sw.js` from the self-contained runtime in
+`src/offline/worker.mjs`. The existing GitHub Pages upload includes both files;
+there is no separate deployment command or server component.
+
+The worker downloads at most four files concurrently and checks each response's
+hash before saving it. Cached files themselves are durable checkpoints, so
+navigating to another page, closing/reopening the site, or the browser stopping a
+worker does not restart completed downloads. A pending manifest and the last
+complete manifest are stored separately. The active edition switches only after
+all files for the new version have arrived; unchanged files are reused and the
+previous generation's assets remain available for already-open pages. Old unused
+files are collected after a successful update.
+
+While enabled, pages load from the complete offline edition. The footer script
+checks for updates on opening/navigating, returning to a visible tab, reconnecting,
+and once a minute while visible. Reconnection and the resume button force a fresh
+check. Ordinary checks are throttled to once a minute when an edition is already
+complete. Updates continue through the worker across navigation and resume from
+the cache if the worker was suspended. This does not depend on background sync
+support or on keeping a browser running after all tabs are closed.
+
+Page URLs with search, filter or correspondence parameters resolve to the same
+cached HTML; the existing browser scripts still apply those parameters. Requests
+outside the edition's origin/scope are never cached. The manifest and worker
+script are always obtained from the network when checking for updates. Download
+failures, interrupted deployments (a hash mismatch), and quota errors preserve
+the previous complete edition and show a recoverable status.
+
+Offline use requires HTTPS (or localhost) and service worker/Cache API support.
+The explicit checkbox action requests persistent storage where supported; the
+browser can decline, and users can still clear saved site data. The preference
+is stored per deployment path in local storage, with the worker's persisted state
+as a fallback. Each browser/device opts in separately.
+
+Test the feature with `npm run build` then `npm run preview`, on a separate port
+from the development server. The checkbox is disabled in `astro dev` so a worker
+cannot cache Vite's development responses. For a browser smoke test, start a
+download, navigate to another letter, interrupt the connection, reopen a saved
+page, then reconnect. After completion, check an unvisited letter, a filtered
+catalogue URL and full-text search with the server unavailable. Deploying a new
+build should preserve the old offline copy until the update completes. The Node
+tests exercise interruption/restart, version changes, response integrity, cache
+reuse, scope isolation, storage errors and cancellation.
+
 ## GitHub Pages development deployment
 
 `.github/workflows/pages.yml` validates all four XML documents against their XSDs

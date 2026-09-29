@@ -3,6 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import watchEdition from './scripts/watch-edition.mjs';
 import pageLinks, { pageImageReferences } from './scripts/page-links.mjs';
 import pageComponents from './scripts/page-components.mjs';
+import offlineEdition from './scripts/offline-build.mjs';
 import { fileURLToPath } from 'node:url';
 import { cp } from 'node:fs/promises';
 import { satteri } from '@astrojs/markdown-satteri';
@@ -83,6 +84,7 @@ export default defineConfig({
         },
       },
     },
+    offlineEdition(),
   ],
   markdown: {
     processor: satteri({
