@@ -11,11 +11,9 @@ export async function getStaticPaths() {
 
 interface Props { page: CollectionEntry<'pages'> }
 const { page } = Astro.props;
-const { Content, headings, remarkPluginFrontmatter } = await render(page);
+const { Content, headings } = await render(page);
 const tocHeadings = headings.filter(heading => heading.depth <= 3);
-const wordCount = (page.body ?? '').split(/\s+/).filter(Boolean).length;
-const showToc = headings.filter(heading => heading.depth === 2).length >= 2
-  && (wordCount >= 400 || page.data.legend || remarkPluginFrontmatter.hasLegend);
+const showToc = page.data.toc && tocHeadings.length > 0;
 ---
 <Layout title={`${page.data.title} · Lenz Briefe`} description={page.data.description}>
   <article class:list={['about-page', { 'about-page--with-toc': showToc }]}>

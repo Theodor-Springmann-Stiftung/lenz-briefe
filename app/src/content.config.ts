@@ -1,7 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
-import { validComponentName } from '../scripts/page-components.mjs';
+import { componentName } from '../scripts/page-components.mjs';
 
 const pages = defineCollection({
   loader: glob({
@@ -17,6 +17,7 @@ const pages = defineCollection({
     order: z.number().int().default(100),
     inMenu: z.boolean().default(true),
     legend: z.boolean().default(false),
+    toc: z.boolean().default(false),
   }),
 });
 
@@ -25,11 +26,7 @@ const components = defineCollection({
     base: '../seiten/components',
     pattern: ['*.md', '!README.md', '!_*.md'],
     deferRender: true,
-    generateId: ({ entry }) => {
-      const name = entry.replace(/\.md$/, '');
-      if (!validComponentName.test(name)) throw new Error(`Invalid component filename: ${entry}. Use a lowercase name with a hyphen, e.g. lkb-legende.md.`);
-      return name;
-    },
+    generateId: ({ entry }) => componentName(entry),
   }),
   schema: z.object({
     prose: z.boolean().default(true),

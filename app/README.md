@@ -81,31 +81,47 @@ Set `inMenu: false` to keep a page out of the Edition menu, such as
 `seiten/datenschutz.md`, which is linked from the footer. The older `/datenschutz/`
 address redirects to that page.
 
-Long pages automatically show a contents navigation built from Markdown H1–H3
-headings. It appears when a page has at least two H2 sections and either 400 words
-or an embedded legend. It sits on the right on wide screens (from 1200px), stays
-visible while scrolling, and moves above the text on narrower screens.
+Set `toc: true` in a page's frontmatter to show a contents navigation built from
+its Markdown H1–H3 headings. It is off by default, regardless of page length or
+embedded components. It sits on the right on wide screens (from 1200px), stays
+visible while scrolling, and moves above the text on narrower screens. Pages
+without headings do not show an empty navigation.
 
-Reusable components live in `seiten/components/`. The filename is the HTML element
-name: `lkb-legende.md` supplies `<lkb-legende></lkb-legende>`. Names must be lowercase
-and include a hyphen. These files never become pages or menu entries. Put a component
-tag on its own line, with blank lines before and after it:
+Reusable components live in `seiten/components/` as `.md` or `.html` files. The
+filename is the HTML element name: `lkb-legende.md` or `lkb-legende.html` supplies
+`<lkb-legende></lkb-legende>`. Keep only one format per name; duplicates fail the
+build. Names must be lowercase and include a hyphen. These files never become
+pages or menu entries; `README.*` and `_`-prefixed files are excluded. In Markdown,
+put a component tag on its own line, with blank lines before and after it:
 
 ```html
 <lkb-legende></lkb-legende>
 ```
 
-Components accept Markdown and HTML and are rendered at build time without browser
-JavaScript. No frontmatter is required; optional `prose: false` disables the standard
-prose styling, and `class` sets a wrapper CSS class. Components can embed other
-components using the same standalone syntax. Missing files and circular references
-fail with an explanatory error. Code examples of tags stay literal; attributes,
-slots and embeds inside other HTML blocks are not supported.
+Markdown components go through the same Markdown parser as pages. No frontmatter
+is required; optional `prose: false` disables the standard prose styling, and
+`class` sets a wrapper CSS class. HTML components are literal fragments, without
+frontmatter or automatic prose styling. Their markup, whitespace, `<script>` and
+`<style>` blocks pass through directly; Markdown syntax inside them stays literal.
 
-Both the full legend and “Schnelle Legende” render `seiten/components/lkb-legende.md`,
+Both formats are embedded at build time inside the named custom element, using
+ordinary light DOM and shared site CSS. There is no shadow DOM or JavaScript
+required for rendering. A snippet can define its own behavior with
+`customElements.define()`; guard it with `customElements.get()` because the same
+snippet can appear more than once. Inline scripts are browser JavaScript, without
+Astro bundling or TypeScript processing. Scope styles and selectors to the custom
+element when they should affect only that component.
+
+Components can embed either format. Markdown uses the standalone syntax above;
+HTML snippets can also place empty component tags inside other HTML elements.
+Missing files and circular references fail with an explanatory error. Comments,
+code examples, scripts, styles and templates stay literal. Embed attributes and
+slots are not supported.
+
+Both the full legend and “Schnelle Legende” render `seiten/components/lkb-legende.html`,
 so editing its labels, descriptions, examples or order changes both. The
-`data-legend-tag` attributes connect rows to letter highlights. Keep HTML sections
-free of blank lines so Markdown does not insert paragraphs into SVGs or list markup.
+`data-legend-tag` attributes connect rows to letter highlights. Its HTML is embedded
+directly, so blank lines do not introduce Markdown paragraphs into the markup.
 The built-in `<lkb-sidenote-position position="top-left"></lkb-sidenote-position>`
 also works inside HTML blocks. It uses `app/src/assets/SidenotePos.svg` and the same
 renderer as letter sidenotes; no SVG data needs to be copied into Markdown.
@@ -113,10 +129,22 @@ Positions: `top-left`, `top`, `top-right`, `right`, `left`, `bottom-left`, `bott
 `bottom-right`. The older
 `legend: true` frontmatter still appends a legend if no embed is present.
 
-Component links and images resolve relative to their file: use `../assets/scan.png`
-or `../kontakt.md`. Markdown images receive the same Astro optimization as page images.
+The Siglen page and the Siglen section in “Zur Edition” both embed
+`<lkb-siglen></lkb-siglen>` from `seiten/components/lkb-siglen.md`. Edit that file
+to update their shared definition list. Its labels stay left-aligned, and the list
+uses the same full content width as the legend.
 
-Astro watches the Markdown collection directly, without rerunning the XML export.
+In Markdown components, links and images resolve relative to their file: use
+`../assets/scan.png` or `../kontakt.md`. Markdown images receive the same Astro
+optimization as page images. HTML snippets use ordinary browser URLs, for example
+`/seiten-assets/scan.png` and `/edition/kontakt/`.
+
+Tailwind scans all files in `seiten/`, including both component formats. Use full
+class names on HTML elements, for example `<div class="rounded-lg bg-amber-50 p-4">`.
+Classes assembled dynamically in JavaScript, such as `bg-${color}-50`, are not
+detected; write out each possible class name instead.
+
+Astro watches Markdown and HTML components directly, without rerunning the XML export.
 Local Markdown images under `seiten/assets/` use Astro's image optimization.
 The `scripts/page-assets.mjs` integration publishes originals, including
 PDFs and other downloads, under `/seiten-assets/` with no server required. `scripts/page-links.mjs`
