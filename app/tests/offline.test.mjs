@@ -138,6 +138,29 @@ test('offline edition includes unvisited pages and assets; page query parameters
   ]) assert.equal(await (await runtime.respond(new Request(`https://edition.test${url}`))).text(), text);
 });
 
+test('built pages identify their edition while manifest hashes verify the stamped bytes', async () => {
+  const directory = await mkdtemp(path.join(tmpdir(), 'lenz-offline-version-'));
+  try {
+    await writeFile(path.join(directory, 'index.html'), '<span data-offline-version="__OFFLINE_VERSION__">Grüße</span>');
+    await writeFile(path.join(directory, 'font.woff2'), 'Font');
+    const first = await buildOfflineEdition(directory);
+    const initialPage = await readFile(path.join(directory, 'index.html'));
+    assert.ok(initialPage.includes(`data-offline-version="${first.version}"`));
+    assert.equal(hash(initialPage), first.entries.find((entry) => entry.page).hash);
+    assert.equal(initialPage.length, first.entries.find((entry) => entry.page).bytes);
+    assert.deepEqual(await buildOfflineEdition(directory), first);
+    // Asset-only changes also require an old document to reload.
+    await writeFile(path.join(directory, 'font.woff2'), 'Revised font');
+    const next = await buildOfflineEdition(directory);
+    assert.notEqual(next.version, first.version);
+    const nextPage = await readFile(path.join(directory, 'index.html'));
+    assert.ok(nextPage.includes(`data-offline-version="${next.version}"`));
+    assert.ok(!nextPage.includes(first.version));
+    assert.equal(hash(nextPage), next.entries.find((entry) => entry.page).hash);
+    assert.deepEqual(await buildOfflineEdition(directory), next);
+  } finally { await rm(directory, { recursive: true, force: true }); }
+});
+
 test('offline manifest excludes source notices, keeps the license page, and downloads intact from Astro preview', async () => {
   const directory = await mkdtemp(path.join(tmpdir(), 'lenz-offline-preview-'));
   let server;
@@ -146,7 +169,7 @@ test('offline manifest excludes source notices, keeps the license page, and down
     await mkdir(path.join(output, 'licenses/npm/@scope__name@1.0'), { recursive: true });
     await mkdir(path.join(output, 'edition/lizenzen'), { recursive: true });
     await mkdir(path.join(directory, 'src/pages'), { recursive: true });
-    await writeFile(path.join(output, 'index.html'), '<h1>Edition</h1>');
+    await writeFile(path.join(output, 'index.html'), '<h1 data-offline-version="__OFFLINE_VERSION__">Edition</h1>');
     await writeFile(path.join(output, 'edition/lizenzen/index.html'), '<h1>Lizenzen</h1>');
     const notices = ['npm/@scope__name@1.0/LICENSE', 'npm/@scope__name@1.0/package-metadata.json'];
     for (const file of notices) await writeFile(path.join(output, 'licenses', file), 'Notice');

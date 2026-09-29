@@ -21,6 +21,8 @@ function initializeOfflineControl(root: HTMLElement) {
   const feedback = root.querySelector<HTMLElement>('.offline-feedback')!;
   const progress = root.querySelector<HTMLProgressElement>('[data-offline-progress]')!;
   const retry = root.querySelector<HTMLButtonElement>('[data-offline-retry]')!;
+  const reload = root.querySelector<HTMLAnchorElement>('[data-offline-reload]')!;
+  const pageVersion = root.dataset.offlineVersion;
   const announcement = root.querySelector<HTMLElement>('[data-offline-announcement]')!;
   const base = new URL(root.dataset.base!, location.origin);
   const script = new URL('sw.js', base);
@@ -32,6 +34,7 @@ function initializeOfflineControl(root: HTMLElement) {
   let changing = false;
   let previousPhase = '';
   let latest: OfflineStatus | undefined;
+  let completedVersion: string | null = null;
   let recoveryTimer: number | undefined;
   let recoveryAttempt = 0;
   let recoveryNeeded = false;
@@ -96,20 +99,26 @@ function initializeOfflineControl(root: HTMLElement) {
     if (!desired && (changing || explicitlyDisabled()) && status.enabled) return;
     if (latest && status.done > latest.done) recoveryAttempt = 0;
     latest = status;
+    if (status.phase === 'ready' && status.ready) completedVersion = status.version;
     recoveryNeeded = status.enabled && ['paused', 'error'].includes(status.phase) && status.error !== 'quota';
     const recovering = recoveryNeeded && recoveryAttempt < maxRecoveryAttempts;
+    const wasUpdated = !reload.hidden;
+    const updated = status.enabled && status.ready && completedVersion === status.version
+      && Boolean(pageVersion && status.version && pageVersion !== status.version);
     if (recoveryNeeded) scheduleRecovery();
     else clearRecovery(['off', 'ready'].includes(status.phase));
     checkbox.checked = status.enabled;
     progress.hidden = status.phase !== 'downloading' && !(recovering && status.total);
     retry.hidden = !status.enabled || !['paused', 'error'].includes(status.phase) || recovering;
-    feedback.hidden = progress.hidden && retry.hidden;
+    reload.hidden = !updated;
+    reload.href = location.href;
+    feedback.hidden = progress.hidden && retry.hidden && reload.hidden;
     const percent = status.totalBytes ? Math.floor(status.bytes / status.totalBytes * 100) : 0;
     progress.value = percent;
     progress.title = `${status.done} / ${status.total} Dateien`;
     progress.setAttribute('aria-valuetext', `${percent} Prozent, ${status.done} von ${status.total} Dateien`);
     optionLabel.textContent = !status.enabled || status.phase === 'off' ? downloadLabel
-      : status.phase === 'ready' ? 'Offline verfügbar'
+      : status.phase === 'ready' || (updated && status.phase === 'checking') ? (updated ? 'Aktualisiert' : 'Offline verfügbar')
       : status.phase === 'checking' ? (status.ready ? 'Prüft auf Updates …' : 'Wird vorbereitet …')
       : status.phase === 'downloading' ? `${status.ready ? 'Aktualisiere' : 'Download'} · ${percent} %`
       : status.error === 'quota' ? 'Speicher voll'
@@ -118,7 +127,9 @@ function initializeOfflineControl(root: HTMLElement) {
     root.title = status.ready && status.updatedAt
       ? `Offline gespeichert: ${new Date(status.updatedAt).toLocaleString('de-DE')}` : '';
     // Announce state changes, not every downloaded file or percentage point.
-    if (previousPhase !== status.phase) announcement.textContent = optionLabel.textContent;
+    if (previousPhase !== status.phase || wasUpdated !== updated) {
+      announcement.textContent = `${optionLabel.textContent}${updated ? ' · Neu laden' : ''}`;
+    }
     previousPhase = status.phase;
   }
 
@@ -130,7 +141,7 @@ function initializeOfflineControl(root: HTMLElement) {
     checkbox.checked = desired;
     progress.hidden = true;
     retry.hidden = !desired || (!quota && recoveryAttempt < maxRecoveryAttempts);
-    feedback.hidden = retry.hidden;
+    feedback.hidden = retry.hidden && reload.hidden;
     retry.textContent = quota ? 'Erneut versuchen' : 'Fortsetzen';
     optionLabel.textContent = quota ? 'Speicher voll'
       : desired ? recoveryLabel() : 'Entfernen fehlgeschlagen';
@@ -190,7 +201,10 @@ function initializeOfflineControl(root: HTMLElement) {
         if (data.error) reject(new DOMException('Offline operation failed', data.error));
         else resolve(data.status);
       };
-      worker.postMessage({ type, force, userInitiated }, [channel.port2]);
+      // Check before comparing versions: a network-loaded page can already be
+      // newer than the saved edition, so it must not be told to reload that one.
+      const checkVersion = Boolean(pageVersion && pageVersion !== latest?.version);
+      worker.postMessage({ type, force: force || checkVersion, userInitiated }, [channel.port2]);
     });
   }
 
@@ -213,6 +227,7 @@ function initializeOfflineControl(root: HTMLElement) {
     feedback.hidden = true;
     progress.hidden = true;
     retry.hidden = true;
+    reload.hidden = true;
     optionLabel.textContent = desired ? 'Wird vorbereitet …' : 'Wird entfernt …';
     announcement.textContent = optionLabel.textContent;
     try {
@@ -233,6 +248,12 @@ function initializeOfflineControl(root: HTMLElement) {
     }
   });
   retry.addEventListener('click', () => { clearRecovery(true); synchronize(true); });
+  reload.addEventListener('click', (event) => {
+    reload.href = location.href;
+    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    location.reload();
+  });
   navigator.serviceWorker.addEventListener('message', (event) => {
     if (event.data?.type !== 'lenz:offline-status' || event.data.scope !== base.href) return;
     const status: OfflineStatus = event.data.status;
@@ -270,6 +291,7 @@ function initializeOfflineControl(root: HTMLElement) {
       checkbox.checked = false;
       optionLabel.textContent = downloadLabel;
       feedback.hidden = true;
+      reload.hidden = true;
     }
   });
   // Also restarts a suspended worker. Persisted cache entries, not this timer,

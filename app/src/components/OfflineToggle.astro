@@ -2,7 +2,7 @@
 import { base } from '../lib/edition';
 ---
 
-<span class="offline-control" data-offline data-base={base} data-production={import.meta.env.PROD} hidden>
+<span class="offline-control" data-offline data-base={base} data-production={import.meta.env.PROD} data-offline-version="__OFFLINE_VERSION__" hidden>
   <label class="offline-option">
     <input type="checkbox" data-offline-toggle />
     <span data-offline-label>Offline nutzen (~40 MB)</span>
@@ -10,6 +10,7 @@ import { base } from '../lib/edition';
   <span class="offline-feedback" hidden>
     <progress data-offline-progress max="100" value="0" aria-label="Download für Offline-Nutzung" hidden></progress>
     <button type="button" data-offline-retry hidden>Fortsetzen</button>
+    <a href={Astro.url.pathname} data-offline-reload hidden>Neu laden</a>
   </span>
   <span class="sr-only" data-offline-announcement role="status" aria-live="polite"></span>
 </span>

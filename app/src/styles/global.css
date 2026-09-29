@@ -83,7 +83,7 @@
   .offline-feedback progress::-webkit-progress-bar { background:#cdd5cb; }
   .offline-feedback progress::-webkit-progress-value { background:var(--color-accent); }
   .offline-feedback progress::-moz-progress-bar { background:var(--color-accent); }
-  .offline-feedback button { font:inherit; color:var(--color-ink); text-decoration:underline; text-underline-offset:.2em; }
+  .offline-feedback button, .offline-feedback a { font:inherit; color:var(--color-ink); text-decoration:underline; text-underline-offset:.2em; }
   .footer-license-line { @apply flex shrink-0 items-center gap-2; }
   .footer-license { @apply inline-flex items-center gap-1; }
   .footer-license > .ui-icon { align-self:center; }

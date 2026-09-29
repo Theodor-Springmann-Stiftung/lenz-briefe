@@ -12,6 +12,8 @@ const paused = {
   enabled: true, phase: 'paused', done: 2, total: 4, bytes: 20, totalBytes: 40,
   ready: false, version: null, updatedAt: 0, error: 'network',
 };
+const versionA = 'a'.repeat(64);
+const versionB = 'b'.repeat(64);
 
 function target(properties = {}) {
   const listeners = new Map();
@@ -23,21 +25,24 @@ function target(properties = {}) {
   };
 }
 
-async function control(initial = paused, replyError) {
+async function control(initial = paused, replyError, pageVersion = versionA) {
   let status = { ...initial };
   const timers = new Map();
   const intervals = [];
   const commands = [];
   let nextTimer = 0;
+  let reloads = 0;
+  const location = { origin: 'https://edition.test', href: 'https://edition.test/?person=7#brief-3', reload: () => { reloads++; } };
   const fields = {
     '[data-offline-toggle]': target({ checked: true }),
     '[data-offline-label]': target({ textContent: 'Offline nutzen (~40 MB)' }),
     '.offline-feedback': target({ hidden: true }),
     '[data-offline-progress]': target({ hidden: true }),
     '[data-offline-retry]': target({ hidden: true }),
+    '[data-offline-reload]': target({ hidden: true }),
     '[data-offline-announcement]': target(),
   };
-  const root = target({ dataset: { base: '/', production: 'true' }, querySelector: (selector) => fields[selector] });
+  const root = target({ dataset: { base: '/', production: 'true', offlineVersion: pageVersion }, querySelector: (selector) => fields[selector] });
   const document = target({ querySelector: () => root, visibilityState: 'visible' });
   const clearTimeout = (timer) => timers.delete(timer);
   const window = target({
@@ -59,7 +64,7 @@ async function control(initial = paused, replyError) {
   const preferences = new Map([['lenz-offline-v1:/', 'enabled']]);
   vm.runInNewContext(source, {
     URL, DOMException, document, window, navigator, clearTimeout,
-    location: { origin: 'https://edition.test' }, isSecureContext: true,
+    location, isSecureContext: true,
     localStorage: { getItem: (key) => preferences.get(key), setItem: (key, value) => preferences.set(key, value) },
     MessageChannel: class {
       port1 = { close() {} };
@@ -70,6 +75,7 @@ async function control(initial = paused, replyError) {
   return {
     commands, timers, intervals, window, document, navigator,
     checkbox: fields['[data-offline-toggle]'], label: fields['[data-offline-label]'], retry: fields['[data-offline-retry]'],
+    reload: fields['[data-offline-reload]'], feedback: fields['.offline-feedback'], location, reloads: () => reloads,
     async tick() {
       assert.equal(timers.size, 1, 'Only one automatic retry should be scheduled');
       const [id, { callback, delay }] = [...timers][0];
@@ -176,4 +182,59 @@ test('worker communication failures also recover automatically with the same fiv
   assert.equal(ui.retry.hidden, false);
   assert.equal(ui.retry.textContent, 'Fortsetzen');
   assert.equal(ui.timers.size, 0);
+});
+
+test('an update offers a reload only once the new edition is complete', async () => {
+  const ui = await control({ ...paused, phase: 'ready', ready: true, version: versionA, error: null });
+  assert.equal(ui.reload.hidden, true);
+  await ui.broadcast({ phase: 'downloading', version: versionA });
+  assert.match(ui.label.textContent, /Aktualisiere/);
+  assert.equal(ui.reload.hidden, true);
+  await ui.broadcast({ phase: 'paused', error: 'network' });
+  assert.equal(ui.reload.hidden, true);
+  await ui.broadcast({ phase: 'ready', ready: true, version: versionB, error: null });
+  assert.equal(ui.label.textContent, 'Aktualisiert');
+  assert.equal(ui.reload.hidden, false);
+  assert.equal(ui.feedback.hidden, false);
+  // The prompt survives later update checks while the document stays old.
+  await ui.broadcast({ phase: 'checking' });
+  assert.equal(ui.label.textContent, 'Aktualisiert');
+  assert.equal(ui.reload.hidden, false);
+  ui.location.href = 'https://edition.test/?person=8#brief-4';
+  let prevented = false;
+  ui.reload.emit('click', { button: 0, preventDefault: () => { prevented = true; } });
+  assert.equal(prevented, true);
+  assert.equal(ui.reload.href, ui.location.href);
+  assert.equal(ui.reloads(), 1);
+});
+
+test('an outdated page detects a completed update from another tab on its first status', async () => {
+  const ui = await control({ ...paused, phase: 'ready', ready: true, version: versionB, error: null });
+  assert.equal(ui.label.textContent, 'Aktualisiert');
+  assert.equal(ui.reload.hidden, false);
+  ui.checkbox.checked = false;
+  await ui.checkbox.emit('change');
+  assert.equal(ui.reload.hidden, true);
+  assert.equal(ui.feedback.hidden, true);
+});
+
+test('fresh pages and first downloads of the current version do not offer a reload', async () => {
+  const fresh = await control({ ...paused, phase: 'ready', ready: true, version: versionB, error: null }, undefined, versionB);
+  assert.equal(fresh.label.textContent, 'Offline verfügbar');
+  assert.equal(fresh.reload.hidden, true);
+  const firstDownload = await control({ ...paused, phase: 'downloading', error: null });
+  await firstDownload.broadcast({ phase: 'ready', ready: true, version: versionA });
+  assert.equal(firstDownload.label.textContent, 'Offline verfügbar');
+  assert.equal(firstDownload.reload.hidden, true);
+});
+
+test('a page newer than the cache waits for synchronization before deciding whether to reload', async () => {
+  const ui = await control({ ...paused, phase: 'checking', ready: true, version: versionA, error: null }, undefined, versionB);
+  assert.equal(ui.commands[0].force, true);
+  assert.equal(ui.reload.hidden, true);
+  await ui.broadcast({ phase: 'downloading' });
+  assert.equal(ui.reload.hidden, true);
+  await ui.broadcast({ phase: 'ready', version: versionB });
+  assert.equal(ui.label.textContent, 'Offline verfügbar');
+  assert.equal(ui.reload.hidden, true);
 });

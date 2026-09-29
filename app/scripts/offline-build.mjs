@@ -8,6 +8,8 @@ const hash = (value) => createHash('sha256').update(value).digest('hex');
 
 export async function buildOfflineEdition(directory, base = '/') {
   const entries = [];
+  const pages = [];
+  const versionMarker = 'data-offline-version="__OFFLINE_VERSION__"';
   async function visit(relative = '') {
     for (const file of await readdir(path.join(directory, relative), { withFileTypes: true })) {
       const name = path.posix.join(relative, file.name);
@@ -16,10 +18,16 @@ export async function buildOfflineEdition(directory, base = '/') {
       if (name === 'licenses') continue;
       if (file.isDirectory()) await visit(name);
       else if (file.isFile() && !['sw.js', 'offline-manifest.json'].includes(name)) {
-        const content = await readFile(path.join(directory, name));
+        let content = await readFile(path.join(directory, name));
+        const page = name.endsWith('.html');
+        // Normalize a previous stamp as well, so rebuilding the manifest on the
+        // same output remains deterministic and the version cannot hash itself.
+        if (page) content = Buffer.from(content.toString('utf8').replace(/data-offline-version="[a-f0-9]{64}"/g, versionMarker));
         const encoded = name.split('/').map(encodeURIComponent).join('/');
         const url = base + (encoded === 'index.html' ? '' : encoded.replace(/\/index\.html$/, '/'));
-        entries.push({ url, hash: hash(content), bytes: content.length, page: name.endsWith('.html') });
+        const entry = { url, hash: hash(content), bytes: content.length, page };
+        entries.push(entry);
+        if (page && content.includes(versionMarker)) pages.push({ name, content, entry });
       }
     }
   }
@@ -31,7 +39,15 @@ export async function buildOfflineEdition(directory, base = '/') {
   entries.sort((a, b) => priority(a) - priority(b) || a.url.localeCompare(b.url, 'en'));
   if (new Set(entries.map((entry) => entry.url)).size !== entries.length) throw new Error('Duplicate offline URL');
   const runtime = `// Generated from src/offline/worker.mjs.\n(${createOfflineWorker.toString()})(self);\n`;
-  const manifest = { schema: 1, version: hash(runtime + JSON.stringify(entries)), entries };
+  const version = hash(runtime + JSON.stringify(entries));
+  for (const { name, content, entry } of pages) {
+    const stamped = Buffer.from(content.toString('utf8').replaceAll(versionMarker, `data-offline-version="${version}"`));
+    await writeFile(path.join(directory, name), stamped);
+    // Downloads must still verify the exact, stamped bytes served to browsers.
+    entry.hash = hash(stamped);
+    entry.bytes = stamped.length;
+  }
+  const manifest = { schema: 1, version, entries };
   await writeFile(path.join(directory, 'offline-manifest.json'), JSON.stringify(manifest));
   await writeFile(path.join(directory, 'sw.js'), runtime);
   return manifest;
