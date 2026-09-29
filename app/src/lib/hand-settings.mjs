@@ -1,9 +1,9 @@
 // Tune all letter text, footer samples, and both legends here.
 // Weight: 200–900. Optical size: 8–60, or null for automatic sizing.
 export const handSettings = {
-  base:   { weight: 400, opticalSize: null },
+  base: { weight: 400, opticalSize: null },
   second: { weight: 530, opticalSize: 45 },
-  third:  { weight: 380, opticalSize: 10 },
+  third: { weight: 380, opticalSize: 10 },
 };
 
 /** @param {keyof typeof handSettings} hand */
@@ -12,7 +12,10 @@ export function handDeclarations(hand) {
 }
 
 export function handSettingsVariables() {
-  return Object.entries(handSettings).map(([hand, {weight, opticalSize}]) =>
-    `--hand-${hand}-weight:${weight}; --hand-${hand}-optical:${opticalSize === null ? 'normal' : `"opsz" ${opticalSize}`};`
-  ).join('\n');
+  return Object.entries(handSettings)
+    .map(
+      ([hand, { weight, opticalSize }]) =>
+        `--hand-${hand}-weight:${weight}; --hand-${hand}-optical:${opticalSize === null ? 'normal' : `"opsz" ${opticalSize}`};`,
+    )
+    .join('\n');
 }

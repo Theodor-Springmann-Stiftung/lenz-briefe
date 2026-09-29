@@ -4,24 +4,63 @@ import PageComponent from './PageComponent.astro';
 import { render } from 'astro:content';
 import { editionPages, pageUrl } from '../lib/pages';
 const pages = await editionPages();
-const legends = await Promise.all(pages.map(async page =>
-  page.data.legend || Boolean((await render(page)).remarkPluginFrontmatter.hasLegend),
-));
+const legends = await Promise.all(
+  pages.map(
+    async (page) =>
+      page.data.legend || Boolean((await render(page)).remarkPluginFrontmatter.hasLegend),
+  ),
+);
 const guidelines = pages.find((_, index) => legends[index]);
-
 ---
-<button class="quick-legend-toggle" type="button" popovertarget="quick-legend" aria-label="Schnelle Legende öffnen" title="Schnelle Legende" data-tooltip="Schnelle Legende" data-tippy-placement="top" data-tippy-trigger="mouseenter focus">
+
+<button
+  class="quick-legend-toggle"
+  type="button"
+  popovertarget="quick-legend"
+  aria-label="Schnelle Legende öffnen"
+  title="Schnelle Legende"
+  data-tooltip="Schnelle Legende"
+  data-tippy-placement="top"
+  data-tippy-trigger="mouseenter focus"
+>
   <span aria-hidden="true">?</span>
 </button>
-<aside id="quick-legend" class="quick-legend" popover="auto" role="dialog" aria-labelledby="quick-legend-title">
+<aside
+  id="quick-legend"
+  class="quick-legend"
+  popover="auto"
+  role="dialog"
+  aria-labelledby="quick-legend-title"
+>
   <header class="quick-legend-header">
     <h2 id="quick-legend-title">Schnelle Legende</h2>
-    <button type="button" popovertarget="quick-legend" popovertargetaction="hide" aria-label="Legende schließen" autofocus><Icon name="close" /></button>
+    <button
+      type="button"
+      popovertarget="quick-legend"
+      popovertargetaction="hide"
+      aria-label="Legende schließen"
+      autofocus
+    >
+      <Icon name="close" />
+    </button>
   </header>
-  <div class="quick-legend-body" tabindex="0" role="region" aria-label="Auszeichnungen und Beispiele">
+  <div
+    class="quick-legend-body"
+    tabindex="0"
+    role="region"
+    aria-label="Auszeichnungen und Beispiele"
+  >
     <PageComponent name="lkb-legende" class="quick-legend-content" />
   </div>
-  {guidelines && <footer class="quick-legend-footer"><a href={pageUrl(guidelines.id)}>Ausführliche Editionsrichtlinien <Icon name="arrowRight" /></a></footer>}
+  {guidelines && (
+    <footer class="quick-legend-footer">
+      <a href={pageUrl(guidelines.id)}>
+        Ausführliche Editionsrichtlinien <Icon name="arrowRight" />
+      </a>
+    </footer>
+  )}
   <svg class="legend-connections" aria-hidden="true" />
 </aside>
-<script>import '../scripts/legend-connections';</script>
+<script>
+  import '../scripts/legend-connections';
+</script>

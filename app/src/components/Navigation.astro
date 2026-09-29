@@ -4,38 +4,77 @@ import { base, catalog, letterUrl } from '../lib/edition';
 import { editionPages, pageUrl } from '../lib/pages';
 const path = Astro.url.pathname;
 const navigation = [
-  {label: 'Verzeichnis', href: base, active: path === base},
-  {label: 'Briefansicht', href: letterUrl(catalog.letters[0].letter), active: path.startsWith(`${base}briefe/`)},
+  { label: 'Verzeichnis', href: base, active: path === base },
+  {
+    label: 'Briefansicht',
+    href: letterUrl(catalog.letters[0].letter),
+    active: path.startsWith(`${base}briefe/`),
+  },
 ];
-const pages = (await editionPages()).filter(page => page.data.inMenu).map(page => ({ label: page.data.menu, href: pageUrl(page.id) }));
+const pages = (await editionPages())
+  .filter((page) => page.data.inMenu)
+  .map((page) => ({ label: page.data.menu, href: pageUrl(page.id) }));
 const inEdition = path.startsWith(`${base}edition/`);
 ---
-<button class="navigation-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Menü öffnen">
+
+<button
+  class="navigation-toggle"
+  type="button"
+  aria-controls="main-navigation"
+  aria-expanded="false"
+  aria-label="Menü öffnen"
+>
   <Icon name="menu" class="navigation-open-icon" />
   <Icon name="close" class="navigation-close-icon" />
 </button>
 <nav id="main-navigation" class="main-navigation" aria-label="Hauptnavigation">
-  {navigation.map(item => <a class="main-navigation-link" href={item.active ? undefined : item.href} role={item.active ? 'link' : undefined} aria-disabled={item.active ? 'true' : undefined} aria-current={item.active ? 'page' : undefined}>{item.label}</a>)}
-  {pages.length > 0 && <details class="edition-menu">
-    <summary class:list={['main-navigation-link', {'is-current': inEdition}]}>
-      Edition <Icon name="chevronDown" />
-    </summary>
-    <ul class="edition-menu-panel">
-      {pages.map(item => <li><a href={path === item.href ? undefined : item.href} role={path === item.href ? 'link' : undefined} aria-disabled={path === item.href ? 'true' : undefined} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a></li>)}
-    </ul>
-  </details>}
+  {navigation.map((item) => (
+    <a
+      class="main-navigation-link"
+      href={item.active ? undefined : item.href}
+      role={item.active ? 'link' : undefined}
+      aria-disabled={item.active ? 'true' : undefined}
+      aria-current={item.active ? 'page' : undefined}
+    >
+      {item.label}
+    </a>
+  ))}
+  {pages.length > 0 && (
+    <details class="edition-menu">
+      <summary class:list={['main-navigation-link', { 'is-current': inEdition }]}>
+        Edition <Icon name="chevronDown" />
+      </summary>
+      <ul class="edition-menu-panel">
+        {pages.map((item) => (
+          <li>
+            <a
+              href={path === item.href ? undefined : item.href}
+              role={path === item.href ? 'link' : undefined}
+              aria-disabled={path === item.href ? 'true' : undefined}
+              aria-current={path === item.href ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </details>
+  )}
   <a class="main-navigation-link archive-link" href="https://lenz-archiv.de/">
-    <span class="archive-link-label"><img src={`${base}lenz-archiv-icon.png`} width="20" height="20" alt="" />Jakob Lenz Archiv</span>
+    <span class="archive-link-label">
+      <img src={`${base}lenz-archiv-icon.png`} width="20" height="20" alt="" />
+      Jakob Lenz Archiv
+    </span>
     <Icon name="arrowRightUp" class="archive-link-arrow" />
   </a>
 </nav>
 <script>
-  document.querySelectorAll<HTMLDetailsElement>('.edition-menu').forEach(menu => {
+  document.querySelectorAll<HTMLDetailsElement>('.edition-menu').forEach((menu) => {
     const summary = menu.querySelector('summary');
-    document.addEventListener('click', event => {
+    document.addEventListener('click', (event) => {
       if (event.target instanceof Node && !menu.contains(event.target)) menu.open = false;
     });
-    menu.addEventListener('keydown', event => {
+    menu.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && menu.open) {
         menu.open = false;
         summary?.focus();
@@ -43,8 +82,9 @@ const inEdition = path.startsWith(`${base}edition/`);
         event.stopPropagation();
       }
     });
-    menu.addEventListener('focusout', event => {
-      if (event.relatedTarget instanceof Node && !menu.contains(event.relatedTarget)) menu.open = false;
+    menu.addEventListener('focusout', (event) => {
+      if (event.relatedTarget instanceof Node && !menu.contains(event.relatedTarget))
+        menu.open = false;
     });
   });
 </script>

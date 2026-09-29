@@ -4,7 +4,9 @@ import { execFileSync } from 'node:child_process';
 const [hash, shortHash] = execFileSync('git', ['show', '-s', '--format=%H%n%h', 'HEAD'], {
   cwd: process.cwd(),
   encoding: 'utf8',
-}).trim().split('\n');
+})
+  .trim()
+  .split('\n');
 
 export const revision = {
   shortHash,

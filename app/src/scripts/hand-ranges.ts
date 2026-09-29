@@ -1,13 +1,22 @@
 type HandFragment = HTMLElement | Range;
-interface HandRange { trigger: HTMLElement; groups: HandFragment[][] }
+interface HandRange {
+  trigger: HTMLElement;
+  groups: HandFragment[][];
+}
 
 /** Measure implicit handwriting without inserting wrappers or changing layout. */
 export function implicitHandGroups(container: HTMLElement): Range[][] {
   const groups: Range[][] = [];
   let current: Range[] = [];
-  const flush = () => { if (current.length) groups.push(current); current = []; };
+  const flush = () => {
+    if (current.length) groups.push(current);
+    current = [];
+  };
   function visit(node: Node) {
-    if (node instanceof Element && node.matches('.hand, .note, .pe, .hand-range-background, .inpos-note')) {
+    if (
+      node instanceof Element &&
+      node.matches('.hand, .note, .pe, .hand-range-background, .inpos-note')
+    ) {
       flush();
       return;
     }
@@ -41,10 +50,18 @@ export function createHandRangeHighlighter() {
   let highlighted: HandRange | null = null;
 
   function positionBackground() {
-    backgrounds.forEach(background => { background.hidden = true; });
+    backgrounds.forEach((background) => {
+      background.hidden = true;
+    });
     let backgroundIndex = 0;
-    function paint(container: HTMLElement, left: number, top: number, width: number, height: number) {
-      const background = backgrounds[backgroundIndex++] ||= document.createElement('div');
+    function paint(
+      container: HTMLElement,
+      left: number,
+      top: number,
+      width: number,
+      height: number,
+    ) {
+      const background = (backgrounds[backgroundIndex++] ||= document.createElement('div'));
       background.className = 'hand-range-background';
       background.setAttribute('aria-hidden', 'true');
       if (background.parentElement !== container) container.append(background);
@@ -55,28 +72,35 @@ export function createHandRangeHighlighter() {
       background.style.height = `${height}px`;
       background.hidden = false;
     }
-    highlighted?.groups.forEach(group => {
+    highlighted?.groups.forEach((group) => {
       // A source hand can continue into another table cell. Each cell owns its highlight.
       const scopes = new Map<HTMLElement, HandFragment[]>();
       for (const fragment of group) {
-        const element = fragment instanceof Range ? fragment.startContainer.parentElement : fragment;
+        const element =
+          fragment instanceof Range ? fragment.startContainer.parentElement : fragment;
         const scope = element?.closest<HTMLElement>('.tab, .edition-text');
         if (scope) scopes.set(scope, [...(scopes.get(scope) || []), fragment]);
       }
       scopes.forEach((fragments, scope) => {
-        const rects = fragments.flatMap(fragment => [...fragment.getClientRects()])
-          .filter(rect => rect.width > 0 && rect.height > 0);
+        const rects = fragments
+          .flatMap((fragment) => [...fragment.getClientRects()])
+          .filter((rect) => rect.width > 0 && rect.height > 0);
         const first = fragments[0];
         const element = first instanceof Range ? first.startContainer.parentElement : first;
         const container = element?.closest<HTMLElement>('.edition-text');
         if (!rects.length || !container) return;
-        const owns = (node: Node) => fragments.some(fragment => fragment instanceof Range
-          ? fragment.intersectsNode(node) : fragment.contains(node));
-        const blocks = new Set(fragments.map(fragment => {
-          const element = fragment instanceof Range ? fragment.startContainer.parentElement : fragment;
-          return element?.closest<HTMLElement>('.lb-line-block, .lb-tab-prefix, .tab') || scope;
-        }));
-        const wholePassage = [...blocks].every(block => {
+        const owns = (node: Node) =>
+          fragments.some((fragment) =>
+            fragment instanceof Range ? fragment.intersectsNode(node) : fragment.contains(node),
+          );
+        const blocks = new Set(
+          fragments.map((fragment) => {
+            const element =
+              fragment instanceof Range ? fragment.startContainer.parentElement : fragment;
+            return element?.closest<HTMLElement>('.lb-line-block, .lb-tab-prefix, .tab') || scope;
+          }),
+        );
+        const wholePassage = [...blocks].every((block) => {
           const walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT);
           let node: Node | null;
           while ((node = walker.nextNode())) {
@@ -86,19 +110,38 @@ export function createHandRangeHighlighter() {
         });
         if (wholePassage) {
           const bounds = scope.getBoundingClientRect();
-          const top = Math.min(...rects.map(rect => rect.top));
-          const bottom = Math.max(...rects.map(rect => rect.bottom));
+          const top = Math.min(...rects.map((rect) => rect.top));
+          const bottom = Math.max(...rects.map((rect) => rect.bottom));
           const padding = scope.matches('.tab') ? 0 : 6;
-          paint(container, bounds.left - padding, top - 4, scope.clientWidth + padding * 2, bottom - top + 8);
+          paint(
+            container,
+            bounds.left - padding,
+            top - 4,
+            scope.clientWidth + padding * 2,
+            bottom - top + 8,
+          );
         } else {
           // Merge overlapping fragments on the same visual line, keeping wrapped
           // inline changes tight to their words rather than filling the column.
-          const lines: {left: number; right: number; top: number; bottom: number}[] = [];
+          const lines: { left: number; right: number; top: number; bottom: number }[] = [];
           for (const rect of rects.sort((a, b) => a.top - b.top || a.left - b.left)) {
-            const line = lines.find(line => Math.abs(line.top - rect.top) < 2
-              && Math.abs(line.bottom - rect.bottom) < 2 && rect.left <= line.right + 1 && rect.right >= line.left - 1);
-            if (line) { line.left = Math.min(line.left, rect.left); line.right = Math.max(line.right, rect.right); }
-            else lines.push({left: rect.left, right: rect.right, top: rect.top, bottom: rect.bottom});
+            const line = lines.find(
+              (line) =>
+                Math.abs(line.top - rect.top) < 2 &&
+                Math.abs(line.bottom - rect.bottom) < 2 &&
+                rect.left <= line.right + 1 &&
+                rect.right >= line.left - 1,
+            );
+            if (line) {
+              line.left = Math.min(line.left, rect.left);
+              line.right = Math.max(line.right, rect.right);
+            } else
+              lines.push({
+                left: rect.left,
+                right: rect.right,
+                top: rect.top,
+                bottom: rect.bottom,
+              });
           }
           const bounds = scope.getBoundingClientRect();
           for (const line of lines) {
@@ -122,17 +165,38 @@ export function createHandRangeHighlighter() {
   window.addEventListener('resize', positionBackground);
   document.addEventListener('margins:arranged', positionBackground);
   document.fonts.addEventListener('loadingdone', positionBackground);
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') { hovered = null; focused = null; update(); }
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      hovered = null;
+      focused = null;
+      update();
+    }
   });
 
   return (trigger: HTMLElement, groups: HandFragment[][] | (() => HandFragment[][])) => {
     // Search marks can split or merge text nodes; measure the current text.
-    const range = {trigger, get groups() { return typeof groups === 'function' ? groups() : groups; }};
+    const range = {
+      trigger,
+      get groups() {
+        return typeof groups === 'function' ? groups() : groups;
+      },
+    };
     trigger.classList.add('hand-range-trigger');
-    trigger.addEventListener('pointerenter', () => { hovered = range; update(); });
-    trigger.addEventListener('pointerleave', () => { if (hovered === range) hovered = null; update(); });
-    trigger.addEventListener('focusin', () => { focused = range; update(); });
-    trigger.addEventListener('focusout', () => { if (focused === range) focused = null; update(); });
+    trigger.addEventListener('pointerenter', () => {
+      hovered = range;
+      update();
+    });
+    trigger.addEventListener('pointerleave', () => {
+      if (hovered === range) hovered = null;
+      update();
+    });
+    trigger.addEventListener('focusin', () => {
+      focused = range;
+      update();
+    });
+    trigger.addEventListener('focusout', () => {
+      if (focused === range) focused = null;
+      update();
+    });
   };
 }

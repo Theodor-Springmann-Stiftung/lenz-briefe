@@ -6,38 +6,83 @@ import printIcon from '../assets/druck-2.svg?url';
 import manuscriptIcon from '../assets/manuskript-2.svg?url';
 import unknownIcon from '../assets/unbekannt.svg?url';
 
-interface Props { letter: Letter }
+interface Props {
+  letter: Letter;
+}
 const { letter } = Astro.props;
 const icons = {
-  print: {src: printIcon},
-  manuscript: {src: manuscriptIcon},
-  unknown: {src: unknownIcon},
+  print: { src: printIcon },
+  manuscript: { src: manuscriptIcon },
+  unknown: { src: unknownIcon },
 };
-const hasOriginal = letter.hasOriginal || letter.traditions.some(source => source.isOriginal);
+const hasOriginal = letter.hasOriginal || letter.traditions.some((source) => source.isOriginal);
 const checkedOriginal = hasOriginal && letter.isProofread;
-const types = [...new Set(letter.traditions.filter(source => !source.isOriginal).map(source =>
-  source.type === 'print' || source.type === 'manuscript' ? source.type : 'unknown'
-))];
+const types = [
+  ...new Set(
+    letter.traditions
+      .filter((source) => !source.isOriginal)
+      .map((source) =>
+        source.type === 'print' || source.type === 'manuscript' ? source.type : 'unknown',
+      ),
+  ),
+];
 if (!letter.hasOriginal && !letter.traditions.length) types.push('unknown');
 const hasPrint = types.includes('print');
 const hasManuscript = types.includes('manuscript');
-const transmission = hasPrint && hasManuscript
-  ? 'teilweise im Druck, teilweise handschriftlich'
-  : hasPrint ? 'im Druck' : hasManuscript ? 'als handschriftliches Manuskript' : '';
+const transmission =
+  hasPrint && hasManuscript
+    ? 'teilweise im Druck, teilweise handschriftlich'
+    : hasPrint
+      ? 'im Druck'
+      : hasManuscript
+        ? 'als handschriftliches Manuskript'
+        : '';
 const secondary = transmission
   ? `${hasOriginal ? 'Der' : 'Original verschollen; der'} Brief wurde sekundär ${transmission} überliefert`
-  : types.length ? `${hasOriginal ? '' : 'Original verschollen; '}Details der sekundären Überlieferung unbekannt.` : '';
-const unknownDetails = transmission && types.includes('unknown') ? 'Details einer weiteren Überlieferung unbekannt.' : '';
-const description = checkedOriginal && hasPrint && !hasManuscript
-  ? ['Der Brief wurde teils im Original, teils sekundär im Druck überliefert.', unknownDetails].filter(Boolean).join(' ')
-  : [checkedOriginal ? 'Der Brief wurde anhand des Originals kritisch geprüft.' : '', secondary, unknownDetails].filter(Boolean).join(' ');
+  : types.length
+    ? `${hasOriginal ? '' : 'Original verschollen; '}Details der sekundären Überlieferung unbekannt.`
+    : '';
+const unknownDetails =
+  transmission && types.includes('unknown')
+    ? 'Details einer weiteren Überlieferung unbekannt.'
+    : '';
+const description =
+  checkedOriginal && hasPrint && !hasManuscript
+    ? ['Der Brief wurde teils im Original, teils sekundär im Druck überliefert.', unknownDetails]
+        .filter(Boolean)
+        .join(' ')
+    : [
+        checkedOriginal ? 'Der Brief wurde anhand des Originals kritisch geprüft.' : '',
+        secondary,
+        unknownDetails,
+      ]
+        .filter(Boolean)
+        .join(' ');
 ---
-{(checkedOriginal || types.length > 0) && <span class="source-icons">
-<span class="source-separator" aria-hidden="true">·</span>
-<Tooltip content={description} class="source-combination" placement="right">
-  {checkedOriginal && <span class="source-icon source-icon--original"><img src={originalIcon} alt="" aria-hidden="true" /></span>}
-  {types.map((type, index) => <Fragment>
-    {(checkedOriginal || index > 0) && <span class="source-plus" aria-hidden="true">+</span>}
-    <span class="source-icon"><img src={icons[type].src} alt="" aria-hidden="true" /></span>
-  </Fragment>)}
-</Tooltip></span>}
+
+{(checkedOriginal || types.length > 0) && (
+  <span class="source-icons">
+    <span class="source-separator" aria-hidden="true">
+      ·
+    </span>
+    <Tooltip content={description} class="source-combination" placement="right">
+      {checkedOriginal && (
+        <span class="source-icon source-icon--original">
+          <img src={originalIcon} alt="" aria-hidden="true" />
+        </span>
+      )}
+      {types.map((type, index) => (
+        <Fragment>
+          {(checkedOriginal || index > 0) && (
+            <span class="source-plus" aria-hidden="true">
+              +
+            </span>
+          )}
+          <span class="source-icon">
+            <img src={icons[type].src} alt="" aria-hidden="true" />
+          </span>
+        </Fragment>
+      ))}
+    </Tooltip>
+  </span>
+)}

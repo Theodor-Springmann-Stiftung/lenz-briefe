@@ -6,31 +6,42 @@ import PageContent from '../../components/PageContent.astro';
 import { editionPages } from '../../lib/pages';
 
 export async function getStaticPaths() {
-  return (await editionPages()).map(page => ({ params: { slug: page.id }, props: { page } }));
+  return (await editionPages()).map((page) => ({ params: { slug: page.id }, props: { page } }));
 }
 
-interface Props { page: CollectionEntry<'pages'> }
+interface Props {
+  page: CollectionEntry<'pages'>;
+}
 const { page } = Astro.props;
 const { Content, headings } = await render(page);
-const tocHeadings = headings.filter(heading => heading.depth <= 3);
+const tocHeadings = headings.filter((heading) => heading.depth <= 3);
 const showToc = page.data.toc && tocHeadings.length > 0;
 ---
+
 <Layout title={`${page.data.title} · Lenz Briefe`} description={page.data.description}>
   <article class:list={['about-page', { 'about-page--with-toc': showToc }]}>
-    {showToc && <nav class="page-toc" aria-label="Inhaltsverzeichnis">
-      <p class="page-toc-title">Inhalt</p>
-      <ol>{tocHeadings.map(heading => <li class:list={{ 'page-toc-subheading': heading.depth === 3 }}>
-        <a href={`#${heading.slug}`}>{heading.text}</a>
-      </li>)}</ol>
-    </nav>}
+    {showToc && (
+      <nav class="page-toc" aria-label="Inhaltsverzeichnis">
+        <p class="page-toc-title">Inhalt</p>
+        <ol>
+          {tocHeadings.map((heading) => (
+            <li class:list={{ 'page-toc-subheading': heading.depth === 3 }}>
+              <a href={`#${heading.slug}`}>{heading.text}</a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
     <div class="about-page-content">
-      <PageContent legacyLegend={page.data.legend}><Content /></PageContent>
+      <PageContent legacyLegend={page.data.legend}>
+        <Content />
+      </PageContent>
     </div>
   </article>
 </Layout>
 <script>
   const tocLinks = [...document.querySelectorAll<HTMLAnchorElement>('.page-toc a')];
-  const sections = tocLinks.flatMap(link => {
+  const sections = tocLinks.flatMap((link) => {
     const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
     return heading ? [{ link, heading }] : [];
   });
@@ -40,7 +51,8 @@ const showToc = page.data.toc && tocHeadings.length > 0;
     const updateToc = () => {
       pending = false;
       // Match the anchor offset below the sticky site header.
-      const threshold = (parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0) + 1;
+      const threshold =
+        (parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0) + 1;
       let active = sections[0];
       for (const section of sections) {
         if (section.heading.getBoundingClientRect().top <= threshold) active = section;
@@ -62,7 +74,8 @@ const showToc = page.data.toc && tocHeadings.length > 0;
     window.addEventListener('hashchange', scheduleUpdate);
     window.addEventListener('pageshow', scheduleUpdate);
     const observer = new ResizeObserver(scheduleUpdate);
-    for (const element of document.querySelectorAll('.site-header, .about-page-content')) observer.observe(element);
+    for (const element of document.querySelectorAll('.site-header, .about-page-content'))
+      observer.observe(element);
     scheduleUpdate();
   }
 </script>

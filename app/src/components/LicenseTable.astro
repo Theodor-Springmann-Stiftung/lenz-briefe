@@ -1,21 +1,64 @@
 ---
 import { licenseFileUrl } from '../lib/licenses.mjs';
-interface Props { entries: ReturnType<typeof import('../lib/licenses.mjs').loadLicenses>; caption: string }
+interface Props {
+  entries: ReturnType<typeof import('../lib/licenses.mjs').loadLicenses>;
+  caption: string;
+}
 const { entries, caption } = Astro.props;
 ---
+
 <table class="license-table">
   <caption class="sr-only">{caption}</caption>
-  <thead><tr><th scope="col">Produkt</th><th scope="col">Lizenz</th><th scope="col">Lizenztexte und Hinweise</th></tr></thead>
-  <tbody>{entries.map(entry => <tr>
-    <th scope="row">{entry.name}{entry.version && <span class="license-version">{entry.version}</span>}</th>
-    <td>{entry.license}</td>
-    <td><ul>{entry.files.filter(({ file }) => !/(?:metadata\.json|SOURCE\.(?:txt|md)|METADATA\.txt)$/i.test(file)).map(({ label, file }) => <li><a href={licenseFileUrl(file, import.meta.env.BASE_URL)}>{label}</a></li>)}</ul></td>
-  </tr>)}</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Produkt</th>
+      <th scope="col">Lizenz</th>
+      <th scope="col">Lizenztexte und Hinweise</th>
+    </tr>
+  </thead>
+  <tbody>
+    {entries.map((entry) => (
+      <tr>
+        <th scope="row">
+          {entry.name}
+          {entry.version && <span class="license-version">{entry.version}</span>}
+        </th>
+        <td>{entry.license}</td>
+        <td>
+          <ul>
+            {entry.files
+              .filter(
+                ({ file }) => !/(?:metadata\.json|SOURCE\.(?:txt|md)|METADATA\.txt)$/i.test(file),
+              )
+              .map(({ label, file }) => (
+                <li>
+                  <a href={licenseFileUrl(file, import.meta.env.BASE_URL)}>{label}</a>
+                </li>
+              ))}
+          </ul>
+        </td>
+      </tr>
+    ))}
+  </tbody>
 </table>
 <style>
-  .license-table { font-size: .95rem; }
-  .license-table th[scope="row"] { font-weight: 400; }
-  .license-version { display: block; color: var(--color-muted); font-size: .85em; }
-  .license-table td ul { list-style: none; padding: 0; margin: 0; }
-  .license-table td li + li { margin-top: .25em; }
+  .license-table {
+    font-size: 0.95rem;
+  }
+  .license-table th[scope='row'] {
+    font-weight: 400;
+  }
+  .license-version {
+    display: block;
+    color: var(--color-muted);
+    font-size: 0.85em;
+  }
+  .license-table td ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .license-table td li + li {
+    margin-top: 0.25em;
+  }
 </style>

@@ -4,14 +4,27 @@ import { componentPattern } from '../../scripts/page-components.mjs';
 import sidenoteSource from '../assets/SidenotePos.svg?raw';
 import { expandSidenotePositions } from '../lib/sidenote-position.mjs';
 
-interface Props { legacyLegend?: boolean; prose?: boolean; stack?: string[] }
+interface Props {
+  legacyLegend?: boolean;
+  prose?: boolean;
+  stack?: string[];
+}
 const { prose = true, stack = [] } = Astro.props;
 const html = expandSidenotePositions(await Astro.slots.render('default'), sidenoteSource);
 const parts = html.split(componentPattern);
 ---
-{parts.map((part, index) => <>
-  {index % 2 === 1
-    ? <PageComponent name={part} stack={stack} />
-    : part.trim() && (prose ? <div class="page-prose" set:html={part} /> : <Fragment set:html={part} />)}
-</>)}
-{Astro.props.legacyLegend && !parts.some((part, index) => index % 2 === 1 && part === 'lkb-legende') && <PageComponent name="lkb-legende" stack={stack} />}
+
+{parts.map((part, index) => (
+  <>
+    {index % 2 === 1 ? (
+      <PageComponent name={part} stack={stack} />
+    ) : (
+      part.trim() &&
+      (prose ? <div class="page-prose" set:html={part} /> : <Fragment set:html={part} />)
+    )}
+  </>
+))}
+{Astro.props.legacyLegend &&
+  !parts.some((part, index) => index % 2 === 1 && part === 'lkb-legende') && (
+    <PageComponent name="lkb-legende" stack={stack} />
+  )}

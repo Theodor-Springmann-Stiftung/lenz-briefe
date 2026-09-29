@@ -3,49 +3,150 @@ import Layout from '../layouts/Layout.astro';
 import LetterHeader from '../components/LetterHeader.astro';
 import Filter from '../components/Filter.astro';
 import Icon from '../components/Icon.astro';
-import {catalog, filterOptions, base} from '../lib/edition';
+import { catalog, filterOptions, base } from '../lib/edition';
 import searchIndexUrl from '../../generated/search.json?url';
-import {metadataSearchBlocks} from '../lib/search.mjs';
-const records = catalog.letters.map(l => ({id: l.letter, group: l.groupId, people:l.personIds, places:l.placeIds}));
+import { metadataSearchBlocks } from '../lib/search.mjs';
+const records = catalog.letters.map((l) => ({
+  id: l.letter,
+  group: l.groupId,
+  people: l.personIds,
+  places: l.placeIds,
+}));
 const firstGroup = catalog.groups[0];
 ---
+
 <Layout>
   <section class="index-intro">
     <h1>Briefverzeichnis</h1>
     <div class="active-filters" hidden>
       <div class="active-filter-pills" role="group" aria-label="Aktive Filter"></div>
     </div>
-    <div class="edition-count"><span>{catalog.letters.length} Briefe</span></div>
+    <div class="edition-count">
+      <span>{catalog.letters.length} Briefe</span>
+    </div>
   </section>
   <section aria-label="Briefverzeichnis" class="catalog-section">
-    {(['person', 'place', 'search'] as const).map(kind => <template id={`filter-pill-${kind}`}><button type="button" class="filter-pill" data-filter-kind={kind}><Icon name={kind === 'search' ? 'search' : 'filter'} class="filter-pill-icon" /><Icon name="filterOff" class="filter-pill-remove" /><span class="filter-pill-name"></span></button></template>)}
+    {(['person', 'place', 'search'] as const).map((kind) => (
+      <template id={`filter-pill-${kind}`}>
+        <button type="button" class="filter-pill" data-filter-kind={kind}>
+          <Icon name={kind === 'search' ? 'search' : 'filter'} class="filter-pill-icon" />
+          <Icon name="filterOff" class="filter-pill-remove" />
+          <span class="filter-pill-name"></span>
+        </button>
+      </template>
+    ))}
     <div class="filter-toolbar" role="group" aria-label="Filter">
-      <div class="filter-controls"><Filter kind="person" label="Personen" options={filterOptions('person')} /><Filter kind="place" label="Orte" options={filterOptions('place')} /></div>
-      <label class="catalog-search"><span class="sr-only">Briefe durchsuchen</span><Icon name="search" /><input id="letter-search" type="search" placeholder="Briefe durchsuchen …" data-search-index={searchIndexUrl} aria-describedby="search-status" autocomplete="off" /><span class="search-spinner" aria-hidden="true" hidden /></label>
-      <button class="all-letters-link" type="button" hidden><Icon name="arrowLeft" />Alle Briefe</button>
+      <div class="filter-controls">
+        <Filter kind="person" label="Personen" options={filterOptions('person')} />
+        <Filter kind="place" label="Orte" options={filterOptions('place')} />
+      </div>
+      <label class="catalog-search">
+        <span class="sr-only">Briefe durchsuchen</span>
+        <Icon name="search" />
+        <input
+          id="letter-search"
+          type="search"
+          placeholder="Briefe durchsuchen …"
+          data-search-index={searchIndexUrl}
+          aria-describedby="search-status"
+          autocomplete="off"
+        />
+        <span class="search-spinner" aria-hidden="true" hidden />
+      </label>
+      <button class="all-letters-link" type="button" hidden>
+        <Icon name="arrowLeft" />
+        Alle Briefe
+      </button>
     </div>
     <nav class="year-navigation" aria-label="Zeiträume">
       <div class="year-tabs">
-        {catalog.groups.map(group => <a href={`?group=${group.id}`} data-group={group.id} aria-current={group.id === firstGroup.id ? 'page' : undefined}>{group.label}</a>)}
-        <a href={`${base}?group=all`} data-group="all" hidden>Alle Jahre</a>
+        {catalog.groups.map((group) => (
+          <a
+            href={`?group=${group.id}`}
+            data-group={group.id}
+            aria-current={group.id === firstGroup.id ? 'page' : undefined}
+          >
+            {group.label}
+          </a>
+        ))}
+        <a href={`${base}?group=all`} data-group="all" hidden>
+          Alle Jahre
+        </a>
       </div>
-      <span id="result-count" class="year-count" role="status" aria-live="polite">{firstGroup.count} {firstGroup.count === 1 ? 'Brief' : 'Briefe'}</span>
+      <span id="result-count" class="year-count" role="status" aria-live="polite">
+        {firstGroup.count} {firstGroup.count === 1 ? 'Brief' : 'Briefe'}
+      </span>
     </nav>
-    <div class="search-feedback" hidden><p id="search-status" role="status" aria-live="polite"></p><button class="search-retry" type="button" hidden>Erneut laden</button></div>
-    <div class="search-results" aria-label="Suchergebnisse" hidden>
-      {([{kind: 'metadata', location: 'Metadaten'}, {kind: 'tradition', location: 'Überlieferungsdaten'}, {kind: 'text', location: 'Brieftexten'}]).map(section => <section class="search-section" data-search-section={section.kind} aria-labelledby={`search-heading-${section.kind}`}>
-        <details>
-          <summary class="search-section-heading"><h2 id={`search-heading-${section.kind}`}>Treffer in {section.location}</h2><span class="search-section-count" /><Icon name="chevronDown" class="search-section-chevron" /></summary>
-          <ol class="letter-list search-letter-list" />
-          <button class="search-more" type="button" hidden><span class="search-more-label">Weitere Treffer in {section.location} anzeigen</span></button>
-        </details>
-      </section>)}
+    <div class="search-feedback" hidden>
+      <p id="search-status" role="status" aria-live="polite"></p>
+      <button class="search-retry" type="button" hidden>
+        Erneut laden
+      </button>
     </div>
-    <noscript><style is:inline>.letter-list > [hidden] { display: block !important; }</style><p class="notice">Alle Briefe sind unten chronologisch aufgeführt. Zum Filtern bitte JavaScript aktivieren.</p></noscript>
-    <ol class="letter-list catalog-letter-list">{catalog.letters.map(letter => <li data-letter={letter.letter} hidden={letter.groupId !== firstGroup.id}><LetterHeader letter={letter} compact /></li>)}</ol>
-    <div class="empty-state" hidden><h2>Keine Briefe gefunden.</h2><p>Wählen Sie einen anderen Zeitraum oder weniger Filter.</p><button type="button" data-reset>Alle Briefe anzeigen</button></div>
+    <div class="search-results" aria-label="Suchergebnisse" hidden>
+      {[
+        { kind: 'metadata', location: 'Metadaten' },
+        { kind: 'tradition', location: 'Überlieferungsdaten' },
+        { kind: 'text', location: 'Brieftexten' },
+      ].map((section) => (
+        <section
+          class="search-section"
+          data-search-section={section.kind}
+          aria-labelledby={`search-heading-${section.kind}`}
+        >
+          <details>
+            <summary class="search-section-heading">
+              <h2 id={`search-heading-${section.kind}`}>Treffer in {section.location}</h2>
+              <span class="search-section-count" />
+              <Icon name="chevronDown" class="search-section-chevron" />
+            </summary>
+            <ol class="letter-list search-letter-list" />
+            <button class="search-more" type="button" hidden>
+              <span class="search-more-label">Weitere Treffer in {section.location} anzeigen</span>
+            </button>
+          </details>
+        </section>
+      ))}
+    </div>
+    <noscript>
+      <style is:inline>
+        .letter-list > [hidden] {
+          display: block !important;
+        }
+      </style>
+      <p class="notice">
+        Alle Briefe sind unten chronologisch aufgeführt. Zum Filtern bitte JavaScript aktivieren.
+      </p>
+    </noscript>
+    <ol class="letter-list catalog-letter-list">
+      {catalog.letters.map((letter) => (
+        <li data-letter={letter.letter} hidden={letter.groupId !== firstGroup.id}>
+          <LetterHeader letter={letter} compact />
+        </li>
+      ))}
+    </ol>
+    <div class="empty-state" hidden>
+      <h2>Keine Briefe gefunden.</h2>
+      <p>Wählen Sie einen anderen Zeitraum oder weniger Filter.</p>
+      <button type="button" data-reset>
+        Alle Briefe anzeigen
+      </button>
+    </div>
   </section>
-  <script type="application/json" id="filter-data" set:html={JSON.stringify({records, groups:catalog.groups.map(g=>g.id)}).replace(/</g, '\\u003c')} />
-  <script type="application/json" id="metadata-search-data" set:html={JSON.stringify(metadataSearchBlocks(catalog.letters)).replace(/</g, '\\u003c')} />
-  <script>import '../scripts/catalog';</script>
+  <script
+    type="application/json"
+    id="filter-data"
+    set:html={JSON.stringify({ records, groups: catalog.groups.map((g) => g.id) }).replace(
+      /</g,
+      '\\u003c',
+    )}
+  />
+  <script
+    type="application/json"
+    id="metadata-search-data"
+    set:html={JSON.stringify(metadataSearchBlocks(catalog.letters)).replace(/</g, '\\u003c')}
+  />
+  <script>
+    import '../scripts/catalog';
+  </script>
 </Layout>

@@ -4,18 +4,30 @@ import PageContent from './PageContent.astro';
 import { componentFiles } from '../lib/page-components';
 import { markHtmlComponents } from '../../scripts/page-components.mjs';
 
-interface Props { name: string; stack?: string[]; class?: string }
+interface Props {
+  name: string;
+  stack?: string[];
+  class?: string;
+}
 const { name, stack = [] } = Astro.props;
 if (stack.includes(name)) throw new Error(`Circular components: ${[...stack, name].join(' → ')}`);
 const source = componentFiles.get(name);
 if (!source) throw new Error(`Missing component: seiten/components/${name}.md or ${name}.html`);
 const component = source.format === 'md' ? await getEntry('components', name) : undefined;
-if (source.format === 'md' && !component) throw new Error(`Missing Markdown content entry: ${name}`);
+if (source.format === 'md' && !component)
+  throw new Error(`Missing Markdown content entry: ${name}`);
 const Content = component ? (await render(component)).Content : null;
 const html = source.format === 'html' ? markHtmlComponents(await source.load()) : '';
 const Tag = name;
 ---
-<Tag class:list={['page-component', { 'page-prose': component?.data.prose }, Astro.props.class ?? component?.data.class]}>
+
+<Tag
+  class:list={[
+    'page-component',
+    { 'page-prose': component?.data.prose },
+    Astro.props.class ?? component?.data.class,
+  ]}
+>
   <PageContent prose={false} stack={[...stack, name]}>
     {Content ? <Content /> : <Fragment set:html={html} />}
   </PageContent>

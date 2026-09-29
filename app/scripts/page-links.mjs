@@ -9,12 +9,19 @@ export function rewritePageLink(url, file, directory, base = '/') {
   const resolved = new URL(url, pathToFileURL(file));
   const target = fileURLToPath(resolved);
   const relative = path.relative(directory, target).split(path.sep).join('/');
-  const asset = path.relative(path.resolve(directory, '../assets'), target).split(path.sep).join('/');
+  const asset = path
+    .relative(path.resolve(directory, '../assets'), target)
+    .split(path.sep)
+    .join('/');
   const suffix = resolved.search + resolved.hash;
   let href;
-  if (asset && !path.isAbsolute(asset) && !asset.split('/').some(part => part.startsWith('.'))) {
+  if (asset && !path.isAbsolute(asset) && !asset.split('/').some((part) => part.startsWith('.'))) {
     href = `${base}${asset.split('/').map(encodeURIComponent).join('/')}${suffix}`;
-  } else if (/^[^/]+\.md$/.test(relative) && relative !== 'README.md' && !relative.startsWith('_')) {
+  } else if (
+    /^[^/]+\.md$/.test(relative) &&
+    relative !== 'README.md' &&
+    !relative.startsWith('_')
+  ) {
     href = `${base}edition/${encodeURIComponent(relative.slice(0, -3))}/${suffix}`;
   } else {
     return url;
@@ -27,7 +34,13 @@ export function rewritePageLink(url, file, directory, base = '/') {
 
 export default function pageLinks({ directory, base = '/' }) {
   return ({ fileURL }) => {
-    if (!fileURL || ![directory, path.join(directory, 'components')].includes(path.dirname(fileURLToPath(fileURL)))) return null;
+    if (
+      !fileURL ||
+      ![directory, path.join(directory, 'components')].includes(
+        path.dirname(fileURLToPath(fileURL)),
+      )
+    )
+      return null;
     return {
       name: 'lenz:page-links',
       element: {
@@ -35,7 +48,11 @@ export default function pageLinks({ directory, base = '/' }) {
         visit(node, ctx) {
           const href = node.properties?.href;
           if (typeof href === 'string') {
-            ctx.setProperty(node, 'href', rewritePageLink(href, fileURLToPath(fileURL), directory, base));
+            ctx.setProperty(
+              node,
+              'href',
+              rewritePageLink(href, fileURLToPath(fileURL), directory, base),
+            );
           }
         },
       },
@@ -47,18 +64,31 @@ export default function pageLinks({ directory, base = '/' }) {
 // images before that pass so both standard Markdown spellings are optimized.
 export function pageImageReferences({ directory }) {
   return ({ fileURL }) => {
-    if (!fileURL || ![directory, path.join(directory, 'components')].includes(path.dirname(fileURLToPath(fileURL)))) return null;
+    if (
+      !fileURL ||
+      ![directory, path.join(directory, 'components')].includes(
+        path.dirname(fileURLToPath(fileURL)),
+      )
+    )
+      return null;
     const definitions = new Map();
     return {
       name: 'lenz:page-image-references',
       before(root) {
         for (const node of root.children) {
-          if (node.type === 'definition' && !definitions.has(node.identifier)) definitions.set(node.identifier, node);
+          if (node.type === 'definition' && !definitions.has(node.identifier))
+            definitions.set(node.identifier, node);
         }
       },
       imageReference(node, ctx) {
         const definition = definitions.get(node.identifier);
-        if (definition) ctx.replaceNode(node, { type: 'image', url: definition.url, title: definition.title, alt: node.alt });
+        if (definition)
+          ctx.replaceNode(node, {
+            type: 'image',
+            url: definition.url,
+            title: definition.title,
+            alt: node.alt,
+          });
       },
     };
   };

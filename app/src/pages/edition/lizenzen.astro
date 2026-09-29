@@ -4,55 +4,146 @@ import LicenseTable from '../../components/LicenseTable.astro';
 import { loadLicenses, readLicenseFile, licenseFileUrl } from '../../lib/licenses.mjs';
 import { pageUrl } from '../../lib/pages';
 const entries = loadLicenses();
-const runtime = entries.filter(entry => entry.runtime);
-const build = entries.filter(entry => !entry.runtime);
-const notices = runtime.flatMap(entry => {
+const runtime = entries.filter((entry) => entry.runtime);
+const build = entries.filter((entry) => !entry.runtime);
+const notices = runtime.flatMap((entry) => {
   const copyright = entry.files.find(({ file }) => file.endsWith('/COPYRIGHT-from-font.txt'));
-  const mit = entry.license === 'MIT' ? entry.files.find(({ label }) => /^LICENSE(?:\.md|\.txt)?$/i.test(label)) : undefined;
-  const remix = entry.product === 'remixicon' ? entry.files.find(({ label }) => label === 'License') : undefined;
+  const mit =
+    entry.license === 'MIT'
+      ? entry.files.find(({ label }) => /^LICENSE(?:\.md|\.txt)?$/i.test(label))
+      : undefined;
+  const remix =
+    entry.product === 'remixicon'
+      ? entry.files.find(({ label }) => label === 'License')
+      : undefined;
   const file = copyright ?? mit ?? remix;
-  return file ? [{ name: remix ? 'Remix Icon' : entry.name, text: readLicenseFile(file.file) }] : [];
+  return file
+    ? [{ name: remix ? 'Remix Icon' : entry.name, text: readLicenseFile(file.file) }]
+    : [];
 });
 const url = (file: string) => licenseFileUrl(file, import.meta.env.BASE_URL);
 ---
-<Layout title="Lizenzen und Drittanbieter · Lenz Briefe" description="Lizenzbedingungen der digitalen Edition, ihrer XML-Daten, Schriftarten, Icons und Software-Abhängigkeiten.">
+
+<Layout
+  title="Lizenzen und Drittanbieter · Lenz Briefe"
+  description="Lizenzbedingungen der digitalen Edition, ihrer XML-Daten, Schriftarten, Icons und Software-Abhängigkeiten."
+>
   <article class="about-page">
     <div class="about-page-content page-prose">
       <h1>Lizenzen und Drittanbieter</h1>
-      <nav aria-label="Inhalt dieser Seite"><ul>
-        <li><a href="#edition">Website und XML-Daten</a></li>
-        <li><a href="#hinweise">Lizenz- und Urheberrechtshinweise</a></li>
-        <li><a href="#laufzeit">Laufzeitabhängigkeiten</a></li>
-        <li><a href="#build">Build-Abhängigkeiten</a></li>
-      </ul></nav>
+      <nav aria-label="Inhalt dieser Seite">
+        <ul>
+          <li>
+            <a href="#edition">Website und XML-Daten</a>
+          </li>
+          <li>
+            <a href="#hinweise">Lizenz- und Urheberrechtshinweise</a>
+          </li>
+          <li>
+            <a href="#laufzeit">Laufzeitabhängigkeiten</a>
+          </li>
+          <li>
+            <a href="#build">Build-Abhängigkeiten</a>
+          </li>
+        </ul>
+      </nav>
 
       <h2 id="edition">Website und XML-Daten</h2>
-      <p>Die redaktionellen Inhalte dieser Website und die XML-Daten der digitalen Edition stehen, soweit nicht anders gekennzeichnet, unter der Lizenz <a href="https://creativecommons.org/licenses/by/4.0/deed.de" rel="license">Creative Commons Namensnennung 4.0 International (CC BY 4.0)</a>.</p>
-      <p>Bei jeder Vervielfältigung, Weitergabe oder Bearbeitung der Inhalte sind angemessene Urheber- und Quellenangaben, ein Link zur Lizenz und ein Hinweis auf vorgenommene Änderungen erforderlich. Beachten Sie unsere <a href={pageUrl('zitierempfehlung')}>Zitierempfehlung</a> und den <a href="https://creativecommons.org/licenses/by/4.0/legalcode.de">vollständigen Lizenztext</a>.</p>
-      <p>Die CC-BY-Angabe gilt nicht pauschal für Drittanbieter-Software, Schriftarten, Icons oder gesondert gekennzeichnete Abbildungen. Für diese gelten die jeweiligen Rechte- und Lizenzangaben. Gemeinfreie Bestandteile bleiben gemeinfrei.</p>
-      <p>Der eigene Anwendungscode steht, soweit nicht anders gekennzeichnet, unter der <a href={url('project/LICENSE-MIT.txt')}>MIT-Lizenz</a>, Copyright © 2026 Theodor Springmann Stiftung. Die Lizenz erlaubt die Nutzung, Änderung und Weitergabe des Codes unter Beibehaltung des Copyright- und Lizenzhinweises.</p>
+      <p>
+        Die redaktionellen Inhalte dieser Website und die XML-Daten der digitalen Edition stehen,
+        soweit nicht anders gekennzeichnet, unter der Lizenz{' '}
+        <a href="https://creativecommons.org/licenses/by/4.0/deed.de" rel="license">
+          Creative Commons Namensnennung 4.0 International (CC BY 4.0)
+        </a>
+        .
+      </p>
+      <p>
+        Bei jeder Vervielfältigung, Weitergabe oder Bearbeitung der Inhalte sind angemessene
+        Urheber- und Quellenangaben, ein Link zur Lizenz und ein Hinweis auf vorgenommene Änderungen
+        erforderlich. Beachten Sie unsere <a href={pageUrl('zitierempfehlung')}>Zitierempfehlung</a>{' '}
+        und den{' '}
+        <a href="https://creativecommons.org/licenses/by/4.0/legalcode.de">
+          vollständigen Lizenztext
+        </a>
+        .
+      </p>
+      <p>
+        Die CC-BY-Angabe gilt nicht pauschal für Drittanbieter-Software, Schriftarten, Icons oder
+        gesondert gekennzeichnete Abbildungen. Für diese gelten die jeweiligen Rechte- und
+        Lizenzangaben. Gemeinfreie Bestandteile bleiben gemeinfrei.
+      </p>
+      <p>
+        Der eigene Anwendungscode steht, soweit nicht anders gekennzeichnet, unter der{' '}
+        <a href={url('project/LICENSE-MIT.txt')}>MIT-Lizenz</a>, Copyright © 2026 Theodor Springmann
+        Stiftung. Die Lizenz erlaubt die Nutzung, Änderung und Weitergabe des Codes unter
+        Beibehaltung des Copyright- und Lizenzhinweises.
+      </p>
 
       <h2 id="hinweise">Lizenz- und Urheberrechtshinweise</h2>
-      <p>Die nachfolgenden Hinweise bewahren die Angaben der jeweiligen Rechteinhaber. Die vollständigen Lizenztexte sind bei jedem Produkt verlinkt; sie enthalten auch die jeweiligen Haftungs- und Gewährleistungsausschlüsse.</p>
-      {notices.map(notice => <details class="license-notice"><summary>{notice.name}</summary><pre>{notice.text}</pre></details>)}
+      <p>
+        Die nachfolgenden Hinweise bewahren die Angaben der jeweiligen Rechteinhaber. Die
+        vollständigen Lizenztexte sind bei jedem Produkt verlinkt; sie enthalten auch die jeweiligen
+        Haftungs- und Gewährleistungsausschlüsse.
+      </p>
+      {notices.map((notice) => (
+        <details class="license-notice">
+          <summary>{notice.name}</summary>
+          <pre>{notice.text}</pre>
+        </details>
+      ))}
 
       <h2 id="laufzeit">Laufzeitabhängigkeiten</h2>
-      <p>Diese Bibliotheken, Schriftarten und Icons sind Teil der ausgelieferten Website. Die Einteilung bezieht sich auf die Website im Browser; Tailwind erzeugt beispielsweise die mitgelieferten CSS-Regeln beim Build.</p>
+      <p>
+        Diese Bibliotheken, Schriftarten und Icons sind Teil der ausgelieferten Website. Die
+        Einteilung bezieht sich auf die Website im Browser; Tailwind erzeugt beispielsweise die
+        mitgelieferten CSS-Regeln beim Build.
+      </p>
       <LicenseTable entries={runtime} caption="Laufzeitabhängigkeiten der Website" />
 
       <h2 id="build">Build-Abhängigkeiten</h2>
-      <p>Diese Werkzeuge und ihre direkten oder indirekten Abhängigkeiten dienen der Erstellung und Prüfung der statischen Website. Dazu gehören auch die Python-Werkzeuge für die XML-Verarbeitung und optionale Pakete für andere Betriebssysteme. Source Sans 3 wird im Quellcode mitgeführt, derzeit aber nicht als Webfont ausgeliefert.</p>
-      <details class="license-notice"><summary>Alle {build.length} Build-Abhängigkeiten und weiteren mitgeführten Produkte</summary>
-        <LicenseTable entries={build} caption="Build-Abhängigkeiten und weitere mitgeführte Produkte" />
+      <p>
+        Diese Werkzeuge und ihre direkten oder indirekten Abhängigkeiten dienen der Erstellung und
+        Prüfung der statischen Website. Dazu gehören auch die Python-Werkzeuge für die
+        XML-Verarbeitung und optionale Pakete für andere Betriebssysteme. Source Sans 3 wird im
+        Quellcode mitgeführt, derzeit aber nicht als Webfont ausgeliefert.
+      </p>
+      <details class="license-notice">
+        <summary>
+          Alle {build.length} Build-Abhängigkeiten und weiteren mitgeführten Produkte
+        </summary>
+        <LicenseTable
+          entries={build}
+          caption="Build-Abhängigkeiten und weitere mitgeführte Produkte"
+        />
       </details>
-      <p>Bei einzelnen Paketen liegt nur eine Lizenzangabe des Herausgebers vor; diese Fälle sind in den verlinkten Hinweisen kenntlich gemacht. Maßgeblich sind die beigefügten Lizenztexte, nicht allein die Kurzbezeichnungen.</p>
-      <p>Eine vollständige Übersicht steht auch im <a href={url('README.md')}>Lizenzverzeichnis</a> bereit.</p>
-      <p><a href={pageUrl('datenschutz')}>Zurück zu Impressum &amp; Datenschutz</a></p>
+      <p>
+        Bei einzelnen Paketen liegt nur eine Lizenzangabe des Herausgebers vor; diese Fälle sind in
+        den verlinkten Hinweisen kenntlich gemacht. Maßgeblich sind die beigefügten Lizenztexte,
+        nicht allein die Kurzbezeichnungen.
+      </p>
+      <p>
+        Eine vollständige Übersicht steht auch im <a href={url('README.md')}>Lizenzverzeichnis</a>{' '}
+        bereit.
+      </p>
+      <p>
+        <a href={pageUrl('datenschutz')}>Zurück zu Impressum &amp; Datenschutz</a>
+      </p>
     </div>
   </article>
 </Layout>
 <style>
-  .license-notice { margin-block: .75em; border: 1px solid var(--color-rule); padding: .7em 1em; }
-  .license-notice summary { font-weight: 600; }
-  .license-notice pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .85rem; line-height: 1.55; }
+  .license-notice {
+    margin-block: 0.75em;
+    border: 1px solid var(--color-rule);
+    padding: 0.7em 1em;
+  }
+  .license-notice summary {
+    font-weight: 600;
+  }
+  .license-notice pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
 </style>

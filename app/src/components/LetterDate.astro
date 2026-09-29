@@ -1,19 +1,48 @@
 ---
 import { base, letterUrl, type DateRecord, type Reference } from '../lib/edition';
 import { dateLocationParts } from '../lib/date-locations.mjs';
-interface Props { date: DateRecord; locations: Reference[]; letter: string; compact: boolean }
+interface Props {
+  date: DateRecord;
+  locations: Reference[];
+  letter: string;
+  compact: boolean;
+}
 const { date, locations, letter, compact } = Astro.props;
-const parts: {text: string; placeId?: string}[] = dateLocationParts(date.text, locations);
+const parts: { text: string; placeId?: string }[] = dateLocationParts(date.text, locations);
 const textParts = (text: string) => {
   const comma = text.indexOf(',');
-  if (comma < 0) return {prefix: text, separator: '', date: ''};
+  if (comma < 0) return { prefix: text, separator: '', date: '' };
   const separator = text.slice(comma).match(/^,\s*/)?.[0] || ',';
-  return {prefix: text.slice(0, comma), separator, date: text.slice(comma + separator.length)};
+  return { prefix: text.slice(0, comma), separator, date: text.slice(comma + separator.length) };
 };
 ---
-{parts.map(part => {
-  if (part.placeId) return <a class="reference-filter" href={`${base}?${new URLSearchParams({group:'all', place:part.placeId})}`} data-reference-kind="place" data-reference-id={part.placeId}>{part.text}</a>;
-  const {prefix, separator, date} = textParts(part.text);
+
+{parts.map((part) => {
+  if (part.placeId)
+    return (
+      <a
+        class="reference-filter"
+        href={`${base}?${new URLSearchParams({ group: 'all', place: part.placeId })}`}
+        data-reference-kind="place"
+        data-reference-id={part.placeId}
+      >
+        {part.text}
+      </a>
+    );
+  const { prefix, separator, date } = textParts(part.text);
   const Text = compact ? 'a' : 'span';
-  return <Text class={compact ? 'letter-card-link' : undefined} href={compact ? letterUrl(letter) : undefined}>{prefix}{separator && <span class="letter-date-tail"><span class="letter-date-separator">{separator}</span>{date}</span>}</Text>;
+  return (
+    <Text
+      class={compact ? 'letter-card-link' : undefined}
+      href={compact ? letterUrl(letter) : undefined}
+    >
+      {prefix}
+      {separator && (
+        <span class="letter-date-tail">
+          <span class="letter-date-separator">{separator}</span>
+          {date}
+        </span>
+      )}
+    </Text>
+  );
 })}

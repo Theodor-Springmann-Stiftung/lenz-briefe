@@ -1,6 +1,9 @@
 ---
 import source from '../assets/SidenotePos.svg?raw';
 import { renderSidenotePosition } from '../lib/sidenote-position.mjs';
-interface Props { position: string }
+interface Props {
+  position: string;
+}
 ---
+
 <Fragment set:html={renderSidenotePosition(source, Astro.props.position)} />

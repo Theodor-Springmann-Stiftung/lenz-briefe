@@ -1,5 +1,5 @@
-import {normalizeSearch} from '../lib/search.mjs';
-import {highlightText} from './highlight-text';
+import { normalizeSearch } from '../lib/search.mjs';
+import { highlightText } from './highlight-text';
 import filterOffIcon from 'remixicon/icons/System/filter-off-line.svg?raw';
 import searchIcon from 'remixicon/icons/System/search-line.svg?raw';
 
@@ -47,13 +47,18 @@ function positionDismissButton() {
   }
   let right = sidebar.right;
   // Keep the highlight's vertical position; reserve horizontal room for numbers.
-  const numbers = [...pageMargin.querySelectorAll('.page-number a')].map(number => number.getBoundingClientRect());
+  const numbers = [...pageMargin.querySelectorAll('.page-number a')].map((number) =>
+    number.getBoundingClientRect(),
+  );
   for (let pass = 0; pass <= numbers.length; pass++) {
     const top = center - dismissButton.offsetHeight / 2;
     const bottom = top + dismissButton.offsetHeight + 4;
-    const nextRight = Math.min(right, ...numbers
-      .filter(bounds => top < bounds.bottom + 6 && bottom > bounds.top - 6)
-      .map(bounds => bounds.left - 12));
+    const nextRight = Math.min(
+      right,
+      ...numbers
+        .filter((bounds) => top < bounds.bottom + 6 && bottom > bounds.top - 6)
+        .map((bounds) => bounds.left - 12),
+    );
     if (nextRight === right) break;
     right = nextRight;
     dismissButton.style.maxWidth = `${Math.max(1, right - Math.max(8, sidebar.left))}px`;
@@ -67,7 +72,7 @@ function highlightSearchTarget() {
   document.documentElement.classList.toggle('has-letter-fragment', Boolean(location.hash));
   dismissButton?.remove();
   dismissButton = null;
-  document.querySelectorAll('mark.search-match').forEach(mark => {
+  document.querySelectorAll('mark.search-match').forEach((mark) => {
     const parent = mark.parentNode!;
     mark.replaceWith(...mark.childNodes);
     parent.normalize();
@@ -77,7 +82,11 @@ function highlightSearchTarget() {
   document.documentElement.classList.toggle('search-highlight-active', active);
   if (!active || !location.hash) return;
   let id: string;
-  try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+  try {
+    id = decodeURIComponent(location.hash.slice(1));
+  } catch {
+    return;
+  }
   const target = document.getElementById(id);
   if (!target?.closest('.edition-text, [data-search-target]')) return;
 
@@ -86,7 +95,10 @@ function highlightSearchTarget() {
     dismissButton = document.createElement('button');
     dismissButton.type = 'button';
     dismissButton.className = 'filter-pill search-highlight-dismiss';
-    for (const [icon, className] of [[searchIcon, 'filter-pill-icon'], [filterOffIcon, 'filter-pill-remove']]) {
+    for (const [icon, className] of [
+      [searchIcon, 'filter-pill-icon'],
+      [filterOffIcon, 'filter-pill-remove'],
+    ]) {
       const span = document.createElement('span');
       span.className = `ui-icon ${className}`;
       span.setAttribute('aria-hidden', 'true');
@@ -115,7 +127,7 @@ function highlightSearchTarget() {
 highlightSearchTarget();
 window.addEventListener('hashchange', () => {
   highlightSearchTarget();
-  document.querySelector('.search-match')?.scrollIntoView({block: 'start'});
+  document.querySelector('.search-match')?.scrollIntoView({ block: 'start' });
 });
 window.addEventListener('popstate', highlightSearchTarget);
 window.addEventListener('resize', positionDismissButton);

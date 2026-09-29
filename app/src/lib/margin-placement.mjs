@@ -13,7 +13,7 @@ export function placeMarginItem(target, height, occupied, pageEnd = Infinity, ga
     if (top < slot.bottom + clearance) top = slot.bottom + clearance;
   }
   const bottom = top + height;
-  return {top, bottom, overflow: bottom > pageEnd};
+  return { top, bottom, overflow: bottom > pageEnd };
 }
 
 /** @param {string} position */
