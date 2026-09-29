@@ -1,0 +1,35 @@
+---
+import type { Letter } from '../lib/edition';
+import { letterUrl } from '../lib/edition';
+import { citationFor } from '../lib/citation';
+interface Props {
+  letter: Letter;
+}
+const { letter } = Astro.props;
+const url = new URL(letterUrl(letter.letter), Astro.site ?? Astro.url.origin).href;
+---
+
+<div class="apparatus-entry" id="zitieren">
+  <h2>Zitation</h2>
+  <p class="edition-text apparatus-text apparatus-xml-text">
+    {citationFor(letter)} [<a href={url}>{url}</a>, abgerufen am{' '}
+    <time data-citation-access>DATUM</time>]
+  </p>
+</div>
+<script>
+  function updateAccessDate() {
+    const today = new Date();
+    const text = new Intl.DateTimeFormat('de-DE', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+    }).format(today);
+    const iso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+    document.querySelectorAll<HTMLTimeElement>('[data-citation-access]').forEach((element) => {
+      element.textContent = text;
+      element.dateTime = iso;
+    });
+  }
+  updateAccessDate();
+  window.addEventListener('pageshow', updateAccessDate);
+</script>

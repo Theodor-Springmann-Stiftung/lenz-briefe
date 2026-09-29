@@ -14,6 +14,14 @@
 - Absender / Empfänger im Suchfilter unterscheiden. Ebenso die Orte; 
   -> Schwierigkeit im Modell; UND oder ODER Verknüpfungen?
 - Die geplante Zitierempfehlung klappt nicht, weil wir den Absendeort im geschriebenen Datum haben ([Verfasser], [Absendeort], an [Empfänger], [Empfangsort], [Datum], in: Jakob Michael Reinhold Lenz: Kritische Briefausgabe, hrsg. v. Gregor Babelotzky (Heidelberg 2026ff.). [URL, abgerufen am DATUM])
+    Mit oder ohne Absendeort genauso uniquely : diese Briefe haben dieselbe Zitation (bis auf URL) -- dann ist doch die briefnummer entscheidend
+    21, 22	Lenz → Salzmann	Landau	Straßburg	Anfang Oktober 1772
+    57, 60	Lenz → La Roche	Straßburg	Koblenz-Ehrenbreitstein	Juli 1775
+    116, 117	Lenz → Zimmermann	Straßburg	Hannover	Ende Februar 1776 [empfangen am 6. März]
+    119, 120	Lenz → Lavater	Straßburg	Zürich	Ende Februar 1776
+    121, 128	Lenz → Herder	Straßburg	Bückeburg	Anfang März 1776
+    165, 166, 167	Lenz → Stolberg	Weimar	Kopenhagen	April 1776
+    216, 222	Röderer → Lenz	Straßburg	Weimar	Juli 1776
 - 367: Sprachenklaviatur?
 - Archiv link with/without text
 - Search matching: über Worte hinweg oder nicht?

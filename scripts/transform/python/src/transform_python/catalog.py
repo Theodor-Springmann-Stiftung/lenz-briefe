@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import re
 
-PRIORITY = ("when", "from", "notBefore", "to", "notAfter")
+PRIORITY = ("when", "from", "to", "notBefore", "notAfter")
 
 
 def read_year_groups(references_doc):
@@ -37,7 +37,8 @@ def date_sort(events):
             match = re.fullmatch(r"(\d{4,})(?:-(\d{2})(?:-(\d{2}))?)?(?:Z|[+-]\d{2}:\d{2})?", value)
             if not match:
                 continue
-            key = tuple(int(part or 0) for part in match.groups())
+            # Incomplete dates sort at the start of their month or year.
+            key = tuple(int(part or 1) for part in match.groups())
             candidates.append((key, event_index, date_index, attribute, value))
     if not candidates:
         return None

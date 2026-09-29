@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import LetterCitation from '../../components/LetterCitation.astro';
 import LetterHeader from '../../components/LetterHeader.astro';
 import Icon from '../../components/Icon.astro';
 import QuickLegend from '../../components/QuickLegend.astro';
@@ -72,6 +73,7 @@ const handStyles = [
 const sectionLinks = [
   ...traditionLinks,
   ...(letter.handRefs.length ? [{ id: 'haende', name: 'Hände' }] : []),
+  { id: 'zitieren', name: 'Zitation' },
 ];
 ---
 
@@ -211,6 +213,7 @@ const sectionLinks = [
           </ul>
         </div>
       )}
+      <LetterCitation letter={letter} />
     </section>
   </div>
   <QuickLegend />

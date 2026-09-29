@@ -172,7 +172,7 @@ class SiteExportTests(unittest.TestCase):
 
     def test_date_precedence_and_partial_dates(self):
         sort = date_sort([{'type':'sent','dates':[{'when':'1776','from':'1775-01-01'}]}])
-        self.assertEqual(sort['key'],[1776,0,0])
+        self.assertEqual(sort['key'],[1776,1,1])
         self.assertEqual(sort['attribute'],'when')
         self.assertIsNone(date_sort([{'type':'received','dates':[{'when':'1776'}]}]))
 
