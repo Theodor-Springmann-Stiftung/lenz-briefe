@@ -4,12 +4,11 @@ import { base } from '../lib/edition';
 
 <span class="offline-control" data-offline data-base={base} data-production={import.meta.env.PROD} hidden>
   <label class="offline-option">
-    <input type="checkbox" data-offline-toggle aria-describedby="offline-status" />
+    <input type="checkbox" data-offline-toggle />
     <span data-offline-label>Offline nutzen (~40 MB)</span>
   </label>
   <span class="offline-feedback" hidden>
     <progress data-offline-progress max="100" value="0" aria-label="Download für Offline-Nutzung" hidden></progress>
-    <span id="offline-status" data-offline-status></span>
     <button type="button" data-offline-retry hidden>Fortsetzen</button>
   </span>
   <span class="sr-only" data-offline-announcement role="status" aria-live="polite"></span>

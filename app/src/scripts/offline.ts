@@ -19,7 +19,6 @@ function initializeOfflineControl(root: HTMLElement) {
   const optionLabel = root.querySelector<HTMLElement>('[data-offline-label]')!;
   const downloadLabel = optionLabel.textContent!;
   const feedback = root.querySelector<HTMLElement>('.offline-feedback')!;
-  const label = root.querySelector<HTMLElement>('[data-offline-status]')!;
   const progress = root.querySelector<HTMLProgressElement>('[data-offline-progress]')!;
   const retry = root.querySelector<HTMLButtonElement>('[data-offline-retry]')!;
   const announcement = root.querySelector<HTMLElement>('[data-offline-announcement]')!;
@@ -67,39 +66,35 @@ function initializeOfflineControl(root: HTMLElement) {
     if (!desired && (changing || explicitlyDisabled()) && status.enabled) return;
     latest = status;
     checkbox.checked = status.enabled;
-    optionLabel.textContent = status.enabled && status.ready
-      ? status.phase === 'downloading' ? 'Aktualisiere' : 'Offline verfügbar'
-      : downloadLabel;
-    feedback.hidden = !status.enabled || status.phase === 'ready';
+    feedback.hidden = !status.enabled || !['downloading', 'paused', 'error'].includes(status.phase);
     progress.hidden = status.phase !== 'downloading';
     retry.hidden = !['paused', 'error'].includes(status.phase);
     const percent = status.totalBytes ? Math.floor(status.bytes / status.totalBytes * 100) : 0;
     progress.value = percent;
     progress.title = `${status.done} / ${status.total} Dateien`;
     progress.setAttribute('aria-valuetext', `${percent} Prozent, ${status.done} von ${status.total} Dateien`);
-    label.textContent = ['off', 'ready'].includes(status.phase) ? ''
+    optionLabel.textContent = !status.enabled || status.phase === 'off' ? downloadLabel
+      : status.phase === 'ready' ? 'Offline verfügbar'
       : status.phase === 'checking' ? (status.ready ? 'Prüft auf Updates …' : 'Wird vorbereitet …')
-      : status.phase === 'downloading' ? `${percent} %`
+      : status.phase === 'downloading' ? `${status.ready ? 'Aktualisiere' : 'Download'} · ${percent} %`
       : status.error === 'quota' ? 'Speicher voll'
       : `Pausiert${status.total ? ` · ${percent} %` : ''}`;
     retry.textContent = status.error === 'quota' ? 'Erneut versuchen' : 'Fortsetzen';
     root.title = status.ready && status.updatedAt
       ? `Offline gespeichert: ${new Date(status.updatedAt).toLocaleString('de-DE')}` : '';
     // Announce state changes, not every downloaded file or percentage point.
-    if (previousPhase !== status.phase) announcement.textContent = status.phase === 'downloading'
-      ? `${optionLabel.textContent}: ${percent} Prozent` : label.textContent || optionLabel.textContent;
+    if (previousPhase !== status.phase) announcement.textContent = optionLabel.textContent;
     previousPhase = status.phase;
   }
 
   function showFailure(error: unknown) {
     checkbox.checked = desired;
-    optionLabel.textContent = desired && latest?.ready ? 'Offline verfügbar' : downloadLabel;
-    feedback.hidden = false;
+    feedback.hidden = !desired;
     progress.hidden = true;
     retry.hidden = !desired;
-    label.textContent = error instanceof DOMException && error.name === 'QuotaExceededError'
+    optionLabel.textContent = error instanceof DOMException && error.name === 'QuotaExceededError'
       ? 'Speicher voll' : navigator.onLine ? 'Offline-Nutzung pausiert' : 'Zum Laden online gehen';
-    announcement.textContent = label.textContent;
+    announcement.textContent = optionLabel.textContent;
   }
 
   async function activeWorker(reg: ServiceWorkerRegistration): Promise<ServiceWorker> {
@@ -169,13 +164,13 @@ function initializeOfflineControl(root: HTMLElement) {
 
   checkbox.addEventListener('change', async () => {
     remember(checkbox.checked);
-    optionLabel.textContent = downloadLabel;
     changing = true;
     checkbox.disabled = true;
-    feedback.hidden = false;
+    feedback.hidden = true;
     progress.hidden = true;
     retry.hidden = true;
-    label.textContent = desired ? 'Wird vorbereitet …' : 'Wird entfernt …';
+    optionLabel.textContent = desired ? 'Wird vorbereitet …' : 'Wird entfernt …';
+    announcement.textContent = optionLabel.textContent;
     try {
       if (desired) {
         // A request made after this explicit interaction may reduce automatic

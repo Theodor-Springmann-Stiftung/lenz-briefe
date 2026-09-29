@@ -12,6 +12,19 @@ import offlineEdition, { buildOfflineEdition } from '../scripts/offline-build.mj
 const hash = (value) => createHash('sha256').update(value).digest('hex');
 const address = (request) => typeof request === 'string' ? request : request.url;
 
+async function waitForWorkerEvent(event, operation, description) {
+  let timer;
+  try {
+    await Promise.race([
+      event,
+      operation.then(() => { throw new Error(`Worker finished before ${description}`); }),
+      new Promise((_resolve, reject) => {
+        timer = setTimeout(() => reject(new Error(`Timed out waiting for ${description}`)), 5000);
+      }),
+    ]);
+  } finally { clearTimeout(timer); }
+}
+
 class MemoryCaches {
   stores = new Map();
   failPut = false;
@@ -263,7 +276,7 @@ test('all assets finish before any page starts, even when one font is slow', asy
   await runtime.enable();
   const download = runtime.synchronize(true);
   try {
-    await otherAssets;
+    await waitForWorkerEvent(otherAssets, download, 'the other assets were saved');
     assert.ok(!events.some((event) => event.startsWith('page:')));
   } finally { releaseFont(); }
   await download;
@@ -311,10 +324,11 @@ test('a request timeout retries with a fresh abort controller', async () => {
   assert.equal((await runtime.status()).ready, true);
 });
 
-test('unchecking cancels a pending retry without making another request', async () => {
+test('unchecking cancels a pending retry without making another request', async (t) => {
   const env = environment({ '/': 'Index' });
   const schedule = env.worker.setTimeout;
   let retryTimer;
+  t.after(() => clearTimeout(retryTimer));
   let retryStarted;
   let retryCanceled = false;
   const waiting = new Promise((resolve) => { retryStarted = resolve; });
@@ -332,7 +346,7 @@ test('unchecking cancels a pending retry without making another request', async 
   const runtime = env.restart();
   await runtime.enable();
   const download = runtime.synchronize(true);
-  await waiting;
+  await waitForWorkerEvent(waiting, download, 'a retry was scheduled');
   await runtime.disable();
   await download;
   assert.equal(retryCanceled, true);
@@ -423,9 +437,10 @@ test('simultaneous sync requests share a download and stopping cancels in-flight
   };
   await runtime.enable();
   const first = runtime.synchronize(true);
-  assert.equal(first, runtime.synchronize(true));
-  await inFlight;
-  await runtime.disable();
+  try {
+    assert.equal(first, runtime.synchronize(true));
+    await waitForWorkerEvent(inFlight, first, 'the response started');
+  } finally { await runtime.disable(); }
   await first;
   assert.equal((await runtime.status()).enabled, false);
   assert.equal((await env.caches.keys()).length, 0);
@@ -474,13 +489,15 @@ test('rechecking during removal waits for cleanup before saving a fresh edition'
     return deleteCache(name);
   };
   const removal = runtime.disable();
-  await started;
-  assert.equal(runtime.disable(), removal);
   let enabled = false;
-  const restart = runtime.enable(true).then(() => { enabled = true; });
-  await Promise.resolve();
-  assert.equal(enabled, false);
-  finishDeleting();
+  let restart;
+  try {
+    await waitForWorkerEvent(started, removal, 'cache removal started');
+    assert.equal(runtime.disable(), removal);
+    restart = runtime.enable(true).then(() => { enabled = true; });
+    await Promise.resolve();
+    assert.equal(enabled, false);
+  } finally { finishDeleting(); }
   await Promise.all([removal, restart]);
   await runtime.synchronize(true);
   assert.equal((await runtime.status()).ready, true);
