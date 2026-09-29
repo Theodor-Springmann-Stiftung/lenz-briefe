@@ -14,8 +14,8 @@ const dates = sent.flatMap(event => event.dates.map(date => ({date, locations: e
 ---
 <header id={compact ? undefined : 'letter-metadata'} data-search-target={compact ? undefined : ''} class:list={['letter-header', {'letter-header--compact': compact}]}>
   <Heading class="letter-date">
-    {dates.length ? dates.map(({date, locations}, i) => <Fragment>{i > 0 && ' · '}<LetterDate date={date} locations={locations} letter={letter.letter} compact={compact} /></Fragment>)
-      : compact ? <a class="letter-card-link" href={letterUrl(letter.letter)}>Ohne Datierung</a> : 'Ohne Datierung'}
+    <span class="letter-date-text">{dates.length ? dates.map(({date, locations}, i) => <Fragment>{i > 0 && ' · '}<LetterDate date={date} locations={locations} letter={letter.letter} compact={compact} /></Fragment>)
+      : compact ? <a class="letter-card-link" href={letterUrl(letter.letter)}>Ohne Datierung</a> : 'Ohne Datierung'}</span>
     <SourceIcons letter={letter} />
   </Heading>
   <div class="letter-events">

@@ -150,7 +150,6 @@
   [data-search-section=metadata] .search-hit { grid-template-columns:9rem minmax(0,1fr); column-gap:.75rem; }
   [data-search-section=metadata] .search-hit-label { white-space:nowrap; overflow-wrap:normal; }
   @media (max-width:639px) {
-    [data-search-section=metadata] .search-hit { grid-template-columns:minmax(0,1fr); row-gap:.25rem; }
     .search-section-heading { grid-template-columns:minmax(0,1fr) auto; }
     .search-section-count { grid-column:1; grid-row:2; }
     .search-section-chevron { grid-column:2; grid-row:1 / 3; }
@@ -611,12 +610,38 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .wordmark-divider { display:none; }
   .site-header nav { grid-column:1 / -1; font-size:.875rem; }
   .main-navigation-link { padding:.5rem .55rem; gap:.3rem; }
-  .year-navigation a { padding:1rem .5rem .45rem; font-size:.85rem; gap:.4rem; }
-  .filter-menu summary { gap:.5rem; padding-right:.75rem; padding-left:3.25rem; }
+  .index-intro { grid-template-columns:minmax(0,1fr); row-gap:.4rem; }
+  .edition-count { grid-column:1; grid-row:2; text-align:left; }
+  .edition-count > span { font-family:var(--font-sans); font-size:.875rem; letter-spacing:normal; color:var(--color-muted); }
+  .active-filters { grid-row:3; }
+  .filter-toolbar { padding:.75rem; }
+  .filter-controls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem; width:100%; }
+  .filter-menu summary { min-width:0; min-height:2.75rem; gap:.25rem; padding:.6rem .5rem; }
+  .filter-menu-label { gap:.35rem; }
+  .filter-menu-label > .ui-icon { display:none; }
   .filter-menu { position:static; }
   .filter-panel { left:0; right:auto; width:min(340px, calc(100vw - 5rem)); }
   .catalog-search { order:-1; flex-basis:100%; max-width:none; }
-  .letter-header--compact { grid-template-columns:minmax(0,1fr); }
+  .search-results .search-hit { grid-template-columns:minmax(0,1fr); row-gap:.25rem; }
+  .year-navigation { grid-template-columns:minmax(0,1fr); margin-top:1rem; padding-bottom:.65rem; }
+  .year-tabs { display:grid; gap:.125rem; }
+  .year-navigation a { margin:0; padding:.5rem .625rem; border:0; border-left:2px solid transparent; font-size:.8125rem; line-height:1.4; gap:.4rem; }
+  .year-navigation a[aria-current=page] { border-left-color:var(--color-accent); background:var(--color-filter); }
+  .year-count { display:none; }
+  .letter-list > li { padding:1rem; }
+  .letter-header, .detail-header .letter-header { --header-text-size:1rem; display:grid; grid-template-columns:minmax(0,1fr); gap:.9rem; }
+  .letter-header .letter-date { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:start; gap:.75rem; margin:0; font-size:var(--header-text-size); line-height:1.45; }
+  .letter-date-text { min-width:0; }
+  .letter-date-tail { display:block; }
+  .letter-date-separator { display:none; }
+  .letter-header .source-icons { margin:0; padding-top:.2em; }
+  .letter-header .source-separator { display:none; }
+  .letter-events { display:grid; grid-template-columns:minmax(0,1fr); gap:.4rem; line-height:1.5; }
+  .correspondence-senders { grid-column:1; grid-row:1; }
+  .correspondence-recipients { grid-column:1; grid-row:3; }
+  .letter-events .correspondence-arrow { grid-column:1; grid-row:2; width:1em; height:1em; margin:0; }
+  .letter-header :is(.event-place, .event-date) { font-size:.85em; line-height:1.4; color:var(--color-muted); }
+  .letter-header .event-date { display:block; margin-top:.2rem; }
   .reading-layout { font-size:1.06rem; }
   .edition-text [data-tab] { text-indent:min(var(--line-indent,0ch),25%); }
   .edition-text .lb-line-block[data-layout=aligned][data-tab] { container-type:inline-size; }
