@@ -5,7 +5,7 @@ description: Das Jakob Lenz Archiv Heidelberg und der Kontakt zur Redaktion der 
 order: 50
 ---
 
-## Jakob Lenz Archiv
+# Jakob Lenz Archiv
 
 <figure class="page-portrait">
 
