@@ -1,3 +1,5 @@
+import { registerLayoutTask } from './reading-layout';
+
 import { normalizeSearch } from '../lib/search.mjs';
 import { highlightText } from './highlight-text';
 import filterOffIcon from 'remixicon/icons/System/filter-off-line.svg?raw';
@@ -120,16 +122,14 @@ function highlightSearchTarget() {
       highlightSearchTarget();
     });
     document.body.append(dismissButton);
-    positionDismissButton();
+    schedulePosition();
   }
 }
 
+const schedulePosition = registerLayoutTask(positionDismissButton);
 highlightSearchTarget();
 window.addEventListener('hashchange', () => {
   highlightSearchTarget();
   document.querySelector('.search-match')?.scrollIntoView({ block: 'start' });
 });
 window.addEventListener('popstate', highlightSearchTarget);
-window.addEventListener('resize', positionDismissButton);
-document.addEventListener('margins:arranged', positionDismissButton);
-document.fonts.ready.then(positionDismissButton);

@@ -3,11 +3,11 @@ import Layout from '../../layouts/Layout.astro';
 import LetterHeader from '../../components/LetterHeader.astro';
 import Icon from '../../components/Icon.astro';
 import QuickLegend from '../../components/QuickLegend.astro';
-import SidenotePosition from '../../components/SidenotePosition.astro';
+import Sidenote from '../../components/Sidenote.astro';
 import { sidenoteOrder } from '../../lib/margin-placement.mjs';
 import { handDeclarations } from '../../lib/hand-settings.mjs';
 import { handFonts, handKeyRefs } from '../../lib/hand-fonts.mjs';
-import { labelHandStarts } from '../../lib/hand-labels.mjs';
+import { prepareHandControls } from '../../lib/hand-labels.mjs';
 import { catalog, letterFiles, letterUrl, titleFor, type Letter } from '../../lib/edition';
 export function getStaticPaths() {
   return catalog.letters.map((letter, index) => ({
@@ -46,7 +46,8 @@ const handRefs = handKeyRefs(letter.handRefs, senderRefs, letter.handOrder);
 const hands = Object.fromEntries(
   handRefs.map((ref) => [ref, catalog.people[ref]?.name || `Unbekannte Hand (${ref})`]),
 );
-const textParts = labelHandStarts(text, hands).split(
+const preparedText = prepareHandControls(text, hands, { anchors: true, labelStarts: true });
+const textParts = preparedText.html.split(
   /<div class="sidenote-slot" data-sidenote-id="([^"]+)"><\/div>/,
 );
 const renderedNotes = new Set(textParts.filter((_, index) => index % 2 === 1));
@@ -128,11 +129,7 @@ const sectionLinks = [
           if (!note) throw new Error(`Unknown in-position sidenote: ${part}`);
           return (
             <div class="inpos-note sidenote-layout">
-              <SidenotePosition position={note.pos} />
-              <div class="edition-text" set:html={note.html} />
-              <div class="sidenote-details">
-                <p class="note-annotation sidenote-description">{note.annotation}</p>
-              </div>
+              <Sidenote note={note} hands={hands} />
             </div>
           );
         })}
@@ -156,11 +153,14 @@ const sectionLinks = [
             data-anchor={note.anchorId!}
             data-priority="2"
           >
-            <SidenotePosition position={note.pos} />
-            <div class="edition-text" set:html={note.html} />
-            <div class="sidenote-details">
-              <p class="note-annotation sidenote-description">{note.annotation}</p>
-            </div>
+            <Sidenote note={note} hands={hands} />
+          </div>
+        ))}
+        {preparedText.labels.map(({ ref, name, anchor }) => (
+          <div class="marginal-item hand-label" data-anchor={anchor} data-priority="1">
+            <button type="button" data-hand-ref={ref}>
+              {name}
+            </button>
           </div>
         ))}
       </aside>
@@ -172,14 +172,11 @@ const sectionLinks = [
         </p>
         {unplaced.map((note) => (
           <div class="unplaced-note sidenote-layout">
-            <SidenotePosition position={note.pos} />
-            <div class="edition-text" set:html={note.html} />
-            <div class="sidenote-details">
-              <p class="note-annotation sidenote-description">{note.annotation}</p>
+            <Sidenote note={note} hands={hands}>
               <p class="note-annotation">
                 Seite {note.page} · Im Text ist keine zugehörige Seitenmarke verzeichnet.
               </p>
-            </div>
+            </Sidenote>
           </div>
         ))}
       </section>
@@ -217,11 +214,6 @@ const sectionLinks = [
     </section>
   </div>
   <QuickLegend />
-  <script
-    type="application/json"
-    id="hand-data"
-    set:html={JSON.stringify(hands).replace(/</g, '\\u003c')}
-  />
   <script>
     import '../../scripts/search-highlight';
   </script>

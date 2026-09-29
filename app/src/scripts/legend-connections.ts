@@ -1,3 +1,4 @@
+import { registerLayoutTask } from './reading-layout';
 import { selectLegendTargets } from '../lib/legend-targets.mjs';
 
 const legend = document.querySelector<HTMLElement>('#quick-legend');
@@ -34,7 +35,6 @@ if (legend && letter) {
     sidenote: '.sidenote-position',
   };
   type Circle = { x: number; y: number; radius: number };
-  let scheduled = false;
 
   function fontIdentity(element: HTMLElement): string {
     const style = getComputedStyle(element);
@@ -214,17 +214,22 @@ if (legend && letter) {
   }
 
   function draw() {
-    scheduled = false;
-    overlay.replaceChildren();
-    rows.forEach((row) => row.removeAttribute('data-connected'));
-    if (!panel.matches(':popover-open')) return;
+    const paths = document.createDocumentFragment();
+    const connected = new Set<HTMLElement>();
+    const commit = () => {
+      overlay.replaceChildren(paths);
+      rows.forEach((row) => {
+        if (connected.has(row)) row.dataset.connected = 'true';
+        else row.removeAttribute('data-connected');
+      });
+    };
+    if (!panel.matches(':popover-open')) return commit;
     const activeRow =
       rows.find((row) => row.matches(':hover')) ||
       rows.find((row) => row.matches(':focus-visible'));
-    if (!activeRow) return;
+    if (!activeRow) return commit;
     const panelBounds = panel.getBoundingClientRect();
     const clip = scroller.getBoundingClientRect();
-    const paths = document.createDocumentFragment();
     if (activeRow.dataset.legendTag === 'vspace') paths.append(presentationalSpacing(panelBounds));
     for (const row of rows) {
       if (row !== activeRow) continue;
@@ -307,18 +312,13 @@ if (legend && letter) {
           group.append(endpoint);
         }
         paths.append(group);
-        row.dataset.connected = 'true';
+        connected.add(row);
       }
     }
-    overlay.append(paths);
+    return commit;
   }
 
-  function schedule() {
-    if (!scheduled && panel.matches(':popover-open')) {
-      scheduled = true;
-      requestAnimationFrame(draw);
-    }
-  }
+  const schedule = registerLayoutTask(draw, { observe: [content, panel], scroll: true });
   panel.addEventListener('beforetoggle', (event) => {
     if (event.newState === 'closed') {
       overlay.replaceChildren();
@@ -338,12 +338,4 @@ if (legend && letter) {
     row.addEventListener('focusin', schedule);
     row.addEventListener('focusout', schedule);
   }
-  document.addEventListener('scroll', schedule, { capture: true, passive: true });
-  window.addEventListener('resize', schedule);
-  document.addEventListener('margins:arranged', schedule);
-  document.fonts.addEventListener('loadingdone', schedule);
-  document.fonts.ready.then(schedule);
-  const observer = new ResizeObserver(schedule);
-  observer.observe(content);
-  observer.observe(panel);
 }

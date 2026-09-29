@@ -53,3 +53,49 @@ test('hands without source identifiers remain separate and missing names have a 
   );
   assert.equal(labelHandStarts('<div>Plain text</div>', {}), '<div>Plain text</div>');
 });
+
+test('build-time controls share stable anchors across reopened fragments and preserve existing IDs', async () => {
+  const { prepareHandControls } = await import('../src/lib/hand-labels.mjs');
+  const source =
+    '<span class="hand" data-ref="1" data-origin="a">A</span>' +
+    '<span class="hand" data-ref="1" data-origin="a">B</span>' +
+    '<span id="existing" class="hand" data-ref="2" data-origin="b">C</span>';
+  const result = prepareHandControls(
+    source,
+    { 1: 'Lenz', 2: 'Goethe' },
+    { anchors: true, labelStarts: true },
+  );
+  assert.deepEqual(result.labels, [
+    { ref: '1', name: 'Lenz', anchor: 'hand-1' },
+    { ref: '2', name: 'Goethe', anchor: 'existing' },
+  ]);
+  assert.equal(labels(result.html)[0].id, 'hand-1');
+  assert.equal(labels(result.html)[1].id, 'existing');
+  assert.equal(
+    prepareHandControls(
+      result.html,
+      { 1: 'Lenz', 2: 'Goethe' },
+      { anchors: true, labelStarts: true },
+    ).html,
+    result.html,
+  );
+});
+
+test('note annotations collect groups without changing note HTML or collapsing later occurrences', async () => {
+  const { prepareHandControls } = await import('../src/lib/hand-labels.mjs');
+  const source =
+    '<span class="hand" data-ref="1" data-origin="a">A</span>' +
+    '<span class="hand" data-ref="1" data-origin="a">B</span>' +
+    '<span class="hand" data-ref="2" data-origin="b">C</span>' +
+    '<span class="hand" data-ref="1" data-origin="c">D</span>';
+  const result = prepareHandControls(source, { 1: 'A "B" & <C>' });
+  assert.equal(result.html, source);
+  assert.deepEqual(
+    result.labels.map(({ ref, name }) => [ref, name]),
+    [
+      ['1', 'A "B" & <C>'],
+      ['2', 'Unbekannte Hand'],
+      ['1', 'A "B" & <C>'],
+    ],
+  );
+});

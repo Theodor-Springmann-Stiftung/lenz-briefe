@@ -1,0 +1,31 @@
+---
+import { prepareHandControls } from '../lib/hand-labels.mjs';
+import SidenotePosition from './SidenotePosition.astro';
+import type { Sidenote } from '../lib/edition';
+interface Props {
+  note: Sidenote;
+  hands: Record<string, string>;
+}
+const { note, hands } = Astro.props;
+const { labels } = prepareHandControls(note.html, hands);
+---
+
+<SidenotePosition position={note.pos} />
+<div class="edition-text" set:html={note.html} />
+<div class="sidenote-details">
+  <p class="note-annotation sidenote-description">{note.annotation}</p>
+  <slot />
+  {labels.length > 0 && (
+    <p class="note-annotation">
+      Hand:{' '}
+      {labels.map(({ ref, name }, index) => (
+        <Fragment>
+          {index > 0 && (index === labels.length - 1 ? ' und ' : ', ')}
+          <button type="button" data-hand-ref={ref}>
+            {name}
+          </button>
+        </Fragment>
+      ))}
+    </p>
+  )}
+</div>

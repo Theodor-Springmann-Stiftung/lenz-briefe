@@ -1,3 +1,5 @@
+import { registerLayoutTask } from './reading-layout';
+
 const reading = document.querySelector<HTMLElement>('[data-reading-layout]');
 if (reading) {
   const groups = new Map<string, HTMLElement[]>();
@@ -22,7 +24,6 @@ if (reading) {
   document.body.append(overlay);
   let hovered: Element | null = null;
   let focused: Element | null = null;
-  let scheduled = false;
 
   const trigger = (target: EventTarget | null): Element | null =>
     target instanceof Element
@@ -74,9 +75,8 @@ if (reading) {
     };
   };
   function draw() {
-    scheduled = false;
-    overlay.replaceChildren();
-    if (!hovered && !focused) return;
+    const fragment = document.createDocumentFragment();
+    if (!hovered && !focused) return () => overlay.replaceChildren();
     for (const pair of pairs) {
       const [a, b] = pair.map(point);
       const direction = b.x >= a.x ? 1 : -1;
@@ -86,23 +86,19 @@ if (reading) {
         'd',
         `M ${a.x + direction * a.radius} ${a.y} C ${a.x + direction * bend} ${a.y}, ${b.x - direction * bend} ${b.y}, ${b.x - direction * b.radius} ${b.y}`,
       );
-      overlay.append(path);
+      fragment.append(path);
       for (const p of [a, b]) {
         const circle = document.createElementNS(svgNS, 'circle');
         if (p.anchorless) circle.classList.add('anchorless-endpoint');
         circle.setAttribute('cx', String(p.x));
         circle.setAttribute('cy', String(p.y));
         circle.setAttribute('r', String(p.radius));
-        overlay.append(circle);
+        fragment.append(circle);
       }
     }
+    return () => overlay.replaceChildren(fragment);
   }
-  function schedule() {
-    if (!scheduled) {
-      scheduled = true;
-      requestAnimationFrame(draw);
-    }
-  }
+  const schedule = registerLayoutTask(draw, { observe: [reading], scroll: true });
   for (const pair of pairs) {
     for (const marker of pair) {
       marker.dataset.noteConnected = 'true';
@@ -136,9 +132,4 @@ if (reading) {
       schedule();
     }
   });
-  window.addEventListener('scroll', schedule, { passive: true });
-  window.addEventListener('resize', schedule);
-  document.addEventListener('margins:arranged', schedule);
-  document.fonts.ready.then(schedule);
-  new ResizeObserver(schedule).observe(reading);
 }

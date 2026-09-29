@@ -1,3 +1,5 @@
+import { registerLayoutTask } from './reading-layout';
+
 type HandFragment = HTMLElement | Range;
 interface HandRange {
   trigger: HTMLElement;
@@ -50,10 +52,14 @@ export function createHandRangeHighlighter() {
   let highlighted: HandRange | null = null;
 
   function positionBackground() {
-    backgrounds.forEach((background) => {
-      background.hidden = true;
-    });
-    let backgroundIndex = 0;
+    const placements: {
+      container: HTMLElement;
+      left: number;
+      top: number;
+      width: number;
+      height: number;
+    }[] = [];
+    const origins = new Map<HTMLElement, { left: number; top: number }>();
     function paint(
       container: HTMLElement,
       left: number,
@@ -61,16 +67,22 @@ export function createHandRangeHighlighter() {
       width: number,
       height: number,
     ) {
-      const background = (backgrounds[backgroundIndex++] ||= document.createElement('div'));
-      background.className = 'hand-range-background';
-      background.setAttribute('aria-hidden', 'true');
-      if (background.parentElement !== container) container.append(background);
-      const bounds = container.getBoundingClientRect();
-      background.style.left = `${left - bounds.left + container.scrollLeft - container.clientLeft}px`;
-      background.style.top = `${top - bounds.top + container.scrollTop - container.clientTop}px`;
-      background.style.width = `${width}px`;
-      background.style.height = `${height}px`;
-      background.hidden = false;
+      let origin = origins.get(container);
+      if (!origin) {
+        const bounds = container.getBoundingClientRect();
+        origin = {
+          left: bounds.left - container.scrollLeft + container.clientLeft,
+          top: bounds.top - container.scrollTop + container.clientTop,
+        };
+        origins.set(container, origin);
+      }
+      placements.push({
+        container,
+        left: left - origin.left,
+        top: top - origin.top,
+        width,
+        height,
+      });
     }
     highlighted?.groups.forEach((group) => {
       // A source hand can continue into another table cell. Each cell owns its highlight.
@@ -152,7 +164,24 @@ export function createHandRangeHighlighter() {
         }
       });
     });
+    return () => {
+      backgrounds.forEach((background) => {
+        background.hidden = true;
+      });
+      placements.forEach(({ container, left, top, width, height }, index) => {
+        const background = (backgrounds[index] ||= document.createElement('div'));
+        background.className = 'hand-range-background';
+        background.setAttribute('aria-hidden', 'true');
+        if (background.parentElement !== container) container.append(background);
+        background.style.left = `${left}px`;
+        background.style.top = `${top}px`;
+        background.style.width = `${width}px`;
+        background.style.height = `${height}px`;
+        background.hidden = false;
+      });
+    };
   }
+  const schedule = registerLayoutTask(positionBackground);
 
   function update() {
     const active = hovered || focused;
@@ -160,11 +189,8 @@ export function createHandRangeHighlighter() {
     highlighted?.trigger.classList.remove('hand-range-active');
     active?.trigger.classList.add('hand-range-active');
     highlighted = active;
-    positionBackground();
+    schedule();
   }
-  window.addEventListener('resize', positionBackground);
-  document.addEventListener('margins:arranged', positionBackground);
-  document.fonts.addEventListener('loadingdone', positionBackground);
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       hovered = null;
