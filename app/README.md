@@ -206,6 +206,11 @@ files and reloads the preview when they are added, edited or removed in developm
   to the left at the top of each note; descriptions, page labels and hand
   information sit directly below the note’s text. On smaller screens they follow
   the text in normal flow.
+  Below 1100px, page numbers appear as small gray `[4]` markers at their source
+  positions, and each explicit hand begins with `[Hand: Name]`. The corresponding
+  margin labels are hidden. Astro adds the hand names to the first fragment of
+  each source hand; CSS displays both annotations without altering transcription
+  text or search offsets. Subsequent fragments of the same hand are not labelled again.
 - `traditions.json` provides ordered apparatus records, including text between
   entries. The same typography applies to letter, note and apparatus fragments.
 - The index embeds only IDs and filter fields for browser navigation. Repeated

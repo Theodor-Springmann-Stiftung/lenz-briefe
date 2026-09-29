@@ -456,6 +456,18 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 }
 /* Collapse marker spacing with adjacent XML whitespace, including across inline wrappers. */
 .edition-text .page-anchor[data-break=inline]::before { content:' | '; white-space:normal; }
+@media (width < 1100px) {
+  body { --floating-inset:.75rem; --floating-bottom:.75rem; }
+  .back-to-top { display:none; }
+  .quick-legend { width:min(36rem, calc(100% - max(var(--floating-inset), env(safe-area-inset-left)) - max(var(--floating-inset), env(safe-area-inset-right)))); }
+  .index-intro { padding-bottom:1rem; }
+  .detail-header-group { margin-top:1.5rem; margin-bottom:2rem; }
+  .reading-layout .page-margin, .marginalia .hand-label, .marginalia:not(:has(.margin-note)) { display:none; }
+  .letter-body .page-anchor[data-index]::before,
+  .letter-body .hand[data-hand-name]::before { font:400 .75rem/1.4 var(--font-sans); font-variation-settings:normal; color:var(--color-muted); margin-inline:.25em; }
+  .letter-body .page-anchor[data-index]::before { content:'[' attr(data-index) ']'; white-space:nowrap; }
+  .letter-body .hand[data-hand-name]::before { content:'[Hand: ' attr(data-hand-name) ']'; }
+}
 /* The containing line supplies the leading, including when aq fills every
    wrapped line of a paragraph. Larger glyphs must not enlarge that leading. */
 .edition-text .aq { @apply font-sans; font-weight:400; font-variation-settings:normal; font-size:1.12em; line-height:1; }
@@ -569,8 +581,8 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .apparatus-text, .apparatus > p { grid-column:1; }
 }
 @media (max-width: 959px) {
-  /* Reserve one compact filter row and allow additional lines when needed. */
-  .index-intro { grid-template-columns:minmax(0,1fr) auto; grid-template-rows:auto minmax(3rem,auto); row-gap:.5rem; }
+  /* Active filters add a second row only while they are visible. */
+  .index-intro { grid-template-columns:minmax(0,1fr) auto; grid-template-rows:auto; row-gap:.5rem; }
   .index-intro h1 { font-size:clamp(1.6rem, 5vw, 3rem); }
   .edition-count { grid-column:2; }
   .edition-count > span { font-size:clamp(1.25rem, 4vw, 2.25rem); }
@@ -592,8 +604,12 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 @media (max-width: 639px) {
   .site-shell { --page-top-space:4rem; }
   .site-header { padding-top:.6rem; padding-bottom:.6rem; }
-  .site-header-inner { gap:.75rem; }
-  .site-header nav { font-size:.875rem; }
+  .site-header-inner { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:.75rem; }
+  .wordmark { min-width:0; flex-direction:column; align-items:flex-start; gap:.125rem; }
+  .wordmark-name { font-size:1.125rem; white-space:nowrap; }
+  .wordmark-caption { font-size:.65rem; letter-spacing:.08em; white-space:nowrap; }
+  .wordmark-divider { display:none; }
+  .site-header nav { grid-column:1 / -1; font-size:.875rem; }
   .main-navigation-link { padding:.5rem .55rem; gap:.3rem; }
   .year-navigation a { padding:1rem .5rem .45rem; font-size:.85rem; gap:.4rem; }
   .filter-menu summary { gap:.5rem; padding-right:.75rem; padding-left:3.25rem; }

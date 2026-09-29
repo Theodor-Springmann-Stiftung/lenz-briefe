@@ -7,6 +7,7 @@ import SidenotePosition from '../../components/SidenotePosition.astro';
 import {sidenoteOrder} from '../../lib/margin-placement.mjs';
 import {handDeclarations} from '../../lib/hand-settings.mjs';
 import {handFonts, handKeyRefs} from '../../lib/hand-fonts.mjs';
+import {labelHandStarts} from '../../lib/hand-labels.mjs';
 import {catalog, letterFiles, letterUrl, titleFor, type Letter} from '../../lib/edition';
 export function getStaticPaths() {
   return catalog.letters.map((letter,index) => ({params:{letter:letter.letter}, props:{letter,index}}));
@@ -15,11 +16,6 @@ interface Props { letter: Letter; index: number }
 const {letter,index} = Astro.props;
 const {text,sidenotes,traditions} = letterFiles(letter.letter);
 const inPositionNotes = new Map(sidenotes.filter(note => note.type === 'inpos').map(note => [note.id, note]));
-const textParts = text.split(/<div class="sidenote-slot" data-sidenote-id="([^"]+)"><\/div>/);
-const renderedNotes = new Set(textParts.filter((_, index) => index % 2 === 1));
-for (const id of inPositionNotes.keys()) {
-  if (!renderedNotes.has(id)) throw new Error(`Missing in-position sidenote slot: ${id}`);
-}
 const traditionLinks = traditions.filter(item => item.type === 'app' && item.id && item.name);
 const orderedSidenotes = sidenotes.filter(note => note.type !== 'inpos').sort((a, b) => Number(a.page) - Number(b.page) || sidenoteOrder(a.pos) - sidenoteOrder(b.pos) || a.sourceOrder - b.sourceOrder);
 const placed = orderedSidenotes.filter(note => note.anchorId);
@@ -29,6 +25,11 @@ const next = catalog.letters[index + 1];
 const senderRefs = new Set(letter.events.filter(event => event.type === 'sent').flatMap(event => event.persons.map(person => person.ref)));
 const handRefs = handKeyRefs(letter.handRefs, senderRefs, letter.handOrder);
 const hands = Object.fromEntries(handRefs.map(ref => [ref, catalog.people[ref]?.name || `Unbekannte Hand (${ref})`]));
+const textParts = labelHandStarts(text, hands).split(/<div class="sidenote-slot" data-sidenote-id="([^"]+)"><\/div>/);
+const renderedNotes = new Set(textParts.filter((_, index) => index % 2 === 1));
+for (const id of inPositionNotes.keys()) {
+  if (!renderedNotes.has(id)) throw new Error(`Missing in-position sidenote slot: ${id}`);
+}
 const handStyles = [
   // Also apply the base settings to the untagged main hand.
   `.letter-content .edition-text { ${handDeclarations('base')} }`,
