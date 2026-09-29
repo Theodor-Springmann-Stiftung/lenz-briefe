@@ -24,10 +24,10 @@ export async function buildOfflineEdition(directory, base = '/') {
     }
   }
   await visit();
-  // Shared assets first, then pages, then downloads. Even an interrupted
-  // initial download can render the pages it has already saved.
+  // Include every asset before the pages, not just files emitted into _astro.
+  // The worker also waits for the asset batch to finish before starting HTML.
   const priority = (entry) => entry.url.startsWith(`${base}_astro/`) ? 0
-    : entry.page ? 1 : 2;
+    : entry.page ? 2 : 1;
   entries.sort((a, b) => priority(a) - priority(b) || a.url.localeCompare(b.url, 'en'));
   if (new Set(entries.map((entry) => entry.url)).size !== entries.length) throw new Error('Duplicate offline URL');
   const runtime = `// Generated from src/offline/worker.mjs.\n(${createOfflineWorker.toString()})(self);\n`;

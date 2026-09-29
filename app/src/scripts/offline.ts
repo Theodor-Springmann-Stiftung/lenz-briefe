@@ -67,7 +67,9 @@ function initializeOfflineControl(root: HTMLElement) {
     if (!desired && (changing || explicitlyDisabled()) && status.enabled) return;
     latest = status;
     checkbox.checked = status.enabled;
-    optionLabel.textContent = status.enabled && status.ready ? 'Offline verfügbar' : downloadLabel;
+    optionLabel.textContent = status.enabled && status.ready
+      ? status.phase === 'downloading' ? 'Aktualisiere' : 'Offline verfügbar'
+      : downloadLabel;
     feedback.hidden = !status.enabled || status.phase === 'ready';
     progress.hidden = status.phase !== 'downloading';
     retry.hidden = !['paused', 'error'].includes(status.phase);
@@ -77,14 +79,15 @@ function initializeOfflineControl(root: HTMLElement) {
     progress.setAttribute('aria-valuetext', `${percent} Prozent, ${status.done} von ${status.total} Dateien`);
     label.textContent = ['off', 'ready'].includes(status.phase) ? ''
       : status.phase === 'checking' ? (status.ready ? 'Prüft auf Updates …' : 'Wird vorbereitet …')
-      : status.phase === 'downloading' ? `${status.ready ? 'Update' : 'Lädt'} ${percent} %`
+      : status.phase === 'downloading' ? `${percent} %`
       : status.error === 'quota' ? 'Speicher voll'
       : `Pausiert${status.total ? ` · ${percent} %` : ''}`;
     retry.textContent = status.error === 'quota' ? 'Erneut versuchen' : 'Fortsetzen';
     root.title = status.ready && status.updatedAt
       ? `Offline gespeichert: ${new Date(status.updatedAt).toLocaleString('de-DE')}` : '';
     // Announce state changes, not every downloaded file or percentage point.
-    if (previousPhase !== status.phase) announcement.textContent = label.textContent || optionLabel.textContent;
+    if (previousPhase !== status.phase) announcement.textContent = status.phase === 'downloading'
+      ? `${optionLabel.textContent}: ${percent} Prozent` : label.textContent || optionLabel.textContent;
     previousPhase = status.phase;
   }
 

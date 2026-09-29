@@ -58,6 +58,9 @@ download/update progress, changes its label to **Offline verfügbar** after comp
 button if the network or browser storage interrupts the download. Unchecking it
 stops pending requests, removes this edition's caches, and unregisters its worker.
 It does not touch other applications' caches.
+When a changed version is found, the checkbox label becomes **Aktualisiere** for
+the update, then returns to **Offline verfügbar**. Download progress shows just
+the percentage beside the progress bar.
 
 `scripts/offline-build.mjs` runs after the license files have been copied. It emits
 `offline-manifest.json` with canonical URLs, byte sizes and SHA-256 hashes for all
@@ -70,7 +73,12 @@ same hook emits `sw.js` from the self-contained runtime in
 there is no separate deployment command or server component.
 
 The worker downloads at most four files concurrently and checks each response's
-hash before saving it. Cached files themselves are durable checkpoints, so
+hash before saving it. All assets (scripts, styles, fonts, images and search data)
+must finish before any HTML pages start downloading. Failed requests, timeouts and connection resets are retried
+up to three times after waits of one, two and four seconds, including failures
+while reading a response body. If they still fail, the saved progress is kept for
+the next automatic check or reconnection. Unchecking also cancels retry waits.
+Cached files themselves are durable checkpoints, so
 navigating to another page, closing/reopening the site, or the browser stopping a
 worker does not restart completed downloads. A pending manifest and the last
 complete manifest are stored separately. The active edition switches only after

@@ -48,11 +48,17 @@ function environment(initialFiles, { base = '/', caches = new MemoryCaches() } =
   let failures = new Set();
   let overrides = {};
   const requests = [];
+  const retryDelays = [];
   const messages = [];
   const listeners = new Map();
   let unregistered = false;
   const worker = {
-    caches, crypto: webcrypto, setTimeout, clearTimeout,
+    caches, crypto: webcrypto, clearTimeout,
+    setTimeout: (callback, delay) => {
+      // Run backoff waits promptly in tests; keep request deadlines intact.
+      if (delay < 20000) { retryDelays.push(delay); return setTimeout(callback, 0); }
+      return setTimeout(callback, delay);
+    },
     registration: { scope: `https://edition.test${base}`, unregister: async () => { unregistered = true; } },
     clients: { claim: async () => {}, matchAll: async () => [{ url: `https://edition.test${base}`, postMessage: (message) => messages.push(message) }] },
     addEventListener: (name, listener) => listeners.set(name, listener),
@@ -67,7 +73,7 @@ function environment(initialFiles, { base = '/', caches = new MemoryCaches() } =
     },
   };
   return {
-    worker, requests, messages, caches, listeners,
+    worker, requests, retryDelays, messages, caches, listeners,
     restart: () => createOfflineWorker(worker),
     deploy: (next, version) => { files = next; manifest = fixture(next, version); },
     disconnect: () => { offline = true; },
@@ -89,7 +95,7 @@ test('build generates stable versions, deployment-prefixed page URLs, all assets
     await writeFile(path.join(directory, 'Grüße.txt'), 'Grüße');
     const first = await buildOfflineEdition(directory, '/edition/');
     assert.deepEqual(first.entries.map((entry) => entry.url), [
-      '/edition/_astro/font.woff2', '/edition/', '/edition/briefe/1/', '/edition/Gr%C3%BC%C3%9Fe.txt',
+      '/edition/_astro/font.woff2', '/edition/Gr%C3%BC%C3%9Fe.txt', '/edition/', '/edition/briefe/1/',
     ]);
     assert.equal((await buildOfflineEdition(directory, '/edition/')).version, first.version);
     await writeFile(path.join(directory, 'briefe/1/index.html'), 'Korrigierter Brief');
@@ -156,7 +162,7 @@ test('offline manifest excludes source notices, keeps the license page, and down
   }
 });
 
-test('interrupted downloads resume after worker/page restart without redownloading saved files', async () => {
+test('persistent failures pause after bounded retries and resume without redownloading saved files', async () => {
   const env = environment({ '/': 'Index', '/a/': 'A', '/b/': 'B', '/c/': 'C', '/d/': 'D', '/e/': 'E' });
   let runtime = env.restart();
   env.fail(['/b/']);
@@ -164,6 +170,8 @@ test('interrupted downloads resume after worker/page restart without redownloadi
   await runtime.synchronize(true);
   const before = await runtime.status();
   assert.equal(before.phase, 'paused');
+  assert.equal(env.requests.filter((url) => url === '/b/').length, 4);
+  assert.deepEqual(env.retryDelays, [1000, 2000, 4000]);
   assert.ok(before.done > 0 && before.done < before.total);
   const saved = [...env.caches.stores.values()].flatMap((store) => [...store.keys()])
     .filter((url) => url.includes('__offline_revision')).map((url) => new URL(url).pathname);
@@ -174,6 +182,167 @@ test('interrupted downloads resume after worker/page restart without redownloadi
   assert.equal((await runtime.status()).phase, 'ready');
   assert.ok(saved.every((url) => !env.requests.includes(url)));
   assert.ok(env.requests.includes('/b/'));
+});
+
+for (const failure of ['connection reset', 'HTTP error', 'interrupted response body']) {
+  test(`automatically retries after ${failure} without restarting completed files`, async () => {
+    const env = environment({ '/': 'Index', '/a/': 'A', '/b/': 'B' });
+    const fetch = env.worker.fetch;
+    let attempts = 0;
+    env.worker.fetch = async (request, options) => {
+      if (new URL(address(request)).pathname === '/a/' && ++attempts < 3) {
+        if (failure === 'connection reset') throw new TypeError('Connection reset');
+        if (failure === 'HTTP error') return new Response('Temporary failure', { status: 503 });
+        return new Response(new ReadableStream({
+          start(controller) {
+            controller.enqueue(new TextEncoder().encode('partial'));
+            controller.error(new TypeError('Connection reset while reading'));
+          },
+        }));
+      }
+      return fetch(request, options);
+    };
+    const runtime = env.restart();
+    await runtime.enable();
+    await runtime.synchronize(true);
+    assert.equal(attempts, 3);
+    assert.deepEqual(env.retryDelays, [1000, 2000]);
+    assert.equal((await runtime.status()).ready, true);
+    assert.equal((await runtime.status()).done, 3);
+    assert.equal(env.requests.filter((url) => url === '/').length, 1);
+    assert.equal(env.requests.filter((url) => url === '/b/').length, 1);
+    assert.ok(!env.messages.some(({ status }) => status.phase === 'paused'));
+  });
+}
+
+test('a manifest connection failure retries automatically before downloading the edition', async () => {
+  const env = environment({ '/': 'Index' });
+  const fetch = env.worker.fetch;
+  let attempts = 0;
+  env.worker.fetch = async (request, options) => {
+    if (new URL(address(request)).pathname === '/offline-manifest.json' && ++attempts === 1) {
+      throw new TypeError('Connection reset');
+    }
+    return fetch(request, options);
+  };
+  const runtime = env.restart();
+  await runtime.enable();
+  await runtime.synchronize(true);
+  assert.equal(attempts, 2);
+  assert.deepEqual(env.retryDelays, [1000]);
+  assert.equal((await runtime.status()).ready, true);
+});
+
+test('all assets finish before any page starts, even when one font is slow', async () => {
+  // Deliberately list pages first: the worker must enforce the boundary itself.
+  const env = environment({ '/': 'Index', '/a/': 'A', '/font.woff2': 'Font', '/app.js': 'JS', '/image.png': 'Image', '/search.json': 'Search' });
+  const events = [];
+  let releaseFont;
+  let otherAssetsFinished;
+  const fontWait = new Promise((resolve) => { releaseFont = resolve; });
+  const otherAssets = new Promise((resolve) => { otherAssetsFinished = resolve; });
+  const open = env.caches.open.bind(env.caches);
+  env.caches.open = async (name) => {
+    const cache = await open(name);
+    return { ...cache, put: async (request, response) => {
+      await cache.put(request, response);
+      if (name.endsWith(':files')) {
+        events.push(`saved:${new URL(address(request)).pathname}`);
+        if (['/app.js', '/image.png', '/search.json'].every((url) => events.includes(`saved:${url}`))) otherAssetsFinished();
+      }
+    } };
+  };
+  const fetch = env.worker.fetch;
+  env.worker.fetch = async (request, options) => {
+    const url = new URL(address(request)).pathname;
+    if (url === '/font.woff2') await fontWait;
+    if (url.endsWith('/')) events.push(`page:${url}`);
+    return fetch(request, options);
+  };
+  const runtime = env.restart();
+  await runtime.enable();
+  const download = runtime.synchronize(true);
+  try {
+    await otherAssets;
+    assert.ok(!events.some((event) => event.startsWith('page:')));
+  } finally { releaseFont(); }
+  await download;
+  const firstPage = events.findIndex((event) => event.startsWith('page:'));
+  for (const url of ['/font.woff2', '/app.js', '/image.png', '/search.json']) {
+    assert.ok(events.indexOf(`saved:${url}`) < firstPage, url);
+  }
+  assert.equal((await runtime.status()).ready, true);
+});
+
+test('a failed asset prevents page downloads until automatic or manual recovery succeeds', async () => {
+  const env = environment({ '/': 'Index', '/a/': 'A', '/font.woff2': 'Font', '/app.js': 'JS' });
+  const runtime = env.restart();
+  env.fail(['/font.woff2']);
+  await runtime.enable();
+  await runtime.synchronize(true);
+  assert.equal((await runtime.status()).phase, 'paused');
+  assert.equal(env.requests.filter((url) => url === '/font.woff2').length, 4);
+  assert.ok(!env.requests.some((url) => url.endsWith('/')));
+  env.fail([]);
+  await runtime.synchronize(true);
+  assert.equal((await runtime.status()).ready, true);
+  assert.equal(env.requests.filter((url) => url === '/app.js').length, 1);
+});
+
+test('a request timeout retries with a fresh abort controller', async () => {
+  const env = environment({ '/': 'Index' });
+  const fetch = env.worker.fetch;
+  const schedule = env.worker.setTimeout;
+  env.worker.setTimeout = (callback, delay) => delay === 20000 ? setTimeout(callback, 0) : schedule(callback, delay);
+  let attempts = 0;
+  env.worker.fetch = async (request, options) => {
+    if (new URL(address(request)).pathname === '/' && ++attempts === 1) {
+      return new Promise((_resolve, reject) => {
+        options.signal.addEventListener('abort', () => reject(options.signal.reason), { once: true });
+      });
+    }
+    return fetch(request, options);
+  };
+  const runtime = env.restart();
+  await runtime.enable();
+  await runtime.synchronize(true);
+  assert.equal(attempts, 2);
+  assert.deepEqual(env.retryDelays, [1000]);
+  assert.equal((await runtime.status()).ready, true);
+});
+
+test('unchecking cancels a pending retry without making another request', async () => {
+  const env = environment({ '/': 'Index' });
+  const schedule = env.worker.setTimeout;
+  let retryTimer;
+  let retryStarted;
+  let retryCanceled = false;
+  const waiting = new Promise((resolve) => { retryStarted = resolve; });
+  env.worker.setTimeout = (callback, delay) => {
+    if (delay !== 1000) return schedule(callback, delay);
+    retryTimer = setTimeout(callback, 60000);
+    retryStarted();
+    return retryTimer;
+  };
+  env.worker.clearTimeout = (timer) => {
+    if (timer === retryTimer) retryCanceled = true;
+    clearTimeout(timer);
+  };
+  env.fail(['/']);
+  const runtime = env.restart();
+  await runtime.enable();
+  const download = runtime.synchronize(true);
+  await waiting;
+  await runtime.disable();
+  await download;
+  assert.equal(retryCanceled, true);
+  assert.equal(env.requests.filter((url) => url === '/').length, 1);
+  assert.equal((await runtime.status()).enabled, false);
+  assert.equal((await env.caches.keys()).length, 0);
+  env.fail([]);
+  await runtime.enable(true);
+  await runtime.synchronize(true);
+  assert.equal((await runtime.status()).ready, true);
 });
 
 test('updates keep the complete old edition until success, reuse unchanged files, and survive an offline restart', async () => {
