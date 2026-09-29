@@ -191,7 +191,9 @@ test('persistent failures pause after bounded retries and resume without redownl
   env.fail([]);
   runtime = env.restart();
   env.requests.length = 0;
-  await runtime.synchronize(true);
+  const resumed = runtime.synchronize(true);
+  assert.equal((await runtime.status()).phase, 'checking');
+  await resumed;
   assert.equal((await runtime.status()).phase, 'ready');
   assert.ok(saved.every((url) => !env.requests.includes(url)));
   assert.ok(env.requests.includes('/b/'));

@@ -242,6 +242,9 @@ export function createOfflineWorker(worker) {
     if (job) return job;
     if (stopping) return Promise.resolve();
     abort = new AbortController();
+    // A status request can arrive before run() finishes reading the cache.
+    // Don't report the preceding paused state while a resume is starting.
+    phase = 'checking';
     job = run(force, abort.signal).catch(async (error) => {
       if (stopping) return;
       const saved = await state();

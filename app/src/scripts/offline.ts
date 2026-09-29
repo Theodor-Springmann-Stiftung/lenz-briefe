@@ -32,6 +32,10 @@ function initializeOfflineControl(root: HTMLElement) {
   let changing = false;
   let previousPhase = '';
   let latest: OfflineStatus | undefined;
+  let recoveryTimer: number | undefined;
+  let recoveryAttempt = 0;
+  let recoveryNeeded = false;
+  const maxRecoveryAttempts = 5;
 
   root.hidden = false;
   if (root.dataset.production !== 'true') {
@@ -61,14 +65,45 @@ function initializeOfflineControl(root: HTMLElement) {
     catch { /* The worker's persistent state also restores the preference. */ }
   }
 
+  function clearRecovery(reset = false) {
+    if (recoveryTimer !== undefined) window.clearTimeout(recoveryTimer);
+    recoveryTimer = undefined;
+    if (reset) recoveryAttempt = 0;
+  }
+
+  function scheduleRecovery() {
+    if (!desired || !recoveryNeeded || recoveryAttempt >= maxRecoveryAttempts
+      || !navigator.onLine || recoveryTimer !== undefined) return;
+    // The page can wake a stopped worker; saved cache entries survive both
+    // navigation and worker suspension. Back off during a prolonged outage.
+    const delay = Math.min(5000 * 2 ** recoveryAttempt, 60000);
+    recoveryTimer = window.setTimeout(() => {
+      recoveryTimer = undefined;
+      recoveryAttempt++;
+      synchronize(true);
+    }, delay);
+  }
+
+  function recoveryLabel() {
+    const percent = latest?.totalBytes ? Math.floor(latest.bytes / latest.totalBytes * 100) : undefined;
+    const text = recoveryAttempt >= maxRecoveryAttempts ? 'Pausiert'
+      : navigator.onLine ? 'Wird fortgesetzt …' : 'Warte auf Verbindung …';
+    return `${text}${percent === undefined ? '' : ` · ${percent} %`}`;
+  }
+
   function render(status: OfflineStatus) {
     if (changing && status.enabled !== desired) return;
     if (!desired && (changing || explicitlyDisabled()) && status.enabled) return;
+    if (latest && status.done > latest.done) recoveryAttempt = 0;
     latest = status;
+    recoveryNeeded = status.enabled && ['paused', 'error'].includes(status.phase) && status.error !== 'quota';
+    const recovering = recoveryNeeded && recoveryAttempt < maxRecoveryAttempts;
+    if (recoveryNeeded) scheduleRecovery();
+    else clearRecovery(['off', 'ready'].includes(status.phase));
     checkbox.checked = status.enabled;
-    feedback.hidden = !status.enabled || !['downloading', 'paused', 'error'].includes(status.phase);
-    progress.hidden = status.phase !== 'downloading';
-    retry.hidden = !['paused', 'error'].includes(status.phase);
+    progress.hidden = status.phase !== 'downloading' && !(recovering && status.total);
+    retry.hidden = !status.enabled || !['paused', 'error'].includes(status.phase) || recovering;
+    feedback.hidden = progress.hidden && retry.hidden;
     const percent = status.totalBytes ? Math.floor(status.bytes / status.totalBytes * 100) : 0;
     progress.value = percent;
     progress.title = `${status.done} / ${status.total} Dateien`;
@@ -78,7 +113,7 @@ function initializeOfflineControl(root: HTMLElement) {
       : status.phase === 'checking' ? (status.ready ? 'Prüft auf Updates …' : 'Wird vorbereitet …')
       : status.phase === 'downloading' ? `${status.ready ? 'Aktualisiere' : 'Download'} · ${percent} %`
       : status.error === 'quota' ? 'Speicher voll'
-      : `Pausiert${status.total ? ` · ${percent} %` : ''}`;
+      : recoveryLabel();
     retry.textContent = status.error === 'quota' ? 'Erneut versuchen' : 'Fortsetzen';
     root.title = status.ready && status.updatedAt
       ? `Offline gespeichert: ${new Date(status.updatedAt).toLocaleString('de-DE')}` : '';
@@ -88,12 +123,17 @@ function initializeOfflineControl(root: HTMLElement) {
   }
 
   function showFailure(error: unknown) {
+    const quota = error instanceof DOMException && error.name === 'QuotaExceededError';
+    recoveryNeeded = desired && !quota;
+    if (recoveryNeeded) scheduleRecovery();
+    else clearRecovery();
     checkbox.checked = desired;
-    feedback.hidden = !desired;
     progress.hidden = true;
-    retry.hidden = !desired;
-    optionLabel.textContent = error instanceof DOMException && error.name === 'QuotaExceededError'
-      ? 'Speicher voll' : navigator.onLine ? 'Offline-Nutzung pausiert' : 'Zum Laden online gehen';
+    retry.hidden = !desired || (!quota && recoveryAttempt < maxRecoveryAttempts);
+    feedback.hidden = retry.hidden;
+    retry.textContent = quota ? 'Erneut versuchen' : 'Fortsetzen';
+    optionLabel.textContent = quota ? 'Speicher voll'
+      : desired ? recoveryLabel() : 'Entfernen fehlgeschlagen';
     announcement.textContent = optionLabel.textContent;
   }
 
@@ -156,6 +196,8 @@ function initializeOfflineControl(root: HTMLElement) {
 
   async function synchronize(force = false) {
     if (!desired || changing) return;
+    if (!force && (recoveryTimer !== undefined || !retry.hidden)) return;
+    clearRecovery();
     try {
       const status = await command('ENABLE', force);
       if (desired) render(status);
@@ -164,6 +206,8 @@ function initializeOfflineControl(root: HTMLElement) {
 
   checkbox.addEventListener('change', async () => {
     remember(checkbox.checked);
+    clearRecovery(true);
+    recoveryNeeded = false;
     changing = true;
     checkbox.disabled = true;
     feedback.hidden = true;
@@ -185,9 +229,10 @@ function initializeOfflineControl(root: HTMLElement) {
     finally {
       changing = false;
       checkbox.disabled = false;
+      scheduleRecovery();
     }
   });
-  retry.addEventListener('click', () => synchronize(true));
+  retry.addEventListener('click', () => { clearRecovery(true); synchronize(true); });
   navigator.serviceWorker.addEventListener('message', (event) => {
     if (event.data?.type !== 'lenz:offline-status' || event.data.scope !== base.href) return;
     const status: OfflineStatus = event.data.status;
@@ -199,8 +244,17 @@ function initializeOfflineControl(root: HTMLElement) {
   });
   window.addEventListener('online', () => {
     if (!desired) return;
+    if (!retry.hidden) return;
+    clearRecovery(true);
     registration?.update().catch(() => {});
     synchronize(true);
+  });
+  window.addEventListener('offline', () => {
+    clearRecovery();
+    if (recoveryNeeded) {
+      optionLabel.textContent = recoveryLabel();
+      announcement.textContent = optionLabel.textContent;
+    }
   });
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') synchronize();
@@ -211,6 +265,8 @@ function initializeOfflineControl(root: HTMLElement) {
     desired = event.newValue === 'enabled';
     if (desired) synchronize();
     else if (!changing) {
+      clearRecovery(true);
+      recoveryNeeded = false;
       checkbox.checked = false;
       optionLabel.textContent = downloadLabel;
       feedback.hidden = true;
