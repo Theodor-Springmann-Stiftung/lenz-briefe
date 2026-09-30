@@ -34,6 +34,8 @@ test('the generated page covers every locked npm version and classifies browser 
       '@popperjs/core',
       'tailwindcss',
       'remixicon',
+      '@vivliostyle/core',
+      'fast-diff',
     ].sort(),
   );
   assert.ok(entries.find((entry) => entry.product.startsWith('saxonche-') && !entry.runtime));

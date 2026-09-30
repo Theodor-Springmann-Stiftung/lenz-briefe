@@ -78,7 +78,7 @@ const sectionLinks = [
 ];
 ---
 
-<Layout wide title={`Brief ${letter.letter} · ${titleFor(letter)} · Lenz Briefe`}>
+<Layout wide title={`LKB ${letter.letter} - ${titleFor(letter)}`}>
   {handStyles && <style is:inline set:html={handStyles} />}
   <div class="letter-content">
     <div class="letter-spine" aria-hidden="true"></div>
@@ -97,6 +97,7 @@ const sectionLinks = [
           >
             <Icon name="printer" />
           </button>
+          <span class="letter-print-status" role="status" data-print-status hidden></span>
         </div>
         <nav class="letter-navigation" aria-label="Briefnavigation">
           {previous && (
@@ -232,9 +233,6 @@ const sectionLinks = [
       <LetterCitation letter={letter} />
     </section>
   </div>
-  <!-- A print copy lets the citation share an unbroken block with the footer
-       while the screen citation stays inside the apparatus. -->
-  <LetterCitation slot="print-citation" letter={letter} printOnly />
   <QuickLegend />
   <script>
     import '../../scripts/search-highlight';
@@ -249,8 +247,6 @@ const sectionLinks = [
     import '../../scripts/note-connections';
   </script>
   <script>
-    document.querySelector<HTMLButtonElement>('[data-print-letter]')?.addEventListener('click', () => {
-      window.print();
-    });
+    import '../../scripts/print-letter';
   </script>
 </Layout>

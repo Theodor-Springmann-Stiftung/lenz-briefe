@@ -191,6 +191,7 @@ The license column records package metadata, not a replacement for the actual li
 | @types/node | 26.6.2 | MIT | [LICENSE](npm/@types__node@26.6.2/LICENSE) |
 | @types/unist | 3.0.3 | MIT | [LICENSE](npm/@types__unist@3.0.3/LICENSE) |
 | @ungap/structured-clone | 1.4.0 | ISC | [LICENSE](npm/@ungap__structured-clone@1.4.0/LICENSE) |
+| @vivliostyle/core | 2.45.2 | AGPL-3.0 | [LICENSE](npm/@vivliostyle__core@2.45.2/LICENSE), [README.md](npm/@vivliostyle__core@2.45.2/README.md), [SOURCE.md](npm/@vivliostyle__core@2.45.2/SOURCE.md) |
 | @volar/kit | 2.4.28 | MIT | [LICENSE](npm/@volar__kit@2.4.28/LICENSE) |
 | @volar/language-core | 2.4.28 | MIT | [LICENSE](npm/@volar__language-core@2.4.28/LICENSE) |
 | @volar/language-server | 2.4.28 | MIT | [LICENSE](npm/@volar__language-server@2.4.28/LICENSE) |
@@ -254,6 +255,7 @@ The license column records package metadata, not a replacement for the actual li
 | eventemitter3 | 5.0.4 | MIT | [LICENSE](npm/eventemitter3@5.0.4/LICENSE) |
 | extend | 3.0.2 | MIT | [LICENSE](npm/extend@3.0.2/LICENSE) |
 | fast-deep-equal | 3.1.3 | MIT | [LICENSE](npm/fast-deep-equal@3.1.3/LICENSE) |
+| fast-diff | 1.3.0 | Apache-2.0 | [LICENSE](npm/fast-diff@1.3.0/LICENSE) |
 | fast-string-truncated-width | 3.0.3 | MIT | [license](npm/fast-string-truncated-width@3.0.3/license) |
 | fast-string-width | 3.0.2 | MIT | [license](npm/fast-string-width@3.0.2/license) |
 | fast-uri | 3.1.8 | BSD-3-Clause | [LICENSE](npm/fast-uri@3.1.8/LICENSE) |

@@ -52,9 +52,29 @@ otherwise `uv run`. An unsuccessful export stops the site build.
 
 ## Printing
 
-Use the print button beside the correspondence controls, or the browser's Print command,
-to print or save the current page as PDF. The
-print stylesheet uses A4 pages with 24 mm top/bottom, 25 mm right and 21 mm left
+The letter print button loads `@vivliostyle/core` on demand, passes a snapshot of
+the current document and its styles to `printHTML()`, and opens the browser print
+dialog after pagination finishes in a hidden iframe. The visible page is preserved.
+The snapshot includes the current citation access date and hand styles, removes
+scripts and live popovers, embeds stylesheet text, and supplies a base URL for
+local fonts and links. The compiled styles are loaded on demand with the snapshot
+helper, preserving Vivliostyle's paged-media rules without fetching CSS again.
+It retains the self-hosted font faces and omits Astro's local-only screen fallback
+faces, allowing native fallbacks if a font is unavailable.
+The generated library and snapshot chunks are included in the offline asset cache.
+Preparation disables the button and shows a status; failures allow another attempt.
+In Firefox, the prepared pages use a 297 mm print-height cap instead of Vivliostyle's `100vh`
+cap, which clips page margins in Firefox's hidden iframe on single-page documents.
+The native page margins are reset to zero after typesetting; the document margins
+are already laid out inside each sheet. This avoids Firefox adding blank sheets
+for the library's generated negative page margins.
+After pagination, the hidden running-footer placeholder is removed so it cannot
+affect Firefox's fit-to-page scale; the visible footer remains in the last margin.
+These adjustments apply only in Firefox, detected through `-moz-appearance` support.
+Chromium retains Vivliostyle's own page dimensions and zoom-based print layout.
+The browser's own Print command still uses the native print stylesheet.
+
+The print stylesheet uses A4 pages with 24 mm top/bottom, 25 mm right and 21 mm left
 margins, and page numbers where the browser supports CSS page-margin boxes.
 Letter text, margin notes, apparatus and Edition content have an additional
 25 mm right inset, giving them a 50 mm right margin. Headers and horizontal rules
@@ -64,13 +84,18 @@ and sender/receiver lines have a compact 0.5 mm gap. Disable the
 browser's own headers and footers for the cleanest result.
 
 Letters retain their LKB number, metadata, transcription, hands, apparatus and
-citation. Source page numbers and hand names appear inline in the letter. Margin
+citation. Source page numbers appear inline; hand names occupy a narrow right-hand
+column alongside their marked passages. Margin
 notes follow the letter under “Randnotizen”, with their position descriptions and
 without added page prefixes. The small apparatus text is limited to 80ch.
 In-position notes stay at their source location. Paragraphs and individual margin
 notes stay together on a page when they fit. Source icons remain visible beside
 the date; date and sender/receiver names use the same 10pt size as the letter.
-The print citation and footer stay together on one page. The bracketed citation
+The citation stays in the apparatus independently of the footer. With Vivliostyle,
+the footer becomes a running element at the end of the document and appears only
+in the final page's bottom margin, above the existing page number. It does not
+create a separate footer page. Native printing leaves it in normal flow.
+The print citation heading is “Quelle”; the website retains “Zitation”. The bracketed citation
 URL and access date occupy a separate line on screen and in print, with a dotted
 underline on the URL. The print footer aligns CC BY with the project line and
 links to the Jakob Lenz Archiv instead of the legal notice; its CC BY and

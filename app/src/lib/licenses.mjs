@@ -4,7 +4,7 @@ import path from 'node:path';
 // Astro bundles this module into a different directory when prerendering.
 // Resolve from the application root, as the edition data loader does.
 export const licensesDirectory = path.resolve(process.cwd(), '../licenses');
-const runtimePackages = new Set(['tippy.js', '@popperjs/core', 'tailwindcss', 'remixicon']);
+const runtimePackages = new Set(['tippy.js', '@popperjs/core', 'tailwindcss', 'remixicon', '@vivliostyle/core', 'fast-diff']);
 const fontNames = {
   LinuxBiolinum: 'Linux Biolinum',
   SourceSerif4: 'Source Serif 4',

@@ -25,6 +25,7 @@
 - 367: Sprachenklaviatur?
 - Archiv link with/without text
 - Search matching: über Worte hinweg oder nicht?
+- briefe/236/ -- Spiegelverkehrt -- nichts ist spiegelverkehrt (vertikal gespiegelt evtl.)
 
 ## Handschrift
 - 324: Adresse auf der dritten Seite 

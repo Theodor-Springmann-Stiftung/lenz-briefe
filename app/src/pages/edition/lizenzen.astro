@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import LicenseTable from '../../components/LicenseTable.astro';
 import { loadLicenses, readLicenseFile, licenseFileUrl } from '../../lib/licenses.mjs';
 import { pageUrl } from '../../lib/pages';
+import { revision } from '../../lib/revision';
 const entries = loadLicenses();
 const runtime = entries.filter((entry) => entry.runtime);
 const build = entries.filter((entry) => !entry.runtime);
@@ -93,6 +94,14 @@ const url = (file: string) => licenseFileUrl(file, import.meta.env.BASE_URL);
       ))}
 
       <h2 id="laufzeit">Laufzeitabhängigkeiten</h2>
+      <p>
+        Die Druckfunktion verwendet Vivliostyle Core 2.45.2 unter der{' '}
+        <a href={url('npm/@vivliostyle__core@2.45.2/LICENSE')}>GNU AGPL Version 3</a>.
+        Die Bibliothek und ihre Druckintegration werden ohne Gewährleistung bereitgestellt.
+        Der <a href="https://github.com/vivliostyle/vivliostyle.js/archive/refs/tags/v2.45.2.tar.gz">Quellcode der Bibliothek</a>{' '}
+        und der <a href={revision.url}>Quellcode dieser Website einschließlich der Druckintegration</a>{' '}
+        sind öffentlich verfügbar. Die Druckintegration steht ebenfalls unter AGPL-3.0.
+      </p>
       <p>
         Diese Bibliotheken, Schriftarten und Icons sind Teil der ausgelieferten Website. Die
         Einteilung bezieht sich auf die Website im Browser; Tailwind erzeugt beispielsweise die

@@ -68,7 +68,7 @@
   .edition-menu-panel a[href]:hover, .edition-menu-panel a[href]:focus-visible { color:var(--color-ink); background:#e6e9e1; }
   .edition-menu-panel a[aria-current=page] { color:var(--color-paper); background:var(--color-selected); }
   .edition-menu-panel a[aria-current=page]::after { content:'•'; color:inherit; }
-  .print-ending { display:contents; }
+  .letter-print-status { font-size:.875rem; }
   .site-footer { @apply mt-10 pt-4 pb-3 text-sm text-ink; flex-shrink:0; border-top:1px solid #a8b2a8; background:#e3e8e3; }
   .site-footer-inner { @apply flex flex-wrap items-center justify-between gap-x-6 gap-y-2; width:100%; max-width:1600px; margin-inline:auto; }
   .site-footer a { @apply underline; }

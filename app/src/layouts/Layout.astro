@@ -68,59 +68,56 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {
     <main id="inhalt" class:list={['site-shell', { 'site-shell--wide': wide }]}>
       <slot />
     </main>
-    <div class="print-ending">
-      <slot name="print-citation" />
-      <footer class="site-footer">
-        <div class="site-footer-inner">
-          <p class="footer-license-line">
-            {[false, true].map((printOnly) => {
-              const Tag = printOnly ? 'span' : 'a';
-              return (
-                <Tag
-                  class:list={['footer-license', printOnly ? 'print-only' : 'screen-only']}
-                  href={printOnly ? undefined : 'https://creativecommons.org/licenses/by/4.0/'}
-                >
-                  <span class="footer-license-icons" aria-hidden="true">
-                    <Icon name="creativeCommons" />
-                    <Icon name="creativeCommonsBy" />
-                  </span>
-                  <span class="font-sans">CC BY 4.0</span>
-                </Tag>
-              );
-            })}
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="footer-license-line">
+          {[false, true].map((printOnly) => {
+            const Tag = printOnly ? 'span' : 'a';
+            return (
+              <Tag
+                class:list={['footer-license', printOnly ? 'print-only' : 'screen-only']}
+                href={printOnly ? undefined : 'https://creativecommons.org/licenses/by/4.0/'}
+              >
+                <span class="footer-license-icons" aria-hidden="true">
+                  <Icon name="creativeCommons" />
+                  <Icon name="creativeCommonsBy" />
+                </span>
+                <span class="font-sans">CC BY 4.0</span>
+              </Tag>
+            );
+          })}
+          <span aria-hidden="true">·</span>
+          <time datetime={generatedAt.toISOString()}>{generationMonth}</time>
+        </p>
+        <p class="text-right">
+          lenz-briefe.de – ein Projekt der{' '}
+          <a class="screen-only" href="https://theodor-springmann-stiftung.de/">Theodor Springmann Stiftung</a>
+          <span class="print-only">Theodor Springmann Stiftung</span>
+          <span class="footer-legal">
+            {' '}· <a href={pageUrl('datenschutz')}>Impressum &amp; Datenschutz</a>{' '}
+          </span>
+          <span class="footer-tools">
             <span aria-hidden="true">·</span>
-            <time datetime={generatedAt.toISOString()}>{generationMonth}</time>
-          </p>
-          <p class="text-right">
-            lenz-briefe.de – ein Projekt der{' '}
-            <a class="screen-only" href="https://theodor-springmann-stiftung.de/">Theodor Springmann Stiftung</a>
-            <span class="print-only">Theodor Springmann Stiftung</span>
-            <span class="footer-legal">
-              {' '}· <a href={pageUrl('datenschutz')}>Impressum &amp; Datenschutz</a>{' '}
+            <OfflineToggle />
+            <span class="footer-offline-separator" aria-hidden="true">·</span>
+            <span class="footer-code">
+              <Icon name="code" class="footer-code-icon" />
+              <a
+                class="font-mono"
+                href={revision.url}
+                aria-label={`Commit ${revision.shortHash.toUpperCase()}`}
+              >
+                {revision.shortHash.toUpperCase()}
+              </a>
             </span>
-            <span class="footer-tools">
-              <span aria-hidden="true">·</span>
-              <OfflineToggle />
-              <span class="footer-offline-separator" aria-hidden="true">·</span>
-              <span class="footer-code">
-                <Icon name="code" class="footer-code-icon" />
-                <a
-                  class="font-mono"
-                  href={revision.url}
-                  aria-label={`Commit ${revision.shortHash.toUpperCase()}`}
-                >
-                  {revision.shortHash.toUpperCase()}
-                </a>
-              </span>
-            </span>
-            <span class="print-only footer-archive">
-              Mehr über das Jakob Lenz Archiv auf{' '}
-              <a href="https://lenz-archiv.de">https://lenz-archiv.de</a>
-            </span>
-          </p>
-        </div>
-      </footer>
-    </div>
+          </span>
+          <span class="print-only footer-archive">
+            Mehr über das Jakob Lenz Archiv auf{' '}
+            <a href="https://lenz-archiv.de">https://lenz-archiv.de</a>
+          </span>
+        </p>
+      </div>
+    </footer>
     <BackToTop />
     <script>
       import '../scripts/tooltips';

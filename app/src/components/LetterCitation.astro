@@ -4,17 +4,13 @@ import { letterUrl } from '../lib/edition';
 import { citationFor } from '../lib/citation';
 interface Props {
   letter: Letter;
-  printOnly?: boolean;
 }
-const { letter, printOnly = false } = Astro.props;
+const { letter } = Astro.props;
 const url = new URL(letterUrl(letter.letter), Astro.site ?? Astro.url.origin).href;
 ---
 
-<div
-  class:list={['apparatus-entry', printOnly ? 'print-only print-citation' : 'screen-only']}
-  id={printOnly ? undefined : 'zitieren'}
->
-  <h2>Zitation</h2>
+<div class="apparatus-entry" id="zitieren">
+  <h2><span class="screen-only">Zitation</span><span class="print-only">Quelle</span></h2>
   <p class="edition-text apparatus-text apparatus-xml-text">
     {citationFor(letter)}
     <span class="citation-access">[<a class="citation-url" href={url}>{url}</a>, abgerufen am{' '}
