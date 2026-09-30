@@ -70,6 +70,7 @@
   .edition-menu-panel a[aria-current=page]::after { content:'•'; color:inherit; }
   .letter-print-status { display:inline-flex; align-items:center; gap:.5rem; font-size:.875rem; }
   .letter-print-status.is-preparing::before { content:''; }
+  .letter-print-progress { width:6rem; height:.5rem; flex-shrink:0; accent-color:var(--color-accent); }
   .selection-print-tools { display:flex; align-items:center; justify-content:flex-end; gap:1rem; margin-top:1.5rem; }
   .site-footer { @apply mt-10 pt-4 pb-3 text-sm text-ink; flex-shrink:0; border-top:1px solid #a8b2a8; background:#e3e8e3; }
   .site-footer-inner { @apply flex flex-wrap items-center justify-between gap-x-6 gap-y-2; width:100%; max-width:1600px; margin-inline:auto; }

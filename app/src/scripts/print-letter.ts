@@ -1,17 +1,15 @@
 // SPDX-License-Identifier: AGPL-3.0
 // Copyright (c) 2026 Theodor Springmann Stiftung.
 
+import { printStatus } from './print-status';
+
 const button = document.querySelector<HTMLButtonElement>('[data-print-letter]');
-const status = document.querySelector<HTMLElement>('[data-print-status]');
+const status = printStatus(document.querySelector<HTMLElement>('[data-print-status]'));
 
 button?.addEventListener('click', async () => {
   button.disabled = true;
   button.setAttribute('aria-busy', 'true');
-  if (status) {
-    status.hidden = false;
-    status.classList.add('is-preparing');
-    status.textContent = 'Druck wird vorbereitet …';
-  }
+  status.start('Druck wird vorbereitet …');
   try {
     // Download the typesetter only when requested; the offline build caches this
     // chunk along with the other assets. printHTML waits for full pagination.
@@ -22,17 +20,12 @@ button?.addEventListener('click', async () => {
     window.dispatchEvent(new Event('beforeprint'));
     const html = printDocument(document);
     const title = document.title;
-    await printHtml(html, title, () => {
-      if (status) status.hidden = true;
-    });
+    await printHtml(html, title, status.hide, 90_000, status.progress);
   } catch (error) {
     console.error('Letter print failed', error);
-    if (status) {
-      status.hidden = false;
-      status.textContent = 'Druck konnte nicht vorbereitet werden. Bitte erneut versuchen.';
-    }
+    status.error('Druck konnte nicht vorbereitet werden. Bitte erneut versuchen.');
   } finally {
-    status?.classList.remove('is-preparing');
+    status.stop();
     button.disabled = false;
     button.removeAttribute('aria-busy');
   }

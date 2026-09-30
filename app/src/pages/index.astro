@@ -126,7 +126,10 @@ const firstGroup = catalog.groups[0];
       ))}
     </ol>
     <div class="selection-print-tools" hidden>
-      <span class="letter-print-status" role="status" data-selection-print-status hidden></span>
+      <span class="letter-print-status" role="status" data-selection-print-status hidden>
+        <span data-print-message></span>
+        <progress class="letter-print-progress" data-print-progress max="100" value="0" aria-label="Druckvorbereitung" hidden></progress>
+      </span>
       <button class="all-letters-link" type="button" data-print-selection>
         <Icon name="printer" />
         Auswahl drucken

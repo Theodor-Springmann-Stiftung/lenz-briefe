@@ -97,7 +97,10 @@ const sectionLinks = [
           >
             <Icon name="printer" />
           </button>
-          <span class="letter-print-status" role="status" data-print-status hidden></span>
+          <span class="letter-print-status" role="status" data-print-status hidden>
+            <span data-print-message></span>
+            <progress class="letter-print-progress" data-print-progress max="100" value="0" aria-label="Druckvorbereitung" hidden></progress>
+          </span>
         </div>
         <nav class="letter-navigation" aria-label="Briefnavigation">
           {previous && (

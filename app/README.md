@@ -63,6 +63,10 @@ It retains the self-hosted font faces and omits Astro's local-only screen fallba
 faces, allowing native fallbacks if a font is unavailable.
 The generated library and snapshot chunks are included in the offline asset cache.
 Preparation disables the button and shows a status; failures allow another attempt.
+Both print buttons display Vivliostyle’s pagination progress as a percentage and
+page count. This measures content laid out, not elapsed time. A spinner remains
+active during loading and final layout adjustments; the selection also shows
+its downloaded-letter count. The progress hook is removed on completion or failure.
 In Firefox, the prepared pages use a 297 mm print-height cap instead of Vivliostyle's `100vh`
 cap, which clips page margins in Firefox's hidden iframe on single-page documents.
 The native page margins are reset to zero after typesetting; the document margins

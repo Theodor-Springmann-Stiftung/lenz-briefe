@@ -5,7 +5,8 @@ The original application code of this project is licensed under the
 Copyright (c) 2026 Theodor Springmann Stiftung.
 
 The Vivliostyle print integration in `app/src/scripts/print-letter.ts`,
-`app/src/scripts/print-selection.ts`, `app/src/lib/print-html.ts`,
+`app/src/scripts/print-selection.ts`, `app/src/scripts/print-status.ts`,
+`app/src/lib/print-html.ts`,
 `app/src/lib/print-document.ts`, `app/src/lib/print-tabs.ts`, `app/src/lib/print-selection-document.ts` and
 `app/src/lib/print-selection.mjs` is licensed under AGPL-3.0, as stated in those files.
 See the [Vivliostyle notices and source information](licenses/npm/@vivliostyle__core@2.45.2/SOURCE.md).
