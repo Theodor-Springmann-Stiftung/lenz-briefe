@@ -5,7 +5,8 @@ import unittest
 from unittest.mock import patch
 from lxml import etree, html
 from transform_python.catalog import date_sort
-from transform_python.common import Timings, read_xml, NSMAP
+from transform_python.common import Timings, NSMAP
+from test_fixtures import read_fixture_xml as read_xml
 from transform_python.exporter import collect_hand_order, extract_meta, run_export, StylesheetRunner
 
 
@@ -22,7 +23,8 @@ class SiteExportTests(unittest.TestCase):
     def setUpClass(cls):
         cls.temp = TemporaryDirectory()
         cls.output = Path(cls.temp.name) / 'generated'
-        cls.result = run_export(str(cls.output))
+        with patch('transform_python.exporter.read_xml', side_effect=read_xml):
+            cls.result = run_export(str(cls.output))
         cls.catalog = json.loads((cls.output / 'catalog.json').read_text())
         cls.runner = StylesheetRunner.create()
 
@@ -30,7 +32,7 @@ class SiteExportTests(unittest.TestCase):
     def tearDownClass(cls):
         cls.temp.cleanup()
 
-    def test_all_current_sidenotes_survive_with_resolved_targets(self):
+    def test_all_fixture_sidenotes_survive_with_resolved_targets(self):
         notes = [n for p in self.output.glob('letters/*/sidenotes.json')
                  for group in json.loads(p.read_text()).values() for n in group]
         self.assertEqual(len(notes), len(read_xml('briefe.xml').findall('.//l:sidenote', NSMAP)))
@@ -39,7 +41,7 @@ class SiteExportTests(unittest.TestCase):
         self.assertEqual(warnings, [])
         self.assertTrue(all(n['html'].strip() for n in notes))
 
-    def test_current_sidenotes_render_without_nested_hands(self):
+    def test_fixture_sidenotes_render_without_nested_hands(self):
         for path in self.output.glob('letters/*/sidenotes.json'):
             for group in json.loads(path.read_text()).values():
                 for note in group:
@@ -70,6 +72,10 @@ class SiteExportTests(unittest.TestCase):
             self.assertEqual(len(notes), 1)
             self.assertIsNone(notes[0]['anchorId'])
             self.assertIn('Unmatched note retained for readers.', notes[0]['html'])
+            search = json.loads((Path(directory) / 'search.json').read_text())
+            self.assertTrue(any(record['kind'] == 'sidenote'
+                                and record['anchor'] == notes[0]['id']
+                                for record in search['blocks']))
 
     def test_inpos_sidenote_preserves_position_hand_and_single_search_record(self):
         def read_with_inpos_note(filename):
@@ -147,10 +153,10 @@ class SiteExportTests(unittest.TestCase):
 
     def test_catalog_chronology_groups_and_filters(self):
         letters = self.catalog['letters']
-        self.assertEqual(len(letters),374)
-        self.assertEqual([g['count'] for g in self.catalog['groups']], [7,85,177,53,52])
-        self.assertEqual([n['sort']['key'] for n in letters], sorted(n['sort']['key'] for n in letters))
-        self.assertEqual(letters[0]['letter'],'1')
+        self.assertEqual(len(letters), 4)
+        self.assertEqual([g['count'] for g in self.catalog['groups']], [1, 1, 1, 1])
+        self.assertEqual([letter['letter'] for letter in letters], ['2', '1', '7', '9'])
+        self.assertEqual([letter['groupId'] for letter in letters], ['1760-1769', '1770-1779', 'other', 'undated'])
         for letter in letters:
             self.assertEqual(set(letter['personIds']), {p['ref'] for e in letter['events'] for p in e['persons']})
             self.assertEqual(set(letter['placeIds']), {p['ref'] for e in letter['events'] for p in e['locations']})
@@ -177,15 +183,49 @@ class SiteExportTests(unittest.TestCase):
         self.assertIsNone(date_sort([{'type':'received','dates':[{'when':'1776'}]}]))
 
     def test_apparatus_interstitial_text_survives(self):
-        for letter in ['185','348']:
-            data = json.loads((self.output / f'letters/{letter}/traditions.json').read_text())
-            self.assertTrue(any(r['type'] == 'text' and '.' in r['html'] for r in data))
+        # Fixed fragments keep this regression independent of editorial changes
+        # to punctuation in the real letters.
+        sources = {
+            '1': '''<letterTradition xmlns="https://lenz-archiv.de" letter="1">
+                Vor dem ersten Apparat.<app ref="4">Provenienz.</app>.
+                <app ref="11">Übersetzung.</app>
+                Nach dem letzten Apparat.</letterTradition>''',
+            '2': '''<letterTradition xmlns="https://lenz-archiv.de" letter="2">
+                <app ref="4">Provenienz.</app>
+                </letterTradition>''',
+        }
+
+        def read_with_fixed_apparatus(filename):
+            doc = read_xml(filename)
+            if filename == 'traditions.xml':
+                for letter, source in sources.items():
+                    original = doc.find(f'.//l:letterTradition[@letter="{letter}"]', NSMAP)
+                    original.getparent().replace(original, etree.fromstring(source))
+            return doc
+
+        with TemporaryDirectory() as directory, patch(
+            'transform_python.exporter.read_xml', side_effect=read_with_fixed_apparatus,
+        ):
+            run_export(directory)
+            data = json.loads((Path(directory) / 'letters/1/traditions.json').read_text())
+            self.assertEqual([record['type'] for record in data], ['text', 'app', 'text', 'app', 'text'])
+            texts = [
+                ' '.join(html.fragment_fromstring(record['html'], create_parent='div').text_content().split())
+                for record in data
+            ]
+            self.assertEqual(texts, [
+                'Vor dem ersten Apparat.', 'Provenienz.', '.',
+                'Übersetzung.', 'Nach dem letzten Apparat.',
+            ])
+            # Whitespace outside an entry must not produce extra text records.
+            data = json.loads((Path(directory) / 'letters/2/traditions.json').read_text())
+            self.assertEqual([record['type'] for record in data], ['app'])
 
     def test_search_records_all_have_real_unique_destinations(self):
         index = json.loads((self.output / 'search.json').read_text())
         self.assertEqual(index['version'], 1)
         self.assertEqual({r['kind'] for r in index['blocks']}, {'text', 'sidenote', 'tradition'})
-        self.assertEqual({r['letter'] for r in index['blocks']}, {str(n) for n in range(1, 375)})
+        self.assertEqual({r['letter'] for r in index['blocks']}, {'1', '2', '7'})
         for letter in self.catalog['letters']:
             directory = self.output / 'letters' / letter['letter']
             fragments = [(directory / 'text.html').read_text()]
@@ -196,8 +236,8 @@ class SiteExportTests(unittest.TestCase):
             self.assertEqual(len(ids), len(set(ids)))
             for record in (r for r in index['blocks'] if r['letter'] == letter['letter']):
                 self.assertIn(record['anchor'], ids)
-        # Sidenotes without matching page markers are still searchable.
-        self.assertTrue(any(r['kind'] == 'sidenote' and r['letter'] == '64' for r in index['blocks']))
+        # The empty, undated fixture letter has no searchable text.
+        self.assertFalse(any(r['letter'] == '9' for r in index['blocks']))
 
     def test_languages_standalone_notes_and_hand_origins(self):
         source = '''<letterText xmlns="https://lenz-archiv.de" letter="999"><page index="1"/><note>At page marker</note>

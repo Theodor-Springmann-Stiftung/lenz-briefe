@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opus xmlns="https://lenz-archiv.de">
+  <document>
+    <letterText letter="1"><page index="1"/>Fixture letter one.
+      <line/><highlight color="yellow">Highlighted fixture text.</highlight>
+      <sidenote page="1" pos="left">First fixture sidenote.</sidenote>
+      <page index="2"/><hand ref="3">Another fixture hand.</hand>
+    </letterText>
+    <letterText letter="2"><page index="1"/>Earlier fixture letter.
+      <sidenote page="1" pos="bottom">Second fixture sidenote.</sidenote>
+    </letterText>
+    <letterText letter="7"><page index="1"/>Outside the defined year groups.
+      <tabs><tab value="1-2">Left fixture cell.</tab><tab value="2-2">Right fixture cell.</tab></tabs>
+    </letterText>
+    <letterText letter="9"><page index="1"/></letterText>
+  </document>
+</opus>

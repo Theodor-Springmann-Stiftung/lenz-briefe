@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opus xmlns="https://lenz-archiv.de">
+  <traditions>
+    <letterTradition letter="1"><app ref="4">Fixture provenance one.</app>.
+      <app ref="11">Fixture translation.</app>
+    </letterTradition>
+    <letterTradition letter="2"><app ref="4">Fixture provenance two.</app></letterTradition>
+    <letterTradition letter="7"><app ref="4">Fixture provenance seven.</app></letterTradition>
+  </traditions>
+</opus>

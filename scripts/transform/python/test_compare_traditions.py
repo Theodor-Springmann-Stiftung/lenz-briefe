@@ -1,10 +1,14 @@
 import sys
+import shutil
+from pathlib import Path
+from tempfile import TemporaryDirectory
 import unittest
 from lxml import etree
 from transform_python.common import ROOT_DIR
 
 sys.path.insert(0, str(ROOT_DIR / 'scripts'))
-from compare_traditions import clean_metadata, build_inputs, ROOT, NS
+from compare_traditions import clean_metadata, build_inputs, NS
+from test_fixtures import EDITION_FIXTURES
 
 
 class ComparisonInputTests(unittest.TestCase):
@@ -17,7 +21,11 @@ class ComparisonInputTests(unittest.TestCase):
         self.assertEqual(etree.tostring(source), before)
 
     def test_full_input_excludes_classifications(self):
-        states = build_inputs(ROOT, ['39', '326'])
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            shutil.copytree(EDITION_FIXTURES, root / 'data/xml')
+            states = build_inputs(root, ['1', '2'])
+        self.assertEqual(set(states), {'1', '2'})
         for state in states.values():
             self.assertNotIn('<traditions', state['metadata_xml'])
             self.assertNotIn('isOriginal', state['metadata_xml'])

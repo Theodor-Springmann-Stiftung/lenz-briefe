@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opus xmlns="https://lenz-archiv.de">
+  <descriptions>
+    <letterDesc letter="1">
+      <sent><date when="1777-02-03">Fixture date one</date><location ref="2"/><person ref="1"/></sent>
+      <received><person ref="2"/></received>
+      <traditions><tradition isOriginal="true" type="manuscript"/></traditions>
+      <isProofread value="true"/><isDraft value="false"/>
+    </letterDesc>
+    <letterDesc letter="2">
+      <sent><date when="1765-01-02">Fixture date two</date><location ref="1"/><person ref="2"/></sent>
+      <received><person ref="1"/></received>
+      <traditions><tradition isOriginal="false" type="print"/></traditions>
+      <isProofread value="false"/><isDraft value="false"/>
+    </letterDesc>
+    <letterDesc letter="7">
+      <sent><date when="1802">Outside fixture groups</date><person ref="1"/></sent>
+      <traditions><tradition isOriginal="false" type="unknown"/></traditions>
+      <isProofread value="false"/><isDraft value="true"/>
+    </letterDesc>
+    <letterDesc letter="9">
+      <sent><person ref="3"/></sent>
+      <traditions><tradition isOriginal="false" type="unknown"/></traditions>
+      <isProofread value="false"/><isDraft value="false"/>
+    </letterDesc>
+  </descriptions>
+</opus>

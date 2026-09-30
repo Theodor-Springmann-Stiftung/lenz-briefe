@@ -2,7 +2,8 @@ import unittest
 from lxml import etree
 
 from transform_python.catalog import build_catalog, read_year_groups
-from transform_python.common import read_xml, validate_xml
+from transform_python.common import validate_xml
+from test_fixtures import read_fixture_xml as read_xml
 
 
 class YearGroupTests(unittest.TestCase):

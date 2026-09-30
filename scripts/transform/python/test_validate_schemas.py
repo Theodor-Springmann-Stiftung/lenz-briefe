@@ -6,8 +6,9 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from transform_python.common import DATA_DIR, XSD_MAP, read_xml, validate_xml
+from transform_python.common import XSD_MAP, validate_xml
 from transform_python.validate_schemas import main
+from test_fixtures import EDITION_FIXTURES, read_fixture_xml as read_xml
 
 
 class ValidationGateTests(unittest.TestCase):
@@ -22,8 +23,8 @@ class ValidationGateTests(unittest.TestCase):
                     highlight.set('color', color)
                 self.assertEqual(not validate_xml(document, 'briefe.xml'), valid)
 
-    def test_current_edition_passes(self):
-        with contextlib.redirect_stdout(io.StringIO()):
+    def test_valid_fixture_edition_passes(self):
+        with patch('transform_python.common.DATA_DIR', EDITION_FIXTURES), contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(main(), 0)
 
     def test_invalid_malformed_or_missing_source_blocks_publication(self):
@@ -35,7 +36,7 @@ class ValidationGateTests(unittest.TestCase):
             with self.subTest(content=content), tempfile.TemporaryDirectory() as directory:
                 root = Path(directory)
                 for filename in XSD_MAP:
-                    shutil.copyfile(DATA_DIR / filename, root / filename)
+                    shutil.copyfile(EDITION_FIXTURES / filename, root / filename)
                 target = root / 'briefe.xml'
                 if content is None:
                     target.unlink()

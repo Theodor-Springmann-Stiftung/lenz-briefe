@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opus xmlns="https://lenz-archiv.de">
+  <definitions>
+    <personDefs>
+      <personDef index="1" name="Fixture author"/>
+      <personDef index="2" name="Fixture recipient"/>
+      <personDef index="3" name="Fixture scribe"/>
+    </personDefs>
+    <locationDefs>
+      <locationDef index="1" name="Fixture town one"/>
+      <locationDef index="2" name="Fixture town two"/>
+    </locationDefs>
+    <appDefs>
+      <appDef index="4" name="Provenienz" category="Überlieferung &amp; Textkritik"/>
+      <appDef index="11" name="Übersetzung" category="Übersetzung"/>
+    </appDefs>
+    <yearGroups>
+      <yearGroup fromYear="1760" toYear="1769" label="Fixture early years"/>
+      <yearGroup fromYear="1770" toYear="1779" label="Fixture later years"/>
+    </yearGroups>
+  </definitions>
+</opus>

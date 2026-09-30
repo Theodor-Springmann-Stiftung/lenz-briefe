@@ -4,7 +4,8 @@ import unittest
 
 from lxml import etree, html
 
-from transform_python.common import Timings, read_xml, serialize_node
+from transform_python.common import Timings, serialize_node
+from test_fixtures import read_fixture_xml as read_xml
 from transform_python.exporter import StylesheetRunner, collect_letter_pages
 
 
@@ -428,7 +429,7 @@ class FlowContractTests(unittest.TestCase):
         self.assertEqual(self.page(tree).get('id'), 'app-1-page-2')
         self.assertEqual(self.page(tree).get('data-break'), 'inline')
 
-    def test_corpus_fragments_have_valid_nesting_and_preserve_milestones(self):
+    def test_fixture_fragments_have_valid_nesting_and_preserve_milestones(self):
         ns = {'l': 'https://lenz-archiv.de'}
         for filename, tag, kind in [
             ('briefe.xml', 'letterText', 'letter-text'),
