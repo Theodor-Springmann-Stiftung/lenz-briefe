@@ -26,6 +26,7 @@
   vertikal spiegelverkehrt modellieren?
 - 81: Only pg 4
 - CMIF
+- LIZENZFRAGE
 
 ## Handschrift
 - 324: Adresse auf der dritten Seite 
