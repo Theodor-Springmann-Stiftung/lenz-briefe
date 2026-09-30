@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { createHash, webcrypto } from 'node:crypto';
+import { createHash, randomBytes, webcrypto } from 'node:crypto';
 import { mkdtemp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
@@ -55,9 +55,9 @@ function fixture(files, version = '1') {
   };
 }
 
-function environment(initialFiles, { base = '/', caches = new MemoryCaches() } = {}) {
+function environment(initialFiles, { base = '/', caches = new MemoryCaches(), manifest: initialManifest } = {}) {
   let files = initialFiles;
-  let manifest = fixture(files);
+  let manifest = initialManifest ?? fixture(files);
   let offline = false;
   let failures = new Set();
   let overrides = {};
@@ -89,13 +89,25 @@ function environment(initialFiles, { base = '/', caches = new MemoryCaches() } =
   return {
     worker, requests, retryDelays, messages, caches, listeners,
     restart: () => createOfflineWorker(worker),
-    deploy: (next, version) => { files = next; manifest = fixture(next, version); },
+    deploy: (next, version, nextManifest) => { files = next; manifest = nextManifest ?? fixture(next, version); },
     disconnect: () => { offline = true; },
     reconnect: () => { offline = false; },
     fail: (urls) => { failures = new Set(urls); },
     override: (values) => { overrides = values; },
     unregistered: () => unregistered,
   };
+}
+
+function bundledFixture(files, version = '1', base = '/') {
+  const manifest = fixture(files, version);
+  const bundled = manifest.entries.filter((entry) => entry.url.startsWith(`${base}licenses/`));
+  for (const entry of bundled) entry.bundled = true;
+  const body = JSON.stringify({ schema: 1, files: bundled.map((entry) => ({
+    url: entry.url, body: Buffer.from(files[entry.url]).toString('base64'),
+  })) });
+  const url = `${base}offline-licenses.json`;
+  manifest.licenseBundle = { url, hash: hash(body), bytes: Buffer.byteLength(body) };
+  return { files: { ...files, [url]: body }, manifest };
 }
 
 test('build generates stable versions, deployment-prefixed page URLs, all assets, and an executable worker', async () => {
@@ -162,6 +174,23 @@ test('built pages identify their edition while manifest hashes verify the stampe
   } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
+test('download labels are generated at build time, round up and adjust to new assets without extra requests', async () => {
+  const directory = await mkdtemp(path.join(tmpdir(), 'lenz-offline-estimate-'));
+  try {
+    await writeFile(path.join(directory, 'index.html'), '<span data-offline-version="__OFFLINE_VERSION__"><span data-offline-label>auch Offline nutzen</span></span>');
+    const first = await buildOfflineEdition(directory);
+    assert.equal(first.downloadMB, 1);
+    assert.match(await readFile(path.join(directory, 'index.html'), 'utf8'), /~1 MB Download/);
+    await writeFile(path.join(directory, 'image.png'), randomBytes(1_000_000));
+    const next = await buildOfflineEdition(directory);
+    assert.equal(next.downloadMB, 2);
+    const page = await readFile(path.join(directory, 'index.html'));
+    assert.match(page.toString(), /~2 MB Download/);
+    assert.equal(hash(page), next.entries.find((entry) => entry.page).hash);
+    assert.deepEqual(await buildOfflineEdition(directory), next);
+  } finally { await rm(directory, { recursive: true, force: true }); }
+});
+
 test('offline manifest includes source notices and the license page, and downloads intact from Astro preview', async () => {
   const directory = await mkdtemp(path.join(tmpdir(), 'lenz-offline-preview-'));
   let server;
@@ -180,7 +209,7 @@ test('offline manifest includes source notices and the license page, and downloa
     assert.ok(manifest.entries.some((entry) => entry.url === '/edition/edition/lizenzen/' && entry.page));
     for (const file of notices) {
       const url = '/edition/licenses/' + file;
-      assert.ok(manifest.entries.some((entry) => entry.url === url && !entry.page));
+      assert.ok(manifest.entries.some((entry) => entry.url === url && !entry.page && entry.bundled));
     }
     // Revised notices must also trigger an offline edition update.
     await writeFile(path.join(output, 'licenses', notices[0]), 'Revised notice');
@@ -202,11 +231,14 @@ test('offline manifest includes source notices and the license page, and downloa
       entry.url,
       await (await fetch(`http://127.0.0.1:${server.port}${entry.url}`)).text(),
     ])));
-    const env = environment(files, { base: '/edition/' });
+    files[manifest.licenseBundle.url] = await (await fetch(`http://127.0.0.1:${server.port}${manifest.licenseBundle.url}`)).text();
+    const env = environment(files, { base: '/edition/', manifest });
     const runtime = env.restart();
     await runtime.enable();
     await runtime.synchronize(true);
     assert.equal((await runtime.status()).phase, 'ready');
+    assert.equal(env.requests.filter((url) => url === manifest.licenseBundle.url).length, 1);
+    assert.ok(!env.requests.some((url) => url.startsWith('/edition/licenses/')));
     env.disconnect();
     for (const file of notices) {
       const url = licenseFileUrl(file, '/edition/');
@@ -217,6 +249,100 @@ test('offline manifest includes source notices and the license page, and downloa
     await server?.stop();
     await rm(directory, { recursive: true, force: true });
   }
+});
+
+test('license bundle updates reuse unchanged cache entries and unchanged bundles are never downloaded again', async () => {
+  const original = { '/': 'Index', '/licenses/LICENSE': 'Grüße', '/licenses/info.json': '{"license":"MIT"}' };
+  const first = bundledFixture(original);
+  const env = environment(first.files, { manifest: first.manifest });
+  const runtime = env.restart();
+  await runtime.enable();
+  await runtime.synchronize(true);
+  env.requests.length = 0;
+  const pagesOnly = bundledFixture({ ...original, '/': 'New index' }, '2');
+  env.deploy(pagesOnly.files, '2', pagesOnly.manifest);
+  await runtime.synchronize(true);
+  assert.ok(!env.requests.includes('/offline-licenses.json'));
+  const next = bundledFixture({ ...original, '/': 'New index', '/licenses/LICENSE': 'Revised Grüße' }, '3');
+  env.deploy(next.files, '3', next.manifest);
+  env.requests.length = 0;
+  const written = [];
+  const open = env.caches.open.bind(env.caches);
+  env.caches.open = async (name) => {
+    const cache = await open(name);
+    return { ...cache, put: async (request, response) => { written.push(address(request)); await cache.put(request, response); } };
+  };
+  await runtime.synchronize(true);
+  assert.equal((await runtime.status()).phase, 'ready');
+  assert.equal(env.requests.filter((url) => url === '/offline-licenses.json').length, 1);
+  assert.ok(!written.some((url) => url.includes('/licenses/info.json')));
+  env.disconnect();
+  assert.equal(await (await runtime.respond(new Request('https://edition.test/licenses/LICENSE'))).text(), 'Revised Grüße');
+  assert.equal((await runtime.respond(new Request('https://edition.test/licenses/info.json'))).headers.get('Content-Type'), 'application/json; charset=utf-8');
+});
+
+test('a corrupt license bundle keeps the preceding edition and resumes after correction', async () => {
+  const first = bundledFixture({ '/': 'Index', '/licenses/LICENSE': 'Old notice' });
+  const env = environment(first.files, { manifest: first.manifest });
+  const runtime = env.restart();
+  await runtime.enable();
+  await runtime.synchronize(true);
+  const next = bundledFixture({ '/': 'New index', '/licenses/LICENSE': 'New notice' }, '2');
+  env.deploy(next.files, '2', next.manifest);
+  env.override({ '/offline-licenses.json': 'Wrong revision' });
+  await runtime.synchronize(true);
+  assert.equal((await runtime.status()).error, 'changed');
+  assert.equal(await (await runtime.respond(new Request('https://edition.test/licenses/LICENSE'))).text(), 'Old notice');
+  env.override({});
+  await runtime.synchronize(true);
+  assert.equal((await runtime.status()).phase, 'ready');
+});
+
+test('interrupted license caching resumes without rewriting completed files, and disabling removes the bundle contents', async () => {
+  const fixture = bundledFixture({ '/': 'Index', '/licenses/A': 'First notice', '/licenses/B': 'Second notice' });
+  const env = environment(fixture.files, { manifest: fixture.manifest });
+  const open = env.caches.open.bind(env.caches);
+  let fail = true;
+  let firstWrites = 0;
+  env.caches.open = async (name) => {
+    const cache = await open(name);
+    return { ...cache, put: async (request, response) => {
+      const url = address(request);
+      if (name.endsWith(':files') && url.includes('/licenses/B') && fail) {
+        fail = false;
+        throw new DOMException('Full', 'QuotaExceededError');
+      }
+      if (url.includes('/licenses/A')) firstWrites++;
+      await cache.put(request, response);
+    } };
+  };
+  let runtime = env.restart();
+  await runtime.enable();
+  await runtime.synchronize(true);
+  assert.equal((await runtime.status()).error, 'quota');
+  assert.equal((await runtime.status()).done, 1);
+  runtime = env.restart();
+  await runtime.synchronize(true);
+  assert.equal((await runtime.status()).phase, 'ready');
+  assert.equal(firstWrites, 1);
+  assert.ok(!env.requests.some((url) => url.startsWith('/licenses/')));
+  await runtime.disable();
+  assert.deepEqual(await env.caches.keys(), []);
+});
+
+test('bundled files also verify their individual hashes before being cached', async () => {
+  const fixture = bundledFixture({ '/': 'Index', '/licenses/LICENSE': 'Correct notice' });
+  const bundle = JSON.parse(fixture.files['/offline-licenses.json']);
+  bundle.files[0].body = Buffer.from('Incorrect notice').toString('base64');
+  const body = JSON.stringify(bundle);
+  fixture.files['/offline-licenses.json'] = body;
+  fixture.manifest.licenseBundle = { url: '/offline-licenses.json', hash: hash(body), bytes: Buffer.byteLength(body) };
+  const env = environment(fixture.files, { manifest: fixture.manifest });
+  const runtime = env.restart();
+  await runtime.enable();
+  await runtime.synchronize(true);
+  assert.equal((await runtime.status()).error, 'changed');
+  assert.equal((await runtime.status()).done, 0);
 });
 
 test('persistent failures pause after bounded retries and resume without redownloading saved files', async () => {

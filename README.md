@@ -70,6 +70,14 @@ Sie liest die XML-Daten, prüft ihre Struktur und erzeugt mithilfe der XSLT-Date
 
 Die erzeugten Editionsdateien landen in `app/generated/`, die fertige Website in `app/dist/`. Änderungen an Inhalten erfolgen in den Quelldateien; erzeugte Dateien werden beim nächsten Build neu geschrieben.
 
+Für die Offline-Nutzung erzeugt der Build ein Manifest und ein gemeinsames
+`offline-licenses.json` mit allen Dateien aus `licenses/`. Der Browser lädt die
+Lizenzen in einem Request, prüft ihre Prüfsummen und speichert sie unter den
+üblichen Einzeladressen. Bereits gespeicherte, unveränderte Dateien werden
+wiederverwendet. Die Download-Größe im Footer wird beim Build aus geschätzten
+gzip-Größen berechnet, mit 3 % Reserve auf ganze MB aufgerundet und direkt in
+die Seiten geschrieben; dafür sind keine zusätzlichen Browser-Requests nötig.
+
 | Datei oder Unterordner | Inhalt |
 | --- | --- |
 | `python/README.md` | Ausführliche Beschreibung der Verarbeitung und ihrer Verwendung. |

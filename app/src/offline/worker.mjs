@@ -134,18 +134,36 @@ export function createOfflineWorker(worker) {
     if (manifest.schema !== 1 || !/^[a-f0-9]{64}$/.test(manifest.version)
       || !Array.isArray(manifest.entries) || !manifest.entries.length) throw new Error('Invalid offline manifest');
     const seen = new Set();
+    const bundle = manifest.licenseBundle;
+    if (bundle && (bundle.url !== `${scope.pathname}offline-licenses.json`
+      || !/^[a-f0-9]{64}$/.test(bundle.hash) || !Number.isSafeInteger(bundle.bytes) || bundle.bytes < 0)) {
+      throw new Error('Invalid license bundle');
+    }
     for (const entry of manifest.entries) {
       const url = new URL(entry.url, scope);
       if (url.origin !== scope.origin || !url.pathname.startsWith(scope.pathname)
         || url.search || url.hash || !entry.url.startsWith(scope.pathname)
         || !/^[a-f0-9]{64}$/.test(entry.hash) || !Number.isSafeInteger(entry.bytes) || entry.bytes < 0
         || typeof entry.page !== 'boolean' || seen.has(url.href)
+        || (entry.bundled !== undefined && (entry.bundled !== true || !bundle
+          || !entry.url.startsWith(`${scope.pathname}licenses/`)))
+        || (bundle && entry.url === bundle.url)
         || [manifestURL, new URL('sw.js', scope).href, stateURL].includes(url.href)) {
         throw new Error('Invalid offline entry');
       }
       seen.add(url.href);
     }
     return manifest;
+  }
+
+  async function verify(body, entry) {
+    const digest = await worker.crypto.subtle.digest('SHA-256', body);
+    const hash = [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
+    if (hash !== entry.hash || body.byteLength !== entry.bytes) {
+      const error = new Error('Deployment changed during download');
+      error.name = 'EditionChangedError';
+      throw error;
+    }
   }
 
   async function run(force, signal) {
@@ -186,9 +204,35 @@ export function createOfflineWorker(worker) {
     await broadcast(true);
     const cache = await worker.caches.open(`${prefix}files`);
     const missing = manifest.entries.filter((entry) => !keys.has(key(entry)));
+    async function store(entry, body, headers) {
+      await verify(body, entry);
+      if (signal.aborted || stopping) return;
+      await cache.put(key(entry), new Response(body, { status: 200, headers }));
+      progress.done++;
+      progress.bytes += entry.bytes;
+      await broadcast();
+    }
+    const bundled = missing.filter((entry) => entry.bundled);
+    if (bundled.length) {
+      const { body } = await download(new URL(manifest.licenseBundle.url, scope).href, signal);
+      await verify(body, manifest.licenseBundle);
+      const bundle = JSON.parse(new TextDecoder().decode(body));
+      if (bundle.schema !== 1 || !Array.isArray(bundle.files)) throw new Error('Invalid license bundle');
+      const files = new Map(bundle.files.map((file) => [file.url, file.body]));
+      if (files.size !== bundle.files.length) throw new Error('Duplicate bundled file');
+      for (const entry of bundled) {
+        if (signal.aborted || stopping) return;
+        const encoded = files.get(entry.url);
+        if (typeof encoded !== 'string') throw new Error('Missing bundled file');
+        const body = Uint8Array.from(atob(encoded), (character) => character.charCodeAt(0));
+        const type = entry.url.endsWith('.json') ? 'application/json' : entry.page ? 'text/html' : 'text/plain';
+        await store(entry, body, { 'Content-Type': `${type}; charset=utf-8` });
+      }
+    }
+    const individual = missing.filter((entry) => !entry.bundled);
     // Sorting alone isn't enough: a fast request could start HTML while a slow
     // font or image is still downloading. Finish and verify every asset first.
-    for (const batch of [missing.filter((entry) => !entry.page), missing.filter((entry) => entry.page)]) {
+    for (const batch of [individual.filter((entry) => !entry.page), individual.filter((entry) => entry.page)]) {
       let cursor = 0;
       let failure;
       // Bound network and memory use. A completed cache.put is the durable
@@ -198,23 +242,12 @@ export function createOfflineWorker(worker) {
           const entry = batch[cursor++];
           try {
             const { response, body } = await download(new URL(entry.url, scope).href, signal);
-            const digest = await worker.crypto.subtle.digest('SHA-256', body);
-            const hash = [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
-            if (hash !== entry.hash || body.byteLength !== entry.bytes) {
-              const error = new Error('Deployment changed during download');
-              error.name = 'EditionChangedError';
-              throw error;
-            }
-            if (signal.aborted || stopping) return;
             // fetch() has decoded transfer compression; don't persist those
             // transfer headers with the decoded response body.
             const headers = new Headers(response.headers);
             headers.delete('content-encoding');
             headers.delete('content-length');
-            await cache.put(key(entry), new Response(body, { status: 200, headers }));
-            progress.done++;
-            progress.bytes += entry.bytes;
-            await broadcast();
+            await store(entry, body, headers);
           } catch (error) { failure ||= error; }
         }
       }));
