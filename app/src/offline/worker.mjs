@@ -237,7 +237,7 @@ export function createOfflineWorker(worker) {
       let failure;
       // Bound network and memory use. A completed cache.put is the durable
       // checkpoint; no page-owned queue or long-lived worker is required.
-      await Promise.all(Array.from({ length: Math.min(4, batch.length) }, async () => {
+      await Promise.all(Array.from({ length: Math.min(8, batch.length) }, async () => {
         while (!failure && !signal.aborted && !stopping && cursor < batch.length) {
           const entry = batch[cursor++];
           try {
