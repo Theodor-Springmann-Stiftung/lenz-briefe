@@ -57,7 +57,7 @@ test('missing or escaping notice paths fail instead of publishing broken links',
 test('notice links preserve deployment prefixes and encode filenames', () => {
   assert.equal(
     licenseFileUrl('npm/@scope__name@1.0/License.txt', '/edition-preview/'),
-    '/edition-preview/licenses/npm/%40scope__name%401.0/License.txt',
+    '/edition-preview/licenses/npm/@scope__name@1.0/License.txt',
   );
   assert.equal(licenseFileUrl('fonts/Übersicht 1.txt'), '/licenses/fonts/%C3%9Cbersicht%201.txt');
 });

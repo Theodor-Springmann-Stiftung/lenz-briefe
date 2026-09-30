@@ -76,7 +76,8 @@ export function licenseEntries(markdown, directory = licensesDirectory) {
 }
 
 export function licenseFileUrl(file, base = '/') {
-  return `${base.replace(/\/$/, '')}/licenses/${file.split('/').map(encodeURIComponent).join('/')}`;
+  const encoded = file.split('/').map((part) => encodeURIComponent(part).replaceAll('%40', '@')).join('/');
+  return `${base.replace(/\/$/, '')}/licenses/${encoded}`;
 }
 
 export function readLicenseFile(file) {

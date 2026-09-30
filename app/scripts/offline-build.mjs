@@ -13,9 +13,6 @@ export async function buildOfflineEdition(directory, base = '/') {
   async function visit(relative = '') {
     for (const file of await readdir(path.join(directory, relative), { withFileTypes: true })) {
       const name = path.posix.join(relative, file.name);
-      // Keep the rendered license page, but don't download the source notices
-      // and package metadata copied into this separate directory.
-      if (name === 'licenses') continue;
       if (file.isDirectory()) await visit(name);
       else if (file.isFile() && !['sw.js', 'offline-manifest.json'].includes(name)) {
         let content = await readFile(path.join(directory, name));
@@ -23,7 +20,8 @@ export async function buildOfflineEdition(directory, base = '/') {
         // Normalize a previous stamp as well, so rebuilding the manifest on the
         // same output remains deterministic and the version cannot hash itself.
         if (page) content = Buffer.from(content.toString('utf8').replace(/data-offline-version="[a-f0-9]{64}"/g, versionMarker));
-        const encoded = name.split('/').map(encodeURIComponent).join('/');
+        // Keep path-safe @ literal so scoped-package notices also work in preview.
+        const encoded = name.split('/').map((part) => encodeURIComponent(part).replaceAll('%40', '@')).join('/');
         const url = base + (encoded === 'index.html' ? '' : encoded.replace(/\/index\.html$/, '/'));
         const entry = { url, hash: hash(content), bytes: content.length, page };
         entries.push(entry);
@@ -58,6 +56,11 @@ export default function offlineEdition() {
   return {
     name: 'lenz:offline-edition',
     hooks: {
+      'astro:config:setup': ({ command, updateConfig }) => {
+        // Preview must also serve extensionless notices such as LICENSE.
+        // Published page URLs still use the project's trailing-slash setting.
+        if (command === 'preview') updateConfig({ trailingSlash: 'ignore' });
+      },
       'astro:config:done': ({ config }) => { base = config.base.replace(/\/?$/, '/'); },
       'astro:build:done': async ({ dir, logger }) => {
         const manifest = await buildOfflineEdition(fileURLToPath(dir), base);

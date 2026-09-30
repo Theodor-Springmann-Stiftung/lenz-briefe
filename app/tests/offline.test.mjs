@@ -8,6 +8,7 @@ import vm from 'node:vm';
 import { preview } from 'astro';
 import { createOfflineWorker } from '../src/offline/worker.mjs';
 import offlineEdition, { buildOfflineEdition } from '../scripts/offline-build.mjs';
+import { licenseFileUrl } from '../src/lib/licenses.mjs';
 
 const hash = (value) => createHash('sha256').update(value).digest('hex');
 const address = (request) => typeof request === 'string' ? request : request.url;
@@ -161,7 +162,7 @@ test('built pages identify their edition while manifest hashes verify the stampe
   } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
-test('offline manifest excludes source notices, keeps the license page, and downloads intact from Astro preview', async () => {
+test('offline manifest includes source notices and the license page, and downloads intact from Astro preview', async () => {
   const directory = await mkdtemp(path.join(tmpdir(), 'lenz-offline-preview-'));
   let server;
   try {
@@ -174,13 +175,18 @@ test('offline manifest excludes source notices, keeps the license page, and down
     const notices = ['npm/@scope__name@1.0/LICENSE', 'npm/@scope__name@1.0/package-metadata.json'];
     for (const file of notices) await writeFile(path.join(output, 'licenses', file), 'Notice');
     await writeFile(path.join(output, 'Grüße.txt'), 'Grüße');
-    const manifest = await buildOfflineEdition(output, '/edition/');
-    assert.equal(manifest.entries.length, 3);
+    let manifest = await buildOfflineEdition(output, '/edition/');
+    assert.equal(manifest.entries.length, 5);
     assert.ok(manifest.entries.some((entry) => entry.url === '/edition/edition/lizenzen/' && entry.page));
-    assert.ok(!manifest.entries.some((entry) => entry.url.startsWith('/edition/licenses/')));
-    // Updating excluded files should not trigger an offline edition update.
+    for (const file of notices) {
+      const url = '/edition/licenses/' + file;
+      assert.ok(manifest.entries.some((entry) => entry.url === url && !entry.page));
+    }
+    // Revised notices must also trigger an offline edition update.
     await writeFile(path.join(output, 'licenses', notices[0]), 'Revised notice');
-    assert.equal((await buildOfflineEdition(output, '/edition/')).version, manifest.version);
+    const revised = await buildOfflineEdition(output, '/edition/');
+    assert.notEqual(revised.version, manifest.version);
+    manifest = revised;
     server = await preview({
       root: directory, configFile: false, base: '/edition/', trailingSlash: 'always',
       integrations: [offlineEdition()], server: { host: '127.0.0.1', port: 0 }, logLevel: 'silent',
@@ -191,6 +197,21 @@ test('offline manifest excludes source notices, keeps the license page, and down
       const body = Buffer.from(await response.arrayBuffer());
       assert.equal(hash(body), entry.hash, entry.url);
       assert.equal(body.length, entry.bytes, entry.url);
+    }
+    const files = Object.fromEntries(await Promise.all(manifest.entries.map(async (entry) => [
+      entry.url,
+      await (await fetch(`http://127.0.0.1:${server.port}${entry.url}`)).text(),
+    ])));
+    const env = environment(files, { base: '/edition/' });
+    const runtime = env.restart();
+    await runtime.enable();
+    await runtime.synchronize(true);
+    assert.equal((await runtime.status()).phase, 'ready');
+    env.disconnect();
+    for (const file of notices) {
+      const url = licenseFileUrl(file, '/edition/');
+      const response = await runtime.respond(new Request(`https://edition.test${url}`));
+      assert.equal(await response.text(), files[url]);
     }
   } finally {
     await server?.stop();
