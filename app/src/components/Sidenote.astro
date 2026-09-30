@@ -13,7 +13,7 @@ const { labels } = prepareHandControls(note.html, hands);
 <SidenotePosition position={note.pos} />
 <div class="edition-text" set:html={note.html} />
 <div class="sidenote-details">
-  <p class="note-annotation sidenote-description">{note.annotation}</p>
+  {note.annotation && <p class="note-annotation sidenote-description">{note.annotation}</p>}
   <slot />
   {labels.length > 0 && (
     <p class="note-annotation">

@@ -84,7 +84,20 @@ const sectionLinks = [
     <div class="letter-spine" aria-hidden="true"></div>
     <div class="detail-header-group">
       <div class="letter-toolbar">
-        <CorrespondenceNavigation letter={letter} />
+        <div class="letter-context-tools">
+          <CorrespondenceNavigation letter={letter} />
+          <button
+            class="letter-print-button"
+            type="button"
+            data-print-letter
+            aria-label="Brief drucken"
+            data-tooltip="Brief drucken"
+            data-tippy-placement="top"
+            data-tippy-trigger="mouseenter focus"
+          >
+            <Icon name="printer" />
+          </button>
+        </div>
         <nav class="letter-navigation" aria-label="Briefnavigation">
           {previous && (
             <a
@@ -151,6 +164,7 @@ const sectionLinks = [
         )}
       </aside>
       <aside class="marginalia" aria-label="Randnotizen und Hände">
+        {placed.length > 0 && <h2 class="print-only print-notes-title">Randnotizen</h2>}
         {placed.map((note) => (
           <div
             class="marginal-item margin-note sidenote-layout"
@@ -178,7 +192,7 @@ const sectionLinks = [
           <div class="unplaced-note sidenote-layout">
             <Sidenote note={note} hands={hands}>
               <p class="note-annotation">
-                Seite {note.page} · Im Text ist keine zugehörige Seitenmarke verzeichnet.
+                Im Text ist keine zugehörige Seitenmarke verzeichnet.
               </p>
             </Sidenote>
           </div>
@@ -218,6 +232,9 @@ const sectionLinks = [
       <LetterCitation letter={letter} />
     </section>
   </div>
+  <!-- A print copy lets the citation share an unbroken block with the footer
+       while the screen citation stays inside the apparatus. -->
+  <LetterCitation slot="print-citation" letter={letter} printOnly />
   <QuickLegend />
   <script>
     import '../../scripts/search-highlight';
@@ -230,5 +247,10 @@ const sectionLinks = [
   </script>
   <script>
     import '../../scripts/note-connections';
+  </script>
+  <script>
+    document.querySelector<HTMLButtonElement>('[data-print-letter]')?.addEventListener('click', () => {
+      window.print();
+    });
   </script>
 </Layout>

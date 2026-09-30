@@ -1,0 +1,139 @@
+.print-only { display:none; }
+
+@page {
+  size:A4;
+  margin:24mm 25mm 24mm 21mm;
+  @bottom-center {
+    content:counter(page);
+    font:8pt Arial, sans-serif;
+    color:#444;
+  }
+}
+
+@media print {
+  :root { --color-paper:#fff; --color-ink:#000; --color-muted:#444; --color-rule:#aaa; --print-content-inset:25mm; }
+  html { background:#fff; color:#000; font-size:9.5pt; scroll-padding:0; }
+  body { display:block; min-height:0; }
+  body > main, .site-shell, .site-shell--wide { display:block; width:100%; max-width:none; margin:0; padding:0; }
+  a, a:hover { color:inherit; }
+  p, li, dd, .lb-line-block { orphans:3; widows:3; }
+  p, .edition-text .lb-line-block { break-inside:avoid-page; page-break-inside:avoid; }
+  h1, h2, h3, h4, h5, h6 { break-after:avoid-page; }
+  img, svg { max-width:100%; }
+
+  .site-header nav, .navigation-toggle, .letter-toolbar, .reading-toolbar,
+  .back-to-top, .quick-legend-toggle, .quick-legend, .quick-legend:popover-open,
+  .page-toc, .letter-spine, .page-margin, .hand-label, .footer-tools, .footer-legal,
+  .filter-toolbar, .search-feedback, .search-more, .search-retry,
+  .search-highlight-dismiss, [data-tippy-root], .note-connections,
+  .legend-connections, .hand-range-background { display:none !important; }
+
+  .screen-only { display:none !important; }
+  .print-only { display:block; }
+  span.print-only { display:inline; }
+  .site-header { position:static; padding:0 0 3mm; margin-bottom:6mm; background:none; border:0; }
+  .site-header-inner { display:block; }
+  .wordmark { flex-direction:row; align-items:baseline; gap:2mm; }
+  .wordmark-name, .wordmark-caption { font-size:9pt; }
+  .wordmark-divider { display:block; }
+  .site-footer { margin-top:7mm; padding:3mm 0 0; background:none; border-top:1px solid #000; font-size:8pt; break-inside:avoid-page; }
+  .site-footer-inner { display:grid; grid-template-columns:max-content minmax(0,1fr); align-items:first baseline; gap:1mm 4mm; }
+  .footer-license-line { display:block; white-space:nowrap; }
+  .footer-license-line > :not(.footer-license) { margin-inline-start:.5rem; }
+  .footer-license { display:inline-block; position:relative; padding-inline-start:2.75em; }
+  .footer-license-icons { position:absolute; inset-inline-start:0; top:50%; transform:translateY(-50%); }
+  .footer-license-icons .ui-icon { width:1em; height:1em; }
+  .site-footer .footer-archive { display:block; margin-top:1mm; }
+  .print-ending { display:block; }
+  .print-ending:has(.print-citation) { break-inside:avoid-page; page-break-inside:avoid; }
+  .print-citation { padding-inline-end:var(--print-content-inset); font:9pt/1.4 var(--font-sans); }
+  .print-citation .edition-text { font-family:inherit; line-height:inherit; }
+
+  /* Normal flow lets long letters and their apparatus paginate independently
+     of the screen's grid and JavaScript-positioned margins. */
+  .letter-content, .reading-layout { display:block; max-width:none; font-size:10pt; container-type:normal; }
+  .reading-layout { padding-inline-end:var(--print-content-inset); }
+  .letter-content > .detail-header-group { width:100%; max-width:none; margin:0 0 6mm; break-inside:avoid-page; break-after:avoid-page; }
+  .detail-header { padding:0 0 4mm; border:0; border-bottom:1px solid #000; }
+  .letter-header, .detail-header .letter-header { display:block; --header-text-size:10pt; }
+  .print-letter-number { margin:0 0 1mm; font:700 9pt/1.3 var(--font-sans); }
+  .letter-header .letter-date { display:block; margin:0 0 .5mm; font-size:var(--header-text-size); line-height:1.25; }
+  .letter-date-tail { display:inline; }
+  .letter-date-separator { display:inline; }
+  .letter-events { display:block; font-size:var(--header-text-size); line-height:1.3; }
+  .letter-header :is(.event-place, .event-date) { display:inline; font-size:inherit; }
+  .letter-events .correspondence-arrow { display:inline-flex; margin-inline:.4em; }
+  .letter-events .correspondence-arrow--draft { width:auto; height:auto; gap:.25em; vertical-align:baseline; }
+  .correspondence-arrow--draft .ui-icon { width:1.25em; height:1.25em; }
+  .correspondence-arrow--draft::after { content:'(' attr(data-tooltip) ')'; position:static; width:auto; height:auto; background:none; transform:none; font:8pt var(--font-sans); }
+  .letter-header .source-icons { display:inline-flex; margin:0 0 0 .4em; font-size:9pt; line-height:1; }
+  .source-combination { display:inline-flex; transform:none; font:inherit; }
+  .source-combination::after { content:none; }
+
+  .letter-body { width:100%; margin:0; }
+  .letter-body.edition-text { line-height:1.5; }
+  .letter-body .page-anchor[data-index]::before,
+  .letter-body .hand[data-hand-name]::before { font:400 7pt/1.3 var(--font-sans); font-variation-settings:normal; color:#444; margin-inline:.25em; }
+  .letter-body .page-anchor[data-index]::before { content:'[' attr(data-index) ']'; white-space:nowrap; }
+  .letter-body .hand[data-hand-name]::before { content:'[Hand: ' attr(data-hand-name) ']'; }
+  .marginalia, html.js .reading-layout .marginalia { position:static; height:auto !important; margin:6mm 0 0; padding:0; opacity:1 !important; visibility:visible !important; }
+  .marginalia:not(:has(.margin-note)) { display:none; }
+  .print-notes-title { margin-bottom:3mm; font:700 10pt/1.3 var(--font-sans); }
+  .marginalia .marginal-item { position:static; margin:0 0 4mm; transform:none; }
+  .sidenote-layout { display:block; padding-left:5.5mm; font-size:9pt; break-inside:avoid-page; page-break-inside:avoid; }
+  .sidenote-layout .edition-text { line-height:1.35; }
+  .sidenote-layout > .sidenote-position { float:left; width:2.5mm; margin:1mm 0 0 -5.5mm; }
+  .note-annotation { font-size:7.5pt; line-height:1.35; }
+  .unplaced-notes { margin:6mm 0 0; padding:0 var(--print-content-inset) 0 0; }
+  .unplaced-note { margin-top:3mm; }
+
+  .letter-content > .apparatus { display:block; width:100%; max-width:none; margin:6mm 0 0; padding:4mm var(--print-content-inset) 0 0; border:0; font-family:var(--font-sans); }
+  .apparatus-entry { display:block; margin:0 0 4mm; }
+  .apparatus-entry > h2 { margin:0 0 1mm; font-size:9pt; text-align:left; }
+  .apparatus-text, .apparatus > p { max-width:80ch; font-size:9pt; }
+  .apparatus .edition-text { line-height:1.4; }
+  #zitieren { overflow-wrap:anywhere; break-inside:avoid-page; }
+  .hand-sample { font-size:12.5pt; }
+
+  /* Preserve transcription marks even when background printing is disabled. */
+  .edition-text :is(.er, .er *, .highlight, mark, .insertion, .insertion-arrow, .tab, .lb-ornament),
+  .edition-text del .nr { print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+  .edition-text mark.search-match, [data-search-target] mark.search-match,
+  html .edition-text :is(.lb-line-block, .tab, .lb-tab-prefix, .sidenote):target,
+  .hand-range-trigger.hand-range-active { background:transparent; box-shadow:none; }
+
+  .about-page, .about-page--with-toc { display:block; max-width:none; padding:0; }
+  .about-page-content { max-width:none; padding-inline-end:var(--print-content-inset); }
+  .about-page h1 { margin-bottom:4mm; font-size:20pt; }
+  .page-prose { max-width:none; font-size:9.5pt; line-height:1.4; }
+  .page-prose h2 { font-size:14pt; }
+  .page-prose h3 { font-size:11.5pt; }
+  .page-prose :is(h4, h5, h6) { font-size:9.5pt; }
+  .page-prose:has(> *) { margin-bottom:5mm; }
+  .page-prose table { display:table; overflow:visible; font-size:8pt; }
+  .page-prose pre { white-space:pre-wrap; overflow:visible; overflow-wrap:anywhere; }
+  .page-prose figure, tr, .quick-legend-entry { break-inside:avoid-page; }
+  thead { display:table-header-group; }
+  .legend-table-wrap { overflow:visible; }
+  .legend-table { min-width:0; font-size:8pt; }
+  lkb-legende:not(.quick-legend-content) :is(dt, dd) { font-size:9pt; }
+  lkb-legende:not(.quick-legend-content) small { font-size:8pt; }
+
+  .index-intro { padding-top:0; padding-bottom:4mm; }
+  .index-intro h1 { font-size:20pt; }
+  .edition-count > span { font-size:12.5pt; }
+  .active-filters { transform:none; }
+  .filter-pill { min-height:0; padding:1mm 2mm; border:1px solid #aaa; background:none; color:#000; font-size:8pt; }
+  .filter-pill::before, .filter-pill::after, .filter-pill > .ui-icon { display:none; }
+  .year-navigation { margin:0 0 3mm; }
+  .year-tabs a:not([aria-current]) { display:none; }
+  .year-tabs a[aria-current] { padding:0 0 2mm; background:none; border:0; }
+  .year-count { display:block; }
+  .letter-list { display:block; margin-top:3mm; }
+  .letter-list > li { margin-bottom:3mm; padding:3mm; break-inside:avoid-page; }
+  .letter-list .letter-header { --header-text-size:10.5pt; }
+  .letter-list .print-letter-number { font-size:8pt; }
+  .search-section-heading { break-after:avoid-page; }
+  .search-section-chevron { display:none; }
+  .search-results .search-hit { font-size:9pt; }
+}

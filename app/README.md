@@ -50,6 +50,40 @@ needed. Builds regenerate `app/generated/`; both directories are ignored by Git.
 The export script uses the workspace's Python virtual environment when present,
 otherwise `uv run`. An unsuccessful export stops the site build.
 
+## Printing
+
+Use the print button beside the correspondence controls, or the browser's Print command,
+to print or save the current page as PDF. The
+print stylesheet uses A4 pages with 24 mm top/bottom, 25 mm right and 21 mm left
+margins, and page numbers where the browser supports CSS page-margin boxes.
+Letter text, margin notes, apparatus and Edition content have an additional
+25 mm right inset, giving them a 50 mm right margin. Headers and horizontal rules
+use the wider page area. The rules below the letter metadata and above the footer
+are black; there are no rules below the wordmark or above the apparatus. The date
+and sender/receiver lines have a compact 0.5 mm gap. Disable the
+browser's own headers and footers for the cleanest result.
+
+Letters retain their LKB number, metadata, transcription, hands, apparatus and
+citation. Source page numbers and hand names appear inline in the letter. Margin
+notes follow the letter under “Randnotizen”, with their position descriptions and
+without added page prefixes. The small apparatus text is limited to 80ch.
+In-position notes stay at their source location. Paragraphs and individual margin
+notes stay together on a page when they fit. Source icons remain visible beside
+the date; date and sender/receiver names use the same 10pt size as the letter.
+The print citation and footer stay together on one page. The bracketed citation
+URL and access date occupy a separate line on screen and in print, with a dotted
+underline on the URL. The print footer aligns CC BY with the project line and
+links to the Jakob Lenz Archiv instead of the legal notice; its CC BY and
+Theodor Springmann Stiftung text have no PDF links. Editorial
+marks, erasures and source highlights are preserved even when background
+graphics are disabled.
+Navigation, popovers and temporary search/hand highlights are omitted.
+
+The catalogue prints its current visible results and filter labels. Edition
+pages print their full content without the sticky contents navigation. Screen
+and print styles are kept separately in `src/styles/global.css` and
+`src/styles/print.css`.
+
 ## Optional offline edition
 
 The footer checkbox **Offline nutzen (~40 MB)**, immediately before the code/commit link,
@@ -283,8 +317,8 @@ their public URLs and checks their targets; image references remain local for As
   source page's beginning that fits its full height, with clearance around labels
   and other notes. Smaller later notes can fill gaps skipped by larger notes.
   Metadata, letter text and apparatus share the same main column.
-  Notes can continue across page boundaries; overflow
-  notes carry a “S. 1:” prefix in the position description. The icon hangs
+  Notes can continue across page boundaries, without added page prefixes in
+  their position descriptions. The icon hangs
   to the left at the top of each note; descriptions, page labels and hand
   information sit directly below the note’s text. On smaller screens they follow
   the text in normal flow.

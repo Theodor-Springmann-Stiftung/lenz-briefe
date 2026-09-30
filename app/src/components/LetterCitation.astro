@@ -4,16 +4,21 @@ import { letterUrl } from '../lib/edition';
 import { citationFor } from '../lib/citation';
 interface Props {
   letter: Letter;
+  printOnly?: boolean;
 }
-const { letter } = Astro.props;
+const { letter, printOnly = false } = Astro.props;
 const url = new URL(letterUrl(letter.letter), Astro.site ?? Astro.url.origin).href;
 ---
 
-<div class="apparatus-entry" id="zitieren">
+<div
+  class:list={['apparatus-entry', printOnly ? 'print-only print-citation' : 'screen-only']}
+  id={printOnly ? undefined : 'zitieren'}
+>
   <h2>Zitation</h2>
   <p class="edition-text apparatus-text apparatus-xml-text">
-    {citationFor(letter)} [<a href={url}>{url}</a>, abgerufen am{' '}
-    <time data-citation-access>DATUM</time>]
+    {citationFor(letter)}
+    <span class="citation-access">[<a class="citation-url" href={url}>{url}</a>, abgerufen am{' '}
+      <time data-citation-access>DATUM</time>]</span>
   </p>
 </div>
 <script>
@@ -32,4 +37,5 @@ const url = new URL(letterUrl(letter.letter), Astro.site ?? Astro.url.origin).hr
   }
   updateAccessDate();
   window.addEventListener('pageshow', updateAccessDate);
+  window.addEventListener('beforeprint', updateAccessDate);
 </script>
