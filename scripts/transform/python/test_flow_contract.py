@@ -430,43 +430,48 @@ class FlowContractTests(unittest.TestCase):
         self.assertEqual(self.page(tree).get('data-break'), 'inline')
 
     def test_fixture_fragments_have_valid_nesting_and_preserve_milestones(self):
-        ns = {'l': 'https://lenz-archiv.de'}
-        for filename, tag, kind in [
-            ('briefe.xml', 'letterText', 'letter-text'),
-            ('briefe.xml', 'sidenote', 'sidenotes'),
-            ('traditions.xml', 'letterTradition', 'traditions'),
-        ]:
-            doc = read_xml(filename)
-            for node in doc.findall('.//l:' + tag, ns):
-                with self.subTest(file=filename, line=node.sourceline):
-                    result = self.runner.run_stylesheet(kind, serialize_node(node), {}, Timings())
-                    self.assert_valid_nesting(result)
-                    tree = html.fragment_fromstring(result, create_parent='div')
-                    ids = tree.xpath('.//*[@id]/@id')
-                    self.assertEqual(len(ids), len(set(ids)))
-                    source_pages = node.xpath('.//l:page/@index', namespaces=ns)
-                    self.assertEqual(tree.xpath('.//*[@class="page-anchor"]/@data-index'), source_pages)
-                    self.assertTrue(all(v in ['inline', 'block'] for v in tree.xpath('.//*[@class="page-anchor"]/@data-break')))
-                    for mark in ['nr', 'tl']:
-                        source = node.xpath('.//l:' + mark, namespaces=ns)
-                        if kind == 'letter-text':
-                            source = [m for m in source if not m.xpath('ancestor::l:sidenote', namespaces=ns)]
-                        self.assertEqual(len(tree.xpath('.//span[@class=$mark]', mark=mark)), len(source))
-                    # Alignment may reorder regions, but it must not lose or
-                    # duplicate any transcribed characters. Ignore formatting
-                    # whitespace and the apparatus headings generated from refs.
-                    def source_text(element):
-                        if not isinstance(element.tag, str):
-                            return ''
-                        if kind == 'letter-text' and element.tag == '{https://lenz-archiv.de}sidenote':
-                            return ''
-                        return (element.text or '') + ''.join(
-                            source_text(child) + (child.tail or '') for child in element
-                        )
+        assert_source_fragments(self, self.runner, read_xml)
 
-                    for heading in tree.xpath('.//h2 | .//h3'):
-                        heading.drop_tree()
-                    self.assertEqual(
-                        Counter(c for c in tree.text_content() if not c.isspace()),
-                        Counter(c for c in source_text(node) if not c.isspace()),
+
+def assert_source_fragments(testcase, runner, read_source):
+    ns = {'l': 'https://lenz-archiv.de'}
+    for filename, tag, kind in [
+        ('briefe.xml', 'letterText', 'letter-text'),
+        ('briefe.xml', 'sidenote', 'sidenotes'),
+        ('traditions.xml', 'letterTradition', 'traditions'),
+    ]:
+        doc = read_source(filename)
+        for node in doc.findall('.//l:' + tag, ns):
+            with testcase.subTest(file=filename, line=node.sourceline):
+                result = runner.run_stylesheet(kind, serialize_node(node), {}, Timings())
+                FlowContractTests.assert_valid_nesting(testcase, result)
+                tree = html.fragment_fromstring(result, create_parent='div')
+                ids = tree.xpath('.//*[@id]/@id')
+                testcase.assertEqual(len(ids), len(set(ids)))
+                page_path = './/l:page[not(ancestor::l:sidenote)]/@index' if kind == 'letter-text' else './/l:page/@index'
+                source_pages = node.xpath(page_path, namespaces=ns)
+                testcase.assertEqual(tree.xpath('.//*[@class="page-anchor"]/@data-index'), source_pages)
+                testcase.assertTrue(all(v in ['inline', 'block'] for v in tree.xpath('.//*[@class="page-anchor"]/@data-break')))
+                for mark in ['nr', 'tl']:
+                    source = node.xpath('.//l:' + mark, namespaces=ns)
+                    if kind == 'letter-text':
+                        source = [m for m in source if not m.xpath('ancestor::l:sidenote', namespaces=ns)]
+                    testcase.assertEqual(len(tree.xpath('.//span[@class=$mark]', mark=mark)), len(source))
+                # Alignment may reorder regions, but it must not lose or
+                # duplicate any transcribed characters. Ignore formatting
+                # whitespace and the apparatus headings generated from refs.
+                def source_text(element):
+                    if not isinstance(element.tag, str):
+                        return ''
+                    if kind == 'letter-text' and element.tag == '{https://lenz-archiv.de}sidenote':
+                        return ''
+                    return (element.text or '') + ''.join(
+                        source_text(child) + (child.tail or '') for child in element
                     )
+
+                for heading in tree.xpath('.//h2 | .//h3'):
+                    heading.drop_tree()
+                testcase.assertEqual(
+                    Counter(c for c in tree.text_content() if not c.isspace()),
+                    Counter(c for c in source_text(node) if not c.isspace()),
+                )

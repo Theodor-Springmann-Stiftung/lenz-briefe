@@ -129,3 +129,17 @@ Run the Python regression tests (including corpus nesting and marker checks):
 ```bash
 uv run python -m unittest discover -p 'test_*.py'
 ```
+
+Behavioral regression tests use inline examples or the developer-owned synthetic
+edition in `fixtures/edition/`, loaded through `test_fixtures.py`. Do not use live
+editorial XML as a fixture or assert its wording, letter IDs, dates, reference
+names, totals, or year-group counts. New regressions belong in fixed fixtures.
+The synthetic edition deliberately includes nonconsecutive IDs and an empty,
+undated letter.
+
+Only `test_corpus_export.py` reads `data/xml/`. Its smoke checks derive expectations
+from the current source: letters and sidenotes survive export, text and milestones
+are preserved, search anchors exist, and catalog counts are internally consistent.
+Missing sidenote page targets are checked against the export's warnings rather
+than assumed absent. Valid editorial changes require no test updates. CI separately
+validates the current XML against the schemas before publishing.

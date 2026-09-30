@@ -49,10 +49,10 @@ class SchemaTests(unittest.TestCase):
             return result.returncode == 0
 
     def test_valid_spacing_contexts(self):
-        self.assertTrue(self.validate('<vspace lines="3"/><aq><vspace lines="1"/></aq><sidenote page="1" pos="left"><vspace lines="2"/></sidenote><tabs><tab value="1-2">A</tab><vspace lines="1"/><note>N</note><tab value="2-2">B</tab></tabs><line/><line type="line"/>'))
+        self.assertTrue(self.validate('<vspace lines="3"/><vspace lines="1.5"/><aq><vspace lines="1"/></aq><sidenote page="1" pos="left"><vspace lines="2"/></sidenote><tabs><tab value="1-2">A</tab><vspace lines="1"/><note>N</note><tab value="2-2">B</tab></tabs><line/><line type="line"/>'))
 
     def test_invalid_spacing(self):
-        for fragment in ['<vspace/>', '<vspace lines="0"/>', '<vspace lines="-1"/>', '<vspace lines="1.5"/>', '<vspace lines="2">text</vspace>', '<line type="empty"/>']:
+        for fragment in ['<vspace/>', '<vspace lines="0"/>', '<vspace lines="-1"/>', '<vspace lines="invalid"/>', '<vspace lines="2">text</vspace>', '<line type="empty"/>']:
             with self.subTest(fragment=fragment):
                 self.assertFalse(self.validate(fragment))
 
