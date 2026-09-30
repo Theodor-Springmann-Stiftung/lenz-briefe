@@ -74,6 +74,19 @@ These adjustments apply only in Firefox, detected through `-moz-appearance` supp
 Chromium retains Vivliostyle's own page dimensions and zoom-based print layout.
 The browser's own Print command still uses the native print stylesheet.
 
+The catalogue's **Auswahl drucken** button appears below the list on the right
+when there is no full-text query and the list contains letters. It fetches all
+currently listed letters in their displayed order, with four requests at a time,
+and prints one combined document. A cover headed “Inhaltsverzeichnis” precedes
+the letters, with a subheading showing the year range or person/place filters
+(OR within each category, AND between categories).
+Index entries include letter titles, dates and resolved page
+numbers. The cover/index may span several pages. Every letter starts on a new
+page, with continuous numbering across the complete document and one footer at
+its end. Hand styles and local anchor IDs are scoped to individual letters.
+Citation access dates are set when the selection is prepared. Failed downloads
+stop the complete selection and allow retry; they never produce a partial print.
+
 The print stylesheet uses A4 pages with 24 mm top/bottom, 25 mm right and 21 mm left
 margins, and page numbers where the browser supports CSS page-margin boxes.
 Letter text, margin notes, apparatus and Edition content have an additional

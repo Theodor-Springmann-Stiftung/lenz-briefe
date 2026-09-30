@@ -10,6 +10,8 @@ import {
   normalizeYearGroup,
 } from '../lib/filters.mjs';
 import { createCatalogSearch } from './catalog-search';
+import { setupSelectionPrint } from './print-selection';
+import { selectionDescription } from '../lib/print-selection.mjs';
 const data = JSON.parse(document.querySelector('#filter-data')!.textContent!);
 let state = readState(location.search, data.records, data.groups);
 const rows = new Map(
@@ -81,6 +83,7 @@ function render() {
   document.querySelector('#result-count')!.textContent =
     searching && hits === null ? '—' : `${count} ${count === 1 ? 'Brief' : 'Briefe'}`;
   document.querySelector<HTMLElement>('.empty-state')!.hidden = searching || count > 0;
+  document.querySelector<HTMLElement>('.selection-print-tools')!.hidden = searching || count === 0;
   renderFilterPills();
   checkboxes.forEach(
     (input) =>
@@ -216,4 +219,22 @@ window.addEventListener('popstate', () => {
 // Canonicalize unknown query values once without adding a history entry.
 const query = queryFor(state);
 history.replaceState(null, '', `${location.pathname}${query ? '?' + query : ''}${location.hash}`);
+setupSelectionPrint(() => {
+  const names = (kind: string, ids: string[]) => ids.map((id) =>
+    checkboxes.find((input) => input.name === kind && input.value === id)!
+      .closest('label')!.querySelector('span')!.textContent!.trim(),
+  );
+  return {
+    letters: searchInput.value.trim() ? [] : [...list.querySelectorAll<HTMLElement>('li[data-letter]')]
+      .filter((row) => !row.hidden)
+      .map((row) => ({
+        id: row.dataset.letter!,
+        url: row.querySelector<HTMLAnchorElement>('.letter-card-link')!.href,
+      })),
+    info: {
+      description: selectionDescription(names('person', state.people), names('place', state.places)),
+      period: state.group === 'all' ? 'Alle Jahre' : document.querySelector<HTMLElement>('[data-group][aria-current="page"]')!.textContent!.trim(),
+    },
+  };
+});
 render();

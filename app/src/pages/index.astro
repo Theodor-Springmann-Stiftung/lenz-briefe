@@ -125,6 +125,13 @@ const firstGroup = catalog.groups[0];
         </li>
       ))}
     </ol>
+    <div class="selection-print-tools" hidden>
+      <span class="letter-print-status" role="status" data-selection-print-status hidden></span>
+      <button class="all-letters-link" type="button" data-print-selection>
+        <Icon name="printer" />
+        Auswahl drucken
+      </button>
+    </div>
     <div class="empty-state" hidden>
       <h2>Keine Briefe gefunden.</h2>
       <p>Wählen Sie einen anderen Zeitraum oder weniger Filter.</p>

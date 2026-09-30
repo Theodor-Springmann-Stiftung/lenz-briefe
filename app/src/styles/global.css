@@ -68,7 +68,9 @@
   .edition-menu-panel a[href]:hover, .edition-menu-panel a[href]:focus-visible { color:var(--color-ink); background:#e6e9e1; }
   .edition-menu-panel a[aria-current=page] { color:var(--color-paper); background:var(--color-selected); }
   .edition-menu-panel a[aria-current=page]::after { content:'•'; color:inherit; }
-  .letter-print-status { font-size:.875rem; }
+  .letter-print-status { display:inline-flex; align-items:center; gap:.5rem; font-size:.875rem; }
+  .letter-print-status.is-preparing::before { content:''; }
+  .selection-print-tools { display:flex; align-items:center; justify-content:flex-end; gap:1rem; margin-top:1.5rem; }
   .site-footer { @apply mt-10 pt-4 pb-3 text-sm text-ink; flex-shrink:0; border-top:1px solid #a8b2a8; background:#e3e8e3; }
   .site-footer-inner { @apply flex flex-wrap items-center justify-between gap-x-6 gap-y-2; width:100%; max-width:1600px; margin-inline:auto; }
   .site-footer a { @apply underline; }
@@ -127,7 +129,7 @@
   .catalog-search > .ui-icon > svg, .filter-menu-label > .ui-icon > svg, .filter-panel-search > .ui-icon > svg { width:1.125rem; height:1.125rem; }
   .catalog-search, .filter-menu summary, .filter-panel-search { position:relative; }
   .catalog-search input { @apply w-full min-w-0 bg-transparent text-sm text-ink; }
-  .search-spinner { width:1rem; height:1rem; flex-shrink:0; border:2px solid var(--color-rule); border-top-color:var(--color-accent); border-radius:50%; animation:search-spin .8s linear infinite; }
+  .search-spinner, .letter-print-status.is-preparing::before { width:1rem; height:1rem; flex-shrink:0; border:2px solid var(--color-rule); border-top-color:var(--color-accent); border-radius:50%; animation:search-spin .8s linear infinite; }
   .search-feedback { @apply flex flex-wrap items-baseline gap-3 text-sm text-muted; margin-top:1.25rem; }
   .search-retry { @apply underline text-sm; }
   .search-section { margin-top:1rem; }
@@ -674,5 +676,5 @@ html:has(#ueberlieferung:target) { scroll-behavior:auto; }
 @media (prefers-reduced-motion:reduce) {
   .archive-link:is(:hover, :focus-visible) .archive-link-arrow { animation:none; }
   html { scroll-behavior:auto; }
-  .search-spinner { animation:none; }
+  .search-spinner, .letter-print-status.is-preparing::before { animation:none; }
 }
