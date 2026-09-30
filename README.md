@@ -27,6 +27,15 @@ Reihenfolge fest.
 
 Bilder und Downloads liegen im Ordner `assets/` im Projektstamm. Die Seite „Lizenzen und Drittanbieter“ wird aus dem Lizenzverzeichnis erzeugt.
 
+Die Seite „Materialien zu geplanten oder verschollenen Briefen“ bindet die direkt
+bearbeitbaren HTML-Transkriptionen `seiten/components/lkb-briefumschlaege.html`,
+`lkb-briefplaene.html` und `lkb-brieffragmente.html` ein. Sie verwenden dieselben
+HTML-Auszeichnungen und CSS-Klassen wie die Edition (`edition-text`, `lb-line-block`,
+`nr`, `tl`, `ul`, `del`, `pe`, `ink` und `note`). Die Transkriptionen stehen in
+`blockquote`-Blöcken mit einer Randlinie; umschließende Zitatzeichen entfallen.
+Die Siegelgalerie liegt in `seiten/components/lkb-siegel.md`, ihre WebP-Abbildungen
+in `assets/siegel/`. Die Originalvorlagen bleiben in `docs/import/`.
+
 ## `data/`: Editionsdaten und Verarbeitungsregeln
 
 ### `data/xml/`

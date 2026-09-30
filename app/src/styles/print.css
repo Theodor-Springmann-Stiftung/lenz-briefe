@@ -128,6 +128,10 @@
   .page-prose table { display:table; overflow:visible; font-size:8pt; }
   .page-prose pre { white-space:pre-wrap; overflow:visible; overflow-wrap:anywhere; }
   .page-prose figure, tr, .quick-legend-entry { break-inside:avoid-page; }
+  .material-source, .material-label { break-after:avoid-page; }
+  .material-transcription { padding-inline-start:3mm; }
+  .seal-gallery { grid-template-columns:repeat(2,minmax(0,1fr)); gap:5mm; }
+  .page-prose .seal-gallery img { height:45mm; }
   thead { display:table-header-group; }
   .legend-table-wrap { overflow:visible; }
   .legend-table { min-width:0; font-size:8pt; }

@@ -449,6 +449,15 @@ button.hand-range-trigger { font:inherit; text-align:inherit; }
 .hand-range-background { position:absolute; background:rgb(52 88 117 / .065); border-radius:3px; pointer-events:none; z-index:-1; }
 /* Shared editorial semantics: these selectors also style imported XSLT HTML. */
 .edition-text { @apply font-serif; font-weight:var(--hand-base-weight); font-variation-settings:var(--hand-base-optical); position:relative; isolation:isolate; line-height:1.85; hyphens:none; overflow-wrap:break-word; }
+.complementary-material { margin-block:2rem; }
+.material-source { margin-block:.75rem; font-weight:700; }
+.material-label { margin-block:1rem .35rem; }
+.material-transcription { margin:.75rem 0 1.5rem; padding-inline-start:1rem; border-inline-start:2px solid var(--color-rule); }
+.seal-gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr)); gap:2rem; }
+.page-prose .seal-gallery figure { margin:0; min-width:0; }
+.page-prose .seal-gallery p { margin:0; }
+.page-prose .seal-gallery img { display:block; width:100%; height:14rem; object-fit:contain; margin:0 0 .75rem; }
+.page-prose .seal-gallery figcaption { text-align:center; }
 .quick-legend .edition-text { font-size:1rem; line-height:1.5; }
 .apparatus .edition-text { @apply font-sans; line-height:1.55; }
 .margin-note .edition-text, .unplaced-note .edition-text, .inpos-note .edition-text { line-height:1.45; }
