@@ -165,7 +165,6 @@ const sectionLinks = [
         )}
       </aside>
       <aside class="marginalia" aria-label="Randnotizen und Hände">
-        {placed.length > 0 && <h2 class="print-only print-notes-title">Randnotizen</h2>}
         {placed.map((note) => (
           <div
             class="marginal-item margin-note sidenote-layout"
@@ -185,10 +184,7 @@ const sectionLinks = [
       </aside>
     </div>
     {unplaced.length > 0 && (
-      <section class="unplaced-notes" aria-labelledby="unplaced-title">
-        <p class="eyebrow" id="unplaced-title">
-          Weitere Randnotizen
-        </p>
+      <section class="unplaced-notes" aria-label="Weitere Randnotizen">
         {unplaced.map((note) => (
           <div class="unplaced-note sidenote-layout">
             <Sidenote note={note} hands={hands}>

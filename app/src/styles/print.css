@@ -71,7 +71,6 @@
   .letter-body .hand[data-hand-name]::before { content:attr(data-hand-name); float:right; clear:right; width:21mm; margin:0 -25mm 1mm 4mm; font:400 7pt/1.25 var(--font-sans); color:#444; text-align:left; overflow-wrap:anywhere; }
   .marginalia, html.js .reading-layout .marginalia { position:static; height:auto !important; margin:6mm 0 0; padding:0; opacity:1 !important; visibility:visible !important; }
   .marginalia:not(:has(.margin-note)) { display:none; }
-  .print-notes-title { margin-bottom:3mm; font:700 10pt/1.3 var(--font-sans); }
   .marginalia .marginal-item { position:static; margin:0 0 4mm; transform:none; }
   .sidenote-layout { display:block; padding-left:5.5mm; font-size:9pt; break-inside:avoid-page; page-break-inside:avoid; }
   .sidenote-layout .edition-text { line-height:1.35; }

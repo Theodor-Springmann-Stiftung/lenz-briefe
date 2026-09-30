@@ -99,7 +99,7 @@ browser's own headers and footers for the cleanest result.
 Letters retain their LKB number, metadata, transcription, hands, apparatus and
 citation. Source page numbers appear inline; hand names occupy a narrow right-hand
 column alongside their marked passages. Margin
-notes follow the letter under “Randnotizen”, with their position descriptions and
+notes follow the letter directly, with their position descriptions and
 without added page prefixes. The small apparatus text is limited to 80ch.
 In-position notes stay at their source location. Paragraphs and individual margin
 notes stay together on a page when they fit. Source icons remain visible beside
