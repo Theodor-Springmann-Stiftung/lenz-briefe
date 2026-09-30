@@ -100,6 +100,17 @@
   .hand-sample { font-size:12.5pt; }
 
   /* Preserve transcription marks even when background printing is disabled. */
+  /* PDF renderers can paint the screen's masked SVG arrows as solid boxes.
+     Use small text arrows beside the opening insertion corner in print. */
+  .edition-text .insertion-arrow::before { content:none; mask:none; background:none; left:0; bottom:.2em; width:.8em; height:.9em; font:400 .65em/1 Arial, sans-serif; }
+  .edition-text .insertion[data-pos="top"] > .insertion-arrow::before { content:'↓'; }
+  .edition-text .insertion[data-pos="bottom"] > .insertion-arrow::before { content:'↑'; }
+  .edition-text .insertion[data-pos="left"] > .insertion-arrow::before { content:'→'; }
+  .edition-text .insertion[data-pos="right"] > .insertion-arrow::before { content:'←'; }
+  .edition-text .insertion[data-pos="top left"] > .insertion-arrow::before { content:'↘'; }
+  .edition-text .insertion[data-pos="top right"] > .insertion-arrow::before { content:'↙'; }
+  .edition-text .insertion[data-pos="bottom left"] > .insertion-arrow::before { content:'↗'; }
+  .edition-text .insertion[data-pos="bottom right"] > .insertion-arrow::before { content:'↖'; }
   .edition-text :is(.er, .er *, .highlight, mark, .insertion, .insertion-arrow, .tab, .lb-ornament),
   .edition-text del .nr { print-color-adjust:exact; -webkit-print-color-adjust:exact; }
   .edition-text mark.search-match, [data-search-target] mark.search-match,
