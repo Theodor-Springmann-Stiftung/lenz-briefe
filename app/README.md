@@ -133,6 +133,12 @@ downloads the complete built edition into browser Cache Storage. It shows compac
 download/update progress, changes its label to **Offline verfügbar** after completion, and shows a resume
 button if the network or browser storage interrupts the download. Unchecking it
 stops pending requests, removes this edition's caches, and unregisters its worker.
+After successful removal it also deletes the offline preference from local storage.
+If removal fails or the page closes midway, a temporary disabled marker lets the
+next visit finish cleanup; stale messages cannot enable offline use again.
+Orphaned edition caches are removed even when no worker is registered.
+Persistent-storage permission protects those same caches from eviction; it is not
+a separate copy of the data. The browser may retain that permission after cleanup.
 It does not touch other applications' caches.
 When a changed version is found, the checkbox label becomes **Aktualisiere** for
 the update, then returns to **Offline verfügbar**. Download progress shows just

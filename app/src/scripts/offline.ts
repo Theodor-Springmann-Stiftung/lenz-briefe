@@ -31,6 +31,7 @@ function initializeOfflineControl(root: HTMLElement) {
   let connecting: Promise<ServiceWorker> | undefined;
   let workerCheckedAt = 0;
   let desired = readPreference();
+  let optedOut = explicitlyDisabled();
   let changing = false;
   let previousPhase = '';
   let latest: OfflineStatus | undefined;
@@ -64,8 +65,34 @@ function initializeOfflineControl(root: HTMLElement) {
 
   function remember(value: boolean) {
     desired = value;
+    optedOut = !value;
     try { localStorage.setItem(preferenceKey, value ? 'enabled' : 'disabled'); }
     catch { /* The worker's persistent state also restores the preference. */ }
+  }
+
+  function forgetPreference() {
+    // Keep the disabled marker only while removal is pending, so closing the
+    // page midway through cleanup can resume it. Completed opt-outs leave no
+    // local storage behind; optedOut still rejects queued worker messages.
+    if (localStorage.getItem(preferenceKey) === 'disabled') localStorage.removeItem(preferenceKey);
+  }
+
+  async function removeOfflineData() {
+    const existing = await navigator.serviceWorker.getRegistration(base.href);
+    const ownsRegistration = existing?.scope === base.href
+      && [existing.active, existing.waiting, existing.installing].some((worker) => worker?.scriptURL === script.href);
+    if (ownsRegistration) {
+      render(await command('DISABLE'));
+    } else {
+      // Orphaned caches can remain after a worker was removed externally.
+      // Deleting them must also work offline, without installing a new worker.
+      const prefix = `${preferenceKey}:`;
+      for (const name of await window.caches.keys()) {
+        if (name.startsWith(prefix)) await window.caches.delete(name);
+      }
+    }
+    forgetPreference();
+    registration = undefined;
   }
 
   function clearRecovery(reset = false) {
@@ -96,7 +123,7 @@ function initializeOfflineControl(root: HTMLElement) {
 
   function render(status: OfflineStatus) {
     if (changing && status.enabled !== desired) return;
-    if (!desired && (changing || explicitlyDisabled()) && status.enabled) return;
+    if (!desired && (changing || optedOut) && status.enabled) return;
     if (latest && status.done > latest.done) recoveryAttempt = 0;
     latest = status;
     if (status.phase === 'ready' && status.ready) completedVersion = status.version;
@@ -237,8 +264,8 @@ function initializeOfflineControl(root: HTMLElement) {
         navigator.storage?.persist?.().catch(() => {});
         render(await command('ENABLE', true, true));
       } else {
-        render(await command('DISABLE'));
-        registration = undefined;
+        await removeOfflineData();
+        optionLabel.textContent = downloadLabel;
       }
     } catch (error) { showFailure(error); }
     finally {
@@ -259,8 +286,11 @@ function initializeOfflineControl(root: HTMLElement) {
     const status: OfflineStatus = event.data.status;
     // A queued status from the preceding toggle must not replace the new choice.
     if (changing && status.enabled !== desired) return;
-    if (!status.enabled) remember(false);
-    else if (!changing && !explicitlyDisabled()) remember(true);
+    if (!status.enabled) {
+      remember(false);
+      // An off broadcast is sent only after the worker has removed its data.
+      try { forgetPreference(); } catch (error) { showFailure(error); return; }
+    } else if (!changing && !optedOut) remember(true);
     render(status);
   });
   window.addEventListener('online', () => {
@@ -284,6 +314,7 @@ function initializeOfflineControl(root: HTMLElement) {
   window.addEventListener('storage', (event) => {
     if (event.key !== preferenceKey) return;
     desired = event.newValue === 'enabled';
+    optedOut = !desired;
     if (desired) synchronize();
     else if (!changing) {
       clearRecovery(true);
@@ -304,17 +335,18 @@ function initializeOfflineControl(root: HTMLElement) {
     checkbox.checked = desired;
     try {
       const existing = await navigator.serviceWorker.getRegistration(base.href);
+      if (changing) return;
       if (desired) await synchronize();
+      else if (explicitlyDisabled()) await removeOfflineData();
       else if (existing?.scope === base.href && existing.active?.scriptURL === script.href) {
-        // A page may have been closed halfway through opting out. Its explicit
-        // choice takes precedence over an older worker/cache status.
-        if (explicitlyDisabled()) { render(await command('DISABLE')); return; }
+        // Restore the worker's choice if local storage was unavailable.
         const status = await command('STATUS');
         if (changing) return;
         remember(status.enabled);
+        if (!status.enabled) forgetPreference();
         render(status);
         if (status.enabled) await synchronize();
       }
-    } catch (error) { if (desired || latest?.enabled) showFailure(error); }
+    } catch (error) { if (desired || optedOut || latest?.enabled) showFailure(error); }
   })();
 }

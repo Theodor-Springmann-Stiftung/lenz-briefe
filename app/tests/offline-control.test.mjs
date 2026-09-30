@@ -25,7 +25,7 @@ function target(properties = {}) {
   };
 }
 
-async function control(initial = paused, replyError, pageVersion = versionA) {
+async function control(initial = paused, replyError, pageVersion = versionA, options = {}) {
   let status = { ...initial };
   const timers = new Map();
   const intervals = [];
@@ -45,8 +45,9 @@ async function control(initial = paused, replyError, pageVersion = versionA) {
   const root = target({ dataset: { base: '/', production: 'true', offlineVersion: pageVersion }, querySelector: (selector) => fields[selector] });
   const document = target({ querySelector: () => root, visibilityState: 'visible' });
   const clearTimeout = (timer) => timers.delete(timer);
+  const cacheNames = new Set(options.cacheNames || []);
   const window = target({
-    caches: {}, clearTimeout,
+    caches: { keys: async () => [...cacheNames], delete: async (name) => cacheNames.delete(name) }, clearTimeout,
     setTimeout: (callback, delay) => { timers.set(++nextTimer, { callback, delay }); return nextTimer; },
     setInterval: (callback) => intervals.push(callback),
   });
@@ -59,13 +60,16 @@ async function control(initial = paused, replyError, pageVersion = versionA) {
     },
   };
   const registration = { scope: 'https://edition.test/', active: worker, update: async () => {} };
-  const serviceWorker = target({ getRegistration: async () => registration });
+  const serviceWorker = target({ getRegistration: async () => options.orphaned ? undefined : registration });
   const navigator = { serviceWorker, onLine: true };
-  const preferences = new Map([['lenz-offline-v1:/', 'enabled']]);
+  const preferences = new Map(options.preferences || [['lenz-offline-v1:/', 'enabled']]);
   vm.runInNewContext(source, {
     URL, DOMException, document, window, navigator, clearTimeout,
     location, isSecureContext: true,
-    localStorage: { getItem: (key) => preferences.get(key), setItem: (key, value) => preferences.set(key, value) },
+    localStorage: {
+      getItem: (key) => preferences.get(key), setItem: (key, value) => preferences.set(key, value),
+      removeItem: (key) => preferences.delete(key),
+    },
     MessageChannel: class {
       port1 = { close() {} };
       port2 = { postMessage: (data) => queueMicrotask(() => this.port1.onmessage({ data })) };
@@ -73,7 +77,7 @@ async function control(initial = paused, replyError, pageVersion = versionA) {
   });
   await flush();
   return {
-    commands, timers, intervals, window, document, navigator,
+    commands, timers, intervals, window, document, navigator, preferences, cacheNames,
     checkbox: fields['[data-offline-toggle]'], label: fields['[data-offline-label]'], retry: fields['[data-offline-retry]'],
     reload: fields['[data-offline-reload]'], feedback: fields['.offline-feedback'], location, reloads: () => reloads,
     async tick() {
@@ -154,11 +158,46 @@ test('unchecking cancels recovery and stale worker messages cannot restart it', 
   const change = ui.checkbox.emit('change');
   assert.equal(ui.label.textContent, 'Wird entfernt …');
   await change;
+  assert.equal(ui.preferences.size, 0, 'Completed removal must leave no offline preference');
   assert.equal(ui.timers.size, 0);
   assert.equal(ui.label.textContent, 'auch Offline nutzen (~9 MB)');
   await ui.broadcast(paused);
+  assert.equal(ui.preferences.size, 0, 'Stale messages must not recreate the preference');
   assert.equal(ui.checkbox.checked, false);
   assert.equal(ui.timers.size, 0);
+});
+
+test('completed removal broadcasts clear preferences in other open tabs', async () => {
+  const ui = await control();
+  await ui.broadcast({ enabled: false, phase: 'off', ready: false });
+  assert.equal(ui.preferences.size, 0);
+  await ui.broadcast(paused);
+  assert.equal(ui.checkbox.checked, false);
+  assert.equal(ui.preferences.size, 0);
+});
+
+test('failed removal keeps the opt-out marker so cleanup can resume on the next visit', async () => {
+  const ui = await control(paused, 'NetworkError');
+  ui.checkbox.checked = false;
+  await ui.checkbox.emit('change');
+  assert.equal(ui.preferences.get('lenz-offline-v1:/'), 'disabled');
+  assert.equal(ui.label.textContent, 'Entfernen fehlgeschlagen');
+  const resumed = await control(paused, undefined, versionA, {
+    preferences: [...ui.preferences],
+  });
+  assert.equal(resumed.commands[0].type, 'DISABLE');
+  assert.equal(resumed.preferences.size, 0);
+});
+
+test('interrupted removal clears orphaned caches without registering a worker', async () => {
+  const ui = await control(paused, undefined, versionA, {
+    orphaned: true,
+    preferences: [['lenz-offline-v1:/', 'disabled'], ['unrelated', 'keep']],
+    cacheNames: ['lenz-offline-v1:/:state', 'lenz-offline-v1:/:files', 'lenz-offline-v1:/other/:files', 'unrelated-app'],
+  });
+  assert.equal(ui.commands.length, 0);
+  assert.deepEqual([...ui.preferences], [['unrelated', 'keep']]);
+  assert.deepEqual([...ui.cacheNames], ['lenz-offline-v1:/other/:files', 'unrelated-app']);
 });
 
 test('storage exhaustion requires manual action and never schedules automatic retries', async () => {
