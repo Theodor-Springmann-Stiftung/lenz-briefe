@@ -23,7 +23,7 @@
 - Archiv link with/without text
 - Search matching: über Worte hinweg oder nicht?
 - briefe/236/ -- Spiegelverkehrt -- nichts ist spiegelverkehrt (vertikal gespiegelt evtl.)
-  vertikal spiegelverkehrt moddellieren?
+  vertikal spiegelverkehrt modellieren?
 - 81: Only pg 4
 - CMIF
 
