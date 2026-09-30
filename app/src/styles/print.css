@@ -11,13 +11,25 @@
 }
 
 @media print {
-  :root { --color-paper:#fff; --color-ink:#000; --color-muted:#444; --color-rule:#aaa; --print-content-inset:25mm; }
+  :root { --color-paper:#fff; --color-ink:#000; --color-muted:#444; --color-rule:#aaa; --print-content-inset:25mm; --print-letter-text-width:calc(210mm - 21mm - 25mm - var(--print-content-inset)); }
   html { background:#fff; color:#000; font-size:9.5pt; scroll-padding:0; }
   body { display:block; min-height:0; }
   body > main, .site-shell, .site-shell--wide { display:block; width:100%; max-width:none; margin:0; padding:0; }
   a, a:hover { color:inherit; }
   p, li, dd, .lb-line-block { orphans:3; widows:3; }
   p { break-inside:avoid-page; page-break-inside:avoid; }
+  /* The print snapshot replaces unbreakable flex rows with tables whose cells
+     can continue on the next page, retaining each source row's column widths. */
+  .edition-text .tabs, .edition-text .lb-tab-row { break-inside:auto; page-break-inside:auto; }
+  .edition-text .lb-tab-row:has(> .print-tab-table) { display:block; }
+  .edition-text .print-tab-table { width:100%; table-layout:fixed; border-collapse:collapse; }
+  .edition-text .print-tab-table > tbody > tr { break-inside:auto; page-break-inside:auto; }
+  .edition-text .print-tab-table .tab { display:table-cell; vertical-align:top; margin-left:0; break-inside:auto; page-break-inside:auto; }
+  .edition-text .print-tab-table .tab { --print-tab-label-padding:.8rem; }
+  .edition-text .print-tab-table .tab:last-child { --print-tab-label-padding:0px; }
+  .edition-text .print-tab-table .tab:is([data-type="line"], [data-type="line-right"]) { --print-tab-label-padding:.8rem; }
+  .edition-text .print-tab-table .tab:is([data-type="right-virgil-inwards"], [data-type="right-virgil-outwards"]) { --print-tab-label-padding:1.5rem; }
+  .edition-text .print-tab-gap { padding:0; border:0; }
   h1, h2, h3, h4, h5, h6 { break-after:avoid-page; }
   img, svg { max-width:100%; }
 
@@ -68,7 +80,7 @@
   .letter-body .page-anchor[data-index]::before,
   .letter-body .hand[data-hand-name]::before { font:400 7pt/1.3 var(--font-sans); font-variation-settings:normal; color:#444; margin-inline:.25em; }
   .letter-body .page-anchor[data-index]::before { content:'[' attr(data-index) ']'; white-space:nowrap; }
-  .letter-body .hand[data-hand-name]::before { content:attr(data-hand-name); float:right; clear:right; width:21mm; margin:0 -25mm 1mm 4mm; font:400 7pt/1.25 var(--font-sans); color:#444; text-align:left; overflow-wrap:anywhere; }
+  .letter-body .hand[data-hand-name]::before { content:attr(data-hand-name); float:right; clear:right; width:21mm; margin:0 calc(-25mm - var(--print-tab-hand-shift,0%)) 1mm calc(4mm + var(--print-tab-hand-shift,0%)); font:400 7pt/1.25 var(--font-sans); color:#444; text-align:left; overflow-wrap:anywhere; }
   .marginalia, html.js .reading-layout .marginalia { position:static; height:auto !important; margin:6mm 0 0; padding:0; opacity:1 !important; visibility:visible !important; }
   .marginalia:not(:has(.margin-note)) { display:none; }
   .marginalia .marginal-item { position:static; margin:0 0 4mm; transform:none; }

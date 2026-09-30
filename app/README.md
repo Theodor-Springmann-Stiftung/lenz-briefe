@@ -406,6 +406,9 @@ A repeated or lower tab position wraps to a new row. On narrow screens line
 indentation is capped at 25% to keep the text readable.
 Inside a `tab`, `line` starts a new line within that cell. Between `tab` elements,
 it starts a new table row. Each cell supports its own formatting and vertical space.
+The printable snapshot converts each visual tab row into an independent table,
+keeping its column widths and gaps while allowing internal lines to split across
+pages. Repeated tab runs wrap into separate tables, as they do on the website.
 
 The language tags only set `lang`: `gr→grc`, `fr→fr`, `hb→he`, `ru→ru`;
 `aq→la` also changes to sans-serif. Edition marks are CSS decorations so they do

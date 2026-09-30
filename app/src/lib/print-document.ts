@@ -3,6 +3,7 @@
 
 import screenStyles from '../styles/global.css?inline';
 import printStyles from '../styles/print.css?inline';
+import { preparePrintTabs } from './print-tabs';
 
 /** Snapshot the current letter, including hand fonts and the current access date.
  * A base URL keeps local fonts, images and links working in the blob document.
@@ -13,6 +14,7 @@ export function printDocument(source: Document): string {
   const html = copy.documentElement;
   html.querySelectorAll('script, iframe, [data-tippy-root], link').forEach((node) => node.remove());
   html.querySelectorAll('[autofocus]').forEach((node) => node.removeAttribute('autofocus'));
+  preparePrintTabs(copy);
   const head = html.querySelector('head')!;
   // Astro supplies local-only fallback faces for screen font loading.
   // The print copy uses the same self-hosted font files, with native fallbacks.
