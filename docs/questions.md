@@ -36,6 +36,7 @@
 ## TODO ME
 - Übersetzung und "Zusatzmaterial" in Serifen
 - Design/Hintergrund
+- GND/GeoNames
 
 ## ME (WÜRDE ANDERS)
 - 266: verte
