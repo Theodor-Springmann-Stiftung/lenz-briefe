@@ -17,7 +17,7 @@
   body > main, .site-shell, .site-shell--wide { display:block; width:100%; max-width:none; margin:0; padding:0; }
   a, a:hover { color:inherit; }
   p, li, dd, .lb-line-block { orphans:3; widows:3; }
-  p, .edition-text .lb-line-block { break-inside:avoid-page; page-break-inside:avoid; }
+  p { break-inside:avoid-page; page-break-inside:avoid; }
   h1, h2, h3, h4, h5, h6 { break-after:avoid-page; }
   img, svg { max-width:100%; }
 
