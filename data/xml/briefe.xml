@@ -1108,7 +1108,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/>Warum haben Sie mir denn nichts von Ihnen zukommen lassen? Das Versprechen hätten Sie doch halten sollen. Sie wissen wie es uns armen Poeten geht, die die Bücher lesen wie Vögel unter dem Himmel ein Korn finden. Ich habe noch keins von Ihren Stücken in die Hände bekommen Von der Seilerschen Gesellschaft verseh ich mir sehr viel Gutes Gott weiß wenn ich <aq>exul</aq> wieder einmal deutsches Schauspiel zu sehn bekomme
 <sidenote pos="left" page="2" annotation="am linken Rand der zweiten Seite, vertikal">
 <line tab="1"/>Grüssen Sie mir Ihre verehrungswürdige Schwester und den lieben Doktor. Wenn Sie aber nach Lyon schreiben, oder Himmel führe Ihre Hand alsdenn, meiner im Besten zu gedenken. Kann ich nicht erfahren wenn sie zurückkommen. Lieber Freund! wären doch alle Oerter in der Welt so nah bey einander als in Shakespears Stücken! Lion, Strasburg, Gotha – ich denk’, ich erwarte Sie alle.</sidenote>
-<sidenote pos="bottom" page="2" annotation="am oberen Rand der zweiten Seite, spiegelverkehrt">
+<sidenote pos="bottom" page="2" annotation="am oberen Rand der zweiten Seite, horizontal gespiegelt">
 <line tab="1"/>Was sagen Sie zu all dem Gelärms übern Werther? Ist das erhört einen Roman wie eine Predigt zu beurtheilen. O Deutschland mit deinem Geschmack!</sidenote>
 </letterText>
 
@@ -2195,7 +2195,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line /><align pos="right">Lenz</align>
 <sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal">
 <line tab="1"/>Weise niemand diesen Brief. Er ist für kein Auge das nicht durchdringt. Selbst für Deines <ul>müssen</ul> itzt noch Dunkelheiten bleiben.</sidenote>
-<sidenote pos="top" page="1" annotation="am oberen Rand der ersten Seite, spiegelverkehrt">
+<sidenote pos="top" page="1" annotation="am oberen Rand der ersten Seite, horizontal gespiegelt">
 <line tab="1"/>Wegen der Soldaten sey ruhig. Ists <dul>wahr</dul> daß Du nach Weymar kommst so werde ich wieder einmal eine Freude haben. Eine.</sidenote>
 <page index="4"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
@@ -3267,7 +3267,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line /><align pos="center"><note>horizontal gespiegelt:</note></align>
 <line tab="1"/>Von Palloper. Er hat vor 26 Jahren als Hauptm. mit seinem Corps. in Strasb. gestanden.
 <vspace lines="1"/>
-<line /><align pos="center"><note>vertikal gespiegelt:</note></align>
+<line /><align pos="center"><note>horizontal gespiegelt:</note></align>
 <line />2 Binden
 <line />1 P. seidene Strümpfe
 <line />1 Hemd
@@ -3840,7 +3840,7 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
     <line tab="1"/>+ die sie für ein Bauermädchen hielten, weil sie eben zu Kn. gekommen was der nun erfährt keuchend und schwitzend seine letzte Statue zum Fenster hinaus warf.
 </tab>
 <tab value="2-2">
-    <line tab="1"/><note>Vertikal gespiegelt:</note> Sobald ich nach Weymar komme mein Ding für die Herzogin ausmachen sehr vortheilhaft für Pandp. und für sie
+    <line tab="1"/><note>horizontal gespiegelt:</note> Sobald ich nach Weymar komme mein Ding für die Herzogin ausmachen sehr vortheilhaft für Pandp. und für sie
     <vspace lines="1"/>
     <line tab="1"/>Das von der Deutschen Gesellschaft im Merkur.
 </tab>
@@ -3966,7 +3966,7 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <page index="4"/><aq>je Vous ouvre mon coeur. Je me declare coupable de tous ces petits tours, de toutes ces ruses dont Vous me fites le dernier soir d’aussi vives reproches, je vous declarerai même que <del>je ne</del> <insertion pos="top">rien moins que de</insertion> changer <del>si pas</del> de conduite <insertion pos="left">je la soutiendrai avec <del><nr></nr></del> de la fermeté.</insertion> tant que les raisons qui m’y forcent ne <insertion pos="top">voudront pas</insertion> cesser <del>ont pas</del>. Vous deviez donc prendre garde <subst><del>de</del> <insertion>a</insertion></subst> me fournir d’occasions de faire du mal sous les dehors de l’innocence et de la probité. Pourquoi, je Vous en supplie, me produire a la cour? Pourquoi m’ouvrir des vúes aussi pleines de charmes lorsque j’etois resigné pour la campagne. Pourquoi en dônner ombrage a des personnes qui jusqu’ici ont taché de m’<insertion pos="top">en</insertion> eloigner, afin d’etre a l’abri de mes petits tours <insertion pos="top">et de mes ruses</insertion>? Qui pour les prevenir, ou pour me corriger peut etre ont tout mis en usage du mepris, des petits tours <insertion pos="top">de leur façon,</insertion> souvent plus fins <insertion pos="bottom">ou du moins plus cachés</insertion> encore, de la raillerie bien amiable</aq>
 <sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite, vertikal, rechte Spalte"><aq>et mieux encore placées et qui pour parler net, ont <insertion pos="top">de très grand coeur</insertion> abusé de ma complaisance <del>de’l d ’angleleur</del> de <insertion pos="top">les</insertion> egayer <insertion pos="top">dans</insertion> leur langueurs. J’ai <del>fait</del> joué au Colin Maillard avec eux et <insertion pos="top">de trop grande amitie pour moi,</insertion> <ul>a chase</ul> ils ont oublée que je m’etois bandé les yeux moi même et tachent quoiqu’envain de me les fassciner encore. Il est bien naturel que rien peut flatter leur orgueil d’avantage lequel je me</aq></sidenote>
 <sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite, vertikal, linke Spalte"><aq>suis proposé de ne plus menager. Il est aisé a prevoir que ce changement de conduite ne leurs conviendra guere, après leur avoir donné tant d’avantage par celle que j’affectois en arrivant. Cependant je ne peux rien moins que la continuer telle</aq></sidenote>
-<sidenote pos="top" page="4" annotation="am oberen Rand der vierten Seite, spiegelverkehrt zum Haupttext"><aq>quoique leur amitié m’en veuille persuader et quelqu’honneur que j’y mette de plaire a une Cour qui fixe a present les yeux de toute l’Allemagne et même de nos voisins, j’ai assez d’ambition de n’en vouloir plus faire le plaisant. Voila les sentimens avec lesquelles je ne peux m’empecher d’y commencer ma nouvelle carriere</aq></sidenote>
+<sidenote pos="top" page="4" annotation="am oberen Rand der vierten Seite, horizontal gespiegelt zum Haupttext"><aq>quoique leur amitié m’en veuille persuader et quelqu’honneur que j’y mette de plaire a une Cour qui fixe a present les yeux de toute l’Allemagne et même de nos voisins, j’ai assez d’ambition de n’en vouloir plus faire le plaisant. Voila les sentimens avec lesquelles je ne peux m’empecher d’y commencer ma nouvelle carriere</aq></sidenote>
 </letterText>
 
 <letterText letter="233"><page index="1"/>
@@ -4026,7 +4026,7 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <line />
 <line tab="1"/>Ihre Paar Sporen. und da schiken sie doch mit dem nachsten dann Hr. <ul>G. L. R.</ul> seine Sporen wieder zurük.
 <vspace lines="1"/>
-<line /><align pos="center"><note>spiegelverkehrt:</note></align>
+<line /><align pos="center"><note>horizontal gespiegelt:</note></align>
 <line /><pe>D 22 <ul>Septbr.</ul></pe>
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
@@ -4056,7 +4056,7 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <page index="3"/>inniger Verehrung und Anbetung des Geists der in Ihnen webt und würket.
 <sidenote pos="left" page="2" annotation="am linken Rand der zweiten Seite, vertikal">
 <line tab="1"/>Bitten Sie doch Bruder Carl um die <ul>einzige Freundschaft</ul> mir in einer guten Stunde aus Ihrem und meiner Mutter Munde historische Nachrichten von meinen Großeltern <fn index="5"><anchor><sup>#</sup></anchor></fn> so wohl von <ul>Ihrer</ul> als von mütterlicher Seite aufzuschreiben und zuzu<del>setzen</del>senden, er wird <ul>unserm Herzog</ul> damit <ul>Freude</ul> machen. Die Gnade dieses Fürsten für mich ist Gottes Werk.</sidenote>
-<sidenote pos="top" page="2" annotation="am oberen Rand der zweiten Seite, spiegelverkehrt">
+<sidenote pos="top" page="2" annotation="am oberen Rand der zweiten Seite, horizontal gespiegelt">
 <line tab="1"/>NB. <fn index="5"><anchor><sup>#</sup></anchor></fn> wollten Sie mich <ul>würdigen,</ul> etwas von Ihrer eigenen Lebensgeschichte dazuzuthun, würd ichs mit dem <dul>höchsten</dul> Dank erkennen.</sidenote>
 <line tab="1"/>Die Briefe meiner Geschwister stärkten mich gleichfalls. Sagen Sie Fritzen ich werde Sorge für seinen Auftrag haben, fürchte aber, er werde ein wenig unthulich seyn, falls nicht etwa ein Landsmann nach Lief- oder Curland hineingeht, der einen Burschen mitnimmt. Mein Bruder Christian ist immer der einzige Mensch der mich noch am besten verstehen kann; sein Glück, seine Zufriedenheit sind die meinigen. Schwester Lottgen und Liesgen bitte ihre Munterkeit nicht zu verlieren, das Leben wird heutzutage immer bitterer – und immer süsser. Ein Augenblick – ersetzt Jahre voll Kummer – auch ein Augenblick wie der wenn ich Nachrichten von Ihnen erhalte. Schwester Norgen möchte ich sehen, Bruder Carl wird die Hofnungen seines Vaters nicht so grausam hintergehen als ich. Dürft ich bitten alle Ihre Schattenbilder zu nehmen, und sie mir verkleinert mit einem Instrument das man Storchenschnabel nennt, im Briefe zuzuschicken.
 <sidenote pos="left" page="3" annotation="am linken Rand der dritten Seite, vertikal">
@@ -4345,9 +4345,9 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line tab="1"/>Schick doch diesen Brief sogleich ihm hin, ich flehe, der vorige hat
 <sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite, vertikal"> <ul>Effeckt gethan,</ul> wofür ich tausendmal danke. Er wird mir diese letzte Gnade nicht abschlagen, wenn ihm Goethe für die Reinheit meiner Absichten Bürge ist. Und der wird es seyn, so sehr ich ihn beleidigt habe. Ich dachte nicht daß es so plötzlich aus seyn sollte und hatte mir meine süssesten Arbeiten aufgespahrt. Diese Gelegenheit ist hernach auf immer für mich verloren. <ul>Nur ein einziger Tag</ul>
 <line tab="1"/>Umarme und seegne Deine Gattin; Seyd unbegrenzt glücklich – vergeßt mich. Lebt wohl!</sidenote>
-<sidenote pos="top left" page="4" annotation="am oberen linken Rand der vierten Seite, spiegelverkehrt">
+<sidenote pos="top left" page="4" annotation="am oberen linken Rand der vierten Seite, horizontal gespiegelt">
 <line tab="1"/>Von dem versiegelten Zettel an Goethen sag niemand. Nochmals – Lebt wohl! Könnt ich an eurem Halse liegen.</sidenote>
-<sidenote pos="top right" page="4" annotation="oben rechts am Rand der vierten Seite, spiegelverkehrt">
+<sidenote pos="top right" page="4" annotation="oben rechts am Rand der vierten Seite, horizontal gespiegelt">
 <line />Der redliche Kalb! wie treflich u. edel!</sidenote>
 <vspace lines="1"/>
 <line /><align pos="center"><note>evtl. dazugehöriger Briefumschlag, in dem das erwähnte Pasquill enthalten gewesen sein könnte, GSA 44/69, Bl. 25:</note></align>
@@ -4366,7 +4366,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line tab="1"/>Ich danke Ihnen mein verehrungswürdiger Freund und Gönner für die unangenehme Bemühung die Sie meinethalben übernommen und versichere daß mir eine Ordre wie die auch wenn ich sie verdienet durch die Hand die sie mir überbrachte, versüßt worden wäre. Da ich aber nach meiner Ueberzeugung erst gehört werden müßte, ehe man mich verdammte und meine Ehre die mir lieber als tausend Leben
 <page index="2"/>ist, mich durch Annehmung dessen was Sie mir von unbekannter Hand hinzugelegt eines mir unbewußten Verbrechens schuldig zu bekennen, nimmermehr erlauben wird, so verzeyhen Sie daß ich diese beygefügte Gnade nicht annehmen sondern um Gerechtigkeit bitten darf. Es ist nicht seit heute, daß
 <vspace lines="1"/>
-<line /><align pos="center"><note>am linken oberen Rand eine Kalkulation, spiegelverkehrt</note></align>
+<line /><align pos="center"><note>am linken oberen Rand eine Kalkulation, horizontal gespiegelt</note></align>
 <vspace lines="1" presentational="true"/>
 <page index="3"/>
 <line /><tl></tl>
@@ -4765,7 +4765,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 
 <letterText letter="281"><page index="1"/>
 <line tab="1"/>Darf ich Sie um Ihrent- um meinetwillen bitten, das über die launigten Dichter noch nicht in Ihr Musäum zu rücken. Unser Publikum hat noch keinen Sinn dazu und es könnte entsetzlich mißverstanden werden. Heben Sies auf bis Zeit und Gelegenheit Beobachtungen günstiger sind, die durchaus auf keinen einzelnen Fall dürfen gezogen werden und wo diesmal die Anwendung auf Wieland, auf dessen <ul>wenigste</ul> Sachen sie passen, unvermeidlich wäre.
-<sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal"></sidenote>Wenn dies ins Musäum kommt, darf ich Ihnen nie wieder etwas zuschicken.
+<sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal">Wenn dies ins Musäum kommt, darf ich Ihnen nie wieder etwas zuschicken.</sidenote>
 <page index="2"/>
 <line tab="1"/>Ich schwärme in der Schweitz herum, habe in Schinznach vier goldene Tage gelebt, in Zürich Basel und Schafhausen viel Liebe genossen. Sagen Sie Zimmermann, daß seiner als Grundleger der helvetischen Gesellschaft mit vieler Erbauung ist gedacht worden und daß er an Hn. Doktor Stuker, einem würdigen Menschen unter den Würdigen, einen warmen Freund hat. Daß der Landpr. bald auf einander folgt freut mich, überhaupt würden Sie wohlthun, ihre Sachen nicht mehr so zu zertrennen, worüber man mir hie und da und von sicherer Hand viel Beschwerden geäussert hat. Natürlich ists daß drey Vierthel von dem Eindruck des
 <page index="3"/>Ganzen verloren gehen. Wär’ es möglich noch die zwo Hälften zu verbinden, würden Sie sehr wohlthun denn wenn ich die Strahlen eines Brennspiegels auseinander werfe, kann kein Flämmlein erfolgen Leben Sie indessen wohl und empfehlen mich Zimmermann und allen Edlen Ihrer Gegend.
@@ -6375,7 +6375,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line /><align pos="right">treuer Bruder</align>
 <line /><align pos="right">JMR Lenz</align>
 <line /><align pos="center">10ten Apr 81.</align>
-<sidenote pos="top" page="2" annotation="am oberen Rand der zweiten Seite, spiegelverkehrt und eingerahmt">es ist einer der vorzüglichsten Menschen, der Gouver. Siewers. Er wohnte beym General B.</sidenote>
+<sidenote pos="top" page="2" annotation="am oberen Rand der zweiten Seite, horizontal gespiegelt und eingerahmt">es ist einer der vorzüglichsten Menschen, der Gouver. Siewers. Er wohnte beym General B.</sidenote>
 <sidenote pos="top" page="2" annotation="am oberen Rand der zweiten Seite, vertikal">N. S.</sidenote>
 <sidenote pos="left" page="2" annotation="am linken Rand der zweiten Seite, vertikal"><line tab="1"/>ist es denn nicht möglich, daß ich durch den Derptschen Fuhrmann <aq>Remmert Samuel</aq>, der in 8 Tagen hieher kommt, meine Sachen und Bücher, die bey Engelhardt, oder jetzt vermutlich bey Bürgerm. Vitl oder Hr. Haase in Walk stehn, erhalte. Ich denke doch, daß ich sie brauche! –</sidenote>
 </letterText>
@@ -7019,7 +7019,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line /><align pos="center">*</align>
 <line /><align pos="center">**</align>
 <line tab="1"/>Ich habe Pappa von dem neuen Projekt einer <aq><ul>Polyglotta</ul></aq> oder allgemeinen <ul>Bibelübersetzung</ul> in alle Sprachen mit stehenden Pressen zum Besten der Armen – geschrieben, welcher Vorschlag hier im <ul>Senat</ul> – durchgedrungen. Dieser Brief importirt mir also – imgleichen von einer französischen <ul>Zeitung</ul> die ich auszugeben gedenke, zur Erleichterung der <ul>allgemeinen</ul> Sprache für Rußland von der alle 44 nach Herrn Tschulkoff, als <ul>Dialekte</ul> anzusehen, welches dem schönen Geschlecht das schon Sprachen kennt, <ul>spielend</ul> zu beweisen mich getraue. Zugleich werden einige Fragmente der <ul>Geschichte,</ul> zu der ich gesammlete <ul>Materialien</ul> nicht bekannt machen darf, des <ul>allgemeinen</ul> Vaterlandes, und Auszüge aus Herrn <ul>Tschulkoffs Handelsgeschichte</ul> und den neusten Handelsverordnungen, mehr <ul>dem Sinn </ul>der Gesetze nach als dem todten Buchstaben zum Besten der Landekonomie und des <ul>innern Handels auf Flüssen,</ul> diese Blätter vielleicht auch in Liefland <ul>begehren</ul> machen wo doch beinahe in jedem feineren Hause irgend eine Französinn oder Hofmeister ist (der kein <ul>Lauffer</ul> war) und Französisch wenigstens gelesen wird. Sollte unsrer theurer Altgens bey <aq>Consistorial</aq>geschäften sich seines Sohnes nicht erbarmen und mein langes Geschmier etwa von Bruder Carl vorlesen lassen? Die Herrn Erzieher des Menschengeschlechts und die Theologischen Krittler und Zänker, welche aus <ul>Tag Nacht,</ul> aus <ul>Erdichtungen Wahrheit</ul> und aus Wahrheit Lüge machen möchten, nur um zu <ul>disputiren</ul> und Recht zu haben ohn zu wissen <ul>was sie eigentlich wollen,</ul> werden mir verzeihen, daß ich bey den <ul>unendlichen Schrauben</ul> der sogenannten Gewissens und Ehrgerichte, an meinen <ul>Vater selbst Zuflucht nehme</ul> und mir seinen Väterlichen Seegen ausbitten muß – welches zu einem neuen Jahr (mit der innigsten Reue über alle meine auch in Liefland begangenen Fehler, die ich aus dem was mir von seinen Briefen übrig geblieben, die vielleicht aus guter aber irrender Meynung ein Freund von mir ohne mein Wissen verbrannt hat, noch itzt ersehe) mir eine ganz neue und andere Existenz schaffen wird. Ich fürchte nur daß die Briefe <ul>nicht eher</ul> in des Derpischen Bruders als in Eure Hände lieben Geschwister! gerathen, deswegen ich eins und das andere davon hier einführe, das wichtigste aber diesem Briefe nicht anvertrauen kann, welches meine ganze irdische und <del>vielleicht</del> <ul>zukünftige Existenz</ul> betrift. Ich glaube bemerkt zu haben daß meine Rigischen Geschwister über diesen Punkt weit einsichtvoller und menschenfreundlicher denken, als die andern deren Herz umzulenken ich dem lieben Gott allein überlassen muß, weil ich kein Herzenskündiger bin. Vielleicht hat eine <aq>Lecture</aq> aus ganz verschobenen Gesichtspunkten und allzu rasche Schlüsse die durch eine alte liefländische Dame die taub war und über Pleskau nach Derpt zurükkehrte, dazu beigetragen – worunter ich allein am meisten und unsäglich leiden mußte, da diese Schlüsse sehr thätig und wirksam würden. Mit einem Worte, ich konnte und durfte mich mit keiner Liefländerinn verbinden.
-<sidenote pos="bottom" page="2" annotation="am unteren Rand der zweiten Seite, spiegelverkehrt"><address>Herrn Johann Christian Lenz. Sekretär des K. Gouvernements und Rath in <aq>Riga</aq></address></sidenote>
+<sidenote pos="bottom" page="2" annotation="am unteren Rand der zweiten Seite, horizontal gespiegelt"><address>Herrn Johann Christian Lenz. Sekretär des K. Gouvernements und Rath in <aq>Riga</aq></address></sidenote>
 </letterText>
 
 <letterText letter="372"><page index="1"/>
