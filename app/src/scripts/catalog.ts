@@ -12,12 +12,14 @@ import {
 import { createCatalogSearch } from './catalog-search';
 import { setupSelectionPrint } from './print-selection';
 import { selectionDescription } from '../lib/print-selection.mjs';
+import { createFilterOptionOrder } from '../lib/filter-option-order.mjs';
 const data = JSON.parse(document.querySelector('#filter-data')!.textContent!);
 let state = readState(location.search, data.records, data.groups);
 const rows = new Map(
   [...document.querySelectorAll<HTMLElement>('[data-letter]')].map((e) => [e.dataset.letter, e]),
 );
 const checkboxes = [...document.querySelectorAll<HTMLInputElement>('.filter-options input')];
+const refreshFilterMenus: (() => void)[] = [];
 const list = document.querySelector<HTMLOListElement>('.catalog-letter-list')!;
 const activeFilters = document.querySelector<HTMLElement>('.active-filters')!;
 const pills = document.querySelector<HTMLElement>('.active-filter-pills')!;
@@ -103,6 +105,7 @@ function render() {
         input.value,
       )),
   );
+  refreshFilterMenus.forEach((refresh) => refresh());
   for (const kind of ['person', 'place']) {
     const count = (kind === 'person' ? state.people : state.places).length;
     const badge = document.querySelector<HTMLElement>(`[data-selected-count="${kind}"]`)!;
@@ -198,19 +201,53 @@ document
   .querySelector('[data-reset]')!
   .addEventListener('click', () => navigate(resetFilters(state)));
 allLettersLink.addEventListener('click', () => navigate(resetFilters(state)));
-document.querySelectorAll<HTMLInputElement>('[data-option-search]').forEach((input) =>
-  input.addEventListener('input', () => {
+document.querySelectorAll<HTMLInputElement>('[data-option-search]').forEach((input) => {
+  const menu = input.closest<HTMLDetailsElement>('[data-filter-menu]')!;
+  const panel = input.closest('.filter-panel')!;
+  const container = panel.querySelector<HTMLElement>('.filter-options')!;
+  const options = [...container.querySelectorAll<HTMLElement>('[data-option]')];
+  const orderOptions = createFilterOptionOrder(options);
+  let currentOrder = options;
+  let promoted = new Set<HTMLElement>();
+  const updateDivider = () => {
+    const visible = currentOrder.filter((option) => !option.hidden);
+    const lastPromoted = visible.filter((option) => promoted.has(option)).at(-1);
+    const hasRest = visible.some((option) => !promoted.has(option));
+    options.forEach((option) => option.classList.toggle('filter-options-divider', hasRest && option === lastPromoted));
+  };
+  const syncOrder = () => {
+    const selected = new Set(options.filter((option) => option.querySelector<HTMLInputElement>('input')!.checked));
+    const next = orderOptions(selected, !menu.open);
+    promoted = next.promoted;
+    if (next.ordered.some((option: HTMLElement, index: number) => option !== currentOrder[index])) {
+      const focused = document.activeElement as HTMLElement | null;
+      const scrollTop = container.scrollTop;
+      container.append(...next.ordered);
+      currentOrder = next.ordered;
+      if (menu.open && focused && container.contains(focused)) focused.focus({ preventScroll: true });
+      container.scrollTop = scrollTop;
+    }
+    updateDivider();
+  };
+  refreshFilterMenus.push(syncOrder);
+  const filterOptions = () => {
     const value = input.value.toLocaleLowerCase('de');
-    const options = [
-      ...document.querySelectorAll<HTMLElement>(`[data-option="${input.dataset.optionSearch}"]`),
-    ];
     options.forEach((option) => (option.hidden = !option.dataset.name!.includes(value)));
     const noMatches = options.every((option) => option.hidden);
-    const panel = input.closest('.filter-panel')!;
-    panel.querySelector<HTMLElement>('.filter-options')!.hidden = noMatches;
+    container.hidden = noMatches;
     panel.querySelector<HTMLElement>('[data-option-empty]')!.hidden = !noMatches;
-  }),
-);
+    updateDivider();
+  };
+  input.addEventListener('input', filterOptions);
+  menu.addEventListener('toggle', () => {
+    if (!menu.open) {
+      input.value = '';
+      filterOptions();
+      syncOrder();
+    }
+    container.scrollTop = 0;
+  });
+});
 document.addEventListener('click', (event) => {
   document.querySelectorAll<HTMLDetailsElement>('[data-filter-menu]').forEach((menu) => {
     if (!menu.contains(event.target as Node)) menu.open = false;

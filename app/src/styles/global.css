@@ -211,6 +211,8 @@
   .filter-options { @apply overflow-y-auto; max-height:min(300px, 50dvh); padding:.35rem; overscroll-behavior:contain; }
   .filter-no-matches { @apply px-4 py-6 text-sm text-muted; margin:0; line-height:1.5; }
   .filter-options label { @apply flex items-start gap-3 px-2.5 py-2 text-sm cursor-pointer; min-height:38px; line-height:1.5; border-radius:1px; }
+  .filter-options label.filter-options-divider { position:relative; margin-bottom:1rem; }
+  .filter-options label.filter-options-divider::after { content:''; position:absolute; left:-.35rem; right:-.35rem; bottom:-.5rem; border-top:1px solid var(--color-rule); pointer-events:none; }
   .filter-options label:hover { background:var(--color-filter); }
   .filter-options label:has(input:checked) { background:#fff3e6; color:#9a4510; }
   .filter-options label:has(input:checked):hover { background:#ffe7cc; }
