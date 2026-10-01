@@ -95,7 +95,15 @@ Temporary failures use previously saved data, or omit unavailable information on
 a first build, and report a warning without preventing the edition from building.
 Malformed responses never replace valid cache entries. Writes are atomic.
 
-GitHub Actions restores and saves this cache across builds. Delete an individual
+GitHub Actions keys the raw-response cache to the contents of
+`data/xml/references.xml`. An exact cache hit reuses valid responses regardless of
+age; a changed file refreshes all referenced IDs, using conditional requests and
+previous responses as a fallback. Other XML and application changes only rebuild
+the summaries. A refresh with unavailable or stale responses is not saved under
+the new key, so the next run retries it. If GitHub evicts the cache, the next build fetches it again; missing
+or corrupt entries are also fetched. Local exports retain the age-based policy.
+Set `GND_CACHE_MODE=refresh` to refresh all IDs locally, or `GND_CACHE_MODE=reuse`
+to reuse valid saved entries regardless of age. Delete an individual
 cache file to force a refresh on the next `npm --prefix app run export`. Run
 `node --test app/tests/gnd.test.mjs` for the network-independent cache/retry tests.
 No API calls are made in the browser, so the panels also work with the downloaded

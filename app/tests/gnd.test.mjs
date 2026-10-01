@@ -156,6 +156,46 @@ test('refreshes expired entries conditionally and accepts 304 without losing raw
   assert.deepEqual(saved.record, person);
 });
 
+test('unchanged XML reuses old positive and negative responses while rebuilding summaries', async (t) => {
+  const f = await fixture(t, { people: { renamed: definition(personId) }, places: { 7: definition(placeId) } });
+  await f.cache({ version: 1, status: 200, checkedAt: DAY, record: person });
+  await f.cache({ version: 1, status: 404, checkedAt: DAY }, placeId);
+  const result = await f.run({ cacheMode: 'reuse', fetchImpl: () => assert.fail('unchanged XML must reuse saved responses') });
+  assert.equal(result.stats.cached, 2);
+  assert.equal(result.stats.missing, 1);
+  assert.equal(result.information.people.renamed.gndId, personId);
+});
+
+test('changed XML refreshes even fresh positive and negative responses conditionally', async (t) => {
+  const f = await fixture(t, { people: { 1: definition(personId) }, places: { 7: definition(placeId) } });
+  await f.cache({ version: 1, status: 200, checkedAt: 99 * DAY, record: person, etag: 'v1' });
+  await f.cache({ version: 1, status: 404, checkedAt: 99 * DAY }, placeId);
+  const result = await f.run({ cacheMode: 'refresh', fetchImpl: async (url, { headers }) => {
+    if (url.endsWith(`${personId}.json`)) {
+      assert.equal(headers['If-None-Match'], 'v1');
+      return response(null, 304);
+    }
+    return response(place);
+  } });
+  assert.equal(result.stats.fetched, 2);
+  assert.equal(result.stats.cached, 0);
+  assert.equal(result.information.places[7].gndId, placeId);
+  assert.equal((await f.read()).checkedAt, 100 * DAY);
+});
+
+test('reuse mode fetches missing and corrupt responses and refresh mode keeps fallback data', async (t) => {
+  const f = await fixture(t);
+  let calls = 0;
+  const fetchImpl = async () => { calls++; return response(person); };
+  await f.run({ cacheMode: 'reuse', fetchImpl });
+  await writeFile(path.join(f.options.cacheDirectory, `${personId}.json`), '{broken');
+  await f.run({ cacheMode: 'reuse', fetchImpl });
+  assert.equal(calls, 2);
+  const result = await f.run({ cacheMode: 'refresh', fetchImpl: async () => response(null, 503) });
+  assert.equal(result.stats.stale, 1);
+  assert.equal(result.information.people[1].gndId, personId);
+});
+
 test('retries transient errors with backoff, then retains stale information on exhaustion', async (t) => {
   const f = await fixture(t);
   await f.cache({ version: 1, status: 200, checkedAt: 60 * DAY, record: person });

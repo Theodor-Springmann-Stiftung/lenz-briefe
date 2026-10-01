@@ -1,5 +1,6 @@
 import { spawn } from 'node:child_process';
 import { existsSync } from 'node:fs';
+import { appendFile } from 'node:fs/promises';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { enrichGnd } from './gnd.mjs';
 const workspace = fileURLToPath(new URL('../../scripts/transform/python/', import.meta.url));
@@ -26,7 +27,10 @@ export async function runExport({ signal } = {}) {
         );
     });
   });
-  await enrichGnd({ output, signal });
+  const { stats } = await enrichGnd({ output, signal, cacheMode: process.env.GND_CACHE_MODE || 'ttl' });
+  if (process.env.GITHUB_OUTPUT) {
+    await appendFile(process.env.GITHUB_OUTPUT, `gnd-cache-complete=${stats.failed === 0 && stats.stale === 0}\n`);
+  }
 }
 
 if (process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url) {

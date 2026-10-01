@@ -74,6 +74,7 @@ export function retryAfter(value, now) {
 export async function enrichGnd({
   output,
   cacheDirectory = path.join(output, '../.cache/gnd'),
+  cacheMode = 'ttl',
   signal,
   fetchImpl = fetch,
   now = Date.now,
@@ -83,6 +84,7 @@ export async function enrichGnd({
   requestTimeout = 10_000,
   networkTimeout = 90_000,
 } = {}) {
+  if (!['ttl', 'reuse', 'refresh'].includes(cacheMode)) throw new Error(`Unknown GND cache mode: ${cacheMode}`);
   const catalog = JSON.parse(await readFile(path.join(output, 'catalog.json'), 'utf8'));
   const ids = [...new Set(['people', 'places'].flatMap((kind) =>
     Object.values(catalog[kind]).map((definition) => gndId(definition.ref)).filter(Boolean)))].sort();
@@ -140,7 +142,8 @@ export async function enrichGnd({
       const file = path.join(cacheDirectory, `${id}.json`);
       let entry = await readCache(file, id);
       const ttl = entry?.status === 404 ? 7 * DAY : 30 * DAY;
-      if (entry && now() - entry.checkedAt >= 0 && now() - entry.checkedAt < ttl) {
+      if (entry && (cacheMode === 'reuse' ||
+          (cacheMode === 'ttl' && now() - entry.checkedAt >= 0 && now() - entry.checkedAt < ttl))) {
         stats.cached++;
       } else {
         try {

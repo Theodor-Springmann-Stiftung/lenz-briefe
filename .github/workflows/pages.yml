@@ -53,16 +53,31 @@ jobs:
         timeout-minutes: 2
         run: npm --prefix app test
 
-      - name: Restore and save GND responses
-        uses: actions/cache@v5
+      - name: Restore GND responses
+        id: gnd-cache
+        uses: actions/cache/restore@v5
         with:
           path: app/.cache/gnd
-          key: gnd-v1-${{ github.run_id }}-${{ github.run_attempt }}
-          restore-keys: gnd-v1-
+          key: gnd-v2-${{ hashFiles('data/xml/references.xml') }}
+          restore-keys: |
+            gnd-v2-
+            gnd-v1-
 
       # The build script runs Python/Saxon XSLT export, Astro check, then Astro build.
       - name: Transform XML and build static Astro pages
+        id: site-build
+        env:
+          # Rebuild summaries every time; refresh raw records only for a new XML hash.
+          GND_CACHE_MODE: ${{ steps.gnd-cache.outputs.cache-hit == 'true' && 'reuse' || 'refresh' }}
         run: npm --prefix app run build
+
+      # Do not freeze a partial refresh after a temporary API failure.
+      - name: Save refreshed GND responses
+        if: steps.gnd-cache.outputs.cache-hit != 'true' && steps.site-build.outputs.gnd-cache-complete == 'true'
+        uses: actions/cache/save@v5
+        with:
+          path: app/.cache/gnd
+          key: ${{ steps.gnd-cache.outputs.cache-primary-key }}
 
       - name: Upload static site
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
