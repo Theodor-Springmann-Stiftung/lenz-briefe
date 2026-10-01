@@ -11,17 +11,15 @@
     "file": "wikidata.org.ico",
     "source": "https://www.wikidata.org/static/favicon/wikidata.ico"
   },
-  "d-nb.info": {
-    "file": "dnb.de.png",
-    "source": "https://www.dnb.de/SiteGlobals/Frontend/DNBWeb/Images/favicon.png?__blob=normal&v=4"
-  },
   "en.wikipedia.org": {
-    "file": "de.wikipedia.org.ico",
-    "source": "https://de.wikipedia.org/static/favicon/wikipedia.ico"
+    "file": "wikipedia.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Wikipedia%27s_W.svg",
+    "description": "https://commons.wikimedia.org/wiki/File:Wikipedia%27s_W.svg"
   },
   "de.wikipedia.org": {
-    "file": "de.wikipedia.org.ico",
-    "source": "https://de.wikipedia.org/static/favicon/wikipedia.ico"
+    "file": "wikipedia.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Wikipedia%27s_W.svg",
+    "description": "https://commons.wikimedia.org/wiki/File:Wikipedia%27s_W.svg"
   },
   "kalliope-verbund.info": {
     "file": "kalliope-verbund.info.png",
@@ -70,5 +68,9 @@
   "sws.geonames.org": {
     "file": "sws.geonames.org.ico",
     "source": "https://sws.geonames.org/favicon.ico"
+  },
+  "gnd.network": {
+    "file": "gnd.png",
+    "source": "https://gnd.network/SiteGlobals/Frontend/gnd/Images/faviconGND.png?__blob=normal&v=6"
   }
 }

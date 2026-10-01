@@ -24,7 +24,7 @@ export function referenceLinks(record) {
   const links = [{
     label: 'GND', title: 'Gemeinsame Normdatei · lobid',
     url: `https://lobid.org/gnd/${record.gndIdentifier}`,
-    icon: icons['d-nb.info']?.file || 'database.svg',
+    icon: icons['gnd.network']?.file || 'database.svg',
   }];
   const seen = new Set();
   for (const field of ['wikipedia', 'sameAs', 'homepage']) {
@@ -41,7 +41,7 @@ export function referenceLinks(record) {
         : names[collection.abbr] || collection.abbr || hostNames[url.hostname] || collection.name || url.hostname.replace(/^www\./, '');
       links.push({
         label, title: collection.name || label, url: url.href,
-        icon: icons[url.hostname]?.file || 'database.svg',
+        icon: (wiki ? icons['de.wikipedia.org'] : icons[url.hostname])?.file || 'database.svg',
       });
     }
   }
