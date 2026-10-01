@@ -31,7 +31,7 @@ if (reading) {
           '.fn[data-note-connected], .margin-note:has(.fn[data-note-connected]), .unplaced-note:has(.fn[data-note-connected]), .inpos-note:has(.fn[data-note-connected])',
         )
       : null;
-  const point = (marker: HTMLElement) => {
+  const measureMarker = (marker: HTMLElement) => {
     const anchors = marker.querySelectorAll('.anchor');
     if (!anchors.length) {
       const rect = marker.getClientRects()[0] || marker.getBoundingClientRect();
@@ -78,21 +78,51 @@ if (reading) {
     const fragment = document.createDocumentFragment();
     if (!hovered && !focused) return () => overlay.replaceChildren();
     for (const pair of pairs) {
-      const [a, b] = pair.map(point);
-      const direction = b.x >= a.x ? 1 : -1;
-      const bend = Math.min(140, Math.max(40, Math.abs(b.x - a.x) / 3));
+      const [source, target] = pair.map(measureMarker);
+      const horizontalDirection = target.x >= source.x ? 1 : -1;
+      const horizontalDistance = Math.abs(target.x - source.x);
+      const minimumBend = 40; // Pixels.
+      const maximumBend = 140;
+      const controlPointOffset = Math.min(
+        maximumBend,
+        Math.max(minimumBend, horizontalDistance / 3),
+      );
+
+      // Start and end at the facing edges of the marker circles.
+      const start = {
+        x: source.x + horizontalDirection * source.radius,
+        y: source.y,
+      };
+      const end = {
+        x: target.x - horizontalDirection * target.radius,
+        y: target.y,
+      };
+      // Control points share their endpoint's height, so the curve leaves
+      // and arrives horizontally. Their offsets are measured from marker centers.
+      const firstControlPoint = {
+        x: source.x + horizontalDirection * controlPointOffset,
+        y: source.y,
+      };
+      const secondControlPoint = {
+        x: target.x - horizontalDirection * controlPointOffset,
+        y: target.y,
+      };
+
       const path = document.createElementNS(svgNS, 'path');
+      // SVG: M moves to the start; C uses two control points to curve toward the end.
       path.setAttribute(
         'd',
-        `M ${a.x + direction * a.radius} ${a.y} C ${a.x + direction * bend} ${a.y}, ${b.x - direction * bend} ${b.y}, ${b.x - direction * b.radius} ${b.y}`,
+        `M ${start.x} ${start.y} ` +
+          `C ${firstControlPoint.x} ${firstControlPoint.y}, ` +
+          `${secondControlPoint.x} ${secondControlPoint.y}, ${end.x} ${end.y}`,
       );
       fragment.append(path);
-      for (const p of [a, b]) {
+      for (const marker of [source, target]) {
         const circle = document.createElementNS(svgNS, 'circle');
-        if (p.anchorless) circle.classList.add('anchorless-endpoint');
-        circle.setAttribute('cx', String(p.x));
-        circle.setAttribute('cy', String(p.y));
-        circle.setAttribute('r', String(p.radius));
+        if (marker.anchorless) circle.classList.add('anchorless-endpoint');
+        circle.setAttribute('cx', String(marker.x));
+        circle.setAttribute('cy', String(marker.y));
+        circle.setAttribute('r', String(marker.radius));
         fragment.append(circle);
       }
     }
