@@ -19,6 +19,33 @@ const strings = (values) => [...new Set((Array.isArray(values) ? values : [])
 const labels = (values) => strings(Array.isArray(values) ? values.map((value) => value?.label) : []);
 const date = (value) => value.replace(/^(\d{4})-(\d{2})-(\d{2})$/, '$3.$2.$1');
 
+function webUrl(value) {
+  if (typeof value !== 'string') return null;
+  try {
+    const url = new URL(value);
+    return ['https:', 'http:'].includes(url.protocol) && !url.username && !url.password ? url.href : null;
+  } catch { return null; }
+}
+
+export function summarizeDepiction(record) {
+  for (const depiction of Array.isArray(record?.depiction) ? record.depiction : []) {
+    const src = webUrl(depiction?.thumbnail) || webUrl(depiction?.id);
+    const source = webUrl(depiction?.url);
+    const licenses = (Array.isArray(depiction?.license) ? depiction.license : []).flatMap((license) => {
+      const url = webUrl(license?.id);
+      const label = license?.abbr || license?.name;
+      return url && typeof label === 'string' && label.trim() ? [{ url, label: label.trim() }] : [];
+    });
+    if (!src || !source || !licenses.length) continue;
+    return {
+      src, source, licenses,
+      creator: strings(depiction.creatorName).join(', '),
+      credit: strings(depiction.creditText).join(' · '),
+    };
+  }
+  return null;
+}
+
 function isRecord(record, id) {
   return record && typeof record.preferredName === 'string' &&
     GND_ID.test(record.gndIdentifier) && Array.isArray(record.type) &&
@@ -40,6 +67,7 @@ export function summarizeGnd(record, kind) {
     geographicAreas: kind === 'places' ? labels(record.geographicAreaCode).join(', ') : '',
     description: description.length > 500 ? `${description.slice(0, 500).replace(/\s+\S*$/, '')} …` : description,
     links: referenceLinks(record, kind),
+    picture: summarizeDepiction(record),
   };
 }
 

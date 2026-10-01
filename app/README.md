@@ -128,7 +128,18 @@ to reuse valid saved entries regardless of age. Delete an individual
 cache file to force a refresh on the next `npm --prefix app run export`. Run
 `node --test app/tests/gnd.test.mjs` for the network-independent cache/retry tests.
 No API calls are made in the browser, so the panels also work with the downloaded
-offline edition. Textual GND data are CC0; portrait images are not imported.
+offline edition. Textual GND data are CC0.
+
+When the GND record supplies an image, source page and license information,
+cards show a thumbnail in a portrait-shaped left column beside the name and
+details. A link icon appears over the image on hover or keyboard focus; its tooltip
+contains the creator and license credits, and it opens the image source. Credits
+also remain available to screen readers. Images load directly
+from their provider when the card is shown; no extra GND API requests are needed.
+A failed request or invalid image hides the complete image column and lets the
+text use the full width. Failed image URLs stay hidden for the current page visit.
+These external images are not part of the offline download; if they cannot load
+offline, cards retain their text and links without the image column.
 
 ## Printing
 

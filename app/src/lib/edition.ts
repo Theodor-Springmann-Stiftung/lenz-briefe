@@ -84,6 +84,13 @@ export interface GndInformation {
   geographicAreas: string;
   description: string;
   links: { label: string; title: string; url: string; icon: string }[];
+  picture?: {
+    src: string;
+    source: string;
+    creator: string;
+    credit: string;
+    licenses: { url: string; label: string }[];
+  } | null;
 }
 export const gndInformation: Record<'people' | 'places', Record<string, GndInformation>> = JSON.parse(
   fs.readFileSync(path.join(directory, 'gnd.json'), 'utf8'),

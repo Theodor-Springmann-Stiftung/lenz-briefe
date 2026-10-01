@@ -1,5 +1,6 @@
 ---
 import { filterOptions, gndInformation, base } from '../lib/edition';
+import Icon from './Icon.astro';
 ---
 
 {(['person', 'place'] as const).flatMap((kind) =>
@@ -9,17 +10,45 @@ import { filterOptions, gndInformation, base } from '../lib/edition';
     return (
       <template data-filter-information={`${kind}-${id}`}>
         <article class="filter-card" aria-label={name}>
-          <header class="filter-card-header">
-            <h2 class="filter-card-name" title={name}>{name}</h2>
-          </header>
-          {(information.lifespan || information.occupations || information.geographicAreas || information.description) && (
-            <div class="filter-details">
-              {information.lifespan && <p class="filter-lifespan" title={information.lifespan}>{information.lifespan}</p>}
-              {information.occupations && <p title={information.occupations}>{information.occupations}</p>}
-              {information.geographicAreas && <p class="filter-geographic-areas" title={information.geographicAreas}>{information.geographicAreas}</p>}
-              {information.description && <p class="filter-place-description" title={information.description}>{information.description}</p>}
+          <div class="filter-card-body">
+            {information.picture && (
+              <figure class="filter-card-picture" data-gnd-picture>
+                <img src={information.picture.src} alt={`Abbildung zu ${name}`} loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+                <a class="filter-card-image-link" href={information.picture.source}
+                  aria-label={`Bildquelle und Credits: ${name}`}
+                  aria-describedby={`filter-picture-credit-${kind}-${id}`}
+                  data-tippy-placement="right"
+                  data-tippy-trigger="mouseenter focus"
+                  data-tooltip={[
+                    information.picture.creator,
+                    information.picture.credit,
+                    information.picture.licenses.map((license) => license.label).join(', '),
+                  ].filter(Boolean).join(' · ')}>
+                  <Icon name="link" />
+                </a>
+                <figcaption class="sr-only" id={`filter-picture-credit-${kind}-${id}`}>
+                  {information.picture.creator && <span>{information.picture.creator}</span>}
+                  {information.picture.credit && <span>{information.picture.credit}</span>}
+                  {information.picture.licenses.map((license) => (
+                    <a href={license.url} rel="license" tabindex="-1">{license.label}</a>
+                  ))}
+                </figcaption>
+              </figure>
+            )}
+            <div class="filter-card-text">
+              <header class="filter-card-header">
+                <h2 class="filter-card-name" title={name}>{name}</h2>
+              </header>
+              {(information.lifespan || information.occupations || information.geographicAreas || information.description) && (
+                <div class="filter-details">
+                  {information.lifespan && <p class="filter-lifespan" title={information.lifespan}>{information.lifespan}</p>}
+                  {information.occupations && <p title={information.occupations}>{information.occupations}</p>}
+                  {information.geographicAreas && <p class="filter-geographic-areas" title={information.geographicAreas}>{information.geographicAreas}</p>}
+                  {information.description && <p class="filter-place-description" title={information.description}>{information.description}</p>}
+                </div>
+              )}
             </div>
-          )}
+          </div>
           <nav class="filter-reference-links" aria-label={`Weiterführende Informationen zu ${name}`}>
             {information.links.map((link) => (
               <a href={link.url} title={link.title}>

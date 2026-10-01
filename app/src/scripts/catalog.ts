@@ -13,6 +13,8 @@ import { createCatalogSearch } from './catalog-search';
 import { setupSelectionPrint } from './print-selection';
 import { selectionDescription } from '../lib/print-selection.mjs';
 import { createFilterOptionOrder } from '../lib/filter-option-order.mjs';
+import { bindFilterCardImages } from '../lib/filter-card-images.mjs';
+import { initializeTooltips, destroyTooltips } from './tooltips';
 const data = JSON.parse(document.querySelector('#filter-data')!.textContent!);
 let state = readState(location.search, data.records, data.groups);
 const rows = new Map(
@@ -72,8 +74,11 @@ function renderFilterPills() {
     }
   }
   pills.replaceChildren(fragment);
+  bindFilterCardImages(cards);
+  destroyTooltips(informationCards);
   informationCards.replaceChildren(cards);
   informationCards.hidden = !informationCards.childElementCount;
+  initializeTooltips(informationCards);
 }
 function render() {
   document.dispatchEvent(new Event('catalog:change'));

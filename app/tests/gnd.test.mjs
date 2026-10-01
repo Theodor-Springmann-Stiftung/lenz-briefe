@@ -4,7 +4,7 @@ import { mkdtemp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { setTimeout as sleep } from 'node:timers/promises';
-import { enrichGnd, gndId, summarizeGnd, retryAfter } from '../scripts/gnd.mjs';
+import { enrichGnd, gndId, summarizeGnd, summarizeDepiction, retryAfter } from '../scripts/gnd.mjs';
 import { referenceLinks } from '../scripts/gnd-links.mjs';
 
 const DAY = 86_400_000;
@@ -24,6 +24,37 @@ const definition = (id) => ({ name: id, ref: `https://d-nb.info/gnd/${id}` });
 const response = (data, status = 200, headers = {}) => new Response(
   data == null ? null : JSON.stringify(data), { status, headers },
 );
+
+test('extracts supplied images with source, creator and license credits for people and places', () => {
+  const depiction = {
+    id: 'https://commons.wikimedia.org/wiki/Special:FilePath/Portrait.jpg',
+    thumbnail: 'https://commons.wikimedia.org/wiki/Special:FilePath/Portrait.jpg?width=270',
+    url: 'https://commons.wikimedia.org/wiki/File:Portrait.jpg',
+    creatorName: ['Artist', 'Artist'], creditText: ['Museum'],
+    license: [{ id: 'https://creativecommons.org/licenses/by-sa/4.0/', abbr: 'CC BY-SA 4.0' }],
+  };
+  const picture = summarizeDepiction({ depiction: [depiction] });
+  assert.equal(picture.src, depiction.thumbnail);
+  assert.equal(picture.source, depiction.url);
+  assert.equal(picture.creator, 'Artist');
+  assert.equal(picture.credit, 'Museum');
+  assert.deepEqual(picture.licenses, [{ url: depiction.license[0].id, label: 'CC BY-SA 4.0' }]);
+  assert.deepEqual(summarizeGnd({ ...person, depiction: [depiction] }, 'people').picture, picture);
+  assert.deepEqual(summarizeGnd({ ...place, depiction: [depiction] }, 'places').picture, picture);
+  assert.equal(summarizeDepiction({ depiction: [{ ...depiction, thumbnail: null }] }).src, depiction.id);
+});
+
+test('omits missing or unsafe images and incomplete credits, and tries the next supplied image', () => {
+  assert.equal(summarizeDepiction(person), null);
+  const valid = { thumbnail: 'https://images.example/picture.jpg', url: 'https://images.example/source',
+    license: [{ id: 'https://creativecommons.org/publicdomain/mark/1.0/', name: 'Public Domain' }] };
+  for (const invalid of [null, { ...valid, thumbnail: 'javascript:alert(1)' },
+    { ...valid, thumbnail: 'https://user:password@images.example/picture.jpg' },
+    { ...valid, url: 'data:text/html,test' }, { ...valid, license: [] }]) {
+    assert.equal(summarizeDepiction({ depiction: [invalid] }), null);
+    assert.equal(summarizeDepiction({ depiction: [invalid, valid] }).src, valid.thumbnail);
+  }
+});
 
 async function fixture(t, catalog = { people: { 1: definition(personId) }, places: {} }) {
   const root = await mkdtemp(path.join(tmpdir(), 'lenz-gnd-'));

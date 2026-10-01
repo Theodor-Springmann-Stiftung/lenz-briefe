@@ -105,6 +105,16 @@
   .active-filter-pills .filter-pill { flex-shrink:0; }
   .filter-information { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-auto-rows:1fr; align-items:stretch; gap:1rem; min-width:0; margin-top:1.25rem; }
   .filter-card { display:flex; flex-direction:column; min-height:9rem; max-height:24rem; min-width:0; border:1px solid #bca68e; background:#fffcf7; box-shadow:5px 5px 0 #eee7db; }
+  .filter-card-body { display:grid; grid-template-columns:minmax(0,1fr); flex:1; min-height:0; overflow:hidden; }
+  .filter-card-body:has([data-gnd-picture]:not([hidden])) { grid-template-columns:6.5rem minmax(0,1fr); }
+  .filter-card-text { min-width:0; min-height:0; overflow:hidden; }
+  .filter-card-picture { position:relative; align-self:start; min-width:0; aspect-ratio:3/4; overflow:hidden; margin:.875rem 0 .875rem 1rem; border:1px solid #000; }
+  .filter-card-picture img { display:block; width:100%; height:100%; object-fit:cover; object-position:top; }
+  .filter-card-image-link { position:absolute; bottom:.25rem; right:.25rem; display:flex; align-items:center; justify-content:center; width:1.25rem; height:1.25rem; border:1px solid #bca68e; background:rgb(255 252 247 / .95); color:#625446; opacity:0; }
+  .filter-card-image-link .ui-icon { width:.875rem; height:.875rem; }
+  .filter-card-picture:is(:hover, :focus-within) .filter-card-image-link { opacity:1; }
+  .filter-card-image-link:focus-visible { outline:2px solid var(--color-accent); outline-offset:2px; }
+  @media (hover:none) { .filter-card-image-link { opacity:1; } }
   .filter-card-header { flex-shrink:0; padding:.875rem 1rem .5rem; }
   .filter-card:has(.filter-lifespan) .filter-card-header { padding-bottom:.125rem; }
   .filter-card-name { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden; min-width:0; font-family:var(--font-serif); font-size:1.25rem; font-weight:500; line-height:1.25; overflow-wrap:anywhere; }
