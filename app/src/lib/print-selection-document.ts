@@ -109,7 +109,10 @@ export async function printSelectionDocument(
     const row = copy.createElement('li');
     const link = copy.createElement('a');
     link.href = `#${section.id}`;
-    link.textContent = letter.title;
+    const numberPrefix = `LKB ${item.id} - `;
+    link.textContent = letter.title.startsWith(numberPrefix)
+      ? letter.title.slice(numberPrefix.length)
+      : letter.title;
     const date = letter.querySelector('.letter-date-text')?.textContent?.replace(/\s+/g, ' ').trim();
     if (date) {
       const detail = copy.createElement('span');
