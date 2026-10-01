@@ -39,7 +39,7 @@ export function summarizeGnd(record, kind) {
     occupations: kind === 'people' ? labels(record.professionOrOccupation).join(', ') : '',
     geographicAreas: kind === 'places' ? labels(record.geographicAreaCode).join(', ') : '',
     description: description.length > 500 ? `${description.slice(0, 500).replace(/\s+\S*$/, '')} …` : description,
-    links: referenceLinks(record),
+    links: referenceLinks(record, kind),
   };
 }
 

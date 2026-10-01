@@ -20,7 +20,7 @@ function webUrl(value) {
 }
 
 /** Only link resources explicitly supplied by the authority record. */
-export function referenceLinks(record) {
+export function referenceLinks(record, kind = 'people') {
   const links = [{
     label: 'GND', title: 'Gemeinsame Normdatei · lobid',
     url: `https://lobid.org/gnd/${record.gndIdentifier}`,
@@ -45,7 +45,9 @@ export function referenceLinks(record) {
       });
     }
   }
-  const providers = ['GND', 'Wikipedia', 'NDB', 'VIAF', 'Portraitindex', 'Kalliope'];
+  const providers = kind === 'places'
+    ? ['Wikipedia', 'GND', 'GeoNames']
+    : ['GND', 'Wikipedia', 'NDB', 'VIAF', 'Portraitindex', 'Kalliope'];
   return providers.flatMap((label) => {
     // Prefer German Wikipedia; offer one other language only if German is absent.
     const link = links.find((link) => link.label === label) ||

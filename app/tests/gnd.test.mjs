@@ -92,6 +92,7 @@ test('shows only the six chosen providers, retains the NDB article and deduplica
       { id: 'http://viaf.org/viaf/90638588', collection: { abbr: 'VIAF' } },
       { id: 'https://www.portraitindex.de/dokumente/pnd/118571656', collection: { abbr: 'Portraitindex' } },
       { id: 'https://kalliope-verbund.info/gnd/118571656', collection: { abbr: 'DE-611' } },
+      { id: 'https://sws.geonames.org/2973783' },
       { id: 'https://en.wikipedia.org/wiki/Jakob_Michael_Reinhold_Lenz' },
       { id: 'javascript:alert(1)' }, { id: 'data:text/html,test' }, { id: 'https://user:secret@example.org/' }, null,
     ],
@@ -112,6 +113,31 @@ test('does not invent missing provider links and falls back to another Wikipedia
   assert.equal(links.length, 2);
   assert.equal(links[1].label, 'Wikipedia');
   assert.equal(links[1].url, 'https://en.wikipedia.org/wiki/Jakob_Michael_Reinhold_Lenz');
+});
+
+test('place summaries offer only Wikipedia, GND and GeoNames, with local icons and no duplicates', async () => {
+  const record = { ...place,
+    wikipedia: [{ id: 'https://en.wikipedia.org/wiki/Strasbourg' }],
+    sameAs: [
+      { id: 'https://de.wikipedia.org/wiki/Stra%C3%9Fburg' },
+      { id: 'https://sws.geonames.org/2973783', collection: { id: 'https://sws.geonames.org' } },
+      { id: 'http://sws.geonames.org/2973783/' },
+      { id: 'https://viaf.org/viaf/123', collection: { abbr: 'VIAF' } },
+      { id: 'https://www.deutsche-biographie.de/pnd123.html#ndbcontent', collection: { abbr: 'NDB' } },
+      { id: 'https://www.portraitindex.de/dokumente/pnd/123', collection: { abbr: 'Portraitindex' } },
+      { id: 'https://kalliope-verbund.info/gnd/123', collection: { abbr: 'DE-611' } },
+    ],
+  };
+  const { links } = summarizeGnd(record, 'places');
+  assert.deepEqual(links.map(({ label }) => label), ['Wikipedia', 'GND', 'GeoNames']);
+  assert.equal(links[0].url, 'https://de.wikipedia.org/wiki/Stra%C3%9Fburg');
+  assert.equal(links[2].url, 'https://sws.geonames.org/2973783');
+  assert.equal(links[2].icon, 'sws.geonames.org.ico');
+  await readFile(new URL(`../../assets/reference-icons/${links[2].icon}`, import.meta.url));
+  assert.deepEqual(referenceLinks(place, 'places').map(({ label }) => label), ['GND']);
+  const fallback = referenceLinks({ ...place, wikipedia: record.wikipedia }, 'places');
+  assert.deepEqual(fallback.map(({ label }) => label), ['Wikipedia', 'GND']);
+  assert.equal(fallback[0].url, 'https://en.wikipedia.org/wiki/Strasbourg');
 });
 
 test('deduplicates IDs, fetches concurrently within the bound, and builds summaries by edition ID', async (t) => {

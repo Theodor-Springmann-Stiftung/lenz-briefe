@@ -75,8 +75,9 @@ missing. Occupations have no field labels. Places retain their geographic areas
 and short description; these present-day records do not assert eighteenth-century
 borders. Missing IDs or incompatible entity types show a pill without an information card.
 
-The cards offer GND, Wikipedia, NDB, VIAF, Portraitindex and Kalliope, in that order,
-when supplied by the record. Wikipedia prefers German and falls back to one other
+Person cards offer GND, Wikipedia, NDB, VIAF, Portraitindex and Kalliope, in that
+order. Place cards offer only Wikipedia, GND and GeoNames, in that order. Links
+appear when supplied by the record. Wikipedia prefers German and falls back to one other
 available language. Duplicate URLs and obsolete GND aliases are omitted; the NDB
 article anchor is preserved. No biography URLs are guessed. Reference
 icons live in `assets/reference-icons/`, with provenance in `sources.json`. Sites
