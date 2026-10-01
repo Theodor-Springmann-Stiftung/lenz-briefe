@@ -78,7 +78,7 @@ test('normalizes unlabeled details without replacing editorial names or mixing e
   assert.equal(summarizeGnd({ type: ['Person'] }, 'people'), null);
 });
 
-test('shows only the six chosen providers, retains the NDB article and deduplicates Wikipedia and GND aliases', async () => {
+test('shows only the five chosen person providers, excludes Portraitindex, retains the NDB article and deduplicates Wikipedia and GND aliases', async () => {
   const wiki = 'https://de.wikipedia.org/wiki/Jakob_Michael_Reinhold_Lenz';
   const links = referenceLinks({ ...person,
     wikipedia: [{ id: wiki }],
@@ -98,7 +98,7 @@ test('shows only the six chosen providers, retains the NDB article and deduplica
     ],
     homepage: [{ id: 'https://example.org/home' }],
   });
-  assert.deepEqual(links.map(({ label }) => label), ['GND', 'Wikipedia', 'NDB', 'VIAF', 'Portraitindex', 'Kalliope']);
+  assert.deepEqual(links.map(({ label }) => label), ['GND', 'Wikipedia', 'NDB', 'VIAF', 'Kalliope']);
   assert.equal(links[1].url, wiki);
   assert.equal(links[2].url, 'https://www.deutsche-biographie.de/pnd118571656.html#ndbcontent');
   for (const link of links) {

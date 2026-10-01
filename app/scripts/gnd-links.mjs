@@ -47,7 +47,7 @@ export function referenceLinks(record, kind = 'people') {
   }
   const providers = kind === 'places'
     ? ['Wikipedia', 'GND', 'GeoNames']
-    : ['GND', 'Wikipedia', 'NDB', 'VIAF', 'Portraitindex', 'Kalliope'];
+    : ['GND', 'Wikipedia', 'NDB', 'VIAF', 'Kalliope'];
   return providers.flatMap((label) => {
     // Prefer German Wikipedia; offer one other language only if German is absent.
     const link = links.find((link) => link.label === label) ||
