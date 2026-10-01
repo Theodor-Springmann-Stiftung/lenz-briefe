@@ -16,7 +16,7 @@ interface Props {
   wide?: boolean;
 }
 const {
-  title = 'Briefe · Jacob Michael Reinhold Lenz',
+  title = 'Kritische Briefausgabe von Jakob Michael Reinhold Lenz',
   description = 'Die Briefe von und an Jacob Michael Reinhold Lenz. Digitale Edition.',
   wide = false,
 } = Astro.props;
@@ -45,7 +45,7 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {
     <meta name="robots" content="noindex, nofollow" />
     <meta name="googlebot" content="noindex, nofollow" />
     <meta name="theme-color" content="#fcfcfb" />
-    <title>{title}</title>
+    <title>{`LKB – ${title}`}</title>
     <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
     <link rel="manifest" href={`${base}manifest.webmanifest`} />
     <link rel="apple-touch-icon" href={`${base}icons/apple-touch-icon.png`} sizes="180x180" />

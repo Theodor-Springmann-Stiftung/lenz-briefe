@@ -1,12 +1,13 @@
 import { spawn } from 'node:child_process';
 import { existsSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { enrichGnd } from './gnd.mjs';
 const workspace = fileURLToPath(new URL('../../scripts/transform/python/', import.meta.url));
 const output = fileURLToPath(new URL('../generated/', import.meta.url));
 const python = fileURLToPath(new URL('.venv/bin/python', pathToFileURL(workspace)));
-export function runExport({ signal } = {}) {
+export async function runExport({ signal } = {}) {
   const localPython = existsSync(python);
-  return new Promise((resolve, reject) => {
+  await new Promise((resolve, reject) => {
     const child = spawn(
       localPython ? python : 'uv',
       localPython
@@ -25,6 +26,7 @@ export function runExport({ signal } = {}) {
         );
     });
   });
+  await enrichGnd({ output, signal });
 }
 
 if (process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url) {

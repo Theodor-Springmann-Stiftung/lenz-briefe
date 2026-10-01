@@ -45,7 +45,7 @@ export async function printSelectionDocument(
   base.href = source.baseURI;
   copy.head.querySelector('base')?.remove();
   copy.head.prepend(base);
-  copy.title = 'Briefauswahl – Lenz Briefe';
+  copy.title = 'LKB – Briefauswahl';
   const main = copy.querySelector('body > main')!;
   main.classList.add('print-selection');
   main.replaceChildren();

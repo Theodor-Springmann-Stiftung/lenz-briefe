@@ -26,7 +26,7 @@ const url = (file: string) => licenseFileUrl(file, import.meta.env.BASE_URL);
 ---
 
 <Layout
-  title="Lizenzen und Drittanbieter · Lenz Briefe"
+  title="Lizenzen und Drittanbieter"
   description="Lizenzbedingungen der digitalen Edition, ihrer XML-Daten, Schriftarten, Icons und Software-Abhängigkeiten."
 >
   <article class="about-page">
@@ -78,6 +78,17 @@ const url = (file: string) => licenseFileUrl(file, import.meta.env.BASE_URL);
         <a href={url('project/LICENSE-MIT.txt')}>MIT-Lizenz</a>, Copyright © 2026 Theodor Springmann
         Stiftung. Die Lizenz erlaubt die Nutzung, Änderung und Weitergabe des Codes unter
         Beibehaltung des Copyright- und Lizenzhinweises.
+      </p>
+      <p>
+        Die ergänzenden Personen- und Ortsinformationen stammen aus der Gemeinsamen Normdatei
+        (GND) der Deutschen Nationalbibliothek und werden über{' '}
+        <a href="https://lobid.org/gnd">lobid-gnd</a> des Hochschulbibliothekszentrums
+        Nordrhein-Westfalen bezogen. Diese Normdaten stehen unter{' '}
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de" rel="license">CC0 1.0</a>.
+        Die jeweiligen GND-Einträge sind bei den Filterinformationen verlinkt.
+        Die lokal gespeicherten Website-Icons kennzeichnen die verlinkten Angebote und unterliegen
+        den jeweiligen Rechten ihrer Anbieter; sie fallen nicht unter die CC0-Freigabe der Normdaten.
+        Ihre Herkunft ist im <a href={url('reference-icon-sources.json')}>Quellenverzeichnis der Icons</a> dokumentiert.
       </p>
 
       <h2 id="hinweise">Lizenz- und Urheberrechtshinweise</h2>

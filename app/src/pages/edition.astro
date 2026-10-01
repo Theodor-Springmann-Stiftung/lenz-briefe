@@ -1,6 +1,8 @@
 ---
 import { base } from '../lib/edition';
 import { editionPages, pageUrl } from '../lib/pages';
+import PageRedirect from '../components/PageRedirect.astro';
 const firstPage = (await editionPages()).find((page) => page.data.inMenu);
-return Astro.redirect(firstPage ? pageUrl(firstPage.id) : base);
 ---
+
+<PageRedirect href={firstPage ? pageUrl(firstPage.id) : base} title={firstPage?.data.menu ?? 'Briefverzeichnis'} />

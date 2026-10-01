@@ -53,6 +53,13 @@ jobs:
         timeout-minutes: 2
         run: npm --prefix app test
 
+      - name: Restore and save GND responses
+        uses: actions/cache@v5
+        with:
+          path: app/.cache/gnd
+          key: gnd-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: gnd-v1-
+
       # The build script runs Python/Saxon XSLT export, Astro check, then Astro build.
       - name: Transform XML and build static Astro pages
         run: npm --prefix app run build

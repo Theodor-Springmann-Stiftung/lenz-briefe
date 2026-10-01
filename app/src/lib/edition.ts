@@ -77,6 +77,17 @@ if (status.state !== 'success')
 export const catalog: Catalog = JSON.parse(
   fs.readFileSync(path.join(directory, 'catalog.json'), 'utf8'),
 );
+export interface GndInformation {
+  gndId: string;
+  lifespan: string;
+  occupations: string;
+  geographicAreas: string;
+  description: string;
+  links: { label: string; title: string; url: string; icon: string }[];
+}
+export const gndInformation: Record<'people' | 'places', Record<string, GndInformation>> = JSON.parse(
+  fs.readFileSync(path.join(directory, 'gnd.json'), 'utf8'),
+);
 export function letterFiles(id: string) {
   const dir = path.join(directory, 'letters', id);
   const grouped: Record<string, Sidenote[]> = JSON.parse(

@@ -21,6 +21,11 @@ const checkboxes = [...document.querySelectorAll<HTMLInputElement>('.filter-opti
 const list = document.querySelector<HTMLOListElement>('.catalog-letter-list')!;
 const activeFilters = document.querySelector<HTMLElement>('.active-filters')!;
 const pills = document.querySelector<HTMLElement>('.active-filter-pills')!;
+const informationCards = document.querySelector<HTMLElement>('.filter-information')!;
+const informationTemplates = new Map(
+  [...document.querySelectorAll<HTMLTemplateElement>('[data-filter-information]')]
+    .map((template) => [template.dataset.filterInformation!, template]),
+);
 const allLettersLink = document.querySelector<HTMLButtonElement>('.all-letters-link')!;
 const searchInput = document.querySelector<HTMLInputElement>('#letter-search')!;
 searchInput.value = state.q || '';
@@ -29,6 +34,7 @@ function renderFilterPills() {
   activeFilters.hidden = !hasFilters(state);
   allLettersLink.hidden = !hasFilters(state);
   const fragment = document.createDocumentFragment();
+  const cards = document.createDocumentFragment();
   for (const kind of ['person', 'place', 'search'] as const) {
     const template = document.querySelector<HTMLTemplateElement>(`#filter-pill-${kind}`)!;
     const selected =
@@ -48,18 +54,24 @@ function renderFilterPills() {
               .closest('label')!
               .querySelector('span')!.textContent!;
       const pill = template.content.firstElementChild!.cloneNode(true) as HTMLButtonElement;
-      pill.dataset.filterId = id;
       pill.querySelector('.filter-pill-name')!.textContent = name;
+      pill.dataset.filterId = id;
       const label =
         kind === 'search'
           ? `Suche entfernen: ${id.trim()}`
           : `${kind === 'person' ? 'Personenfilter' : 'Ortsfilter'} entfernen: ${name}`;
       pill.setAttribute('aria-label', label);
       pill.title = label;
+      const information = informationTemplates.get(`${kind}-${id}`);
+      if (information) {
+        cards.append(information.content.cloneNode(true));
+      }
       fragment.append(pill);
     }
   }
   pills.replaceChildren(fragment);
+  informationCards.replaceChildren(cards);
+  informationCards.hidden = !informationCards.childElementCount;
 }
 function render() {
   document.dispatchEvent(new Event('catalog:change'));

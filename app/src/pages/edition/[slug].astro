@@ -18,7 +18,7 @@ const tocHeadings = headings.filter((heading) => heading.depth <= 3);
 const showToc = page.data.toc && tocHeadings.length > 0;
 ---
 
-<Layout title={`${page.data.title} · Lenz Briefe`} description={page.data.description}>
+<Layout title={page.data.menu} description={page.data.description}>
   <article class:list={['about-page', { 'about-page--with-toc': showToc }]}>
     {showToc && (
       <nav class="page-toc" aria-label="Inhaltsverzeichnis">

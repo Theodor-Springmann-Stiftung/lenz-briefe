@@ -1,4 +1,8 @@
 ---
+import { getEntry } from 'astro:content';
 import { pageUrl } from '../lib/pages';
-return Astro.redirect(pageUrl('datenschutz'));
+import PageRedirect from '../components/PageRedirect.astro';
+const page = await getEntry('pages', 'datenschutz');
 ---
+
+<PageRedirect href={pageUrl('datenschutz')} title={page?.data.menu ?? 'Impressum & Datenschutz'} />

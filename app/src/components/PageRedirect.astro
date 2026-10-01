@@ -1,0 +1,20 @@
+---
+interface Props {
+  href: string;
+  title: string;
+}
+const { href, title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{`LKB – ${title}`}</title>
+    <meta http-equiv="refresh" content={`2;url=${href}`} />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={new URL(href, Astro.site ?? Astro.url)} />
+  </head>
+  <body><a href={href}>{title}</a></body>
+</html>

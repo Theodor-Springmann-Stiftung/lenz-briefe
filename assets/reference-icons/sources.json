@@ -1,0 +1,74 @@
+{
+  "id.loc.gov": {
+    "file": "loc.gov.ico",
+    "source": "https://www.loc.gov/favicon.ico"
+  },
+  "www.hls-dhs-dss.ch": {
+    "file": "hls-dhs-dss.ch.ico",
+    "source": "https://www.hls-dhs-dss.ch/favicon.ico"
+  },
+  "www.wikidata.org": {
+    "file": "wikidata.org.ico",
+    "source": "https://www.wikidata.org/static/favicon/wikidata.ico"
+  },
+  "d-nb.info": {
+    "file": "dnb.de.png",
+    "source": "https://www.dnb.de/SiteGlobals/Frontend/DNBWeb/Images/favicon.png?__blob=normal&v=4"
+  },
+  "en.wikipedia.org": {
+    "file": "de.wikipedia.org.ico",
+    "source": "https://de.wikipedia.org/static/favicon/wikipedia.ico"
+  },
+  "de.wikipedia.org": {
+    "file": "de.wikipedia.org.ico",
+    "source": "https://de.wikipedia.org/static/favicon/wikipedia.ico"
+  },
+  "kalliope-verbund.info": {
+    "file": "kalliope-verbund.info.png",
+    "source": "https://kalliope-verbund.info/img/favicon.ico"
+  },
+  "raa.gf-franken.de": {
+    "file": "gf-franken.de.ico",
+    "source": "https://www.gf-franken.de/favicon.ico"
+  },
+  "aaa.gf-franken.de": {
+    "file": "gf-franken.de.ico",
+    "source": "https://www.gf-franken.de/favicon.ico"
+  },
+  "www.deutsche-digitale-bibliothek.de": {
+    "file": "deutsche-digitale-bibliothek.de.ico",
+    "source": "https://www.deutsche-digitale-bibliothek.de/favicon.ico"
+  },
+  "catalogue.bnf.fr": {
+    "file": "bnf.fr.ico",
+    "source": "https://www.bnf.fr/themes/custom/bnfsi/favicon.ico"
+  },
+  "www.deutsche-biographie.de": {
+    "file": "deutsche-biographie.de.ico",
+    "source": "https://www.deutsche-biographie.de/favicon.ico"
+  },
+  "www.portraitindex.de": {
+    "file": "portraitindex.de.ico",
+    "source": "https://www.portraitindex.de/favicon.ico"
+  },
+  "bmlo.de": {
+    "file": "bmlo.de.gif",
+    "source": "https://bmlo.de/x/pic/favicon.gif"
+  },
+  "www.archivportal-d.de": {
+    "file": "archivportal-d.de.png",
+    "source": "https://www.archivportal-d.de/favicon.ico"
+  },
+  "de.wikisource.org": {
+    "file": "wikisource.org.ico",
+    "source": "https://wikisource.org/static/favicon/wikisource.ico"
+  },
+  "www.lagis-hessen.de": {
+    "file": "lagis-hessen.de.ico",
+    "source": "https://www.lagis-hessen.de/favicon.ico"
+  },
+  "sws.geonames.org": {
+    "file": "sws.geonames.org.ico",
+    "source": "https://sws.geonames.org/favicon.ico"
+  }
+}

@@ -13,9 +13,7 @@
 - Übersetzung und "Zusatzmaterial" in Serifen
 - Design/Hintergrund
 - GND/GeoNames
-- Grundhand am Rand
 - Sätze zum Druck und zur Suchfunktion
-- Textverlust 266, 95
 
 ## ME (WÜRDE ANDERS)
 - 266: verte

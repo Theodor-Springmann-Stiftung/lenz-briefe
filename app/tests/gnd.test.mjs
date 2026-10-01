@@ -1,0 +1,241 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtemp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
+import { setTimeout as sleep } from 'node:timers/promises';
+import { enrichGnd, gndId, summarizeGnd, retryAfter } from '../scripts/gnd.mjs';
+import { referenceLinks } from '../scripts/gnd-links.mjs';
+
+const DAY = 86_400_000;
+const personId = '118571656';
+const placeId = '4057878-1';
+const person = {
+  gndIdentifier: personId, preferredName: 'Lenz, Jakob Michael Reinhold', type: ['Person'],
+  dateOfBirth: ['1751-01-12'], placeOfBirth: [{ label: 'Cesvaine' }],
+  dateOfDeath: ['1792-05-24'], professionOrOccupation: [{ label: 'Schriftsteller' }],
+};
+const place = {
+  gndIdentifier: placeId, preferredName: 'Straßburg', type: ['PlaceOrGeographicName'],
+  geographicAreaCode: [{ label: 'Frankreich' }],
+  biographicalOrHistoricalInformation: ['Hauptstadt des Elsass'],
+};
+const definition = (id) => ({ name: id, ref: `https://d-nb.info/gnd/${id}` });
+const response = (data, status = 200, headers = {}) => new Response(
+  data == null ? null : JSON.stringify(data), { status, headers },
+);
+
+async function fixture(t, catalog = { people: { 1: definition(personId) }, places: {} }) {
+  const root = await mkdtemp(path.join(tmpdir(), 'lenz-gnd-'));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  const output = path.join(root, 'generated');
+  const cacheDirectory = path.join(root, 'cache');
+  await mkdir(output);
+  await mkdir(cacheDirectory);
+  await writeFile(path.join(output, 'catalog.json'), JSON.stringify(catalog));
+  const warnings = [];
+  const options = {
+    output, cacheDirectory, now: () => 100 * DAY,
+    wait: async () => {}, logger: { info() {}, warn(message) { warnings.push(message); } },
+  };
+  return {
+    options, warnings,
+    run: (overrides = {}) => enrichGnd({ ...options, ...overrides }),
+    cache: (value, id = personId) => writeFile(path.join(cacheDirectory, `${id}.json`), JSON.stringify(value)),
+    read: (id = personId) => readFile(path.join(cacheDirectory, `${id}.json`), 'utf8').then(JSON.parse),
+  };
+}
+
+test('extracts exact GND URLs; ignores missing IDs and other hosts/paths', () => {
+  for (const id of [personId, placeId, '12021363X', '115455998X']) {
+    assert.equal(gndId(`http://d-nb.info/gnd/${id}`), id);
+  }
+  for (const ref of [null, '', 'https://example.com/118571656', 'https://d-nb.info.evil/gnd/118571656',
+    'https://d-nb.info/gnd/../../foo', 'https://d-nb.info/gnd/unknown', `${personId}`]) {
+    assert.equal(gndId(ref), null);
+  }
+});
+
+test('formats life dates, retaining uncertainty and distinguishing one unknown date from two', () => {
+  assert.equal(summarizeGnd(person, 'people').lifespan, '12.01.1751–24.05.1792');
+  assert.equal(summarizeGnd({ ...person, dateOfBirth: ['ca. 1750'] }, 'people').lifespan, 'ca. 1750–24.05.1792');
+  assert.equal(summarizeGnd({ ...person, dateOfBirth: [] }, 'people').lifespan, '?–24.05.1792');
+  assert.equal(summarizeGnd({ ...person, dateOfDeath: [] }, 'people').lifespan, '12.01.1751–?');
+  const undated = summarizeGnd({ ...person, dateOfBirth: [], dateOfDeath: [], professionOrOccupation: [] }, 'people');
+  assert.equal(undated.lifespan, '');
+  assert.equal(undated.occupations, '');
+  assert.equal(undated.links[0].label, 'GND');
+});
+
+test('normalizes unlabeled details without replacing editorial names or mixing entity types', () => {
+  assert.equal(summarizeGnd(person, 'people').occupations, 'Schriftsteller');
+  assert.equal('preferredName' in summarizeGnd(person, 'people'), false);
+  assert.equal(summarizeGnd(place, 'places').description, 'Hauptstadt des Elsass');
+  assert.equal(summarizeGnd(place, 'places').geographicAreas, 'Frankreich');
+  assert.equal(summarizeGnd(place, 'places').lifespan, '');
+  assert.equal(summarizeGnd(place, 'people'), null);
+  assert.equal(summarizeGnd(person, 'places'), null);
+  assert.equal(summarizeGnd({ type: ['Person'] }, 'people'), null);
+});
+
+test('shows only the six chosen providers, retains the NDB article and deduplicates Wikipedia and GND aliases', async () => {
+  const wiki = 'https://de.wikipedia.org/wiki/Jakob_Michael_Reinhold_Lenz';
+  const links = referenceLinks({ ...person,
+    wikipedia: [{ id: wiki }],
+    sameAs: [
+      { id: wiki, collection: { abbr: 'dewiki' } },
+      { id: 'http://de.wikipedia.org/wiki/Jakob_Michael_Reinhold_Lenz' },
+      { id: 'https://www.deutsche-biographie.de/pnd118571656.html#adbcontent', collection: { abbr: 'ADB' } },
+      { id: 'https://www.deutsche-biographie.de/pnd118571656.html#ndbcontent', collection: { abbr: 'NDB' } },
+      { id: 'https://d-nb.info/gnd/157897842', collection: { abbr: 'DNB' } },
+      { id: 'https://example.org/person/123', collection: { name: 'Another database', icon: 'https://remote.example/icon.png' } },
+      { id: 'http://viaf.org/viaf/90638588', collection: { abbr: 'VIAF' } },
+      { id: 'https://www.portraitindex.de/dokumente/pnd/118571656', collection: { abbr: 'Portraitindex' } },
+      { id: 'https://kalliope-verbund.info/gnd/118571656', collection: { abbr: 'DE-611' } },
+      { id: 'https://en.wikipedia.org/wiki/Jakob_Michael_Reinhold_Lenz' },
+      { id: 'javascript:alert(1)' }, { id: 'data:text/html,test' }, { id: 'https://user:secret@example.org/' }, null,
+    ],
+    homepage: [{ id: 'https://example.org/home' }],
+  });
+  assert.deepEqual(links.map(({ label }) => label), ['GND', 'Wikipedia', 'NDB', 'VIAF', 'Portraitindex', 'Kalliope']);
+  assert.equal(links[1].url, wiki);
+  assert.equal(links[2].url, 'https://www.deutsche-biographie.de/pnd118571656.html#ndbcontent');
+  for (const link of links) {
+    assert.match(link.icon, /^[a-z0-9.-]+\.(svg|ico|png|gif)$/);
+    await readFile(new URL(`../../assets/reference-icons/${link.icon}`, import.meta.url));
+  }
+});
+
+test('does not invent missing provider links and falls back to another Wikipedia language', () => {
+  assert.deepEqual(referenceLinks(person).map(({ label }) => label), ['GND']);
+  const links = referenceLinks({ ...person, wikipedia: [{ id: 'https://en.wikipedia.org/wiki/Jakob_Michael_Reinhold_Lenz' }] });
+  assert.equal(links.length, 2);
+  assert.equal(links[1].label, 'Wikipedia');
+  assert.equal(links[1].url, 'https://en.wikipedia.org/wiki/Jakob_Michael_Reinhold_Lenz');
+});
+
+test('deduplicates IDs, fetches concurrently within the bound, and builds summaries by edition ID', async (t) => {
+  const catalog = { people: {}, places: { 7: definition(placeId) } };
+  const responses = new Map([[personId, person], [placeId, place]]);
+  for (let i = 0; i < 8; i++) {
+    const id = String(118571656 + i);
+    catalog.people[i] = definition(id);
+    responses.set(id, { ...person, gndIdentifier: id });
+  }
+  catalog.people.duplicate = definition(personId);
+  catalog.people.missing = { name: 'Unknown' };
+  const f = await fixture(t, catalog);
+  let active = 0, peak = 0, calls = 0;
+  const fetchImpl = async (url) => {
+    active++; calls++; peak = Math.max(peak, active);
+    await sleep(5);
+    active--;
+    return response(responses.get(url.match(/([^/]+)\.json$/)[1]));
+  };
+  const { information } = await f.run({ fetchImpl });
+  assert.equal(calls, 9);
+  assert.equal(peak, 4);
+  assert.deepEqual(information.people.duplicate, information.people[0]);
+  assert.equal(information.places[7].gndId, placeId);
+  assert.equal(information.people.missing, undefined);
+  const saved = JSON.parse(await readFile(path.join(f.options.output, 'gnd.json'), 'utf8'));
+  assert.deepEqual(saved, information);
+  const cached = await f.run({ fetchImpl: () => assert.fail('fresh cache must not use network') });
+  assert.equal(cached.stats.cached, 9);
+});
+
+test('refreshes expired entries conditionally and accepts 304 without losing raw data', async (t) => {
+  const f = await fixture(t);
+  await f.cache({ version: 1, status: 200, checkedAt: 60 * DAY, record: person, etag: 'v1' });
+  await f.run({ fetchImpl: async (_url, { headers }) => {
+    assert.equal(headers['If-None-Match'], 'v1');
+    return response(null, 304);
+  } });
+  const saved = await f.read();
+  assert.equal(saved.checkedAt, 100 * DAY);
+  assert.deepEqual(saved.record, person);
+});
+
+test('retries transient errors with backoff, then retains stale information on exhaustion', async (t) => {
+  const f = await fixture(t);
+  await f.cache({ version: 1, status: 200, checkedAt: 60 * DAY, record: person });
+  let calls = 0;
+  const delays = [];
+  const result = await f.run({
+    fetchImpl: async () => { calls++; return response(null, 503); },
+    wait: async (ms) => { delays.push(ms); },
+  });
+  assert.equal(calls, 3);
+  assert.deepEqual(delays, [1000, 2000]);
+  assert.equal(result.stats.stale, 1);
+  assert.equal(result.information.people[1].gndId, personId);
+  assert.equal((await f.read()).checkedAt, 60 * DAY);
+  assert.match(f.warnings[0], /using saved data/);
+});
+
+test('honors Retry-After before retrying a rate-limited response', async (t) => {
+  const f = await fixture(t);
+  let calls = 0, time = 100 * DAY;
+  const delays = [];
+  await f.run({
+    now: () => time,
+    wait: async (ms) => { delays.push(ms); time += ms; },
+    fetchImpl: async () => ++calls === 1 ? response(null, 429, { 'Retry-After': '5' }) : response(person),
+  });
+  assert.equal(calls, 2);
+  assert.deepEqual(delays, [1000, 4000]);
+  assert.equal(retryAfter('Thu, 01 Oct 2026 12:00:05 GMT', Date.parse('2026-10-01T12:00:00Z')), 5000);
+});
+
+test('negative caching prevents repeated 404s and expires after seven days', async (t) => {
+  const f = await fixture(t);
+  let calls = 0;
+  const fetchImpl = async () => { calls++; return response(null, 404); };
+  assert.equal((await f.run({ fetchImpl })).stats.missing, 1);
+  await f.run({ fetchImpl });
+  assert.equal(calls, 1);
+  await f.run({ fetchImpl, now: () => 108 * DAY });
+  assert.equal(calls, 2);
+});
+
+test('permanent errors do not retry and a cold failed build emits empty information', async (t) => {
+  const f = await fixture(t);
+  let calls = 0;
+  const result = await f.run({ fetchImpl: async () => { calls++; return response(null, 403); } });
+  assert.equal(calls, 1);
+  assert.equal(result.stats.failed, 1);
+  assert.deepEqual(result.information, { people: {}, places: {} });
+});
+
+test('invalid API data cannot overwrite valid cache; corrupt disk entries are refetched', async (t) => {
+  const f = await fixture(t);
+  await f.cache({ version: 1, status: 200, checkedAt: 60 * DAY, record: person });
+  await f.run({ fetchImpl: async () => response(place) });
+  assert.deepEqual((await f.read()).record, person);
+  await writeFile(path.join(f.options.cacheDirectory, `${personId}.json`), '{broken');
+  await f.run({ fetchImpl: async () => response(person) });
+  assert.equal((await f.read()).checkedAt, 100 * DAY);
+});
+
+test('accepts an explicitly deprecated ID but omits incompatible entity types', async (t) => {
+  const f = await fixture(t);
+  const moved = { ...place, deprecatedUri: [`https://d-nb.info/gnd/${personId}`] };
+  const result = await f.run({ fetchImpl: async () => response(moved) });
+  assert.deepEqual(result.information.people, {});
+  assert.match(f.warnings[0], /unexpected entity type/);
+  assert.deepEqual((await f.read()).record, moved);
+});
+
+test('network budget ends a stalled fetch gracefully; explicit cancellation stops the export', async (t) => {
+  const f = await fixture(t);
+  const fetchImpl = (_url, { signal }) => new Promise((_resolve, reject) => {
+    signal.addEventListener('abort', () => reject(signal.reason), { once: true });
+  });
+  // Keep the test process alive while AbortSignal.timeout's unref'd timer is pending.
+  const [result] = await Promise.all([f.run({ fetchImpl, networkTimeout: 20 }), sleep(40)]);
+  assert.equal(result.stats.failed, 1);
+  const controller = new AbortController();
+  const pending = f.run({ fetchImpl, signal: controller.signal });
+  setTimeout(() => controller.abort(), 10);
+  await assert.rejects(pending, { name: 'AbortError' });
+});

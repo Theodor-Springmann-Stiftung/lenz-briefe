@@ -50,6 +50,57 @@ needed. Builds regenerate `app/generated/`; both directories are ignored by Git.
 The export script uses the workspace's Python virtual environment when present,
 otherwise `uv run`. An unsuccessful export stops the site build.
 
+### Page titles and external links
+
+Page titles start with `LKB –`: the catalogue uses the edition description,
+letters use sender, recipient and the editorial human-readable date, and static
+pages use their menu label. External HTTP(S) links open in a new tab or window.
+The HTML middleware applies this during rendering, including links in Markdown,
+letter content and card templates; internal links keep their normal behavior.
+
+### GND information
+
+After the XML export, `scripts/gnd.mjs` enriches people and places using their
+existing `d-nb.info/gnd/…` IDs and the [lobid GND API](https://lobid.org/gnd/api).
+It never matches entities by name or changes the editorial XML. Below the filter
+controls and above the letter list, compact cards show available information and reference links for selected
+people and places with GND data. The original removable filter pills sit beside the
+heading; cards have no remove button. Cards occupy three equal columns, share the
+height of the tallest card across all rows, and grow from 9rem up to 24rem. Long names and details end in
+an ellipsis instead of scrolling; their full text is available on hover. Cards
+are hidden below 960px while filter pills
+remain available. Display names always come from the editorial XML. Life dates are
+shown as birth–death, with `?` for one missing date and no date line when both are
+missing. Occupations have no field labels. Places retain their geographic areas
+and short description; these present-day records do not assert eighteenth-century
+borders. Missing IDs or incompatible entity types show a pill without an information card.
+
+The cards offer GND, Wikipedia, NDB, VIAF, Portraitindex and Kalliope, in that order,
+when supplied by the record. Wikipedia prefers German and falls back to one other
+available language. Duplicate URLs and obsolete GND aliases are omitted; the NDB
+article anchor is preserved. No biography URLs are guessed. Reference
+icons live in `assets/reference-icons/`, with provenance in `sources.json`. Sites
+without a saved icon use the local database symbol. Builds and browsers do not
+request remote icons.
+
+Raw responses are stored in the ignored `app/.cache/gnd/` directory, independently
+of the regenerated `app/generated/gnd.json` summaries. IDs are deduplicated, with
+four requests in parallel. Successful responses stay fresh for 30 days; HTTP 404
+responses for seven days. Expired entries use conditional requests if the service
+provided ETag or Last-Modified headers. Network errors, rate limiting and server
+errors get up to three attempts with exponential backoff; Retry-After pauses the
+shared request queue. Each request has a ten-second timeout, and the whole network
+phase has a 90-second budget. Cancellation of the export also cancels requests.
+Temporary failures use previously saved data, or omit unavailable information on
+a first build, and report a warning without preventing the edition from building.
+Malformed responses never replace valid cache entries. Writes are atomic.
+
+GitHub Actions restores and saves this cache across builds. Delete an individual
+cache file to force a refresh on the next `npm --prefix app run export`. Run
+`node --test app/tests/gnd.test.mjs` for the network-independent cache/retry tests.
+No API calls are made in the browser, so the panels also work with the downloaded
+offline edition. Textual GND data are CC0; portrait images are not imported.
+
 ## Printing
 
 The letter print button loads `@vivliostyle/core` on demand, passes a snapshot of

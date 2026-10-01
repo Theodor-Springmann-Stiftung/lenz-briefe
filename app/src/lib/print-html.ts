@@ -28,7 +28,7 @@ export async function printHtml(html: string, title: string, onReady: () => void
       printHTML(html, {
         // printHTML interpolates this initial title into iframe markup. Set the
         // actual editorial title through the DOM once the pages are ready.
-        title: 'Lenz Briefe',
+        title: 'LKB – Druckansicht',
         hideIframe: true,
         // Some browsers return from print() before the dialog closes. Retain
         // the prepared pages until afterprint, including when it is cancelled.

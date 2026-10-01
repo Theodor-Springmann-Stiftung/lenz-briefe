@@ -8,6 +8,14 @@ Original application code: [MIT License](project/LICENSE-MIT.txt), Copyright (c)
 Editorial content and XML data: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless otherwise identified.
 Third-party works retain their own terms. The repository-root `LICENSE.md` describes the project scope.
 
+Supplementary GND person and place text is supplied by the Deutsche Nationalbibliothek
+via [lobid-gnd (hbz)](https://lobid.org/gnd), under
+[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+The filter details link to their source records. Portraits are not imported.
+Locally stored reference-site icons identify the linked services and retain their
+respective owners' rights; they are not covered by the GND data's CC0 dedication.
+Their original URLs are recorded in [reference-icon-sources.json](reference-icon-sources.json).
+
 The build generates the German public overview at `/edition/lizenzen/` from the tables below, with browser-delivered products listed before build dependencies. All notice files are copied to `/licenses/`.
 
 ## Fonts

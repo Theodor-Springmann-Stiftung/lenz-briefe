@@ -1,0 +1,35 @@
+---
+import { filterOptions, gndInformation, base } from '../lib/edition';
+---
+
+{(['person', 'place'] as const).flatMap((kind) =>
+  filterOptions(kind).map(({ id, name }) => {
+    const information = gndInformation[kind === 'person' ? 'people' : 'places'][id];
+    if (!information) return null;
+    return (
+      <template data-filter-information={`${kind}-${id}`}>
+        <article class="filter-card" aria-label={name}>
+          <header class="filter-card-header">
+            <h2 class="filter-card-name" title={name}>{name}</h2>
+          </header>
+          {(information.lifespan || information.occupations || information.geographicAreas || information.description) && (
+            <div class="filter-details">
+              {information.lifespan && <p class="filter-lifespan" title={information.lifespan}>{information.lifespan}</p>}
+              {information.occupations && <p title={information.occupations}>{information.occupations}</p>}
+              {information.geographicAreas && <p class="filter-geographic-areas" title={information.geographicAreas}>{information.geographicAreas}</p>}
+              {information.description && <p class="filter-place-description" title={information.description}>{information.description}</p>}
+            </div>
+          )}
+          <nav class="filter-reference-links" aria-label={`Weiterführende Informationen zu ${name}`}>
+            {information.links.map((link) => (
+              <a href={link.url} title={link.title}>
+                <img src={`${base}reference-icons/${link.icon}`} width="16" height="16" alt="" loading="lazy" />
+                <span>{link.label}</span>
+              </a>
+            ))}
+          </nav>
+        </article>
+      </template>
+    );
+  }),
+)}
