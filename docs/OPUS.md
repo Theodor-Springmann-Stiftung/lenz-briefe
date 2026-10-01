@@ -396,7 +396,7 @@ angegeben, erlauben sie gemischten Text mit den gemeinsamen Textauszeichnungen.
 | `pe` | Bleistift; im Brieftext grau. |
 | `note` | Editorische Anmerkung in eckigen Klammern; im Brieftext grau, alleinstehend zentriert. |
 | `tl` | Textverlust; gepunkteter Kreis als Kennzeichnung. |
-| `nr` | Unentzifferte Stelle; Umfang zwischen hohlen Punkten. Große leere Bereiche können auf der Website umbrechen. |
+| `nr` | Unentzifferte Stelle; bei `extent="1"` ein umgekehrtes Fragezeichen (¿), bei größerem Umfang zwei umgekehrte Fragezeichen mit entsprechendem Abstand. Große leere Bereiche können auf der Website umbrechen. |
 | `address` | Adresse; transparenter Container ohne eigene Gestaltung. |
 | `fn` | Fußnotenstelle oder Fußnotentext im Textfluss; Zuordnung über `index`. |
 | `anchor` | Verweiszeichen innerhalb des Textes, ohne eigenes Attribut und ohne automatische Hochstellung. |
