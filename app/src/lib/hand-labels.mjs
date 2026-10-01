@@ -6,23 +6,38 @@ const escapeAttribute = (text) =>
 /** Collect source hands once, retaining the original transcription markup.
  * @param {string} html
  * @param {Record<string, string>} names
- * @param {{ anchors?: boolean, labelStarts?: boolean }} options
+ * @param {{ anchors?: boolean, labelStarts?: boolean, baseRef?: string }} options
  */
-export function prepareHandControls(html, names, { anchors = false, labelStarts = false } = {}) {
+export function prepareHandControls(html, names, { anchors = false, labelStarts = false, baseRef } = {}) {
   const root = parseFragment(html, { sourceCodeLocationInfo: true });
   const seen = new Set();
   const labels = [];
   const insertions = [];
-  function visit(node) {
+  let explicitIndex = 0;
+  let baseIndex = 0;
+  let previousRef;
+  function visit(node, inheritedRef, ignoreImplicit = false) {
     const attrs = Object.fromEntries((node.attrs || []).map((attr) => [attr.name, attr.value]));
-    if (attrs.class?.split(/\s+/).includes('hand')) {
+    const classes = attrs.class?.split(/\s+/) || [];
+    // Editorial annotations cannot establish the base writer, but explicit
+    // hand tags must always be collected, including inside other markup.
+    ignoreImplicit ||= classes.some((name) => ['note', 'sidenote-slot', 'inpos-note'].includes(name));
+    if (baseRef && classes.includes('hand-base-start')) {
+      baseIndex++;
+      previousRef = baseRef;
+      labels.push({ ref: baseRef, name: names[baseRef] || 'Unbekannte Hand', anchor: attrs.id });
+      return;
+    }
+    if (classes.includes('hand')) {
+      inheritedRef = attrs['data-ref'];
       // One source hand is reopened across lines and table cells by the XSLT.
       const origin = attrs['data-origin'] || node;
       const startTag = node.sourceCodeLocation?.startTag;
       if (!seen.has(origin) && startTag) {
         const ref = attrs['data-ref'];
         const name = names[ref] || 'Unbekannte Hand';
-        const anchor = attrs.id || `hand-${labels.length + 1}`;
+        explicitIndex++;
+        const anchor = attrs.id || `hand-${explicitIndex}`;
         labels.push({ ref, name, anchor });
         let attributes = '';
         if (anchors && !attrs.id) attributes += ` id="${escapeAttribute(anchor)}"`;
@@ -32,7 +47,24 @@ export function prepareHandControls(html, names, { anchors = false, labelStarts 
       }
       seen.add(origin);
     }
-    for (const child of node.childNodes || []) visit(child);
+    if (baseRef && node.nodeName === '#text' && node.value.trim() && (inheritedRef || !ignoreImplicit)) {
+      const ref = inheritedRef || baseRef;
+      if (!inheritedRef && previousRef !== baseRef && node.sourceCodeLocation) {
+        const name = names[baseRef] || 'Unbekannte Hand';
+        const anchor = `hand-base-${++baseIndex}`;
+        labels.push({ ref: baseRef, name, anchor });
+        if (anchors || labelStarts) {
+          const start = node.sourceCodeLocation.startOffset;
+          const whitespace = html.slice(start, node.sourceCodeLocation.endOffset).match(/^\s*/)[0].length;
+          insertions.push({
+            offset: start + whitespace,
+            value: `<span class="hand-base-start" id="${anchor}"${labelStarts ? ` data-hand-name="${escapeAttribute(name)}"` : ''}></span>`,
+          });
+        }
+      }
+      previousRef = ref;
+    }
+    for (const child of node.childNodes || []) visit(child, inheritedRef, ignoreImplicit);
   }
   visit(root);
   for (const { offset, value } of insertions.sort((a, b) => b.offset - a.offset)) {

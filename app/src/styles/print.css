@@ -77,9 +77,9 @@
   .letter-body { width:100%; margin:0; }
   .letter-body.edition-text { line-height:1.5; }
   .letter-body .page-anchor[data-index]::before,
-  .letter-body .hand[data-hand-name]::before { font:400 7pt/1.3 var(--font-sans); font-variation-settings:normal; color:#444; margin-inline:.25em; }
+  .letter-body :is(.hand, .hand-base-start)[data-hand-name]::before { font:400 7pt/1.3 var(--font-sans); font-variation-settings:normal; color:#444; margin-inline:.25em; }
   .letter-body .page-anchor[data-index]::before { content:'[' attr(data-index) ']'; white-space:nowrap; }
-  .letter-body .hand[data-hand-name]::before { content:attr(data-hand-name); float:right; clear:right; width:21mm; margin:0 calc(-25mm - var(--print-tab-hand-shift,0%)) 1mm calc(4mm + var(--print-tab-hand-shift,0%)); font:400 7pt/1.25 var(--font-sans); color:#444; text-align:left; overflow-wrap:anywhere; }
+  .letter-body :is(.hand, .hand-base-start)[data-hand-name]::before { content:attr(data-hand-name); float:right; clear:right; width:21mm; margin:0 calc(-25mm - var(--print-tab-hand-shift,0%)) 1mm calc(4mm + var(--print-tab-hand-shift,0%)); font:400 7pt/1.25 var(--font-sans); color:#444; text-align:left; overflow-wrap:anywhere; }
   .marginalia, html.js .reading-layout .marginalia { position:static; height:auto !important; margin:6mm 0 0; padding:0; opacity:1 !important; visibility:visible !important; }
   .marginalia:not(:has(.margin-note)) { display:none; }
   .marginalia .marginal-item { position:static; margin:0 0 4mm; transform:none; }

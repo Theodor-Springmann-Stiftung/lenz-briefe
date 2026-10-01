@@ -69,3 +69,9 @@ test('repeated tags keep one font and excess writers cannot silently share a fon
   assert.equal(handFonts(['3', '3'], new Set()).size, 1);
   assert.throws(() => handFonts(['3', '4', '5'], new Set()), /another distinct/);
 });
+
+test('multiple senders are included even when an author has no explicit hand tag', () => {
+  assert.deepEqual(handKeyRefs([], new Set(['10', '1'])), ['10', '1']);
+  assert.deepEqual(handKeyRefs(['87'], new Set(['10', '1'])), ['10', '1', '87']);
+  assert.deepEqual(handKeyRefs(['1'], new Set(['1'])), ['1']);
+});

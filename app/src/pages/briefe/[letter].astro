@@ -49,7 +49,11 @@ const handRefs = handKeyRefs(letter.handRefs, senderRefs, letter.handOrder);
 const hands = Object.fromEntries(
   handRefs.map((ref) => [ref, catalog.people[ref]?.name || `Unbekannte Hand (${ref})`]),
 );
-const preparedText = prepareHandControls(text, hands, { anchors: true, labelStarts: true });
+const preparedText = prepareHandControls(text, hands, {
+  anchors: true,
+  labelStarts: true,
+  baseRef: handRefs.length > 1 ? senderRefs.values().next().value : undefined,
+});
 const textParts = preparedText.html.split(
   /<div class="sidenote-slot" data-sidenote-id="([^"]+)"><\/div>/,
 );

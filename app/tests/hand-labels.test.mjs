@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { parseFragment } from 'parse5';
-import { labelHandStarts } from '../src/lib/hand-labels.mjs';
+import { labelHandStarts, prepareHandControls } from '../src/lib/hand-labels.mjs';
 
 function labels(html) {
   const result = [];
@@ -98,4 +98,72 @@ test('note annotations collect groups without changing note HTML or collapsing l
       ['1', 'A "B" & <C>'],
     ],
   );
+});
+
+test('base passages before and after another hand receive their own labels without changing text', () => {
+  const source = '<div>  Before <em>continued</em>' +
+    '<span class="hand" data-ref="2" data-origin="a">Other writer</span> After</div>' +
+    '<div>Still the base writer</div>';
+  const options = { anchors: true, labelStarts: true, baseRef: '1' };
+  const result = prepareHandControls(source, { 1: 'Lenz', 2: 'Goethe' }, options);
+  assert.deepEqual(result.labels, [
+    { ref: '1', name: 'Lenz', anchor: 'hand-base-1' },
+    { ref: '2', name: 'Goethe', anchor: 'hand-1' },
+    { ref: '1', name: 'Lenz', anchor: 'hand-base-2' },
+  ]);
+  assert.equal(result.html
+    .replace(/<span class="hand-base-start"[^>]*><\/span>/g, '')
+    .replace(/ id="hand-1"| data-hand-name="[^"]*"/g, ''), source);
+  assert.deepEqual(prepareHandControls(result.html, { 1: 'Lenz', 2: 'Goethe' }, options), result);
+});
+
+test('whitespace, page markers and editorial notes do not start a base passage', () => {
+  const source = '<span class="hand" data-ref="2" data-origin="a">Other</span>' +
+    ' \n<div> &nbsp; </div><span class="page-anchor" id="page-2"></span>' +
+    '<span class="note">Editorial text</span>' +
+    '<div class="sidenote-slot" data-sidenote-id="note-1"></div>' +
+    '<span class="hand" data-ref="2" data-origin="a">Continued</span> \n';
+  const result = prepareHandControls(source, { 1: 'Lenz', 2: 'Goethe' },
+    { anchors: true, labelStarts: true, baseRef: '1' });
+  assert.deepEqual(result.labels.map(({ ref }) => ref), ['2']);
+  assert.ok(!result.html.includes('hand-base-start'));
+});
+
+test('an explicitly tagged base hand continues into untagged text without a duplicate label', () => {
+  const source = '<span class="hand" data-ref="1" data-origin="a">Base</span> continued' +
+    '<span class="hand" data-ref="2" data-origin="b">Other</span><em>Base resumes</em>';
+  const result = prepareHandControls(source, { 1: 'Lenz', 2: 'Goethe' },
+    { anchors: true, labelStarts: true, baseRef: '1' });
+  assert.deepEqual(result.labels.map(({ ref, anchor }) => [ref, anchor]),
+    [['1', 'hand-1'], ['2', 'hand-2'], ['1', 'hand-base-1']]);
+});
+
+test('implicit labels are opt-in and use the supplied base author rather than assuming Lenz', () => {
+  const source = '<div>Base text<span class="hand" data-ref="1">Lenz</span>Base again</div>';
+  assert.deepEqual(prepareHandControls(source, { 8: 'Base', 1: 'Lenz' }).labels.map(({ ref }) => ref), ['1']);
+  const result = prepareHandControls(source, { 8: 'Base', 1: 'Lenz' }, { anchors: true, baseRef: '8' });
+  assert.deepEqual(result.labels.map(({ ref }) => ref), ['8', '1', '8']);
+});
+
+test('letter 279: pencil writing labels Lenz, the base author Lavater, and the unknown hand', () => {
+  const source = '<div><span class="pe"><span class="hand" data-ref="1" data-origin="a">Hn Pfr. Lavater</span></span></div>' +
+    '<div><span class="pe"><span class="hand" data-ref="1" data-origin="a">Warum nicht bey uns?</span></span></div>' +
+    '<div><span class="pe">Ich suche Poeten für morgenden Spaß,</span></div>' +
+    '<div><span class="pe">Drum wandelt mein Auge von Nase zu Nas’</span></div>' +
+    '<div><span class="hand" data-ref="87" data-origin="b">Hn: Wegmeister Tobler in Zürich.</span></div>';
+  const names = { 1: 'Lenz', 10: 'Lavater', 87: 'Unbekannt' };
+  const options = { anchors: true, labelStarts: true, baseRef: '10' };
+  const result = prepareHandControls(source, names, options);
+  assert.deepEqual(result.labels, [
+    { ref: '1', name: 'Lenz', anchor: 'hand-1' },
+    { ref: '10', name: 'Lavater', anchor: 'hand-base-1' },
+    { ref: '87', name: 'Unbekannt', anchor: 'hand-2' },
+  ]);
+  assert.deepEqual(prepareHandControls(result.html, names, options), result);
+});
+
+test('explicit hands are collected even inside editorial wrappers', () => {
+  const source = '<span class="note">Annotation <span class="hand" data-ref="2">Written text</span></span>';
+  assert.deepEqual(prepareHandControls(source, { 1: 'Base', 2: 'Other' },
+    { anchors: true, labelStarts: true, baseRef: '1' }).labels.map(({ ref }) => ref), ['2']);
 });

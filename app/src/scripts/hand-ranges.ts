@@ -17,7 +17,7 @@ export function implicitHandGroups(container: HTMLElement): Range[][] {
   function visit(node: Node) {
     if (
       node instanceof Element &&
-      node.matches('.hand, .note, .pe, .hand-range-background, .inpos-note')
+      node.matches('.hand, .note, .hand-range-background, .inpos-note')
     ) {
       flush();
       return;

@@ -371,7 +371,10 @@ their public URLs and checks their targets; image references remain local for As
   information sit directly below the note’s text. On smaller screens they follow
   the text in normal flow.
   Below 1100px, page numbers appear as small gray `[4]` markers at their source
-  positions, and each explicit hand begins with `[Hand: Name]`. The corresponding
+  positions, and each explicit hand begins with `[Hand: Name]`. In letters with
+  multiple hands, untagged passages also receive a base-writer label at their
+  beginning and whenever that writer resumes after another hand. Whitespace and
+  editorial annotations do not start passages. The corresponding
   margin labels are hidden. Astro adds the hand names to the first fragment of
   each source hand; CSS displays both annotations without altering transcription
   text or search offsets. Subsequent fragments of the same hand are not labelled again.

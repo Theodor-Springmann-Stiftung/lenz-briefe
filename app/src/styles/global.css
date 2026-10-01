@@ -497,9 +497,9 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .detail-header-group { margin-top:1.5rem; margin-bottom:2rem; }
   .reading-layout .page-margin, .marginalia .hand-label, .marginalia:not(:has(.margin-note)) { display:none; }
   .letter-body .page-anchor[data-index]::before,
-  .letter-body .hand[data-hand-name]::before { font:400 .75rem/1.4 var(--font-sans); font-variation-settings:normal; color:var(--color-muted); margin-inline:.25em; }
+  .letter-body :is(.hand, .hand-base-start)[data-hand-name]::before { font:400 .75rem/1.4 var(--font-sans); font-variation-settings:normal; color:var(--color-muted); margin-inline:.25em; }
   .letter-body .page-anchor[data-index]::before { content:'[' attr(data-index) ']'; white-space:nowrap; }
-  .letter-body .hand[data-hand-name]::before { content:'[Hand: ' attr(data-hand-name) ']'; }
+  .letter-body :is(.hand, .hand-base-start)[data-hand-name]::before { content:'[Hand: ' attr(data-hand-name) ']'; }
 }
 /* The containing line supplies the leading, including when aq fills every
    wrapped line of a paragraph. Larger glyphs must not enlarge that leading. */

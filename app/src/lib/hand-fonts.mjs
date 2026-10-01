@@ -4,9 +4,8 @@
  * @param {string[]} [documentOrder]
  */
 export function handKeyRefs(handRefs, senderRefs, documentOrder = []) {
-  const baseRef = senderRefs.values().next().value;
-  const refs = new Set([...(baseRef ? [baseRef] : []), ...handRefs]);
-  return handRefs.length
+  const refs = new Set([...senderRefs, ...handRefs]);
+  return handRefs.length || senderRefs.size > 1
     ? [...new Set([...documentOrder.filter((ref) => refs.has(ref)), ...refs])]
     : [];
 }
