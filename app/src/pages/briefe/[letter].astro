@@ -27,6 +27,7 @@ const inPositionNotes = new Map(
   sidenotes.filter((note) => note.type === 'inpos').map((note) => [note.id, note]),
 );
 const traditionLinks = traditions.filter((item) => item.type === 'app' && item.id && item.name);
+const textLoss = traditions.find((item) => item.type === 'app' && item.name === 'Textverlust');
 const orderedSidenotes = sidenotes
   .filter((note) => note.type !== 'inpos')
   .sort(
@@ -185,6 +186,11 @@ const sectionLinks = [
           </div>
         ))}
       </aside>
+      {textLoss && (
+        <div class="text-loss-margin" id="text-loss-reason" data-text-loss-reason hidden>
+          <div set:html={textLoss.html.replace(/\s+id="[^"]*"/g, '')} />
+        </div>
+      )}
     </div>
     {unplaced.length > 0 && (
       <section class="unplaced-notes" aria-label="Weitere Randnotizen">
@@ -203,7 +209,7 @@ const sectionLinks = [
       {traditions.length ? (
         traditions.map((item) => (
           <Fragment>
-            <div class="apparatus-entry" id={item.id}>
+            <div class="apparatus-entry" id={item.id} data-text-loss-footer={item === textLoss || undefined}>
               {item.type === 'app' && <h2>{item.name}</h2>}
               <div class="edition-text apparatus-text apparatus-xml-text" set:html={item.html} />
             </div>
@@ -244,6 +250,9 @@ const sectionLinks = [
   </script>
   <script>
     import '../../scripts/note-connections';
+  </script>
+  <script>
+    import '../../scripts/text-loss';
   </script>
   <script>
     import '../../scripts/print-letter';

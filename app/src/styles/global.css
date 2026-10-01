@@ -517,6 +517,11 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 .edition-text .note::before { content:'['; }
 .edition-text .note::after { content:']'; }
 .edition-text .tl::before { content:'\2060◌\2060'; }
+.edition-text .text-loss-active .tl::before { font-weight:800; text-shadow:.025em 0 currentColor, -.025em 0 currentColor; }
+.text-loss-margin { position:absolute; z-index:12; font-family:var(--font-sans); font-size:.85rem; line-height:1.45; }
+.text-loss-brace { position:absolute; z-index:11; width:16px; color:var(--color-ink); pointer-events:none; }
+.text-loss-brace > svg { display:block; width:100%; height:100%; fill:none; stroke:currentColor; stroke-width:1.15; stroke-linecap:round; stroke-linejoin:round; }
+@media print { .text-loss-margin, .text-loss-brace { display:none !important; } .edition-text .text-loss-active .tl::before { font-weight:inherit; text-shadow:none; } }
 .edition-text strong { @apply font-bold; }
 .edition-text em { @apply italic; }
 .edition-text .large { font-size:1.25em; line-height:0; }
