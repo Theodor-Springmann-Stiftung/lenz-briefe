@@ -426,6 +426,7 @@
 			<appDef index="9" name="Anhänge" category="Anhänge" />
 			<appDef index="10" name="Entwürfe" category="Entwürfe" />
 			<appDef index="11" name="Übersetzung" category="Übersetzung" />
+			<appDef index="12" name="Textverlust" category="Überlieferung &amp; Textkritik" />
 		</appDefs>
 		<yearGroups>
 			<yearGroup fromYear="1756" toYear="1770" label="Livland und Königsberg" />

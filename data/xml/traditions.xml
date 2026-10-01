@@ -597,7 +597,10 @@
 
 		<letterTradition letter="91">
 			<app ref="4">
-				Düsseldorf, Goethe-Museum, NW 992/1967. Textverlust durch Ausriss. Roter Siegelrest.
+				Düsseldorf, Goethe-Museum, NW 992/1967. Roter Siegelrest.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -609,7 +612,10 @@
 
 		<letterTradition letter="93">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 14. Textverlust durch Ausriss. Handschriftlicher Vermerk „6fl.“, „No 13“, „vie lt.“. Kalkulation in Bleistift. Rotes Siegel.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 14. Handschriftlicher Vermerk „6fl.“, „No 13“, „vie lt.“. Kalkulation in Bleistift. Rotes Siegel.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -621,7 +627,10 @@
 
 		<letterTradition letter="95">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 25. Textverlust durch Ausriss.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 25.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -646,13 +655,19 @@
 
 		<letterTradition letter="99">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Krakau, Lenziana 5, Nr. 5. Textverlust durch Ausriss. Auf dem Umschlag handschriftlicher Vermerk „9“, „Francfort“; Stempel: „DEKEHL“, rotes Siegel.
+				Kraków, Biblioteka Jagiellońska, Krakau, Lenziana 5, Nr. 5. Auf dem Umschlag handschriftlicher Vermerk „9“, „Francfort“; Stempel: „DEKEHL“, rotes Siegel.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="100">
 			<app ref="4">
-				Düsseldorf, Goethe-Museum, 0. Textverlust durch Ausriss. Auf dem Umschlag unentzifferter handschriftlicher Vermerk; Stempel: „DEKEHL“, rotes Siegel.
+				Düsseldorf, Goethe-Museum, 0. Auf dem Umschlag unentzifferter handschriftlicher Vermerk; Stempel: „DEKEHL“, rotes Siegel.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -664,7 +679,10 @@
 
 		<letterTradition letter="102">
 			<app ref="4">
-				Zürich, Zentralbibliothek, RP 20, Nr. 7. Textverlust durch Ausriss; rotes Siegel. Die beigelegte „Laienepistel“ von Schlosser hatte Lenz am 2. Januar 1776 in der Straßburger Deutschen Gesellschaft vorgelesen.
+				Zürich, Zentralbibliothek, RP 20, Nr. 7. Rotes Siegel. Die beigelegte „Laienepistel“ von Schlosser hatte Lenz am 2. Januar 1776 in der Straßburger Deutschen Gesellschaft vorgelesen.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -707,6 +725,9 @@
 		<letterTradition letter="109">
 			<app ref="4">
 				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 6. Auf dem Umschlag handschriftlicher Vermerk „3 Kr“, unentzifferter Vermerk; Stempel: „DEKEHL“, rotes Siegel.
+			</app>
+			<app ref="12">
+				?
 			</app>
 		</letterTradition>
 
@@ -786,7 +807,10 @@
 
 		<letterTradition letter="122">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 21. Textverlust durch Ausriss. Auf dem Umschlag handschriftlicher Vermerk „3“, „6“ und „frey Basel“; Stempel: „BASLE“, rotes Siegel.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 21. Auf dem Umschlag handschriftlicher Vermerk „3“, „6“ und „frey Basel“; Stempel: „BASLE“, rotes Siegel.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -838,7 +862,10 @@
 
 		<letterTradition letter="130">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 9. Textverlust durch Ausriss. Handschriftlicher Vermerk auf dem Umschlag „St“; unentzifferter Vermerk; Stempel „DEKEHL“, rotes Siegel.
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 1, Nr. 9. Handschriftlicher Vermerk auf dem Umschlag „St“; unentzifferter Vermerk; Stempel „DEKEHL“, rotes Siegel.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -856,14 +883,20 @@
 
 		<letterTradition letter="133">
 			<app ref="4">
-				Jugenheim, Privatbesitz. Handschriftlicher Vermerk auf dem Umschlag „Plouv“; rotes Siegel. Textverlust durch Ausriss.
+				Jugenheim, Privatbesitz. Handschriftlicher Vermerk auf dem Umschlag „Plouv“; rotes Siegel.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="134">
 			<app ref="4">
 				Berlin, Archiv der Berlin-Brandenburgischen Akademie der Wissenschaft, Slg. Weinhold, Nr.
-				792. Textverlust durch Ausriss. Handschriftlicher Vermerk auf dem Umschlag „St“; „üFürth“, „4“, unentzifferter Vermerk; Stempel „DEKEHL“, rotes Siegel.
+				792. Handschriftlicher Vermerk auf dem Umschlag „St“; „üFürth“, „4“, unentzifferter Vermerk; Stempel „DEKEHL“, rotes Siegel.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -907,7 +940,10 @@
 
 		<letterTradition letter="141">
 			<app ref="4">
-				Latvijas Akadēmiskā Bibliotekā, Riga, Ms 1113, F. 25, V. 32, Nr. 28. Textverlust durch Abschnitt.
+				Latvijas Akadēmiskā Bibliotekā, Riga, Ms 1113, F. 25, V. 32, Nr. 28.
+			</app>
+			<app ref="12">
+				Textverlust durch Abschnitt.
 			</app>
 		</letterTradition>
 
@@ -1022,7 +1058,10 @@
 
 		<letterTradition letter="156">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 5. Textverlust durch Ausschnitt. Handschriftlicher Vermerk auf dem Umschlag „fr.“; rotes Siegel. 
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 5. Handschriftlicher Vermerk auf dem Umschlag „fr.“; rotes Siegel.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausschnitt.
 			</app>
 		</letterTradition>
 
@@ -1034,7 +1073,10 @@
 
 		<letterTradition letter="158">
 			<app ref="4">
-				Zürich, Zentralbibliothek, RP 20, Nr. 12. Textverlust durch Ausriss. Roter Siegelrest.
+				Zürich, Zentralbibliothek, RP 20, Nr. 12. Roter Siegelrest.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -1078,6 +1120,9 @@
 		<letterTradition letter="165">
 			<app ref="4">
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 16. Es handelt sich um den ersten von drei Entwürfen eines öffentlichen Briefs. Rote Wachsflecken verso.
+			</app>
+			<app ref="12">
+				?
 			</app>
 		</letterTradition>
 
@@ -1269,7 +1314,10 @@
 
 		<letterTradition letter="188">
 			<app ref="4">
-				Zürich, Zentralbibliothek, RP 20, Nr. 14. Rotes Siegel. Textverlust durch Ausriss.
+				Zürich, Zentralbibliothek, RP 20, Nr. 14. Rotes Siegel.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -1317,7 +1365,10 @@
 
 		<letterTradition letter="195">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 9. Textverlust durch Ausschnitt. Handschriftlicher Vermerk auf dem Umschlag „fr. Braunschweig.“; schwarzer Siegelrest. 
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 9. Handschriftlicher Vermerk auf dem Umschlag „fr. Braunschweig.“; schwarzer Siegelrest.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausschnitt.
 			</app>
 		</letterTradition>
 
@@ -1329,7 +1380,10 @@
 
 		<letterTradition letter="197">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 33; Entwurf. Textverlust durch Ausriss; „tout ou rien.“ eingekreist.
+				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 33; Entwurf. „tout ou rien.“ eingekreist.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -1344,7 +1398,10 @@
 			<app ref="4">
 				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 36; Anstreichungen mit Bleistift von
 				Philipp Seidel, vgl.
-				Freye/Stammler, Band 2, S. 257. Textverlust durch Ausriss. Roter Siegelrest.
+				Freye/Stammler, Band 2, S. 257. Roter Siegelrest.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -1519,7 +1576,10 @@
 
 		<letterTradition letter="213">
 			<app ref="4">
-				Krakau, Lenziana 3, Nr. 6, Catharina von Siena, 2. Bearbeitung, Bl. 4. Entwurf. Textverlust durch Abriss.
+				Krakau, Lenziana 3, Nr. 6, Catharina von Siena, 2. Bearbeitung, Bl. 4. Entwurf.
+			</app>
+			<app ref="12">
+				Textverlust durch Abriss.
 			</app>
 		</letterTradition>
 
@@ -1539,13 +1599,19 @@
 
 		<letterTradition letter="216">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 51. Textverlust durch Ausriss. Beigefügtes Billet, wohl von König, nicht ermittelt.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 51. Beigefügtes Billet, wohl von König, nicht ermittelt.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
 		<letterTradition letter="217">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 17. Textverlust durch Ausriss. Beigelegter Brief an Lindau nicht ermittelt.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 17. Beigelegter Brief an Lindau nicht ermittelt.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -1612,7 +1678,10 @@
 
 		<letterTradition letter="228">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 46. Textverlust durch Abschnitt der Hälfte des Blattes. Rotes Siegel.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 46. Rotes Siegel.
+			</app>
+			<app ref="12">
+				Textverlust durch Abschnitt der Hälfte des Blattes.
 			</app>
 		</letterTradition>
 
@@ -1706,10 +1775,12 @@
 
 		<letterTradition letter="233">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 11; Bl. 2. Ausriß mit
-				Textverlust; zu den
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 11; Bl. 2. Zu den
 				Zeichnungen auf S. 4 vgl. Kapitel IV, in: Gregor Babelotzky: „Kann Er auch
 				zeichnen?“ Skizzen aus dem Nachlass. Hannover 2021.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -1722,9 +1793,10 @@
 		<letterTradition letter="235">
 			<app ref="4">
 				Schmidt, Erich: Lenziana. In: Sitzungsberichte der Königlich Preußischen Akademie der
-				Wissenschaften zu Berlin, Jg. 1901, 41. Stück: Gesammtsitzung, 24. October, S. 1007f.; laut
-				Freye/Stammler, Band 2, S. 263, nach
-				fehlerhafter Kopie.
+				Wissenschaften zu Berlin, Jg. 1901, 41. Stück: Gesammtsitzung, 24. October, S. 1007f.
+			</app>
+			<app ref="12">
+				Textverlust lt. Freye/Stammler wg. fehlerhafter Kopie.
 			</app>
 		</letterTradition>
 
@@ -1748,7 +1820,10 @@
 
 		<letterTradition letter="239">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 17. Textverlust durch Ausriss. Herder erhält durch Kaufmann den Brief von Röderer an Lenz vom 8. August 1776.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 17. Herder erhält durch Kaufmann den Brief von Röderer an Lenz vom 8. August 1776.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -1766,7 +1841,10 @@
 
 		<letterTradition letter="242">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 52. Textverlust durch Abschnitt. Beigelegter Brief nicht ermittelt.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 52. Beigelegter Brief nicht ermittelt.
+			</app>
+			<app ref="12">
+				Textverlust durch Abschnitt.
 			</app>
 		</letterTradition>
 
@@ -1941,7 +2019,10 @@
 
 		<letterTradition letter="262">
 			<app ref="4">
-				Weimar, Goethe- und Schiller-Archiv, GSA 44/69, Bl. 18–19. Textverlust durch Ausriss.
+				Weimar, Goethe- und Schiller-Archiv, GSA 44/69, Bl. 18–19.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -1966,7 +2047,10 @@
 
 		<letterTradition letter="266">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 48; Textverlust durch Ausriss. Handschriftlicher Vermerk „11“, „17“; rotes Siegel.
+				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 32, Nr. 48. Handschriftlicher Vermerk „11“, „17“; rotes Siegel.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -2082,7 +2166,10 @@
 
 		<letterTradition letter="275">
 			<app ref="4">
-				Riga, Latvijas Akadēmiskā Bibliotekā, .Ms 1113, F. 25, V. 32, Nr. 38. Textverlust durch Ausriss. Handschriftliche Vermerke „Francko“ und „4“; rotes Siegel.
+				Riga, Latvijas Akadēmiskā Bibliotekā, .Ms 1113, F. 25, V. 32, Nr. 38. Handschriftliche Vermerke „Francko“ und „4“; rotes Siegel.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -2175,7 +2262,10 @@
 
 		<letterTradition letter="290">
 			<app ref="4">
-				Zürich, Zentralbibliothek, Ms. M 1.183, Nr. 3. Textverlust durch Ausriss.
+				Zürich, Zentralbibliothek, Ms. M 1.183, Nr. 3.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -2286,6 +2376,9 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 			<app ref="4">
 				Zürich, Zentralbibliothek, FA Hirzel 232, Nr. 186.
 			</app>
+			<app ref="12">
+				?
+			</app>
 		</letterTradition>
 
 		<letterTradition letter="308">
@@ -2331,6 +2424,9 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 			<app ref="4">
 				Basel, Staatsarchiv, PA 212 F 11, 27, 10, Nr. 16. Roter Siegelrest.
 			</app>
+			<app ref="12">
+				?
+			</app>
 		</letterTradition>
 
 		<letterTradition letter="315">
@@ -2371,7 +2467,10 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 
 		<letterTradition letter="321">
 			<app ref="4">
-				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 2. Textverlust durch Ausriss.
+				Kraków, Biblioteka Jagiellońska, Lenziana, Sammlung Autographa 2.
+			</app>
+			<app ref="12">
+				Textverlust durch Ausriss.
 			</app>
 		</letterTradition>
 
@@ -2589,6 +2688,9 @@ von Lenz an Gertrud Sarasin und Jakob Sarasin in Basel.
 			<app ref="4">
 				Riga, Latvijas Akadēmiskā Bibliotekā, Ms. 1113, F. 25, V. 31, Nr. 25; rotes Siegel. Zum Vermerk bei der Adresse „unter gütigem Einschluß“ vgl. Jakob Michael Reinhold Lenz im Urteil dreier Jahrhunderte. Texte der Rezeption von Werk und Persönlichkeit. 18.–20. Jahrhundert. Gesammelt und hrsg. von Peter Müller unter Mitarbeit von Jürgen Stötzer, 4 Bde. Bern u. a.: Lang 1995–2005, Band 4, S. 290: Der Brief ist begleitet von einem Schreiben von Johann Michael Jerzembski: „Ich wünsche aufrichtigst, daß derselbe Ew. Hochwürden von seiner fühlbaren kindlichen Ehrfurcht überzeugen, und eine väterliche Zuneigung ja zur Unterstützung erwecken möge. Er ist es werth, ja um so mehr werth, weil Er auch bey seinem kränklichen Zustand, aus allen Kräften sich bewährt in der Lage, darinnen er gesetzet ist, im stillen und eingezogenen Leben nutzbar zu werden.“
 			</app>
+			<app ref="12">
+				?
+			</app>
 		</letterTradition>
 		
 		<letterTradition letter="355">
@@ -2791,6 +2893,9 @@ Antrag an meinen Bruder oder einen meiner Freunde in St. Petersburg, sich
 			<app ref="4">
 				Kraków, Biblioteka Jagiellońska, Lenziana 5, Nr. 45.
 			</app>
+			<app ref="12">
+				?
+			</app>
 		</letterTradition>
 		
 		<letterTradition letter="365">
@@ -2808,6 +2913,9 @@ Antrag an meinen Bruder oder einen meiner Freunde in St. Petersburg, sich
 		<letterTradition letter="367">
 			<app ref="4">
 				Kraków, Biblioteka Jagiellońska, Lenziana 1, II, Nr. 5.
+			</app>
+			<app ref="12">
+				?
 			</app>
 		</letterTradition>
 		
