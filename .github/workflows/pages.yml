@@ -16,28 +16,29 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  changes:
+    name: Detect site changes
+    runs-on: ubuntu-24.04
+    outputs:
+      site: ${{ steps.changes.outputs.site }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Check published inputs
+        id: changes
+        run: node app/scripts/deployment-changes.mjs
+
   build:
     name: Validate XML and build site
+    needs: changes
+    if: needs.changes.outputs.site == 'true'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
-
-      - name: Set up Python and uv
-        uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
-        with:
-          python-version: '3.13'
-          enable-cache: true
-          cache-dependency-glob: scripts/transform/python/uv.lock
-
-      - name: Install locked transformation dependencies
-        run: uv sync --project scripts/transform/python --locked
-
-      - name: Validate all XML documents against their XSDs
-        run: uv run --project scripts/transform/python --no-sync python -m transform_python.validate_schemas
-
-      - name: Test the complete transformation suite
-        working-directory: scripts/transform/python
-        run: uv run --no-sync python -m unittest discover -p 'test_*.py'
 
       - name: Set up Node.js
         uses: actions/setup-node@v7
@@ -46,8 +47,55 @@ jobs:
           cache: npm
           cache-dependency-path: app/package-lock.json
 
+      # Exact matches only: XML output cannot reuse results from different inputs.
+      # GND summaries are rebuilt separately on every site build.
+      - name: Restore and save XML export
+        id: xml-cache
+        uses: actions/cache@v5
+        with:
+          path: |
+            app/generated/catalog.json
+            app/generated/search.json
+            app/generated/status.json
+            app/generated/letters
+          key: xml-export-v1-${{ runner.os }}-${{ runner.arch }}-py3.13-${{ hashFiles('data/xml/**', 'data/xsd/**', 'data/xslt/**', 'scripts/transform/python/src/**', '!scripts/transform/python/src/**/__pycache__/**', 'scripts/transform/python/pyproject.toml', 'scripts/transform/python/uv.lock', 'scripts/transform/python/test_*.py', 'scripts/transform/python/fixtures/**', 'app/scripts/export.mjs') }}
+
+      - name: Check restored XML export
+        id: xml-cache-ready
+        if: steps.xml-cache.outputs.cache-hit == 'true'
+        run: node app/scripts/export.mjs --check-cache
+
+      - name: Set up Python and uv
+        if: steps.xml-cache-ready.outputs.usable != 'true'
+        uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          python-version: '3.13'
+          enable-cache: true
+          cache-dependency-glob: scripts/transform/python/uv.lock
+
+      - name: Install locked transformation dependencies
+        if: steps.xml-cache-ready.outputs.usable != 'true'
+        run: uv sync --project scripts/transform/python --locked
+
+      - name: Validate all XML documents against their XSDs
+        if: steps.xml-cache-ready.outputs.usable != 'true'
+        run: uv run --project scripts/transform/python --no-sync python -m transform_python.validate_schemas
+
+      - name: Test the complete transformation suite
+        if: steps.xml-cache-ready.outputs.usable != 'true'
+        working-directory: scripts/transform/python
+        run: uv run --no-sync python -m unittest discover -p 'test_*.py'
+
       - name: Install locked site dependencies
         run: npm --prefix app ci
+
+      # Restore after npm ci, which replaces node_modules.
+      - name: Restore Astro asset cache
+        uses: actions/cache@v5
+        with:
+          path: app/node_modules/.astro
+          key: astro-v1-${{ runner.os }}-${{ runner.arch }}-node24-${{ hashFiles('app/package-lock.json', 'app/astro.config.mjs') }}-${{ github.sha }}
+          restore-keys: astro-v1-${{ runner.os }}-${{ runner.arch }}-node24-${{ hashFiles('app/package-lock.json', 'app/astro.config.mjs') }}-
 
       - name: Test site behavior
         timeout-minutes: 2
@@ -63,10 +111,11 @@ jobs:
             gnd-v2-
             gnd-v1-
 
-      # The build script runs Python/Saxon XSLT export, Astro check, then Astro build.
+      # The export runner reuses XML on cache hits, then rebuilds GND summaries and the site.
       - name: Transform XML and build static Astro pages
         id: site-build
         env:
+          XML_EXPORT_CACHE_HIT: ${{ steps.xml-cache-ready.outputs.usable }}
           # Rebuild summaries every time; refresh raw records only for a new XML hash.
           GND_CACHE_MODE: ${{ steps.gnd-cache.outputs.cache-hit == 'true' && 'reuse' || 'refresh' }}
         run: npm --prefix app run build

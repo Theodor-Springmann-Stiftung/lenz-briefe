@@ -50,6 +50,26 @@ needed. Builds regenerate `app/generated/`; both directories are ignored by Git.
 The export script uses the workspace's Python virtual environment when present,
 otherwise `uv run`. An unsuccessful export stops the site build.
 
+GitHub Actions reuses the XML export when XML, XSD, XSLT, transformation code,
+Python dependencies and the export runner are unchanged. The key includes the
+runner platform and Python version; only an exact match is reused. GND summaries
+are excluded from this cache and rebuilt each time. Cached `status.json` retains
+the original XML export's commit and generation time; the site itself is built
+again with its current build date. Missing, malformed or failed export metadata
+causes a fresh transformation. Local exports always transform XML normally.
+On a usable cache hit, Actions skips Python/uv setup, dependency installation,
+XML validation, the Python test suite and XML transformation. Changes to Python
+tests or fixtures also invalidate the export cache so those checks run again.
+
+Actions also restores Astro's asset cache after installing npm dependencies,
+using compatible dependency/configuration keys, and saves it after a successful
+build. The entire site and offline manifest are regenerated for published changes.
+Changes limited to `docs/` and the unpublished README files at the repository
+root, `app/`, `scripts/transform/python/`, `seiten/` and `seiten/components/`
+skip building and deployment. Workflow checks still appear for those commits.
+Changes to `seiten/` content, `assets/`, `licenses/` (including its README), build
+configuration and unknown paths still build. Manual workflow runs always build.
+
 ### Page titles and external links
 
 Page titles start with `LKB –`: the catalogue uses the edition description,
