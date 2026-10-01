@@ -31,7 +31,17 @@ if (layout && body && reason) {
     const active = hovered || focused;
     const origin = layout!.getBoundingClientRect();
     const bounds = body!.getBoundingClientRect();
-    const rects = active ? [active.getBoundingClientRect()] : [];
+    // The block is the hover target; only lines containing loss markers define
+    // the indicator's extent. Include the leading so one line is one line high.
+    const lineHeight = active ? parseFloat(getComputedStyle(active).lineHeight) : 0;
+    const rects = active ? markers
+      .filter((marker) => marker.closest('.lb-line-block, .lb-tab-prefix, .tab') === active)
+      .flatMap((marker) => [...marker.getClientRects()])
+      .filter((rect) => rect.height > 0)
+      .map((rect) => {
+        const leading = (Math.max(lineHeight || rect.height, rect.height) - rect.height) / 2;
+        return { top: rect.top - leading, bottom: rect.bottom + leading };
+      }) : [];
     const obstacles = obstacleElements().flatMap((element) => [...element.getClientRects()]);
     const x = bounds.left - 12;
     const top = Math.min(...rects.map((rect) => rect.top));
