@@ -77,6 +77,25 @@ async function fixture(t, catalog = { people: { 1: definition(personId) }, place
   };
 }
 
+test('export uses resolved image URLs and preserves them on unchanged-reference cache hits', async (t) => {
+  const f = await fixture(t);
+  const input = 'https://commons.wikimedia.org/wiki/Special:FilePath/Portrait.jpg?width=270';
+  const direct = 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Portrait.jpg/330px-Portrait.jpg';
+  await f.cache({ version: 1, status: 200, checkedAt: DAY, record: { ...person,
+    depiction: [{ thumbnail: input, url: 'https://commons.wikimedia.org/wiki/File:Portrait.jpg',
+      license: [{ id: 'https://creativecommons.org/publicdomain/mark/1.0/', abbr: 'PD' }] }],
+  } });
+  const first = await f.run({ cacheMode: 'reuse', fetchImpl: async (url, options) => {
+    assert.equal(url, input);
+    assert.equal(options.method, 'HEAD');
+    return { ok: true, status: 200, url: direct, headers: new Headers({ 'content-type': 'image/jpeg' }) };
+  } });
+  assert.equal(first.information.people[1].picture.src, direct);
+  assert.equal(first.stats.imageFailed, 0);
+  const second = await f.run({ cacheMode: 'reuse', fetchImpl: () => assert.fail('no GND or image requests on cache hit') });
+  assert.equal(second.information.people[1].picture.src, direct);
+});
+
 test('extracts exact GND URLs; ignores missing IDs and other hosts/paths', () => {
   for (const id of [personId, placeId, '12021363X', '115455998X']) {
     assert.equal(gndId(`http://d-nb.info/gnd/${id}`), id);

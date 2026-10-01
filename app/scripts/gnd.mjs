@@ -3,6 +3,7 @@ import path from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { referenceLinks } from './gnd-links.mjs';
+import { resolveGndImages } from './gnd-images.mjs';
 
 const DAY = 86_400_000;
 const VERSION = 1;
@@ -202,6 +203,11 @@ export async function enrichGnd({
       }
     }
   }
+  const images = await resolveGndImages(information, {
+    cacheFile: path.join(cacheDirectory, 'resolved-images.json'), cacheMode,
+    fetchImpl, now, signal, requestTimeout, logger,
+  });
+  stats.imageFailed = images.failed;
   await writeJson(path.join(output, 'gnd.json'), information);
   logger.info(`[GND] ${ids.length} IDs: ${stats.cached} cached, ${stats.fetched} fetched, ${stats.stale} stale, ${stats.missing} not found, ${stats.failed} unavailable.`);
   return { information, stats };

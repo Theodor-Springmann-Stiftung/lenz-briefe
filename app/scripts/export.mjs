@@ -64,7 +64,7 @@ export async function runExport({
   }
   const { stats } = await enrich({ output: outputDirectory, signal, cacheMode: process.env.GND_CACHE_MODE || 'ttl' });
   if (process.env.GITHUB_OUTPUT) {
-    await appendFile(process.env.GITHUB_OUTPUT, `gnd-cache-complete=${stats.failed === 0 && stats.stale === 0}\n`);
+    await appendFile(process.env.GITHUB_OUTPUT, `gnd-cache-complete=${stats.failed === 0 && stats.stale === 0 && !stats.imageFailed}\n`);
   }
 }
 

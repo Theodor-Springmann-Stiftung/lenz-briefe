@@ -136,6 +136,18 @@ details. A link icon appears over the image on hover or keyboard focus; its tool
 contains the creator and license credits, and it opens the image source. Credits
 also remain available to screen readers. Images load directly
 from their provider when the card is shown; no extra GND API requests are needed.
+During export, Commons image redirects are resolved with HEAD requests, without
+downloading image bodies. The final Wikimedia image URLs are cached in
+`app/.cache/gnd/resolved-images.json`; tracking parameters are removed so browser
+request filters do not have to rewrite the redirected request. This cache follows
+the GND reuse/refresh policy: unchanged references reuse saved URLs, while changed
+references refresh them. Local exports use a 30-day lifetime, or seven days for
+missing images. Requests are paced at least 1.5 seconds apart, with Retry-After
+handling and up to three attempts for HTTP 429/server errors. Image resolution has
+its own four-minute budget. HTTP 404/410 images are omitted; temporary failures retain a saved
+URL or the supplied URL and log a warning. The GitHub cache format is bumped once
+to include the resolved URLs; migrating an old cache for identical references
+reuses its raw GND responses. Incomplete image refreshes are retried next build.
 A failed request or invalid image hides the complete image column and lets the
 text use the full width. Failed image URLs stay hidden for the current page visit.
 These external images are not part of the offline download; if they cannot load

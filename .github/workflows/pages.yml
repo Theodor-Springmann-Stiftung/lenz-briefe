@@ -106,8 +106,9 @@ jobs:
         uses: actions/cache/restore@v5
         with:
           path: app/.cache/gnd
-          key: gnd-v2-${{ hashFiles('data/xml/references.xml') }}
+          key: gnd-v3-${{ hashFiles('data/xml/references.xml') }}
           restore-keys: |
+            gnd-v3-
             gnd-v2-
             gnd-v1-
 
@@ -117,7 +118,7 @@ jobs:
         env:
           XML_EXPORT_CACHE_HIT: ${{ steps.xml-cache-ready.outputs.usable }}
           # Rebuild summaries every time; refresh raw records only for a new XML hash.
-          GND_CACHE_MODE: ${{ steps.gnd-cache.outputs.cache-hit == 'true' && 'reuse' || 'refresh' }}
+          GND_CACHE_MODE: ${{ (steps.gnd-cache.outputs.cache-hit == 'true' || steps.gnd-cache.outputs.cache-matched-key == format('gnd-v2-{0}', hashFiles('data/xml/references.xml'))) && 'reuse' || 'refresh' }}
         run: npm --prefix app run build
 
       # Do not freeze a partial refresh after a temporary API failure.
