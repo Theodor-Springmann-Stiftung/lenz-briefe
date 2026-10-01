@@ -82,10 +82,10 @@ if (reading) {
       const horizontalDirection = target.x >= source.x ? 1 : -1;
       const horizontalDistance = Math.abs(target.x - source.x);
       const minimumBend = 40; // Pixels.
-      const maximumBend = 140;
+      const maximumBend = 190;
       const controlPointOffset = Math.min(
         maximumBend,
-        Math.max(minimumBend, horizontalDistance / 3),
+        Math.max(minimumBend, horizontalDistance * 0.45),
       );
 
       // Start and end at the facing edges of the marker circles.

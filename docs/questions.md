@@ -1,10 +1,13 @@
 # Questions
 
-## Gregor
+## Gregor (besprochen)
 - 281: Leere sidenote? -- Gregor schaut
 - Zitation -- Gregor macht sich Gedanken
 - 367: Sprachenklaviatur? -- Evtl. mit Abbildung
-- CMIF
+
+## Gregor
+- 195: horizontal gespiegelt
+- <letterTradition letter="359">: we need a tag to enclose letter text in trad
 
 ## TODO ME
 - Übersetzung und "Zusatzmaterial" in Serifen
