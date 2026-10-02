@@ -39,7 +39,7 @@
   h1, h2, h3, h4, h5, h6 { break-after:avoid-page; }
   img, svg { max-width:100%; }
 
-  .site-header nav, .navigation-toggle, .letter-toolbar, .reading-toolbar,
+  .site-header nav, .navigation-toggle, .letter-menu-extension, .letter-toolbar, .reading-toolbar,
   .back-to-top, .quick-legend-toggle, .quick-legend, .quick-legend:popover-open,
   .page-toc, .letter-spine, .page-margin, .hand-label, .footer-tools, .footer-legal,
   .filter-toolbar, .search-feedback, .search-more, .search-retry, .selection-print-tools,

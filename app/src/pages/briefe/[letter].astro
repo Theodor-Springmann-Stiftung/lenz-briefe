@@ -85,56 +85,58 @@ const sectionLinks = [
 ---
 
 <Layout wide title={`${titleFor(letter)}, ${letterDateLabel(letter.events)}`}>
+  <div slot="letter-menu" class="letter-toolbar">
+    <div class="letter-context-tools">
+      <CorrespondenceNavigation letter={letter} />
+      <button
+        class="letter-print-button"
+        type="button"
+        data-print-letter
+        aria-label="Druck&hairsp;/&hairsp;PDF"
+        data-tooltip="Druck&hairsp;/&hairsp;PDF"
+        data-tippy-placement="top"
+        data-tippy-trigger="mouseenter focus"
+      >
+        <Icon name="printer" />
+      </button>
+      <span class="letter-print-status" role="status" data-print-status hidden>
+        <span data-print-message></span>
+        <progress class="letter-print-progress" data-print-progress max="100" value="0" aria-label="Druckvorbereitung" hidden></progress>
+      </span>
+    </div>
+    <nav class="letter-navigation" aria-label="Briefnavigation">
+      {previous && (
+        <a
+          href={letterUrl(previous.letter)}
+          rel="prev"
+          aria-label={`Vorheriger Brief: ${previous.letter}`}
+        >
+          <Icon name="arrowLeft" />
+        </a>
+      )}
+      <span class="navigation-position" id="letter-number" data-search-target>
+        LKB
+      </span>
+      {next && (
+        <a
+          href={letterUrl(next.letter)}
+          rel="next"
+          aria-label={`Nächster Brief: ${next.letter}`}
+        >
+          <Icon name="arrowRight" />
+        </a>
+      )}
+    </nav>
+  </div>
   {handStyles && <style is:inline set:html={handStyles} />}
   <div class="letter-content">
     <div class="letter-spine" aria-hidden="true"></div>
     <div class="detail-header-group">
-      <div class="letter-toolbar">
-        <div class="letter-context-tools">
-          <CorrespondenceNavigation letter={letter} />
-          <button
-            class="letter-print-button"
-            type="button"
-            data-print-letter
-            aria-label="Druck&hairsp;/&hairsp;PDF"
-            data-tooltip="Druck&hairsp;/&hairsp;PDF"
-            data-tippy-placement="top"
-            data-tippy-trigger="mouseenter focus"
-          >
-            <Icon name="printer" />
-          </button>
-          <span class="letter-print-status" role="status" data-print-status hidden>
-            <span data-print-message></span>
-            <progress class="letter-print-progress" data-print-progress max="100" value="0" aria-label="Druckvorbereitung" hidden></progress>
-          </span>
-        </div>
-        <nav class="letter-navigation" aria-label="Briefnavigation">
-          {previous && (
-            <a
-              href={letterUrl(previous.letter)}
-              rel="prev"
-              aria-label={`Vorheriger Brief: ${previous.letter}`}
-            >
-              <Icon name="arrowLeft" />
-            </a>
-          )}
-          <span class="navigation-position" id="letter-number" data-search-target>
-            LKB
-          </span>
-          {next && (
-            <a
-              href={letterUrl(next.letter)}
-              rel="next"
-              aria-label={`Nächster Brief: ${next.letter}`}
-            >
-              <Icon name="arrowRight" />
-            </a>
-          )}
-        </nav>
-      </div>
       <div class="detail-header">
         <LetterHeader letter={letter} />
       </div>
+    </div>
+    <div class="letter-reading-panel">
       {sectionLinks.length > 0 && (
         <nav class="reading-toolbar" aria-label="Abschnitte zum Brief">
           <a href="#ueberlieferung">
@@ -143,73 +145,73 @@ const sectionLinks = [
           </a>
         </nav>
       )}
-    </div>
-    <div
-      class="reading-layout"
-      data-reading-layout
-      data-base-hand={senderRefs.values().next().value}
-    >
-      <article class="edition-text letter-body" aria-label={`Text von Brief ${letter.letter}`}>
-        {textParts.map((part, index) => {
-          if (index % 2 === 0) return <Fragment set:html={part} />;
-          const note = inPositionNotes.get(part);
-          if (!note) throw new Error(`Unknown in-position sidenote: ${part}`);
-          return (
-            <div class="inpos-note sidenote-layout">
+      <div
+        class="reading-layout"
+        data-reading-layout
+        data-base-hand={senderRefs.values().next().value}
+      >
+        <article class="edition-text letter-body" aria-label={`Text von Brief ${letter.letter}`}>
+          {textParts.map((part, index) => {
+            if (index % 2 === 0) return <Fragment set:html={part} />;
+            const note = inPositionNotes.get(part);
+            if (!note) throw new Error(`Unknown in-position sidenote: ${part}`);
+            return (
+              <div class="inpos-note sidenote-layout">
+                <Sidenote note={note} hands={hands} />
+              </div>
+            );
+          })}
+        </article>
+        <aside class="page-margin" aria-label="Seitenzahlen">
+          {letter.pages.map(
+            (page, i) =>
+              !(i === 0 && page === '1') && (
+                <div class="marginal-item page-number" data-anchor={`page-${page}`} data-priority="0">
+                  <a href={`#page-${page}`} aria-label={`Seite ${page}`}>
+                    {page}
+                  </a>
+                </div>
+              ),
+          )}
+        </aside>
+        <aside class="marginalia" aria-label="Randnotizen und Hände">
+          {placed.map((note) => (
+            <div
+              class="marginal-item margin-note sidenote-layout"
+              data-anchor={note.anchorId!}
+              data-priority="2"
+            >
               <Sidenote note={note} hands={hands} />
             </div>
-          );
-        })}
-      </article>
-      <aside class="page-margin" aria-label="Seitenzahlen">
-        {letter.pages.map(
-          (page, i) =>
-            !(i === 0 && page === '1') && (
-              <div class="marginal-item page-number" data-anchor={`page-${page}`} data-priority="0">
-                <a href={`#page-${page}`} aria-label={`Seite ${page}`}>
-                  {page}
-                </a>
-              </div>
-            ),
+          ))}
+          {preparedText.labels.map(({ ref, name, anchor }) => (
+            <div class="marginal-item hand-label" data-anchor={anchor} data-priority="1">
+              <button type="button" data-hand-ref={ref}>
+                {name}
+              </button>
+            </div>
+          ))}
+        </aside>
+        {textLoss && (
+          <div class="text-loss-margin" id="text-loss-reason" data-text-loss-reason hidden>
+            <div set:html={textLoss.html.replace(/\s+id="[^"]*"/g, '')} />
+          </div>
         )}
-      </aside>
-      <aside class="marginalia" aria-label="Randnotizen und Hände">
-        {placed.map((note) => (
-          <div
-            class="marginal-item margin-note sidenote-layout"
-            data-anchor={note.anchorId!}
-            data-priority="2"
-          >
-            <Sidenote note={note} hands={hands} />
-          </div>
-        ))}
-        {preparedText.labels.map(({ ref, name, anchor }) => (
-          <div class="marginal-item hand-label" data-anchor={anchor} data-priority="1">
-            <button type="button" data-hand-ref={ref}>
-              {name}
-            </button>
-          </div>
-        ))}
-      </aside>
-      {textLoss && (
-        <div class="text-loss-margin" id="text-loss-reason" data-text-loss-reason hidden>
-          <div set:html={textLoss.html.replace(/\s+id="[^"]*"/g, '')} />
-        </div>
+      </div>
+      {unplaced.length > 0 && (
+        <section class="unplaced-notes" aria-label="Weitere Randnotizen">
+          {unplaced.map((note) => (
+            <div class="unplaced-note sidenote-layout">
+              <Sidenote note={note} hands={hands}>
+                <p class="note-annotation">
+                  Im Text ist keine zugehörige Seitenmarke verzeichnet.
+                </p>
+              </Sidenote>
+            </div>
+          ))}
+        </section>
       )}
     </div>
-    {unplaced.length > 0 && (
-      <section class="unplaced-notes" aria-label="Weitere Randnotizen">
-        {unplaced.map((note) => (
-          <div class="unplaced-note sidenote-layout">
-            <Sidenote note={note} hands={hands}>
-              <p class="note-annotation">
-                Im Text ist keine zugehörige Seitenmarke verzeichnet.
-              </p>
-            </Sidenote>
-          </div>
-        ))}
-      </section>
-    )}
     <section class="apparatus" id="ueberlieferung" aria-label="Überlieferung & Textkritik">
       {traditions.length ? (
         traditions.map((item) => (

@@ -1,10 +1,16 @@
 const header = document.querySelector<HTMLElement>('.site-header');
 if (header) {
-  const updateHeight = () =>
+  const extension = header.querySelector<HTMLElement>('.letter-menu-extension');
+  const updateHeight = () => {
+    document.documentElement.style.setProperty(
+      '--site-header-extension-height',
+      `${extension?.getBoundingClientRect().height ?? 0}px`,
+    );
     document.documentElement.style.setProperty(
       '--site-header-height',
       `${header.getBoundingClientRect().height}px`,
     );
+  };
   new ResizeObserver(updateHeight).observe(header);
   updateHeight();
 

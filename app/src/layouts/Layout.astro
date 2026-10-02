@@ -20,6 +20,7 @@ const {
   description = 'Die Briefe von und an Jacob Michael Reinhold Lenz. Digitale Edition.',
   wide = false,
 } = Astro.props;
+const hasLetterMenu = Astro.slots.has('letter-menu');
 const generatedAt = new Date();
 const generationMonth = new Intl.DateTimeFormat('de-DE', {
   month: 'long',
@@ -51,19 +52,26 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {
     <link rel="apple-touch-icon" href={`${base}icons/apple-touch-icon.png`} sizes="180x180" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a
-          class="wordmark"
-          href={base}
-          aria-label="J. M. R. Lenz – Kritische Briefausgabe – Übersicht"
-        >
-          <span class="wordmark-name"><span class="wordmark-initials">J.&#8239;M.&#8239;R.</span> LENZ</span>
-          <span class="wordmark-divider" aria-hidden="true"></span>
-          <span class="wordmark-caption">KRITISCHE BRIEFAUSGABE</span>
-        </a>
-        <Navigation />
+    <header class:list={['site-header', { 'site-header--letter-menu': hasLetterMenu }]}>
+      <div class="site-header-main">
+        <div class="site-header-inner">
+          <a
+            class="wordmark"
+            href={base}
+            aria-label="J. M. R. Lenz – Kritische Briefausgabe – Übersicht"
+          >
+            <span class="wordmark-name"><span class="wordmark-initials">J.&#8239;M.&#8239;R.</span> LENZ</span>
+            <span class="wordmark-divider" aria-hidden="true"></span>
+            <span class="wordmark-caption">KRITISCHE BRIEFAUSGABE</span>
+          </a>
+          <Navigation />
+        </div>
       </div>
+      {hasLetterMenu && (
+        <div class="letter-menu-extension">
+          <slot name="letter-menu" />
+        </div>
+      )}
     </header>
     <main id="inhalt" class:list={['site-shell', { 'site-shell--wide': wide }]}>
       <slot />
