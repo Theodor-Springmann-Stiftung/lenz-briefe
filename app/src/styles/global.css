@@ -247,7 +247,7 @@
   .metadata-result-card .letter-header mark.search-match { color:inherit; background:#f6dfb6; }
   .letter-header { --header-text-size:1rem; }
   .letter-header--compact { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:.15rem 2rem; }
-  .letter-date { @apply font-serif font-normal italic; font-size:var(--header-text-size); line-height:1.4; margin: .65em 0 .1em; }
+  .letter-date { @apply font-sans font-normal italic; font-size:var(--header-text-size); line-height:1.4; margin: .65em 0 .1em; }
   .letter-header--compact .letter-date { grid-column:1; grid-row:1; margin:0; }
   .letter-date a { display:inline; }
   .source-icons { display:inline-flex; align-items:center; gap:.4em; margin-inline-start:.4em; vertical-align:middle; line-height:1; }
