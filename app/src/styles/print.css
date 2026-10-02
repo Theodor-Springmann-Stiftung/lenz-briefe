@@ -14,7 +14,7 @@
   :root {
     --color-paper:#fff; --color-ink:#000; --color-muted:#444; --color-rule:#aaa;
     --print-content-inset:25mm;
-    --print-letter-text-width:calc((210mm - 21mm - 25mm - var(--print-content-inset)) * .85 * .95 * 1.08);
+    --print-letter-text-width:calc((210mm - 21mm - 25mm - var(--print-content-inset)) * .85 * .95 * 1.08 * 1.05);
     --print-transcription-inset:calc(210mm - 21mm - 25mm - var(--print-letter-text-width));
     --print-hand-gap:4mm;
   }

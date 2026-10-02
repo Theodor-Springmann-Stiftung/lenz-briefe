@@ -197,7 +197,7 @@ stop the complete selection and allow retry; they never produce a partial print.
 
 The print stylesheet uses A4 pages with 24 mm top/bottom, 25 mm right and 21 mm left
 margins, and page numbers where the browser supports CSS page-margin boxes.
-Letter text and margin notes use a 121.22 mm column. Hand names occupy the
+Letter text and margin notes use a 127.28 mm column. Hand names occupy the
 remaining width up to the right page margin, after a 4 mm gap. Apparatus and
 Edition content retain an additional 25 mm right inset. Headers and horizontal rules
 use the wider page area. The rules below the letter metadata and above the footer
@@ -211,6 +211,9 @@ each transcription block with its hand names, aligning their first baselines and
 allowing long text cells to continue across page breaks. Original text alignment,
 inline hand styles and anchors are preserved. Hand changes inside tabular
 passages retain their inline anchors and extend into the same hand column. Margin
+labels for hands sharing a source line combine the last word of each name,
+separated by commas, including writers continuing from a previous line;
+a single writer keeps the full name. Margin
 notes follow the letter directly, with their position descriptions and
 without added page prefixes. The small apparatus text is limited to 80ch.
 In-position notes stay at their source location. Paragraphs and individual margin
@@ -469,7 +472,11 @@ their public URLs and checks their targets; image references remain local for As
   shown after the text and reported in `status.json`; all current notes have matching
   targets. On desktop, page labels remain in the left margin. Hands and notes occupy
   the right margin. Hand labels are placed first and remain aligned with their
-  text lines. Each note then takes the first free vertical gap at or after its
+  text lines. Hands on the same line share one label using the last word of each
+  name, separated by commas. Each name keeps its own text highlighting, and the
+  grouping updates when the layout changes. A single writer keeps the full name.
+  Continuing passages count even without a new hand-start marker on that line.
+  Each note then takes the first free vertical gap at or after its
   source page's beginning that fits its full height, with clearance around labels
   and other notes. Smaller later notes can fill gaps skipped by larger notes.
   Metadata, letter text and apparatus share the same main column.

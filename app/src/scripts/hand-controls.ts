@@ -17,11 +17,13 @@ export function initializeHandControls(layout: HTMLElement) {
       : []),
   ];
   const highlightHand = createHandRangeHighlighter();
+  const bind = (trigger: HTMLElement) => {
+    highlightHand(trigger, () => groupsForHand(trigger.dataset.handRef));
+  };
   document
     .querySelectorAll<HTMLElement>(
       '.hand-label [data-hand-ref], .sidenote-details [data-hand-ref], .hand-key [data-hand-ref]',
     )
-    .forEach((trigger) => {
-      highlightHand(trigger, () => groupsForHand(trigger.dataset.handRef));
-    });
+    .forEach(bind);
+  return bind;
 }
