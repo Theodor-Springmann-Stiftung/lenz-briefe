@@ -47,6 +47,36 @@ class FlowContractTests(unittest.TestCase):
         self.assertEqual(len(pages), 1)
         return pages[0]
 
+    def test_line_first_transform_is_one_block_with_line_attributes(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            for whitespace in ['', ' \n  ']:
+                for line_type in ['break', 'line', 'tilde', 'double-tilde']:
+                    with self.subTest(kind=kind, whitespace=whitespace, type=line_type):
+                        tree = self.render('Before<tr rot="90">' + whitespace +
+                            f'<line tab="3" type="{line_type}"/>First<ul>word</ul><line/>Second</tr>After', kind)
+                        blocks = tree.xpath('.//div[@class="tr"]')
+                        self.assertEqual(len(blocks), 1)
+                        block = blocks[0]
+                        self.assertEqual(block.get('data-rot'), '90')
+                        self.assertEqual(''.join(block.text_content().split()), 'FirstwordSecond')
+                        self.assertEqual(block.xpath('./div[1]/@data-tab'), ['3'])
+                        self.assertEqual(block.xpath('./div[1]/@style'), ['--indent-units: 3'])
+                        rules = block.xpath('.//hr | .//span[contains(@class, "lb-ornament")]')
+                        self.assertEqual(len(rules), 0 if line_type == 'break' else 1)
+                        self.assertFalse(tree.xpath('.//span[@class="tr"]'))
+                        self.assertNotIn('Before', block.text_content())
+                        self.assertNotIn('After', block.text_content())
+
+    def test_block_transform_nested_in_formatting_and_alignment(self):
+        for wrapper in ['ul', 'aq', 'align pos="right"', 'hand ref="1"', 'tr rot="180"']:
+            tag = wrapper.split()[0]
+            with self.subTest(wrapper=wrapper):
+                tree = self.render(f'<{wrapper}>Before<tr rot="270"> \n<line tab="2"/>A<align pos="center">B</align><line/>C</tr>After</{tag}>')
+                block = tree.xpath('.//div[@class="tr"]')[0]
+                self.assertEqual(''.join(block.text_content().split()), 'ABC')
+                self.assertEqual(block.xpath('.//*[@class="align-center"]//text()'), ['B'])
+                self.assertEqual(len(tree.xpath('.//div[@class="tr"]')), 1)
+
     def test_transformed_text_preserves_rotation_and_line_flow(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:
             with self.subTest(kind=kind):

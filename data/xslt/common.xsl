@@ -109,7 +109,7 @@
       then (let $next := $node/following-sibling::node()[not(self::t:page or self::text()[not(normalize-space())])][1],
                 $previous := $node/preceding-sibling::node()[not(self::t:page or self::text()[not(normalize-space())])][1]
             return (if ($next) then lb:node-slot($next) else if ($previous) then lb:node-slot($previous) else (), 'left')[1])
-      else if ($node/self::t:tabs or $node/self::lb:tab)
+      else if ($node/self::t:tabs or $node/self::t:tr or $node/self::lb:tab)
       then 'left'
       else if ($node/self::element())
       then (let $slots := distinct-values(for $child in $node/node() return lb:slots-for-node($child))
@@ -179,7 +179,7 @@
         </xsl:when>
         <!-- A table/cell owns its alignment context. Do not distribute its
              descendants into the surrounding line's regions. -->
-        <xsl:when test="self::t:tabs or self::lb:tab">
+        <xsl:when test="self::t:tabs or self::t:tr or self::lb:tab">
           <xsl:if test="(if ($inherited-slot) then $inherited-slot else 'left') = $slot">
             <xsl:sequence select="." />
           </xsl:if>
@@ -319,7 +319,7 @@
             <xsl:with-param name="current-content" select="($current-content, node())" />
           </xsl:next-iteration>
         </xsl:when>
-        <xsl:when test="$line-type = ('line', 'vspace', 'inpos')">
+        <xsl:when test="$line-type = ('line', 'vspace', 'inpos', 'tr')">
           <xsl:variable name="flushed" select="lb:flush-state($completed, $current-type, $current-tab, $current-content)" />
           <xsl:next-iteration>
             <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, ($flushed?currentContent, node())))" />
@@ -352,12 +352,23 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:for-each-group select="$nodes"
-          group-adjacent="self::t:tabs or self::t:row or self::lb:tab or self::lb:vspace">
+          group-adjacent="self::t:tabs or self::t:row or self::t:tr or self::t:line or self::lb:tab or self::lb:vspace">
           <xsl:choose>
             <xsl:when test="current-grouping-key()">
               <xsl:for-each select="current-group()">
-                <xsl:sequence select="if (self::lb:vspace) then .
-                  else lb:clone-element(., lb:wrap-content($wrapper, node()))" />
+                <xsl:choose>
+                  <xsl:when test="self::t:tr and $wrapper/self::lb:align">
+                    <t:tr>
+                      <xsl:copy-of select="@* except @alignment" />
+                      <xsl:attribute name="alignment" select="if (@alignment) then @alignment else $wrapper/@pos" />
+                      <xsl:sequence select="node()" />
+                    </t:tr>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:sequence select="if (self::lb:vspace) then .
+                      else lb:clone-element(., lb:wrap-content($wrapper, node()))" />
+                  </xsl:otherwise>
+                </xsl:choose>
               </xsl:for-each>
             </xsl:when>
             <xsl:otherwise>
@@ -435,6 +446,16 @@
       </xsl:when>
       <xsl:when test="$node/self::element(lb:sidenote) or $node/self::comment() or $node/self::processing-instruction()">
         <xsl:sequence select="()" />
+      </xsl:when>
+      <!-- A leading line makes the entire transform an independent block.
+           Classify before line normalization removes the original milestone. -->
+      <xsl:when test="$node/self::lb:tr and $node/node()[self::* or self::text()[normalize-space()]][1]/self::lb:line">
+        <xsl:variable name="block" as="element(t:tr)">
+          <t:tr rot="{$node/@rot}">
+            <xsl:sequence select="lb:normalize-lines($node/node()[not(self::text()[not(normalize-space()) and not(preceding-sibling::*)])])" />
+          </t:tr>
+        </xsl:variable>
+        <xsl:sequence select="lb:temp-explicit-line('tr', (), $block)" />
       </xsl:when>
       <xsl:when test="$node/self::element(lb:address)">
         <xsl:sequence select="lb:normalize-lines($node/node())" />
@@ -549,7 +570,7 @@
           data-index="{@index}" data-type="{@type}" data-break="{@break}"></span>
   </xsl:template>
 
-  <xsl:template match="t:line[@type=('vspace', 'inpos')] | t:row[@type=('vspace', 'inpos')]">
+  <xsl:template match="t:line[@type=('vspace', 'inpos', 'tr')] | t:row[@type=('vspace', 'inpos')]">
     <xsl:apply-templates />
   </xsl:template>
 
@@ -566,7 +587,7 @@
     <xsl:param name="nodes" as="node()*" />
     <xsl:sequence select="some $node in $nodes satisfies
       (if ($node/self::lb:align) then true()
-       else if ($node/self::t:tabs or $node/self::lb:tab) then false()
+       else if ($node/self::t:tabs or $node/self::t:tr or $node/self::lb:tab) then false()
        else lb:has-align($node/node()))" />
   </xsl:function>
 
@@ -690,7 +711,14 @@
     </span>
   </xsl:template>
 
-  <!-- Preserve source rotation metadata; visual rotation is a separate presentation concern. -->
+  <xsl:template match="t:tr">
+    <div class="tr" data-rot="{@rot}">
+      <xsl:if test="@alignment"><xsl:attribute name="style" select="concat('text-align: ', @alignment)" /></xsl:if>
+      <xsl:apply-templates />
+    </div>
+  </xsl:template>
+
+  <!-- Text-first transformations remain phrasing content across normalized lines. -->
   <xsl:template match="lb:tr">
     <span class="tr" data-rot="{@rot}"><xsl:apply-templates /></span>
   </xsl:template>

@@ -291,6 +291,12 @@ halbe Drehung und 270 eine Vierteldrehung gegen den Uhrzeigersinn. Bei der
 Übernahme der geprüften Randnotizen bleiben Notizen ohne Drehung (0) oder ohne
 zugeordnetes Ergebnis unverändert; sonst wird ihr gesamter Inhalt umschlossen.
 
+Für den HTML-Export bestimmt der erste Inhalt die Darstellung: Beginnt `tr`
+mit `line` (Leerraum davor wird ignoriert), entsteht ein zusammenhängender
+`div.tr`-Block. Die Zeilen darin behalten `tab` und `type`. Beginnt `tr` mit
+Text oder anderer Textauszeichnung, wird es als `span.tr` innerhalb des
+Textflusses exportiert. Beide Formen tragen den Winkel als `data-rot`.
+
 ## Randnotizen und Hände
 
 | Element | Bedeutung |
