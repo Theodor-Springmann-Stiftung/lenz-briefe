@@ -102,7 +102,8 @@
   .unplaced-notes { margin:6mm 0 0; padding:0 var(--print-transcription-inset) 0 0; }
   .unplaced-note { margin-top:3mm; }
 
-  .letter-content > .apparatus { display:block; width:100%; max-width:none; margin:6mm 0 0; padding:4mm var(--print-content-inset) 0 0; border:0; font-family:var(--font-sans); }
+  .letter-content > .apparatus, .letter-footer-extension > .apparatus { display:block; width:100%; max-width:none; margin:6mm 0 0; padding:4mm var(--print-content-inset) 0 0; border:0; font-family:var(--font-sans); }
+  .site-footer--letter { break-inside:auto; }
   .apparatus-entry { display:block; margin:0 0 4mm; }
   .apparatus-entry > h2 { margin:0 0 1mm; font-size:9pt; text-align:left; }
   .apparatus-text, .apparatus > p { max-width:80ch; font-size:9pt; }

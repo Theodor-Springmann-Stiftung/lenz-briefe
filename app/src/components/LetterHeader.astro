@@ -8,8 +8,9 @@ import LetterDate from './LetterDate.astro';
 interface Props {
   letter: Letter;
   compact?: boolean;
+  metadataId?: string | null;
 }
-const { letter, compact = false } = Astro.props;
+const { letter, compact = false, metadataId = 'letter-metadata' } = Astro.props;
 const Heading = compact ? 'h2' : 'h1';
 const sent = letter.events.filter((e) => e.type === 'sent');
 const received = letter.events.filter((e) => e.type === 'received');
@@ -19,8 +20,8 @@ const dates = sent.flatMap((event) =>
 ---
 
 <header
-  id={compact ? undefined : 'letter-metadata'}
-  data-search-target={compact ? undefined : ''}
+  id={compact ? undefined : metadataId ?? undefined}
+  data-search-target={compact || !metadataId ? undefined : ''}
   class:list={['letter-header', { 'letter-header--compact': compact }]}
 >
   <Heading class="letter-date">

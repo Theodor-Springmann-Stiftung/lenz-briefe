@@ -13,6 +13,8 @@ import { preparePrintHandColumns } from './print-hands';
 export function printDocument(source: Document): string {
   const copy = new DOMParser().parseFromString(source.documentElement.outerHTML, 'text/html');
   const html = copy.documentElement;
+  const apparatus = copy.querySelector('.letter-footer-extension > .apparatus');
+  if (apparatus) copy.querySelector('.letter-content')?.append(apparatus);
   html.querySelectorAll('script, iframe, [data-tippy-root], link').forEach((node) => node.remove());
   html.querySelectorAll('[autofocus]').forEach((node) => node.removeAttribute('autofocus'));
   preparePrintTabs(copy);

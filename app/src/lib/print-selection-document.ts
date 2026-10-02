@@ -79,6 +79,8 @@ export async function printSelectionDocument(
       section.append(scoped);
     }
     const content = copy.importNode(letter.querySelector('.letter-content')!, true);
+    const apparatus = letter.querySelector('.letter-footer-extension > .apparatus');
+    if (apparatus) content.append(copy.importNode(apparatus, true));
     // IDs and local references belong to each source letter; make them unique
     // in the combined document, including apparatus and page anchors.
     const ids = new Map<string, string>();

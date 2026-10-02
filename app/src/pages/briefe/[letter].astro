@@ -67,7 +67,7 @@ const handStyles = [
   `.letter-content .edition-text { ${handDeclarations('base')} }`,
   ...[...handFonts(handRefs, senderRefs)].map(([ref, font]) => {
     const textSelector = `.letter-content .edition-text .hand[data-ref=${JSON.stringify(ref)}]`;
-    const sampleSelector = `.letter-content .hand-sample[data-ref=${JSON.stringify(ref)}]`;
+    const sampleSelector = `:is(.letter-content, .letter-footer-extension) .hand-sample[data-ref=${JSON.stringify(ref)}]`;
     const settings =
       font === 'var(--font-hand-second)'
         ? 'third'
@@ -85,6 +85,9 @@ const sectionLinks = [
 ---
 
 <Layout wide title={`${titleFor(letter)}, ${letterDateLabel(letter.events)}`}>
+  <div slot="letter-metadata" class="letter-menu-metadata">
+    <LetterHeader letter={letter} />
+  </div>
   <div slot="letter-menu" class="letter-toolbar">
     <div class="letter-context-tools">
       <CorrespondenceNavigation letter={letter} />
@@ -131,9 +134,9 @@ const sectionLinks = [
   {handStyles && <style is:inline set:html={handStyles} />}
   <div class="letter-content">
     <div class="letter-spine" aria-hidden="true"></div>
-    <div class="detail-header-group">
+    <div class="detail-header-group print-only">
       <div class="detail-header">
-        <LetterHeader letter={letter} />
+        <LetterHeader letter={letter} metadataId={null} />
       </div>
     </div>
     <div class="letter-reading-panel">
@@ -212,39 +215,40 @@ const sectionLinks = [
         </section>
       )}
     </div>
-    <section class="apparatus" id="ueberlieferung" aria-label="Überlieferung & Textkritik">
-      {traditions.length ? (
-        traditions.map((item) => (
-          <Fragment>
-            <div class="apparatus-entry" id={item.id} data-text-loss-footer={item === textLoss || undefined}>
-              {item.type === 'app' && <h2>{item.name}</h2>}
-              <div class="edition-text apparatus-text apparatus-xml-text" set:html={item.html} />
-            </div>
-          </Fragment>
-        ))
-      ) : (
-        <p>Keine Angaben zur Überlieferung vorhanden.</p>
-      )}
-      {handRefs.length > 0 && (
-        <div class="apparatus-entry hand-key" id="haende">
-          <h2>Hände</h2>
-          <ul class="edition-text apparatus-text">
-            {handRefs.map((ref) => (
-              <li>
-                <span class="hand-sample" data-ref={ref} aria-hidden="true">
-                  Aa
-                </span>
-                <button type="button" data-hand-ref={ref}>
-                  {hands[ref]}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-      <LetterCitation letter={letter} />
-    </section>
+
   </div>
+  <section slot="letter-footer" class="apparatus" id="ueberlieferung" aria-label="Überlieferung & Textkritik">
+    {traditions.length ? (
+      traditions.map((item) => (
+        <Fragment>
+          <div class="apparatus-entry" id={item.id} data-text-loss-footer={item === textLoss || undefined}>
+            {item.type === 'app' && <h2>{item.name}</h2>}
+            <div class="edition-text apparatus-text apparatus-xml-text" set:html={item.html} />
+          </div>
+        </Fragment>
+      ))
+    ) : (
+      <p>Keine Angaben zur Überlieferung vorhanden.</p>
+    )}
+    {handRefs.length > 0 && (
+      <div class="apparatus-entry hand-key" id="haende">
+        <h2>Hände</h2>
+        <ul class="edition-text apparatus-text">
+          {handRefs.map((ref) => (
+            <li>
+              <span class="hand-sample" data-ref={ref} aria-hidden="true">
+                Aa
+              </span>
+              <button type="button" data-hand-ref={ref}>
+                {hands[ref]}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+    <LetterCitation letter={letter} />
+  </section>
   <QuickLegend />
   <script>
     import '../../scripts/search-highlight';

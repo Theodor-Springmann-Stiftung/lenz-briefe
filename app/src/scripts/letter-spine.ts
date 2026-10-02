@@ -1,8 +1,8 @@
 import { registerLayoutTask } from './reading-layout';
 
 const letter = document.querySelector<HTMLElement>('.letter-content');
-const header = letter?.querySelector<HTMLElement>('.detail-header');
-const footer = letter?.querySelector<HTMLElement>('.apparatus');
+const header = letter?.querySelector<HTMLElement>('.reading-toolbar');
+const footer = document.querySelector<HTMLElement>('.apparatus');
 const body = letter?.querySelector<HTMLElement>('.letter-body');
 const spine = letter?.querySelector<HTMLElement>('.letter-spine');
 

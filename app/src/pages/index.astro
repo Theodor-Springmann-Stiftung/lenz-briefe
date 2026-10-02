@@ -16,8 +16,8 @@ const records = catalog.letters.map((l) => ({
 const firstGroup = catalog.groups[0];
 ---
 
-<Layout>
-  <section class="index-intro">
+<Layout wide>
+  <section slot="catalog-header" class="index-intro">
     <h1>Briefverzeichnis</h1>
     <div class="active-filters" hidden>
       <div class="active-filter-pills" role="group" aria-label="Aktive Filter"></div>
