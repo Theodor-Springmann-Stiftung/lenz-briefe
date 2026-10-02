@@ -673,7 +673,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/>Lies Röderers Gedanken und schreib ihm zurük drüber Meine Hausleute wollten ihren Augen nicht trauen daß Du sie grüßtest und danken mit Tränen u. Enthusiasmus. Mit Tränen haben manche Deine Klage wieder den Landvogt schon angehört und Dich geseegnet
 <line tab="1"/>Fleuch fort fleuch auf Deinem Wagen Lavater! und laß Dich von niemand überholen.
 <line /><align pos="right">Lenz</align></hand>
-<sidenote pos="top" page="1" annotation="am oberen Rand, horizontal gespiegelt"><tr rot="180"><hand ref="1">Willstu mir eine süsse Stunde machen so schick Kleisten einen Gruß. – Aber bring bring Göthen von mir – – was? Dich. Ich möcht ihm meine Seele schicken denn ich habe Hofnungen zu ihm, die wie die Sonne vor Tage nur noch den Antipoden sichtbar. Ach ich leide – aber Bruder eure Hofnung schimmern mir in meiner Nacht, daß ich den zögernden Tag nicht anklage.</hand></tr></sidenote>
+<sidenote pos="top" page="1" annotation="am oberen Rand, um 180 Grad gedreht"><tr rot="180"><hand ref="1">Willstu mir eine süsse Stunde machen so schick Kleisten einen Gruß. – Aber bring bring Göthen von mir – – was? Dich. Ich möcht ihm meine Seele schicken denn ich habe Hofnungen zu ihm, die wie die Sonne vor Tage nur noch den Antipoden sichtbar. Ach ich leide – aber Bruder eure Hofnung schimmern mir in meiner Nacht, daß ich den zögernden Tag nicht anklage.</hand></tr></sidenote>
 </letterText>
 
 <letterText letter="37"><page index="1"/>
@@ -1108,7 +1108,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/>Warum haben Sie mir denn nichts von Ihnen zukommen lassen? Das Versprechen hätten Sie doch halten sollen. Sie wissen wie es uns armen Poeten geht, die die Bücher lesen wie Vögel unter dem Himmel ein Korn finden. Ich habe noch keins von Ihren Stücken in die Hände bekommen Von der Seilerschen Gesellschaft verseh ich mir sehr viel Gutes Gott weiß wenn ich <aq>exul</aq> wieder einmal deutsches Schauspiel zu sehn bekomme
 <sidenote pos="left" page="2" annotation="am linken Rand der zweiten Seite, vertikal"><tr rot="270">
 <line tab="1"/>Grüssen Sie mir Ihre verehrungswürdige Schwester und den lieben Doktor. Wenn Sie aber nach Lyon schreiben, oder Himmel führe Ihre Hand alsdenn, meiner im Besten zu gedenken. Kann ich nicht erfahren wenn sie zurückkommen. Lieber Freund! wären doch alle Oerter in der Welt so nah bey einander als in Shakespears Stücken! Lion, Strasburg, Gotha – ich denk’, ich erwarte Sie alle.</tr></sidenote>
-<sidenote pos="bottom" page="2" annotation="am oberen Rand der zweiten Seite, horizontal gespiegelt"><tr rot="180">
+<sidenote pos="bottom" page="2" annotation="am oberen Rand der zweiten Seite, um 180 Grad gedreht"><tr rot="180">
 <line tab="1"/>Was sagen Sie zu all dem Gelärms übern Werther? Ist das erhört einen Roman wie eine Predigt zu beurtheilen. O Deutschland mit deinem Geschmack!</tr></sidenote>
 </letterText>
 
@@ -1469,8 +1469,8 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line />in Colmar.</address>
 <vspace lines="1"/>
 <line /><align pos="center"><note>vertikal zur Adresse Empfangsnotiz Pfeffels:</note></align>
-<line /><hand ref="21">M. Lenz
-<line />Dn 13.8.br 1775.</hand>
+<line /><tr rot="270"><hand ref="21">M. Lenz
+<line />Dn 13.8.br 1775.</hand></tr>
 </letterText>
 
 <letterText letter="77"><page index="1"/>
@@ -2195,7 +2195,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line /><align pos="right">Lenz</align>
 <sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal"><tr rot="270">
 <line tab="1"/>Weise niemand diesen Brief. Er ist für kein Auge das nicht durchdringt. Selbst für Deines <ul>müssen</ul> itzt noch Dunkelheiten bleiben.</tr></sidenote>
-<sidenote pos="top" page="1" annotation="am oberen Rand der ersten Seite, horizontal gespiegelt"><tr rot="180">
+<sidenote pos="top" page="1" annotation="am oberen Rand der ersten Seite, um 180 Grad gedreht"><tr rot="180">
 <line tab="1"/>Wegen der Soldaten sey ruhig. Ists <dul>wahr</dul> daß Du nach Weymar kommst so werde ich wieder einmal eine Freude haben. Eine.</tr></sidenote>
 <page index="4" type="outer"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
@@ -2414,7 +2414,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal"><tr rot="270">
 <line tab="1"/>es ist mir Last der Verzweiflung wenn man meine Wolken Goethen auf den Rücken schieben wollte. Er weiß nicht einmal daß ich die <ul>Idee</ul> gehabt welche zu schreiben. – Ueberhaupt stehe ich allein.</tr></sidenote>
 <page index="2"/>
-<sidenote pos="top" page="2" annotation="am oberen Rand der zweiten Seite, horizontal gespiegelt"><tr rot="180">auf das Paradies wär’ ich begierig könnt ichs nicht bekommen Vater Herder?</tr></sidenote>
+<sidenote pos="top" page="2" annotation="am oberen Rand der zweiten Seite, um 180 Grad gedreht"><tr rot="180">auf das Paradies wär’ ich begierig könnt ichs nicht bekommen Vater Herder?</tr></sidenote>
 <line tab="1"/>Wenigstens müste <ul>in ein Zeitungsblatt</ul> gesetzt werden, das Stück wäre von einem gewissen Theobald Steenkerk aus Amsterdamm geschrieben worden, damit wenigstens bey den Stadtwäschern die nichts weiter als Detail drinn sehen vor zu grossen Unverschämtheiten eine Sperrkegel gelegt würde. Meine Exemplare kommen nicht aus den Händen. Für die Bezahlung danke.
 <sidenote pos="left" page="2" annotation="am linken Rand des ersten Absatzes der zweiten Seite, vertikal"><tr rot="270"> nichts von Schicksal hier!</tr></sidenote>
 <sidenote pos="left" page="2" annotation="am äußeren linken Rand der zweiten Seite, vertikal"><tr rot="270">
@@ -2428,7 +2428,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/>Probebredigen? lustig genug aber sieh das als eine Farce an und denk an Coriolan im Candidatenrock. Ulyß gar in Bettlerslumpen. – Küß Deinen Sohn!!!
 <sidenote pos="left" page="3" annotation="am linken Rand der dritten Seite, vertikal"><tr rot="270">
 <line tab="1"/>Die Wolken <ul>dürfen</ul> nicht eher als nach meinem Tode ans Licht kommen. Es sind wahre Wolken voll Schnee und Hagel die Gott wegwehte. Der Anhang wird Dir besser gefallen und <ul>den solltu haben</ul>. – Grüsse Zimmermann.</tr></sidenote>
-<sidenote pos="top" page="3" annotation="am oberen Rand der dritten Seite, horizontal gespiegelt"><tr rot="180"> Die Meynungen – sind von mir.</tr></sidenote>
+<sidenote pos="top" page="3" annotation="am oberen Rand der dritten Seite, um 180 Grad gedreht"><tr rot="180"> Die Meynungen – sind von mir.</tr></sidenote>
 <vspace lines="1" presentational="true"/>
 <page index="4" type="outer"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens:</note></align>
@@ -2918,7 +2918,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /><align pos="center"><note>vertikal:</note></align>
-<line /><er><hand ref="1"><nr extent="30"></nr></hand></er>
+<line /><tr rot="270"><er><hand ref="1"><nr extent="30"></nr></hand></er></tr>
 </letterText>
 
 <letterText letter="177"><page index="1"/>
@@ -3245,7 +3245,7 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <letterText letter="195"><page index="1"/>
 <line /><align pos="center">Den 17. Jun. 1776.</align>
 <vspace lines="1"/>
-<line tab="1"/>Ich schreibe, daß Sie mein Stillschweigen nicht andern Ursachen beymeßen, lieber L. Die Krankheit und izt der Tod meines Chefs des alten Feldmarschalls, der mich hieher gezogen, und viel guten Willen u. Freundschaft für mich hatte, hat mich sehr zerrüttet, und verwirrt mich noch. Ich habe sehr viel zu arbeiten, u. kann nichts für mich thun, bis das Departement wieder einen Vorgesezten hat. Gewinnen kann ich wenig dabey; verlieren viel. 
+<line tab="1"/>Ich schreibe, daß Sie mein Stillschweigen nicht andern Ursachen beymeßen, lieber L. Die Krankheit und izt der Tod meines Chefs des alten Feldmarschalls, der mich hieher gezogen, und viel guten Willen u. Freundschaft für mich hatte, hat mich sehr zerrüttet, und verwirrt mich noch. Ich habe sehr viel zu arbeiten, u. kann nichts für mich thun, bis das Departement wieder einen Vorgesezten hat. Gewinnen kann ich wenig dabey; verlieren viel.
 <vspace lines="1"/>
 <line tab="1"/><tl></tl> ten Sie doch Lindaus unbesonnenes Blatt nicht drucken laßen! Es kann ihm so leicht schaden, wenn’s bekannt wird. H. hat mir noch nicht geantwortet, aber seyn Sie ruhig. Sobald ich Antwort habe, schick ich sie Ihnen wenigstens gleich zu, wenn ich auch nicht dabey sollte schreiben können. Leben Sie wohl
 <line /><align pos="right">Boie.</align>
@@ -3263,17 +3263,22 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line />Gelehrten in</address>
     <vspace lines="1"/>
 <line /><align pos="center"><note>Entwurf zum Brief an Lauth vom 17. Juni 1776, zunächst um 180 Grad zur Adresse gedreht:</note></align><hand ref="1">
+<tr rot="180">
 <line tab="1"/>1) nicht ein Wort teutsch reden in Lyvrey gehen aufwärts bey Zürch kriegt 20 bis 25 <fn index="5"><anchor><sup>#</sup></anchor></fn> eine Liverey Obristen Kleidungsstüke an Wäsche Schuhen u. Strümpfen nicht sich wenigstens auf 3 Jahr engagiren läßt er sich ihrer uberwendig macht so wird ihm das Reisegeld vom Gehalt abgezogen Reisegeld von Strasb. nach Lübek von da geht er zu Wasser nach Pernau.
 <line tab="1"/>Ein gewisser Cap. Rennekampf erkundigt sich nach den <aq>Doctor Sax</aq> und Prof. Schütz die seine Freunde gewesen
+</tr>
 <vspace lines="1"/>
-<line /><align pos="center"><note>horizontal gespiegelt:</note></align>
-<line tab="1"/>Von Palloper. Er hat vor 26 Jahren als Hauptm. mit seinem Corps. in Strasb. gestanden.
+<line /><align pos="center"><note>um 180 Grad gedreht:</note></align>
+<tr rot="270"><line tab="1"/>Von Palloper. Er hat vor 26 Jahren als Hauptm. mit seinem Corps. in Strasb. gestanden.</tr>
 <vspace lines="1"/>
-<line /><align pos="center"><note>horizontal gespiegelt:</note></align>
-<line />2 Binden
-<line />1 P. seidene Strümpfe
-<line />1 Hemd
-<line />1 Schnuptuch</hand>
+<line /><align pos="center"><note>um 180 Grad gedreht:</note></align>
+<tr rot="270">
+    <line />2 Binden
+    <line />1 P. seidene Strümpfe
+    <line />1 Hemd
+    <line />1 Schnuptuch
+</tr>
+</hand>
  <vspace lines="1"/>
 <line /><align pos="center"><note>unleserliche Kalkukation</note></align>
 
@@ -3567,14 +3572,20 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 
 <letterText letter="206"><page index="1"/><aq>
 <line tab="1"/>Il s’ agit aussi de faire des Soldats et d’ Officiers pas des jeunes gens etourdis et effemines en meme tems, quelque fois de grends enfans, mais des hommes d’un courage male et affermis comme les vieux Romains – Mais assez de Preliminaires passans au fait.
-<line tab="1"/>Quon pe me passe encore une seule et Ia derniere remarque preliminaire. Cest que de tout tems il est affermi par l’experience de tous tems et lieux et surtout de la France, que la guerre, soit heureuse ou malheureuse, ruine enfi le pays qui Ia fait. Cest peut etre a la france qui depuis tous les tems par des arrangemens plus sages a donnée loix aux autres peuples, a les instruire comment enfin on peut faire Ia guerre au profit de son pays, comme les vieux Romains les ont faits et en meme tems a Ia gloire du Roi. C’ est lorsque les Soldats comme chez les vieux Rom. combattent pour eux et pour leurs propres familles, songent a mettre a l’ecart le butin qu’ils font, et Je rapportent dans le Royaume ou apres ils circulent et l’enrichissent. Voila ce qui manquoit aux Louis 14 et ou les Colberts ne pouvoiet pas remedier. Ce netoient que des palliatives qu’ils inventoient pour subvenir aux frais de la guerre, et qui n’ayant des canaux reduisants devoient a Ia fin, quelques sages que tous ces dispositions etoient prises, tarir les sources les plus fecondes. Voila actuellement tous ces perils d’une guerre prevenues <insertion pos="top">de longue main</insertion> parce que tous les moiens que les sujets ouvriront au tems de l’extreme necessité, vont retourner aux tems de Ia paix a leur propre profit. Car d’abord que l’armée revient elle reduit avec soi l’abondance et l’industrie arreté par Ia guerre.
+<line tab="1"/>Quon pe me passe encore une seule et Ia derniere remarque preliminaire. Cest que de tout tems il est affermi par l’experience de tous tems et lieux et surtout de la France, que la guerre, soit heureuse ou malheureuse, ruine enfi le pays qui Ia fait. Cest peut etre a la france qui depuis tous les tems par des arrangemens plus sages a donnée loix aux autres peuples, a les instruire comment enfin on peut faire Ia guerre au profit de son pays, comme les vieux Romains les ont faits et en meme tems a Ia gloire du Roi. C’ est lorsque les Soldats comme chez les vieux Rom. combattent pour eux et pour leurs propres familles, songent a mettre a l’ecart le butin qu’ils font, et Je rapportent dans le Royaume ou apres ils circulent et l’enrichissent. Voila ce qui manquoit aux Louis 14 et ou les Colberts ne pouvoiet pas remedier. Ce netoient que des palliatives qu’ils inventoient pour subvenir aux frais de la guerre, et qui n’ayant des canaux reduisants devoient a Ia fin, quelques sages que tous ces dispositions etoient prises, tarir les sources les plus fecondes. Voila actuellement tous ces perils d’une guerre prevenues <insertion pos="top">de longue main</insertion> parce que tous les moiens que les sujets ouvriront au tems de l’extreme necessité, vont retourner aux tems de Ia paix a leur propre profit. Car d’abord que l’armée revient elle reduit avec soi l’abondance et l’industrie arreté par Ia guerre.</aq>
 <vspace lines="1"/>
 <line /><align pos="center"><note>Brieftext um 90 Grad gedreht:</note></align>
+<aq>
+<tr rot="90">
 <line tab="1"/>Oserois je vous prier Madame! d’agréér ici la continuation du Mercure Allemand avec les assurances de son plus profond respect et parfait éstime de la part de Monsieur Wieland l’auteur.
-<line tab="1"/>Si c’est de Votre permission, dequoi j’ai lieu de fort douter, que j’ai recú la copie de certaine silhouette, je ne demande pas pardon d’un silence qui seule pouvoit servir d’ expression a une reconnoissance qui comme le sujet qui l’ anime est au dessús de toute parole. Rien assurement me coute tant de peine qu’une lettre pour vous, quelqu’ingenú qu’il vous puisse paroitre un tel aveu, il n’est que trop reflechi, considerant le danger a qui je m’expose de peut ètre Vous offenser.</aq>
+<line tab="1"/>Si c’est de Votre permission, dequoi j’ai lieu de fort douter, que j’ai recú la copie de certaine silhouette, je ne demande pas pardon d’un silence qui seule pouvoit servir d’ expression a une reconnoissance qui comme le sujet qui l’ anime est au dessús de toute parole. Rien assurement me coute tant de peine qu’une lettre pour vous, quelqu’ingenú qu’il vous puisse paroitre un tel aveu, il n’est que trop reflechi, considerant le danger a qui je m’expose de peut ètre Vous offenser.
+</tr></aq>
 <page index="2"/><aq>
+<tr rot="90">
 <line tab="1"/>Il faut que <del>je previenne</del> avant d’entrer dans aucun detail de mon projet je previenne d’abord quelques doutes assez fortes peut etre pour empecher que je puisse etre lú sans indignation jusqu’au bout de monouvrage. Ce sera dira ton qu’a mon plan une infinite de villes et bourgs restera entierement sans garnisons, et que les autres memes les places les plus importantes et des frontieres n’en auront pas d’assez fortes seulement pour fournir des sentinelles encore moins pour fournir de Ia defense aux differentes parties des fortifications. Mais je supplie Monseigneur, de me preter seulement son attention jusqu’a la fin de ma premiere esquisse des legions, et je prens la liberté de l’assurer d’avance qu’alors je lui montrerai des mojens surs et infaillibles de vaincre tous ces obstacles ce qui seulement ici n’est pas encore le lieu d’exposer. Elle peut ètre très assurée que quelque peu que peut etre ma connoissance de la guere je n’aie pas omis un seul point sans y songer et reflechir, et que même je ne <insertion pos="top">me</insertion> sois pas abandonné a ce principe hazardé sur les anciens, que la defense des places ne soit pas un article aussi necessaire dans la guerre, que la disposition d’une armée pour la guerre ouverte en rase campagne, tant belles choses que pourroit deja etre debuté la dessils constaté pour la pluspart de l’ experience tant des anciens que des nouveaux. – Je me contente seulement d’allequer ici en passant ce que Je Comte de saxe dit par rapport aux magazins necessaires pour nourrir une garnison forte de trois 4 mille hommes, et la facilite que cela donne aux ennemis de prendre la ville par Ia famine. Ainsi ce n’est dore quun vain apparreil pendant Ia paix que les gamisons aussi fortes sans <insertion pos="top">que</insertion> qu’on songe a la force principale du pays je veux dire de l’armée.
-<line tab="1"/>Le secret principal d’une bonne discipline pendant la paix ou tout s’assoupit l’ardeur, l’ambition, les vues, ce seroit un mouvement continuel proportionné cependant aux forces humaines, avec des points de d’un repos choisi et d’assez d’agremens pour pouvoir exciter a <del>se soustraire</del> <insertion pos="top">subir</insertion> pour lui a toutes peines et fatigues imaginables. II faut enfin que le soldat soit heureux pour etre bon, qu’il oublie son esclavage et le regarde comme un arrangement necessaire quil se prescriroit lui même sil ne lui ser etoit pas prescrit quil ait a quoi tenir pour lui sacrifier ses forces et sa vie et qu’au comble d’encouragemens il fasse toute guerre en quelque facon pour soi même. Voila ce qui a rendú les Romains les vainqueurs du monde; voila ce qui rendroit le Roi de France le plus terrible et le plus adoré roi de Ia terreparce que chaque soldat defendroit se droits comme les siens propres. Mais passons ces declamations encore trop avanceés.</aq>
+<line tab="1"/>Le secret principal d’une bonne discipline pendant la paix ou tout s’assoupit l’ardeur, l’ambition, les vues, ce seroit un mouvement continuel proportionné cependant aux forces humaines, avec des points de d’un repos choisi et d’assez d’agremens pour pouvoir exciter a <del>se soustraire</del> <insertion pos="top">subir</insertion> pour lui a toutes peines et fatigues imaginables. II faut enfin que le soldat soit heureux pour etre bon, qu’il oublie son esclavage et le regarde comme un arrangement necessaire quil se prescriroit lui même sil ne lui ser etoit pas prescrit quil ait a quoi tenir pour lui sacrifier ses forces et sa vie et qu’au comble d’encouragemens il fasse toute guerre en quelque facon pour soi même. Voila ce qui a rendú les Romains les vainqueurs du monde; voila ce qui rendroit le Roi de France le plus terrible et le plus adoré roi de Ia terreparce que chaque soldat defendroit se droits comme les siens propres. Mais passons ces declamations encore trop avanceés.
+</tr>
+</aq>
 <sidenote pos="left" page="2" annotation="am linken Rand der zweiten Seite"><aq>quil y soit eleve et qu il soit familiarises avec ces principes des sa jeunesse. Voila ce qui leve tout d’un coup tous les obstacles de la subordination</aq></sidenote>
 </letterText>
 
@@ -3631,7 +3642,9 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, vertikal"><tr rot="270"><pe><aq>j’espere de revenir</aq></pe></tr></sidenote>
 <page index="2"/>
 <line /><align pos="center"><note>um 90 Grad gedreht:</note></align>
+<tr rot="90">
 <line tab="1"/>Nimmermehr an sie <ul>zu schreiben</ul> wo möglich alle Gelegenheiten zu vermeiden <ul>sie zu sehen</ul> weil ich mir nicht trauen darf gelobe ich Gott.
+</tr>
 </letterText>
 
 <letterText letter="213"><page index="1"/>
@@ -3640,9 +3653,9 @@ einbrechenden Schimmer des Tags verstecken konnte machte ich den Schattenriß. D
 <line tab="1"/>Es wäre mir doch <ul>lieb,</ul> wenn die Meynungen eines Layen im Merkur kürzlich recensirt würden, ohne Ansehen der Person. Sag’ Wieland nicht von wem sie sind.
 <line tab="1"/>Sag mir doch ob Herder nicht bald kommt. Mein Herz ahndet ihm entgegen.
 <line tab="1"/>Ich möcht ihn und sein Weib gern sehen – geniessen kann ich itzt nichts mehr. <tl></tl>
-<sidenote pos="top" page="1" annotation="am oberen Rand der ersten Seite, horizontal gespiegelt"><tr rot="180">
+<sidenote pos="top" page="1" annotation="am oberen Rand der ersten Seite, um 180 Grad gedreht"><tr rot="180">
 <line tab="1"/><del>sie</del> Charakter von Sienas Freundin – tief – verb. – um sie nicht zu verderben will sie ihr nicht ihre Neigung zugestehen, weil sie wohl sieht daß jene als Delikatesse für sie gl. abtreten würde und ihr wie natürlich Liebe für ihn zutraut. Sie begegnet also Truf. mit der äussersten Inegalität. Die falsche Delikatesse kreuzt sich wun-</tr></sidenote>
-<sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, horizontal gespiegelt"><tr rot="180">
+<sidenote pos="left" page="1" annotation="am linken Rand der ersten Seite, um 180 Grad gedreht"><tr rot="180">
 <line tab="1"/>derbar mit Cath. an der es ihr immer ärgert daß sie Tr. nach ihrer Meynung nicht freundl. genug und zwar aus <aq>pruderie</aq> denkt sie, begegnet. Endl. kommt sie zum Ausbruch und zu <ul>Vorwürfen.</ul></tr></sidenote>
 <line tab="1"/>(Grosser Krieg gegen die falsche moralische Delikatesse die die Herzen soweit entfernt und ihren Grund in Stolz haben. <fn index="1"><anchor>☓ ☓</anchor></fn>
 <sidenote pos="right" page="1" annotation="am rechten Rand der ersten Seite, vertikal"><tr rot="90">
@@ -3842,7 +3855,9 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
     <line tab="1"/>+ die sie für ein Bauermädchen hielten, weil sie eben zu Kn. gekommen was der nun erfährt keuchend und schwitzend seine letzte Statue zum Fenster hinaus warf.
 </tab>
 <tab value="2-2">
-    <line tab="1"/><note>horizontal gespiegelt:</note> Sobald ich nach Weymar komme mein Ding für die Herzogin ausmachen sehr vortheilhaft für Pandp. und für sie
+    <tr rot="180">
+    <line tab="1"/><note>um 180 Grad gedreht:</note> Sobald ich nach Weymar komme mein Ding für die Herzogin ausmachen sehr vortheilhaft für Pandp. und für sie
+    </tr>
     <vspace lines="1"/>
     <line tab="1"/>Das von der Deutschen Gesellschaft im Merkur.
 </tab>
@@ -3968,7 +3983,7 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <page index="4"/><aq>je Vous ouvre mon coeur. Je me declare coupable de tous ces petits tours, de toutes ces ruses dont Vous me fites le dernier soir d’aussi vives reproches, je vous declarerai même que <del>je ne</del> <insertion pos="top">rien moins que de</insertion> changer <del>si pas</del> de conduite <insertion pos="left">je la soutiendrai avec <del><nr></nr></del> de la fermeté.</insertion> tant que les raisons qui m’y forcent ne <insertion pos="top">voudront pas</insertion> cesser <del>ont pas</del>. Vous deviez donc prendre garde <subst><del>de</del> <insertion>a</insertion></subst> me fournir d’occasions de faire du mal sous les dehors de l’innocence et de la probité. Pourquoi, je Vous en supplie, me produire a la cour? Pourquoi m’ouvrir des vúes aussi pleines de charmes lorsque j’etois resigné pour la campagne. Pourquoi en dônner ombrage a des personnes qui jusqu’ici ont taché de m’<insertion pos="top">en</insertion> eloigner, afin d’etre a l’abri de mes petits tours <insertion pos="top">et de mes ruses</insertion>? Qui pour les prevenir, ou pour me corriger peut etre ont tout mis en usage du mepris, des petits tours <insertion pos="top">de leur façon,</insertion> souvent plus fins <insertion pos="bottom">ou du moins plus cachés</insertion> encore, de la raillerie bien amiable</aq>
 <sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite, vertikal, rechte Spalte"><tr rot="270"><aq>et mieux encore placées et qui pour parler net, ont <insertion pos="top">de très grand coeur</insertion> abusé de ma complaisance <del>de’l d ’angleleur</del> de <insertion pos="top">les</insertion> egayer <insertion pos="top">dans</insertion> leur langueurs. J’ai <del>fait</del> joué au Colin Maillard avec eux et <insertion pos="top">de trop grande amitie pour moi,</insertion> <ul>a chase</ul> ils ont oublée que je m’etois bandé les yeux moi même et tachent quoiqu’envain de me les fassciner encore. Il est bien naturel que rien peut flatter leur orgueil d’avantage lequel je me</aq></tr></sidenote>
 <sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite, vertikal, linke Spalte"><tr rot="270"><aq>suis proposé de ne plus menager. Il est aisé a prevoir que ce changement de conduite ne leurs conviendra guere, après leur avoir donné tant d’avantage par celle que j’affectois en arrivant. Cependant je ne peux rien moins que la continuer telle</aq></tr></sidenote>
-<sidenote pos="top" page="4" annotation="am oberen Rand der vierten Seite, horizontal gespiegelt zum Haupttext"><tr rot="180"><aq>quoique leur amitié m’en veuille persuader et quelqu’honneur que j’y mette de plaire a une Cour qui fixe a present les yeux de toute l’Allemagne et même de nos voisins, j’ai assez d’ambition de n’en vouloir plus faire le plaisant. Voila les sentimens avec lesquelles je ne peux m’empecher d’y commencer ma nouvelle carriere</aq></tr></sidenote>
+<sidenote pos="top" page="4" annotation="am oberen Rand der vierten Seite, um 180 Grad gedreht zum Haupttext"><tr rot="180"><aq>quoique leur amitié m’en veuille persuader et quelqu’honneur que j’y mette de plaire a une Cour qui fixe a present les yeux de toute l’Allemagne et même de nos voisins, j’ai assez d’ambition de n’en vouloir plus faire le plaisant. Voila les sentimens avec lesquelles je ne peux m’empecher d’y commencer ma nouvelle carriere</aq></tr></sidenote>
 </letterText>
 
 <letterText letter="233"><page index="1"/>
@@ -4028,8 +4043,10 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <line />
 <line tab="1"/>Ihre Paar Sporen. und da schiken sie doch mit dem nachsten dann Hr. <ul>G. L. R.</ul> seine Sporen wieder zurük.
 <vspace lines="1"/>
-<line /><align pos="center"><note>horizontal gespiegelt:</note></align>
+<line /><align pos="center"><note>um 180 Grad gedreht:</note></align>
+<tr rot="180">
 <line /><pe>D 22 <ul>Septbr.</ul></pe>
+</tr>
 <vspace lines="1" presentational="true"/>
 <page index="2"/>
 <line /> <align pos="center"><note>Rechnung unbekannter Hand</note></align>
@@ -4058,7 +4075,7 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <page index="3"/>inniger Verehrung und Anbetung des Geists der in Ihnen webt und würket.
 <sidenote pos="left" page="2" annotation="am linken Rand der zweiten Seite, vertikal"><tr rot="270">
 <line tab="1"/>Bitten Sie doch Bruder Carl um die <ul>einzige Freundschaft</ul> mir in einer guten Stunde aus Ihrem und meiner Mutter Munde historische Nachrichten von meinen Großeltern <fn index="5"><anchor><sup>#</sup></anchor></fn> so wohl von <ul>Ihrer</ul> als von mütterlicher Seite aufzuschreiben und zuzu<del>setzen</del>senden, er wird <ul>unserm Herzog</ul> damit <ul>Freude</ul> machen. Die Gnade dieses Fürsten für mich ist Gottes Werk.</tr></sidenote>
-<sidenote pos="top" page="2" annotation="am oberen Rand der zweiten Seite, horizontal gespiegelt"><tr rot="180">
+<sidenote pos="top" page="2" annotation="am oberen Rand der zweiten Seite, um 180 Grad gedreht"><tr rot="180">
 <line tab="1"/>NB. <fn index="5"><anchor><sup>#</sup></anchor></fn> wollten Sie mich <ul>würdigen,</ul> etwas von Ihrer eigenen Lebensgeschichte dazuzuthun, würd ichs mit dem <dul>höchsten</dul> Dank erkennen.</tr></sidenote>
 <line tab="1"/>Die Briefe meiner Geschwister stärkten mich gleichfalls. Sagen Sie Fritzen ich werde Sorge für seinen Auftrag haben, fürchte aber, er werde ein wenig unthulich seyn, falls nicht etwa ein Landsmann nach Lief- oder Curland hineingeht, der einen Burschen mitnimmt. Mein Bruder Christian ist immer der einzige Mensch der mich noch am besten verstehen kann; sein Glück, seine Zufriedenheit sind die meinigen. Schwester Lottgen und Liesgen bitte ihre Munterkeit nicht zu verlieren, das Leben wird heutzutage immer bitterer – und immer süsser. Ein Augenblick – ersetzt Jahre voll Kummer – auch ein Augenblick wie der wenn ich Nachrichten von Ihnen erhalte. Schwester Norgen möchte ich sehen, Bruder Carl wird die Hofnungen seines Vaters nicht so grausam hintergehen als ich. Dürft ich bitten alle Ihre Schattenbilder zu nehmen, und sie mir verkleinert mit einem Instrument das man Storchenschnabel nennt, im Briefe zuzuschicken.
 <sidenote pos="left" page="3" annotation="am linken Rand der dritten Seite, vertikal"><tr rot="270">
@@ -4191,7 +4208,9 @@ Der Herr Geh. Leg. Rath läßt sie vielmals grüßen und wünscht daß Ihnen ihr
 <page index="2" type="outer"/>
 <line /><align pos="center"><note>Außenseite des zum Umschlag gefalteten Bogens, vertikal:</note></align>
 <vspace lines="1" presentational="true"/>
+<tr rot="270">
 <line /><address>An Herdern!</address>
+</tr>
 </letterText>
 
 <letterText letter="248"><page index="1"/>
@@ -4347,9 +4366,9 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line tab="1"/>Schick doch diesen Brief sogleich ihm hin, ich flehe, der vorige hat
 <sidenote pos="left" page="4" annotation="am linken Rand der vierten Seite, vertikal"><tr rot="270"> <ul>Effeckt gethan,</ul> wofür ich tausendmal danke. Er wird mir diese letzte Gnade nicht abschlagen, wenn ihm Goethe für die Reinheit meiner Absichten Bürge ist. Und der wird es seyn, so sehr ich ihn beleidigt habe. Ich dachte nicht daß es so plötzlich aus seyn sollte und hatte mir meine süssesten Arbeiten aufgespahrt. Diese Gelegenheit ist hernach auf immer für mich verloren. <ul>Nur ein einziger Tag</ul>
 <line tab="1"/>Umarme und seegne Deine Gattin; Seyd unbegrenzt glücklich – vergeßt mich. Lebt wohl!</tr></sidenote>
-<sidenote pos="top left" page="4" annotation="am oberen linken Rand der vierten Seite, horizontal gespiegelt"><tr rot="180">
+<sidenote pos="top left" page="4" annotation="am oberen linken Rand der vierten Seite, um 180 Grad gedreht"><tr rot="180">
 <line tab="1"/>Von dem versiegelten Zettel an Goethen sag niemand. Nochmals – Lebt wohl! Könnt ich an eurem Halse liegen.</tr></sidenote>
-<sidenote pos="top right" page="4" annotation="oben rechts am Rand der vierten Seite, horizontal gespiegelt"><tr rot="180">
+<sidenote pos="top right" page="4" annotation="oben rechts am Rand der vierten Seite, um 180 Grad gedreht"><tr rot="180">
 <line />Der redliche Kalb! wie treflich u. edel!</tr></sidenote>
 <vspace lines="1"/>
 <line /><align pos="center"><note>evtl. dazugehöriger Briefumschlag, in dem das erwähnte Pasquill enthalten gewesen sein könnte, GSA 44/69, Bl. 25:</note></align>
@@ -4367,10 +4386,10 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <letterText letter="262"><page index="1"/>
 <line tab="1"/>Ich danke Ihnen mein verehrungswürdiger Freund und Gönner für die unangenehme Bemühung die Sie meinethalben übernommen und versichere daß mir eine Ordre wie die auch wenn ich sie verdienet durch die Hand die sie mir überbrachte, versüßt worden wäre. Da ich aber nach meiner Ueberzeugung erst gehört werden müßte, ehe man mich verdammte und meine Ehre die mir lieber als tausend Leben
 <page index="2"/>ist, mich durch Annehmung dessen was Sie mir von unbekannter Hand hinzugelegt eines mir unbewußten Verbrechens schuldig zu bekennen, nimmermehr erlauben wird, so verzeyhen Sie daß ich diese beygefügte Gnade nicht annehmen sondern um Gerechtigkeit bitten darf. Es ist nicht seit heute, daß
-<vspace lines="1"/>
-<line /><align pos="center"><note>am linken oberen Rand eine Kalkulation, horizontal gespiegelt</note></align>
 <vspace lines="1" presentational="true"/>
 <page index="3"/>
+<line /><align pos="center"><note>am linken oberen Rand eine Kalkulation, um 180 Grad gedreht</note></align>
+<vspace lines="1" presentational="true"/>
 <line /><tl></tl>
 <line />Eh<tl></tl>
 <line />s<tl></tl>
@@ -6377,7 +6396,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line /><align pos="right">treuer Bruder</align>
 <line /><align pos="right">JMR Lenz</align>
 <line /><align pos="center">10ten Apr 81.</align>
-<sidenote pos="top" page="2" annotation="am oberen Rand der zweiten Seite, horizontal gespiegelt und eingerahmt"><tr rot="180">es ist einer der vorzüglichsten Menschen, der Gouver. Siewers. Er wohnte beym General B.</tr></sidenote>
+<sidenote pos="top" page="2" annotation="am oberen Rand der zweiten Seite, um 180 Grad gedreht und eingerahmt"><tr rot="180">es ist einer der vorzüglichsten Menschen, der Gouver. Siewers. Er wohnte beym General B.</tr></sidenote>
 <sidenote pos="top" page="2" annotation="am oberen Rand der zweiten Seite, vertikal"><tr rot="90">N. S.</tr></sidenote>
 <sidenote pos="left" page="2" annotation="am linken Rand der zweiten Seite, vertikal"><tr rot="270"><line tab="1"/>ist es denn nicht möglich, daß ich durch den Derptschen Fuhrmann <aq>Remmert Samuel</aq>, der in 8 Tagen hieher kommt, meine Sachen und Bücher, die bey Engelhardt, oder jetzt vermutlich bey Bürgerm. Vitl oder Hr. Haase in Walk stehn, erhalte. Ich denke doch, daß ich sie brauche! –</tr></sidenote>
 </letterText>
@@ -7021,7 +7040,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line /><align pos="center">*</align>
 <line /><align pos="center">**</align>
 <line tab="1"/>Ich habe Pappa von dem neuen Projekt einer <aq><ul>Polyglotta</ul></aq> oder allgemeinen <ul>Bibelübersetzung</ul> in alle Sprachen mit stehenden Pressen zum Besten der Armen – geschrieben, welcher Vorschlag hier im <ul>Senat</ul> – durchgedrungen. Dieser Brief importirt mir also – imgleichen von einer französischen <ul>Zeitung</ul> die ich auszugeben gedenke, zur Erleichterung der <ul>allgemeinen</ul> Sprache für Rußland von der alle 44 nach Herrn Tschulkoff, als <ul>Dialekte</ul> anzusehen, welches dem schönen Geschlecht das schon Sprachen kennt, <ul>spielend</ul> zu beweisen mich getraue. Zugleich werden einige Fragmente der <ul>Geschichte,</ul> zu der ich gesammlete <ul>Materialien</ul> nicht bekannt machen darf, des <ul>allgemeinen</ul> Vaterlandes, und Auszüge aus Herrn <ul>Tschulkoffs Handelsgeschichte</ul> und den neusten Handelsverordnungen, mehr <ul>dem Sinn </ul>der Gesetze nach als dem todten Buchstaben zum Besten der Landekonomie und des <ul>innern Handels auf Flüssen,</ul> diese Blätter vielleicht auch in Liefland <ul>begehren</ul> machen wo doch beinahe in jedem feineren Hause irgend eine Französinn oder Hofmeister ist (der kein <ul>Lauffer</ul> war) und Französisch wenigstens gelesen wird. Sollte unsrer theurer Altgens bey <aq>Consistorial</aq>geschäften sich seines Sohnes nicht erbarmen und mein langes Geschmier etwa von Bruder Carl vorlesen lassen? Die Herrn Erzieher des Menschengeschlechts und die Theologischen Krittler und Zänker, welche aus <ul>Tag Nacht,</ul> aus <ul>Erdichtungen Wahrheit</ul> und aus Wahrheit Lüge machen möchten, nur um zu <ul>disputiren</ul> und Recht zu haben ohn zu wissen <ul>was sie eigentlich wollen,</ul> werden mir verzeihen, daß ich bey den <ul>unendlichen Schrauben</ul> der sogenannten Gewissens und Ehrgerichte, an meinen <ul>Vater selbst Zuflucht nehme</ul> und mir seinen Väterlichen Seegen ausbitten muß – welches zu einem neuen Jahr (mit der innigsten Reue über alle meine auch in Liefland begangenen Fehler, die ich aus dem was mir von seinen Briefen übrig geblieben, die vielleicht aus guter aber irrender Meynung ein Freund von mir ohne mein Wissen verbrannt hat, noch itzt ersehe) mir eine ganz neue und andere Existenz schaffen wird. Ich fürchte nur daß die Briefe <ul>nicht eher</ul> in des Derpischen Bruders als in Eure Hände lieben Geschwister! gerathen, deswegen ich eins und das andere davon hier einführe, das wichtigste aber diesem Briefe nicht anvertrauen kann, welches meine ganze irdische und <del>vielleicht</del> <ul>zukünftige Existenz</ul> betrift. Ich glaube bemerkt zu haben daß meine Rigischen Geschwister über diesen Punkt weit einsichtvoller und menschenfreundlicher denken, als die andern deren Herz umzulenken ich dem lieben Gott allein überlassen muß, weil ich kein Herzenskündiger bin. Vielleicht hat eine <aq>Lecture</aq> aus ganz verschobenen Gesichtspunkten und allzu rasche Schlüsse die durch eine alte liefländische Dame die taub war und über Pleskau nach Derpt zurükkehrte, dazu beigetragen – worunter ich allein am meisten und unsäglich leiden mußte, da diese Schlüsse sehr thätig und wirksam würden. Mit einem Worte, ich konnte und durfte mich mit keiner Liefländerinn verbinden.
-<sidenote pos="bottom" page="2" annotation="am unteren Rand der zweiten Seite, horizontal gespiegelt"><tr rot="180"><address>Herrn Johann Christian Lenz. Sekretär des K. Gouvernements und Rath in <aq>Riga</aq></address></tr></sidenote>
+<sidenote pos="bottom" page="2" annotation="am unteren Rand der zweiten Seite, um 180 Grad gedreht"><tr rot="180"><address>Herrn Johann Christian Lenz. Sekretär des K. Gouvernements und Rath in <aq>Riga</aq></address></tr></sidenote>
 </letterText>
 
 <letterText letter="372"><page index="1"/>

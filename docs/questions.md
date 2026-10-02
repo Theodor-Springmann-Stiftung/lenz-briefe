@@ -8,6 +8,7 @@
 
 
 - 249: am oberen Rand der zweiten Seite, vertikal
+- 76, 176, 184 Notes: vertikal
 - 349: <sidenote pos=\"top\" page=\"2\" annotation=\"am oberen Rand der zweiten Seite, horizontal gespiegelt und eingerahmt\">es ist einer der vorzüglichsten Menschen, der Gouver. Siewers. Er wohnte beym General B.</sidenote>
 
 ## Gregor
