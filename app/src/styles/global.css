@@ -104,7 +104,7 @@
   .active-filter-pills { display:flex; flex-wrap:wrap; align-items:center; gap:.75rem; min-width:0; }
   .active-filter-pills .filter-pill { flex-shrink:0; }
   .filter-information { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-auto-rows:1fr; align-items:stretch; gap:1rem; min-width:0; margin-top:1.25rem; }
-  .filter-card { display:flex; flex-direction:column; min-height:9rem; max-height:24rem; min-width:0; border:1px solid #bca68e; background:#fffcf7; box-shadow:5px 5px 0 #eee7db; }
+  .filter-card { display:flex; flex-direction:column; min-height:9rem; max-height:24rem; min-width:0; border:1px solid #bca68e; background:#fffcf7; }
   .filter-card-body { display:grid; grid-template-columns:minmax(0,1fr); flex:1; min-height:0; overflow:hidden; }
   .filter-card-body:has([data-gnd-picture]:not([hidden])) { grid-template-columns:6.5rem minmax(0,1fr); }
   .filter-card-text { min-width:0; min-height:0; overflow:hidden; }

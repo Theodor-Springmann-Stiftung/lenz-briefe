@@ -5,7 +5,7 @@
 export function selectionDescription(people, places) {
   const clauses = [];
   const group = (names) => names.length > 1 ? `(${names.join(' ODER ')})` : names[0];
-  if (people.length) clauses.push(`Korrespondenz von/an ${group(people)}`);
+  if (people.length) clauses.push(`Korrespondenz mit ${group(people)}`);
   if (places.length) clauses.push(`Ortsbezug ${group(places)}`);
   return clauses.join(' UND ');
 }
