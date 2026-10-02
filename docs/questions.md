@@ -4,6 +4,7 @@
 - 281: Leere sidenote? -- Gregor schaut
 - Zitation -- Gregor macht sich Gedanken
 - 367: Sprachenklaviatur? -- Evtl. mit Abbildung
+- 367: Seitenreihenfolge
 
 ## Gregor
 - 195: horizontal gespiegelt
