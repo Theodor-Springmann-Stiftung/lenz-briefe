@@ -15,58 +15,37 @@ export default defineConfig({
   fonts: [
     {
       provider: fontProviders.local(),
-      name: 'Linux Biolinum',
-      cssVariable: '--font-linux-biolinum',
-      fallbacks: ['Arial', 'sans-serif'],
-      options: {
-        variants: [
-          { src: ['./src/assets/fonts/LinBiolinum_R.otf'], weight: 400, style: 'normal' },
-          { src: ['./src/assets/fonts/LinBiolinum_RI.otf'], weight: 400, style: 'italic' },
-          { src: ['./src/assets/fonts/LinBiolinum_RB.otf'], weight: 700, style: 'normal' },
-          { src: ['./src/assets/fonts/LinBiolinum_RBO.otf'], weight: 700, style: 'italic' },
-        ],
-      },
-    },
-    {
-      provider: fontProviders.local(),
-      name: 'Source Serif',
+      name: 'Source Serif 4',
       cssVariable: '--font-source-serif',
       fallbacks: ['Georgia', 'Times New Roman', 'serif'],
       options: {
         variants: [
           { src: ['./src/assets/fonts/SourceSerif4.ttf'], weight: '200 900', style: 'normal' },
-          {
-            src: ['./src/assets/fonts/SourceSerif4-Italic.ttf'],
-            weight: '200 900',
-            style: 'italic',
-          },
+          { src: ['./src/assets/fonts/SourceSerif4-Italic.ttf'], weight: '200 900', style: 'italic' },
         ],
       },
     },
     {
       provider: fontProviders.local(),
-      name: 'Roboto Slab',
-      cssVariable: '--font-roboto-slab',
-      fallbacks: ['Georgia', 'serif'],
+      name: 'Source Sans 3',
+      cssVariable: '--font-source-sans',
+      fallbacks: ['Arial', 'sans-serif'],
       options: {
         variants: [
-          { src: ['./src/assets/fonts/RobotoSlab.ttf'], weight: '100 900', style: 'normal' },
+          { src: ['./src/assets/fonts/SourceSans3.ttf'], weight: '200 900', style: 'normal' },
+          { src: ['./src/assets/fonts/SourceSans3-Italic.ttf'], weight: '200 900', style: 'italic' },
         ],
       },
     },
     {
       provider: fontProviders.local(),
-      name: 'Cormorant Garamond',
-      cssVariable: '--font-cormorant-garamond',
-      fallbacks: ['Georgia', 'serif'],
+      name: 'Source Code Pro',
+      cssVariable: '--font-source-code',
+      fallbacks: ['monospace'],
       options: {
         variants: [
-          { src: ['./src/assets/fonts/CormorantGaramond.ttf'], weight: '300 700', style: 'normal' },
-          {
-            src: ['./src/assets/fonts/CormorantGaramond-Italic.ttf'],
-            weight: '300 700',
-            style: 'italic',
-          },
+          { src: ['./src/assets/fonts/SourceCodePro.ttf'], weight: '200 900', style: 'normal' },
+          { src: ['./src/assets/fonts/SourceCodePro-Italic.ttf'], weight: '200 900', style: 'italic' },
         ],
       },
     },

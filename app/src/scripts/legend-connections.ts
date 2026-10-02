@@ -39,7 +39,7 @@ if (legend && letter) {
 
   function fontIdentity(element: HTMLElement): string {
     const style = getComputedStyle(element);
-    return `${style.fontFamily}|${style.fontWeight}|${style.fontVariationSettings}`;
+    return `${style.fontFamily}|${style.fontWeight}|${style.fontStretch}|${style.fontVariationSettings}`;
   }
 
   function visibleCircle(

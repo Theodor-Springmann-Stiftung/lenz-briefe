@@ -3,12 +3,31 @@
 Astro renders the index, 374 letter pages and the reading guide. Python and Saxon/C
 transform the source XML before each build; the browser never transforms XML.
 Tailwind defines the theme, and `src/styles/global.css` styles the shared edition
-classes. Source Serif, Linux Biolinum, Roboto Slab and Cormorant Garamond are self-hosted through Astro’s built-in local Fonts API. Font files live in
-`src/assets/fonts/`; their notices live in the repository-root `licenses/fonts/` folder.
-`astro.config.mjs` registers the variants and `Layout.astro` emits font CSS and
-preloads the regular interface and reading fonts. This works entirely with the
-static build, with no font service or browser JavaScript required. Linux Biolinum includes regular, italic, bold and
-bold oblique (used for bold italic), downloaded from the [CTAN Libertine package](https://mirrors.mit.edu/CTAN/fonts/libertine/opentype/).
+classes. Source Serif 4, Source Sans 3, and Source Code Pro are self-hosted through
+Astro’s built-in local Fonts API. Font files live in `src/assets/fonts/`; notices
+live in the repository-root `licenses/fonts/` folder. `astro.config.mjs` registers
+upright and italic variable fonts; `Layout.astro` preloads regular Serif and Sans.
+No external font service or browser JavaScript is required.
+
+The selected font system uses Source Serif 4 for reading, Source Sans 3 for the interface
+and Antiqua (`aq`), and Source Code Pro for code examples. Hands use Regular (400), Medium (500), and Light (300) weights at natural width.
+Antiqua inherits the hand's weight in either nesting order. All three families
+support weights 200–900. Source Serif's optical-size axis supports 8–60 and is
+left automatic; no family supplies a width axis. Hand settings live in
+`src/lib/hand-settings.mjs`.
+
+Archived comparison presets (font binaries and license folders removed; download sources included):
+
+- [Alegreya](../docs/alegreya-font-settings.md), including Regular/Medium/Bold hands.
+- [IBM Plex](../docs/ibm-plex-font-settings.md), including Regular/Medium/Light hands.
+- [Roboto](../docs/roboto-font-settings.md), including the 92% base serif width.
+
+Fonts are from the Adobe Source projects, distributed through
+[Google Fonts](https://github.com/google/fonts). Existing Serif and Sans assets
+retain their original notices and metadata. Newly added Sans italic and Code Pro
+files have pinned source URLs and SHA-256 hashes in `PROVENANCE.json` alongside
+unchanged OFL notices.
+
 
 Third-party package and font notices are indexed in [../licenses/README.md](../licenses/README.md).
 The build copies the complete root `licenses/` folder to `dist/licenses/`, including
@@ -429,11 +448,11 @@ their public URLs and checks their targets; image references remain local for As
 
 ### Letters
 
-- Tagged hands use distinct fonts within each letter, also in sidenotes and the
-  hand key. The first sender in metadata order always uses Source Serif.
-  All other tagged writers receive Roboto Slab or Cormorant Garamond in person-ID order.
-  Untagged text retains Source Serif. The corpus currently needs at most two
-  additional fonts; font assignment fails explicitly if that limit is exceeded.
+- Tagged hands use distinct weights within each letter, also in sidenotes and the
+  hand key. The first sender in metadata order always uses Source Serif 4 Regular.
+  All other tagged writers receive Medium or Light in person-ID order.
+  Untagged text retains Source Serif 4 Regular. The corpus currently needs at most two
+  additional styles; hand assignment fails explicitly if that limit is exceeded.
   When hands are listed, the footer includes the first sender as the base hand,
   even without an explicit hand tag. Its highlight includes untagged letter and
   sidenote text, excluding other hands and editorial notes.

@@ -22,7 +22,7 @@ test('letter 20 lists its implicit base hand before the tagged additional writer
   assert.deepEqual(handKeyRefs(['87'], new Set(['8']), ['87', '8']), ['87', '8']);
 });
 
-test('three co-senders have distinct hands, with the first sender in Source Serif', () => {
+test('three co-senders have distinct hands, with the first sender in Source Serif 4', () => {
   assert.deepEqual(
     [...handFonts(['18', '1', '12'], new Set(['1', '12', '18']))],
     [

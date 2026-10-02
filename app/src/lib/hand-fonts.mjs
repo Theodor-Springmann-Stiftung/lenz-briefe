@@ -10,7 +10,7 @@ export function handKeyRefs(handRefs, senderRefs, documentOrder = []) {
     : [];
 }
 
-/** Assign distinct typefaces to the tagged writers in one letter.
+/** Assign distinct typography styles to the tagged writers in one letter.
  * @param {string[]} handRefs
  * @param {Set<string>} senderRefs
  * @returns {Map<string, string>}
@@ -25,7 +25,7 @@ export function handFonts(handRefs, senderRefs) {
       .map((ref) => {
         if (ref === baseRef) return [ref, 'var(--font-serif)'];
         const font = alternatives[next++];
-        if (!font) throw new Error('This letter needs another distinct handwriting font.');
+        if (!font) throw new Error('This letter needs another distinct handwriting font style.');
         return [ref, font];
       }),
   );

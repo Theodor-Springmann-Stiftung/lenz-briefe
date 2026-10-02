@@ -1,0 +1,15 @@
+{
+  "commit": "9710da1eacb3be272583c3224dcb70f9da6eadbb",
+  "sources": [
+    {
+      "file": "licenses/fonts/SourceSans3/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/sourcesans3/OFL.txt",
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "file": "app/src/assets/fonts/SourceSans3-Italic.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/sourcesans3/SourceSans3-Italic%5Bwght%5D.ttf",
+      "sha256": "39e3ab05ccd7cb94907c31005bb5bec1d5432f0b096a2b782976e217a540eb6c"
+    }
+  ]
+}

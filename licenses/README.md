@@ -22,11 +22,9 @@ The build generates the German public overview at `/edition/lizenzen/` from the 
 
 | Product | License | Files |
 | --- | --- | --- |
-| LinuxBiolinum | OFL-1.1 / GPL-2.0 with font exception (dual-licensed) | [COPYRIGHT-from-font.txt](fonts/LinuxBiolinum/COPYRIGHT-from-font.txt), [LinuxBiolinum-GPL.txt](fonts/LinuxBiolinum/LinuxBiolinum-GPL.txt), [LinuxBiolinum-LICENCE.txt](fonts/LinuxBiolinum/LinuxBiolinum-LICENCE.txt), [OFL-1.1.txt](fonts/LinuxBiolinum/OFL-1.1.txt), [OFL-SOURCE.md](fonts/LinuxBiolinum/OFL-SOURCE.md), [font-metadata.json](fonts/LinuxBiolinum/font-metadata.json), [SOURCE.txt](fonts/LinuxBiolinum/upstream/SOURCE.txt), [GPL.txt](fonts/LinuxBiolinum/upstream/libertine/doc/GPL.txt), [LICENCE.txt](fonts/LinuxBiolinum/upstream/libertine/doc/LICENCE.txt) |
 | SourceSerif4 | OFL-1.1 | [COPYRIGHT-from-font.txt](fonts/SourceSerif4/COPYRIGHT-from-font.txt), [SourceSerif4-OFL.txt](fonts/SourceSerif4/SourceSerif4-OFL.txt), [font-metadata.json](fonts/SourceSerif4/font-metadata.json) |
-| SourceSans3 | OFL-1.1; repository only | [COPYRIGHT-from-font.txt](fonts/SourceSans3/COPYRIGHT-from-font.txt), [SourceSans3-OFL.txt](fonts/SourceSans3/SourceSans3-OFL.txt), [font-metadata.json](fonts/SourceSans3/font-metadata.json) |
-| RobotoSlab | Apache-2.0 | [COPYRIGHT-from-font.txt](fonts/RobotoSlab/COPYRIGHT-from-font.txt), [RobotoSlab-COPYRIGHT.txt](fonts/RobotoSlab/RobotoSlab-COPYRIGHT.txt), [RobotoSlab-LICENSE.txt](fonts/RobotoSlab/RobotoSlab-LICENSE.txt), [font-metadata.json](fonts/RobotoSlab/font-metadata.json) |
-| CormorantGaramond | OFL-1.1 | [COPYRIGHT-from-font.txt](fonts/CormorantGaramond/COPYRIGHT-from-font.txt), [CormorantGaramond-OFL.txt](fonts/CormorantGaramond/CormorantGaramond-OFL.txt), [font-metadata.json](fonts/CormorantGaramond/font-metadata.json) |
+| SourceSans3 | OFL-1.1 | [COPYRIGHT-from-font.txt](fonts/SourceSans3/COPYRIGHT-from-font.txt), [SourceSans3-OFL.txt](fonts/SourceSans3/SourceSans3-OFL.txt), [font-metadata.json](fonts/SourceSans3/font-metadata.json), [OFL.txt](fonts/SourceSans3/OFL.txt), [PROVENANCE.json](fonts/SourceSans3/PROVENANCE.json) |
+| SourceCodePro | OFL-1.1 | [OFL.txt](fonts/SourceCodePro/OFL.txt), [PROVENANCE.json](fonts/SourceCodePro/PROVENANCE.json) |
 
 ## Python runtime dependencies
 

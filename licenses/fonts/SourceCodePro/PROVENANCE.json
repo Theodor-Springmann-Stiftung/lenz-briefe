@@ -1,0 +1,20 @@
+{
+  "commit": "9710da1eacb3be272583c3224dcb70f9da6eadbb",
+  "sources": [
+    {
+      "file": "licenses/fonts/SourceCodePro/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/sourcecodepro/OFL.txt",
+      "sha256": "cb30d3086a8b3ce0b9e3690bf48d6620402b61160bc658076f95180ccd9e9dae"
+    },
+    {
+      "file": "app/src/assets/fonts/SourceCodePro-Italic.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/sourcecodepro/SourceCodePro-Italic%5Bwght%5D.ttf",
+      "sha256": "6db77d25aa7b30eff449305b5c998e475694c74d398421127ea5a60f536413cd"
+    },
+    {
+      "file": "app/src/assets/fonts/SourceCodePro.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/sourcecodepro/SourceCodePro%5Bwght%5D.ttf",
+      "sha256": "b400fc584e10aff25d0e775ce181b4fc1c5ea1b5dc37b81aeb2084375b945790"
+    }
+  ]
+}

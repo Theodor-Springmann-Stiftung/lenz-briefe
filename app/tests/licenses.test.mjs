@@ -26,10 +26,9 @@ test('the generated page covers every locked npm version and classifies browser 
       .map((entry) => entry.product)
       .sort(),
     [
-      'LinuxBiolinum',
       'SourceSerif4',
-      'RobotoSlab',
-      'CormorantGaramond',
+      'SourceSans3',
+      'SourceCodePro',
       'tippy.js',
       '@popperjs/core',
       'tailwindcss',

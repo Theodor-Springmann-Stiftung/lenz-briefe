@@ -6,11 +6,9 @@ import path from 'node:path';
 export const licensesDirectory = path.resolve(process.cwd(), '../licenses');
 const runtimePackages = new Set(['tippy.js', '@popperjs/core', 'tailwindcss', 'remixicon', '@vivliostyle/core', 'fast-diff']);
 const fontNames = {
-  LinuxBiolinum: 'Linux Biolinum',
   SourceSerif4: 'Source Serif 4',
   SourceSans3: 'Source Sans 3',
-  RobotoSlab: 'Roboto Slab',
-  CormorantGaramond: 'Cormorant Garamond',
+  SourceCodePro: 'Source Code Pro',
 };
 
 // The checked-in notice index is the source of truth, including shared notices
@@ -49,7 +47,7 @@ export function licenseEntries(markdown, directory = licensesDirectory) {
     if (!files.length) throw new Error(`No license files for ${product}`);
     const runtime = npm
       ? runtimePackages.has(product)
-      : section === 'Fonts' && product !== 'SourceSans3';
+      : section === 'Fonts' && !cells[1].includes('; repository only');
     let license = cells[npm ? 2 : 1];
     if (product === 'remixicon') license = 'Remix Icon License v1.0';
     else

@@ -74,7 +74,7 @@ const handStyles = [
         : font === 'var(--font-hand)'
           ? 'second'
           : 'base';
-    return `${textSelector}, ${sampleSelector} { font-family:${font}; ${handDeclarations(settings)} font-variant-numeric:lining-nums; }`;
+    return `${textSelector}, ${sampleSelector} { font-family:var(--edition-family, var(--font-serif)); ${handDeclarations(settings)} font-variant-numeric:lining-nums; }`;
   }),
 ].join('\n');
 const sectionLinks = [
