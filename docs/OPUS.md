@@ -272,6 +272,25 @@ Ein Seitenwechsel innerhalb eines Textblocks wird auf der Website mit einem
 vertikalen Strich markiert; an einer Blockgrenze bleibt nur der Seitenanker.
 Beispiel: `ohne-<page index="3"/>dem`. Das ist kein Anlass für einen Absatz.
 
+## Transformierter Text
+
+`tr` umschließt einen transformierten Textblock und ist überall zulässig, wo
+`ul` erlaubt ist. Das Pflichtattribut `rot` gibt die Drehung im Uhrzeigersinn
+in Grad an; erlaubt sind Zahlen von 0 bis einschließlich 359, auch Dezimalwerte.
+Der Block darf Text und die gemeinsame Textauszeichnungsgruppe enthalten,
+einschließlich Zeilenwechseln und Ausrichtung.
+
+```xml
+<sidenote page="1" pos="left" annotation="am linken Rand, vertikal">
+  <tr rot="270">Randtext.<line/>Weitere Zeile.</tr>
+</sidenote>
+```
+
+0 bedeutet keine Drehung, 90 eine Vierteldrehung im Uhrzeigersinn, 180 eine
+halbe Drehung und 270 eine Vierteldrehung gegen den Uhrzeigersinn. Bei der
+Übernahme der geprüften Randnotizen bleiben Notizen ohne Drehung (0) oder ohne
+zugeordnetes Ergebnis unverändert; sonst wird ihr gesamter Inhalt umschlossen.
+
 ## Randnotizen und Hände
 
 | Element | Bedeutung |
@@ -458,7 +477,7 @@ nicht direkt in `letterText`, `app` oder gewöhnlichen Textauszeichnungen erlaub
 Die XSD-Gruppe `inlineElements` enthält genau diese Elemente (die Bezeichnung
 „inline“ bedeutet hier nicht, dass die spätere HTML-Darstellung immer inline ist):
 
-`line`, `vspace`, `align`, `aq`, `ul`, `sup`, `sub`, `tul`, `highlight`, `undo`,
+`line`, `vspace`, `align`, `aq`, `ul`, `tr`, `sup`, `sub`, `tul`, `highlight`, `undo`,
 `address`, `insertion`, `del`, `hand`, `note`, `tl`, `dul`, `fn`, `pe`, `anchor`,
 `nr`, `b`, `it`, `gr`, `fr`, `hb`, `subst`, `tabs`, `er`, `ink`, `large`, `ru`.
 
@@ -471,7 +490,7 @@ Die XSD-Gruppe `inlineElements` enthält genau diese Elemente (die Bezeichnung
 | `app` | Text, die gemeinsame Gruppe und `page`. |
 | `align` | Text und die gemeinsame Gruppe außer direkten `line`, `vspace` und `undo`. Zeilenwechsel gegebenenfalls außerhalb von `align` setzen. |
 | `subst` | Mindestens ein `del`, gefolgt von mindestens einem `insertion`. |
-| `undo` | Mindestens ein `del`, `ul`, `sup`, `sub`, `tul` oder `dul`. |
+| `undo` | Mindestens ein `del`, `ul`, `tr`, `sup`, `sub`, `tul` oder `dul`. |
 | `page`, `line`, `vspace` | Leer. |
 | `date`, `person`, `location`, `isProofread`, `isDraft` | Text und `wwwlink`; keine allgemeine Brieftextformatierung. |
 

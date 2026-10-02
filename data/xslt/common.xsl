@@ -690,6 +690,11 @@
     </span>
   </xsl:template>
 
+  <!-- Preserve source rotation metadata; visual rotation is a separate presentation concern. -->
+  <xsl:template match="lb:tr">
+    <span class="tr" data-rot="{@rot}"><xsl:apply-templates /></span>
+  </xsl:template>
+
   <xsl:template match="lb:aq">
     <span class="aq" lang="la"><xsl:apply-templates /></span>
   </xsl:template>

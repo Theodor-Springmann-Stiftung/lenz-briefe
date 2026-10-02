@@ -47,6 +47,15 @@ class FlowContractTests(unittest.TestCase):
         self.assertEqual(len(pages), 1)
         return pages[0]
 
+    def test_transformed_text_preserves_rotation_and_line_flow(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            with self.subTest(kind=kind):
+                tree = self.render('<tr rot="270">First<ul>word</ul><line/>Second</tr>', kind)
+                self.assertEqual([line.text_content() for line in self.lines(tree)], ['Firstword', 'Second'])
+                wrappers = tree.xpath('.//span[@class="tr"]')
+                self.assertEqual([node.get('data-rot') for node in wrappers], ['270', '270'])
+                self.assertEqual(wrappers[0].xpath('./span[@class="ul"]/text()'), ['word'])
+
     def test_triple_underline_preserves_text_and_nested_formatting_across_lines(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:
             with self.subTest(kind=kind):

@@ -6,6 +6,36 @@ from transform_python.common import XSD_DIR, XSD_MAP
 
 
 class SeparateDocumentSchemaTests(unittest.TestCase):
+    def test_transformed_text_rotation_range_and_content(self):
+        for schema_name, wrapper in [
+            ('briefe.xsd', '<document><letterText letter="1"><page index="1"/>{}</letterText></document>'),
+            ('traditions.xsd', '<traditions><letterTradition letter="1"><app ref="4">{}</app></letterTradition></traditions>'),
+        ]:
+            schema = etree.XMLSchema(etree.parse(str(XSD_DIR / schema_name)))
+            for value, valid in [('0', True), ('1', True), ('45.5', True), ('90', True),
+                                 ('180', True), ('270', True), ('359', True),
+                                 ('-1', False), ('360', False), ('359.1', False),
+                                 ('NaN', False), ('', False), (None, False)]:
+                with self.subTest(schema=schema_name, rotation=value):
+                    attr = '' if value is None else f' rot="{value}"'
+                    body = wrapper.format(f'<tr{attr}>Before<ul>underlined</ul><line/>After<align pos="right">Aligned</align></tr>')
+                    doc = etree.fromstring(f'<opus xmlns="https://lenz-archiv.de">{body}</opus>')
+                    self.assertEqual(schema.validate(doc), valid)
+
+    def test_transformed_text_allowed_everywhere_ul_is_referenced(self):
+        ns = {'xs': 'http://www.w3.org/2001/XMLSchema'}
+        for path in XSD_DIR.glob('*.xsd'):
+            tree = etree.parse(str(path))
+            for node in tree.xpath('//xs:element[@ref="ul" or @ref="lenz:ul"]', namespaces=ns):
+                self.assertTrue(node.getparent().xpath('./xs:element[@ref="tr" or @ref="lenz:tr"]', namespaces=ns), str(path))
+        schema = etree.XMLSchema(etree.parse(str(XSD_DIR / 'briefe.xsd')))
+        for context in ['<ul>{}</ul>', '<align pos="left">{}</align>', '<undo>{}</undo>',
+                        '<sidenote page="1" pos="left">{}</sidenote>', '<hand ref="1">{}</hand>']:
+            with self.subTest(context=context):
+                content = context.format('<tr rot="270">Text<ul>emphasis</ul></tr>')
+                schema.assertValid(etree.fromstring('<opus xmlns="https://lenz-archiv.de"><document>'
+                    '<letterText letter="1"><page index="1"/>' + content + '</letterText></document></opus>'))
+
     def test_sidenote_inpos_type_is_optional_and_restricted(self):
         schema = etree.XMLSchema(etree.parse(str(XSD_DIR / 'briefe.xsd')))
         for attribute, valid in [('', True), (' type="inpos"', True), (' type="other"', False)]:

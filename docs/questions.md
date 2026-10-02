@@ -6,6 +6,10 @@
 - 367: Sprachenklaviatur? -- Evtl. mit Abbildung
 - 367: Seitenreihenfolge
 
+
+- 249: am oberen Rand der zweiten Seite, vertikal
+- 349: <sidenote pos=\"top\" page=\"2\" annotation=\"am oberen Rand der zweiten Seite, horizontal gespiegelt und eingerahmt\">es ist einer der vorzüglichsten Menschen, der Gouver. Siewers. Er wohnte beym General B.</sidenote>
+
 ## Gregor
 - 195: horizontal gespiegelt
 - <letterTradition letter="359">: we need a tag to enclose letter text in trad
