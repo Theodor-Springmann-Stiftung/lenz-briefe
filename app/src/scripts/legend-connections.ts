@@ -29,7 +29,7 @@ if (legend && letter) {
     undo: '.undo',
     note: '.note',
     tl: '.tl',
-    tr: '.tr-label, .sidenote-position[data-rotatable]',
+    tr: '.tr-label',
     nr: '.nr',
     vspace: '.lb-vspace:not([data-presentational="true"])',
     page: '.page-anchor[data-break="inline"], .page-number a',
@@ -145,7 +145,7 @@ if (legend && letter) {
     const tag = row.dataset.legendTag;
     let selector = '';
     if (tag === 'tr') {
-      const rotation = target.dataset.rot || target.dataset.rotation;
+      const rotation = target.dataset.rot;
       return [...example.querySelectorAll<HTMLElement>('.tr-label')].find(
         (label) => label.dataset.rot === rotation,
       ) || example;

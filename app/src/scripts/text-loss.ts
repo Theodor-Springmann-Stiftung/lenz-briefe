@@ -1,3 +1,6 @@
+import { registerLayoutTask } from './reading-layout';
+import { textLossRightEdge } from '../lib/text-loss-placement.mjs';
+
 const footer = document.querySelector<HTMLElement>('[data-text-loss-footer] .apparatus-text');
 const markers = document.querySelectorAll<HTMLElement>('.letter-body .tl, .sidenote .tl');
 const blocks = new Set<HTMLElement>();
@@ -27,4 +30,90 @@ if (footer && markers.length) {
     target.addEventListener('focusin', highlight);
     target.addEventListener('focusout', highlight);
   }
+}
+
+// A single visual copy follows the active loss. The original apparatus entry
+// remains the accessible description and the source of the explanation text.
+const body = document.querySelector<HTMLElement>('.letter-body');
+if (footer?.textContent?.trim() && body && markers.length) {
+  const explanation = document.createElement('div');
+  explanation.className = 'text-loss-reason';
+  const reasonText = document.createElement('span');
+  reasonText.textContent = footer.innerText.trim();
+  explanation.append(reasonText);
+  explanation.setAttribute('aria-hidden', 'true');
+  document.body.append(explanation);
+  let hovered: HTMLElement | null = null;
+  let focused: HTMLElement | null = null;
+  let dismissed = false;
+
+  function position() {
+    const marker = dismissed ? null : hovered || focused;
+    if (!marker || !marker.getClientRects().length) {
+      return () => explanation.classList.remove('is-visible');
+    }
+    const anchor = marker.getBoundingClientRect();
+    const headerBottom = document.querySelector('.site-header')?.getBoundingClientRect().bottom ?? 0;
+    if (anchor.bottom < Math.max(0, headerBottom) || anchor.top > window.innerHeight) {
+      return () => explanation.classList.remove('is-visible');
+    }
+    const text = body!.getBoundingClientRect();
+    const obstacles = [...document.querySelectorAll<HTMLElement>(
+      '.page-margin .page-number a, .page-margin .tr-label, .letter-body div.tr > .tr-label',
+    )].filter((element) => element.getClientRects().length)
+      .map((element) => element.getBoundingClientRect());
+    const padding = 12;
+    let right = text.left - 20;
+    // Small baseline correction for the smaller margin text.
+    let top = anchor.top + 3;
+    // Wrapping can expose another obstacle, so narrow monotonically until stable.
+    for (let pass = 0; pass <= obstacles.length + 1; pass++) {
+      explanation.style.width = `${Math.max(1, Math.min(180, right - padding))}px`;
+      const height = explanation.getBoundingClientRect().height;
+      const next = textLossRightEdge(right, top, height, obstacles);
+      if (next === right) break;
+      right = next;
+    }
+    let left = right - explanation.getBoundingClientRect().width;
+    if (right - padding < 80) {
+      // Narrow screens have no reading margin. Keep the reason above the loss,
+      // clear of its line (including inline page numbers and rotation marks).
+      explanation.style.width = `${Math.min(240, window.innerWidth - 2 * padding)}px`;
+      left = Math.max(padding, Math.min(anchor.left, window.innerWidth - explanation.offsetWidth - padding));
+      top = anchor.top - explanation.offsetHeight - 12;
+      if (top < Math.max(padding, headerBottom + padding)) top = anchor.bottom + 12;
+    }
+    return () => {
+      explanation.style.left = `${left}px`;
+      explanation.style.top = `${top}px`;
+      explanation.classList.add('is-visible');
+    };
+  }
+  const schedule = registerLayoutTask(position, { observe: [body], scroll: true });
+  const markerIn = (block: HTMLElement, target: EventTarget | null) => {
+    const direct = target instanceof Element ? target.closest<HTMLElement>('.tl') : null;
+    return direct && block.contains(direct) ? direct
+      : block.matches('.tl') ? block : block.querySelector<HTMLElement>('.tl');
+  };
+  for (const block of blocks) {
+    block.addEventListener('mouseenter', (event) => {
+      hovered = markerIn(block, event.target);
+      dismissed = false;
+      schedule();
+    });
+    block.addEventListener('mouseover', (event) => {
+      const marker = markerIn(block, event.target);
+      if (marker !== hovered) { hovered = marker; dismissed = false; schedule(); }
+    });
+    block.addEventListener('mouseleave', () => { hovered = null; schedule(); });
+    block.addEventListener('focusin', (event) => {
+      focused = markerIn(block, event.target);
+      dismissed = false;
+      schedule();
+    });
+    block.addEventListener('focusout', () => { focused = null; schedule(); });
+  }
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') { dismissed = true; schedule(); }
+  });
 }

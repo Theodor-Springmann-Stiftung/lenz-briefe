@@ -92,8 +92,8 @@
   .print-hand-table > tbody > tr { break-inside:auto; page-break-inside:auto; }
   .print-hand-table > tbody > tr > td { border:0; padding:0; vertical-align:baseline; }
   .print-hand-table > tbody > tr > .print-hand-cell { padding-left:var(--print-hand-gap); font:400 7pt/1.25 var(--font-sans); font-variation-settings:normal; color:#444; text-align:left; overflow-wrap:anywhere; }
-  .print-hand-cell > span { display:block; margin-bottom:1mm; }
-  .letter-body .print-tab-table :is(.hand, .hand-base-start)[data-hand-name]::before { content:attr(data-hand-name); float:right; clear:right; width:calc(var(--print-transcription-inset) - var(--print-hand-gap)); margin:0 calc(0mm - var(--print-transcription-inset) - var(--print-tab-hand-shift,0mm)) 1mm calc(var(--print-hand-gap) + var(--print-tab-hand-shift,0mm)); font:400 7pt/1.25 var(--font-sans); font-variation-settings:normal; color:#444; text-align:left; overflow-wrap:anywhere; }
+  .print-hand-cell > span { display:block; margin-bottom:1mm; position:relative; top:3px; }
+  .letter-body .print-tab-table :is(.hand, .hand-base-start)[data-hand-name]::before { content:attr(data-hand-name); position:relative; top:3px; float:right; clear:right; width:calc(var(--print-transcription-inset) - var(--print-hand-gap)); margin:0 calc(0mm - var(--print-transcription-inset) - var(--print-tab-hand-shift,0mm)) 1mm calc(var(--print-hand-gap) + var(--print-tab-hand-shift,0mm)); font:400 7pt/1.25 var(--font-sans); font-variation-settings:normal; color:#444; text-align:left; overflow-wrap:anywhere; }
   .marginalia, html.js .reading-layout .marginalia { position:static; height:auto !important; margin:6mm 0 0; padding:0 var(--print-transcription-inset) 0 0; opacity:1 !important; visibility:visible !important; }
   .marginalia:not(:has(.margin-note)) { display:none; }
   .marginalia .marginal-item { position:static; margin:0 0 4mm; transform:none; }

@@ -17,6 +17,7 @@
   --color-rule: #dedfda;
 }
 @layer base {
+  html { font-variant-ligatures:common-ligatures contextual; }
   html { @apply bg-paper text-ink font-sans; scroll-behavior:auto; scroll-padding-top:calc(var(--site-header-height, 5rem) + 1rem); }
   body { --floating-inset:clamp(2rem, 5vw, 4.5rem); --floating-bottom:2.5rem; margin:0; min-height:100dvh; display:flex; flex-direction:column; }
   body > main { flex:1 0 auto; width:100%; }
@@ -360,7 +361,7 @@
   .apparatus-entry > h2 { @apply font-sans text-ink font-bold not-italic; font-size:1rem; line-height:1.55; grid-column:1; margin:0; text-align:right; overflow-wrap:break-word; }
   .apparatus-text { grid-column:2; min-width:0; font-size:1rem; }
   .apparatus-xml-text { max-width:75ch; }
-  .citation-access { display:block; }
+  .citation-access { display:inline; }
   .citation-url { text-decoration:underline dotted; text-underline-offset:.15em; }
   .apparatus > p { grid-column:2; }
   .hand-key ul { @apply flex flex-wrap gap-x-6 gap-y-1; align-items:baseline; }
@@ -509,11 +510,12 @@ button.hand-range-trigger { font:inherit; text-align:inherit; }
 .apparatus .edition-text { @apply font-sans; line-height:1.55; }
 .margin-note .edition-text, .unplaced-note .edition-text, .inpos-note .edition-text { line-height:1.45; }
 /* Only the rotation label triggers its tooltip; the passage stays upright. */
-:is(.edition-text, .page-margin) .tr-label { color:var(--color-muted); font-family:var(--font-sans); font-size:.7em; font-stretch:normal; font-weight:400; font-style:normal; font-variation-settings:normal; line-height:1.3; white-space:nowrap; user-select:none; cursor:help; }
-:is(.edition-text, .page-margin) .tr-label::before { content:'↻ ' attr(data-rot) '°'; }
-:is(.edition-text, .page-margin) .tr-label[data-rot="90"]::before { content:'↷ 90°'; }
-:is(.edition-text, .page-margin) .tr-label[data-rot="180"]::before { content:'⟳ 180°'; }
-:is(.edition-text, .page-margin) .tr-label[data-rot="270"]::before { content:'↶ 90°'; }
+:is(.edition-text, .page-margin, .sidenote-description) .tr-label { color:var(--color-muted); font-family:var(--font-sans); font-size:.7em; font-stretch:normal; font-weight:400; font-style:normal; font-variation-settings:normal; line-height:1.3; white-space:nowrap; user-select:none; cursor:help; }
+:is(.edition-text, .page-margin, .sidenote-description) .tr-label::before { content:'↻ ' attr(data-rot) '°'; }
+:is(.edition-text, .page-margin, .sidenote-description) .tr-label[data-rot="90"]::before { content:'↷ 90°'; }
+:is(.edition-text, .page-margin, .sidenote-description) .tr-label[data-rot="180"]::before { content:'⟳ 180°'; }
+:is(.edition-text, .page-margin, .sidenote-description) .tr-label[data-rot="270"]::before { content:'↶ 90°'; }
+.sidenote-description .tr-label { display:inline-block; margin-inline-start:.4em; font-size:1em; color:inherit; }
 .edition-text div.tr { margin-block:.6em; padding-inline-start:.75em; border-inline-start:1px solid var(--color-rule); }
 .edition-text div.tr > .tr-label { display:block; width:max-content; margin-block-end:.2em; text-align:left; letter-spacing:.025em; }
 .edition-text span.tr { border-bottom:1px dashed var(--color-rule); }
@@ -596,6 +598,11 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 .edition-text .tl:is(:hover, :focus-visible, .text-loss-active) { background:rgb(52 88 117 / .065); box-shadow:0 0 0 3px rgb(52 88 117 / .065); }
 @media print { .edition-text .tl { outline:none !important; background:none !important; box-shadow:none !important; } }
 [data-text-loss-footer] .apparatus-text { width:fit-content; }
+.text-loss-reason { position:fixed; z-index:20; left:0; top:0; box-sizing:border-box; font:400 .75rem/1.4 var(--font-sans); color:var(--color-ink); text-align:right; overflow-wrap:anywhere; pointer-events:none; visibility:hidden; opacity:0; transition:opacity .15s ease; }
+.text-loss-reason > span { background:rgb(52 88 117 / .065); box-shadow:0 0 0 3px rgb(52 88 117 / .065); border-radius:3px; box-decoration-break:clone; }
+.text-loss-reason.is-visible { visibility:visible; opacity:1; }
+@media (prefers-reduced-motion:reduce) { .text-loss-reason { transition:none; } }
+@media print { .text-loss-reason { display:none !important; } }
 .edition-text strong { @apply font-bold; }
 .edition-text em { @apply italic; }
 .edition-text .large { font-size:1.25em; line-height:0; }

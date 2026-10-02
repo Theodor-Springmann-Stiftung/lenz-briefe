@@ -8,4 +8,4 @@ inMenu: false
 
 # Zitierempfehlung
 
-[Verfasser], [Absendeort], an [Empfänger], [Empfangsort], [Datum], in: Jakob Michael Reinhold Lenz: Kritische Briefausgabe, hrsg. v. Gregor Babelotzky (Heidelberg 2026ff.). [URL, abgerufen am DATUM]
+[Verfasser], [Absendeort], an [Empfänger], [Empfangsort], [Datum], in: Jakob Michael Reinhold Lenz: Kritische Briefausgabe, hrsg. v. Gregor Babelotzky (Heidelberg 2026ff). [URL, abgerufen am DATUM]

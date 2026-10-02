@@ -43,7 +43,7 @@ test('follows the citation pattern and ignores received dates', () => {
   };
   assert.equal(
     citationFor(letter),
-    'Lenz, Dorpat, an Gadebusch, Dorpat, 02.01.1765, in: Jakob Michael Reinhold Lenz: Kritische Briefausgabe, hrsg. v. Gregor Babelotzky (Heidelberg 2026ff.).',
+    'Lenz, Dorpat, an Gadebusch, Dorpat, 02.01.1765, in: Jakob Michael Reinhold Lenz: Kritische Briefausgabe, hrsg. v. Gregor Babelotzky (Heidelberg 2026ff).',
   );
 });
 test('handles missing places and dates without empty punctuation', () => {

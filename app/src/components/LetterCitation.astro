@@ -12,7 +12,7 @@ const url = new URL(letterUrl(letter.letter), Astro.site ?? Astro.url.origin).hr
 <div class="apparatus-entry" id="zitieren">
   <h2><span class="screen-only">Zitation</span><span class="print-only">Quelle</span></h2>
   <p class="edition-text apparatus-text apparatus-xml-text">
-    {citationFor(letter)}
+    {citationFor(letter)}{' '}
     <span class="citation-access">[<a class="citation-url" href={url}>{url}</a>, abgerufen am{' '}
       <time data-citation-access>DATUM</time>]</span>
   </p>

@@ -300,7 +300,10 @@ Die Edition zeigt den Text aufrecht: Ein dezentes Pfeil-/Winkelschild kennzeichn
 die ursprüngliche Schreibrichtung; Blöcke erhalten zusätzlich eine seitliche
 Linie. Im Haupttext steht die Winkelangabe links außerhalb dieser Linie auf
 Höhe der ersten Textzeile. Inline-Passagen im Haupttext sind dezent punktiert unterstrichen. In Randnotizen
-entfallen zusätzliche Linien, Einrückungen und Winkelangaben im Text. Stattdessen
+entfallen zusätzliche Linien, Einrückungen und Winkelangaben im Transkriptionstext.
+Pfeil und Gradzahl stehen nach der Anmerkung zur Randnotiz. Die Verbindungslinien
+der Kurzlegende zeigen für die Schreibrichtung auf diese Kennzeichnung, nicht
+auf das Positionssymbol. Als zusätzliche Verständnishilfe
 springt das Positionssymbol beim Berühren der Randnotiz oder beim Tastaturfokus
 kurz hoch und dreht sich dabei in die Originalrichtung (270° als −90°).
 Es trägt keinen zusätzlichen Drehpfeil.

@@ -9,12 +9,23 @@ interface Props {
 }
 const { note, hands } = Astro.props;
 const { labels } = prepareHandControls(note.html, hands);
+const rotations = sidenoteRotations(note.html);
 ---
 
-<SidenotePosition position={note.pos} rotations={sidenoteRotations(note.html)} />
+<SidenotePosition position={note.pos} rotations={rotations} />
 <div class="edition-text" set:html={note.html} />
 <div class="sidenote-details">
-  {note.annotation && <p class="note-annotation sidenote-description">{note.annotation}</p>}
+  {(note.annotation || rotations.length > 0) && (
+    <p class="note-annotation sidenote-description">
+      {note.annotation}
+      {rotations.map((angle) => {
+        const description = angle === 270 ? '90° gegen den Uhrzeigersinn gedreht'
+          : angle === 180 ? '180° gedreht' : `${angle}° im Uhrzeigersinn gedreht`;
+        return <span class="tr-label" data-rot={angle} data-tooltip={description}
+          tabindex="0" aria-label={description} />;
+      })}
+    </p>
+  )}
   <slot />
   {labels.length > 0 && (
     <p class="note-annotation">

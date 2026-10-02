@@ -37,6 +37,6 @@ export function citationFor(letter: Letter): string {
     [parties(sent), places(sent), `an ${parties(received)}`, places(received), dates]
       .filter(Boolean)
       .join(', ') +
-    ', in: Jakob Michael Reinhold Lenz: Kritische Briefausgabe, hrsg. v. Gregor Babelotzky (Heidelberg 2026ff.).'
+    ', in: Jakob Michael Reinhold Lenz: Kritische Briefausgabe, hrsg. v. Gregor Babelotzky (Heidelberg 2026ff).'
   );
 }
