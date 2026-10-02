@@ -23,7 +23,7 @@
   body > header, body > footer { flex-shrink:0; }
   @media screen {
     body:has(> .site-shell > :is(.index-intro, .letter-content)) {
-      --page-tint:#f2f7f1;
+      --page-tint:#f6f9f5;
       background:var(--page-tint);
     }
   }
@@ -134,16 +134,14 @@
       clip-path:inset(0 -100vmax);
     }
     .letter-reading-panel {
+      --letter-text-space:clamp(4rem, 12vw, 10rem);
       display:flex;
       flex-direction:column;
-      padding:1.25rem;
+      padding:1.25rem 1.25rem var(--letter-text-space);
       border:1px solid #a8b2a8;
       background:#fff;
     }
-    .letter-reading-panel > .reading-toolbar { padding-top:0; margin-bottom:6rem; }
-    @media (width < 1100px) {
-      .letter-reading-panel > .reading-toolbar { margin-bottom:2rem; }
-    }
+    .letter-reading-panel > .reading-toolbar { padding-top:0; margin-bottom:var(--letter-text-space); }
     @media (width < 640px) {
       .site-shell:has(> .index-intro) { --catalog-inset:.75rem; padding-inline:.75rem; }
       .catalog-section > :is(.catalog-letter-list, .search-results) { padding:.5rem; }
@@ -804,9 +802,17 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   }
   .letter-menu-extension :is(.correspondence-list, .letter-print-button) { background:#f1f4f0; }
   .letter-menu-extension > .letter-toolbar {
+    justify-content:flex-end;
     margin-inline:auto;
     padding:1rem .75rem 1rem;
     font-size:1.125rem;
+  }
+  .letter-menu-extension .letter-navigation { margin-left:0; }
+  .letter-menu-extension .letter-context-tools::after {
+    content:'';
+    flex-shrink:0;
+    height:1rem;
+    border-left:1px solid #a8b2a8;
   }
   .letter-content > .detail-header-group { margin-block:0; }
   @media (width >= 640px) {
@@ -824,11 +830,6 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
       grid-template-columns:subgrid;
       grid-template-rows:auto 1fr auto;
       column-gap:3rem;
-    }
-    .letter-menu-extension > .letter-toolbar {
-      width:75.8625%;
-      max-width:66.9375rem;
-      padding-inline:0;
     }
   }
 }
