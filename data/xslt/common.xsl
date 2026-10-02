@@ -10,6 +10,33 @@
   <xsl:mode on-no-match="shallow-skip" />
   <xsl:mode name="lb:classify-pages" on-no-match="shallow-copy" />
   <xsl:mode name="lb:prepare" on-no-match="shallow-copy" />
+  <xsl:mode name="lb:rotation-labels" on-no-match="shallow-copy" />
+  <xsl:template match="lb:tr" mode="lb:prepare">
+    <xsl:copy>
+      <xsl:copy-of select="@* except @data-tr-id" />
+      <xsl:attribute name="data-tr-id" select="if (@data-tr-id) then @data-tr-id else generate-id()" />
+      <xsl:apply-templates mode="lb:prepare" />
+    </xsl:copy>
+  </xsl:template>
+
+  <!-- Line and alignment normalization can split one source transform into
+       several spans. Label its first rendered fragment only. -->
+  <xsl:template match="*" mode="lb:rotation-labels">
+    <xsl:copy copy-namespaces="no">
+      <xsl:copy-of select="@*" />
+      <xsl:apply-templates mode="lb:rotation-labels" />
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="span[@class='tr'][@data-tr-id]" mode="lb:rotation-labels">
+    <xsl:copy copy-namespaces="no">
+      <xsl:copy-of select="@* except @data-tr-continuation" />
+      <xsl:if test="preceding::span[@class='tr'][@data-tr-id = current()/@data-tr-id]">
+        <xsl:attribute name="data-tr-continuation">true</xsl:attribute>
+      </xsl:if>
+      <xsl:apply-templates mode="lb:rotation-labels" />
+    </xsl:copy>
+  </xsl:template>
+
   <xsl:template match="lb:hand" mode="lb:prepare">
     <xsl:copy>
       <xsl:copy-of select="@*" />
@@ -31,9 +58,14 @@
     <xsl:variable name="classified" as="element(t:flow)">
       <xsl:apply-templates select="$flow" mode="lb:classify-pages" />
     </xsl:variable>
-    <xsl:apply-templates select="$classified/node()">
-      <xsl:with-param name="page-id-prefix" select="$page-id-prefix" tunnel="yes" />
-    </xsl:apply-templates>
+    <xsl:variable name="rendered" as="element(t:rendered)">
+      <t:rendered>
+        <xsl:apply-templates select="$classified/node()">
+          <xsl:with-param name="page-id-prefix" select="$page-id-prefix" tunnel="yes" />
+        </xsl:apply-templates>
+      </t:rendered>
+    </xsl:variable>
+    <xsl:apply-templates select="$rendered/node()" mode="lb:rotation-labels" />
   </xsl:template>
 
   <xsl:function name="lb:has-meaningful-content" as="xs:boolean">
@@ -712,7 +744,7 @@
   </xsl:template>
 
   <xsl:template match="t:tr">
-    <div class="tr" data-rot="{@rot}">
+    <div class="tr" data-rot="{@rot}" title="Schreibrichtung im Original: {@rot}° im Uhrzeigersinn. Der Text ist hier aufrecht wiedergegeben.">
       <xsl:if test="@alignment"><xsl:attribute name="style" select="concat('text-align: ', @alignment)" /></xsl:if>
       <xsl:apply-templates />
     </div>
@@ -720,7 +752,7 @@
 
   <!-- Text-first transformations remain phrasing content across normalized lines. -->
   <xsl:template match="lb:tr">
-    <span class="tr" data-rot="{@rot}"><xsl:apply-templates /></span>
+    <span class="tr" data-rot="{@rot}" data-tr-id="{@data-tr-id}" title="Schreibrichtung im Original: {@rot}° im Uhrzeigersinn. Der Text ist hier aufrecht wiedergegeben."><xsl:apply-templates /></span>
   </xsl:template>
 
   <xsl:template match="lb:aq">
