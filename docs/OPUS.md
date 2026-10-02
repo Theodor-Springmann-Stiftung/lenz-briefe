@@ -296,6 +296,19 @@ mit `line` (Leerraum davor wird ignoriert), entsteht ein zusammenhängender
 `div.tr`-Block. Die Zeilen darin behalten `tab` und `type`. Beginnt `tr` mit
 Text oder anderer Textauszeichnung, wird es als `span.tr` innerhalb des
 Textflusses exportiert. Beide Formen tragen den Winkel als `data-rot`.
+Die Edition zeigt den Text aufrecht: Ein dezentes Pfeil-/Winkelschild kennzeichnet
+die ursprüngliche Schreibrichtung; Blöcke erhalten zusätzlich eine seitliche
+Linie. Im Haupttext steht die Winkelangabe links außerhalb dieser Linie auf
+Höhe der ersten Textzeile. Inline-Passagen im Haupttext sind dezent punktiert unterstrichen. In Randnotizen
+entfallen zusätzliche Linien, Einrückungen und Winkelangaben im Text. Stattdessen
+springt das Positionssymbol beim Berühren der Randnotiz oder beim Tastaturfokus
+kurz hoch und dreht sich dabei in die Originalrichtung (270° als −90°).
+Es trägt keinen zusätzlichen Drehpfeil.
+Der Winkel bleibt im Tooltip und zugänglichen Namen erhalten. Bei mehreren
+verschiedenen Winkeln zeigt das Symbol diese im Tooltip und dreht sich nicht.
+Reduzierte Bewegung und Druck deaktivieren die Drehung. Der Winkel wird im
+Uhrzeigersinn gemessen. Die Kennzeichnung wird per CSS erzeugt und verändert
+weder den Transkriptionstext noch dessen Suche; `rot="0"` bleibt unmarkiert.
 
 ## Randnotizen und Hände
 
@@ -420,7 +433,7 @@ angegeben, erlauben sie gemischten Text mit den gemeinsamen Textauszeichnungen.
 | `ink` | Mit Tinte geschriebener Text; im Brieftext dunkelblau. |
 | `pe` | Bleistift; im Brieftext grau. |
 | `note` | Editorische Anmerkung in eckigen Klammern; im Brieftext grau, alleinstehend zentriert. |
-| `tl` | Textverlust; gepunkteter Kreis als Kennzeichnung. |
+| `tl` | Textverlust; gepunkteter Kreis als Kennzeichnung. Hover oder Tastaturfokus auf der Erklärung im Textverlust-Apparat hebt alle Verlustmarker hervor. Hover auf einem Textblock hebt dessen Marker hervor; keine Tooltips oder linke Randnotiz. |
 | `nr` | Unentzifferte Stelle; bei `extent="1"` ein umgekehrtes Fragezeichen (¿), bei größerem Umfang zwei umgekehrte Fragezeichen mit entsprechendem Abstand. Große leere Bereiche können auf der Website umbrechen. |
 | `address` | Adresse; transparenter Container ohne eigene Gestaltung. |
 | `fn` | Fußnotenstelle oder Fußnotentext im Textfluss; Zuordnung über `index`. |

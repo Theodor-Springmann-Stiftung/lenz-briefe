@@ -3,7 +3,8 @@ import source from '../assets/SidenotePos.svg?raw';
 import { renderSidenotePosition } from '../lib/sidenote-position.mjs';
 interface Props {
   position: string;
+  rotations?: number[];
 }
 ---
 
-<Fragment set:html={renderSidenotePosition(source, Astro.props.position)} />
+<Fragment set:html={renderSidenotePosition(source, Astro.props.position, Astro.props.rotations)} />

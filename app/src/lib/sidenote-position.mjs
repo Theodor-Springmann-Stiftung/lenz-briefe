@@ -1,6 +1,8 @@
+import { parseFragment } from 'parse5';
+
 // Shared by letter sidenotes and Markdown asset references.
-/** @param {string} source @param {string} position @returns {string} */
-export function renderSidenotePosition(source, position) {
+/** @param {string} source @param {string} position @param {number[]} rotations @returns {string} */
+export function renderSidenotePosition(source, position, rotations = []) {
   const key = position.trim().toLowerCase().replace(/\s+/g, '-');
   const labels = {
     top: 'oben',
@@ -32,7 +34,15 @@ export function renderSidenotePosition(source, position) {
         ? `<g${attributes} data-layer="${layer}" data-active="${layer === 'page' || layer === key}">`
         : group;
     });
-  return `<span class="sidenote-position" role="img" aria-label="Randnotiz: ${labels[key]}" title="Randnotiz: ${labels[key]}" data-position="${key}">${svg}</span>`;
+  const angles = [...new Set(rotations)].filter((angle) => Number.isFinite(angle) && angle > 0 && angle <= 359);
+  const angle = angles.length === 1 ? angles[0] : null;
+  const turn = angle !== null && angle > 180 ? angle - 360 : angle;
+  const rotationTooltip = angles.map((value) => value === 270 ? '90° gegen den Uhrzeigersinn gedreht' : value === 180 ? '180° gedreht' : `${value}° im Uhrzeigersinn gedreht`).join(', ');
+  const description = `Randnotiz: ${labels[key]}${angles.length ? `. Schreibrichtung im Original: ${angles.map((value) => value === 270 ? '90° gegen den Uhrzeigersinn' : value === 180 ? '180°' : `${value}° im Uhrzeigersinn`).join(', ')}.` : ''}`;
+  const rotationAttributes = angles.length
+    ? ` data-tooltip="${rotationTooltip}" tabindex="0" data-rotatable="true"${angle !== null ? ` data-rotation="${angle}" style="--sidenote-turn: ${turn}deg"` : ''} data-turn-direction="${turn !== null && turn < 0 ? 'counterclockwise' : 'clockwise'}"`
+    : '';
+  return `<span class="sidenote-position" role="img" aria-label="${description}" title="${description}" data-position="${key}"${rotationAttributes}>${svg}</span>`;
 }
 
 /** @param {string} html @param {string} source @returns {string} */
@@ -41,4 +51,21 @@ export function expandSidenotePositions(html, source) {
     /<!--[\s\S]*?-->|<lkb-sidenote-position\s+position=["']([^"']+)["']\s*>\s*<\/lkb-sidenote-position\s*>/g,
     (match, position) => (position ? renderSidenotePosition(source, position) : match),
   );
+}
+
+/** Read distinct rotations from actual transform elements, not annotation text.
+ * @param {string} html @returns {number[]}
+ */
+export function sidenoteRotations(html) {
+  const angles = new Set();
+  function visit(node) {
+    const attributes = Object.fromEntries((node.attrs || []).map(({ name, value }) => [name, value]));
+    if ((attributes.class || '').split(/\s+/).includes('tr') && attributes['data-rot'] !== undefined) {
+      const value = Number(attributes['data-rot']);
+      if (Number.isFinite(value) && value > 0 && value <= 359) angles.add(value);
+    }
+    for (const child of node.childNodes || []) visit(child);
+  }
+  visit(parseFragment(html));
+  return [...angles];
 }

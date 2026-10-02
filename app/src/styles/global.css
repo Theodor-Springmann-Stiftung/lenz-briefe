@@ -328,6 +328,22 @@
   .sidenote-layout > .sidenote-position { grid-column:1; grid-row:1; align-self:start; margin:.2rem 0 0; }
   .sidenote-position { display:inline-block; width:.7rem; margin-left:.35em; vertical-align:-.15em; }
   .sidenote-position svg { display:block; width:100%; height:auto; overflow:visible; }
+  .sidenote-position[data-rotatable] { position:relative; cursor:help; }
+  .sidenote-position[data-rotatable] > svg { transform-origin:center; transition:transform .2s ease-out; }
+  .sidenote-layout:is(:hover, :focus-within) > .sidenote-position[data-rotation] > svg,
+  .sidenote-position[data-rotation]:is(:hover, :focus-visible) > svg { transform:rotate(var(--sidenote-turn)); animation:sidenote-page-hop .4s ease-out; }
+  @keyframes sidenote-page-hop {
+    0% { transform:translateY(0) rotate(0deg); }
+    45% { transform:translateY(-.3rem) rotate(calc(var(--sidenote-turn) * .6)); }
+    75% { transform:translateY(.04rem) rotate(var(--sidenote-turn)); }
+    100% { transform:translateY(0) rotate(var(--sidenote-turn)); }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    .sidenote-position[data-rotatable] > svg { animation:none !important; transition:none; transform:none !important; }
+  }
+  @media print {
+    .sidenote-position[data-rotatable] > svg { animation:none !important; transition:none; transform:none !important; }
+  }
   .sidenote-position svg > g[data-active=false] { display:none !important; }
   .sidenote-position svg > g[data-active=true] { display:inline !important; }
   .note-annotation { @apply text-ink font-sans text-xs leading-relaxed mt-3; }
@@ -472,7 +488,8 @@
 .legend-presentational-spacing text { font-family:var(--font-sans); font-size:14px; dominant-baseline:middle; fill:#000; stroke:none; }
 .fn[data-note-connected] { cursor:help; border-radius:2px; }
 .hand-range-trigger { cursor:pointer; border-radius:3px; }
-.hand-range-trigger.hand-range-active { background:rgb(52 88 117 / .065); box-shadow:0 0 0 3px rgb(52 88 117 / .065); }
+.hand-range-trigger.hand-range-active,
+[data-text-loss-footer] .apparatus-text.text-loss-value-active { background:rgb(52 88 117 / .065); box-shadow:0 0 0 3px rgb(52 88 117 / .065); border-radius:3px; }
 button.hand-range-trigger { font:inherit; text-align:inherit; }
 .hand-range-background { position:absolute; background:rgb(52 88 117 / .065); border-radius:3px; pointer-events:none; z-index:-1; }
 /* Shared editorial semantics: these selectors also style imported XSLT HTML. */
@@ -487,8 +504,36 @@ button.hand-range-trigger { font:inherit; text-align:inherit; }
 .page-prose .seal-gallery img { display:block; width:100%; height:14rem; object-fit:contain; margin:0 0 .75rem; }
 .page-prose .seal-gallery figcaption { text-align:center; }
 .quick-legend .edition-text { font-size:1rem; line-height:1.5; }
+.rotation-examples { display:grid; justify-items:start; gap:.6em; }
 .apparatus .edition-text { @apply font-sans; line-height:1.55; }
 .margin-note .edition-text, .unplaced-note .edition-text, .inpos-note .edition-text { line-height:1.45; }
+/* Only the rotation label triggers its tooltip; the passage stays upright. */
+:is(.edition-text, .page-margin) .tr-label { color:var(--color-muted); font-family:var(--font-sans); font-size:.7em; font-weight:400; font-style:normal; font-variation-settings:normal; line-height:1.3; white-space:nowrap; user-select:none; cursor:help; }
+:is(.edition-text, .page-margin) .tr-label::before { content:'↻ ' attr(data-rot) '°'; }
+:is(.edition-text, .page-margin) .tr-label[data-rot="90"]::before { content:'↷ 90°'; }
+:is(.edition-text, .page-margin) .tr-label[data-rot="180"]::before { content:'⟳ 180°'; }
+:is(.edition-text, .page-margin) .tr-label[data-rot="270"]::before { content:'↶ 90°'; }
+.edition-text div.tr { margin-block:.6em; padding-inline-start:.75em; border-inline-start:1px solid var(--color-rule); }
+.edition-text div.tr > .tr-label { display:block; width:max-content; margin-block-end:.2em; text-align:left; letter-spacing:.025em; }
+.edition-text span.tr { border-bottom:1px dashed var(--color-rule); }
+.edition-text span.tr > .tr-label { display:inline-block; margin-inline-end:.3em; vertical-align:.12em; }
+/* Block angles sit outside the side rule, aligned with the first text line. */
+.letter-body div.tr:not(.sidenote *) { position:relative; padding-inline-start:0; border:0; }
+.letter-body div.tr:not(.sidenote *, [data-rot="0"])::before { content:''; position:absolute; inset-inline-start:-.65rem; top:0; bottom:0; border-inline-start:1px solid var(--color-rule); pointer-events:none; }
+.letter-body div.tr:not(.sidenote *) > .tr-label { position:absolute; inset-inline-end:calc(100% + 1.05rem); top:.45em; margin:0; text-align:right; }
+.letter-body div.tr:not(.sidenote *) > .tr-label,
+.page-margin .tr-label { color:var(--color-ink); }
+@media (max-width:700px) {
+  .letter-body div.tr:not(.sidenote *) > .tr-label { position:static; margin-block-end:.3em; text-align:left; }
+}
+/* Sidenotes use their page icon; continuation fragments need no second label. */
+.edition-text .sidenote div.tr { margin-block:.15em .35em; padding-inline-start:0; border:0; }
+.edition-text .sidenote span.tr { border:0; }
+.edition-text .sidenote .tr > .tr-label,
+.edition-text span.tr[data-tr-continuation="true"] > .tr-label,
+.edition-text .tr[data-rot="0"] > .tr-label { display:none; }
+.edition-text .tr[data-rot="0"] { border:0; }
+.edition-text div.tr[data-rot="0"], .edition-text .sidenote div.tr[data-rot="0"] { margin:0; padding:0; }
 .edition-text .lb-line-block { min-height: 1lh; }
 /* Indent the first text line; aligned lines carry it on their left-hand region. */
 .edition-text * { text-indent:0; }
@@ -545,13 +590,11 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 .edition-text .note::before { content:'['; }
 .edition-text .note::after { content:']'; }
 .edition-text .tl::before { content:'\2060◌\2060'; }
-.edition-text .text-loss-active .tl::before { font-weight:800; text-shadow:.025em 0 currentColor, -.025em 0 currentColor; }
-.text-loss-margin { position:absolute; z-index:12; font-family:var(--font-sans); font-size:.85rem; line-height:1.45; text-align:right; }
+.edition-text .tl { border-radius:3px; }
+.edition-text .text-loss-block:is(:hover, :focus-within) .tl,
+.edition-text .tl:is(:hover, :focus-visible, .text-loss-active) { background:rgb(52 88 117 / .065); box-shadow:0 0 0 3px rgb(52 88 117 / .065); }
+@media print { .edition-text .tl { outline:none !important; background:none !important; box-shadow:none !important; } }
 [data-text-loss-footer] .apparatus-text { width:fit-content; }
-.text-loss-brace { position:absolute; z-index:11; width:16px; color:var(--color-ink); pointer-events:none; }
-.text-loss-brace::before { content:''; position:absolute; top:0; bottom:0; left:50%; border-left:1.15px solid currentColor; }
-.text-loss-brace > svg { display:none; }
-@media print { .text-loss-margin, .text-loss-brace { display:none !important; } .edition-text .text-loss-active .tl::before { font-weight:inherit; text-shadow:none; } }
 .edition-text strong { @apply font-bold; }
 .edition-text em { @apply italic; }
 .edition-text .large { font-size:1.25em; line-height:0; }
@@ -641,7 +684,10 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   html.js .reading-layout:not(.margins-visible) :is(.marginalia, .page-margin) { opacity:0; visibility:hidden; }
   html.js .reading-layout.margins-visible :is(.marginalia, .page-margin) { opacity:1; visibility:visible; }
   .margin-ready .marginal-item { position:absolute; left:0; right:0; margin:0; }
-  .margin-ready .page-number { padding-top:.35rem; }
+  .margin-ready .page-number { right:calc(-3rem + 1.05rem); padding-top:.35rem; line-height:1.3; }
+  .margin-ready .page-number.has-rotation { padding-top:0; white-space:nowrap; }
+  .page-number.has-rotation > :is(a, .tr-label) { display:inline; font:inherit; vertical-align:baseline; }
+  .page-number.has-rotation > .tr-label { margin-inline-start:1.2em; }
   .margin-ready .hand-label { transform:translateY(.35rem); }
 }
 @media (width < 1600px) {

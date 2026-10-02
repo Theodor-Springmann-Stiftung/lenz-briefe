@@ -15,6 +15,15 @@ export function printDocument(source: Document): string {
   const html = copy.documentElement;
   html.querySelectorAll('script, iframe, [data-tippy-root], link').forEach((node) => node.remove());
   html.querySelectorAll('[autofocus]').forEach((node) => node.removeAttribute('autofocus'));
+  // Desktop layout shares page-number rows with rotation labels. The page
+  // margin is hidden in print, so return each label to its original text block.
+  for (const layout of html.querySelectorAll('[data-reading-layout]')) {
+    for (const label of layout.querySelectorAll<HTMLElement>('.page-margin .tr-label[data-rotation-block]')) {
+      const block = [...layout.querySelectorAll<HTMLElement>('div.tr[data-rotation-block]')]
+        .find((candidate) => candidate.dataset.rotationBlock === label.dataset.rotationBlock);
+      block?.prepend(label);
+    }
+  }
   preparePrintTabs(copy);
   preparePrintHandColumns(copy);
   const head = html.querySelector('head')!;

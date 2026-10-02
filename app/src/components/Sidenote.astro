@@ -1,6 +1,7 @@
 ---
 import { prepareHandControls } from '../lib/hand-labels.mjs';
 import SidenotePosition from './SidenotePosition.astro';
+import { sidenoteRotations } from '../lib/sidenote-position.mjs';
 import type { Sidenote } from '../lib/edition';
 interface Props {
   note: Sidenote;
@@ -10,7 +11,7 @@ const { note, hands } = Astro.props;
 const { labels } = prepareHandControls(note.html, hands);
 ---
 
-<SidenotePosition position={note.pos} />
+<SidenotePosition position={note.pos} rotations={sidenoteRotations(note.html)} />
 <div class="edition-text" set:html={note.html} />
 <div class="sidenote-details">
   {note.annotation && <p class="note-annotation sidenote-description">{note.annotation}</p>}

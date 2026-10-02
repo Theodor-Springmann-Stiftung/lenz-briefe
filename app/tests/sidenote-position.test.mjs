@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { renderSidenotePosition, expandSidenotePositions } from '../src/lib/sidenote-position.mjs';
+import { renderSidenotePosition, expandSidenotePositions, sidenoteRotations } from '../src/lib/sidenote-position.mjs';
 
 const source = readFileSync(new URL('../src/assets/SidenotePos.svg', import.meta.url), 'utf8');
 
@@ -38,4 +38,17 @@ test('code examples and comments remain literal; invalid positions fail clearly'
     '<code>&lt;lkb-sidenote-position position="top"&gt;&lt;/lkb-sidenote-position&gt;</code><!-- <lkb-sidenote-position position="top"></lkb-sidenote-position> -->';
   assert.equal(expandSidenotePositions(html, source), html);
   assert.throws(() => renderSidenotePosition(source, 'unknown'), /Unknown sidenote position/);
+});
+
+test('rotation icons use the shortest turn and preserve distinct source angles', () => {
+  assert.deepEqual(sidenoteRotations('<span class="tr" data-rot="270">A</span><span class="tr" data-rot="270">B</span><span class="tr" data-rot="0">C</span>'), [270]);
+  assert.match(renderSidenotePosition(source, 'left', [270]), /--sidenote-turn: -90deg/);
+  assert.match(renderSidenotePosition(source, 'right', [90]), /--sidenote-turn: 90deg/);
+  assert.match(renderSidenotePosition(source, 'top', [180]), /--sidenote-turn: 180deg/);
+  assert.match(renderSidenotePosition(source, 'left', [270]), /data-turn-direction="counterclockwise"/);
+  assert.match(renderSidenotePosition(source, 'left', [270]), /tabindex="0"/);
+  assert.doesNotMatch(renderSidenotePosition(source, 'left'), /data-rotatable/);
+  const mixed = renderSidenotePosition(source, 'left', [90, 270]);
+  assert.match(mixed, /90° im Uhrzeigersinn.*90° gegen den Uhrzeigersinn/);
+  assert.doesNotMatch(mixed, /--sidenote-turn/);
 });

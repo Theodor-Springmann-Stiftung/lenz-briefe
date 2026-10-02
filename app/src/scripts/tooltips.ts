@@ -46,6 +46,7 @@ export function destroyTooltips(root: ParentNode) {
   });
 }
 
+
 initializeTooltips();
 
 document.getElementById('quick-legend')?.addEventListener('beforetoggle', (event) => {

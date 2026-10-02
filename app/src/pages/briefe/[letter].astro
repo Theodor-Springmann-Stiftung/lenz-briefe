@@ -191,11 +191,6 @@ const sectionLinks = [
           </div>
         ))}
       </aside>
-      {textLoss && (
-        <div class="text-loss-margin" id="text-loss-reason" data-text-loss-reason hidden>
-          <div set:html={textLoss.html.replace(/\s+id="[^"]*"/g, '')} />
-        </div>
-      )}
     </div>
     {unplaced.length > 0 && (
       <section class="unplaced-notes" aria-label="Weitere Randnotizen">

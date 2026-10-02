@@ -29,6 +29,7 @@ if (legend && letter) {
     undo: '.undo',
     note: '.note',
     tl: '.tl',
+    tr: '.tr-label, .sidenote-position[data-rotatable]',
     nr: '.nr',
     vspace: '.lb-vspace:not([data-presentational="true"])',
     page: '.page-anchor[data-break="inline"], .page-number a',
@@ -143,6 +144,12 @@ if (legend && letter) {
     const example = row.querySelector<HTMLElement>('dd')!;
     const tag = row.dataset.legendTag;
     let selector = '';
+    if (tag === 'tr') {
+      const rotation = target.dataset.rot || target.dataset.rotation;
+      return [...example.querySelectorAll<HTMLElement>('.tr-label')].find(
+        (label) => label.dataset.rot === rotation,
+      ) || example;
+    }
     if (tag === 'ul')
       selector = target.matches('.tul') ? '.tul' : target.matches('.dul') ? '.dul' : '.ul';
     if (tag === 'highlight')

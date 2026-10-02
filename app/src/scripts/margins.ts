@@ -9,6 +9,16 @@ if (layout) {
   const body = layout.querySelector<HTMLElement>('.letter-body')!;
   const margin = layout.querySelector<HTMLElement>('.marginalia')!;
   const pageMargin = layout.querySelector<HTMLElement>('.page-margin')!;
+  const rotationLabels = [...body.querySelectorAll<HTMLElement>('div.tr > .tr-label')]
+    .filter((label) => !label.closest('.sidenote') && label.dataset.rot !== '0')
+    .map((label, index) => {
+      const block = label.parentElement!;
+      label.dataset.rotationBlock = block.dataset.rotationBlock = String(index);
+      return { label, block };
+    });
+  const restoreRotationLabels = () => {
+    for (const { label, block } of rotationLabels) block.prepend(label);
+  };
   // Keep the original buttons and their highlighting listeners when labels merge.
   const handLabels = [...margin.querySelectorAll<HTMLElement>('.hand-label')].map((item) => {
     const button = item.querySelector<HTMLButtonElement>('[data-hand-ref]')!;
@@ -18,6 +28,8 @@ if (layout) {
   const namesByRef = new Map(handLabels.map(({ ref, name }) => [ref, name]));
   const bindHandControl = initializeHandControls(layout);
   function arrange() {
+    // Restore labels before measuring, including when returning to narrow screens.
+    restoreRotationLabels();
     layout!.classList.remove('margin-ready');
     margin.style.height = '';
     pageMargin.style.height = '';
@@ -30,12 +42,13 @@ if (layout) {
     const pageNumbers = [...pageMargin.querySelectorAll<HTMLElement>('.page-number')];
     pageNumbers.forEach((item) => {
       item.style.top = '';
+      item.classList.remove('has-rotation');
     });
     const items = [...margin.querySelectorAll<HTMLElement>('.marginal-item')];
     items.forEach((item) => {
       item.style.top = '';
     });
-    if (!matchMedia('(min-width: 1100px)').matches) {
+    if (matchMedia('print').matches || !matchMedia('(min-width: 1100px)').matches) {
       layout!.classList.remove('margins-visible');
       return;
     }
@@ -103,7 +116,25 @@ if (layout) {
         offset: rect.top - marginTop,
       };
     };
-    const measuredPages = pageNumbers.map(measure).filter((entry) => entry.anchor);
+    const rotationTargets = new Map<HTMLElement, number>();
+    for (const { label, block } of rotationLabels) {
+      const firstLine = block.querySelector<HTMLElement>('.lb-line-block');
+      const page = pageNumbers.find((item) => {
+        const anchor = document.getElementById(item.dataset.anchor!);
+        if (!anchor || rotationTargets.has(item)) return false;
+        // A page break immediately before the block, or on its first line,
+        // belongs to the same margin row as the rotation.
+        return anchor.nextElementSibling === block || (!!firstLine && firstLine.contains(anchor)
+          && Math.abs(anchor.getBoundingClientRect().top - firstLine.getBoundingClientRect().top)
+            < parseFloat(getComputedStyle(firstLine).lineHeight) / 2);
+      });
+      if (!page) continue;
+      rotationTargets.set(page, label.getBoundingClientRect().top - pageMargin.getBoundingClientRect().top);
+      page.classList.add('has-rotation');
+      page.append(label);
+    }
+    const measuredPages = pageNumbers.map(measure).filter((entry) => entry.anchor)
+      .map((entry) => ({ ...entry, target: rotationTargets.get(entry.item) ?? entry.target }));
     const anchored = items
       .filter((item) => !item.hidden)
       .map(measure)
@@ -142,6 +173,11 @@ if (layout) {
     if (document.fonts.status === 'loaded') layout!.classList.add('margins-visible');
   }
   const schedule = registerLayoutTask(arrange, { phase: 'arrange', observe: [body] });
+  window.addEventListener('beforeprint', () => {
+    restoreRotationLabels();
+    schedule();
+  });
+  window.addEventListener('afterprint', schedule);
   const initialTarget = document.getElementById(location.hash.slice(1));
   if (initialTarget?.closest('.edition-text')) {
     // Search links can target notes that move from normal flow into the margin.

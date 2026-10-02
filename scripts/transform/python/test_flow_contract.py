@@ -29,6 +29,7 @@ class FlowContractTests(unittest.TestCase):
         return tree
 
     def assert_valid_nesting(self, fragment):
+        self.assertNotIn('xmlns:t=', fragment)
         # Inspect the serialized tree before an HTML parser can silently repair
         # invalid nesting. These are all tags emitted by the three stylesheets.
         xml_fragment = fragment.replace('<hr class="lb-rule">', '<hr class="lb-rule"/>')
@@ -58,6 +59,9 @@ class FlowContractTests(unittest.TestCase):
                         self.assertEqual(len(blocks), 1)
                         block = blocks[0]
                         self.assertEqual(block.get('data-rot'), '90')
+                        self.assertIsNone(block.get('data-tooltip'))
+                        self.assertEqual(block.xpath('./span[@class="tr-label"]/@data-tooltip'),
+                                         ['90° im Uhrzeigersinn gedreht'])
                         self.assertEqual(''.join(block.text_content().split()), 'FirstwordSecond')
                         self.assertEqual(block.xpath('./div[1]/@data-tab'), ['3'])
                         self.assertEqual(block.xpath('./div[1]/@style'), ['--indent-units: 3'])
@@ -76,6 +80,18 @@ class FlowContractTests(unittest.TestCase):
                 self.assertEqual(''.join(block.text_content().split()), 'ABC')
                 self.assertEqual(block.xpath('.//*[@class="align-center"]//text()'), ['B'])
                 self.assertEqual(len(tree.xpath('.//div[@class="tr"]')), 1)
+
+    def test_rotation_label_is_not_repeated_on_continuation_fragments(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            with self.subTest(kind=kind):
+                tree = self.render('<tr rot="270"><pe>grüß Klinger vielmalen</pe><line tab="1"/>Wenn ein Vorhängeschloß</tr><line/><tr rot="270">Another passage</tr>', kind)
+                spans = tree.xpath('.//span[@class="tr"]')
+                self.assertEqual(len(spans), 3)
+                self.assertEqual([n.get('data-tr-continuation') for n in spans], [None, 'true', None])
+                self.assertEqual(spans[0].get('data-tr-id'), spans[1].get('data-tr-id'))
+                self.assertNotEqual(spans[0].get('data-tr-id'), spans[2].get('data-tr-id'))
+                tree = self.render('<tr rot="90">Left<align pos="right">Right</align><line/>Next</tr>', kind)
+                self.assertEqual(len(tree.xpath('.//span[@class="tr"][not(@data-tr-continuation)]')), 1)
 
     def test_transformed_text_preserves_rotation_and_line_flow(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:

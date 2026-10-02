@@ -20,6 +20,8 @@
   }
   html { background:#fff; color:#000; font-size:9.5pt; scroll-padding:0; }
   body { display:block; min-height:0; }
+  .edition-text div.tr { border-inline-start-color:#eee; }
+  .letter-body div.tr:not(.sidenote *, [data-rot="0"])::before { border-inline-start-color:#eee; }
   body > main, .site-shell, .site-shell--wide { display:block; width:100%; max-width:none; margin:0; padding:0; }
   a, a:hover { color:inherit; }
   p, li, dd, .lb-line-block { orphans:3; widows:3; }

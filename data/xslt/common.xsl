@@ -743,16 +743,22 @@
     </span>
   </xsl:template>
 
+  <xsl:template name="rotation-label">
+    <xsl:variable name="description" select="if (number(@rot) = 270) then '90° gegen den Uhrzeigersinn gedreht' else if (number(@rot) = 180) then '180° gedreht' else concat(@rot, '° im Uhrzeigersinn gedreht')" />
+    <span class="tr-label" data-rot="{@rot}" data-tooltip="{$description}" tabindex="0" aria-label="{$description}"></span>
+  </xsl:template>
+
   <xsl:template match="t:tr">
-    <div class="tr" data-rot="{@rot}" title="Schreibrichtung im Original: {@rot}° im Uhrzeigersinn. Der Text ist hier aufrecht wiedergegeben.">
+    <div class="tr" data-rot="{@rot}">
       <xsl:if test="@alignment"><xsl:attribute name="style" select="concat('text-align: ', @alignment)" /></xsl:if>
+      <xsl:call-template name="rotation-label" />
       <xsl:apply-templates />
     </div>
   </xsl:template>
 
   <!-- Text-first transformations remain phrasing content across normalized lines. -->
   <xsl:template match="lb:tr">
-    <span class="tr" data-rot="{@rot}" data-tr-id="{@data-tr-id}" title="Schreibrichtung im Original: {@rot}° im Uhrzeigersinn. Der Text ist hier aufrecht wiedergegeben."><xsl:apply-templates /></span>
+    <span class="tr" data-rot="{@rot}" data-tr-id="{@data-tr-id}"><xsl:call-template name="rotation-label" /><xsl:apply-templates /></span>
   </xsl:template>
 
   <xsl:template match="lb:aq">
