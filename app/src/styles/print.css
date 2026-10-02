@@ -112,8 +112,9 @@
 
   /* Preserve transcription marks even when background printing is disabled. */
   /* PDF renderers can paint the screen's masked SVG arrows as solid boxes.
-     Use small text arrows beside the opening insertion corner in print. */
-  .edition-text .insertion-arrow::before { content:none; mask:none; background:none; left:0; bottom:.2em; width:.8em; height:.9em; font:400 .65em/1 Arial, sans-serif; }
+     Let each text arrow reserve its own width beside the opening corner. */
+  .edition-text .insertion-arrow { padding-right:0; margin-right:.04em; }
+  .edition-text .insertion-arrow::before { content:none; position:static; mask:none; background:none; width:auto; height:auto; vertical-align:.15em; font:400 .9em/1 Arial, sans-serif; }
   .edition-text .insertion[data-pos="top"] > .insertion-arrow::before { content:'↓'; }
   .edition-text .insertion[data-pos="bottom"] > .insertion-arrow::before { content:'↑'; }
   .edition-text .insertion[data-pos="left"] > .insertion-arrow::before { content:'→'; }
