@@ -72,7 +72,7 @@ configuration and unknown paths still build. Manual workflow runs always build.
 
 ### Page titles and external links
 
-Page titles start with `LKB –`: the catalogue uses the edition description,
+Page titles have no edition prefix: the catalogue uses the edition description,
 letters use sender, recipient and the editorial human-readable date, and static
 pages use their menu label. External HTTP(S) links open in a new tab or window.
 The HTML middleware applies this during rendering, including links in Markdown,
@@ -130,12 +130,13 @@ cache file to force a refresh on the next `npm --prefix app run export`. Run
 No API calls are made in the browser, so the panels also work with the downloaded
 offline edition. Textual GND data are CC0.
 
-When the GND record supplies an image, source page and license information,
-cards show a thumbnail in a portrait-shaped left column beside the name and
+When a person's GND record supplies an image, source page and license information,
+person cards show a thumbnail in a portrait-shaped left column beside the name and
 details. A link icon appears over the image on hover or keyboard focus; its tooltip
 contains the creator and license credits, and it opens the image source. Credits
 also remain available to screen readers. Images load directly
 from their provider when the card is shown; no extra GND API requests are needed.
+Place cards show text and reference links only; their image URLs are not resolved.
 During export, Commons image redirects are resolved with HEAD requests, without
 downloading image bodies. The final Wikimedia image URLs are cached in
 `app/.cache/gnd/resolved-images.json`; tracking parameters are removed so browser

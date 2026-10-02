@@ -23,7 +23,7 @@ export function setupSelectionPrint(selection: () => { letters: SelectionLetter[
         status.start(`Briefe werden geladen … ${loaded}/${letters.length}`);
       });
       status.start('Druck wird vorbereitet …');
-      await printHtml(html, 'LKB – Briefauswahl', status.hide, Math.max(90_000, letters.length * 2_000), status.progress);
+      await printHtml(html, 'Briefauswahl', status.hide, Math.max(90_000, letters.length * 2_000), status.progress);
     } catch (error) {
       console.error('Selection print failed', error);
       status.error('Auswahl konnte nicht zum Druck vorbereitet werden. Bitte erneut versuchen.');

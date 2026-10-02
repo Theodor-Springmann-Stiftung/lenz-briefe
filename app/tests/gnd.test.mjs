@@ -25,7 +25,7 @@ const response = (data, status = 200, headers = {}) => new Response(
   data == null ? null : JSON.stringify(data), { status, headers },
 );
 
-test('extracts supplied images with source, creator and license credits for people and places', () => {
+test('extracts supplied images and credits for people, while omitting place images', () => {
   const depiction = {
     id: 'https://commons.wikimedia.org/wiki/Special:FilePath/Portrait.jpg',
     thumbnail: 'https://commons.wikimedia.org/wiki/Special:FilePath/Portrait.jpg?width=270',
@@ -40,7 +40,7 @@ test('extracts supplied images with source, creator and license credits for peop
   assert.equal(picture.credit, 'Museum');
   assert.deepEqual(picture.licenses, [{ url: depiction.license[0].id, label: 'CC BY-SA 4.0' }]);
   assert.deepEqual(summarizeGnd({ ...person, depiction: [depiction] }, 'people').picture, picture);
-  assert.deepEqual(summarizeGnd({ ...place, depiction: [depiction] }, 'places').picture, picture);
+  assert.equal(summarizeGnd({ ...place, depiction: [depiction] }, 'places').picture, null);
   assert.equal(summarizeDepiction({ depiction: [{ ...depiction, thumbnail: null }] }).src, depiction.id);
 });
 

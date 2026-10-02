@@ -68,7 +68,7 @@ export function summarizeGnd(record, kind) {
     geographicAreas: kind === 'places' ? labels(record.geographicAreaCode).join(', ') : '',
     description: description.length > 500 ? `${description.slice(0, 500).replace(/\s+\S*$/, '')} …` : description,
     links: referenceLinks(record, kind),
-    picture: summarizeDepiction(record),
+    picture: kind === 'people' ? summarizeDepiction(record) : null,
   };
 }
 

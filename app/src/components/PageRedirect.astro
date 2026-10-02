@@ -11,7 +11,7 @@ const { href, title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{`LKB – ${title}`}</title>
+    <title>{title}</title>
     <meta http-equiv="refresh" content={`2;url=${href}`} />
     <meta name="robots" content="noindex" />
     <link rel="canonical" href={new URL(href, Astro.site ?? Astro.url)} />
