@@ -197,16 +197,20 @@ stop the complete selection and allow retry; they never produce a partial print.
 
 The print stylesheet uses A4 pages with 24 mm top/bottom, 25 mm right and 21 mm left
 margins, and page numbers where the browser supports CSS page-margin boxes.
-Letter text, margin notes, apparatus and Edition content have an additional
-25 mm right inset, giving them a 50 mm right margin. Headers and horizontal rules
+Letter text and margin notes use a 121.22 mm column. Hand names occupy the
+remaining width up to the right page margin, after a 4 mm gap. Apparatus and
+Edition content retain an additional 25 mm right inset. Headers and horizontal rules
 use the wider page area. The rules below the letter metadata and above the footer
 are black; there are no rules below the wordmark or above the apparatus. The date
 and sender/receiver lines have a compact 0.5 mm gap. Disable the
 browser's own headers and footers for the cleanest result.
 
 Letters retain their LKB number, metadata, transcription, hands, apparatus and
-citation. Source page numbers appear inline; hand names occupy a narrow right-hand
-column alongside their marked passages. Margin
+citation. Source page numbers appear inline; a print-only two-column table pairs
+each transcription block with its hand names, aligning their first baselines and
+allowing long text cells to continue across page breaks. Original text alignment,
+inline hand styles and anchors are preserved. Hand changes inside tabular
+passages retain their inline anchors and extend into the same hand column. Margin
 notes follow the letter directly, with their position descriptions and
 without added page prefixes. The small apparatus text is limited to 80ch.
 In-position notes stay at their source location. Paragraphs and individual margin

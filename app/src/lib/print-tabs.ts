@@ -46,9 +46,8 @@ export function preparePrintTabs(document: Document): void {
       }
       const cell = document.createElement('td');
       for (const attribute of [...node.attributes]) cell.setAttribute(attribute.name, attribute.value);
-      // Floated hand labels must reach the letter's right margin, rather than
-      // the edge of this narrower cell. Use the full print width, independent
-      // of the cell's content width and padding.
+      // Inline hand changes inside source tables still need to reach the
+      // shared hand column, independent of the current cell's width.
       const remaining = Math.max(0, 100 - used - occupied);
       cell.style.setProperty('--print-tab-hand-shift', `calc(var(--print-letter-text-width) * ${remaining / 100} + var(--print-tab-label-padding))`);
       cell.append(...node.childNodes);
