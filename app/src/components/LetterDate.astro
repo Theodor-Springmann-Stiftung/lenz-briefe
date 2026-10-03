@@ -1,13 +1,12 @@
 ---
-import { base, letterUrl, type DateRecord, type Reference } from '../lib/edition';
+import { base, type DateRecord, type Reference } from '../lib/edition';
 import { dateLocationParts } from '../lib/date-locations.mjs';
 interface Props {
   date: DateRecord;
   locations: Reference[];
-  letter: string;
   compact: boolean;
 }
-const { date, locations, letter, compact } = Astro.props;
+const { date, locations, compact } = Astro.props;
 const parts: { text: string; placeId?: string }[] = dateLocationParts(date.text, locations);
 const textParts = (text: string) => {
   const comma = text.indexOf(',');
@@ -31,12 +30,8 @@ const textParts = (text: string) => {
       </a>
     );
   const { prefix, separator, date } = textParts(part.text);
-  const Text = compact ? 'a' : 'span';
   return (
-    <Text
-      class={compact ? 'letter-card-link' : undefined}
-      href={compact ? letterUrl(letter) : undefined}
-    >
+    <span>
       {prefix}
       {separator && (
         <span class="letter-date-tail">
@@ -44,6 +39,6 @@ const textParts = (text: string) => {
           {date}
         </span>
       )}
-    </Text>
+    </span>
   );
 })}

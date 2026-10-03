@@ -4,7 +4,7 @@ import LetterHeader from '../components/LetterHeader.astro';
 import Filter from '../components/Filter.astro';
 import FilterInformation from '../components/FilterInformation.astro';
 import Icon from '../components/Icon.astro';
-import { catalog, filterOptions, base } from '../lib/edition';
+import { catalog, filterOptions, base, letterUrl } from '../lib/edition';
 import searchIndexUrl from '../../generated/search.json?url';
 import { metadataSearchBlocks } from '../lib/search.mjs';
 const records = catalog.letters.map((l) => ({
@@ -47,7 +47,7 @@ const firstGroup = catalog.groups[0];
         <input
           id="letter-search"
           type="search"
-          placeholder="Briefe durchsuchen …"
+          placeholder="Briefe durchsuchen…"
           data-search-index={searchIndexUrl}
           aria-describedby="search-status"
           autocomplete="off"
@@ -125,6 +125,7 @@ const firstGroup = catalog.groups[0];
       {catalog.letters.map((letter) => (
         <li data-letter={letter.letter} hidden={letter.groupId !== firstGroup.id}>
           <LetterHeader letter={letter} compact />
+          <a class="letter-card-link" href={letterUrl(letter.letter)} aria-label={`Brief ${letter.letter} öffnen`} />
         </li>
       ))}
     </ol>

@@ -15,7 +15,7 @@ const { entries, kind, showAnnotations = true, conjunction = false, linked = tru
   <Fragment>
     {i > 0 && (conjunction && i === entries.length - 1 ? ' und ' : ', ')}
     <span>
-      {linked ? (
+        {linked && entry.ref !== "1" ? (
         <a
           class="reference-filter"
           href={`${base}?${new URLSearchParams({ group: 'all', [kind]: entry.ref })}`}

@@ -1,5 +1,5 @@
 ---
-import { letterUrl, richText, type Letter } from '../lib/edition';
+import { richText, type Letter } from '../lib/edition';
 import SourceIcons from './SourceIcons.astro';
 import ReferenceList from './ReferenceList.astro';
 import Icon from './Icon.astro';
@@ -32,15 +32,10 @@ const dates = sent.flatMap((event) =>
             <LetterDate
               date={date}
               locations={locations}
-              letter={letter.letter}
               compact={compact}
             />
           </Fragment>
         ))
-      ) : compact ? (
-        <a class="letter-card-link" href={letterUrl(letter.letter)}>
-          Ohne Datierung
-        </a>
       ) : (
         'Ohne Datierung'
       )}

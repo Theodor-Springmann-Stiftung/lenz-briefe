@@ -32,6 +32,15 @@ const informationTemplates = new Map(
 );
 const allLettersLink = document.querySelector<HTMLButtonElement>('.all-letters-link')!;
 const searchInput = document.querySelector<HTMLInputElement>('#letter-search')!;
+const searchControl = searchInput.closest<HTMLElement>('.catalog-search')!;
+// Text inputs match :focus-visible even after a click. Track Tab navigation
+// separately so the surrounding outline behaves like the filter controls.
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Tab') searchControl.dataset.keyboardFocus = 'true';
+});
+document.addEventListener('pointerdown', () => {
+  delete searchControl.dataset.keyboardFocus;
+}, { capture: true });
 searchInput.value = state.q || '';
 const search = createCatalogSearch(rows, () => render());
 function renderFilterPills() {

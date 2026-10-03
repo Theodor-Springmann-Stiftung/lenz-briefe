@@ -156,6 +156,12 @@ export function filterOptions(kind: 'person' | 'place') {
     catalog.letters.flatMap((l) => (kind === 'person' ? l.personIds : l.placeIds)),
   );
   const definitions = kind === 'person' ? catalog.people : catalog.places;
+
+  // Wir zeigen JMR Lenz nicht in der Filterliste an
+  if (kind === 'person') {
+    ids.delete('1');
+  }
+
   return [...ids]
     .map((id) => ({ id, name: definitions[id]?.name || `Unbekannt (${id})` }))
     .sort((a, b) => a.name.localeCompare(b.name, 'de'));
