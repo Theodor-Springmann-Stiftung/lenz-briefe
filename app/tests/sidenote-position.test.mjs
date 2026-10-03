@@ -41,6 +41,13 @@ test('code examples and comments remain literal; invalid positions fail clearly'
 });
 
 test('rotation icons use the shortest turn and preserve distinct source angles', () => {
+  for (const rotations of [[90], [180], [270], [90, 270]]) {
+    const html = renderSidenotePosition(source, 'right', rotations);
+    const active = [...html.matchAll(/data-layer="([^"]+)" data-active="true"/g)].map((match) => match[1]);
+    assert.deepEqual(active.sort(), ['page-clipped', 'right']);
+    assert.match(html, /data-layer="page" data-active="false"/);
+  }
+  assert.match(renderSidenotePosition(source, 'right', [0]), /data-layer="page" data-active="true"/);
   assert.deepEqual(sidenoteRotations('<span class="tr" data-rot="270">A</span><span class="tr" data-rot="270">B</span><span class="tr" data-rot="0">C</span>'), [270]);
   assert.match(renderSidenotePosition(source, 'left', [270]), /--sidenote-turn: -90deg/);
   assert.match(renderSidenotePosition(source, 'right', [90]), /--sidenote-turn: 90deg/);

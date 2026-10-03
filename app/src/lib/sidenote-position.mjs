@@ -15,10 +15,12 @@ export function renderSidenotePosition(source, position, rotations = []) {
     'bottom-left': 'unten links',
   };
   if (!labels[key]) throw new Error(`Unknown sidenote position: ${position}`);
+  const angles = [...new Set(rotations)].filter((angle) => Number.isFinite(angle) && angle > 0 && angle <= 359);
+  const pageLayer = angles.length ? 'page-clipped' : 'page';
   const layers = [...source.matchAll(/<g\b[^>]*inkscape:label="([^"]+)"[^>]*>/g)].map((match) =>
     match[1].toLowerCase(),
   );
-  if (!layers.includes('page') || !layers.includes(key)) {
+  if (!layers.includes(pageLayer) || !layers.includes(key)) {
     throw new Error(`Missing SVG layer for sidenote position: ${position}`);
   }
   // Keep the supplied drawing as the single source for all eight positions.
@@ -31,10 +33,9 @@ export function renderSidenotePosition(source, position, rotations = []) {
     .replace(/<g\b([^>]*)>/g, (group, attributes) => {
       const layer = attributes.match(/inkscape:label="([^"]+)"/)?.[1].toLowerCase();
       return layer
-        ? `<g${attributes} data-layer="${layer}" data-active="${layer === 'page' || layer === key}">`
+        ? `<g${attributes} data-layer="${layer}" data-active="${layer === pageLayer || layer === key}">`
         : group;
     });
-  const angles = [...new Set(rotations)].filter((angle) => Number.isFinite(angle) && angle > 0 && angle <= 359);
   const angle = angles.length === 1 ? angles[0] : null;
   const turn = angle !== null && angle > 180 ? angle - 360 : angle;
   const rotationTooltip = angles.map((value) => value === 270 ? '90° gegen den Uhrzeigersinn gedreht' : value === 180 ? '180° gedreht' : `${value}° im Uhrzeigersinn gedreht`).join(', ');
