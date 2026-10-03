@@ -7,6 +7,8 @@
     content:counter(page);
     font:8pt var(--font-sans);
     color:#444;
+    vertical-align:bottom;
+    padding-bottom:11.5mm;
   }
 }
 
@@ -179,18 +181,20 @@
   .selection-index a::after { content:target-counter(attr(href), page); position:absolute; right:0; top:0; }
   .selection-letter { break-before:page; }
   .print-edition-link { margin-top:5mm; text-align:right; break-inside:avoid-page; font:8pt/1.35 var(--font-sans); }
-  .print-edition-link > a { display:inline-table; text-decoration:none; color:#000; }
-  .print-edition-link-text { display:table-cell; vertical-align:bottom; text-align:right; padding-right:3mm; }
+  .print-edition-link > a { display:inline-block; padding:2mm 0 2mm 2mm; white-space:nowrap; text-decoration:none; color:#000; background:#fff; }
+  .print-edition-link-text { display:inline-block; vertical-align:baseline; text-align:right; padding-right:3mm; }
   .print-edition-link-text > * { display:block; }
-  .print-edition-link img { display:table-cell; width:16mm; height:16mm; vertical-align:bottom; }
+  .print-edition-link img { display:inline-block; width:13mm; height:13mm; vertical-align:baseline; transform:translateY(.5mm); }
   .print-with-edition-link .site-footer { border-top:0; padding-top:0; }
-  .site-footer > .print-edition-link { margin:0 0 2mm; }
+  .site-footer > .print-edition-link { margin:0 0 .5mm; }
   .print-with-edition-link .site-footer-inner { border-top:1px solid #000; padding-top:2mm; }
 }
 
 /* The running element starts at the end of the document, so only its final page
    receives it. Reserve space for the edition QR, footer, and page number. */
 @media vivliostyle {
+  /* Encountered after the final contents entry, then anchored to that page's bottom. */
+  .selection-cover > .print-edition-link { float:block-end; float-reference:page; width:100%; margin-bottom:0; }
   @page { margin-bottom:38mm; }
   .site-footer { position:running(letter-footer); width:100%; margin-top:0; padding-top:2mm; line-height:1.25; }
   .footer-license-icons { transform:none; margin-top:-.5em; }
