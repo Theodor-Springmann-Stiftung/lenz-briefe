@@ -46,10 +46,11 @@ if (footer?.textContent?.trim() && body && markers.length) {
   let hovered: HTMLElement | null = null;
   let focused: HTMLElement | null = null;
   let dismissed = false;
+  const wideLayout = window.matchMedia('(min-width: 1100px)');
 
   function position() {
     const marker = dismissed ? null : hovered || focused;
-    if (!marker || !marker.getClientRects().length) {
+    if (!wideLayout.matches || !marker || !marker.getClientRects().length) {
       return () => explanation.classList.remove('is-visible');
     }
     const anchor = marker.getBoundingClientRect();
@@ -65,7 +66,7 @@ if (footer?.textContent?.trim() && body && markers.length) {
     const padding = 12;
     let right = text.left - 20;
     // Small baseline correction for the smaller margin text.
-    let top = anchor.top + 3;
+    const top = anchor.top + 3;
     // Wrapping can expose another obstacle, so narrow monotonically until stable.
     for (let pass = 0; pass <= obstacles.length + 1; pass++) {
       explanation.style.width = `${Math.max(1, Math.min(180, right - padding))}px`;
@@ -74,15 +75,10 @@ if (footer?.textContent?.trim() && body && markers.length) {
       if (next === right) break;
       right = next;
     }
-    let left = right - explanation.getBoundingClientRect().width;
     if (right - padding < 80) {
-      // Narrow screens have no reading margin. Keep the reason above the loss,
-      // clear of its line (including inline page numbers and rotation marks).
-      explanation.style.width = `${Math.min(240, window.innerWidth - 2 * padding)}px`;
-      left = Math.max(padding, Math.min(anchor.left, window.innerWidth - explanation.offsetWidth - padding));
-      top = anchor.top - explanation.offsetHeight - 12;
-      if (top < Math.max(padding, headerBottom + padding)) top = anchor.bottom + 12;
+      return () => explanation.classList.remove('is-visible');
     }
+    const left = right - explanation.getBoundingClientRect().width;
     return () => {
       explanation.style.left = `${left}px`;
       explanation.style.top = `${top}px`;
