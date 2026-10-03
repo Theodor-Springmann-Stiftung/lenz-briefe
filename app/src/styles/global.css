@@ -318,7 +318,7 @@
   .detail-header-group { width:100%; margin:var(--page-top-space) auto 6rem; font-family:var(--font-sans); }
   .detail-header { @apply font-sans; border:1px solid #586358; padding:var(--detail-header-padding, clamp(1rem, 2vw, 2rem)); }
   .detail-header .letter-header { --header-text-size:1.125rem; }
-  @media screen { .detail-header-group:has(.letter-route-map) { margin-bottom:10px; } }
+  @media screen { .detail-header-group:has(.letter-route-map) { margin-bottom:20px; } }
   .detail-header-row { display:grid; grid-template-columns:minmax(0, 1fr) minmax(12rem, 28%); grid-template-rows:min-content minmax(0,1fr); column-gap:1.25rem; align-items:start; align-content:start; }
   .detail-header-row > .detail-header { grid-column:1; grid-row:1; }
   .detail-header-row > .letter-route-map { grid-column:2; grid-row:1 / span 2; align-self:start; }
