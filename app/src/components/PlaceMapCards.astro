@@ -1,0 +1,28 @@
+---
+import { catalog, gndInformation } from '../lib/edition';
+import { buildCorrespondenceMap, mapImagePoint, MAP } from '../lib/correspondence-map.mjs';
+import { placeMapViews } from '../lib/place-map.mjs';
+import coordinates from '../data/place-coordinates.json';
+import mapUrl from '../assets/maps/europe-laea.svg?url';
+const network = buildCorrespondenceMap(catalog, coordinates.places, gndInformation.places);
+---
+{network.places.map(point => {
+  const place = mapImagePoint(point);
+  return (
+    <template data-place-map={place.id}>
+      <div class="place-map-control" data-zoom-level="1" role="group" aria-label={`Karte: ${place.name}`}>
+        {placeMapViews(place).map((fit, index) => (
+          <svg data-hidden={index !== 1 ? '' : undefined} viewBox="0 0 120 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label={place.name}>
+            <title>{place.name}</title>
+            <image href={mapUrl} x={fit.x} y={fit.y} width={MAP.width * fit.scale} height={MAP.height * fit.scale} preserveAspectRatio="none" />
+            <circle cx={place.x * fit.scale + fit.x} cy={place.y * fit.scale + fit.y} r="2.5" fill="white" stroke="#9a4510" stroke-width="1.25" />
+          </svg>
+        ))}
+        <div class="place-map-zoom-buttons">
+          <button type="button" data-place-map-step="-1" aria-label={`${place.name}: Herauszoomen`}>−</button>
+          <button type="button" data-place-map-step="1" aria-label={`${place.name}: Hineinzoomen`}>+</button>
+        </div>
+      </div>
+    </template>
+  );
+})}

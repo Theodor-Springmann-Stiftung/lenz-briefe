@@ -26,11 +26,28 @@ const list = document.querySelector<HTMLOListElement>('.catalog-letter-list')!;
 const activeFilters = document.querySelector<HTMLElement>('.active-filters')!;
 const pills = document.querySelector<HTMLElement>('.active-filter-pills')!;
 const informationCards = document.querySelector<HTMLElement>('.filter-information')!;
+informationCards.addEventListener('click', event => {
+  const button = (event.target as Element).closest<HTMLButtonElement>('[data-place-map-step]');
+  if (!button) return;
+  const map = button.closest<HTMLElement>('.place-map-control')!;
+  const level = Math.max(0, Math.min(2, Number(map.dataset.zoomLevel) + Number(button.dataset.placeMapStep)));
+  map.dataset.zoomLevel = String(level);
+  map.querySelectorAll('svg').forEach((view, index) => {
+    view.toggleAttribute('data-hidden', index !== level);
+  });
+  map.querySelectorAll<HTMLButtonElement>('[data-place-map-step]').forEach(control => {
+    control.disabled = Number(control.dataset.placeMapStep) < 0 ? level === 0 : level === 2;
+  });
+});
 const informationTemplates = new Map(
   [...document.querySelectorAll<HTMLTemplateElement>('[data-filter-information]')]
     .map((template) => [template.dataset.filterInformation!, template]),
 );
 const allLettersLink = document.querySelector<HTMLButtonElement>('.all-letters-link')!;
+const placeMapTemplates = new Map(
+  [...document.querySelectorAll<HTMLTemplateElement>('[data-place-map]')]
+    .map(template => [template.dataset.placeMap!, template]),
+);
 const searchInput = document.querySelector<HTMLInputElement>('#letter-search')!;
 const searchControl = searchInput.closest<HTMLElement>('.catalog-search')!;
 // Text inputs match :focus-visible even after a click. Track Tab navigation
@@ -76,9 +93,27 @@ function renderFilterPills() {
       pill.setAttribute('aria-label', label);
       pill.title = label;
       const information = informationTemplates.get(`${kind}-${id}`);
-      if (information) {
-        cards.append(information.content.cloneNode(true));
+      let card = information?.content.firstElementChild?.cloneNode(true) as HTMLElement | undefined;
+      if (kind === 'place') {
+        const map = placeMapTemplates.get(id);
+        if (map) {
+          if (!card) {
+            card = document.createElement('article');
+            card.className = 'filter-card';
+            card.setAttribute('aria-label', name);
+            const header = document.createElement('header');
+            header.className = 'filter-card-header';
+            const heading = document.createElement('h2');
+            heading.className = 'filter-card-name';
+            heading.textContent = name;
+            header.append(heading);
+            card.append(header);
+          }
+          card.classList.add('place-map-card');
+          card.append(map.content.querySelector('.place-map-control')!.cloneNode(true));
+        }
       }
+      if (card) cards.append(card);
       fragment.append(pill);
     }
   }

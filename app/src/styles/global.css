@@ -110,12 +110,13 @@
   .filter-card-body { display:grid; grid-template-columns:minmax(0,1fr); flex:1; min-height:0; overflow:hidden; }
   .filter-card-body:has([data-gnd-picture]:not([hidden])) { grid-template-columns:6.5rem minmax(0,1fr); }
   .filter-card-text { min-width:0; min-height:0; overflow:hidden; }
-  .filter-card-picture { position:relative; align-self:start; min-width:0; aspect-ratio:3/4; overflow:hidden; margin:.875rem 0 .875rem 1rem; border:1px solid #000; }
-  .filter-card-picture img { display:block; width:100%; height:100%; object-fit:cover; object-position:top; }
-  .filter-card-image-link { position:absolute; bottom:.25rem; right:.25rem; display:flex; align-items:center; justify-content:center; width:1.25rem; height:1.25rem; border:1px solid #bca68e; background:rgb(255 252 247 / .95); color:#625446; opacity:0; }
+  .filter-card-picture { position:relative; align-self:stretch; min-width:0; min-height:8.75rem; overflow:hidden; margin:0; border:0; }
+  .filter-card-picture img { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:cover; object-position:top; }
+  .filter-card-image-link, .place-map-zoom-buttons button { display:flex; align-items:center; justify-content:center; width:1.25rem; height:1.25rem; padding:0; border:1px solid #bca68e; background:rgb(255 252 247 / .95); color:#625446; }
+  .filter-card-image-link { position:absolute; bottom:.25rem; right:.25rem; opacity:0; }
   .filter-card-image-link .ui-icon { width:.875rem; height:.875rem; }
   .filter-card-picture:is(:hover, :focus-within) .filter-card-image-link { opacity:1; }
-  .filter-card-image-link:focus-visible { outline:2px solid var(--color-accent); outline-offset:2px; }
+  .filter-card-image-link:focus-visible, .place-map-zoom-buttons button:focus-visible { outline:2px solid var(--color-accent); outline-offset:2px; }
   @media (hover:none) { .filter-card-image-link { opacity:1; } }
   .filter-card-header { flex-shrink:0; padding:.875rem 1rem .5rem; }
   .filter-card:has(.filter-lifespan) .filter-card-header { padding-bottom:.125rem; }
@@ -152,8 +153,8 @@
   .filter-details p + p { margin-top:.2rem; }
   .filter-lifespan { font-variant-numeric:tabular-nums; color:#000; font-size:.8125rem; line-height:1.35; }
   .filter-place-description { max-width:75ch; color:var(--color-muted); }
-  .filter-reference-links { display:flex; flex-wrap:wrap; align-items:center; flex-shrink:0; gap:.15rem .9rem; margin-top:auto; padding:.55rem 1rem; border-top:1px solid #e4d9c9; background:#f7f1e7; }
-  .filter-reference-links a { display:inline-flex; align-items:center; gap:.3rem; max-width:100%; min-height:1.625rem; font-size:.75rem; color:#625446; text-decoration:none; }
+  .filter-reference-links { display:flex; flex-wrap:wrap; align-items:center; flex-shrink:0; gap:.15rem .9rem; margin-top:auto; padding:.4rem .75rem; border-top:1px solid #e4d9c9; background:#f7f1e7; }
+  .filter-reference-links a { display:inline-flex; align-items:center; gap:.3rem; max-width:100%; min-height:1.25rem; font-size:.75rem; color:#625446; text-decoration:none; }
   .filter-reference-links a:is(:hover, :focus-visible) { color:#9a4510; text-decoration:underline; text-underline-offset:.2em; }
   .filter-reference-links img { width:.875rem; height:.875rem; object-fit:contain; flex-shrink:0; }
   .catalog-search { @apply flex items-center gap-2 border bg-white px-3 py-2 text-ink; border-color:#000; flex:1 1 13rem; min-width:0; }
@@ -807,3 +808,17 @@ html:has(#ueberlieferung:target) { scroll-behavior:auto; }
   html { scroll-behavior:auto; }
   .search-spinner, .letter-print-status.is-preparing::before { animation:none; }
 }
+
+/* Maps cloned from the place-filter templates. */
+.filter-card.place-map-card { display:grid; grid-template-columns:7rem minmax(0,1fr); grid-template-rows:1fr auto; overflow:hidden; max-height:none; border:1px solid #9a4510; }
+.place-map-card > :is(.filter-card-body, .filter-card-header) { grid-column:2; grid-row:1; }
+.place-map-card > .filter-reference-links { grid-column:1 / -1; grid-row:2; }
+.place-map-card > .place-map-control { grid-column:1; grid-row:1; border-right:1px solid #9a4510; }
+.place-map-control { position:relative; align-self:stretch; width:100%; min-height:8.75rem; margin:0; padding:0; overflow:hidden; background:#f3f3e9; }
+.place-map-card svg[data-hidden] { display:none; }
+.place-map-card svg { position:absolute; inset:0; display:block; width:100%; height:100%; background:#f3f3e9; }
+.place-map-zoom-buttons { position:absolute; bottom:.25rem; right:.25rem; display:flex; gap:1px; opacity:0; pointer-events:none; }
+.place-map-control:is(:hover, :focus-within) .place-map-zoom-buttons { opacity:1; pointer-events:auto; }
+@media (hover:none) { .place-map-zoom-buttons { opacity:1; pointer-events:auto; } }
+.place-map-zoom-buttons button { font-family:var(--font-sans); font-size:.875rem; line-height:1; cursor:pointer; }
+.place-map-zoom-buttons button:disabled { opacity:.4; cursor:default; }

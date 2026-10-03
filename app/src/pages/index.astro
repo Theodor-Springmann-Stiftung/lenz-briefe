@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import LetterHeader from '../components/LetterHeader.astro';
 import Filter from '../components/Filter.astro';
 import FilterInformation from '../components/FilterInformation.astro';
+import PlaceMapCards from '../components/PlaceMapCards.astro';
 import Icon from '../components/Icon.astro';
 import { catalog, filterOptions, base, letterUrl } from '../lib/edition';
 import searchIndexUrl from '../../generated/search.json?url';
@@ -61,6 +62,7 @@ const firstGroup = catalog.groups[0];
     </div>
     <div class="filter-information" aria-label="Informationen zu ausgewählten Personen und Orten" hidden></div>
     <FilterInformation />
+    <PlaceMapCards />
     <nav class="year-navigation" aria-label="Zeiträume">
       <div class="year-tabs">
         {catalog.groups.map((group) => (
