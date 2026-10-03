@@ -60,6 +60,7 @@ export interface Tradition {
   html: string;
 }
 interface Definition {
+  ref?: string;
   name: string;
   index: string;
 }

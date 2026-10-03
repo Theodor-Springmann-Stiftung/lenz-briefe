@@ -1,11 +1,12 @@
 ---
-import { filterOptions, gndInformation, base } from '../lib/edition';
+import { catalog, filterOptions, gndInformation, base } from '../lib/edition';
 import Icon from './Icon.astro';
 ---
 
 {(['person', 'place'] as const).flatMap((kind) =>
   filterOptions(kind).map(({ id, name }) => {
     const information = gndInformation[kind === 'person' ? 'people' : 'places'][id];
+    const reference = catalog[kind === 'person' ? 'people' : 'places'][id].ref;
     if (!information) return null;
     return (
       <template data-filter-information={`${kind}-${id}`}>
@@ -51,7 +52,7 @@ import Icon from './Icon.astro';
           </div>
           <nav class="filter-reference-links" aria-label={`Weiterführende Informationen zu ${name}`}>
             {information.links.map((link) => (
-              <a href={link.url} title={link.title}>
+              <a href={link.label === 'GND' ? reference : link.url} title={link.label === 'GND' ? 'Gemeinsame Normdatei' : link.title}>
                 <img src={`${base}reference-icons/${link.icon}`} width="16" height="16" alt="" loading="lazy" />
                 <span>{link.label}</span>
               </a>

@@ -158,6 +158,11 @@ test('shows only the five chosen person providers, excludes Portraitindex, retai
 });
 
 test('does not invent missing provider links and falls back to another Wikipedia language', () => {
+  assert.equal(referenceLinks(person)[0].url, `https://d-nb.info/gnd/${person.gndIdentifier}`);
+  for (const kind of ['people', 'places']) {
+    const reference = 'https://d-nb.info/gnd/157897842';
+    assert.equal(referenceLinks(person, kind, reference).find((link) => link.label === 'GND').url, reference);
+  }
   assert.deepEqual(referenceLinks(person).map(({ label }) => label), ['GND']);
   const links = referenceLinks({ ...person, wikipedia: [{ id: 'https://en.wikipedia.org/wiki/Jakob_Michael_Reinhold_Lenz' }] });
   assert.equal(links.length, 2);

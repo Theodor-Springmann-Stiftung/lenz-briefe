@@ -54,7 +54,7 @@ function isRecord(record, id) {
       record.deprecatedUri.some((uri) => gndId(uri) === id)));
 }
 
-export function summarizeGnd(record, kind) {
+export function summarizeGnd(record, kind, reference) {
   // A linked ID can be wrong in the source. Never label a corporate body as a person/place.
   if (!record?.type?.includes(kind === 'people' ? 'Person' : 'PlaceOrGeographicName')) return null;
   if (!GND_ID.test(record.gndIdentifier)) return null;
@@ -67,7 +67,7 @@ export function summarizeGnd(record, kind) {
     occupations: kind === 'people' ? labels(record.professionOrOccupation).join(', ') : '',
     geographicAreas: kind === 'places' ? labels(record.geographicAreaCode).join(', ') : '',
     description: description.length > 500 ? `${description.slice(0, 500).replace(/\s+\S*$/, '')} …` : description,
-    links: referenceLinks(record, kind),
+    links: referenceLinks(record, kind, reference),
     picture: kind === 'people' ? summarizeDepiction(record) : null,
   };
 }
@@ -196,7 +196,7 @@ export async function enrichGnd({
   for (const kind of ['people', 'places']) {
     for (const [id, definition] of Object.entries(catalog[kind])) {
       const record = records.get(gndId(definition.ref));
-      const summary = summarizeGnd(record, kind);
+      const summary = summarizeGnd(record, kind, definition.ref);
       if (summary) information[kind][id] = summary;
       else if (record && !record.type.includes(kind === 'people' ? 'Person' : 'PlaceOrGeographicName')) {
         logger.warn(`[GND] ${definition.name}: ${definition.ref} has an unexpected entity type; omitted.`);

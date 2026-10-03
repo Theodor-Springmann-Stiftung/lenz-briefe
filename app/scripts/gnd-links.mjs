@@ -20,10 +20,10 @@ function webUrl(value) {
 }
 
 /** Only link resources explicitly supplied by the authority record. */
-export function referenceLinks(record, kind = 'people') {
+export function referenceLinks(record, kind = 'people', reference = `https://d-nb.info/gnd/${record.gndIdentifier}`) {
   const links = [{
-    label: 'GND', title: 'Gemeinsame Normdatei · lobid',
-    url: `https://lobid.org/gnd/${record.gndIdentifier}`,
+    label: 'GND', title: 'Gemeinsame Normdatei',
+    url: reference,
     icon: icons['gnd.network']?.file || 'database.svg',
   }];
   const seen = new Set();
