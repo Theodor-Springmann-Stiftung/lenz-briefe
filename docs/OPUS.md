@@ -304,8 +304,8 @@ entfallen zusätzliche Linien, Einrückungen und Winkelangaben im Transkriptions
 Pfeil und Gradzahl stehen nach der Anmerkung zur Randnotiz. Die Verbindungslinien
 der Kurzlegende zeigen für die Schreibrichtung auf diese Kennzeichnung, nicht
 auf das Positionssymbol. Als zusätzliche Verständnishilfe
-springt das Positionssymbol beim Berühren der Randnotiz oder beim Tastaturfokus
-kurz hoch und dreht sich dabei in die Originalrichtung (270° als −90°).
+dreht sich das Positionssymbol beim Berühren der Randnotiz oder beim Tastaturfokus
+in 120 ms in die Originalrichtung (270° als −90°).
 Es trägt keinen zusätzlichen Drehpfeil.
 Der Winkel bleibt im Tooltip und zugänglichen Namen erhalten. Bei mehreren
 verschiedenen Winkeln zeigt das Symbol diese im Tooltip und dreht sich nicht.

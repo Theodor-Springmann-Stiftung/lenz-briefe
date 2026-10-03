@@ -332,15 +332,9 @@
   .sidenote-position { display:inline-block; width:.7rem; margin-left:.35em; vertical-align:-.15em; }
   .sidenote-position svg { display:block; width:100%; height:auto; overflow:visible; }
   .sidenote-position[data-rotatable] { position:relative; cursor:help; }
-  .sidenote-position[data-rotatable] > svg { transform-origin:center; transition:transform .2s ease-out; }
+  .sidenote-position[data-rotatable] > svg { transform-origin:center; transition:transform .12s ease-out; }
   .sidenote-layout:is(:hover, :focus-within) > .sidenote-position[data-rotation] > svg,
-  .sidenote-position[data-rotation]:is(:hover, :focus-visible) > svg { transform:rotate(var(--sidenote-turn)); animation:sidenote-page-hop .4s ease-out; }
-  @keyframes sidenote-page-hop {
-    0% { transform:translateY(0) rotate(0deg); }
-    45% { transform:translateY(-.3rem) rotate(calc(var(--sidenote-turn) * .6)); }
-    75% { transform:translateY(.04rem) rotate(var(--sidenote-turn)); }
-    100% { transform:translateY(0) rotate(var(--sidenote-turn)); }
-  }
+  .sidenote-position[data-rotation]:is(:hover, :focus-visible) > svg { transform:rotate(var(--sidenote-turn)); }
   @media (prefers-reduced-motion:reduce) {
     .sidenote-position[data-rotatable] > svg { animation:none !important; transition:none; transform:none !important; }
   }
@@ -387,13 +381,13 @@
     .about-page--with-toc .about-page-content { grid-column:1; grid-row:1; }
     .page-toc { grid-column:2; grid-row:1; position:sticky; top:calc(var(--site-header-height, 5rem) + 2rem); max-height:calc(100dvh - var(--site-header-height, 5rem) - 4rem); overflow-y:auto; }
   }
-  .about-page h1 { @apply font-serif text-5xl font-bold tracking-tight mb-6 leading-tight; }
+  .about-page h1 { @apply font-serif text-5xl font-bold tracking-tight mb-8 leading-tight; }
   .page-prose { max-width:75ch; font-size:1.125rem; line-height:1.65; hyphens:auto; overflow-wrap:anywhere; }
   .page-prose:has(> *) { margin-bottom:2.5rem; }
   .page-prose :is(p, ul, ol, dl, blockquote, pre, table, figure) { margin-block:1.25em; }
   .page-prose > :first-child { margin-top:0; }
   .page-prose :is(h2, h3, h4, h5, h6) { margin-block:1.75em .6em; font-family:var(--font-serif); line-height:1.3; }
-  .page-prose h2 { font-size:1.75rem; margin-bottom:.2em; }
+  .page-prose h2 { font-size:1.75rem; margin-bottom:.8em; }
   .page-prose h3 { font-size:1.4rem; margin-block:.8em 0; }
   .page-prose h3:first-of-type { margin-top:0; }
   .page-prose :is(h2, h3) + :is(p, ul, ol, dl, blockquote, pre, table, figure) { margin-top:0; }

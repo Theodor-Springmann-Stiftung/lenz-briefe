@@ -91,41 +91,22 @@ const url = (file: string) => licenseFileUrl(file, import.meta.env.BASE_URL);
         Ihre Herkunft ist im <a href={url('reference-icon-sources.json')}>Quellenverzeichnis der Icons</a> dokumentiert.
       </p>
 
-      <h2 id="hinweise">Lizenz- und Urheberrechtshinweise</h2>
-      <p>
-        Die nachfolgenden Hinweise bewahren die Angaben der jeweiligen Rechteinhaber. Die
-        vollständigen Lizenztexte sind bei jedem Produkt verlinkt; sie enthalten auch die jeweiligen
-        Haftungs- und Gewährleistungsausschlüsse.
-      </p>
-      {notices.map((notice) => (
-        <details class="license-notice">
-          <summary>{notice.name}</summary>
-          <pre>{notice.text}</pre>
-        </details>
-      ))}
+      <h2 id="hinweise" class="pb-4">Lizenz- und Urheberrechtshinweise Dritter</h2>
 
-      <h2 id="laufzeit">Laufzeitabhängigkeiten</h2>
+      <h3 id="laufzeit" class="pb-2">Laufzeitabhängigkeiten</h3>
       <p>
-        Die Druckfunktion verwendet Vivliostyle Core 2.45.2 unter der{' '}
-        <a href={url('npm/@vivliostyle__core@2.45.2/LICENSE')}>GNU AGPL Version 3</a>.
-        Die Bibliothek und ihre Druckintegration werden ohne Gewährleistung bereitgestellt.
-        Der <a href="https://github.com/vivliostyle/vivliostyle.js/archive/refs/tags/v2.45.2.tar.gz">Quellcode der Bibliothek</a>{' '}
-        und der <a href={revision.url}>Quellcode dieser Website einschließlich der Druckintegration</a>{' '}
-        sind öffentlich verfügbar. Die Druckintegration steht ebenfalls unter AGPL-3.0.
-      </p>
-      <p>
-        Diese Bibliotheken, Schriftarten und Icons sind Teil der ausgelieferten Website. Die
-        Einteilung bezieht sich auf die Website im Browser; Tailwind erzeugt beispielsweise die
-        mitgelieferten CSS-Regeln beim Build.
+        Diese Bibliotheken, Schriftarten und Icons sind Teil der ausgelieferten Website.
+        Tailwind erzeugt beispielsweise die mitgelieferten CSS-Regeln beim Build. Vivliostyle
+        layoutet die Druckseiten im Client. Popper & Tippy.js dienen zur Positionierung von
+        Tooltips.
       </p>
       <LicenseTable entries={runtime} caption="Laufzeitabhängigkeiten der Website" />
 
-      <h2 id="build">Build-Abhängigkeiten</h2>
+      <h3 id="build" class="py-2">Build-Abhängigkeiten</h3>
       <p>
         Diese Werkzeuge und ihre direkten oder indirekten Abhängigkeiten dienen der Erstellung und
         Prüfung der statischen Website. Dazu gehören auch die Python-Werkzeuge für die
-        XML-Verarbeitung und optionale Pakete für andere Betriebssysteme. Source Sans 3 wird im
-        Quellcode mitgeführt, derzeit aber nicht als Webfont ausgeliefert.
+        XML-Verarbeitung und optionale Pakete für andere Betriebssysteme.
       </p>
       <details class="license-notice">
         <summary>
@@ -142,11 +123,7 @@ const url = (file: string) => licenseFileUrl(file, import.meta.env.BASE_URL);
         nicht allein die Kurzbezeichnungen.
       </p>
       <p>
-        Eine vollständige Übersicht steht auch im <a href={url('README.md')}>Lizenzverzeichnis</a>{' '}
-        bereit.
-      </p>
-      <p>
-        <a href={pageUrl('datenschutz')}>Zurück zu Impressum &amp; Datenschutz</a>
+        <a href={pageUrl('datenschutz')}>&larr; Zurück zu Impressum &amp; Datenschutz</a>
       </p>
     </div>
   </article>
