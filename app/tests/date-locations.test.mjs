@@ -28,6 +28,20 @@ test('resolves multiple locations by name rather than XML order', () => {
   );
 });
 
+test('shared journey wording links both canonical places without repeating the text', () => {
+  const label = 'Auf dem Weg von Hannover nach Kassel';
+  const text = 'Wahrscheinlich auf dem Weg von Hannover nach Kassel, 9. Februar 1776';
+  const parts = dateLocationParts(text, [
+    { ref: '19', label, resolved: { name: 'Hannover' } },
+    { ref: '18', label, resolved: { name: 'Kassel' } },
+  ]);
+  assert.equal(parts.map(part => part.text).join(''), text);
+  assert.deepEqual(parts.filter(part => part.placeId), [
+    { text: 'Hannover', placeId: '19' },
+    { text: 'Kassel', placeId: '18' },
+  ]);
+});
+
 test('links alternative places separately and leaves unresolved places unchanged', () => {
   const parts = dateLocationParts('Wahrscheinlich Berka oder Kochberg, Oktober 1776', [
     { ref: '14', label: 'Berka' },

@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import LetterCitation from '../../components/LetterCitation.astro';
 import LetterHeader from '../../components/LetterHeader.astro';
+import LetterRouteMap from '../../components/LetterRouteMap.astro';
 import CorrespondenceNavigation from '../../components/CorrespondenceNavigation.astro';
 import Icon from '../../components/Icon.astro';
 import QuickLegend from '../../components/QuickLegend.astro';
@@ -132,9 +133,11 @@ const sectionLinks = [
           )}
         </nav>
       </div>
-      <div class="detail-header">
-        <LetterHeader letter={letter} />
-      </div>
+      <div class="detail-header-row">
+        <div class="detail-header">
+          <LetterHeader letter={letter} />
+        </div>
+        <LetterRouteMap letter={letter} />
       {sectionLinks.length > 0 && (
         <nav class="reading-toolbar" aria-label="Abschnitte zum Brief">
           <a href="#ueberlieferung">
@@ -143,6 +146,7 @@ const sectionLinks = [
           </a>
         </nav>
       )}
+      </div>
     </div>
     <div
       class="reading-layout"

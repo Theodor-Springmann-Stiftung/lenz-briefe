@@ -1,0 +1,21 @@
+{
+  "title": "Europe laea location map",
+  "source": "https://commons.wikimedia.org/wiki/File:Europe_laea_location_map.svg",
+  "download": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Europe_laea_location_map.svg",
+  "creator": "Alexrk2 and Wikimedia Commons contributors",
+  "license": "CC-BY-SA-3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "retrieved": "2026-10-03",
+  "modifications": "User-edited SVG styling and layout. Cropped and overlaid with individual letter routes.",
+  "projection": "EPSG:3035",
+  "extent": [
+    2555000,
+    1350000,
+    7405000,
+    5500000
+  ],
+  "size": [
+    372.02402,
+    318.04477
+  ]
+}

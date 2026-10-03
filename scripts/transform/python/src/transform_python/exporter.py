@@ -119,15 +119,24 @@ def resolve_refs(nodes: list[etree._Element], mapping: dict[str, dict[str, Any]]
     for node in nodes:
         ref = str(get_attribute(node, "ref", ""))
         resolved = mapping.get(ref)
+        annotation = text_content(node)
+        # Location text can qualify the displayed place while @ref keeps its
+        # canonical identity for links and filters. Legacy uncertainty notes
+        # remain annotations; their meaning is also recorded by @cert.
+        place_label = (
+            node.tag == f"{{{NSMAP['l']}}}location"
+            and annotation
+            and annotation.lower() not in {"vmtl.", "wahrscheinlich", "oder"}
+        )
         resolved_nodes.append(
             {
                 "ref": ref,
                 "cert": get_attribute(node, "cert"),
                 "erschlossen": get_attribute(node, "erschlossen"),
-                "label": resolved["name"] if resolved else None,
+                "label": annotation if place_label else resolved["name"] if resolved else None,
                 "resolved": resolved,
-                "annotationText": text_content(node),
-                "annotationParts": extract_annotation_parts(node),
+                "annotationText": "" if place_label else annotation,
+                "annotationParts": [] if place_label else extract_annotation_parts(node),
             }
         )
     return resolved_nodes

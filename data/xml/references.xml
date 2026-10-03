@@ -346,9 +346,7 @@
 
 			<locationDef index="32" name="Marbach" ref="https://d-nb.info/gnd/4037443-9" />
 
-			<locationDef index="33" name="Wohl auf der Reise nach Emmendingen" />
 
-			<locationDef index="34" name="Auf dem Weg von Hannover nach Kassel" />
 
 			<locationDef index="35" name="Basel" ref="http://d-nb.info/gnd/4004617-5" />
 
@@ -384,13 +382,12 @@
 
 			<locationDef index="51" name="Unbekannter Ort" />
 
-			<locationDef index="52" name="Auf dem Weg nach Ohlershoff [Oleri]" />
 
 			<locationDef index="53" name="Schinznach" ref="https://d-nb.info/gnd/4415579-7" />
 
 			<locationDef index="54" name="Schloss Hegi" ref="http://d-nb.info/gnd/4089188-4" />
 
-			<locationDef index="55" name="Wohl auf der Reise nach Livland" />
+			<locationDef index="55" name="Livland" />
 
 			<locationDef index="56" name="Frankfurt am Main" ref="http://d-nb.info/gnd/4018118-2" />
 			
@@ -398,7 +395,6 @@
 			
 			<locationDef index="58" name="Koblenz-Ehrenbreitstein" ref="http://d-nb.info/gnd/4098580-5" />
 			
-			<locationDef index="59" name="Gegend um Kassel" />
 			
 			<locationDef index="60" name="Kolberg" ref="http://d-nb.info/gnd/4073614-3" />
 			

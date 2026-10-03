@@ -11,7 +11,10 @@ export function dateLocationParts(text, locations) {
     const names = locations
       .flatMap((location) => {
         const label = location.label || '';
-        return [label, label.replace(/\s*\[[^\]]*\]/g, '')]
+        const uniqueLabel = locations.filter(other => other.label === label).length === 1;
+        const canonical = location.resolved?.name || '';
+        return [uniqueLabel ? label : '', uniqueLabel ? label.replace(/\s*\[[^\]]*\]/g, '') : '',
+          canonical, canonical.replace(/\s*\[[^\]]*\]/g, '')]
           .filter(Boolean)
           .map((name) => ({ name, placeId: location.ref }));
       })

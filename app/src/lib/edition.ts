@@ -80,6 +80,7 @@ export const catalog: Catalog = JSON.parse(
 );
 export interface GndInformation {
   gndId: string;
+  coordinates?: { longitude: number; latitude: number } | null;
   lifespan: string;
   occupations: string;
   geographicAreas: string;

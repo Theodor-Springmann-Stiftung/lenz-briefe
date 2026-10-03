@@ -4,6 +4,7 @@ import { randomUUID } from 'node:crypto';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { referenceLinks } from './gnd-links.mjs';
 import { resolveGndImages } from './gnd-images.mjs';
+import { gndCoordinates } from '../src/lib/correspondence-map.mjs';
 
 const DAY = 86_400_000;
 const VERSION = 1;
@@ -63,6 +64,7 @@ export function summarizeGnd(record, kind, reference) {
   const description = kind === 'places' ? strings(record.biographicalOrHistoricalInformation)[0] || '' : '';
   return {
     gndId: record.gndIdentifier,
+    ...(kind === 'places' ? { coordinates: gndCoordinates(record) } : {}),
     lifespan: kind === 'people' && (birth || death) ? `${birth || '?'}–${death || '?'}` : '',
     occupations: kind === 'people' ? labels(record.professionOrOccupation).join(', ') : '',
     geographicAreas: kind === 'places' ? labels(record.geographicAreaCode).join(', ') : '',

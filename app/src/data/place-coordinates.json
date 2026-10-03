@@ -1,0 +1,546 @@
+{
+  "checkedAt": "2026-10-03",
+  "places": {
+    "1": {
+      "name": "Dorpat [Tartu]",
+      "reference": "https://d-nb.info/gnd/1029285-8",
+      "longitude": 26.72509,
+      "latitude": 58.38062,
+      "source": "https://lobid.org/gnd/1029285-8.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "2": {
+      "name": "Tarwast [Tarvastu]",
+      "reference": "https://d-nb.info/gnd/115455998X",
+      "longitude": 25.863788604736328,
+      "latitude": 58.219337463378906,
+      "source": "https://www.geonames.org/7522435/",
+      "provider": "GeoNames",
+      "precision": "region"
+    },
+    "3": {
+      "name": "Königsberg [Kaliningrad]",
+      "reference": "https://d-nb.info/gnd/4031541-1",
+      "longitude": 20.51095,
+      "latitude": 54.70649,
+      "source": "https://lobid.org/gnd/4031541-1.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "4": {
+      "name": "Fort Louis",
+      "reference": "https://d-nb.info/gnd/4762184-9",
+      "longitude": 8.05668,
+      "latitude": 48.801637,
+      "source": "https://www.geonames.org/3017690/",
+      "provider": "GeoNames",
+      "precision": "place"
+    },
+    "5": {
+      "name": "Landau",
+      "reference": "http://d-nb.info/gnd/4034222-0",
+      "longitude": 8.116666,
+      "latitude": 49.198333,
+      "source": "https://lobid.org/gnd/4034222-0.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "6": {
+      "name": "Weißenburg",
+      "reference": "http://d-nb.info/gnd/4079134-8",
+      "longitude": 7.945555,
+      "latitude": 49.036944,
+      "source": "https://lobid.org/gnd/4079134-8.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "7": {
+      "name": "Straßburg",
+      "reference": "http://d-nb.info/gnd/4057878-1",
+      "longitude": 7.745277,
+      "latitude": 48.583888,
+      "source": "https://lobid.org/gnd/4057878-1.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "8": {
+      "name": "Weimar",
+      "reference": "http://d-nb.info/gnd/4065105-8",
+      "longitude": 11.329029,
+      "latitude": 50.980299,
+      "source": "https://lobid.org/gnd/4065105-8.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "9": {
+      "name": "Kehl",
+      "reference": "http://d-nb.info/gnd/4030137-0",
+      "longitude": 7.815229,
+      "latitude": 48.572969,
+      "source": "https://lobid.org/gnd/4030137-0.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "10": {
+      "name": "Arensburg [Kuressaare]",
+      "reference": "http://d-nb.info/gnd/4097908-8",
+      "longitude": 22.503889,
+      "latitude": 58.24806,
+      "source": "https://lobid.org/gnd/4097908-8.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "11": {
+      "name": "Zürich",
+      "reference": "http://d-nb.info/gnd/4068038-1",
+      "longitude": 8.55,
+      "latitude": 47.366666,
+      "source": "https://lobid.org/gnd/4068038-1.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "12": {
+      "name": "Emmendingen",
+      "reference": "http://d-nb.info/gnd/4014586-4",
+      "longitude": 7.853611,
+      "latitude": 48.120833,
+      "source": "https://lobid.org/gnd/4014586-4.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "13": {
+      "name": "Ulm",
+      "reference": "http://d-nb.info/gnd/4061529-7",
+      "longitude": 9.99155,
+      "latitude": 48.398409,
+      "source": "https://lobid.org/gnd/4061529-7.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "14": {
+      "name": "Berka",
+      "reference": "http://d-nb.info/gnd/4087284-1",
+      "longitude": 11.2825,
+      "latitude": 50.899722,
+      "source": "https://lobid.org/gnd/4087284-1.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "15": {
+      "name": "Gotha",
+      "reference": "http://d-nb.info/gnd/4021652-4",
+      "longitude": 10.701666,
+      "latitude": 50.948055,
+      "source": "https://lobid.org/gnd/4021652-4.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "16": {
+      "name": "Göttingen",
+      "reference": "http://d-nb.info/gnd/4021477-1",
+      "longitude": 9.932222,
+      "latitude": 51.534166,
+      "source": "https://lobid.org/gnd/4021477-1.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "17": {
+      "name": "Kopenhagen",
+      "reference": "http://d-nb.info/gnd/4032399-7",
+      "longitude": 12.56553,
+      "latitude": 55.675939,
+      "source": "https://lobid.org/gnd/4032399-7.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "18": {
+      "name": "Kassel",
+      "reference": "http://d-nb.info/gnd/4029869-3",
+      "longitude": 9.5,
+      "latitude": 51.316666,
+      "source": "https://lobid.org/gnd/4029869-3.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "19": {
+      "name": "Hannover",
+      "reference": "http://d-nb.info/gnd/4023349-2",
+      "longitude": 9.733055,
+      "latitude": 52.370277,
+      "source": "https://lobid.org/gnd/4023349-2.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "20": {
+      "name": "Darmstadt",
+      "reference": "http://d-nb.info/gnd/4011077-1",
+      "longitude": 8.64944,
+      "latitude": 49.870559,
+      "source": "https://lobid.org/gnd/4011077-1.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "21": {
+      "name": "Bückeburg",
+      "reference": "http://d-nb.info/gnd/4008715-3",
+      "longitude": 9.04939,
+      "latitude": 52.260649,
+      "source": "https://lobid.org/gnd/4008715-3.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "22": {
+      "name": "Gudensberg",
+      "reference": "http://d-nb.info/gnd/4094205-3",
+      "longitude": 9.36748,
+      "latitude": 51.177059,
+      "source": "https://lobid.org/gnd/4094205-3.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "23": {
+      "name": "Gießen",
+      "reference": "http://d-nb.info/gnd/4020989-1",
+      "longitude": 8.65,
+      "latitude": 50.583329,
+      "source": "https://lobid.org/gnd/4020989-1.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "25": {
+      "name": "Dessau",
+      "reference": "http://d-nb.info/gnd/4011536-7",
+      "longitude": 12.245549,
+      "latitude": 51.838639,
+      "source": "https://lobid.org/gnd/4011536-7.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "26": {
+      "name": "Colmar",
+      "reference": "http://d-nb.info/gnd/4010401-1",
+      "longitude": 7.36667,
+      "latitude": 48.083329,
+      "source": "https://lobid.org/gnd/4010401-1.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "27": {
+      "name": "Leipzig",
+      "reference": "http://d-nb.info/gnd/4035206-7",
+      "longitude": 12.371111,
+      "latitude": 51.339444,
+      "source": "https://lobid.org/gnd/4035206-7.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "28": {
+      "name": "Hegi",
+      "reference": "http://d-nb.info/gnd/4668899-7",
+      "longitude": 8.77057,
+      "latitude": 47.50716,
+      "source": "https://www.geonames.org/2660394/",
+      "provider": "GeoNames",
+      "precision": "place"
+    },
+    "29": {
+      "name": "Halle",
+      "reference": "http://d-nb.info/gnd/4023025-9",
+      "longitude": 12.0,
+      "latitude": 51.5,
+      "source": "https://lobid.org/gnd/4023025-9.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "30": {
+      "name": "Kochberg",
+      "reference": "https://d-nb.info/gnd/4119877-3",
+      "longitude": 11.35584,
+      "latitude": 50.774929,
+      "source": "https://lobid.org/gnd/4119877-3.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "31": {
+      "name": "Mannheim",
+      "reference": "http://d-nb.info/gnd/4037372-1",
+      "longitude": 8.466944,
+      "latitude": 49.488888,
+      "source": "https://lobid.org/gnd/4037372-1.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "32": {
+      "name": "Marbach",
+      "reference": "https://d-nb.info/gnd/4037443-9",
+      "longitude": 9.259722,
+      "latitude": 48.939444,
+      "source": "https://lobid.org/gnd/4037443-9.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "35": {
+      "name": "Basel",
+      "reference": "http://d-nb.info/gnd/4004617-5",
+      "longitude": 7.58333,
+      "latitude": 47.549999,
+      "source": "https://lobid.org/gnd/4004617-5.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "36": {
+      "name": "Schweiz",
+      "reference": "http://d-nb.info/gnd/4053881-3",
+      "longitude": 8.014269,
+      "latitude": 47.6,
+      "source": "https://lobid.org/gnd/4053881-3.json",
+      "provider": "GND",
+      "precision": "region"
+    },
+    "37": {
+      "name": "Ursener Tal an der Matte",
+      "reference": "https://d-nb.info/gnd/4107479-8",
+      "longitude": 8.5166667,
+      "latitude": 46.6,
+      "source": "https://www.geonames.org/2658218/",
+      "provider": "GeoNames",
+      "precision": "region"
+    },
+    "38": {
+      "name": "Neuenburg",
+      "reference": "http://d-nb.info/gnd/4075303-7",
+      "longitude": 6.930833,
+      "latitude": 46.991666,
+      "source": "https://lobid.org/gnd/4075303-7.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "39": {
+      "name": "Bern",
+      "reference": "http://d-nb.info/gnd/4005762-8",
+      "longitude": 7.447222,
+      "latitude": 46.948055,
+      "source": "https://lobid.org/gnd/4005762-8.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "40": {
+      "name": "Castion",
+      "reference": "http://d-nb.info/gnd/4742201-4",
+      "longitude": 9.043292999267578,
+      "latitude": 46.22806552245937,
+      "source": "https://www.geonames.org/2661251/",
+      "provider": "GeoNames",
+      "precision": "place"
+    },
+    "41": {
+      "name": "Winterthur",
+      "reference": "http://d-nb.info/gnd/4066337-1",
+      "longitude": 8.723888,
+      "latitude": 47.505555,
+      "source": "https://lobid.org/gnd/4066337-1.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "42": {
+      "name": "Waldersbach",
+      "reference": "http://d-nb.info/gnd/10197465-6",
+      "longitude": 7.21456,
+      "latitude": 48.414328,
+      "source": "https://www.geonames.org/2967503/",
+      "provider": "GeoNames",
+      "precision": "place"
+    },
+    "43": {
+      "name": "Weisweil",
+      "reference": "http://d-nb.info/gnd/4417847-5",
+      "longitude": 7.67713,
+      "latitude": 48.19939,
+      "source": "https://lobid.org/gnd/4417847-5.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "44": {
+      "name": "Riga",
+      "reference": "http://d-nb.info/gnd/4050042-1",
+      "longitude": 24.105889,
+      "latitude": 56.945999,
+      "source": "https://lobid.org/gnd/4050042-1.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "45": {
+      "name": "Jamburg [Kingissepp]",
+      "reference": "http://d-nb.info/gnd/7853282-6",
+      "longitude": 28.61408629,
+      "latitude": 59.37627303,
+      "source": "https://www.geonames.org/548602/",
+      "provider": "GeoNames",
+      "precision": "place"
+    },
+    "46": {
+      "name": "St. Petersburg",
+      "reference": "http://d-nb.info/gnd/4267026-3",
+      "longitude": 30.26417,
+      "latitude": 59.89444,
+      "source": "https://lobid.org/gnd/4267026-3.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "47": {
+      "name": "Cronstadt [Kronschtadt]",
+      "reference": "https://d-nb.info/gnd/4098711-5",
+      "longitude": 29.76668,
+      "latitude": 59.995409,
+      "source": "https://lobid.org/gnd/4098711-5.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "48": {
+      "name": "Aya [Ahja]",
+      "reference": null,
+      "longitude": 27.073333,
+      "latitude": 58.203889,
+      "source": "https://www.geonames.org/592593/",
+      "provider": "GeoNames",
+      "precision": "place"
+    },
+    "49": {
+      "name": "Ohlershoff [Oleri]",
+      "reference": null,
+      "longitude": 25.401724,
+      "latitude": 57.803143,
+      "source": "https://www.geonames.org/457048/",
+      "provider": "GeoNames",
+      "precision": "place"
+    },
+    "50": {
+      "name": "Moskau",
+      "reference": "http://d-nb.info/gnd/4074987-3",
+      "longitude": 37.615555,
+      "latitude": 55.752222,
+      "source": "https://lobid.org/gnd/4074987-3.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "53": {
+      "name": "Schinznach",
+      "reference": "https://d-nb.info/gnd/4415579-7",
+      "longitude": 8.140887,
+      "latitude": 47.4465,
+      "source": "https://www.geonames.org/2658732/",
+      "provider": "GeoNames",
+      "precision": "place"
+    },
+    "54": {
+      "name": "Schloss Hegi",
+      "reference": "http://d-nb.info/gnd/4089188-4",
+      "longitude": 8.77149,
+      "latitude": 47.50834,
+      "source": "https://www.geonames.org/11789342/",
+      "provider": "GeoNames",
+      "precision": "place"
+    },
+    "56": {
+      "name": "Frankfurt am Main",
+      "reference": "http://d-nb.info/gnd/4018118-2",
+      "longitude": 8.684166,
+      "latitude": 50.115277,
+      "source": "https://lobid.org/gnd/4018118-2.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "57": {
+      "name": "Pernau [Pärnu]",
+      "reference": "http://d-nb.info/gnd/4045214-1",
+      "longitude": 24.497109,
+      "latitude": 58.38588,
+      "source": "https://lobid.org/gnd/4045214-1.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "58": {
+      "name": "Koblenz-Ehrenbreitstein",
+      "reference": "http://d-nb.info/gnd/4098580-5",
+      "longitude": 7.620129,
+      "latitude": 50.36012,
+      "source": "https://lobid.org/gnd/4098580-5.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "60": {
+      "name": "Kolberg",
+      "reference": "http://d-nb.info/gnd/4073614-3",
+      "longitude": 15.58342,
+      "latitude": 54.175649,
+      "source": "https://lobid.org/gnd/4073614-3.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "61": {
+      "name": "Lübeck",
+      "reference": "http://d-nb.info/gnd/4036483-5",
+      "longitude": 10.68729,
+      "latitude": 53.868929,
+      "source": "https://lobid.org/gnd/4036483-5.json",
+      "provider": "GND",
+      "precision": "place"
+    },
+    "62": {
+      "name": "Vasula [Wassula]",
+      "reference": null,
+      "longitude": 26.7311111,
+      "latitude": 58.4719444,
+      "source": "https://www.geonames.org/587706/",
+      "provider": "GeoNames",
+      "precision": "place"
+    },
+    "63": {
+      "name": "Karlsruhe",
+      "reference": "http://d-nb.info/gnd/4029713-5",
+      "longitude": 8.38583,
+      "latitude": 49.004719,
+      "source": "https://lobid.org/gnd/4029713-5.json",
+      "provider": "GND",
+      "precision": "place"
+    }
+  },
+  "unresolved": [
+    {
+      "id": "24",
+      "name": "Hinter Frankfurt",
+      "reason": "No unambiguous fixed location in the edition reference."
+    },
+    {
+      "id": "33",
+      "name": "Wohl auf der Reise nach Emmendingen",
+      "reason": "No unambiguous fixed location in the edition reference."
+    },
+    {
+      "id": "34",
+      "name": "Auf dem Weg von Hannover nach Kassel",
+      "reason": "No unambiguous fixed location in the edition reference."
+    },
+    {
+      "id": "51",
+      "name": "Unbekannter Ort",
+      "reason": "No unambiguous fixed location in the edition reference."
+    },
+    {
+      "id": "52",
+      "name": "Auf dem Weg nach Ohlershoff [Oleri]",
+      "reason": "No unambiguous fixed location in the edition reference."
+    },
+    {
+      "id": "55",
+      "name": "Wohl auf der Reise nach Livland",
+      "reason": "No unambiguous fixed location in the edition reference."
+    },
+    {
+      "id": "59",
+      "name": "Gegend um Kassel",
+      "reason": "No unambiguous fixed location in the edition reference."
+    }
+  ]
+}

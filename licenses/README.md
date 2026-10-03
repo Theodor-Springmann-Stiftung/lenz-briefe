@@ -18,6 +18,12 @@ Their original URLs are recorded in [reference-icon-sources.json](reference-icon
 
 The build generates the German public overview at `/edition/lizenzen/` from the tables below, with browser-delivered products listed before build dependencies. All notice files are copied to `/licenses/`.
 
+## Maps
+
+The adapted **Europe laea location map**, by Alexrk2 and Wikimedia Commons
+contributors, is licensed under **CC BY-SA 3.0**, including our map adaptations.
+See the [map attribution, source, changes, and license links](maps/europe-laea/NOTICE.md).
+
 ## Fonts
 
 | Product | License | Files |
@@ -446,6 +452,10 @@ The license column records package metadata, not a replacement for the actual li
 | yocto-queue | 1.2.2 | MIT | [license](npm/yocto-queue@1.2.2/license) |
 | zod | 4.6.2 | MIT | [LICENSE](npm/zod@4.6.2/LICENSE) |
 | zwitch | 2.0.4 | MIT | [license](npm/zwitch@2.0.4/license) |
+
+| mgrs | 1.0.0 | MIT | [license.md](npm/mgrs@1.0.0/license.md) |
+| proj4 | 2.22.0 | MIT | [LICENSE.md](npm/proj4@2.22.0/LICENSE.md) |
+| wkt-parser | 1.5.6 | MIT | [LICENSE.md](npm/wkt-parser@1.5.6/LICENSE.md) |
 
 ## Updating this snapshot
 

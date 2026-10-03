@@ -17,6 +17,7 @@
     "@vivliostyle/core": "^2.45.2",
     "astro": "7.3.2",
     "parse5": "8.0.1",
+    "proj4": "^2.22.0",
     "remixicon": "^4.9.1",
     "tailwindcss": "4.3.3",
     "tippy.js": "^6.3.7"

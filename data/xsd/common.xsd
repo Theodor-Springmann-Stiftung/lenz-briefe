@@ -85,7 +85,10 @@
 
 	<xsd:complexType name="ortref">
 		<xsd:annotation>
-			<xsd:documentation> Bezieht sich auf einen Ort und qualifiziert diese Beziehung.</xsd:documentation>
+			<xsd:documentation> Bezieht sich auf einen Ort und qualifiziert diese Beziehung.
+				Der Textinhalt kann eine abweichende Ortsbezeichnung enthalten (z. B. Gegend um Kassel);
+				@ref bezeichnet weiterhin den kanonischen Ort für Verlinkung und Filter.
+				Die bisherigen Angaben vmtl., wahrscheinlich und oder bleiben Anmerkungen.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="lenz:ref">

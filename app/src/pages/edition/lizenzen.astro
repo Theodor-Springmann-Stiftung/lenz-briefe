@@ -38,6 +38,9 @@ const url = (file: string) => licenseFileUrl(file, import.meta.env.BASE_URL);
             <a href="#edition">Website und XML-Daten</a>
           </li>
           <li>
+            <a href="#karte">Kartengrundlage und Ortskoordinaten</a>
+          </li>
+          <li>
             <a href="#hinweise">Lizenz- und Urheberrechtshinweise</a>
           </li>
           <li>
@@ -89,6 +92,29 @@ const url = (file: string) => licenseFileUrl(file, import.meta.env.BASE_URL);
         Die lokal gespeicherten Website-Icons kennzeichnen die verlinkten Angebote und unterliegen
         den jeweiligen Rechten ihrer Anbieter; sie fallen nicht unter die CC0-Freigabe der Normdaten.
         Ihre Herkunft ist im <a href={url('reference-icon-sources.json')}>Quellenverzeichnis der Icons</a> dokumentiert.
+      </p>
+
+      <h2 id="karte">Kartengrundlage und Ortskoordinaten</h2>
+      <p>
+        Die Karten in den Briefköpfen basieren auf
+        <a href="https://commons.wikimedia.org/wiki/File:Europe_laea_location_map.svg"> Europe laea location map</a>
+        von <a href="https://commons.wikimedia.org/wiki/User:Alexrk2">Alexrk2</a> und
+        Wikimedia-Commons-Mitwirkenden (darunter Faycal.09), mit Kartendaten von Natural Earth.
+        Die Kartengrundlage und unsere Bearbeitung stehen unter
+        <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.de" rel="license"> Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 Unported (CC BY-SA 3.0)</a>.
+      </p>
+      <p>
+        Änderungen: Gestaltung und Layout der SVG-Datei wurden bearbeitet; die Karte wird
+        ausschnittsweise und skaliert angezeigt und um Ortsmarkierungen und Briefweg-Pfeile ergänzt.
+        Bei Weitergabe sind Urheber, Quelle, Lizenz und Änderungen anzugeben; Bearbeitungen
+        müssen unter derselben oder einer kompatiblen Lizenz weitergegeben werden.
+        <a href="https://creativecommons.org/licenses/by-sa/3.0/legalcode"> Vollständiger Lizenztext</a>
+        und <a href={url('maps/europe-laea/NOTICE.md')}>Quellen- und Bearbeitungshinweis</a>.
+      </p>
+      <p>
+        Ortskoordinaten: GND/lobid (CC0), ergänzt durch
+        <a href="https://www.geonames.org/"> GeoNames</a>
+        (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>).
       </p>
 
       <h2 id="hinweise" class="pb-4">Lizenz- und Urheberrechtshinweise Dritter</h2>

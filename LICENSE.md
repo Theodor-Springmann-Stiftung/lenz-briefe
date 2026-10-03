@@ -18,3 +18,8 @@ unless otherwise identified. Existing public-domain material remains public doma
 Third-party software, fonts, icons, and separately identified images retain their
 own licenses and rights notices; the MIT grant does not relicense those works.
 See [licenses/README.md](licenses/README.md) for the collected notices.
+
+The adapted Europe laea location map by Alexrk2 and Wikimedia Commons contributors
+is licensed under CC BY-SA 3.0. See the
+[map notice](licenses/maps/europe-laea/NOTICE.md) for attribution, source, changes,
+and license links.
