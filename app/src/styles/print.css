@@ -75,7 +75,8 @@
   .letter-header .letter-date { display:block; margin:0 0 .5mm; font-size:var(--header-text-size); line-height:1.25; }
   .letter-date-tail { display:inline; }
   .letter-date-separator { display:inline; }
-  .letter-events { display:block; font-size:var(--header-text-size); line-height:1.3; }
+  .letter-events { display:block; font-size:var(--header-text-size); line-height:1.3; padding-inline-start:1.2em; text-indent:-1.2em; }
+  .letter-events .correspondence-party { padding-inline-start:0; text-indent:0; }
   .letter-header :is(.event-place, .event-date) { display:inline; font-size:inherit; }
   .letter-events .correspondence-arrow { display:inline-flex; margin-inline:.4em; }
   .letter-header .source-icons { display:inline-flex; margin:0 0 0 .4em; font-size:9pt; line-height:1; }
