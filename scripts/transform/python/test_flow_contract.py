@@ -32,7 +32,7 @@ class FlowContractTests(unittest.TestCase):
         self.assertNotIn('xmlns:t=', fragment)
         # Inspect the serialized tree before an HTML parser can silently repair
         # invalid nesting. These are all tags emitted by the three stylesheets.
-        xml_fragment = fragment.replace('<hr class="lb-rule">', '<hr class="lb-rule"/>')
+        xml_fragment = fragment.replace('<hr class="lb-rule">', '<hr class="lb-rule"/>').replace('<hr class="lb-rule" data-type="long-line">', '<hr class="lb-rule" data-type="long-line"/>')
         tree = etree.fromstring(('<root>' + xml_fragment + '</root>').encode())
         allowed = PHRASING | FLOW | {'root'}
         for e in tree.iter():
@@ -51,7 +51,7 @@ class FlowContractTests(unittest.TestCase):
     def test_line_first_transform_is_one_block_with_line_attributes(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:
             for whitespace in ['', ' \n  ']:
-                for line_type in ['break', 'line', 'tilde', 'double-tilde']:
+                for line_type in ['break', 'line', 'long-line', 'tilde', 'double-tilde']:
                     with self.subTest(kind=kind, whitespace=whitespace, type=line_type):
                         tree = self.render('Before<tr rot="90">' + whitespace +
                             f'<line tab="3" type="{line_type}"/>First<ul>word</ul><line/>Second</tr>After', kind)
@@ -184,6 +184,14 @@ class FlowContractTests(unittest.TestCase):
                     self.assertTrue(ornaments[0].get('aria-label'))
                     self.assertEqual(self.page(tree).get('data-break'), 'block')
                     self.assertFalse(tree.xpath('.//hr'))
+
+    def test_long_rule_preserves_text_and_page_boundaries(self):
+        for kind in ['letter-text', 'sidenotes', 'traditions']:
+            with self.subTest(kind=kind):
+                tree = self.render('A<line type="long-line"/><page index="2"/>B', kind)
+                self.assertEqual(''.join(line.text_content() for line in self.lines(tree)), 'AB')
+                self.assertEqual(len(tree.xpath('.//hr[@class="lb-rule"][@data-type="long-line"]')), 1)
+                self.assertEqual(self.page(tree).get('data-break'), 'block')
 
     def test_erasure_markers_are_hidden_only_without_character_data(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:

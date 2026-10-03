@@ -256,7 +256,7 @@ andere IDs als die Seitenanker des Brieftexts.
 | --- | --- | --- |
 | `page/@index` | Pflicht; positive Ganzzahl | Innerhalb des Briefes eindeutige Seiten-ID; Ziel für `sidenote/@page`. |
 | `page/@type` | Optional; `inner` | `inner` oder `outer`; bleibt als Information erhalten, ohne Seitenidentität oder aktuelle Gestaltung zu ändern. |
-| `line/@type` | Optional; `break` | `break`: neue Zeile; `line`: horizontale Linie; `tilde`: geschwungener Strich; `double-tilde`: doppelter geschwungener Strich. |
+| `line/@type` | Optional; `break` | `break`: neue Zeile; `line`: horizontale Linie; `long-line`: horizontale Linie über 95 % der Textbreite; `tilde`: geschwungener Strich; `double-tilde`: doppelter geschwungener Strich. |
 | `line/@tab` | Optional; positive Ganzzahl | Einzug der ersten dargestellten Zeile. Eine Einheit entspricht derzeit `2ch`; automatisch umgebrochene Folgezeilen bleiben links. Auf schmalen Bildschirmen ist der Einzug begrenzt. |
 | `vspace/@lines` | Pflicht; Dezimalzahl größer als null | Abstand: z. B. `1`, `0.5`, `1.5`. Dezimalpunkt verwenden; kein Komma, Exponent, Null oder negativer Wert. |
 | `vspace/@presentational` | Optional; `false` | Boolean: Abstand zur Verständnishilfe statt einer nachgebildeten Lücke der Quelle. Die Höhe bleibt gleich; die Legende unterscheidet diese Abstände. |

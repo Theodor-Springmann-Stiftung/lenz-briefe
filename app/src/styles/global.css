@@ -561,8 +561,9 @@ button.hand-range-trigger { font:inherit; text-align:inherit; }
 .edition-text [class^=align-] { max-width:100%; }
 .edition-text .lb-line-block--note { text-align:center; }
 .edition-text .lb-line-block--note > div { text-align:center; width:100%; }
-.edition-text :is(.lb-line-block, .lb-tab-row):has(> .lb-rule) { min-height:0; }
-.edition-text .lb-rule { width:40%; border:0; border-top:1px solid currentColor; margin:.2em auto; }
+.edition-text :is(.lb-line-block, .lb-tab-row):has(> .lb-rule) { min-height:1lh; padding-block:calc((1lh - 1px) / 2); }
+.edition-text .lb-rule { width:40%; border:0; border-top:1px solid currentColor; margin:0 auto; }
+.edition-text .lb-rule[data-type="long-line"] { width:95%; }
 .edition-text .page-anchor { scroll-margin-top:3rem; }
 .edition-text [id] { scroll-margin-top:3rem; }
 html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-text :is(.lb-line-block, .tab, .lb-tab-prefix, .sidenote):target { background:#fff3e6; }

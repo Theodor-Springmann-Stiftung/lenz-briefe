@@ -6,6 +6,12 @@ from transform_python.common import XSD_DIR, XSD_MAP
 
 
 class SeparateDocumentSchemaTests(unittest.TestCase):
+    def test_long_line_is_valid(self):
+        schema = etree.XMLSchema(etree.parse(str(XSD_DIR / 'briefe.xsd')))
+        schema.assertValid(etree.fromstring('<opus xmlns="https://lenz-archiv.de"><document>'
+            '<letterText letter="1"><page index="1"/>Before<line type="long-line"/>After'
+            '</letterText></document></opus>'))
+
     def test_transformed_text_rotation_range_and_content(self):
         for schema_name, wrapper in [
             ('briefe.xsd', '<document><letterText letter="1"><page index="1"/>{}</letterText></document>'),
