@@ -3,7 +3,6 @@ import { existsSync } from 'node:fs';
 import { appendFile, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { enrichGnd } from './gnd.mjs';
 const workspace = fileURLToPath(new URL('../../scripts/transform/python/', import.meta.url));
 const output = fileURLToPath(new URL('../generated/', import.meta.url));
 const python = fileURLToPath(new URL('.venv/bin/python', pathToFileURL(workspace)));
@@ -52,7 +51,7 @@ export async function runExport({
   outputDirectory = output,
   reuseXml = process.env.XML_EXPORT_CACHE_HIT === 'true',
   transform = runXmlExport,
-  enrich = enrichGnd,
+  enrich,
   logger = console,
 } = {}) {
   signal?.throwIfAborted();
@@ -62,7 +61,10 @@ export async function runExport({
   } else {
     await transform({ signal, outputDirectory });
   }
-  const { stats } = await enrich({ output: outputDirectory, signal, cacheMode: process.env.GND_CACHE_MODE || 'ttl' });
+  // The cache check runs before npm ci in CI. Load GND (and its npm
+  // dependencies) only when an actual export needs enrichment.
+  const enrichOutput = enrich ?? (await import('./gnd.mjs')).enrichGnd;
+  const { stats } = await enrichOutput({ output: outputDirectory, signal, cacheMode: process.env.GND_CACHE_MODE || 'ttl' });
   if (process.env.GITHUB_OUTPUT) {
     await appendFile(process.env.GITHUB_OUTPUT, `gnd-cache-complete=${stats.failed === 0 && stats.stale === 0 && !stats.imageFailed}\n`);
   }

@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import { mkdtemp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 import { runExport, checkXmlCache } from '../scripts/export.mjs';
 
 async function fixture(t) {
@@ -18,6 +20,28 @@ async function fixture(t) {
 }
 
 const stats = { cached: 0, fetched: 0, failed: 0, stale: 0 };
+
+test('cache-check CLI works before npm installation, without loading enrichment modules', async (t) => {
+  const root = await mkdtemp(path.join(tmpdir(), 'lenz-cache-cli-'));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  const scripts = path.join(root, 'app/scripts');
+  await mkdir(scripts, { recursive: true });
+  const script = path.join(scripts, 'export.mjs');
+  await writeFile(script, await readFile(new URL('../scripts/export.mjs', import.meta.url)));
+  const githubOutput = path.join(root, 'step-output');
+  const run = () => promisify(execFile)(process.execPath, [script, '--check-cache'], {
+    env: { ...process.env, GITHUB_OUTPUT: githubOutput },
+  });
+  await run();
+  const generated = path.join(root, 'app/generated');
+  await mkdir(path.join(generated, 'letters'), { recursive: true });
+  for (const [file, value] of Object.entries({
+    'status.json': { state: 'success' }, 'catalog.json': {},
+    'search.json': {}, 'letters/index.json': [],
+  })) await writeFile(path.join(generated, file), JSON.stringify(value));
+  await run();
+  assert.equal(await readFile(githubOutput, 'utf8'), 'usable=false\nusable=true\n');
+});
 
 test('the workflow checks restored output before deciding whether Python is needed', async (t) => {
   const { outputDirectory } = await fixture(t);
