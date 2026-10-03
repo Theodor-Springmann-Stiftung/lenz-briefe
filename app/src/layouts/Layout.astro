@@ -8,6 +8,7 @@ import OfflineToggle from '../components/OfflineToggle.astro';
 import { base } from '../lib/edition';
 import Navigation from '../components/Navigation.astro';
 import BackToTop from '../components/BackToTop.astro';
+import PrintEditionLink from '../components/PrintEditionLink.astro';
 import { revision } from '../lib/revision';
 import { pageUrl } from '../lib/pages';
 interface Props {
@@ -118,6 +119,7 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {
       </div>
     </footer>
     <BackToTop />
+    <PrintEditionLink />
     <script>
       import '../scripts/tooltips';
     </script>

@@ -178,12 +178,20 @@
   .selection-index-date { display:block; font-size:8pt; color:#444; }
   .selection-index a::after { content:target-counter(attr(href), page); position:absolute; right:0; top:0; }
   .selection-letter { break-before:page; }
+  .print-edition-link { margin-top:5mm; text-align:right; break-inside:avoid-page; font:8pt/1.35 var(--font-sans); }
+  .print-edition-link > a { display:inline-table; text-decoration:none; color:#000; }
+  .print-edition-link-text { display:table-cell; vertical-align:bottom; text-align:right; padding-right:3mm; }
+  .print-edition-link-text > * { display:block; }
+  .print-edition-link img { display:table-cell; width:16mm; height:16mm; vertical-align:bottom; }
+  .print-with-edition-link .site-footer { border-top:0; padding-top:0; }
+  .site-footer > .print-edition-link { margin:0 0 2mm; }
+  .print-with-edition-link .site-footer-inner { border-top:1px solid #000; padding-top:2mm; }
 }
 
 /* The running element starts at the end of the document, so only its final page
-   receives it. The 24 mm margin fits the footer above the existing page number
-   without reserving another page or joining the citation to the footer. */
+   receives it. Reserve space for the edition QR, footer, and page number. */
 @media vivliostyle {
+  @page { margin-bottom:38mm; }
   .site-footer { position:running(letter-footer); width:100%; margin-top:0; padding-top:2mm; line-height:1.25; }
   .footer-license-icons { transform:none; margin-top:-.5em; }
   @page {

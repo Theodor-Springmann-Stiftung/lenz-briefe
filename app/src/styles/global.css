@@ -152,6 +152,7 @@
   .all-letters-link { box-shadow:1px 1px 0 var(--color-ink); }
   .all-letters-link:is(:hover, :focus-visible) { background:var(--color-paper); box-shadow:2px 2px 0 var(--color-ink); }
   .all-letters-link:active { box-shadow:none; transform:translate(1px, 1px); }
+  .all-letters-link[data-print-selection] { background:color-mix(in srgb, var(--color-paper) 35%, transparent); border:1px solid #000; border-radius:0; box-shadow:none; transform:none; }
   .filter-toolbar { @apply flex flex-wrap items-center gap-3 bg-filter p-4; border:1px solid #586358; }
   .filter-details { min-height:0; overflow:hidden; padding:0 1rem .875rem; font-size:.9rem; line-height:1.5; overflow-wrap:anywhere; }
   .filter-details p { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:8; overflow:hidden; }
@@ -291,9 +292,13 @@
   .correspondence-caption { display:flex; flex-wrap:wrap; align-items:baseline; column-gap:.25em; min-width:0; }
   .correspondence-overview { display:inline-flex; align-items:center; flex-shrink:0; gap:.625rem; height:1rem; margin-left:.125rem; }
   .correspondence-divider { height:1rem; border-left:1px solid #a8b2a8; }
-  .correspondence-list, .letter-print-button { @apply inline-flex size-6 items-center justify-center; flex-shrink:0; align-self:center; line-height:1; border:1px solid #000; border-radius:0; background:transparent; }
+  .correspondence-list, .letter-print-button { @apply inline-flex size-6 items-center justify-center; flex-shrink:0; align-self:center; line-height:1; border:1px solid #000; border-radius:0; background:color-mix(in srgb, var(--color-paper) 35%, transparent); }
   .correspondence-list .ui-icon, .letter-print-button .ui-icon { width:1rem; height:1rem; }
   .correspondence-list:hover, .letter-print-button:hover { color:var(--color-ink); }
+  @media (hover:hover) {
+    :is(.all-letters-link[data-print-selection], .correspondence-list, .letter-print-button):hover { background-color:#eff2ee; }
+  }
+  :is(.all-letters-link[data-print-selection], .correspondence-list, .letter-print-button):active { background-color:#e3e8e1; box-shadow:inset 1px 1px 0 #a8b2a8; transform:none; }
   .correspondence-list:focus-visible, .letter-print-button:focus-visible { outline-offset:2px; }
   .correspondent-picker { position:relative; display:inline-flex; align-items:center; gap:.125rem; min-width:0; max-width:100%; padding-inline:.375rem; }
   [data-correspondent-name] { overflow-wrap:anywhere; }
@@ -320,6 +325,7 @@
   .detail-header-group { width:100%; margin:var(--page-top-space) auto 6rem; font-family:var(--font-sans); }
   .detail-header { @apply font-sans; border:1px solid #586358; padding:var(--detail-header-padding, clamp(1rem, 2vw, 2rem)); }
   .detail-header .letter-header { --header-text-size:1.125rem; }
+  .detail-header, .letter-content > .apparatus { background-color:color-mix(in srgb, var(--color-paper) 35%, transparent); }
   .reading-toolbar { @apply flex justify-end text-sm text-right text-ink; position:relative; grid-column:1 / -1; padding-top:.75rem; }
   .reading-toolbar a:hover { text-decoration:underline; }
   .section-link-arrow { width:1em; height:1em; vertical-align:-.15em; }
@@ -348,6 +354,8 @@
   }
   @media print {
     .sidenote-position[data-rotatable] > svg { animation:none !important; transition:none; transform:none !important; }
+    .sidenote-position svg > g[data-layer="page"][data-active] { display:inline !important; }
+    .sidenote-position svg > g[data-layer="page-clipped"][data-active] { display:none !important; }
   }
   .sidenote-position svg > g[data-active=false] { display:none !important; }
   .sidenote-position svg > g[data-active=true] { display:inline !important; }
@@ -698,6 +706,9 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .marginalia, .page-margin { grid-row:1; margin:0; padding:0; border:0; position:relative; min-width:0; }
   .page-margin { grid-column:1; }
   .marginalia { grid-column:3; }
+  @media screen {
+    .marginalia { width:75%; justify-self:start; }
+  }
   html.js .reading-layout:not(.margins-visible) :is(.marginalia, .page-margin) { opacity:0; visibility:hidden; }
   html.js .reading-layout.margins-visible :is(.marginalia, .page-margin) { opacity:1; visibility:visible; }
   .margin-ready .marginal-item { position:absolute; left:0; right:0; margin:0; }

@@ -1,0 +1,21 @@
+---
+import { editionLegendPage, pageUrl } from '../lib/pages';
+import { editionQr } from '../lib/edition-qr.mjs';
+const page = await editionLegendPage();
+if (page && !Astro.site) throw new Error('Printing edition links requires an Astro site URL.');
+const url = page ? new URL(pageUrl(page.id), Astro.site).href : undefined;
+---
+
+{url && (
+  <template id="print-edition-link-template">
+    <div class="print-edition-link">
+      <a href={url}>
+        <span class="print-edition-link-text">
+          <strong>Legende · Über die Edition</strong>
+          <span>{url}</span>
+        </span>
+        <img src={editionQr(url)} alt="QR-Code: Zur Edition" />
+      </a>
+    </div>
+  </template>
+)}

@@ -1,16 +1,8 @@
 ---
 import Icon from './Icon.astro';
 import PageComponent from './PageComponent.astro';
-import { render } from 'astro:content';
-import { editionPages, pageUrl } from '../lib/pages';
-const pages = await editionPages();
-const legends = await Promise.all(
-  pages.map(
-    async (page) =>
-      page.data.legend || Boolean((await render(page)).remarkPluginFrontmatter.hasLegend),
-  ),
-);
-const guidelines = pages.find((_, index) => legends[index]);
+import { editionLegendPage, pageUrl } from '../lib/pages';
+const guidelines = await editionLegendPage();
 ---
 
 <button

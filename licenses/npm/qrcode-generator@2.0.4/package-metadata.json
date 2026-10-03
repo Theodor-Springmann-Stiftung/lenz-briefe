@@ -1,0 +1,10 @@
+{
+  "name": "qrcode-generator",
+  "version": "2.0.4",
+  "license": "MIT",
+  "author": "Kazuhiko Arase",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kazuhikoarase/qrcode-generator.git"
+  }
+}

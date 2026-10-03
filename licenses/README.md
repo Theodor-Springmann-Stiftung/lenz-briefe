@@ -358,6 +358,7 @@ The license column records package metadata, not a replacement for the actual li
 | process-ancestry | 0.1.0 | MIT — declaration only | [README.md](npm/process-ancestry@0.1.0/README.md), [LICENSING-NOTE.md](npm/process-ancestry@0.1.0/LICENSING-NOTE.md) |
 | property-information | 7.2.0 | MIT | [license](npm/property-information@7.2.0/license) |
 | radix3 | 1.1.2 | MIT | [LICENSE](npm/radix3@1.1.2/LICENSE) |
+| qrcode-generator | 2.0.4 | MIT | [LICENSE](npm/qrcode-generator@2.0.4/LICENSE), [NOTICE.txt](npm/qrcode-generator@2.0.4/NOTICE.txt) |
 | readdirp | 4.1.2 | MIT | [LICENSE](npm/readdirp@4.1.2/LICENSE) |
 | readdirp | 5.1.1 | MIT | [LICENSE](npm/readdirp@5.1.1/LICENSE) |
 | regex | 6.1.0 | MIT | [LICENSE](npm/regex@6.1.0/LICENSE) |

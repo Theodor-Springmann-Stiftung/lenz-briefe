@@ -2,6 +2,7 @@
 // Copyright (c) 2026 Theodor Springmann Stiftung.
 
 import { printDocument } from './print-document';
+import { createPrintEditionLink } from './print-edition-link';
 
 export interface SelectionLetter { id: string; url: string; }
 export interface SelectionInfo { description: string; period: string; }
@@ -61,6 +62,7 @@ export async function printSelectionDocument(
   const indexList = copy.createElement('ol');
   indexList.className = 'selection-index';
   cover.append(indexList);
+  cover.append(createPrintEditionLink(copy));
   main.append(cover);
 
   const today = new Date();
