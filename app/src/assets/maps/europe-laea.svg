@@ -17,7 +17,7 @@
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <style>
-    /* Keep the base and borders layers available for editing but hidden in the map. */
+    /* Keep the base and borders layers hidden. */
     #layer4, #layer7 { display:none !important; }
   </style>
   <defs
