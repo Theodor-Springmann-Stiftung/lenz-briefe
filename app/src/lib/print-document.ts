@@ -14,7 +14,7 @@ import { createPrintEditionLink } from './print-edition-link';
 export function printDocument(source: Document): string {
   const copy = new DOMParser().parseFromString(source.documentElement.outerHTML, 'text/html');
   const html = copy.documentElement;
-  html.querySelectorAll('script, iframe, [data-tippy-root], link').forEach((node) => node.remove());
+  html.querySelectorAll('script, iframe, [data-tippy-root], link, .letter-route-map, .place-map-control').forEach((node) => node.remove());
   html.querySelectorAll('[autofocus]').forEach((node) => node.removeAttribute('autofocus'));
   // Desktop layout shares page-number rows with rotation labels. The page
   // margin is hidden in print, so return each label to its original text block.

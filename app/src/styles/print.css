@@ -48,7 +48,10 @@
   .page-toc, .letter-spine, .page-margin, .hand-label, .footer-tools, .footer-legal,
   .filter-toolbar, .search-feedback, .search-more, .search-retry, .selection-print-tools,
   .search-highlight-dismiss, [data-tippy-root], .note-connections,
-  .legend-connections, .hand-range-background { display:none !important; }
+  .legend-connections, .hand-range-background,
+  .letter-route-map, .place-map-control { display:none !important; }
+
+  .detail-header-row, .filter-card.place-map-card { display:block; }
 
   .screen-only { display:none !important; }
   .print-only { display:block; }
