@@ -1,6 +1,6 @@
 ---
 import { catalog, gndInformation, type Letter } from '../lib/edition';
-import { buildCorrespondenceMap, mapImagePoint, fitLetterMap, alternateLetterMapFit, combinedRouteDot, curvedRoute, MAP } from '../lib/correspondence-map.mjs';
+import { buildCorrespondenceMap, mapImagePoint, fitLetterMap, alternateLetterMapFit, mergeLetterMapDots, curvedRoute, MAP } from '../lib/correspondence-map.mjs';
 import coordinates from '../data/place-coordinates.json';
 import mapUrl from '../assets/maps/europe-laea.svg?url';
 interface Props { letter: Letter }
@@ -22,12 +22,12 @@ const MapControl = alternate ? 'button' : 'div';
 const views = available ? (alternate ? [fit!, alternate] : [fit!]).map((view, index) => {
   const screen = (p: { x: number; y: number }) => ({ x: p.x * view.scale + view.x, y: p.y * view.scale + view.y });
   const a = screen(from!), b = screen(to!);
-  const dots = [...new Map(points.map(p => [p.id, p])).values()].map(p => ({
+  const dots = mergeLetterMapDots([...new Map(points.map(p => [p.id, p])).values()].map(p => ({
     ...screen(p), id: p.id,
     source: sources.some(source => source.id === p.id),
     target: targets.some(target => target.id === p.id),
-  }));
-  return { fit: view, a, b, dots, combined: multiple ? null : combinedRouteDot(a, b, same), ...curvedRoute(a, b),
+  })));
+  return { fit: view, dots, ...curvedRoute(a, b),
     routeSize: same ? 1 : Math.min(1, Math.hypot(b.x - a.x, b.y - a.y) / 24),
     marker: `route-arrow-${letter.letter}-${index}` };
 }) : [];
@@ -36,38 +36,34 @@ const label = available ? `${sources.map(p => p.name).join(", ")} → ${targets.
 {available && (
   <figure class="letter-route-map">
     <MapControl type={alternate ? 'button' : undefined} class="map-zoom" aria-label={alternate ? `${label}: Herauszoomen oder ursprüngliche Ansicht wiederherstellen` : undefined} aria-pressed={alternate ? 'false' : undefined}>
-    {views.map(({fit, a, b, dots, combined, start, end, control, routeSize, marker}, index) => (
+    {views.map(({fit, dots, start, end, control, routeSize, marker}, index) => (
     <svg data-hidden={index === 1 ? "" : undefined} viewBox="0 0 260 200" role="img" aria-label={label}>
       <title>{label}</title>
       <defs>
         <marker id={marker} viewBox="0 0 8 8" refX="7" refY="4" markerUnits="userSpaceOnUse" markerWidth={5 * routeSize} markerHeight={5 * routeSize} orient="auto-start-reverse"><path d="M 0 0 L 8 4 L 0 8 z" fill="#9a4510" /></marker>
       </defs>
       <image href={`${mapUrl}#svg8`} x={fit!.x} y={fit!.y} width={MAP.width * fit!.scale} height={MAP.height * fit!.scale} preserveAspectRatio="none" />
-      {showArrow && !combined && <path d={`M ${start!.x} ${start!.y} Q ${control!.x} ${control!.y} ${end!.x} ${end!.y}`} fill="none" stroke="#9a4510" stroke-width="1.25" stroke-dasharray={letter.isDraft ? '5 3' : undefined} marker-end={`url(#${marker})`} />}
-      {multiple ? dots.map(dot => dot.source && dot.target ? (
+      {showArrow && dots.length > 1 && <path d={`M ${start!.x} ${start!.y} Q ${control!.x} ${control!.y} ${end!.x} ${end!.y}`} fill="none" stroke="#9a4510" stroke-width="1.25" stroke-dasharray={letter.isDraft ? '5 3' : undefined} marker-end={`url(#${marker})`} />}
+      {dots.map(dot => dot.merged || (dot.source && dot.target) ? (
         <g transform={`translate(${dot.x} ${dot.y})`}>
-          <g data-place-ids={dot.id}>
-            <circle r="4" fill="#9a4510" />
-            <circle r="2.6" fill="white" />
-            <circle r="1.3" fill="#9a4510" />
+          <g data-place-ids={dot.ids.join(' ')}>
+            {dot.source && dot.target ? (
+              <Fragment>
+                <circle r="4" fill="#9a4510" />
+                <circle r="2.6" fill="white" />
+                <circle r="1.3" fill="#9a4510" />
+              </Fragment>
+            ) : (
+              <circle r="4" fill={dot.source ? 'white' : '#9a4510'}
+                stroke={dot.source ? '#9a4510' : undefined} stroke-width={dot.source ? '1.25' : undefined} />
+            )}
           </g>
         </g>
       ) : (
-        <circle data-place-id={dot.id} cx={dot.x} cy={dot.y} r="2.5"
+        <circle data-place-id={dot.ids[0]} cx={dot.x} cy={dot.y} r="2.5"
           fill={dot.source ? 'white' : '#9a4510'}
           stroke={dot.source ? '#9a4510' : undefined} stroke-width={dot.source ? '1.25' : undefined} />
-      )) : combined ? (
-        <g transform={`translate(${combined.x} ${combined.y})`}>
-          <g data-place-ids={`${from!.id} ${to!.id}`}>
-            <circle r="4" fill="#9a4510" />
-            <circle r="2.6" fill="white" />
-            <circle r="1.3" fill="#9a4510" />
-          </g>
-        </g>
-      ) : (<Fragment>
-      <circle data-place-id={from!.id} cx={a!.x} cy={a!.y} r="2.5" fill="white" stroke="#9a4510" stroke-width="1.25" />
-      {!same && <circle data-place-id={to!.id} cx={b!.x} cy={b!.y} r="2.5" fill="#9a4510" />}
-      </Fragment>)}
+      ))}
     </svg>
     ))}
     </MapControl>

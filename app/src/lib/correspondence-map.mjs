@@ -67,6 +67,36 @@ export function combinedRouteDot(from, to, samePlace = false) {
   return { x: (from.x + to.x) / 2, y: (from.y + to.y) / 2 };
 }
 
+export function mergeLetterMapDots(dots) {
+  // Compare the original visible dots, including the outer half of a stroke.
+  // Connected chains form one group; enlarging a merged marker must not pull
+  // in places whose original dots did not touch.
+  const radius = dot => dot.source && dot.target ? 4 : dot.source ? 3.125 : 2.5;
+  const remaining = new Set(dots);
+  const groups = [];
+  for (const dot of dots) {
+    if (!remaining.delete(dot)) continue;
+    const members = [dot];
+    for (let i = 0; i < members.length; i++) {
+      for (const candidate of remaining) {
+        if (Math.hypot(candidate.x - members[i].x, candidate.y - members[i].y) <= radius(candidate) + radius(members[i])) {
+          remaining.delete(candidate);
+          members.push(candidate);
+        }
+      }
+    }
+    groups.push({
+      x: members.reduce((sum, member) => sum + member.x, 0) / members.length,
+      y: members.reduce((sum, member) => sum + member.y, 0) / members.length,
+      ids: members.map(member => member.id),
+      source: members.some(member => member.source),
+      target: members.some(member => member.target),
+      merged: members.length > 1,
+    });
+  }
+  return groups;
+}
+
 export function curvedRoute(from, to) {
   const angle = Math.atan2(to.y - from.y, to.x - from.x);
   const distance = Math.hypot(to.x - from.x, to.y - from.y);

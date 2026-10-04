@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { MAP, projectPlace, gndCoordinates, buildCorrespondenceMap, fitLetterMap, alternateLetterMapFit, mapImagePoint, routeLabelPositions, combinedRouteDot, curvedRoute } from '../src/lib/correspondence-map.mjs';
+import { MAP, projectPlace, gndCoordinates, buildCorrespondenceMap, fitLetterMap, alternateLetterMapFit, mapImagePoint, routeLabelPositions, combinedRouteDot, mergeLetterMapDots, curvedRoute } from '../src/lib/correspondence-map.mjs';
 
 test('label bounds clear routes and arrowheads in every direction, including near-coincident endpoints', () => {
   const a = { x:180, y:100 };
@@ -141,4 +141,54 @@ test('overlapping and same-place endpoints use a combined dot, while separated e
   assert.equal(combinedRouteDot(a, {x:106, y:100}), null);
   assert.deepEqual(combinedRouteDot(a, a, true), a);
   assert.deepEqual(combinedRouteDot(a, a), a);
+});
+
+test('letter map merges touching chains of any size and preserves all place roles and IDs', () => {
+  const dots = [
+    {id:'a', x:0, y:0, source:true, target:false},
+    {id:'b', x:5.625, y:0, source:false, target:true},
+    {id:'c', x:10.625, y:0, source:false, target:true},
+    {id:'d', x:30, y:0, source:true, target:false},
+  ];
+  const groups = mergeLetterMapDots(dots);
+  assert.equal(groups.length, 2);
+  assert.deepEqual(groups[0], {x:16.25 / 3, y:0, ids:['a','b','c'], source:true, target:true, merged:true});
+  assert.deepEqual(groups[1], {x:30, y:0, ids:['d'], source:true, target:false, merged:false});
+  assert.deepEqual(mergeLetterMapDots([...dots].reverse()).map(group => [...group.ids].sort()).sort(),
+    groups.map(group => [...group.ids].sort()).sort());
+});
+
+test('letter map touching thresholds include borders for targets, origins, and shared places', () => {
+  for (const [first, second, distance] of [
+    [{source:false,target:true}, {source:false,target:true}, 5],
+    [{source:true,target:false}, {source:true,target:false}, 6.25],
+    [{source:true,target:false}, {source:false,target:true}, 5.625],
+    [{source:true,target:true}, {source:false,target:true}, 6.5],
+    [{source:true,target:true}, {source:true,target:false}, 7.125],
+  ]) {
+    const dots = [{id:'a',x:0,y:0,...first}, {id:'b',x:distance,y:0,...second}];
+    const [group] = mergeLetterMapDots(dots);
+    assert.deepEqual(group.ids, ['a','b']);
+    assert.equal(group.source, first.source || second.source);
+    assert.equal(group.target, first.target || second.target);
+    assert.equal(mergeLetterMapDots([dots[0], {...dots[1],x:distance + 0.000001}]).length, 2);
+  }
+});
+
+test('letter map does not extend merging to nearby dots because a group marker is larger', () => {
+  const dots = [0, 1, 6.1].map((x, i) => ({id:String(i), x, y:0, source:false, target:true}));
+  assert.deepEqual(mergeLetterMapDots(dots).map(group => group.ids), [['0','1'], ['2']]);
+  assert.equal(mergeLetterMapDots(dots.map(dot => ({...dot, x:dot.x * 10}))).length, 3);
+  assert.deepEqual(mergeLetterMapDots([{id:'shared',x:2,y:3,source:true,target:true}]),
+    [{x:2,y:3,ids:['shared'],source:true,target:true,merged:false}]);
+});
+
+test('letter map groups three targets or three origins and measures circular contact diagonally', () => {
+  for (const source of [false, true]) {
+    const dots = [0, 5, 10].map((x, i) => ({id:String(i), x, y:0, source, target:!source}));
+    assert.deepEqual(mergeLetterMapDots(dots), [{x:5,y:0,ids:['0','1','2'],source,target:!source,merged:true}]);
+  }
+  const a = {id:'a',x:0,y:0,source:false,target:true};
+  assert.equal(mergeLetterMapDots([a, {...a,id:'b',x:3,y:4}]).length, 1);
+  assert.equal(mergeLetterMapDots([a, {...a,id:'b',x:4,y:4}]).length, 2);
 });
