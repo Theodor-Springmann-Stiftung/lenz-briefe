@@ -282,7 +282,7 @@
   .letter-context-tools { display:flex; align-items:center; gap:.625rem; min-width:0; max-width:100%; }
   .correspondence-navigation { @apply flex items-center text-ink; gap:.375rem; min-width:0; max-width:100%; font-size:1rem; line-height:1.4; }
   .correspondence-step { @apply inline-flex size-8 items-center justify-center; flex-shrink:0; }
-  .correspondence-caption { display:flex; flex-wrap:wrap; align-items:baseline; column-gap:.25em; min-width:0; }
+  .correspondence-caption { display:flex; flex-wrap:wrap; align-items:baseline; column-gap:.25em; min-width:0; color:var(--color-ink); }
   .correspondence-overview { display:inline-flex; align-items:center; flex-shrink:0; gap:.625rem; height:1rem; margin-left:.125rem; }
   .correspondence-divider { height:1rem; border-left:1px solid #a8b2a8; }
   .correspondence-list, .letter-print-button { @apply inline-flex size-6 items-center justify-center; flex-shrink:0; align-self:center; line-height:1; border:1px solid #000; border-radius:0; background:color-mix(in srgb, var(--color-paper) 35%, transparent); }
@@ -309,6 +309,8 @@
   }
   .letter-navigation { @apply flex items-baseline gap-2 text-ink; margin-left:auto; flex-shrink:0; font-size:1.125rem; }
   .letter-navigation a { @apply inline-flex size-8 items-center justify-center; }
+  .letter-navigation a, .correspondence-step { color:color-mix(in srgb, var(--color-muted) 80%, var(--color-paper)); }
+  .letter-navigation a:is(:hover, :focus-visible), .correspondence-step:is(:hover, :focus-visible) { color:var(--color-ink); }
   .letter-navigation a .ui-icon { transform:translateY(.24em); }
   .navigation-position { font-size:inherit; line-height:1.6; font-variant-numeric:tabular-nums; }
   .letter-spine { display:none; visibility:hidden; position:absolute; width:0; border-left:1px solid #586358; pointer-events:none; }
