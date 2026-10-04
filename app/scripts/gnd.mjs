@@ -5,6 +5,7 @@ import { setTimeout as sleep } from 'node:timers/promises';
 import { referenceLinks } from './gnd-links.mjs';
 import { resolveGndImages } from './gnd-images.mjs';
 import { gndCoordinates } from '../src/lib/correspondence-map.mjs';
+import { enrichGeoNames } from './geonames.mjs';
 
 const DAY = 86_400_000;
 const VERSION = 1;
@@ -205,6 +206,12 @@ export async function enrichGnd({
       }
     }
   }
+  const geonames = await enrichGeoNames(information.places, {
+    cacheDirectory: path.join(cacheDirectory, 'geonames'), cacheMode,
+    fetchImpl, now, signal, requestTimeout, logger,
+  });
+  stats.failed += geonames.failed;
+  stats.stale += geonames.stale;
   const images = await resolveGndImages(information, {
     cacheFile: path.join(cacheDirectory, 'resolved-images.json'), cacheMode,
     fetchImpl, now, signal, requestTimeout, logger,

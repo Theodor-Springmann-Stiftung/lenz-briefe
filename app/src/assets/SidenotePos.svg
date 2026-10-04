@@ -32,8 +32,8 @@
      inkscape:zoom="8.25"
      inkscape:cx="16.909091"
      inkscape:cy="34"
-     inkscape:window-width="1918"
-     inkscape:window-height="1152"
+     inkscape:window-width="2558"
+     inkscape:window-height="1392"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -57,7 +57,7 @@
      transform="translate(3.566128,9.8085527)">
     <path
        d="M 53.142856,-0.86909957 42.174106,-9.8085527 H -3.566128 V 58.050822 h 56.708984 z"
-       style="fill:none;stroke:#939393;stroke-width:4.4;stroke-linecap:square;stroke-dashoffset:0.44"
+       style="fill:none;stroke:#343434;stroke-width:4.4;stroke-linecap:square;stroke-dashoffset:0.44;stroke-opacity:1"
        id="path37"
        inkscape:label="page" />
   </g>
@@ -67,7 +67,7 @@
      inkscape:label="Page"
      style="display:inline">
     <rect
-       style="fill:none;stroke:#939393;stroke-width:4.4;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0.44;stroke-opacity:1"
+       style="fill:none;stroke:#343434;stroke-width:4.4;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0.44;stroke-opacity:1"
        id="rect1-4"
        width="56.708019"
        height="67.859528"

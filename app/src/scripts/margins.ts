@@ -1,4 +1,4 @@
-import { placeMarginItem } from '../lib/margin-placement.mjs';
+import { placeMarginItem, leftMarginOffset } from '../lib/margin-placement.mjs';
 import { groupHandLabelLines, handLabelNames, handRefsOnLine } from '../lib/hand-label-groups.mjs';
 import { handTextNodes } from '../lib/hand-text';
 import { initializeHandControls } from './hand-controls';
@@ -17,7 +17,11 @@ if (layout) {
       return { label, block };
     });
   const restoreRotationLabels = () => {
-    for (const { label, block } of rotationLabels) block.prepend(label);
+    for (const { label, block } of rotationLabels) {
+      label.style.top = '';
+      label.style.removeProperty('--left-margin-offset');
+      block.prepend(label);
+    }
   };
   // Keep the original buttons and their highlighting listeners when labels merge.
   const handLabels = [...margin.querySelectorAll<HTMLElement>('.hand-label')].map((item) => {
@@ -43,6 +47,7 @@ if (layout) {
     pageNumbers.forEach((item) => {
       item.style.top = '';
       item.classList.remove('has-rotation');
+      item.style.removeProperty('--left-margin-offset');
     });
     const items = [...margin.querySelectorAll<HTMLElement>('.marginal-item')];
     items.forEach((item) => {
@@ -116,25 +121,21 @@ if (layout) {
         offset: rect.top - marginTop,
       };
     };
-    const rotationTargets = new Map<HTMLElement, number>();
-    for (const { label, block } of rotationLabels) {
-      const firstLine = block.querySelector<HTMLElement>('.lb-line-block');
-      const page = pageNumbers.find((item) => {
-        const anchor = document.getElementById(item.dataset.anchor!);
-        if (!anchor || rotationTargets.has(item)) return false;
-        // A page break immediately before the block, or on its first line,
-        // belongs to the same margin row as the rotation.
-        return anchor.nextElementSibling === block || (!!firstLine && firstLine.contains(anchor)
-          && Math.abs(anchor.getBoundingClientRect().top - firstLine.getBoundingClientRect().top)
-            < parseFloat(getComputedStyle(firstLine).lineHeight) / 2);
-      });
-      if (!page) continue;
-      rotationTargets.set(page, label.getBoundingClientRect().top - pageMargin.getBoundingClientRect().top);
-      page.classList.add('has-rotation');
-      page.append(label);
+    // Reserve horizontal space only where items share vertical space.
+    const rotations = rotationLabels.map(({ label }) => ({ label,
+      target: label.getBoundingClientRect().top - pageMargin.getBoundingClientRect().top,
+    }));
+    rotations.forEach(({ label }) => pageMargin.append(label));
+    const leftSlots: { top: number; bottom: number; offset: number; width: number }[] = [];
+    for (const { label, target } of rotations.sort((a, b) => a.target - b.target)) {
+      const rect = label.getBoundingClientRect();
+      const top = Math.max(0, target);
+      const offset = leftMarginOffset(top, rect.height, leftSlots);
+      label.style.top = `${top}px`;
+      label.style.setProperty('--left-margin-offset', `${offset}px`);
+      leftSlots.push({ top, bottom: top + rect.height, offset, width: rect.width });
     }
-    const measuredPages = pageNumbers.map(measure).filter((entry) => entry.anchor)
-      .map((entry) => ({ ...entry, target: rotationTargets.get(entry.item) ?? entry.target }));
+    const measuredPages = pageNumbers.map(measure).filter((entry) => entry.anchor);
     const anchored = items
       .filter((item) => !item.hidden)
       .map(measure)
@@ -146,9 +147,13 @@ if (layout) {
     const placements: { item: HTMLElement; top: number }[] = [];
     let pageBottom = 0;
     for (const { item, target, height } of measuredPages) {
-      const top = Math.max(0, pageBottom, target);
+      const top = Math.max(0, target);
+      const width = item.querySelector('a')!.getBoundingClientRect().width;
+      const offset = leftMarginOffset(top, height, leftSlots);
+      item.style.setProperty('--left-margin-offset', `${offset}px`);
+      leftSlots.push({ top, bottom: top + height, offset, width });
       placements.push({ item, top });
-      pageBottom = top + height + 18;
+      pageBottom = Math.max(pageBottom, top + height + 18);
     }
     const occupied: { top: number; bottom: number; gap: number }[] = [];
     for (const { item, target, height, offset } of anchored.filter((entry) =>
@@ -167,7 +172,7 @@ if (layout) {
       occupied.push({ top: placement.top, bottom: placement.bottom, gap: 6 });
     }
     for (const { item, top } of placements) item.style.top = `${top}px`;
-    pageMargin.style.height = `${Math.max(0, pageBottom - 18)}px`;
+    pageMargin.style.height = `${Math.max(0, pageBottom - 18, ...leftSlots.map(slot => slot.bottom))}px`;
     margin.style.height = `${Math.max(0, ...occupied.map((slot) => slot.bottom))}px`;
     // Keep the initial layout hidden until both fonts and placement are ready.
     if (document.fonts.status === 'loaded') layout!.classList.add('margins-visible');

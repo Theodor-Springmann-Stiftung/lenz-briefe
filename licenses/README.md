@@ -16,6 +16,10 @@ Locally stored reference-site icons identify the linked services and retain thei
 respective owners' rights; they are not covered by the GND data's CC0 dedication.
 Their original URLs are recorded in [reference-icon-sources.json](reference-icon-sources.json).
 
+Place-card Wikipedia links are enriched from the linked GeoNames RDF records
+(`https://sws.geonames.org/{id}/about.rdf`). GeoNames data is licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); attribution: [GeoNames](https://www.geonames.org/).
+
 The build generates the German public overview at `/edition/lizenzen/` from the tables below, with browser-delivered products listed before build dependencies. All notice files are copied to `/licenses/`.
 
 ## Maps

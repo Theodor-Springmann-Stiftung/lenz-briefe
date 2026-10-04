@@ -77,6 +77,26 @@ async function fixture(t, catalog = { people: { 1: definition(personId) }, place
   };
 }
 
+test('build enrichment writes GeoNames Wikipedia links and reuses the shared CI cache', async t => {
+  const f = await fixture(t, { people: {}, places: { 7: definition(placeId) } });
+  const requests = [];
+  const fetchImpl = async url => {
+    requests.push(url);
+    if (url.includes('lobid.org')) return response({ ...place,
+      wikipedia: [{ id: 'https://de.wikipedia.org/wiki/Wrong_namesake' }],
+      sameAs: [{ id: 'https://sws.geonames.org/2973783' }],
+    });
+    assert.equal(url, 'https://sws.geonames.org/2973783/about.rdf');
+    return new Response('<gn:Feature rdf:about="https://sws.geonames.org/2973783/"><gn:wikipediaArticle rdf:resource="https://en.wikipedia.org/wiki/Strasbourg"/></gn:Feature>');
+  };
+  await f.run({ fetchImpl });
+  assert.equal(requests.length, 2);
+  await f.run({ cacheMode: 'reuse', fetchImpl: () => assert.fail('cached build must not fetch') });
+  const saved = JSON.parse(await readFile(path.join(f.options.output, 'gnd.json'), 'utf8'));
+  assert.equal(saved.places[7].links[0].url, 'https://en.wikipedia.org/wiki/Strasbourg');
+  await readFile(path.join(f.options.cacheDirectory, 'geonames/2973783.json'));
+});
+
 test('export uses resolved image URLs and preserves them on unchanged-reference cache hits', async (t) => {
   const f = await fixture(t);
   const input = 'https://commons.wikimedia.org/wiki/Special:FilePath/Portrait.jpg?width=270';

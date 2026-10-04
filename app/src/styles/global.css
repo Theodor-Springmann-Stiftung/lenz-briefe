@@ -717,10 +717,8 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   html.js .reading-layout:not(.margins-visible) :is(.marginalia, .page-margin) { opacity:0; visibility:hidden; }
   html.js .reading-layout.margins-visible :is(.marginalia, .page-margin) { opacity:1; visibility:visible; }
   .margin-ready .marginal-item { position:absolute; left:0; right:0; margin:0; }
-  .margin-ready .page-number { right:calc(-3rem + 1.05rem); padding-top:.35rem; line-height:1.3; }
-  .margin-ready .page-number.has-rotation { padding-top:0; white-space:nowrap; }
-  .page-number.has-rotation > :is(a, .tr-label) { display:inline; font:inherit; vertical-align:baseline; }
-  .page-number.has-rotation > .tr-label { margin-inline-start:1.2em; }
+  .margin-ready .page-number { right:calc(-3rem + 1.05rem + var(--left-margin-offset, 0px)); padding-top:.35rem; line-height:1.3; }
+  .margin-ready .page-margin > .tr-label { position:absolute; right:calc(-3rem + 1.05rem + var(--left-margin-offset, 0px)); width:max-content; margin:0; font-size:.75rem; text-align:right; }
   .margin-ready .hand-label { transform:translateY(.35rem); }
 }
 @media (width < 1600px) {

@@ -72,7 +72,8 @@
   .letter-content, .reading-layout { display:block; max-width:none; font-size:10pt; container-type:normal; }
   .reading-layout { padding:0; }
   .letter-content > .detail-header-group { width:100%; max-width:none; margin:0 0 6mm; break-inside:avoid-page; break-after:avoid-page; }
-  .detail-header { padding:0 0 4mm; border:0; border-bottom:1px solid #000; }
+  .detail-header { padding:0 0 4mm; border:0; }
+  .detail-header::after { content:''; display:block; width:100%; margin-top:4mm; border-bottom:1px solid #000; }
   .letter-header, .detail-header .letter-header { display:block; --header-text-size:10pt; }
   .letter-header .letter-date { display:block; margin:0 0 .5mm; font-size:var(--header-text-size); line-height:1.25; }
   .letter-date-tail { display:inline; }

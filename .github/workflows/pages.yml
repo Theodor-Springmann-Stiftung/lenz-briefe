@@ -101,28 +101,30 @@ jobs:
         timeout-minutes: 2
         run: npm --prefix app test
 
-      - name: Restore GND responses
+      - name: Restore GND and GeoNames responses
         id: gnd-cache
         uses: actions/cache/restore@v5
         with:
           path: app/.cache/gnd
-          key: gnd-v3-${{ hashFiles('data/xml/references.xml') }}
+          key: gnd-v4-${{ hashFiles('data/xml/references.xml') }}
           restore-keys: |
+            gnd-v4-
             gnd-v3-
             gnd-v2-
             gnd-v1-
 
-      # The export runner reuses XML on cache hits, then rebuilds GND summaries and the site.
+      # Export rebuilds GND summaries and enriches place links from GeoNames,
+      # including on XML cache hits. GeoNames responses live in .cache/gnd/geonames.
       - name: Transform XML and build static Astro pages
         id: site-build
         env:
           XML_EXPORT_CACHE_HIT: ${{ steps.xml-cache-ready.outputs.usable }}
           # Rebuild summaries every time; refresh raw records only for a new XML hash.
-          GND_CACHE_MODE: ${{ (steps.gnd-cache.outputs.cache-hit == 'true' || steps.gnd-cache.outputs.cache-matched-key == format('gnd-v2-{0}', hashFiles('data/xml/references.xml'))) && 'reuse' || 'refresh' }}
+          GND_CACHE_MODE: ${{ (steps.gnd-cache.outputs.cache-hit == 'true' || steps.gnd-cache.outputs.cache-matched-key == format('gnd-v3-{0}', hashFiles('data/xml/references.xml')) || steps.gnd-cache.outputs.cache-matched-key == format('gnd-v2-{0}', hashFiles('data/xml/references.xml'))) && 'reuse' || 'refresh' }}
         run: npm --prefix app run build
 
       # Do not freeze a partial refresh after a temporary API failure.
-      - name: Save refreshed GND responses
+      - name: Save refreshed GND and GeoNames responses
         if: steps.gnd-cache.outputs.cache-hit != 'true' && steps.site-build.outputs.gnd-cache-complete == 'true'
         uses: actions/cache/save@v5
         with:

@@ -16,6 +16,13 @@ export function placeMarginItem(target, height, occupied, pageEnd = Infinity, ga
   return { top, bottom, overflow: bottom > pageEnd };
 }
 
+/** Pack overlapping items outward from the text; leave unrelated rows alone. */
+export function leftMarginOffset(top, height, occupied, gap = 12) {
+  return Math.max(0, ...occupied
+    .filter(slot => top < slot.bottom + 6 && top + height > slot.top - 6)
+    .map(slot => slot.offset + slot.width + gap));
+}
+
 /** @param {string} position */
 export function sidenoteOrder(position) {
   if (position.startsWith('top')) return 0;

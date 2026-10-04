@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { placeMarginItem, sidenoteOrder } from '../src/lib/margin-placement.mjs';
+import { placeMarginItem, sidenoteOrder, leftMarginOffset } from '../src/lib/margin-placement.mjs';
 
 test('sidenotes sort top, sides, bottom while retaining order within each group', () => {
   const positions = [
@@ -59,4 +59,14 @@ test('a later short note can fill a gap a taller note could not use', () => {
   assert.equal(tall.top, 238);
   assert.equal(placeMarginItem(0, 100, occupied).top, 0);
   assert.equal(placeMarginItem(250, 100, occupied).top, 544);
+});
+
+
+test('left margin uses the nearest position unless another item overlaps vertically', () => {
+  assert.equal(leftMarginOffset(100, 18, []), 0);
+  const rotation = {top:100, bottom:118, offset:0, width:30};
+  assert.equal(leftMarginOffset(100, 18, [rotation]), 42);
+  assert.equal(leftMarginOffset(150, 18, [rotation]), 0);
+  const page = {top:100, bottom:118, offset:42, width:10};
+  assert.equal(leftMarginOffset(100, 18, [rotation, page]), 64);
 });
