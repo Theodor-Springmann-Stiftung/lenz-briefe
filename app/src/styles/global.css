@@ -33,6 +33,14 @@
 /* Keep the reading area smooth, with stronger grain around the viewport edges. */
 @media screen {
   body { isolation:isolate; }
+  body:has(> .site-shell > .index-intro) {
+    background:
+      linear-gradient(to right, transparent, var(--color-paper) 28%, var(--color-paper) 72%, transparent),
+      radial-gradient(ellipse at top left, #e3e8de, transparent 65%),
+      radial-gradient(ellipse at bottom right, #eee8dc, transparent 65%),
+      var(--color-paper);
+    background-attachment:fixed;
+  }
   body::before {
     content:'';
     position:fixed;
@@ -49,7 +57,7 @@
 @layer components {
   .ui-icon { display:inline-flex; width:1.125rem; height:1.125rem; flex-shrink:0; vertical-align:-.125em; }
   .ui-icon > svg { width:100%; height:100%; }
-  .site-shell { @apply mx-auto px-6 sm:px-10 lg:px-16; --page-top-space:6rem; max-width: 1440px; }
+  .site-shell { @apply mx-auto px-6 sm:px-10 lg:px-16; --page-top-space:6rem; max-width:1280px; }
   .site-shell--wide { max-width:1680px; }
   .site-header, .site-footer { @apply px-6 sm:px-10; }
   .site-header { position:sticky; top:0; z-index:40; padding-top:.75rem; padding-bottom:.75rem; background:#e3e8e3; border-bottom:2px solid #a8b2a8; }
