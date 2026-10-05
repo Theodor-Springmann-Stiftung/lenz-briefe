@@ -52,8 +52,11 @@ export function fitLetterMap(points, width = 260, height = 200, padding = 48) {
 }
 
 export function alternateLetterMapFit(points, fit, width = 260, height = 200) {
-  if (fit.scale <= 0.65) return null;
-  const scale = Math.max(width / MAP.width, height / MAP.height, 0.65);
+  // Close routes step back to regional context; medium routes get a wider
+  // overview, while same-place and already-wide maps keep their initial crop.
+  if (fit.scale <= 0.38) return null;
+  const scale = Math.max(width / MAP.width, height / MAP.height, fit.scale > 0.65 ? 0.5 : 0.315);
+  if (fit.scale <= scale) return null;
   const xs = points.map(p => p.x), ys = points.map(p => p.y);
   const x = width / 2 - (Math.min(...xs) + Math.max(...xs)) / 2 * scale;
   const y = height / 2 - (Math.min(...ys) + Math.max(...ys)) / 2 * scale;
@@ -62,8 +65,8 @@ export function alternateLetterMapFit(points, fit, width = 260, height = 200) {
 }
 
 export function combinedRouteDot(from, to, samePlace = false) {
-  // Source radius includes half its 1.25-unit stroke; target radius is 2.5.
-  if (!samePlace && Math.hypot(to.x - from.x, to.y - from.y) > 5.625) return null;
+  // Source radius includes half its 1.25-unit stroke; target radius is 3.
+  if (!samePlace && Math.hypot(to.x - from.x, to.y - from.y) > 6.125) return null;
   return { x: (from.x + to.x) / 2, y: (from.y + to.y) / 2 };
 }
 
@@ -71,7 +74,7 @@ export function mergeLetterMapDots(dots) {
   // Compare the original visible dots, including the outer half of a stroke.
   // Connected chains form one group; enlarging a merged marker must not pull
   // in places whose original dots did not touch.
-  const radius = dot => dot.source && dot.target ? 4 : dot.source ? 3.125 : 2.5;
+  const radius = dot => dot.source && dot.target ? 4 : dot.source ? 3.125 : 3;
   const remaining = new Set(dots);
   const groups = [];
   for (const dot of dots) {

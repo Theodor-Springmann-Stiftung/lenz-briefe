@@ -40,7 +40,7 @@ const label = available ? `${sources.map(p => p.name).join(", ")} → ${targets.
     <svg data-hidden={index === 1 ? "" : undefined} viewBox="0 0 260 200" role="img" aria-label={label}>
       <title>{label}</title>
       <defs>
-        <marker id={marker} viewBox="0 0 8 8" refX="7" refY="4" markerUnits="userSpaceOnUse" markerWidth={5 * routeSize} markerHeight={5 * routeSize} orient="auto-start-reverse"><path d="M 0 0 L 8 4 L 0 8 z" fill="#9a4510" /></marker>
+        <marker id={marker} viewBox="0 0 8 8" refX="8" refY="4" markerUnits="userSpaceOnUse" markerWidth={5 * routeSize} markerHeight={5 * routeSize} orient="auto-start-reverse"><path d="M 0 0 L 8 4 L 0 8 z" fill="#9a4510" /></marker>
       </defs>
       <image href={`${mapUrl}#svg8`} x={fit!.x} y={fit!.y} width={MAP.width * fit!.scale} height={MAP.height * fit!.scale} preserveAspectRatio="none" />
       {showArrow && dots.length > 1 && <path d={`M ${start!.x} ${start!.y} Q ${control!.x} ${control!.y} ${end!.x} ${end!.y}`} fill="none" stroke="#9a4510" stroke-width="1.25" stroke-dasharray={letter.isDraft ? '5 3' : undefined} marker-end={`url(#${marker})`} />}
@@ -60,7 +60,7 @@ const label = available ? `${sources.map(p => p.name).join(", ")} → ${targets.
           </g>
         </g>
       ) : (
-        <circle data-place-id={dot.ids[0]} cx={dot.x} cy={dot.y} r="2.5"
+        <circle data-place-id={dot.ids[0]} data-radius={dot.source ? '2.5' : '3'} cx={dot.x} cy={dot.y} r={dot.source ? '2.5' : '3'}
           fill={dot.source ? 'white' : '#9a4510'}
           stroke={dot.source ? '#9a4510' : undefined} stroke-width={dot.source ? '1.25' : undefined} />
       ))}
@@ -88,7 +88,7 @@ const label = available ? `${sources.map(p => p.name).join(", ")} → ${targets.
       link.addEventListener('mouseleave', () => matchingCombined.forEach(dot => dot.removeAttribute('transform')));
       const matchingDots = [...dots].filter(dot => dot.dataset.placeId === link.dataset.referenceId);
       link.addEventListener('mouseenter', () => matchingDots.forEach(dot => dot.setAttribute('r', '4.5')));
-      link.addEventListener('mouseleave', () => matchingDots.forEach(dot => dot.setAttribute('r', '2.5')));
+      link.addEventListener('mouseleave', () => matchingDots.forEach(dot => dot.setAttribute('r', dot.dataset.radius!)));
     });
   });
 </script>

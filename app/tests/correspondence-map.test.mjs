@@ -102,9 +102,11 @@ test('one route per letter preserves repeated and local correspondence, omits dr
 
 test('curved route tangents point at dot centres and preserve endpoint gaps', () => {
   const source = {x:130, y:100};
-  for (const target of [{x:200,y:160}, {x:70,y:30}, {x:130,y:150}, {x:154,y:100}]) {
+  for (const target of [{x:200,y:160}, {x:70,y:30}, {x:130,y:150}, {x:154,y:100},
+    {x:130,y:30}, {x:70,y:100}, {x:200,y:30}, {x:70,y:160}, {x:134,y:102}]) {
     const {start,end,control} = curvedRoute(source,target);
-    for (const [point, endpoint, gap] of [[source,start,4], [target,end,4.5]]) {
+    const distance = Math.hypot(target.x - source.x, target.y - source.y);
+    for (const [point, endpoint, gap] of [[source,start,Math.min(4, distance * 0.3)], [target,end,Math.min(4.5, distance * 0.3)]]) {
       const ux = endpoint.x - control.x, uy = endpoint.y - control.y;
       const vx = point.x - endpoint.x, vy = point.y - endpoint.y;
       assert.ok(Math.abs(ux * vy - uy * vx) < 1e-8);
@@ -115,22 +117,56 @@ test('curved route tangents point at dot centres and preserve endpoint gaps', ()
 });
 
 
-test('click zoom is available only for close routes and keeps the map covering its frame', () => {
+test('click zoom is available for close and medium routes and keeps the map covering its frame', () => {
   for (const points of [
     [{x:500,y:600},{x:502,y:601}],
+    [{x:500,y:600},{x:600,y:650}],
     [{x:200,y:300},{x:1000,y:800}],
     [{x:1300,y:100},{x:1300,y:100}],
   ]) {
     const initial = fitLetterMap(points);
     const alternate = alternateLetterMapFit(points, initial);
-    if (initial.scale <= 0.65) {
+    if (initial.scale <= 0.38) {
       assert.equal(alternate, null);
       continue;
     }
     assert.ok(alternate.scale < initial.scale);
+    assert.equal(alternate.scale, initial.scale > 0.65 ? 0.5 : 0.315);
     assert.ok(alternate.x <= 0 && alternate.y <= 0);
     assert.ok(alternate.x + MAP.width * alternate.scale >= 260 - 1e-8);
     assert.ok(alternate.y + MAP.height * alternate.scale >= 200 - 1e-8);
+  }
+});
+
+test('short-route zoom-out merges Berka–Weimar endpoints and preserves both place roles', () => {
+  const points = [projectPlace(11.2825, 50.899722), projectPlace(11.329029, 50.980299)].map(mapImagePoint);
+  const initial = fitLetterMap(points);
+  const alternate = alternateLetterMapFit(points, initial);
+  assert.equal(alternate.scale, 0.5);
+  const dots = view => mergeLetterMapDots(points.map((point, index) => ({
+    id: index === 0 ? 'berka' : 'weimar',
+    x: point.x * view.scale + view.x,
+    y: point.y * view.scale + view.y,
+    source: index === 0, target: index === 1,
+  })));
+  assert.equal(dots(initial).length, 2);
+  const [combined] = dots(alternate);
+  assert.equal(dots(alternate).length, 1);
+  assert.deepEqual(combined.ids, ['berka', 'weimar']);
+  assert.ok(combined.source && combined.target && combined.merged);
+});
+
+test('Moscow–St. Petersburg letter 360 can zoom out while keeping both endpoints visible', () => {
+  const points = [projectPlace(37.6176, 55.7558), projectPlace(30.3141, 59.9386)].map(mapImagePoint);
+  const initial = fitLetterMap(points);
+  assert.equal(initial.scale, 0.65);
+  const alternate = alternateLetterMapFit(points, initial);
+  assert.equal(alternate.scale, 0.315);
+  for (const point of points) {
+    const x = point.x * alternate.scale + alternate.x;
+    const y = point.y * alternate.scale + alternate.y;
+    assert.ok(x >= 0 && x <= 260);
+    assert.ok(y >= 0 && y <= 200);
   }
 });
 
@@ -138,7 +174,7 @@ test('click zoom is available only for close routes and keeps the map covering i
 test('overlapping and same-place endpoints use a combined dot, while separated endpoints remain distinct', () => {
   const a = {x:100, y:100};
   assert.deepEqual(combinedRouteDot(a, {x:103, y:104}), {x:101.5, y:102});
-  assert.equal(combinedRouteDot(a, {x:106, y:100}), null);
+  assert.equal(combinedRouteDot(a, {x:107, y:100}), null);
   assert.deepEqual(combinedRouteDot(a, a, true), a);
   assert.deepEqual(combinedRouteDot(a, a), a);
 });
@@ -160,10 +196,10 @@ test('letter map merges touching chains of any size and preserves all place role
 
 test('letter map touching thresholds include borders for targets, origins, and shared places', () => {
   for (const [first, second, distance] of [
-    [{source:false,target:true}, {source:false,target:true}, 5],
+    [{source:false,target:true}, {source:false,target:true}, 6],
     [{source:true,target:false}, {source:true,target:false}, 6.25],
-    [{source:true,target:false}, {source:false,target:true}, 5.625],
-    [{source:true,target:true}, {source:false,target:true}, 6.5],
+    [{source:true,target:false}, {source:false,target:true}, 6.125],
+    [{source:true,target:true}, {source:false,target:true}, 7],
     [{source:true,target:true}, {source:true,target:false}, 7.125],
   ]) {
     const dots = [{id:'a',x:0,y:0,...first}, {id:'b',x:distance,y:0,...second}];
@@ -176,7 +212,7 @@ test('letter map touching thresholds include borders for targets, origins, and s
 });
 
 test('letter map does not extend merging to nearby dots because a group marker is larger', () => {
-  const dots = [0, 1, 6.1].map((x, i) => ({id:String(i), x, y:0, source:false, target:true}));
+  const dots = [0, 1, 7.1].map((x, i) => ({id:String(i), x, y:0, source:false, target:true}));
   assert.deepEqual(mergeLetterMapDots(dots).map(group => group.ids), [['0','1'], ['2']]);
   assert.equal(mergeLetterMapDots(dots.map(dot => ({...dot, x:dot.x * 10}))).length, 3);
   assert.deepEqual(mergeLetterMapDots([{id:'shared',x:2,y:3,source:true,target:true}]),
@@ -190,5 +226,5 @@ test('letter map groups three targets or three origins and measures circular con
   }
   const a = {id:'a',x:0,y:0,source:false,target:true};
   assert.equal(mergeLetterMapDots([a, {...a,id:'b',x:3,y:4}]).length, 1);
-  assert.equal(mergeLetterMapDots([a, {...a,id:'b',x:4,y:4}]).length, 2);
+  assert.equal(mergeLetterMapDots([a, {...a,id:'b',x:5,y:4}]).length, 2);
 });
