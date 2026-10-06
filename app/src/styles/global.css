@@ -414,7 +414,7 @@
   .hand-sample { @apply font-hand text-xl text-ink; }
   .about-page { --page-max-width:1120px; --page-toc-width:18rem; --page-column-gap:3rem; @apply mx-auto pb-12; padding-top:var(--page-top-space); max-width:var(--page-max-width); }
   /* Breakout components share the TOC layout's maximum width; prose keeps its 75ch limit. */
-  .about-page-content { min-width:0; max-width:calc(var(--page-max-width) - var(--page-toc-width) - var(--page-column-gap)); container-type:inline-size; }
+  .about-page-content { min-width:0; max-width:calc(var(--page-max-width) - var(--page-toc-width) - var(--page-column-gap)); container-type:inline-size; hyphens:auto; }
   .page-toc { margin-bottom:2.5rem; border:1px solid var(--color-ink); background:var(--color-paper); color:var(--color-ink); font-size:.9rem; line-height:1.3; }
   .page-toc-title { padding:.55rem .9rem; border-bottom:1px solid var(--color-ink); background:#eff0eb; font-family:var(--font-serif); font-size:1.25rem; font-style:italic; }
   .page-toc ol { list-style:none; margin:0; padding:0; }

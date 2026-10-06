@@ -3,6 +3,7 @@
 
 import type { SelectionLetter, SelectionInfo } from '../lib/print-selection-document';
 import { printStatus } from './print-status';
+import { printTimeout } from '../lib/print-timeout.mjs';
 
 /** The catalogue supplies a snapshot of its current rows and filter labels. */
 export function setupSelectionPrint(selection: () => { letters: SelectionLetter[]; info: SelectionInfo }) {
@@ -13,17 +14,17 @@ export function setupSelectionPrint(selection: () => { letters: SelectionLetter[
     if (!letters.length) return;
     button.disabled = true;
     button.setAttribute('aria-busy', 'true');
-    status.start(`Briefe werden geladen … 0/${letters.length}`);
+    status.start(`Briefe werden geladen und vorbereitet … 0/${letters.length}`);
     try {
       const [{ printHtml }, { printSelectionDocument }] = await Promise.all([
         import('../lib/print-html'),
         import('../lib/print-selection-document'),
       ]);
       const html = await printSelectionDocument(document, letters, info, (loaded) => {
-        status.start(`Briefe werden geladen … ${loaded}/${letters.length}`);
+        status.start(`Briefe werden geladen und vorbereitet … ${loaded}/${letters.length}`);
       });
       status.start('Druck wird vorbereitet …');
-      await printHtml(html, 'Briefauswahl', status.hide, Math.max(90_000, letters.length * 2_000), status.progress);
+      await printHtml(html, 'Briefauswahl', status.hide, printTimeout(letters.length), status.progress);
     } catch (error) {
       console.error('Selection print failed', error);
       status.error('Auswahl konnte nicht zum Druck vorbereitet werden. Bitte erneut versuchen.');

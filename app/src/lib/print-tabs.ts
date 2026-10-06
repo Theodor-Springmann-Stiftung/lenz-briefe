@@ -1,12 +1,15 @@
 // SPDX-License-Identifier: AGPL-3.0
 // Copyright (c) 2026 Theodor Springmann Stiftung.
 
+import type { PrintCheckpoint } from './print-document';
+
 /** Vivliostyle treats flex containers as atomic. Give each visual tab row an
  * explicit table row so its cells can fragment at internal line boundaries.
  * Rows have independent column grids, just like their screen flex layouts.
  */
-export function preparePrintTabs(document: Document): void {
-  for (const row of document.querySelectorAll<HTMLElement>('.tabs > .lb-tab-row')) {
+export async function preparePrintTabs(root: ParentNode, checkpoint: PrintCheckpoint): Promise<void> {
+  const document = root instanceof Document ? root : (root as Node).ownerDocument!;
+  for (const row of root.querySelectorAll<HTMLElement>('.tabs > .lb-tab-row')) {
     const fragment = document.createDocumentFragment();
     let table: HTMLTableElement | undefined;
     let cells: HTMLTableRowElement | undefined;
@@ -19,6 +22,7 @@ export function preparePrintTabs(document: Document): void {
       used = 0;
     };
     for (const node of [...row.childNodes]) {
+      const pause = checkpoint(); if (pause) await pause;
       if (!(node instanceof HTMLElement) || !node.classList.contains('tab')) {
         // Prefixes and editorial content before the cells keep their original
         // full-width position. Whitespace between cells stays with the last cell.

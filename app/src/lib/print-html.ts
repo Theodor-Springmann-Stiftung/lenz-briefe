@@ -2,23 +2,28 @@
 // Copyright (c) 2026 Theodor Springmann Stiftung.
 
 import { printHTML, HOOKS, registerHook, removeHook } from '@vivliostyle/core';
+import { printTimeout, printWatchdog } from './print-timeout.mjs';
 
 export interface PrintProgress { fraction: number; pages: number; }
 
 /** Paginate a prepared document and retain it until the print dialog closes. */
-export async function printHtml(html: string, title: string, onReady: () => void, timeoutMs = 90_000, onProgress?: (progress: PrintProgress) => void): Promise<void> {
+export async function printHtml(html: string, title: string, onReady: () => void, timeoutMs = printTimeout(), onProgress?: (progress: PrintProgress) => void): Promise<void> {
   await new Promise<void>((resolve, reject) => {
     const existingFrames = new Set(document.querySelectorAll('iframe'));
     let frame: HTMLIFrameElement | undefined;
     let finished = false;
-    const progress = (payload: PrintProgress) => { if (!finished) onProgress?.(payload); };
-    if (onProgress) registerHook(HOOKS.PAGINATION_PROGRESS, progress);
-    const removeProgress = () => { if (onProgress) removeHook(HOOKS.PAGINATION_PROGRESS, progress); };
-    const timeout = window.setTimeout(() => finish(new Error('Print preparation timed out')), timeoutMs);
+    const watchdog = printWatchdog(timeoutMs, () => finish(new Error('Print preparation stopped making progress')));
+    const progress = (payload: PrintProgress) => {
+      if (finished) return;
+      watchdog.progress(payload);
+      onProgress?.(payload);
+    };
+    registerHook(HOOKS.PAGINATION_PROGRESS, progress);
+    const removeProgress = () => removeHook(HOOKS.PAGINATION_PROGRESS, progress);
     function finish(error?: Error) {
       if (finished) return;
       finished = true;
-      window.clearTimeout(timeout);
+      watchdog.stop();
       removeProgress();
       frame?.remove();
       if (error) reject(error);
@@ -36,7 +41,7 @@ export async function printHtml(html: string, title: string, onReady: () => void
         errorCallback: (message) => finish(new Error(message)),
         printCallback: (printWindow) => {
           if (finished) return;
-          window.clearTimeout(timeout);
+          watchdog.stop();
           removeProgress();
           onReady();
           printWindow.document.title = title;

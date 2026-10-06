@@ -2,16 +2,17 @@
 // Copyright (c) 2026 Theodor Springmann Stiftung.
 
 import { handLabelNames } from './hand-label-groups.mjs';
-import { handTextNodes } from './hand-text';
+import { handTextNodeEntries } from './hand-text';
+import type { PrintCheckpoint } from './print-document';
 
 interface HandLine { anchors: HTMLElement[]; refs: Set<string>; }
 
 /** Aligned lines and short plain source lines can form a stanza or closing.
  * Longer prose and blocks with multiple regions retain their own pagination. */
-function sourceLineLayout(block: Node | undefined): string | undefined {
+function sourceLineLayout(block: Node, text: string): string | undefined {
   if (!(block instanceof HTMLElement)
     || !block.matches('.lb-line-block:not(.lb-line-block--rule, .lb-line-block--note)')
-    || !block.textContent?.trim()) return;
+    || !text) return;
   let alignment = 'align-left';
   if (block.dataset.layout === 'aligned') {
     if (block.children.length !== 1) return;
@@ -21,7 +22,7 @@ function sourceLineLayout(block: Node | undefined): string | undefined {
   } else {
     // Plain <line/> blocks also encode verse and addresses. A modest text
     // bound excludes prose paragraphs without needing a second layout pass.
-    if (block.textContent.replace(/\s+/g, ' ').trim().length > 120
+    if (text.length > 120
       || block.querySelector('div, p, table, br')) return;
   }
   return JSON.stringify([alignment, block.dataset.tab || '', block.style.getPropertyValue('--indent-units')]);
@@ -29,8 +30,8 @@ function sourceLineLayout(block: Node | undefined): string | undefined {
 
 /** Original spacing can sit within a short closing; editorial gaps always
  * separate sections. Elsewhere, blank lines and spacing end a line group. */
-function sourceLineSpacing(block: Node | undefined): number {
-  if (!(block instanceof HTMLElement) || block.textContent?.trim()) return 0;
+function sourceLineSpacing(block: Node, text: string): number {
+  if (!(block instanceof HTMLElement) || text) return 0;
   if (block.matches('.lb-vspace:not([data-presentational="true"])')) {
     return Number(block.dataset.lines) || 0;
   }
@@ -40,18 +41,24 @@ function sourceLineSpacing(block: Node | undefined): number {
 /** Protect four opening and three closing lines within each uninterrupted run.
  * Spacing is the preferred break. A short right-aligned closing is the sole
  * exception: its salutation and signature can span original spacing. */
-function sourceLineKeeps(blocks: Node[]): Set<number> {
-  const layouts = blocks.map(sourceLineLayout);
-  const spacing = blocks.map(sourceLineSpacing);
+async function sourceLineKeeps(blocks: Node[], checkpoint: PrintCheckpoint): Promise<Set<number>> {
+  const layouts: (string | undefined)[] = [];
+  const spacing: number[] = [];
+  const closings: boolean[] = [];
+  for (const block of blocks) {
+    const text = block.textContent?.replace(/\s+/g, ' ').trim() || '';
+    layouts.push(sourceLineLayout(block, text));
+    spacing.push(sourceLineSpacing(block, text));
+    closings.push(block instanceof HTMLElement && !!block.firstElementChild?.matches('.align-right') && text.length <= 120);
+    const pause = checkpoint(); if (pause) await pause;
+  }
   const keeps = new Set<number>();
   for (let start = 0; start < layouts.length;) {
     if (!layouts[start]) { start++; continue; }
     let end = start + 1;
     while (end < layouts.length && layouts[end] === layouts[start]) end++;
     const lines = Array.from({ length: end - start }, (_, index) => start + index);
-    const shortClosingLine = (index: number) => blocks[index] instanceof HTMLElement
-      && (blocks[index] as HTMLElement).firstElementChild?.matches('.align-right')
-      && (blocks[index].textContent?.replace(/\s+/g, ' ').trim().length || 0) <= 120;
+    const shortClosingLine = (index: number) => closings[index];
     let closingSpacing = 0;
     while (lines.length < 4 && lines.every(shortClosingLine)) {
       let next = end;
@@ -73,6 +80,7 @@ function sourceLineKeeps(blocks: Node[]): Set<number> {
       }
     }
     start = end;
+    const pause = checkpoint(); if (pause) await pause;
   }
   return keeps;
 }
@@ -138,13 +146,18 @@ function handLines(root: HTMLElement, textHands: Map<Node, string>): HandLine[] 
 
 /** Pair each transcription block with its hand labels in a paginatable table.
  * The original text blocks retain their alignment, IDs and inline markup. */
-export function preparePrintHandColumns(document: Document): void {
-  for (const body of document.querySelectorAll<HTMLElement>('.letter-body')) {
+export async function preparePrintHandColumns(root: ParentNode, checkpoint: PrintCheckpoint): Promise<void> {
+  const document = root instanceof Document ? root : (root as Node).ownerDocument!;
+  for (const body of root.querySelectorAll<HTMLElement>('.letter-body')) {
     const baseRef = body.closest<HTMLElement>('[data-base-hand]')?.dataset.baseHand;
     const names = new Map([...body.querySelectorAll<HTMLElement>('[data-hand-name]')].map((hand) => [
       hand.dataset.ref || baseRef, hand.dataset.handName!,
     ]));
-    const textHands = new Map<Node, string>(handTextNodes(body, baseRef).map(({ node, ref }) => [node, ref]));
+    const textHands = new Map<Node, string>();
+    for (const { node, ref } of handTextNodeEntries(body, baseRef)) {
+      textHands.set(node, ref);
+      const pause = checkpoint(); if (pause) await pause;
+    }
     const table = document.createElement('table');
     table.className = 'print-hand-table';
     table.setAttribute('role', 'presentation');
@@ -159,7 +172,7 @@ export function preparePrintHandColumns(document: Document): void {
     const blocks = [...body.childNodes].filter((block) =>
       block.nodeType !== Node.TEXT_NODE || block.textContent?.trim(),
     );
-    const keeps = sourceLineKeeps(blocks);
+    const keeps = await sourceLineKeeps(blocks, checkpoint);
     for (const [index, block] of blocks.entries()) {
       const row = rows.insertRow();
       if (keeps.has(index)) row.dataset.printKeepNext = 'true';
@@ -186,6 +199,7 @@ export function preparePrintHandColumns(document: Document): void {
         label.textContent = name;
         labels.append(label);
       }
+      const pause = checkpoint(); if (pause) await pause;
     }
     body.replaceChildren(table);
   }

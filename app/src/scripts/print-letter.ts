@@ -2,6 +2,7 @@
 // Copyright (c) 2026 Theodor Springmann Stiftung.
 
 import { printStatus } from './print-status';
+import { printTimeout } from '../lib/print-timeout.mjs';
 
 const button = document.querySelector<HTMLButtonElement>('[data-print-letter]');
 const status = printStatus(document.querySelector<HTMLElement>('[data-print-status]'));
@@ -18,9 +19,9 @@ button?.addEventListener('click', async () => {
       import('../lib/print-document'),
     ]);
     window.dispatchEvent(new Event('beforeprint'));
-    const html = printDocument(document);
+    const html = await printDocument(document);
     const title = document.title;
-    await printHtml(html, title, status.hide, 90_000, status.progress);
+    await printHtml(html, title, status.hide, printTimeout(), status.progress);
   } catch (error) {
     console.error('Letter print failed', error);
     status.error('Druck konnte nicht vorbereitet werden. Bitte erneut versuchen.');

@@ -190,6 +190,11 @@ Both print buttons display Vivliostyle’s pagination progress as a percentage a
 page count. This measures content laid out, not elapsed time. A spinner remains
 active during loading and final layout adjustments; the selection also shows
 its downloaded-letter count. The progress hook is removed on completion or failure.
+Pagination allows at least five minutes without advancing progress, or ten seconds
+per selected letter for larger selections. Each new page or increase in laid-out
+content resets that deadline, so a progressing export has no total time limit.
+The watchdog stops before the native print dialog opens. Individual downloads
+retain their separate thirty-second timeout.
 In Firefox, the prepared pages use a 297 mm print-height cap instead of Vivliostyle's `100vh`
 cap, which clips page margins in Firefox's hidden iframe on single-page documents.
 The native page margins are reset to zero after typesetting; the document margins
@@ -213,6 +218,14 @@ page, with continuous numbering across the complete document and one footer at
 its end. Hand styles and local anchor IDs are scoped to individual letters.
 Citation access dates are set when the selection is prepared. Failed downloads
 stop the complete selection and allow retry; they never produce a partial print.
+Each fetched page is parsed once, then its letter subtree is moved into an ordered
+placeholder and prepared immediately. Source pages are released as workers move
+on. The catalogue shell is cloned without its letter list, and the assembled
+selection is serialized once without being parsed or cloned again. A single
+letter also uses a direct DOM clone. Preparation shares a twelve-millisecond
+work budget and yields to input and painting between chunks, using
+`scheduler.yield()` with a timer fallback. Print styles and pagination rules are
+unchanged by these preparation optimizations.
 
 The print stylesheet uses A4 pages with 24 mm top/bottom, 25 mm right and 21 mm left
 margins, and page numbers where the browser supports CSS page-margin boxes.
