@@ -504,7 +504,7 @@
   lkb-legende:not(.quick-legend-content) .legend-section + .legend-section { margin-top:2.5rem; }
   lkb-legende:not(.quick-legend-content) h3 { margin-bottom:.25rem; padding:.55rem .75rem; font-size:.85rem; text-transform:uppercase; letter-spacing:.08em; background:#eff0eb; color:var(--color-ink); }
   lkb-legende:not(.quick-legend-content) .quick-legend-entry { grid-template-columns:minmax(0, 55fr) minmax(0, 45fr); gap:0; padding:1rem 0; }
-  lkb-legende:not(.quick-legend-content) dt { padding-right:1.5rem; font-size:1rem; }
+  lkb-legende:not(.quick-legend-content) dt { padding-right:1.5rem; font-size:1rem; padding-left: 0.75rem; }
   lkb-legende:not(.quick-legend-content) small { margin-top:.25rem; font-size:.9rem; line-height:1.4; }
   lkb-legende:not(.quick-legend-content) dd { font-size:1rem; }
   lkb-legende:not(.quick-legend-content) > section .quick-legend-entry:last-child { border-bottom:0; }
