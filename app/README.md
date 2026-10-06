@@ -415,6 +415,11 @@ Both the full legend and “Schnelle Legende” render `seiten/components/lkb-le
 so editing its labels, descriptions, examples or order changes both. The
 `data-legend-tag` attributes connect rows to letter highlights. Its HTML is embedded
 directly, so blank lines do not introduce Markdown paragraphs into the markup.
+The final print/PDF and full-text search sections also live in this file. The
+catalogue reads its search explanation from the `data-legend-help="search"`
+paragraph, so text changes there update both legends and the start page.
+`data-legend-icon="printer"` and `data-legend-icon="search"` spans render the
+same Remix Icon SVG assets as the interface.
 The built-in `<lkb-sidenote-position position="top-left"></lkb-sidenote-position>`
 also works inside HTML blocks. It uses `app/src/assets/SidenotePos.svg` and the same
 renderer as letter sidenotes; no SVG data needs to be copied into Markdown.

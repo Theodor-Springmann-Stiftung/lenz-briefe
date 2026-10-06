@@ -3,6 +3,9 @@ import { getEntry, render } from 'astro:content';
 import PageContent from './PageContent.astro';
 import { componentFiles } from '../lib/page-components';
 import { markHtmlComponents } from '../../scripts/page-components.mjs';
+import { expandLegendIcons } from '../lib/legend-help.mjs';
+import printer from 'remixicon/icons/Business/printer-line.svg?raw';
+import search from 'remixicon/icons/System/search-line.svg?raw';
 
 interface Props {
   name: string;
@@ -17,7 +20,8 @@ const component = source.format === 'md' ? await getEntry('components', name) : 
 if (source.format === 'md' && !component)
   throw new Error(`Missing Markdown content entry: ${name}`);
 const Content = component ? (await render(component)).Content : null;
-const html = source.format === 'html' ? markHtmlComponents(await source.load()) : '';
+const sourceHtml = source.format === 'html' ? markHtmlComponents(await source.load()) : '';
+const html = name === 'lkb-legende' ? expandLegendIcons(sourceHtml, { printer, search }) : sourceHtml;
 const Tag = name;
 ---
 

@@ -8,6 +8,9 @@ import Icon from '../components/Icon.astro';
 import { catalog, filterOptions, base, letterUrl } from '../lib/edition';
 import searchIndexUrl from '../../generated/search.json?url';
 import { metadataSearchBlocks } from '../lib/search.mjs';
+import legendSource from '../../../seiten/components/lkb-legende.html?raw';
+import { legendHelpText } from '../lib/legend-help.mjs';
+const searchHelp = legendHelpText(legendSource, 'search');
 const records = catalog.letters.map((l) => ({
   id: l.letter,
   group: l.groupId,
@@ -42,19 +45,25 @@ const firstGroup = catalog.groups[0];
         <Filter kind="person" label="Personen" options={filterOptions('person')} />
         <Filter kind="place" label="Orte" options={filterOptions('place')} />
       </div>
-      <label class="catalog-search">
-        <span class="sr-only">Briefe durchsuchen</span>
-        <Icon name="search" />
-        <input
-          id="letter-search"
-          type="search"
-          placeholder="Briefe durchsuchen…"
-          data-search-index={searchIndexUrl}
-          aria-describedby="search-status"
-          autocomplete="off"
-        />
-        <span class="search-spinner" aria-hidden="true" hidden />
-      </label>
+      <div class="catalog-search-group">
+        <label class="catalog-search">
+          <span class="sr-only">Briefe durchsuchen</span>
+          <Icon name="search" />
+          <input
+            id="letter-search"
+            type="search"
+            placeholder="Briefe durchsuchen…"
+            data-search-index={searchIndexUrl}
+            aria-describedby="search-help search-status"
+            autocomplete="off"
+          />
+          <span class="search-spinner" aria-hidden="true" hidden />
+        </label>
+        <p id="search-help" class="catalog-search-help screen-only">
+          <Icon name="info" />
+          <span>{searchHelp}</span>
+        </p>
+      </div>
       <button class="all-letters-link" type="button" hidden>
         <Icon name="arrowLeft" />
         Alle Briefe

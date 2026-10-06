@@ -34,6 +34,7 @@ if (legend && letter) {
     vspace: '.lb-vspace:not([data-presentational="true"])',
     page: '.page-anchor[data-break="inline"], .page-number a',
     sidenote: '.sidenote-position',
+    print: '.letter-print-button > .ui-icon',
   };
   type Circle = { x: number; y: number; radius: number };
 
@@ -141,8 +142,9 @@ if (legend && letter) {
   }
 
   function sampleFor(row: HTMLElement, target: HTMLElement): HTMLElement {
-    const example = row.querySelector<HTMLElement>('dd')!;
     const tag = row.dataset.legendTag;
+    if (tag === 'print') return row.querySelector<HTMLElement>('[data-legend-icon="printer"]')!;
+    const example = row.querySelector<HTMLElement>('dd')!;
     let selector = '';
     if (tag === 'tr') {
       const rotation = target.dataset.rot;
@@ -247,7 +249,7 @@ if (legend && letter) {
       if (!selector) continue;
       const candidates = [...content.querySelectorAll<HTMLElement>(selector)]
         .filter((target) =>
-          target.closest(
+          tag === 'print' || target.closest(
             '.letter-body, .margin-note, .unplaced-note, .page-margin, .hand-label, .hand-key',
           ),
         )
