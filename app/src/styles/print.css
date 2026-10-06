@@ -97,6 +97,7 @@
   .print-hand-table > colgroup > .print-text-col { width:var(--print-letter-text-width); }
   .print-hand-table > colgroup > .print-hand-col { width:var(--print-transcription-inset); }
   .print-hand-table > tbody > tr { break-inside:auto; page-break-inside:auto; }
+  .print-hand-table > tbody > tr[data-print-keep-next] { break-after:avoid-page; page-break-after:avoid; }
   .print-hand-table > tbody > tr > td { border:0; padding:0; vertical-align:baseline; }
   .print-hand-table > tbody > tr > .print-hand-cell { padding-left:var(--print-hand-gap); font:400 7pt/1.25 var(--font-sans); font-variation-settings:normal; color:#444; text-align:left; overflow-wrap:anywhere; }
   .print-hand-cell > span { display:block; margin-bottom:1mm; position:relative; top:3px; }

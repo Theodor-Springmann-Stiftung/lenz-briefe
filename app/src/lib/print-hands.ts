@@ -6,6 +6,77 @@ import { handTextNodes } from './hand-text';
 
 interface HandLine { anchors: HTMLElement[]; refs: Set<string>; }
 
+/** Aligned lines and short plain source lines can form a stanza or closing.
+ * Longer prose and blocks with multiple regions retain their own pagination. */
+function sourceLineLayout(block: Node | undefined): string | undefined {
+  if (!(block instanceof HTMLElement)
+    || !block.matches('.lb-line-block:not(.lb-line-block--rule, .lb-line-block--note)')
+    || !block.textContent?.trim()) return;
+  let alignment = 'align-left';
+  if (block.dataset.layout === 'aligned') {
+    if (block.children.length !== 1) return;
+    const region = block.firstElementChild!;
+    if (!region.matches('.align-left, .align-center, .align-right')) return;
+    alignment = region.className;
+  } else {
+    // Plain <line/> blocks also encode verse and addresses. A modest text
+    // bound excludes prose paragraphs without needing a second layout pass.
+    if (block.textContent.replace(/\s+/g, ' ').trim().length > 120
+      || block.querySelector('div, p, table, br')) return;
+  }
+  return JSON.stringify([alignment, block.dataset.tab || '', block.style.getPropertyValue('--indent-units')]);
+}
+
+/** Original spacing can sit within a short closing; editorial gaps always
+ * separate sections. Elsewhere, blank lines and spacing end a line group. */
+function sourceLineSpacing(block: Node | undefined): number {
+  if (!(block instanceof HTMLElement) || block.textContent?.trim()) return 0;
+  if (block.matches('.lb-vspace:not([data-presentational="true"])')) {
+    return Number(block.dataset.lines) || 0;
+  }
+  return block.matches('.lb-line-block:not(.lb-line-block--rule, .lb-line-block--note)') ? 1 : 0;
+}
+
+/** Protect four opening and three closing lines within each uninterrupted run.
+ * Spacing is the preferred break. A short right-aligned closing is the sole
+ * exception: its salutation and signature can span original spacing. */
+function sourceLineKeeps(blocks: Node[]): Set<number> {
+  const layouts = blocks.map(sourceLineLayout);
+  const spacing = blocks.map(sourceLineSpacing);
+  const keeps = new Set<number>();
+  for (let start = 0; start < layouts.length;) {
+    if (!layouts[start]) { start++; continue; }
+    let end = start + 1;
+    while (end < layouts.length && layouts[end] === layouts[start]) end++;
+    const lines = Array.from({ length: end - start }, (_, index) => start + index);
+    const shortClosingLine = (index: number) => blocks[index] instanceof HTMLElement
+      && (blocks[index] as HTMLElement).firstElementChild?.matches('.align-right')
+      && (blocks[index].textContent?.replace(/\s+/g, ' ').trim().length || 0) <= 120;
+    let closingSpacing = 0;
+    while (lines.length < 4 && lines.every(shortClosingLine)) {
+      let next = end;
+      let gap = 0;
+      while (spacing[next]) { gap += spacing[next]; next++; }
+      if (!gap || closingSpacing + gap > 3 || layouts[next] !== layouts[start]) break;
+      let nextEnd = next + 1;
+      while (nextEnd < layouts.length && layouts[nextEnd] === layouts[start]) nextEnd++;
+      const following = Array.from({ length: nextEnd - next }, (_, index) => next + index);
+      if (lines.length + following.length > 4 || !following.every(shortClosingLine)) break;
+      lines.push(...following);
+      closingSpacing += gap;
+      end = nextEnd;
+    }
+    for (let line = 0; line < lines.length - 1; line++) {
+      if (line < 3 || line >= lines.length - 3) {
+        // Keep every row across the gap, including the spacing itself.
+        for (let index = lines[line]; index < lines[line + 1]; index++) keeps.add(index);
+      }
+    }
+    start = end;
+  }
+  return keeps;
+}
+
 /** Source line breaks survive print reflow. In tables, corresponding lines in
  * neighbouring cells share a label; later lines keep their own anchors. */
 function handLines(root: HTMLElement, textHands: Map<Node, string>): HandLine[] {
@@ -85,9 +156,13 @@ export function preparePrintHandColumns(document: Document): void {
     }
     table.append(columns);
     const rows = table.createTBody();
-    for (const block of [...body.childNodes]) {
-      if (block.nodeType === Node.TEXT_NODE && !block.textContent?.trim()) continue;
+    const blocks = [...body.childNodes].filter((block) =>
+      block.nodeType !== Node.TEXT_NODE || block.textContent?.trim(),
+    );
+    const keeps = sourceLineKeeps(blocks);
+    for (const [index, block] of blocks.entries()) {
       const row = rows.insertRow();
+      if (keeps.has(index)) row.dataset.printKeepNext = 'true';
       const text = row.insertCell();
       text.className = 'print-text-cell';
       text.append(block);

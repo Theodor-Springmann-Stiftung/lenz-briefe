@@ -236,7 +236,18 @@ a single writer keeps the full name. Margin
 notes follow the letter directly, with their position descriptions and
 without added page prefixes. The small apparatus text is limited to 80ch.
 In-position notes stay at their source location. Paragraphs and individual margin
-notes stay together on a page when they fit. Source icons remain visible beside
+notes stay together on a page when they fit. Runs of aligned or short plain source
+line blocks with the same alignment and indentation keep their opening four and
+closing three blocks together while allowing page breaks in the middle. Plain
+blocks of up to 120 characters qualify, covering verse and addresses without
+grouping long prose paragraphs. This moves preceding lines down with one or two
+closing lines that would otherwise hang at the top of the next page, and moves up
+to three stranded opening lines down. Blank lines, vertical spacing and changes
+of alignment or indentation start a new run, so spacing remains the preferred
+place to break. Short right-aligned closings are the exception: up to four short
+lines can stay together across up to three line heights of original spacing,
+keeping the closing formula with the signature. Editorial spacing always ends a run.
+Source icons remain visible beside
 the date; date and sender/receiver names use the same 10pt size as the letter.
 The citation stays in the apparatus independently of the footer. With Vivliostyle,
 the footer becomes a running element at the end of the document and appears only
