@@ -15,9 +15,9 @@ const rotations = sidenoteRotations(note.html);
 <SidenotePosition position={note.pos} rotations={rotations} />
 <div class="edition-text" set:html={note.html} />
 <div class="sidenote-details">
-  {(note.annotation || rotations.length > 0) && (
+  {(note.page || rotations.length > 0) && (
     <p class="note-annotation sidenote-description">
-      {note.annotation}
+      {note.page && `Randnotiz S. ${note.page}${rotations.length > 0 ? ',' : ''}`}
       {rotations.map((angle) => {
         const description = angle === 270 ? '90° gegen den Uhrzeigersinn gedreht'
           : angle === 180 ? '180° gedreht' : `${angle}° im Uhrzeigersinn gedreht`;
