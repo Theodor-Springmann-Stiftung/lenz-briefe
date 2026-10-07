@@ -1,1 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="5" fill="#f7f5ef"/><text x="17" y="49" fill="#334638" font-family="Georgia,serif" font-size="48">L</text></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 64 64"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="favicon.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   inkscape:export-filename="favicon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.764898"
+     inkscape:cx="22.243135"
+     inkscape:cy="42.13537"
+     inkscape:window-width="2302"
+     inkscape:window-height="1254"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <rect
+     width="64"
+     height="64"
+     rx="5"
+     fill="#f7f5ef"
+     id="rect1" />
+  <path
+     d="M 21.65536,32.512619 V 3.887015 h 6.058793 V 27.375816 H 39.21708 v 5.136803 z"
+     id="text1"
+     style="font-size:43.9043px;font-family:'Source Sans 3';-inkscape-font-specification:'Source Sans 3, @wght=673';font-variation-settings:'wght' 673;fill:#334638;stroke-width:0.914674"
+     transform="scale(1.0440346,0.95782262)"
+     aria-label="L" />
+  <path
+     d="M 6.5293447,64.577965 V 35.952361 h 6.1026983 v 12.029778 h 0.131712 l 9.000382,-12.029778 h 6.717358 L 19.744539,47.27967 30.018146,64.577965 h -6.673454 l -7.200305,-12.468822 -3.512344,4.609952 v 7.85887 z"
+     id="text1-5"
+     style="font-size:43.9043px;font-family:'Source Sans 3';-inkscape-font-specification:'Source Sans 3, @wght=673';font-variation-settings:'wght' 673;fill:#800000;stroke-width:0.914674"
+     transform="scale(1.0440346,0.95782264)"
+     aria-label="K" />
+  <path
+     d="M 35.569079,64.924881 V 36.299277 h 9.615042 q 2.941588,0 5.31242,0.658564 2.414737,0.614661 3.77577,2.195215 1.361034,1.536651 1.361034,4.214813 0,2.151311 -1.009799,3.863579 -0.965895,1.668363 -2.809876,2.326928 v 0.175617 q 2.458641,0.526852 3.863579,2.107406 1.404937,1.580555 1.404937,4.39043 0,2.985493 -1.492746,4.917282 -1.448842,1.931789 -3.995291,2.85378 -2.502545,0.92199 -5.619751,0.92199 z m 6.102698,-17.078773 h 3.16111 q 2.546449,0 3.687961,-0.965895 1.185416,-0.965894 1.185416,-2.634258 0,-1.756172 -1.22932,-2.502545 -1.185417,-0.746373 -3.556249,-0.746373 h -3.248918 z m 0,12.381013 h 3.77577 q 2.809875,0 4.214813,-1.009799 1.448842,-1.009799 1.448842,-3.117205 0,-1.975694 -1.448842,-2.85378 -1.404938,-0.878086 -4.214813,-0.878086 h -3.77577 z"
+     id="text1-5-2"
+     style="font-size:43.9043px;font-family:'Source Sans 3';-inkscape-font-specification:'Source Sans 3, @wght=673';font-variation-settings:'wght' 673;fill:#800000;stroke-width:0.914674"
+     transform="scale(1.0440346,0.95782264)"
+     aria-label="B" />
+</svg>

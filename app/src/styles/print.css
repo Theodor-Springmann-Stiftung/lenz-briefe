@@ -161,7 +161,6 @@
 
   .index-intro { padding-top:0; padding-bottom:4mm; }
   .index-intro h1 { font-size:20pt; }
-  .edition-count > span { font-size:12.5pt; }
   .active-filters { transform:none; }
   .filter-pill { min-height:0; padding:1mm 2mm; border:1px solid #aaa; background:none; color:#000; font-size:8pt; }
   .filter-pill::before, .filter-pill::after, .filter-pill > .ui-icon { display:none; }

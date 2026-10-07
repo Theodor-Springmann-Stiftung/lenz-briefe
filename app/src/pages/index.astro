@@ -26,9 +26,6 @@ const firstGroup = catalog.groups[0];
     <div class="active-filters" hidden>
       <div class="active-filter-pills" role="group" aria-label="Aktive Filter"></div>
     </div>
-    <div class="edition-count">
-      <span>{catalog.letters.length} Briefe</span>
-    </div>
   </section>
   <section aria-label="Briefverzeichnis" class="catalog-section">
     {(['person', 'place', 'search'] as const).map((kind) => (
