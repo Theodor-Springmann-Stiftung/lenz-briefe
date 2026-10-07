@@ -74,6 +74,7 @@ def build_reference_maps(references_doc: etree._ElementTree) -> dict[str, Any]:
             "index": index,
             "name": get_attribute(node, "name"),
             "ref": get_attribute(node, "ref"),
+            "geonames": get_attribute(node, "geonames"),
         }
 
     for node in references_doc.xpath("//l:appDef", namespaces=NSMAP):

@@ -77,14 +77,14 @@ async function fixture(t, catalog = { people: { 1: definition(personId) }, place
   };
 }
 
-test('build enrichment writes GeoNames Wikipedia links and reuses the shared CI cache', async t => {
-  const f = await fixture(t, { people: {}, places: { 7: definition(placeId) } });
+test('build enrichment uses source GeoNames instead of GND links and reuses the shared CI cache', async t => {
+  const f = await fixture(t, { people: {}, places: { 7: { ...definition(placeId), geonames: 'https://sws.geonames.org/2973783' } } });
   const requests = [];
   const fetchImpl = async url => {
     requests.push(url);
     if (url.includes('lobid.org')) return response({ ...place,
       wikipedia: [{ id: 'https://de.wikipedia.org/wiki/Wrong_namesake' }],
-      sameAs: [{ id: 'https://sws.geonames.org/2973783' }],
+      sameAs: [{ id: 'https://sws.geonames.org/999999' }],
     });
     assert.equal(url, 'https://sws.geonames.org/2973783/about.rdf');
     return new Response('<gn:Feature rdf:about="https://sws.geonames.org/2973783/"><gn:wikipediaArticle rdf:resource="https://en.wikipedia.org/wiki/Strasbourg"/></gn:Feature>');
@@ -190,7 +190,7 @@ test('does not invent missing provider links and falls back to another Wikipedia
   assert.equal(links[1].url, 'https://en.wikipedia.org/wiki/Jakob_Michael_Reinhold_Lenz');
 });
 
-test('place summaries offer only Wikipedia, GND and GeoNames, with local icons and no duplicates', async () => {
+test('GND place summaries omit GeoNames links in favor of editorial references', async () => {
   const record = { ...place,
     wikipedia: [{ id: 'https://en.wikipedia.org/wiki/Strasbourg' }],
     sameAs: [
@@ -204,11 +204,8 @@ test('place summaries offer only Wikipedia, GND and GeoNames, with local icons a
     ],
   };
   const { links } = summarizeGnd(record, 'places');
-  assert.deepEqual(links.map(({ label }) => label), ['Wikipedia', 'GND', 'GeoNames']);
+  assert.deepEqual(links.map(({ label }) => label), ['Wikipedia', 'GND']);
   assert.equal(links[0].url, 'https://de.wikipedia.org/wiki/Stra%C3%9Fburg');
-  assert.equal(links[2].url, 'https://sws.geonames.org/2973783');
-  assert.equal(links[2].icon, 'sws.geonames.org.ico');
-  await readFile(new URL(`../../assets/reference-icons/${links[2].icon}`, import.meta.url));
   assert.deepEqual(referenceLinks(place, 'places').map(({ label }) => label), ['GND']);
   const fallback = referenceLinks({ ...place, wikipedia: record.wikipedia }, 'places');
   assert.deepEqual(fallback.map(({ label }) => label), ['Wikipedia', 'GND']);
@@ -379,4 +376,27 @@ test('network budget ends a stalled fetch gracefully; explicit cancellation stop
   const pending = f.run({ fetchImpl, signal: controller.signal });
   setTimeout(() => controller.abort(), 10);
   await assert.rejects(pending, { name: 'AbortError' });
+});
+
+
+test('source GeoNames works without a GND reference or response', async t => {
+  const f = await fixture(t, { people: {}, places: { 14: { name: 'Berka', geonames: 'https://sws.geonames.org/2953363/' } } });
+  const requests = [];
+  const result = await f.run({ fetchImpl: async url => {
+    requests.push(url);
+    return new Response('<gn:Feature rdf:about="https://sws.geonames.org/2953363/"><gn:wikipediaArticle rdf:resource="https://de.wikipedia.org/wiki/Bad_Berka"/></gn:Feature>');
+  } });
+  assert.deepEqual(requests, ['https://sws.geonames.org/2953363/about.rdf']);
+  assert.equal(result.information.places[14].links.find(link => link.label === 'GeoNames').url, 'https://sws.geonames.org/2953363/');
+});
+
+test('GND GeoNames links do not trigger enrichment without an editorial reference', async t => {
+  const f = await fixture(t, { people: {}, places: { 7: definition(placeId) } });
+  const requests = [];
+  const result = await f.run({ fetchImpl: async url => {
+    requests.push(url);
+    return response({ ...place, sameAs: [{ id: 'https://sws.geonames.org/2973783/' }] });
+  } });
+  assert.equal(requests.length, 1);
+  assert.equal(result.information.places[7].links.some(link => link.label === 'GeoNames'), false);
 });

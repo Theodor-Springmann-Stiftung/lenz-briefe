@@ -282,103 +282,103 @@
 
 
 		<locationDefs>
-			<locationDef index="1" name="Dorpat [Tartu]" ref="https://d-nb.info/gnd/1029285-8" />
+			<locationDef index="1" name="Dorpat [Tartu]" ref="https://d-nb.info/gnd/1029285-8" geonames="https://sws.geonames.org/588335" />
 
 			<locationDef index="2" name="Tarwast [Tarvastu]" ref="https://d-nb.info/gnd/115455998X" />
 
-			<locationDef index="3" name="Königsberg [Kaliningrad]" ref="https://d-nb.info/gnd/4031541-1" />
+			<locationDef index="3" name="Königsberg [Kaliningrad]" ref="https://d-nb.info/gnd/4031541-1" geonames="https://sws.geonames.org/554234" />
 
 			<locationDef index="4" name="Fort Louis" ref="https://d-nb.info/gnd/4762184-9" />
 
-			<locationDef index="5" name="Landau" ref="http://d-nb.info/gnd/4034222-0" />
+			<locationDef index="5" name="Landau" ref="http://d-nb.info/gnd/4034222-0" geonames="https://sws.geonames.org/2881646" />
 
-			<locationDef index="6" name="Weißenburg" ref="http://d-nb.info/gnd/4079134-8" />
+			<locationDef index="6" name="Weißenburg" ref="http://d-nb.info/gnd/4079134-8" geonames="https://sws.geonames.org/2967325" />
 
-			<locationDef index="7" name="Straßburg" ref="http://d-nb.info/gnd/4057878-1" />
+			<locationDef index="7" name="Straßburg" ref="http://d-nb.info/gnd/4057878-1" geonames="https://sws.geonames.org/2973783" />
 
-			<locationDef index="8" name="Weimar" ref="http://d-nb.info/gnd/4065105-8" />
+			<locationDef index="8" name="Weimar" ref="http://d-nb.info/gnd/4065105-8" geonames="https://sws.geonames.org/2812482" />
 
-			<locationDef index="9" name="Kehl" ref="http://d-nb.info/gnd/4030137-0" />
+			<locationDef index="9" name="Kehl" ref="http://d-nb.info/gnd/4030137-0" geonames="https://sws.geonames.org/2891951" />
 
-			<locationDef index="10" name="Arensburg [Kuressaare]" ref="http://d-nb.info/gnd/4097908-8" />
+			<locationDef index="10" name="Arensburg [Kuressaare]" ref="http://d-nb.info/gnd/4097908-8" geonames="https://sws.geonames.org/590939" />
 
-			<locationDef index="11" name="Zürich" ref="http://d-nb.info/gnd/4068038-1" />
+			<locationDef index="11" name="Zürich" ref="http://d-nb.info/gnd/4068038-1" geonames="https://sws.geonames.org/2657896" />
 
-			<locationDef index="12" name="Emmendingen" ref="http://d-nb.info/gnd/4014586-4" />
+			<locationDef index="12" name="Emmendingen" ref="http://d-nb.info/gnd/4014586-4" geonames="https://sws.geonames.org/2930523" />
 
-			<locationDef index="13" name="Ulm" ref="http://d-nb.info/gnd/4061529-7" />
+			<locationDef index="13" name="Ulm" ref="http://d-nb.info/gnd/4061529-7" geonames="https://sws.geonames.org/2820256" />
 
-			<locationDef index="14" name="Berka" ref="http://d-nb.info/gnd/4087284-1" />
+			<locationDef index="14" name="Berka" ref="http://d-nb.info/gnd/4087284-1" geonames="https://sws.geonames.org/2953548" />
 
-			<locationDef index="15" name="Gotha" ref="http://d-nb.info/gnd/4021652-4" />
+			<locationDef index="15" name="Gotha" ref="http://d-nb.info/gnd/4021652-4" geonames="https://sws.geonames.org/2918752" />
 
-			<locationDef index="16" name="Göttingen" ref="http://d-nb.info/gnd/4021477-1" />
+			<locationDef index="16" name="Göttingen" ref="http://d-nb.info/gnd/4021477-1" geonames="https://sws.geonames.org/2918632" />
 
-			<locationDef index="17" name="Kopenhagen" ref="http://d-nb.info/gnd/4032399-7" />
+			<locationDef index="17" name="Kopenhagen" ref="http://d-nb.info/gnd/4032399-7" geonames="https://sws.geonames.org/2618425" />
 
-			<locationDef index="18" name="Kassel" ref="http://d-nb.info/gnd/4029869-3" />
+			<locationDef index="18" name="Kassel" ref="http://d-nb.info/gnd/4029869-3" geonames="https://sws.geonames.org/2892518" />
 
-			<locationDef index="19" name="Hannover" ref="http://d-nb.info/gnd/4023349-2" />
+			<locationDef index="19" name="Hannover" ref="http://d-nb.info/gnd/4023349-2" geonames="https://sws.geonames.org/2910831" />
 
-			<locationDef index="20" name="Darmstadt" ref="http://d-nb.info/gnd/4011077-1" />
+			<locationDef index="20" name="Darmstadt" ref="http://d-nb.info/gnd/4011077-1" geonames="https://sws.geonames.org/2938913" />
 
-			<locationDef index="21" name="Bückeburg" ref="http://d-nb.info/gnd/4008715-3" />
+			<locationDef index="21" name="Bückeburg" ref="http://d-nb.info/gnd/4008715-3" geonames="https://sws.geonames.org/2942159" />
 
-			<locationDef index="22" name="Gudensberg" ref="http://d-nb.info/gnd/4094205-3" />
+			<locationDef index="22" name="Gudensberg" ref="http://d-nb.info/gnd/4094205-3" geonames="https://sws.geonames.org/2913890" />
 
-			<locationDef index="23" name="Gießen" ref="http://d-nb.info/gnd/4020989-1" />
+			<locationDef index="23" name="Gießen" ref="http://d-nb.info/gnd/4020989-1" geonames="https://sws.geonames.org/2920512" />
 
 			<locationDef index="24" name="Hinter Frankfurt" />
 
-			<locationDef index="25" name="Dessau" ref="http://d-nb.info/gnd/4011536-7" />
+			<locationDef index="25" name="Dessau" ref="http://d-nb.info/gnd/4011536-7" geonames="https://sws.geonames.org/2937959" />
 
-			<locationDef index="26" name="Colmar" ref="http://d-nb.info/gnd/4010401-1" />
+			<locationDef index="26" name="Colmar" ref="http://d-nb.info/gnd/4010401-1" geonames="https://sws.geonames.org/3024297" />
 
-			<locationDef index="27" name="Leipzig" ref="http://d-nb.info/gnd/4035206-7" />
+			<locationDef index="27" name="Leipzig" ref="http://d-nb.info/gnd/4035206-7" geonames="https://sws.geonames.org/2879139" />
 
 			<locationDef index="28" name="Hegi" ref="http://d-nb.info/gnd/4668899-7" />
 
-			<locationDef index="29" name="Halle" ref="http://d-nb.info/gnd/4023025-9" />
+			<locationDef index="29" name="Halle" ref="http://d-nb.info/gnd/4023025-9" geonames="https://sws.geonames.org/2911522" />
 
-			<locationDef index="30" name="Kochberg" ref="https://d-nb.info/gnd/4119877-3" />
+			<locationDef index="30" name="Kochberg" ref="https://d-nb.info/gnd/4119877-3" geonames="https://sws.geonames.org/2915408" />
 
-			<locationDef index="31" name="Mannheim" ref="http://d-nb.info/gnd/4037372-1" />
+			<locationDef index="31" name="Mannheim" ref="http://d-nb.info/gnd/4037372-1" geonames="https://sws.geonames.org/2873891" />
 
-			<locationDef index="32" name="Marbach" ref="https://d-nb.info/gnd/4037443-9" />
+			<locationDef index="32" name="Marbach" ref="https://d-nb.info/gnd/4037443-9" geonames="https://sws.geonames.org/2873776" />
 
 
 
-			<locationDef index="35" name="Basel" ref="http://d-nb.info/gnd/4004617-5" />
+			<locationDef index="35" name="Basel" ref="http://d-nb.info/gnd/4004617-5" geonames="https://sws.geonames.org/2661602" />
 
-			<locationDef index="36" name="Schweiz" ref="http://d-nb.info/gnd/4053881-3" />
+			<locationDef index="36" name="Schweiz" ref="http://d-nb.info/gnd/4053881-3" geonames="http://sws.geonames.org/2658434" />
 
 			<locationDef index="37" name="Ursener Tal an der Matte" ref="https://d-nb.info/gnd/4107479-8" />
 
-			<locationDef index="38" name="Neuenburg" ref="http://d-nb.info/gnd/4075303-7" />
+			<locationDef index="38" name="Neuenburg" ref="http://d-nb.info/gnd/4075303-7" geonames="https://sws.geonames.org/2659496" />
 
-			<locationDef index="39" name="Bern" ref="http://d-nb.info/gnd/4005762-8" />
+			<locationDef index="39" name="Bern" ref="http://d-nb.info/gnd/4005762-8" geonames="https://sws.geonames.org/2661552" />
 
 			<locationDef index="40" name="Castion" ref="http://d-nb.info/gnd/4742201-4" />
 
-			<locationDef index="41" name="Winterthur" ref="http://d-nb.info/gnd/4066337-1" />
+			<locationDef index="41" name="Winterthur" ref="http://d-nb.info/gnd/4066337-1" geonames="https://sws.geonames.org/2657970" />
 
 			<locationDef index="42" name="Waldersbach" ref="http://d-nb.info/gnd/10197465-6" />
 
-			<locationDef index="43" name="Weisweil" ref="http://d-nb.info/gnd/4417847-5" />
+			<locationDef index="43" name="Weisweil" ref="http://d-nb.info/gnd/4417847-5" geonames="https://sws.geonames.org/2811691" />
 
-			<locationDef index="44" name="Riga" ref="http://d-nb.info/gnd/4050042-1" />
+			<locationDef index="44" name="Riga" ref="http://d-nb.info/gnd/4050042-1" geonames="https://sws.geonames.org/456172" />
 
 			<locationDef index="45" name="Jamburg [Kingissepp]" ref="http://d-nb.info/gnd/7853282-6" />
 
-			<locationDef index="46" name="St. Petersburg" ref="http://d-nb.info/gnd/4267026-3" />
+			<locationDef index="46" name="St. Petersburg" ref="http://d-nb.info/gnd/4267026-3" geonames="https://sws.geonames.org/498817" />
 
-			<locationDef index="47" name="Cronstadt [Kronschtadt]" ref="https://d-nb.info/gnd/4098711-5" />
+			<locationDef index="47" name="Cronstadt [Kronschtadt]" ref="https://d-nb.info/gnd/4098711-5" geonames="https://sws.geonames.org/540771" />
 
 			<locationDef index="48" name="Aya [Ahja]" />
 
 			<locationDef index="49" name="Ohlershoff [Oleri]" />
 
-			<locationDef index="50" name="Moskau" ref="http://d-nb.info/gnd/4074987-3" />
+			<locationDef index="50" name="Moskau" ref="http://d-nb.info/gnd/4074987-3" geonames="https://sws.geonames.org/524901" />
 
 			<locationDef index="51" name="Unbekannter Ort" />
 
@@ -389,20 +389,20 @@
 
 			<locationDef index="55" name="Livland" />
 
-			<locationDef index="56" name="Frankfurt am Main" ref="http://d-nb.info/gnd/4018118-2" />
+			<locationDef index="56" name="Frankfurt am Main" ref="http://d-nb.info/gnd/4018118-2" geonames="https://sws.geonames.org/2925533" />
 			
-			<locationDef index="57" name="Pernau [Pärnu]" ref="http://d-nb.info/gnd/4045214-1" />
+			<locationDef index="57" name="Pernau [Pärnu]" ref="http://d-nb.info/gnd/4045214-1" geonames="https://sws.geonames.org/589580" />
 			
-			<locationDef index="58" name="Koblenz-Ehrenbreitstein" ref="http://d-nb.info/gnd/4098580-5" />
+			<locationDef index="58" name="Koblenz-Ehrenbreitstein" ref="http://d-nb.info/gnd/4098580-5" geonames="https://sws.geonames.org/2932843" />
 			
 			
-			<locationDef index="60" name="Kolberg" ref="http://d-nb.info/gnd/4073614-3" />
+			<locationDef index="60" name="Kolberg" ref="http://d-nb.info/gnd/4073614-3" geonames="https://sws.geonames.org/3095795" />
 			
-			<locationDef index="61" name="Lübeck" ref="http://d-nb.info/gnd/4036483-5" />
+			<locationDef index="61" name="Lübeck" ref="http://d-nb.info/gnd/4036483-5" geonames="https://sws.geonames.org/2875601" />
 			
 			<locationDef index="62" name="Vasula [Wassula]" />
 			
-			<locationDef index="63" name="Karlsruhe" ref="http://d-nb.info/gnd/4029713-5" />
+			<locationDef index="63" name="Karlsruhe" ref="http://d-nb.info/gnd/4029713-5" geonames="https://sws.geonames.org/2892794" />
 
 
 		</locationDefs>

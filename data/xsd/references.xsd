@@ -58,6 +58,7 @@
 												<xsd:attribute name="index" type="xsd:integer" use="required" />
 												<xsd:attribute name="name" type="lenz:NonEmptyString" use="required" />
 												<xsd:attribute name="ref" type="xsd:anyURI" use="optional" />
+												<xsd:attribute name="geonames" type="xsd:anyURI" use="optional" />
 											</xsd:complexType>
 										</xsd:element>
 									</xsd:sequence>

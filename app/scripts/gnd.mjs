@@ -5,7 +5,7 @@ import { setTimeout as sleep } from 'node:timers/promises';
 import { referenceLinks } from './gnd-links.mjs';
 import { resolveGndImages } from './gnd-images.mjs';
 import { gndCoordinates } from '../src/lib/correspondence-map.mjs';
-import { enrichGeoNames } from './geonames.mjs';
+import { enrichGeoNames, geonamesId } from './geonames.mjs';
 
 const DAY = 86_400_000;
 const VERSION = 1;
@@ -205,6 +205,13 @@ export async function enrichGnd({
         logger.warn(`[GND] ${definition.name}: ${definition.ref} has an unexpected entity type; omitted.`);
       }
     }
+  }
+  // GeoNames identity is editorial source metadata, independent of GND availability.
+  for (const [id, definition] of Object.entries(catalog.places)) {
+    if (!geonamesId(definition.geonames)) continue;
+    const place = information.places[id] ??= { links: [], coordinates: null };
+    place.links.push({ label: 'GeoNames', title: 'GeoNames', url: definition.geonames,
+      icon: 'sws.geonames.org.ico' });
   }
   const geonames = await enrichGeoNames(information.places, {
     cacheDirectory: path.join(cacheDirectory, 'geonames'), cacheMode,
