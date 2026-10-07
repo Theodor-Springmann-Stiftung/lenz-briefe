@@ -31,6 +31,26 @@ if (layout) {
   });
   const namesByRef = new Map(handLabels.map(({ ref, name }) => [ref, name]));
   const bindHandControl = initializeHandControls(layout);
+  function lineCenter(anchor: HTMLElement) {
+    const containingLine = anchor.closest<HTMLElement>('.lb-line-block');
+    let block = containingLine ?? anchor.querySelector<HTMLElement>('.lb-line-block');
+    let next: Element | null = anchor;
+    while (!block && next && next !== body) {
+      if (next.nextElementSibling) {
+        next = next.nextElementSibling;
+        block = next.matches('.lb-line-block') ? next as HTMLElement
+          : next.querySelector<HTMLElement>('.lb-line-block');
+      } else next = next.parentElement;
+    }
+    const bounds = (block ?? anchor).getBoundingClientRect();
+    const style = getComputedStyle(block ?? anchor);
+    const lineHeight = parseFloat(style.lineHeight) || parseFloat(style.fontSize) * 1.3;
+    const anchorBounds = anchor.getBoundingClientRect();
+    const row = containingLine
+      ? Math.max(0, Math.floor((anchorBounds.top + anchorBounds.height / 2 - bounds.top) / lineHeight))
+      : 0;
+    return bounds.top + (row + .5) * lineHeight;
+  }
   function arrange() {
     // Restore labels before measuring, including when returning to narrow screens.
     restoreRotationLabels();
@@ -122,14 +142,14 @@ if (layout) {
       };
     };
     // Reserve horizontal space only where items share vertical space.
-    const rotations = rotationLabels.map(({ label }) => ({ label,
-      target: label.getBoundingClientRect().top - pageMargin.getBoundingClientRect().top,
+    const rotations = rotationLabels.map(({ label, block }) => ({ label,
+      center: lineCenter(block) - pageMargin.getBoundingClientRect().top,
     }));
     rotations.forEach(({ label }) => pageMargin.append(label));
     const leftSlots: { top: number; bottom: number; offset: number; width: number }[] = [];
-    for (const { label, target } of rotations.sort((a, b) => a.target - b.target)) {
+    for (const { label, center } of rotations.sort((a, b) => a.center - b.center)) {
       const rect = label.getBoundingClientRect();
-      const top = Math.max(0, target);
+      const top = Math.max(0, center - rect.height / 2);
       const offset = leftMarginOffset(top, rect.height, leftSlots);
       label.style.top = `${top}px`;
       label.style.setProperty('--left-margin-offset', `${offset}px`);
@@ -146,9 +166,10 @@ if (layout) {
       );
     const placements: { item: HTMLElement; top: number }[] = [];
     let pageBottom = 0;
-    for (const { item, target, height } of measuredPages) {
-      const top = Math.max(0, target);
-      const width = item.querySelector('a')!.getBoundingClientRect().width;
+    for (const { item, anchor, height } of measuredPages) {
+      const linkBounds = item.querySelector('a')!.getBoundingClientRect();
+      const top = Math.max(0, lineCenter(anchor!) - pageMargin.getBoundingClientRect().top - height / 2);
+      const width = linkBounds.width;
       const offset = leftMarginOffset(top, height, leftSlots);
       item.style.setProperty('--left-margin-offset', `${offset}px`);
       leftSlots.push({ top, bottom: top + height, offset, width });
