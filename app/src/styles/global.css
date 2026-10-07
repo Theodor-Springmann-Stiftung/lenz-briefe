@@ -30,10 +30,20 @@
   ::selection { background: #dfe5d6; }
   [hidden] { display: none !important; }
 }
-/* A uniform diagonal grid frames the reading area. */
+/* The grid recedes toward the upper-left corner behind the reading area. */
 @media screen {
-  body { isolation:isolate; background:url('../assets/diagonal-grid.svg') repeat var(--color-paper); }
-  body > .site-shell { background:var(--color-paper); padding-bottom:2.5rem; }
+  body { isolation:isolate; overflow-x:clip; background:var(--color-paper); }
+  body::before {
+    content:'';
+    position:fixed;
+    inset:-35%;
+    z-index:-1;
+    pointer-events:none;
+    background:url('../assets/diagonal-grid.svg') repeat;
+    transform:perspective(160vmax) rotateX(48deg) rotateY(-14deg) scale(1.5);
+    transform-origin:center;
+  }
+  body > .site-shell { background:var(--color-paper); padding-bottom:2.5rem; border-inline:1px solid var(--color-rule); }
   body > .site-footer { margin-top:0; }
   main > .letter-content > .detail-header-group { width:auto; margin-inline:1rem; }
 
