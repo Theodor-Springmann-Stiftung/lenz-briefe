@@ -60,7 +60,6 @@
   .site-header-inner { display:block; }
   .wordmark { flex-direction:row; align-items:baseline; gap:2mm; }
   .wordmark-name, .wordmark-caption { font-size:9pt; }
-  .wordmark-divider { display:block; }
   .site-footer { margin-top:7mm; padding:3mm 0 0; background:none; border-top:1px solid #000; font-size:8pt; break-inside:avoid-page; }
   .site-footer-inner { display:grid; grid-template-columns:max-content minmax(0,1fr); align-items:first baseline; gap:1mm 4mm; }
   .footer-license-line { display:block; white-space:nowrap; }
