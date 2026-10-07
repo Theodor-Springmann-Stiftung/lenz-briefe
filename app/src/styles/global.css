@@ -715,12 +715,12 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 .apparatus .er, .apparatus .er * { color:var(--color-paper); }
 @media (min-width: 1100px) {
   .letter-spine { display:block; }
-  .letter-content { max-width:none; display:grid; grid-template-columns:var(--reading-columns); grid-template-rows:auto 1fr auto; column-gap:3rem; container-type:inline-size; }
+  .letter-content { max-width:none; display:grid; grid-template-columns:var(--reading-columns); grid-template-rows:auto 1fr auto; column-gap:var(--reading-gap); container-type:inline-size; }
   .letter-content {
-    --detail-header-width:60rem;
     --detail-header-padding:clamp(1rem, 2vw, 2rem);
+    --reading-gap:min(3rem, calc(1rem + var(--detail-header-padding) + 1px));
     /* Start the reading column at the header's inner text edge, preserving its width. */
-    --reading-columns:max(0px, calc((100% - var(--detail-header-width)) / 2 + var(--detail-header-padding) + 1px - 3rem)) minmax(0, min(75ch, calc(100% - 26rem))) minmax(0, 1fr);
+    --reading-columns:calc(1rem + var(--detail-header-padding) + 1px - var(--reading-gap)) minmax(0, min(75ch, calc(100% - 26rem))) minmax(0, 1fr);
   }
   .letter-content > .unplaced-notes { grid-column:2; width:100%; max-width:none; }
   .letter-content > .apparatus {
@@ -733,7 +733,7 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   }
   .letter-content > .apparatus > p { font-family:var(--font-sans); }
   .letter-content > :is(.detail-header-group, .apparatus) { grid-column:1 / -1; width:auto; max-width:none; margin-inline:0; justify-self:stretch; }
-  .reading-layout { grid-column:1 / -1; display:grid; grid-template-columns:subgrid; column-gap:3rem; align-items:start; }
+  .reading-layout { grid-column:1 / -1; display:grid; grid-template-columns:subgrid; column-gap:var(--reading-gap); align-items:start; }
   .letter-body { grid-column:2; grid-row:1; margin:0; }
   .marginalia, .page-margin { grid-row:1; margin:0; padding:0; border:0; position:relative; min-width:0; }
   .page-margin { grid-column:1; }
@@ -745,8 +745,8 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   html.js .reading-layout:not(.margins-visible) :is(.marginalia, .page-margin) { opacity:0; visibility:hidden; }
   html.js .reading-layout.margins-visible :is(.marginalia, .page-margin) { opacity:1; visibility:visible; }
   .margin-ready .marginal-item { position:absolute; left:0; right:0; margin:0; }
-  .margin-ready .page-number { right:calc(-3rem + 1.05rem + var(--left-margin-offset, 0px)); padding-top:.35rem; line-height:1.3; }
-  .margin-ready .page-margin > .tr-label { position:absolute; right:calc(-3rem + 1.05rem + var(--left-margin-offset, 0px)); width:max-content; margin:0; font-size:.75rem; text-align:right; }
+  .margin-ready .page-number { right:calc(-1 * var(--reading-gap) + 1.05rem + var(--left-margin-offset, 0px)); padding-top:.35rem; line-height:1.3; }
+  .margin-ready .page-margin > .tr-label { position:absolute; right:calc(-1 * var(--reading-gap) + 1.05rem + var(--left-margin-offset, 0px)); width:max-content; margin:0; font-size:.75rem; text-align:right; }
   .margin-ready .hand-label { transform:translateY(.35rem); }
 }
 @media (width < 1600px) {
