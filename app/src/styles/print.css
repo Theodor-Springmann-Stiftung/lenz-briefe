@@ -58,8 +58,10 @@
   span.print-only { display:inline; }
   .site-header { position:static; padding:0 0 3mm; margin-bottom:6mm; background:none; border:0; }
   .site-header-inner { display:block; }
-  .wordmark { flex-direction:row; align-items:baseline; gap:2mm; }
-  .wordmark-name, .wordmark-caption { font-size:9pt; }
+  .wordmark { display:inline-flex; flex-direction:row; align-items:center; gap:2mm; break-inside:avoid; }
+  .wordmark-logo { box-sizing:border-box; width:7mm; height:7mm; min-width:7mm; max-width:7mm; padding:.3mm; border:.5pt solid #000; line-height:0; }
+  .wordmark-text { display:flex; flex-direction:column; align-items:flex-start; gap:0; }
+  .wordmark-name, .wordmark-caption { font-size:9pt; line-height:1.2; }
   .site-footer { margin-top:7mm; padding:3mm 0 0; background:none; border-top:1px solid #000; font-size:8pt; break-inside:avoid-page; }
   .site-footer-inner { display:grid; grid-template-columns:max-content minmax(0,1fr); align-items:first baseline; gap:1mm 4mm; }
   .footer-license-line { display:block; white-space:nowrap; }

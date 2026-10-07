@@ -6,8 +6,8 @@
    sodipodi:docname="favicon.svg"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    inkscape:export-filename="favicon.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
+   inkscape:export-xdpi="450"
+   inkscape:export-ydpi="450"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -34,11 +34,14 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg1" />
   <rect
-     width="64"
-     height="64"
-     rx="5"
+     width="92.934166"
+     height="86.423973"
+     rx="7.2604814"
      fill="#f7f5ef"
-     id="rect1" />
+     id="rect1"
+     x="-15.190434"
+     y="-6.5101857"
+     style="stroke-width:1.40031" />
   <text
      x="18.18692"
      y="32.512619"
