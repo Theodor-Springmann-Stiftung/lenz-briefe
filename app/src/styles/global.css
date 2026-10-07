@@ -62,7 +62,7 @@
   .wordmark-name, .wordmark-caption { font-size:1.25rem; font-weight:700; letter-spacing:.025em; line-height:1.2; }
   .wordmark-initials { letter-spacing:0; word-spacing:-.05em; }
   .wordmark-caption { font-weight:400; font-style:normal; letter-spacing:normal; }
-  .wordmark:hover { color:var(--color-accent); }
+  .wordmark:hover { color:var(--color-ink); }
   .back-to-top { position:fixed; right:max(var(--floating-inset), env(safe-area-inset-right)); bottom:max(var(--floating-bottom), env(safe-area-inset-bottom)); z-index:30; display:flex; align-items:center; justify-content:center; width:3.5rem; height:3.5rem; border:2px solid var(--color-ink); background:var(--color-paper); color:var(--color-ink); box-shadow:2px 2px 0 var(--color-ink); }
   .back-to-top > .ui-icon { width:1.75rem; height:1.75rem; transform:rotate(180deg); }
   .back-to-top:hover { background:#e0e3da; color:var(--color-ink); box-shadow:1px 1px 0 var(--color-ink); }
