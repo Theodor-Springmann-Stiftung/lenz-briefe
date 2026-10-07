@@ -39,6 +39,9 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {
     <style is:inline set:html={`:root { ${handSettingsVariables()} }`} />
     <script is:inline>
       document.documentElement.classList.add('js');
+      try {
+        document.documentElement.toggleAttribute('data-dark', localStorage.getItem('lenz-theme') === 'dark');
+      } catch { /* Light remains the default when storage is unavailable. */ }
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
@@ -92,6 +95,10 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {
           })}
           <span aria-hidden="true">·</span>
           <time datetime={generatedAt.toISOString()}>{generationMonth}</time>
+          <span class="theme-control screen-only" hidden>
+            <span aria-hidden="true">·</span>
+            <label><input class="theme-toggle" type="checkbox" /> Dunkelmodus</label>
+          </span>
         </p>
         <p class="text-right">
           lenz-briefe.de – ein Projekt der{' '}
@@ -129,6 +136,7 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {
     </script>
     <script>
       import '../scripts/site-header';
+      import '../scripts/theme';
     </script>
   </body>
 </html>

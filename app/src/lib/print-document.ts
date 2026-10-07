@@ -67,6 +67,7 @@ export async function preparePrintContent(root: ParentNode, checkpoint: PrintChe
  * once, without another full-document copy or another round of transformations. */
 export async function finishPrintDocument(copy: Document, baseURL: string, checkpoint: PrintCheckpoint): Promise<string> {
   const html = copy.documentElement;
+  html.removeAttribute('data-dark');
   if (copy.querySelector('.letter-content')) {
     copy.querySelector('.site-footer')?.prepend(createPrintEditionLink(copy));
     html.classList.add('print-with-edition-link');
