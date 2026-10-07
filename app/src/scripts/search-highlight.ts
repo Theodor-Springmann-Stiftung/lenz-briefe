@@ -12,6 +12,9 @@ function positionDismissButton() {
   const match = document.querySelector<HTMLElement>('mark.search-match');
   if (!match) return;
   const desktop = matchMedia('(min-width: 1100px)').matches;
+  dismissButton.style.position = '';
+  dismissButton.style.right = '';
+  dismissButton.style.bottom = '';
   if (!desktop) {
     dismissButton.hidden = false;
     dismissButton.style.top = '';
@@ -28,13 +31,26 @@ function positionDismissButton() {
   const sidebar = pageMargin.getBoundingClientRect();
   const rect = match.getClientRects()[0] || match.getBoundingClientRect();
   dismissButton.hidden = false;
-  dismissButton.style.maxWidth = `${sidebar.width}px`;
+  // This body-level overlay may cross main's border. The narrow page-number
+  // column is only an anchor, not the available width for the search pill.
+  dismissButton.style.maxWidth = `${document.documentElement.clientWidth - 16}px`;
+  const floatAtBottom = () => {
+    dismissButton!.style.position = 'fixed';
+    dismissButton!.style.left = '';
+    dismissButton!.style.top = '';
+    dismissButton!.style.right = '1rem';
+    dismissButton!.style.bottom = '6.5rem';
+  };
+  if (dismissButton.offsetWidth > sidebar.right - 8) {
+    floatAtBottom();
+    return;
+  }
   const center = rect.top + rect.height / 2;
   const metadata = match.closest<HTMLElement>('[data-search-target]');
   if (metadata) {
     const bounds = metadata.getBoundingClientRect();
     const edge = Math.min(sidebar.right, bounds.left - 16);
-    const available = edge - Math.max(8, sidebar.left);
+    const available = edge - 8;
     if (available >= 100) {
       dismissButton.style.maxWidth = `${available}px`;
       dismissButton.style.left = `${edge + scrollX - dismissButton.offsetWidth}px`;
@@ -63,7 +79,10 @@ function positionDismissButton() {
     );
     if (nextRight === right) break;
     right = nextRight;
-    dismissButton.style.maxWidth = `${Math.max(1, right - Math.max(8, sidebar.left))}px`;
+  }
+  if (dismissButton.offsetWidth > right - 8) {
+    floatAtBottom();
+    return;
   }
   dismissButton.style.left = `${Math.max(8, right + scrollX - dismissButton.offsetWidth)}px`;
   dismissButton.style.top = `${center + scrollY - dismissButton.offsetHeight / 2}px`;

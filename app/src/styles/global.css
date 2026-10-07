@@ -607,7 +607,7 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .search-highlight-active body { --floating-bottom:5.5rem; }
 }
 /* Collapse marker spacing with adjacent XML whitespace, including across inline wrappers. */
-.edition-text .page-anchor[data-break=inline]::before { content:' | '; white-space:normal; }
+.edition-text .page-anchor[data-break=inline]:not([data-index="1"])::before { content:' | '; white-space:normal; }
 @media (width < 1100px) {
   body { --floating-inset:.75rem; --floating-bottom:.75rem; }
   .back-to-top { display:none; }
@@ -615,9 +615,9 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .index-intro { padding-bottom:1rem; }
   .detail-header-group { margin-top:var(--page-top-space); margin-bottom:2rem; }
   .reading-layout .page-margin, .marginalia .hand-label, .marginalia:not(:has(.margin-note)) { display:none; }
-  .letter-body .page-anchor[data-index]::before,
+  .letter-body .page-anchor[data-index]:not([data-index="1"])::before,
   .letter-body :is(.hand, .hand-base-start)[data-hand-name]::before { font:400 .75rem/1.4 var(--font-sans); font-variation-settings:normal; color:var(--color-muted); margin-inline:.25em; }
-  .letter-body .page-anchor[data-index]::before { content:'[' attr(data-index) ']'; white-space:nowrap; }
+  .letter-body .page-anchor[data-index]:not([data-index="1"])::before { content:'[' attr(data-index) ']'; white-space:nowrap; }
   .letter-body :is(.hand, .hand-base-start)[data-hand-name]::before { content:'[Hand: ' attr(data-hand-name) ']'; }
 }
 /* Antiqua switches family while inheriting the current hand width and weight.

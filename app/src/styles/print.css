@@ -91,8 +91,8 @@
 
   .letter-body { width:100%; margin:0; }
   .letter-body.edition-text { line-height:1.5; }
-  .letter-body .page-anchor[data-index]::before { font:400 7pt/1.3 var(--font-sans); font-variation-settings:normal; color:#444; margin-inline:.25em; }
-  .letter-body .page-anchor[data-index]::before { content:'[' attr(data-index) ']'; white-space:nowrap; }
+  .letter-body .page-anchor[data-index]:not([data-index="1"])::before { font:400 7pt/1.3 var(--font-sans); font-variation-settings:normal; color:#444; margin-inline:.25em; }
+  .letter-body .page-anchor[data-index]:not([data-index="1"])::before { content:'[' attr(data-index) ']'; white-space:nowrap; }
   .print-hand-table { width:100%; table-layout:fixed; border-collapse:collapse; }
   .print-hand-table > colgroup > .print-text-col { width:var(--print-letter-text-width); }
   .print-hand-table > colgroup > .print-hand-col { width:var(--print-transcription-inset); }

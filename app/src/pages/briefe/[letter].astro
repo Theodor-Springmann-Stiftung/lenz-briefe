@@ -166,16 +166,13 @@ const sectionLinks = [
         })}
       </article>
       <aside class="page-margin" aria-label="Seitenzahlen">
-        {letter.pages.map(
-          (page, i) =>
-            !(i === 0 && page === '1') && (
-              <div class="marginal-item page-number" data-anchor={`page-${page}`} data-priority="0">
-                <a href={`#page-${page}`} aria-label={`Seite ${page}`}>
-                  {page}
-                </a>
-              </div>
-            ),
-        )}
+        {letter.pages.filter((page) => page !== '1').map((page) => (
+          <div class="marginal-item page-number" data-anchor={`page-${page}`} data-priority="0">
+            <a href={`#page-${page}`} aria-label={`Seite ${page}`}>
+              {page}
+            </a>
+          </div>
+        ))}
       </aside>
       <aside class="marginalia" aria-label="Randnotizen und Hände">
         {placed.map((note) => (
