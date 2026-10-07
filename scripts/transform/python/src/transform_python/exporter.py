@@ -448,6 +448,11 @@ def export_edition(out_dir: str) -> dict[str, Any]:
     from .catalog import build_catalog
     catalog = build_catalog(index_entries, refs)
     write_json(absolute_out_dir / "catalog.json", catalog)
+    cmif = runner.run_stylesheet("cmif", serialize_node(meta_doc.getroot()), {
+        "references": serialize_node(references_doc.getroot()), "updated": utc_iso_now(),
+    }, timings)
+    write_text(absolute_out_dir / "CMIF.xml", cmif + "\n")
+
     write_text(absolute_out_dir / "search.json", json.dumps(
         {"version": 1, "blocks": search_records}, ensure_ascii=False, separators=(",", ":")))
     index_entries.sort(key=lambda entry: int(entry["letter"]))

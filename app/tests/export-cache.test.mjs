@@ -16,6 +16,7 @@ async function fixture(t) {
     'status.json': status, 'catalog.json': { people: {}, places: {} },
     'search.json': { blocks: [] }, 'letters/index.json': [],
   })) await writeFile(path.join(outputDirectory, file), JSON.stringify(value));
+  await writeFile(path.join(outputDirectory, 'CMIF.xml'), '<TEI></TEI>');
   return { outputDirectory, status };
 }
 
@@ -39,6 +40,7 @@ test('cache-check CLI works before npm installation, without loading enrichment 
     'status.json': { state: 'success' }, 'catalog.json': {},
     'search.json': {}, 'letters/index.json': [],
   })) await writeFile(path.join(generated, file), JSON.stringify(value));
+  await writeFile(path.join(generated, 'CMIF.xml'), '<TEI></TEI>');
   await run();
   assert.equal(await readFile(githubOutput, 'utf8'), 'usable=false\nusable=true\n');
 });
@@ -71,9 +73,10 @@ test('an exact XML cache hit skips transformation, preserves provenance and rege
   assert.deepEqual(JSON.parse(await readFile(path.join(outputDirectory, 'gnd.json'), 'utf8')), { rebuilt: true });
 });
 
-for (const scenario of ['miss', 'missing', 'corrupt', 'failed']) {
+for (const scenario of ['miss', 'missing', 'missing-cmif', 'corrupt', 'failed']) {
   test(`XML cache ${scenario} reruns transformation before GND enrichment`, async (t) => {
     const { outputDirectory } = await fixture(t);
+    if (scenario === 'missing-cmif') await rm(path.join(outputDirectory, 'CMIF.xml'));
     if (scenario === 'missing') await rm(path.join(outputDirectory, 'search.json'));
     if (scenario === 'corrupt') await writeFile(path.join(outputDirectory, 'catalog.json'), '{broken');
     if (scenario === 'failed') await writeFile(path.join(outputDirectory, 'status.json'), '{"state":"failure"}');

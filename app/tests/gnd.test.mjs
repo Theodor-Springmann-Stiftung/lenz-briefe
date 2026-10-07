@@ -78,7 +78,7 @@ async function fixture(t, catalog = { people: { 1: definition(personId) }, place
 }
 
 test('build enrichment uses source GeoNames instead of GND links and reuses the shared CI cache', async t => {
-  const f = await fixture(t, { people: {}, places: { 7: { ...definition(placeId), geonames: 'https://sws.geonames.org/2973783' } } });
+  const f = await fixture(t, { people: {}, places: { 7: { ...definition(placeId), geonames: 'https://www.geonames.org/2973783' } } });
   const requests = [];
   const fetchImpl = async url => {
     requests.push(url);

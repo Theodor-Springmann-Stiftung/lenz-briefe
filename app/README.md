@@ -607,3 +607,26 @@ apparatus content and semantic flow, including handwriting identity and apparatu
 page anchors through nested multiline cells. An injected unmatched sidenote checks
 that missing targets are reported without discarding content. Letter and apparatus
 documents are validated against their separate schemas.
+
+### CMIF export
+
+The XML export writes `app/generated/CMIF.xml` using `data/xslt/cmif.xsl`.
+Astro publishes it unchanged at `/CMIF.xml`. It uses only `meta.xml` and
+`references.xml`, before GND/GeoNames enrichment; no network access is needed
+for the transformation. Cached XML exports must include CMIF to be reused.
+
+Place identifiers prefer the optional `locationDef/@geonames`, then `@ref`,
+then the public edition's place filter URL. Person identifiers use `@ref`
+or the person filter URL. Local and GND place URLs remain useful links but
+are not substitutes for GeoNames matching in correspSearch.
+
+The stylesheet contains the edition citation, contact, CC BY 4.0 attribution,
+canonical production URL and stable bibliography UUID. It preserves machine
+readable dates and low certainty; missing dates are omitted, missing parties
+are `Unbekannt`. Unresolved references and invalid machine dates fail export.
+
+Validation runs with the Python suite (`python -m unittest discover` from
+`scripts/transform/python` in its virtual environment). Tests use pinned upstream
+CMIF Relax NG and Schematron fixtures, exercise identifier fallbacks, escaping,
+uncertainty and date forms, and check the complete corpus without enrichment.
+Registration with correspSearch is a separate publication step.

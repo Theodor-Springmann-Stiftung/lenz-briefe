@@ -5,7 +5,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 
-from lxml import html
+from lxml import html, etree
 
 from transform_python.common import NSMAP, read_xml
 from transform_python.exporter import run_export, StylesheetRunner
@@ -21,6 +21,31 @@ class CorpusExportTests(unittest.TestCase):
         cls.result = run_export(str(cls.output))
         cls.catalog = json.loads((cls.output / 'catalog.json').read_text())
         cls.source = read_xml('briefe.xml')
+
+    def test_cmif_covers_source_metadata_and_preserves_all_machine_dates(self):
+        from test_cmif import NS as CMIF_NS
+        source = read_xml('meta.xml')
+        result = etree.parse(str(self.output / 'CMIF.xml'))
+        schema = etree.RelaxNG(etree.parse(str(Path(__file__).parent / 'fixtures/cmif/cmi-customization.rng')))
+        self.assertTrue(schema.validate(result), str(schema.error_log))
+        letters = source.findall('.//l:letterDesc', NSMAP)
+        descriptions = result.findall('.//t:correspDesc', CMIF_NS)
+        self.assertEqual([n.get('letter') for n in letters], [n.get('key') for n in descriptions])
+        self.assertEqual(len({n.get('ref') for n in descriptions}), len(descriptions))
+        for letter, description in zip(letters, descriptions):
+            for kind in ('sent', 'received'):
+                original = letter.find(f'l:{kind}', NSMAP)
+                action = description.find(f't:correspAction[@type="{kind}"]', CMIF_NS)
+                self.assertIsNotNone(action)
+                if original is None:
+                    continue
+                self.assertEqual(len(original.findall('l:person', NSMAP)) or 1, len(action.findall('t:persName', CMIF_NS)))
+                self.assertEqual(len(original.findall('l:location', NSMAP)), len(action.findall('t:placeName', CMIF_NS)))
+                attrs = {'when', 'from', 'to', 'notBefore', 'notAfter'}
+                expected = [{k: v for k, v in n.attrib.items() if k in attrs} for n in original.findall('l:date', NSMAP) if attrs.intersection(n.attrib)]
+                actual = [{k: v for k, v in n.attrib.items() if k in attrs} for n in action.findall('t:date', CMIF_NS)]
+                self.assertEqual(expected, actual)
+        self.assertFalse((self.output / 'gnd.json').exists(), 'CMIF is generated before any enrichment')
 
     def test_catalog_matches_current_source_and_has_consistent_groups(self):
         letters = self.catalog['letters']

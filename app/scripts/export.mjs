@@ -33,7 +33,8 @@ async function reusableXmlExport(directory) {
   try {
     const [status] = await Promise.all(['status.json', 'catalog.json', 'search.json', 'letters/index.json']
       .map(async (file) => JSON.parse(await readFile(path.join(directory, file), 'utf8'))));
-    return status?.state === 'success';
+    const cmif = await readFile(path.join(directory, 'CMIF.xml'), 'utf8');
+    return status?.state === 'success' && cmif.includes('</TEI>');
   } catch (error) {
     if (error.code === 'ENOENT' || error instanceof SyntaxError) return false;
     throw error;
