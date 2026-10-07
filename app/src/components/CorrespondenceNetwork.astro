@@ -1,0 +1,22 @@
+---
+import { catalog } from '../lib/edition';
+const network = {
+  hubId: '1', // Jakob Michael Reinhold Lenz in the edition's person register.
+  people: Object.fromEntries(Object.entries(catalog.people).map(([id, person]) => [id, person.name])),
+  letters: catalog.letters.map((letter) => ({
+    id: letter.letter,
+    senders: [...new Set(letter.events.filter((event) => event.type === 'sent').flatMap((event) => event.persons.map((person) => person.ref)))],
+    recipients: [...new Set(letter.events.filter((event) => event.type === 'received').flatMap((event) => event.persons.map((person) => person.ref)))],
+  })),
+};
+---
+
+<svg class="correspondence-network" aria-hidden="true" focusable="false">
+  <g class="correspondence-network-edges" />
+  <g class="correspondence-network-nodes" />
+</svg>
+<script type="application/json" id="correspondence-network-data" set:html={JSON.stringify(network).replace(/</g, '\\u003c')} />
+<script>
+  import { setupCorrespondenceNetwork } from '../scripts/correspondence-network';
+  setupCorrespondenceNetwork();
+</script>
