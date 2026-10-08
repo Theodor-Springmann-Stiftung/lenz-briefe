@@ -640,8 +640,9 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .letter-body :is(.hand, .hand-base-start)[data-hand-name]::before { content:'[Hand: ' attr(data-hand-name) ']'; }
 }
 /* Antiqua switches family while inheriting the current hand width and weight.
+   Enlarge its glyphs slightly while retaining the original inline line height.
    The containing line supplies the leading, even when aq fills a paragraph. */
-.edition-text .aq { @apply font-sans; --edition-family:var(--font-sans); --hand-base-width:var(--hand-base-aq-width); font-stretch:var(--hand-aq-width, var(--hand-base-aq-width)); font-size:1em; line-height:1; }
+.edition-text .aq { @apply font-sans; --edition-family:var(--font-sans); --hand-base-width:var(--hand-base-aq-width); font-stretch:var(--hand-aq-width, var(--hand-base-aq-width)); font-size:1.04em; line-height:calc(1em / 1.04); }
 .edition-text strong .aq { font-weight:700; }
 .edition-text .lb-ornament { display:block; width:5em; max-width:100%; height:1em; margin:.4em auto; background:currentColor; mask:url('../assets/line-tilde.svg') center / contain no-repeat; }
 .edition-text .lb-ornament--double-tilde { width:10.5em; mask-image:url('../assets/line-double-tilde.svg'); }
