@@ -14,12 +14,20 @@
 
 <!ELEMENT document (letterText+)>
 
-<!ELEMENT letterText (#PCDATA | page | line | vspace | align | sidenote | aq | ul | tul | highlight | undo | address | insertion | del | hand | note | tl | dul | fn | pe | anchor | nr | b | it | gr | hb | subst | tabs | er | ink | ru | large)*>
+<!ELEMENT letterText (#PCDATA | page | image | line | vspace | align | sidenote | aq | ul | tul | highlight | undo | address | insertion | del | hand | note | tl | dul | fn | pe | anchor | nr | b | it | gr | hb | subst | tabs | er | ink | ru | large)*>
 <!ATTLIST letterText
     letter CDATA #REQUIRED
 >
 
 <!ELEMENT page EMPTY>
+<!ELEMENT image EMPTY>
+<!ATTLIST image
+    file CDATA #REQUIRED
+    full CDATA #REQUIRED
+    alt CDATA #REQUIRED
+    width CDATA #REQUIRED
+    height CDATA #REQUIRED
+>
 <!ATTLIST page
     index CDATA #REQUIRED
 >

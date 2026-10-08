@@ -33,13 +33,13 @@ if (layout) {
   const bindHandControl = initializeHandControls(layout);
   function lineCenter(anchor: HTMLElement) {
     const containingLine = anchor.closest<HTMLElement>('.lb-line-block');
-    let block = containingLine ?? anchor.querySelector<HTMLElement>('.lb-line-block');
+    let block = containingLine ?? anchor.querySelector<HTMLElement>('.lb-line-block, .letter-image');
     let next: Element | null = anchor;
     while (!block && next && next !== body) {
       if (next.nextElementSibling) {
         next = next.nextElementSibling;
-        block = next.matches('.lb-line-block') ? next as HTMLElement
-          : next.querySelector<HTMLElement>('.lb-line-block');
+        block = next.matches('.lb-line-block, .letter-image') ? next as HTMLElement
+          : next.querySelector<HTMLElement>('.lb-line-block, .letter-image');
       } else next = next.parentElement;
     }
     const bounds = (block ?? anchor).getBoundingClientRect();

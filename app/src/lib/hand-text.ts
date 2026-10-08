@@ -14,7 +14,7 @@ export function* handTextNodeEntries(root: HTMLElement, baseRef: string | undefi
     if (!node.textContent?.trim()) continue;
     const parent = node.parentElement!;
     if (!refs.has(parent)) {
-      refs.set(parent, parent.closest('.note, .sidenote-slot, .inpos-note, .hand-range-background')
+      refs.set(parent, parent.closest('.note, .sidenote-slot, .inpos-note, .hand-range-background, .letter-image')
         ? undefined : parent.closest<HTMLElement>('.hand')?.dataset.ref || baseRef);
     }
     const ref = refs.get(parent);

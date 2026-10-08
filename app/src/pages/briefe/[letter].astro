@@ -5,6 +5,7 @@ import LetterHeader from '../../components/LetterHeader.astro';
 import LetterRouteMap from '../../components/LetterRouteMap.astro';
 import CorrespondenceNavigation from '../../components/CorrespondenceNavigation.astro';
 import Icon from '../../components/Icon.astro';
+import externalLinkIcon from 'remixicon/icons/System/external-link-line.svg?raw';
 import QuickLegend from '../../components/QuickLegend.astro';
 import Sidenote from '../../components/Sidenote.astro';
 import { sidenoteOrder } from '../../lib/margin-placement.mjs';
@@ -56,7 +57,11 @@ const preparedText = prepareHandControls(text, hands, {
   labelStarts: true,
   baseRef: handRefs.length > 1 ? senderRefs.values().next().value : undefined,
 });
-const textParts = preparedText.html.split(
+const textWithImageIcons = preparedText.html.replaceAll(
+  '<span class="letter-image-open-icon" aria-hidden="true"></span>',
+  `<span class="ui-icon" aria-hidden="true">${externalLinkIcon}</span>`,
+);
+const textParts = textWithImageIcons.split(
   /<div class="sidenote-slot" data-sidenote-id="([^"]+)"><\/div>/,
 );
 const renderedNotes = new Set(textParts.filter((_, index) => index % 2 === 1));
@@ -254,6 +259,9 @@ const sectionLinks = [
   </script>
   <script>
     import '../../scripts/text-loss';
+  </script>
+  <script>
+    import '../../scripts/letter-images';
   </script>
   <script>
     import '../../scripts/print-letter';

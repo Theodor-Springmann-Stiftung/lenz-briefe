@@ -1,7 +1,7 @@
 # OPUS: XML-Referenz der Lenz-Briefedition
 
-Stand: 28. September 2026. Diese Referenz beschreibt die Quell-XML-Dateien der
-Lenz-Edition: alle 61 Elementnamen und alle 58 Kombinationen aus Element und
+Stand: 8. Oktober 2026. Diese Referenz beschreibt die Quell-XML-Dateien der
+Lenz-Edition: alle 62 Elementnamen und alle 63 Kombinationen aus Element und
 Attribut der sechs aktuellen XSD-Dateien, einschließlich geerbter Attribute.
 Maßgeblich für zulässige Strukturen sind die XSDs; Hinweise zur Darstellung
 beschreiben die aktuelle Website. Die frühere Hamann-Dokumentation in dieser
@@ -494,6 +494,47 @@ nicht direkt in `letterText`, `app` oder gewöhnlichen Textauszeichnungen erlaub
 </isProofread>
 ```
 
+## Abbildungen im Brieftext
+
+`image` ist ein leeres Element direkt in `letterText`. Es beendet die bisherige
+Zeile und zeigt eine Abbildung als eigenen Block. Eine davor stehende `page`-Marke
+bezeichnet die Quellseite; redaktionelle Hinweise können darüber stehen bleiben.
+
+```xml
+<page index="2"/>
+<image file="367/BJK1050.webp" full="367/BJK1050-full.webp"
+       alt="Sprachenklaviatur, Brief 367, Seite 2" width="3353" height="2365"/>
+```
+
+| Attribut | Pflicht / Bedeutung |
+| --- | --- |
+| `image/@file` | Pflicht; Pfad der Web-Abbildung relativ zu `assets/briefe/`. |
+| `image/@full` | Pflicht; Pfad der Abbildung in voller Auflösung im selben Verzeichnis. |
+| `image/@alt` | Pflicht; nichtleere Beschreibung für die barrierefreie Darstellung. |
+| `image/@width` | Pflicht; positive Ganzzahl, Pixelbreite der Originalabbildung. |
+| `image/@height` | Pflicht; positive Ganzzahl, Pixelhöhe der Originalabbildung. |
+
+Pfade dürfen Buchstaben, Zahlen, Unterstriche, Bindestriche und Unterverzeichnisse
+enthalten; erlaubt sind WebP, PNG, JPG und JPEG. Externe Adressen und `..` sind
+ausgeschlossen. TIFF-Originale bleiben unter `docs/import/briefe/<Briefnummer>/`.
+Browserfassungen liegen unter `assets/briefe/<Briefnummer>/`. `width` und `height`
+reservieren das Seitenverhältnis bereits vor dem Laden.
+Die großen WebP-Fassungen von Brief 367 behalten die Pixelmaße bei und sind
+verlustfrei komprimiert, aber auf 8 Bit je Kanal reduziert. Die unveränderten
+TIFF-Originale mit 16 Bit je Kanal bleiben im Importverzeichnis erhalten.
+
+Die Website zeigt die Abbildung in voller Auflösung vom linken Rand der Textspalte
+bis zum rechten Rand des Randnotizenbereichs. Der linke Seitenzahlenrand bleibt frei.
+Die Abbildung selbst hat keine Klick- oder Zoomfunktion.
+Die Schaltfläche „In voller Auflösung öffnen“ mit Remix-Icon liegt mit Abstand
+über der unteren rechten Bildecke und öffnet die große Fassung in einem separaten
+Tab. Sie wird beim Überfahren der Abbildung oder bei Tastaturfokus sichtbar;
+auf Geräten ohne Hover bleibt sie zur Touch-Bedienung sichtbar. Die Abbildung
+erhält einen dünnen schwarzen Rahmen mit etwas Innenabstand.
+Ohne JavaScript bleibt die Abbildung in der Textspalte; der Link funktioniert weiter.
+Die Bedienelemente gehören nicht zum durchsuchbaren Brieftext. Im Druck bleibt
+die Abbildung in der Textspalte und die Bedienelemente entfallen.
+
 ## Verschachtelung und erlaubte Inhalte
 
 Die XSD-Gruppe `inlineElements` enthält genau diese Elemente (die Bezeichnung
@@ -505,7 +546,7 @@ Die XSD-Gruppe `inlineElements` enthält genau diese Elemente (die Bezeichnung
 
 | Kontext | Direkt erlaubte Inhalte |
 | --- | --- |
-| `letterText` | Text, die gemeinsame Gruppe, `page`, `sidenote`; erste Elementposition muss `page` sein. |
+| `letterText` | Text, die gemeinsame Gruppe, `page`, `sidenote`, `image`; erste Elementposition muss `page` sein. |
 | `hand` | Text, die gemeinsame Gruppe, `page`, `sidenote`. |
 | `tabs` | Text, die gemeinsame Gruppe, `tab`, `page`. |
 | `tab`, `sidenote` und gewöhnliche Textauszeichnungen | Text und die gemeinsame Gruppe. `page`, `sidenote` oder einzelne `tab` sind hier nicht direkt zusätzlich erlaubt. |
@@ -513,7 +554,7 @@ Die XSD-Gruppe `inlineElements` enthält genau diese Elemente (die Bezeichnung
 | `align` | Text und die gemeinsame Gruppe außer direkten `line`, `vspace` und `undo`. Zeilenwechsel gegebenenfalls außerhalb von `align` setzen. |
 | `subst` | Mindestens ein `del`, gefolgt von mindestens einem `insertion`. |
 | `undo` | Mindestens ein `del`, `ul`, `tr`, `sup`, `sub`, `tul` oder `dul`. |
-| `page`, `line`, `vspace` | Leer. |
+| `page`, `line`, `vspace`, `image` | Leer. |
 | `date`, `person`, `location`, `isProofread`, `isDraft` | Text und `wwwlink`; keine allgemeine Brieftextformatierung. |
 
 Die Regeln gelten jeweils für direkte Kinder. Beispielsweise kann eine in einer

@@ -1,5 +1,6 @@
 """Behavioral regressions for reusable letter, sidenote and apparatus fragments."""
 from collections import Counter
+import re
 import unittest
 
 from lxml import etree, html
@@ -10,7 +11,7 @@ from transform_python.exporter import StylesheetRunner, collect_letter_pages
 
 
 PHRASING = {'span', 'strong', 'em', 'mark', 'del', 'sup', 'sub'}
-FLOW = {'div', 'aside', 'section', 'address', 'hr', 'h2', 'h3'}
+FLOW = {'div', 'aside', 'section', 'address', 'hr', 'h2', 'h3', 'figure', 'figcaption'}
 
 
 class FlowContractTests(unittest.TestCase):
@@ -33,8 +34,9 @@ class FlowContractTests(unittest.TestCase):
         # Inspect the serialized tree before an HTML parser can silently repair
         # invalid nesting. These are all tags emitted by the three stylesheets.
         xml_fragment = fragment.replace('<hr class="lb-rule">', '<hr class="lb-rule"/>').replace('<hr class="lb-rule" data-type="long-line">', '<hr class="lb-rule" data-type="long-line"/>')
+        xml_fragment = re.sub(r'<img\b([^>]*?)/?>', r'<img\1/>', xml_fragment)
         tree = etree.fromstring(('<root>' + xml_fragment + '</root>').encode())
-        allowed = PHRASING | FLOW | {'root'}
+        allowed = PHRASING | FLOW | {'root', 'a', 'img'}
         for e in tree.iter():
             self.assertIn(e.tag, allowed)
             if e.tag in PHRASING:
@@ -47,6 +49,27 @@ class FlowContractTests(unittest.TestCase):
         pages = tree.xpath('.//span[@class="page-anchor"][@data-index=$index]', index=index)
         self.assertEqual(len(pages), 1)
         return pages[0]
+
+    def test_images_are_separate_blocks_with_their_own_page_markers(self):
+        tree = self.render('<page index="1"/><line/><note>Keep this note above.</note>'
+            '<page index="2"/><image file="367/one.webp" full="367/one-full.webp"'
+            ' alt="Page two" width="3353" height="2365"/>'
+            '<page index="3"/><image file="367/two.webp" full="367/two-full.webp"'
+            ' alt="Page three" width="3402" height="2367"/>'
+            '<page index="4"/><line/>Following text')
+        figures = tree.xpath('./figure')
+        self.assertEqual(len(figures), 2)
+        for index, figure in enumerate(figures, 2):
+            page = self.page(tree, str(index))
+            self.assertEqual(page.get('data-break'), 'block')
+            self.assertIs(page.getnext(), figure)
+            self.assertEqual(figure.xpath('./img/@alt'), ['Page two' if index == 2 else 'Page three'])
+            self.assertEqual(figure.xpath('./img/@width'), ['3353' if index == 2 else '3402'])
+            self.assertEqual(figure.xpath('./img/@src'), ['/briefe/367/one-full.webp' if index == 2 else '/briefe/367/two-full.webp'])
+            self.assertFalse(figure.xpath('./button | ./a'))
+            self.assertEqual(figure.xpath('./figcaption/a/@target'), ['_blank'])
+        self.assertIn('Keep this note above.', figures[0].getprevious().getprevious().text_content())
+        self.assertIn('Following text', self.lines(tree)[-1].text_content())
 
     def test_line_first_transform_is_one_block_with_line_attributes(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:
@@ -532,7 +555,7 @@ def assert_source_fragments(testcase, runner, read_source):
                         source_text(child) + (child.tail or '') for child in element
                     )
 
-                for heading in tree.xpath('.//h2 | .//h3'):
+                for heading in tree.xpath('.//h2 | .//h3 | .//figcaption'):
                     heading.drop_tree()
                 testcase.assertEqual(
                     Counter(c for c in tree.text_content() if not c.isspace()),

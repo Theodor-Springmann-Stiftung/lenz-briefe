@@ -351,7 +351,7 @@
             <xsl:with-param name="current-content" select="($current-content, node())" />
           </xsl:next-iteration>
         </xsl:when>
-        <xsl:when test="$line-type = ('line', 'vspace', 'inpos', 'tr')">
+        <xsl:when test="$line-type = ('line', 'vspace', 'inpos', 'tr', 'image')">
           <xsl:variable name="flushed" select="lb:flush-state($completed, $current-type, $current-tab, $current-content)" />
           <xsl:next-iteration>
             <xsl:with-param name="completed" select="($flushed?completed, lb:temp-explicit-line($line-type, $line-tab, ($flushed?currentContent, node())))" />
@@ -469,6 +469,9 @@
       </xsl:when>
       <xsl:when test="$node/self::element(lb:page)">
         <xsl:sequence select="lb:temp-line(lb:temp-page(string($node/@index), string(($node/@type, 'inner')[1])))" />
+      </xsl:when>
+      <xsl:when test="$node/self::lb:image">
+        <xsl:sequence select="lb:temp-explicit-line('image', (), $node)" />
       </xsl:when>
       <xsl:when test="$node/self::lb:sidenote[@type='inpos']">
         <xsl:variable name="slot" as="element(t:sidenote-slot)">
@@ -602,8 +605,20 @@
           data-index="{@index}" data-type="{@type}" data-break="{@break}"></span>
   </xsl:template>
 
-  <xsl:template match="t:line[@type=('vspace', 'inpos', 'tr')] | t:row[@type=('vspace', 'inpos')]">
+  <xsl:template match="t:line[@type=('vspace', 'inpos', 'tr', 'image')] | t:row[@type=('vspace', 'inpos')]">
     <xsl:apply-templates />
+  </xsl:template>
+
+  <xsl:template match="lb:image">
+    <figure class="letter-image" data-letter-image="">
+      <img src="/briefe/{@full}" alt="{@alt}" width="{@width}" height="{@height}" loading="lazy" decoding="async" />
+      <figcaption class="screen-only">
+        <a class="letter-image-original" href="/briefe/{@full}" target="_blank" rel="noopener" aria-label="In voller Auflösung in neuem Tab öffnen" title="In voller Auflösung in neuem Tab öffnen">
+          <span class="letter-image-open-icon" aria-hidden="true"></span>
+          <span>In voller Auflösung öffnen</span>
+        </a>
+      </figcaption>
+    </figure>
   </xsl:template>
 
   <xsl:template match="t:sidenote-slot">

@@ -53,6 +53,10 @@ def index_fragment(fragment: str, letter: str, kind: str, prefix: str,
         if not isinstance(node.tag, str):
             return
         classes = set(node.get("class", "").split())
+        # Image controls are interface text, not part of the transcription.
+        if "letter-image" in classes:
+            flush()
+            return
         if "page-anchor" in classes:
             current_page = node.get("data-index")
         elif "sidenote" in classes:

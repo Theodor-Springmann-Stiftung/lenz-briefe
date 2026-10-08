@@ -36,6 +36,11 @@ HTML-Auszeichnungen und CSS-Klassen wie die Edition (`edition-text`, `lb-line-bl
 Die Siegelgalerie liegt in `seiten/components/lkb-siegel.md`, ihre WebP-Abbildungen
 in `assets/siegel/`. Die Originalvorlagen bleiben in `docs/import/`.
 
+Abbildungen im Brieftext verwenden das XML-Element `image` mit Dateiname,
+Vollauflösung, Beschreibung und Pixelmaßen; siehe [XML-Referenz](docs/OPUS.md#abbildungen-im-brieftext).
+Ihre TIFF-Originale liegen unter `docs/import/briefe/<Briefnummer>/`, die
+Web-Fassungen unter `assets/briefe/<Briefnummer>/`.
+
 ## `data/`: Editionsdaten und Verarbeitungsregeln
 
 ### `data/xml/`

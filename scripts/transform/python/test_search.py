@@ -29,6 +29,14 @@ class SearchTests(unittest.TestCase):
         self.assertEqual(records[0]['pages'], [[0, '1'], [15, '2']])
         self.assertEqual(records[1]['pages'], [[0, '2']])
 
+    def test_image_controls_do_not_become_transcribed_search_results(self):
+        records = self.render('<page index="1"/><line/>Before<page index="2"/>'
+                              '<image file="367/photo.webp" full="367/photo-full.webp"'
+                              ' alt="Description" width="3353" height="2365"/>'
+                              '<page index="3"/><line/>After')
+        self.assertEqual([r['text'] for r in records], ['Before', 'After'])
+        self.assertEqual(records[1]['pages'], [[0, '3']])
+
     def test_page_offsets_follow_collapsed_whitespace_and_browser_unicode_offsets(self):
         records = self.render('<page index="1"/><line/>😀 Grüße, \n <page index="2"/>Freund')
         self.assertEqual(records[0]['text'], '😀 Grüße, Freund')

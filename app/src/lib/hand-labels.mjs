@@ -21,7 +21,7 @@ export function prepareHandControls(html, names, { anchors = false, labelStarts 
     const classes = attrs.class?.split(/\s+/) || [];
     // Editorial annotations cannot establish the base writer, but explicit
     // hand tags must always be collected, including inside other markup.
-    ignoreImplicit ||= classes.some((name) => ['note', 'sidenote-slot', 'inpos-note'].includes(name));
+    ignoreImplicit ||= classes.some((name) => ['note', 'sidenote-slot', 'inpos-note', 'letter-image'].includes(name));
     if (baseRef && classes.includes('hand-base-start')) {
       baseIndex++;
       previousRef = baseRef;
