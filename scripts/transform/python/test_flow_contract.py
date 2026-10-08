@@ -71,7 +71,7 @@ class FlowContractTests(unittest.TestCase):
             self.assertEqual(figure.xpath('./a/@target'), ['_blank'])
             self.assertFalse(figure.xpath('./button'))
             self.assertEqual(figure.xpath('./figcaption/a/@target'), ['_blank'])
-            self.assertEqual(figure.xpath('./figcaption/a/@aria-label'), ['In neuem Tab öffnen'])
+            self.assertEqual(figure.xpath('./figcaption/a/@aria-label'), ['In voller Auflösung öffnen'])
         self.assertIn('Keep this note above.', figures[0].getprevious().getprevious().text_content())
         self.assertIn('Following text', self.lines(tree)[-1].text_content())
 
