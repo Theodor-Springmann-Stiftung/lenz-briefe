@@ -42,7 +42,7 @@ export function createExportQueue({ run, success, failure, delay = 200 }) {
 
 export default function watchEdition() {
   const root = fileURLToPath(new URL('../../', import.meta.url));
-  const sources = ['data/xml', 'data/xsd', 'data/xslt'].map((dir) => path.join(root, dir));
+  const sources = ['data/xml', 'data/xsd', 'data/xslt', 'docs/import/briefe/367'].map((dir) => path.join(root, dir));
   const editionModule = path.join(root, 'app/src/lib/edition.ts');
   return {
     name: 'lenz:watch-edition',
@@ -70,7 +70,7 @@ export default function watchEdition() {
           const absolute = path.resolve(file);
           if (
             sources.some((dir) => absolute.startsWith(dir + path.sep)) &&
-            /\.(xml|xsd|xsl|xslt)$/i.test(file)
+            /\.(xml|xsd|xsl|xslt|tif)$/i.test(file)
           )
             queue.schedule();
         };

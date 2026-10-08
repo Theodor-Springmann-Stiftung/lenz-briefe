@@ -522,6 +522,9 @@ reservieren das Seitenverhältnis bereits vor dem Laden.
 Die großen WebP-Fassungen von Brief 367 behalten die Pixelmaße bei und sind
 verlustfrei komprimiert, aber auf 8 Bit je Kanal reduziert. Die unveränderten
 TIFF-Originale mit 16 Bit je Kanal bleiben im Importverzeichnis erhalten.
+Für Brief 367 werden beide WebP-Fassungen bei jedem Export automatisch aus
+`BJK1050.tif` und `BJK1051.tif` neu erzeugt (Vorschau: maximal 1200 Pixel breit).
+Änderungen dieser TIFF-Dateien lösen nach einem Push auf `main` den Website-Build aus.
 
 Die Website zeigt die Abbildung in voller Auflösung vom linken Rand der Textspalte
 bis zum rechten Rand des Randnotizenbereichs. Der linke Seitenzahlenrand bleibt frei.

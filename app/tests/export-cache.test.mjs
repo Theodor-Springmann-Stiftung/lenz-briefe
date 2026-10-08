@@ -59,6 +59,7 @@ test('an exact XML cache hit skips transformation, preserves provenance and rege
   await writeFile(path.join(outputDirectory, 'gnd.json'), '{"old":true}');
   let calls = 0;
   await runExport({ outputDirectory, reuseXml: true,
+    prepareImages: async () => { calls++; },
     transform: () => assert.fail('unchanged XML must not be transformed again'),
     enrich: async ({ output }) => {
       assert.equal(output, outputDirectory);
@@ -68,7 +69,7 @@ test('an exact XML cache hit skips transformation, preserves provenance and rege
     },
     logger: { info() {} },
   });
-  assert.equal(calls, 1);
+  assert.equal(calls, 2);
   assert.deepEqual(JSON.parse(await readFile(path.join(outputDirectory, 'status.json'), 'utf8')), status);
   assert.deepEqual(JSON.parse(await readFile(path.join(outputDirectory, 'gnd.json'), 'utf8')), { rebuilt: true });
 });
@@ -82,10 +83,11 @@ for (const scenario of ['miss', 'missing', 'missing-cmif', 'corrupt', 'failed'])
     if (scenario === 'failed') await writeFile(path.join(outputDirectory, 'status.json'), '{"state":"failure"}');
     const calls = [];
     await runExport({ outputDirectory, reuseXml: scenario !== 'miss',
+      prepareImages: async () => { calls.push('images'); },
       transform: async (options) => { assert.equal(options.outputDirectory, outputDirectory); calls.push('transform'); },
       enrich: async () => { calls.push('enrich'); return { stats }; },
     });
-    assert.deepEqual(calls, ['transform', 'enrich']);
+    assert.deepEqual(calls, ['transform', 'images', 'enrich']);
   });
 }
 

@@ -39,7 +39,10 @@ in `assets/siegel/`. Die Originalvorlagen bleiben in `docs/import/`.
 Abbildungen im Brieftext verwenden das XML-Element `image` mit Dateiname,
 Vollauflösung, Beschreibung und Pixelmaßen; siehe [XML-Referenz](docs/OPUS.md#abbildungen-im-brieftext).
 Ihre TIFF-Originale liegen unter `docs/import/briefe/<Briefnummer>/`, die
-Web-Fassungen unter `assets/briefe/<Briefnummer>/`.
+Web-Fassungen unter `assets/briefe/<Briefnummer>/`. Für Brief 367 erzeugt jeder
+Website-Build die WebP-Fassungen automatisch aus `BJK1050.tif` und `BJK1051.tif`.
+Änderungen dieser Originale werden nach Commit und Push auf `main` automatisch
+veröffentlicht; der lokale Entwicklungsserver übernimmt gespeicherte Änderungen.
 
 ## `data/`: Editionsdaten und Verarbeitungsregeln
 

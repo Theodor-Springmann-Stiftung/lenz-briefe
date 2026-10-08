@@ -13,7 +13,7 @@ test('unpublished documentation skips deployment, including mixed documentation 
 
 test('published content, build inputs and unknown paths still deploy even alongside docs', () => {
   for (const file of ['seiten/kontakt.md', 'seiten/components/legende.html',
-    'assets/logo.svg', 'licenses/README.md', 'LICENSE.md', 'data/xml/briefe.xml',
+    'docs/import/briefe/367/BJK1050.tif', 'assets/logo.svg', 'licenses/README.md', 'LICENSE.md', 'data/xml/briefe.xml',
     'data/xsd/briefe.xsd', 'data/xslt/letter.xsl', 'app/src/styles/global.css',
     'app/package-lock.json', 'scripts/transform/python/src/transform_python/exporter.py',
     '.github/workflows/pages.yml', 'new-build-input']) {

@@ -53,6 +53,7 @@ export async function runExport({
   reuseXml = process.env.XML_EXPORT_CACHE_HIT === 'true',
   transform = runXmlExport,
   enrich,
+  prepareImages,
   logger = console,
 } = {}) {
   signal?.throwIfAborted();
@@ -62,6 +63,8 @@ export async function runExport({
   } else {
     await transform({ signal, outputDirectory });
   }
+  const buildImages = prepareImages ?? (await import('./letter-images.mjs')).buildLetterImages;
+  await buildImages({ signal });
   // The cache check runs before npm ci in CI. Load GND (and its npm
   // dependencies) only when an actual export needs enrichment.
   const enrichOutput = enrich ?? (await import('./gnd.mjs')).enrichGnd;

@@ -54,7 +54,9 @@ npm --prefix app run dev
 While the dev server runs, saving files in `data/xml/`, `data/xsd/`, or `data/xslt/`
 automatically reruns the export and reloads the browser after it succeeds. Saves
 are debounced, and exports run one at a time. Changes made during an export queue
-another run. Export failures appear in the terminal and browser error overlay;
+another run. The TIFF originals in `docs/import/briefe/367/` are also watched;
+every export regenerates letter 367’s preview and full-resolution WebP images,
+even when CI reuses cached XML. Export failures appear in the terminal and browser error overlay;
 fixing and saving the source retries automatically.
 
 For a production build and local preview:
@@ -83,7 +85,8 @@ tests or fixtures also invalidate the export cache so those checks run again.
 Actions also restores Astro's asset cache after installing npm dependencies,
 using compatible dependency/configuration keys, and saves it after a successful
 build. The entire site and offline manifest are regenerated for published changes.
-Changes limited to `docs/` and the unpublished README files at the repository
+Changes limited to `docs/` (except the published originals in
+`docs/import/briefe/367/`) and the unpublished README files at the repository
 root, `app/`, `scripts/transform/python/`, `seiten/` and `seiten/components/`
 skip building and deployment. Workflow checks still appear for those commits.
 Changes to `seiten/` content, `assets/`, `licenses/` (including its README), build

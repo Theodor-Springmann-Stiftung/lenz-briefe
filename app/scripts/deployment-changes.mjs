@@ -8,7 +8,8 @@ const unpublishedReadmes = new Set([
 ]);
 
 export function needsSiteBuild(files) {
-  return files.some((file) => !file.startsWith('docs/') && !unpublishedReadmes.has(file));
+  return files.some((file) => file.startsWith('docs/import/briefe/367/') ||
+    (!file.startsWith('docs/') && !unpublishedReadmes.has(file)));
 }
 
 export function changedFiles(eventName, event, git = execFileSync) {
