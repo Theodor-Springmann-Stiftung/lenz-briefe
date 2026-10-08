@@ -144,7 +144,8 @@ function handLines(root: HTMLElement, textHands: Map<Node, string>): HandLine[] 
   return result.filter(({ anchors }) => anchors.length);
 }
 
-/** Pair each transcription block with its hand labels in a paginatable table.
+/** Pair plain transcription blocks with hand labels in paginatable tables.
+ * Source tab blocks paginate separately, retaining inline hand anchors.
  * The original text blocks retain their alignment, IDs and inline markup. */
 export async function preparePrintHandColumns(root: ParentNode, checkpoint: PrintCheckpoint): Promise<void> {
   const document = root instanceof Document ? root : (root as Node).ownerDocument!;
@@ -158,29 +159,48 @@ export async function preparePrintHandColumns(root: ParentNode, checkpoint: Prin
       textHands.set(node, ref);
       const pause = checkpoint(); if (pause) await pause;
     }
-    const table = document.createElement('table');
-    table.className = 'print-hand-table';
-    table.setAttribute('role', 'presentation');
-    const columns = document.createElement('colgroup');
-    for (const name of ['print-text-col', 'print-hand-col']) {
-      const column = document.createElement('col');
-      column.className = name;
-      columns.append(column);
-    }
-    table.append(columns);
-    const rows = table.createTBody();
+    const fragment = document.createDocumentFragment();
+    let rows: HTMLTableSectionElement | undefined;
+    const startTable = () => {
+      const table = document.createElement('table');
+      table.className = 'print-hand-table';
+      table.setAttribute('role', 'presentation');
+      const columns = document.createElement('colgroup');
+      for (const name of ['print-text-col', 'print-hand-col']) {
+        const column = document.createElement('col');
+        column.className = name;
+        columns.append(column);
+      }
+      table.append(columns);
+      fragment.append(table);
+      rows = table.createTBody();
+    };
     const blocks = [...body.childNodes].filter((block) =>
       block.nodeType !== Node.TEXT_NODE || block.textContent?.trim(),
     );
     const keeps = await sourceLineKeeps(blocks, checkpoint);
     for (const [index, block] of blocks.entries()) {
-      const row = rows.insertRow();
-      if (keeps.has(index)) row.dataset.printKeepNext = 'true';
-      const text = row.insertCell();
-      text.className = 'print-text-cell';
-      text.append(block);
-      const labels = row.insertCell();
-      labels.className = 'print-hand-cell';
+      // A long source table nested in a hand-label cell overflows after its
+      // first page break in Vivliostyle. Keep tab tables outside the hand table;
+      // their inline hand anchors already place names in the shared margin.
+      const tabs = block instanceof HTMLElement && (block.matches('.tabs') || !!block.querySelector('.tabs'));
+      let text: HTMLElement;
+      let labels: HTMLTableCellElement | undefined;
+      if (tabs) {
+        block.classList.add('print-tab-block');
+        fragment.append(block);
+        rows = undefined;
+        text = block;
+      } else {
+        if (!rows) startTable();
+        const row = rows!.insertRow();
+        if (keeps.has(index)) row.dataset.printKeepNext = 'true';
+        text = row.insertCell();
+        text.className = 'print-text-cell';
+        text.append(block);
+        labels = row.insertCell();
+        labels.className = 'print-hand-cell';
+      }
       for (const { anchors: hands, refs } of handLines(text, textHands)) {
         const name = handLabelNames([
           ...[...refs].flatMap((ref) => names.has(ref) ? [names.get(ref)!] : []),
@@ -191,16 +211,16 @@ export async function preparePrintHandColumns(root: ParentNode, checkpoint: Prin
         // A source table can contain many hand changes on different lines in
         // the same cell. Retain those inline anchors instead of stacking all
         // names beside the table's first line.
-        if (hand.closest('.print-tab-table')) {
+        if (tabs || hand.closest('.print-tab-table')) {
           hand.dataset.handName = name;
           continue;
         }
         const label = document.createElement('span');
         label.textContent = name;
-        labels.append(label);
+        labels!.append(label);
       }
       const pause = checkpoint(); if (pause) await pause;
     }
-    body.replaceChildren(table);
+    body.replaceChildren(fragment);
   }
 }
