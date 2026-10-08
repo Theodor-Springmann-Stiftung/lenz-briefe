@@ -184,7 +184,7 @@
   .catalog-search input { @apply w-full min-w-0 bg-transparent text-sm text-ink outline-0; }
   .catalog-search[data-keyboard-focus]:has(input:focus-visible) { outline:2px solid var(--color-accent); outline-offset:5px; }
   .catalog-search-help { @apply text-sm; display:none; grid-template-columns:1.125rem minmax(0,1fr); align-items:start; gap:.5rem; margin:.75rem 0 0; color:var(--color-muted); line-height:1.5; }
-  .catalog-search-group:has(.catalog-search input:focus) > .catalog-search-help { display:grid; }
+  .catalog-search-group:has(.catalog-search input:is(:focus, :not(:placeholder-shown))) > .catalog-search-help { display:grid; }
   .catalog-search-help > .ui-icon { margin-top:.1rem; }
   .catalog-search-help > span { max-width:105ch; hyphens:auto; }
   .search-spinner, .letter-print-status.is-preparing::before { width:1rem; height:1rem; flex-shrink:0; border:2px solid var(--color-rule); border-top-color:var(--color-accent); border-radius:50%; animation:search-spin .8s linear infinite; }
