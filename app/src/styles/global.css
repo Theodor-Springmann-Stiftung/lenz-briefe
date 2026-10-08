@@ -865,9 +865,13 @@ html:has(#ueberlieferung:target) { scroll-behavior:auto; }
 
 /* Dark mode is explicit and screen-only; PDFs retain the light palette. */
 .theme-control { display:inline-flex; align-items:baseline; gap:.5rem; }
-.theme-control label { white-space:nowrap; cursor:pointer; }
-.theme-toggle { width:.75em; height:.75em; margin:0 .3em 0 0; vertical-align:-.075em; accent-color:var(--color-accent); }
+.theme-control label { display:inline-flex; align-items:center; gap:.35em; vertical-align:-.125em; white-space:nowrap; cursor:pointer; }
+.theme-toggle { width:.75em; height:.75em; margin:0; accent-color:var(--color-accent); }
+.theme-control .ui-icon { width:1em; height:1em; }
+.theme-control .theme-icon-day { display:none; }
 @media screen {
+  html[data-dark] .theme-icon-night { display:none; }
+  html[data-dark] .theme-icon-day { display:inline-flex; }
   html[data-dark] {
     color-scheme:dark;
     --color-paper:#202426;

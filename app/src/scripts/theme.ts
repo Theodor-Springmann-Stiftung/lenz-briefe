@@ -3,6 +3,7 @@ if (toggle) {
   const setDark = (dark: boolean) => {
     document.documentElement.toggleAttribute('data-dark', dark);
     toggle.checked = dark;
+    toggle.closest('label')!.title = dark ? 'Hellen Modus aktivieren' : 'Dunkelmodus aktivieren';
   };
   const restore = () => {
     try {

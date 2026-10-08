@@ -97,7 +97,11 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {
           <time datetime={generatedAt.toISOString()}>{generationMonth}</time>
           <span class="theme-control screen-only" hidden>
             <span aria-hidden="true">·</span>
-            <label><input class="theme-toggle" type="checkbox" /> Dunkelmodus</label>
+            <label title="Dunkelmodus aktivieren">
+              <input class="theme-toggle" type="checkbox" aria-label="Dunkelmodus" />
+              <Icon name="moon" class="theme-icon-night" />
+              <Icon name="sun" class="theme-icon-day" />
+            </label>
           </span>
         </p>
         <p class="text-right">
