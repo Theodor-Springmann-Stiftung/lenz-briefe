@@ -611,11 +611,13 @@
 
   <xsl:template match="lb:image">
     <figure class="letter-image" data-letter-image="">
-      <img src="/briefe/{@full}" alt="{@alt}" width="{@width}" height="{@height}" loading="lazy" decoding="async" />
+      <a class="letter-image-link" href="/briefe/{@full}" target="_blank" rel="noopener" aria-label="{@alt} – in neuem Tab öffnen">
+        <img src="/briefe/{@full}" alt="{@alt}" width="{@width}" height="{@height}" loading="lazy" decoding="async" />
+      </a>
       <figcaption class="screen-only">
-        <a class="letter-image-original" href="/briefe/{@full}" target="_blank" rel="noopener" aria-label="In voller Auflösung in neuem Tab öffnen" title="In voller Auflösung in neuem Tab öffnen">
+        <a class="letter-image-original" href="/briefe/{@full}" target="_blank" rel="noopener" aria-label="In neuem Tab öffnen" title="In neuem Tab öffnen">
           <span class="letter-image-open-icon" aria-hidden="true"></span>
-          <span>In voller Auflösung öffnen</span>
+          <span>In neuem Tab öffnen</span>
         </a>
       </figcaption>
     </figure>

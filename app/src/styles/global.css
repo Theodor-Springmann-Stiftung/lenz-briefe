@@ -363,8 +363,9 @@
   .reading-layout { @apply font-serif; position:relative; flex-grow:1; font-size: 1.125rem; }
   .letter-body { width:100%; margin: 1rem auto 0; }
   .letter-image { position:relative; width:var(--letter-image-width, 100%); margin:1rem 0 1.5rem; }
-  .letter-image > img { display:block; width:100%; height:auto; padding:clamp(.5rem, 1.5vw, 1rem); border:1px solid #000; background:var(--color-paper); }
-  .letter-image-original:focus-visible { outline:2px solid var(--color-accent); outline-offset:4px; }
+  .letter-image-link { display:block; }
+  .letter-image-link > img { display:block; width:100%; height:auto; padding:clamp(.5rem, 1.5vw, 1rem); border:1px solid #000; background:var(--color-paper); }
+  .letter-image-link:focus-visible, .letter-image-original:focus-visible { outline:2px solid var(--color-accent); outline-offset:4px; }
   .letter-image figcaption { position:absolute; bottom:1.5rem; right:1.5rem; max-width:calc(100% - 3rem); opacity:0; pointer-events:none; }
   .letter-image:is(:hover, :focus-within) figcaption { opacity:1; pointer-events:auto; }
   .letter-image-original { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; min-height:2.25rem; padding:.5rem .75rem; border:1px solid var(--tone-outline, #000); border-radius:0; background:var(--color-paper); color:var(--color-ink); font:600 .875rem/1.4 var(--font-sans); text-decoration:none; }

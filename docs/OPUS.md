@@ -525,8 +525,8 @@ TIFF-Originale mit 16 Bit je Kanal bleiben im Importverzeichnis erhalten.
 
 Die Website zeigt die Abbildung in voller Auflösung vom linken Rand der Textspalte
 bis zum rechten Rand des Randnotizenbereichs. Der linke Seitenzahlenrand bleibt frei.
-Die Abbildung selbst hat keine Klick- oder Zoomfunktion.
-Die Schaltfläche „In voller Auflösung öffnen“ mit Remix-Icon liegt mit Abstand
+Ein Klick auf die Abbildung öffnet sie direkt in einem neuen Tab; sie hat keine Zoomfunktion.
+Die Schaltfläche „In neuem Tab öffnen“ mit Remix-Icon liegt mit Abstand
 über der unteren rechten Bildecke und öffnet die große Fassung in einem separaten
 Tab. Sie wird beim Überfahren der Abbildung oder bei Tastaturfokus sichtbar;
 auf Geräten ohne Hover bleibt sie zur Touch-Bedienung sichtbar. Die Abbildung
