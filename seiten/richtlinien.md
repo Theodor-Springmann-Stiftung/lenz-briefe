@@ -46,7 +46,7 @@ Die Briefumschläge – bzw. bei gefalteten Kuverts die Außenseite mit Adresse 
 <figcaption>Briefumschlag von <a href="/briefe/223/">Lenz an Weidmanns Erben und Reich, 26. Juli 1776</a>.</figcaption>
 </figure>
 
-Die Manuskripte der Briefe finden sich im Verzeichnis des Lenz Archivs eingehend beschrieben: [Handschriften - Jakob Lenz Archiv](https://lenz-archiv.de/verzeichnisse/handschriften/). Für Forschungsfragen steht die Bibliographie zur Verfügung: <https://lenz-archiv.de/verzeichnisse/forschungsbibliographie/>
+Die Manuskripte der Briefe finden sich im Verzeichnis des Lenz Archivs eingehend beschrieben: [Handschriften - Jakob Lenz Archiv](https://lenz-archiv.de/verzeichnisse/handschriften/). Für Forschungsfragen steht die [die Bibliographie auf der Webseite des Lenz-Archivs](https://lenz-archiv.de/verzeichnisse/forschungsbibliographie/) zur Verfügung.
 
 ## Mitarbeit
 
