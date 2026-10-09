@@ -1437,7 +1437,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line tab="1"/>Dank für Herders Brief und die Nachricht.
 <line tab="1"/>Schreibst Du auf Erfurt, so laß Dir den <ul>Abraham</ul> senden. Nun kommts bald an den II. Teil der Physiognomik.
 <line tab="1"/>Stollberg hat mir die Schweizerlieder vollenden geholfen. Nun noch geistliche Lieder. – Dann noch eine kleine Reise auf Marschlins. Dann – verschlossen in die Physiognomik. Inzwischen –
-<line /><align pos="center"><note>Die Hieroglyphen sind im Folgenden aufgelöst, vgl. Haustein, Jens: Jacob Michael Reinhold Lenz als Briefschreiber. In: Inge Stephan und Hans-Gerd Winter (Hrsg.), Zwischen Kunst und Wissenschaft. Jakob Michael Reinhold Lenz. Bern, Berlin u. a. 2006, S. 337–352, hier S. 349:</note></align>
+<line /><align pos="center"><note>Die Hieroglyphen sind im Folgenden aufgelöst, vgl. Jens Haustein: Jacob Michael Reinhold Lenz als Briefschreiber. In: Inge Stephan und Hans-Gerd Winter (Hrsg.), Zwischen Kunst und Wissenschaft. Jakob Michael Reinhold Lenz. Bern, Berlin u. a. 2006, S. 337–352, hier S. 349:</note></align>
 <line />Plan zu grossen allgegenwärtigen Würkungen.
 <line />Lindau hab’ ich angeworben.
 <line />Stolbergs werd ich anwerben.
@@ -3006,7 +3006,7 @@ Und doch muß ich meinen Entschluß vor Ihnen verbergen. –
 <line /><tab value="3-8">Das Artillerie <aq>Corps</aq> nicht mitgerechnet.</tab> <tab value="7-8"><fn index="5"><anchor><sup>#</sup></anchor></fn><!-- Handelt es sich hier um ein Verweiszeichen? -->5796.</tab>
 <line /><tab value="7-8"><aq>5796 Verte</aq></tab></tabs>
 <vspace lines="1"/>
-<line /><align pos="center"><note>am linken Rand der ersten Seite vertikal Kalkulationen von Lenz’ Hand</note></align><!-- Die Berechnungen von Lenz sind hier nicht abgebildet -->
+<line /><align pos="center"><note>am Rand der ersten Seite, um 90 Grad gegen den Uhrzeigersinn gedreht, Kalkulationen von Lenz’ Hand</note></align><!-- Die Berechnungen von Lenz sind hier nicht abgebildet -->
 <vspace lines="1"/>
 <page index="2"/>
 <line tab="1"/>Zu Flies werd ich nächstens gehen. Worinn besteht das Schletweinische Ursystem? ists theologisch? – hier wird nichts neues von der Art eingeführt, den Theologen hier ist die Ruhe lieb und zu dem verstehn sie das alte System noch lange nicht genug, ich denke sie würdens alsdann noch eifriger bey behalten wann sies nach seiner ganzen Spinnigkeit kennten. – ists politisch? bestehts in neuen Exercitien? so kann ich Dir sagen, daß die Sache nicht intereßant seyn kann, denn es wird bald wieder ein Ende haben, sobald eines erlernt ist kommt immer wieder ein neues auf. – ist’s ökonomisch? bestehts in der Vertheilung der Almenplätze und in der Bearbeitung derselben zum Ackerbau, so kann ich Dir sagen, daß man hier fast alletage fortfährt dieselben zu versteigern. Unser Magistrat hatte bey jedem Viertel Frucht das in die Stadt kam ein gewisses Stück Geld abzufordern das jährlich ein Einkommen von 40–50000. Gulden ausmachte und da nun dies auf Königsbefehl wegfällt, so suchen sie sich durch Versteigerung der almen Plätze Ersatz. Wie sich alles das bey der Veränderung des Herrn <aq>Turgot</aq> entwickeln werde? – mag Zeit lehren.
@@ -3020,7 +3020,7 @@ davon eine Compagnie aus Grenadirs besteht. Die 4 andern aus Gemeinen. Das zweit
 <line tab="1"/>Die Iris wie Du itzt wißen must hat Hr Spener zu Berlin in Verlag genommen und sein <aq>Commissionair</aq> in Strasburg ist <aq>Bauer &amp; Treitel.</aq> Kann also nichts mit machen, nicht Dir zeigen daß Du nicht schreiben sollst <ul>„was du draus hebst nimmst du zu erst für dich, denn </ul> <aq>etc.</aq>“ Lenz laß mich machen so lang ich machen kann
 <line />
 <vspace lines="1"/>
-<line /><align pos="center"><note>am linken Rand der zweiten Seite vertikal Kalkulationen von Lenz’ Hand</note></align>
+<line /><align pos="center"><note>am linken Rand der zweiten Seite, um 90 Grad gegen den Uhrzeigersinn gedreht, Kalkulationen von Lenz’ Hand</note></align>
 <vspace lines="1" presentational="true"/>
 <!-- Die Berechnungen von Lenz sind hier nicht abgebildet -->
 <page index="3"/>
@@ -6814,12 +6814,7 @@ Hier schik ich ihnen etwas Aepfel Herr Lenz aus unserm Garten. sie sind eben nic
 <line />у Господина Бибера
 <line />да реманъ</ru></address>
 <vspace lines="1" presentational="true"/>
-<line /><align pos="center"><note>Sprachenklaviatur, hier nicht transkribiert</note></align>
-<vspace lines="1" presentational="true"/>
-<page index="2"/>
-<image file="367/BJK1050.webp" full="367/BJK1050-full.webp" alt="Sprachenklaviatur, Brief 367, Seite 2" width="3353" height="2365"/>
-<page index="3"/>
-<image file="367/BJK1051.webp" full="367/BJK1051-full.webp" alt="Sprachenklaviatur, Brief 367, Seite 3" width="3402" height="2367"/>
+<line /><align pos="center"><note>auf den Seiten 2 und 3 befindet sich eine Sprachenklaviatur, vgl. die Abb. in: Moskauer Schriften, Band 1, S. 527f.</note></align>
 <vspace lines="1" presentational="true"/>
 <page index="4"/>
 <line /><align pos="center">Auf das <insertion pos="top">kleine</insertion> Kraut Reinefarth an die Rosengesellschaft</align>
