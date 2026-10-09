@@ -2,6 +2,7 @@
 import PageComponent from './PageComponent.astro';
 import { componentPattern } from '../../scripts/page-components.mjs';
 import sidenoteSource from '../assets/SidenotePos.svg?raw';
+import externalLinkIcon from 'remixicon/icons/System/external-link-line.svg?raw';
 import { expandSidenotePositions } from '../lib/sidenote-position.mjs';
 
 interface Props {
@@ -10,7 +11,10 @@ interface Props {
   stack?: string[];
 }
 const { prose = true, stack = [] } = Astro.props;
-const html = expandSidenotePositions(await Astro.slots.render('default'), sidenoteSource);
+const html = expandSidenotePositions(await Astro.slots.render('default'), sidenoteSource).replaceAll(
+  '<span class="letter-image-open-icon" aria-hidden="true"></span>',
+  `<span class="ui-icon" aria-hidden="true">${externalLinkIcon}</span>`,
+);
 const parts = html.split(componentPattern);
 ---
 
