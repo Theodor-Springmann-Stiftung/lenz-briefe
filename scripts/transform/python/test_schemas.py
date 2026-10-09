@@ -6,14 +6,16 @@ from transform_python.common import XSD_DIR, XSD_MAP
 
 
 class SeparateDocumentSchemaTests(unittest.TestCase):
-    def test_letter_images_require_local_files_descriptions_and_dimensions(self):
+    def test_letter_images_require_local_files_and_descriptions_without_dimensions(self):
         schema = etree.XMLSchema(etree.parse(str(XSD_DIR / 'briefe.xsd')))
-        image = '<image file="367/BJK1050.webp" full="367/BJK1050-full.webp" alt="Page two" width="3353" height="2365"/>'
+        image = '<image file="367/BJK1050.webp" full="367/BJK1050-full.webp" alt="Page two"/>'
         for body, valid in [(image, True),
+                            (f'<tr rot="90">{image}</tr>', True),
                             (image.replace('file="367/BJK1050.webp"', 'file="../secret.webp"'), False),
                             (image.replace('file="367/BJK1050.webp"', 'file="https://example.org/photo.webp"'), False),
                             (image.replace(' alt="Page two"', ''), False),
-                            (image.replace(' width="3353"', ' width="0"'), False),
+                            (image.replace('/>', ' width="3353"/>'), False),
+                            (image.replace('/>', ' height="2365"/>'), False),
                             (f'<ul>{image}</ul>', False)]:
             with self.subTest(body=body):
                 doc = etree.fromstring('<opus xmlns="https://lenz-archiv.de"><document>'

@@ -11,6 +11,9 @@
 - Übersetzung und "Zusatzmaterial" in Serifen
 - Design/Hintergrund
 - Sätze zum Druck und zur Suchfunktion
+Die Druckfuntion erlaubt das Drucken und den PDF-Export von einzelnen oder Gruppen von Briefen. Im Druck werden seitenummern in den hauptext in eckigen Klammern angezeigt: [4]. Zum PDF-Export bitte im Druckdialog die Funktion "als PDF speichern" des jeweiligen Browsers auswählen. Chrome und Chromium-basierte Browser unterstüzen den vollen Funktionsumfang des Drucks. Das Layout der Seiten findet im Browser statt und kann, je nach Umfang des Druckauftrags einen langen Moment dauern.Die Volltextsuche kann Brieftexte, Randnotizen, Meta- und Überlieferungsdaten über Seitengrenzen hinweg durchsuchen. Angezeigt werden dabei exakte Übereinstimmungen mit dem Suchbegriff. Von dieser Regel ausgenommen sind Abweichungen in der Groß- und Kleinschreibung, außerdem werden Zeichenketten auch über Wortgrenzen hinaus gefunden.
+
+ 
 
 ## ME (WÜRDE ANDERS)
 - 266: verte

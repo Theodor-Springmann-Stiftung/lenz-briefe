@@ -53,9 +53,9 @@ class FlowContractTests(unittest.TestCase):
     def test_images_are_separate_blocks_with_their_own_page_markers(self):
         tree = self.render('<page index="1"/><line/><note>Keep this note above.</note>'
             '<page index="2"/><image file="367/one.webp" full="367/one-full.webp"'
-            ' alt="Page two" width="3353" height="2365"/>'
+            ' alt="Page two"/>'
             '<page index="3"/><image file="367/two.webp" full="367/two-full.webp"'
-            ' alt="Page three" width="3402" height="2367"/>'
+            ' alt="Page three"/>'
             '<page index="4"/><line/>Following text')
         figures = tree.xpath('./figure')
         self.assertEqual(len(figures), 2)
@@ -64,7 +64,7 @@ class FlowContractTests(unittest.TestCase):
             self.assertEqual(page.get('data-break'), 'block')
             self.assertIs(page.getnext(), figure)
             self.assertEqual(figure.xpath('./a/img/@alt'), ['Page two' if index == 2 else 'Page three'])
-            self.assertEqual(figure.xpath('./a/img/@width'), ['3353' if index == 2 else '3402'])
+            self.assertFalse(figure.xpath('./a/img/@width | ./a/img/@height'))
             image_url = '/briefe/367/one-full.webp' if index == 2 else '/briefe/367/two-full.webp'
             self.assertEqual(figure.xpath('./a/img/@src'), [image_url])
             self.assertEqual(figure.xpath('./a/@href'), [image_url])
@@ -74,6 +74,21 @@ class FlowContractTests(unittest.TestCase):
             self.assertEqual(figure.xpath('./figcaption/a/@aria-label'), ['In voller Auflösung öffnen'])
         self.assertIn('Keep this note above.', figures[0].getprevious().getprevious().text_content())
         self.assertIn('Following text', self.lines(tree)[-1].text_content())
+
+    def test_image_transform_is_a_block_with_a_single_margin_rotation_label(self):
+        for whitespace in ['', ' \n  ']:
+            with self.subTest(whitespace=whitespace):
+                tree = self.render('<page index="1"/><line/>Before<page index="2"/>'
+                    f'<tr rot="90">{whitespace}<image file="367/one.webp" full="367/one-full.webp" alt="Page two"/>'
+                    '</tr><page index="3"/><line/>After')
+                block = tree.xpath('./div[@class="tr"]')[0]
+                self.assertIs(self.page(tree), block.getprevious())
+                self.assertEqual(self.page(tree).get('data-break'), 'block')
+                self.assertEqual(block.get('data-rot'), '90')
+                self.assertEqual(len(block.xpath('./span[@class="tr-label"]')), 1)
+                self.assertEqual(len(block.xpath('./figure')), 1)
+                self.assertFalse(tree.xpath('.//span[@class="tr"] | .//figure/ancestor::*[@class="lb-line-block"]'))
+                self.assertEqual([line.text_content() for line in self.lines(tree)], ['Before', 'After'])
 
     def test_line_first_transform_is_one_block_with_line_attributes(self):
         for kind in ['letter-text', 'sidenotes', 'traditions']:

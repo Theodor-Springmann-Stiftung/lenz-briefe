@@ -88,20 +88,4 @@
         </xs:unique>
     </xs:element>
 
-    <!-- Images are independent blocks in the main letter text. Paths are
-         relative to assets/briefe/, never external URLs or parent paths. -->
-    <xs:simpleType name="LetterImageFile">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*\.(webp|png|jpg|jpeg)" />
-        </xs:restriction>
-    </xs:simpleType>
-    <xs:element name="image">
-        <xs:complexType>
-            <xs:attribute name="file" type="LetterImageFile" use="required" />
-            <xs:attribute name="full" type="LetterImageFile" use="required" />
-            <xs:attribute name="alt" type="NonEmptyString" use="required" />
-            <xs:attribute name="width" type="xs:positiveInteger" use="required" />
-            <xs:attribute name="height" type="xs:positiveInteger" use="required" />
-        </xs:complexType>
-    </xs:element>
 </xs:schema>

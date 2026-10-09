@@ -496,14 +496,16 @@ nicht direkt in `letterText`, `app` oder gewöhnlichen Textauszeichnungen erlaub
 
 ## Abbildungen im Brieftext
 
-`image` ist ein leeres Element direkt in `letterText`. Es beendet die bisherige
-Zeile und zeigt eine Abbildung als eigenen Block. Eine davor stehende `page`-Marke
+`image` ist ein leeres Element direkt in `letterText` oder innerhalb von `tr`.
+Es beendet die bisherige Zeile und zeigt eine Abbildung als eigenen Block. Eine davor stehende `page`-Marke
 bezeichnet die Quellseite; redaktionelle Hinweise können darüber stehen bleiben.
+Ein `tr` mit einer Abbildung wird als Block dargestellt; seine Rotationsangabe
+erscheint im Seitenrand. Die Abbildung selbst bleibt unverändert ausgerichtet.
 
 ```xml
 <page index="2"/>
 <image file="367/BJK1050.webp" full="367/BJK1050-full.webp"
-       alt="Sprachenklaviatur, Brief 367, Seite 2" width="3353" height="2365"/>
+       alt="Sprachenklaviatur, Brief 367, Seite 2"/>
 ```
 
 | Attribut | Pflicht / Bedeutung |
@@ -511,14 +513,12 @@ bezeichnet die Quellseite; redaktionelle Hinweise können darüber stehen bleibe
 | `image/@file` | Pflicht; Pfad der Web-Abbildung relativ zu `assets/briefe/`. |
 | `image/@full` | Pflicht; Pfad der Abbildung in voller Auflösung im selben Verzeichnis. |
 | `image/@alt` | Pflicht; nichtleere Beschreibung für die barrierefreie Darstellung. |
-| `image/@width` | Pflicht; positive Ganzzahl, Pixelbreite der Originalabbildung. |
-| `image/@height` | Pflicht; positive Ganzzahl, Pixelhöhe der Originalabbildung. |
 
 Pfade dürfen Buchstaben, Zahlen, Unterstriche, Bindestriche und Unterverzeichnisse
 enthalten; erlaubt sind WebP, PNG, JPG und JPEG. Externe Adressen und `..` sind
 ausgeschlossen. TIFF-Originale bleiben unter `docs/import/briefe/<Briefnummer>/`.
-Browserfassungen liegen unter `assets/briefe/<Briefnummer>/`. `width` und `height`
-reservieren das Seitenverhältnis bereits vor dem Laden.
+Browserfassungen liegen unter `assets/briefe/<Briefnummer>/`. Die Website bestimmt
+die dargestellte Breite; der Browser übernimmt das Seitenverhältnis aus der Bilddatei.
 Die großen WebP-Fassungen von Brief 367 behalten die Pixelmaße bei und sind
 verlustfrei komprimiert, aber auf 8 Bit je Kanal reduziert. Die unveränderten
 TIFF-Originale mit 16 Bit je Kanal bleiben im Importverzeichnis erhalten.

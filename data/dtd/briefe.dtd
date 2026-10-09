@@ -2,8 +2,8 @@
      The XSD remains authoritative. See README.md for conversion limitations.
      This DTD targets the existing unprefixed elements with a default namespace. -->
 
-<!ENTITY % inline "line | vspace | align | aq | ul | tul | highlight | undo | address | insertion | del | hand | note | tl | dul | fn | pe | anchor | nr | b | it | gr | hb | subst | tabs | er | ink | large | ru">
-<!ENTITY % inlineNoLine "align | aq | ul | tul | highlight | address | insertion | del | hand | note | tl | dul | fn | pe | anchor | nr | b | it | gr | hb | subst | tabs | er | ink | large | ru">
+<!ENTITY % inline "line | vspace | align | aq | ul | tr | tul | highlight | undo | address | insertion | del | hand | note | tl | dul | fn | pe | anchor | nr | b | it | gr | hb | subst | tabs | er | ink | large | ru">
+<!ENTITY % inlineNoLine "align | aq | ul | tr | tul | highlight | address | insertion | del | hand | note | tl | dul | fn | pe | anchor | nr | b | it | gr | hb | subst | tabs | er | ink | large | ru">
 
 <!ELEMENT opus (document)>
 <!ATTLIST opus
@@ -14,7 +14,7 @@
 
 <!ELEMENT document (letterText+)>
 
-<!ELEMENT letterText (#PCDATA | page | image | line | vspace | align | sidenote | aq | ul | tul | highlight | undo | address | insertion | del | hand | note | tl | dul | fn | pe | anchor | nr | b | it | gr | hb | subst | tabs | er | ink | ru | large)*>
+<!ELEMENT letterText (#PCDATA | page | image | line | vspace | align | sidenote | aq | ul | tr | tul | highlight | undo | address | insertion | del | hand | note | tl | dul | fn | pe | anchor | nr | b | it | gr | hb | subst | tabs | er | ink | ru | large)*>
 <!ATTLIST letterText
     letter CDATA #REQUIRED
 >
@@ -25,8 +25,6 @@
     file CDATA #REQUIRED
     full CDATA #REQUIRED
     alt CDATA #REQUIRED
-    width CDATA #REQUIRED
-    height CDATA #REQUIRED
 >
 <!ATTLIST page
     index CDATA #REQUIRED
@@ -35,6 +33,11 @@
 <!ELEMENT align (#PCDATA | %inlineNoLine;)*>
 <!ATTLIST align
     pos (left | center | right) #REQUIRED
+>
+
+<!ELEMENT tr (#PCDATA | image | %inline;)*>
+<!ATTLIST tr
+    rot CDATA #REQUIRED
 >
 
 <!ELEMENT vspace EMPTY>

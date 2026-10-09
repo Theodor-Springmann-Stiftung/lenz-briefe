@@ -482,9 +482,9 @@
       <xsl:when test="$node/self::element(lb:sidenote) or $node/self::comment() or $node/self::processing-instruction()">
         <xsl:sequence select="()" />
       </xsl:when>
-      <!-- A leading line makes the entire transform an independent block.
+      <!-- A leading line or an image makes the transform an independent block.
            Classify before line normalization removes the original milestone. -->
-      <xsl:when test="$node/self::lb:tr and $node/node()[self::* or self::text()[normalize-space()]][1]/self::lb:line">
+      <xsl:when test="$node/self::lb:tr and ($node/lb:image or $node/node()[self::* or self::text()[normalize-space()]][1]/self::lb:line)">
         <xsl:variable name="block" as="element(t:tr)">
           <t:tr rot="{$node/@rot}">
             <xsl:sequence select="lb:normalize-lines($node/node()[not(self::text()[not(normalize-space()) and not(preceding-sibling::*)])])" />
@@ -612,7 +612,7 @@
   <xsl:template match="lb:image">
     <figure class="letter-image" data-letter-image="">
       <a class="letter-image-link" href="/briefe/{@full}" target="_blank" rel="noopener" aria-label="{@alt} – in voller Auflösung öffnen">
-        <img src="/briefe/{@full}" alt="{@alt}" width="{@width}" height="{@height}" loading="lazy" decoding="async" />
+        <img src="/briefe/{@full}" alt="{@alt}" loading="lazy" decoding="async" />
       </a>
       <figcaption class="screen-only">
         <a class="letter-image-original" href="/briefe/{@full}" target="_blank" rel="noopener" aria-label="In voller Auflösung öffnen" title="In voller Auflösung öffnen">
