@@ -4,6 +4,7 @@ import { componentPattern } from '../../scripts/page-components.mjs';
 import sidenoteSource from '../assets/SidenotePos.svg?raw';
 import externalLinkIcon from 'remixicon/icons/System/external-link-line.svg?raw';
 import { expandSidenotePositions } from '../lib/sidenote-position.mjs';
+import { markLandscapeEditorialImages } from '../lib/editorial-images.mjs';
 
 interface Props {
   legacyLegend?: boolean;
@@ -11,7 +12,7 @@ interface Props {
   stack?: string[];
 }
 const { prose = true, stack = [] } = Astro.props;
-const html = expandSidenotePositions(await Astro.slots.render('default'), sidenoteSource).replaceAll(
+const html = markLandscapeEditorialImages(expandSidenotePositions(await Astro.slots.render('default'), sidenoteSource)).replaceAll(
   '<span class="letter-image-open-icon" aria-hidden="true"></span>',
   `<span class="ui-icon" aria-hidden="true">${externalLinkIcon}</span>`,
 );

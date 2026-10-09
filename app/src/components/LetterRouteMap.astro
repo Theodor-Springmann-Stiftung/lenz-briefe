@@ -100,5 +100,6 @@ const label = available ? `${sources.map(p => p.name).join(", ")} → ${targets.
   .map-zoom:focus-visible { outline:2px solid #9a4510; outline-offset:-3px; }
   svg[data-hidden] { display:none; }
   svg { display:block; width:100%; flex:1; min-height:140px; }
+  @media (width < 1100px) { .letter-route-map { display:none; } }
   @media print { .letter-route-map { display:none; } }
 </style>
