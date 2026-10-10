@@ -5,4 +5,8 @@ import PageRedirect from '../components/PageRedirect.astro';
 const page = await getEntry('pages', 'datenschutz');
 ---
 
-<PageRedirect href={pageUrl('datenschutz')} title={page?.data.menu ?? 'Impressum & Datenschutz'} />
+<PageRedirect
+  href={pageUrl('datenschutz')}
+  title={page?.data.menu ?? 'Impressum & Datenschutz'}
+  description={page?.data.description ?? 'Impressum und Datenschutzerklärung zur kritischen Lenz-Briefausgabe, einem Projekt der Theodor Springmann Stiftung.'}
+/>

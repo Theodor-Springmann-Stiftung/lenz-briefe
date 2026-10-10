@@ -94,9 +94,15 @@ configuration and unknown paths still build. Manual workflow runs always build.
 
 ### Page titles and external links
 
-Page titles have no edition prefix: the catalogue uses the edition description,
-letters use sender, recipient and the editorial human-readable date, and static
-pages use their menu label. External HTTP(S) links open in a new tab or window.
+All page titles start with `LKB – `. The catalogue uses `Verzeichnis & Suche`,
+letters use sender, recipient and the editorial human-readable date (multiple
+people are joined with `und`), and static pages use their menu label. Every page
+requires a description; letters describe their own correspondence and date.
+The same title and description are used in Open Graph metadata. Redirects retain
+the target page's metadata and canonical URL. `src/pages/404.astro` generates the
+custom `404.html`, with a link back to the catalogue and search.
+The development site's existing indexing restrictions remain in place.
+External HTTP(S) links open in a new tab or window.
 The HTML middleware applies this during rendering, including links in Markdown,
 letter content and card templates; internal links keep their normal behavior.
 
@@ -397,7 +403,7 @@ collection. Each top-level `.md` file supplies an Edition menu entry and a page
 at `/edition/<filename>/`; `README.md` and `_*.md` are excluded. Required
 frontmatter is `menu`, `title`, and `description`. Optional `order` controls menu
 order. The quick legend links to the first page containing a legend, and `/edition/` redirects to the first menu
-entry. `title` sets the browser title only; visible headings are authored in the
+entry. `menu` sets the browser title after the `LKB – ` prefix; visible headings are authored in the
 Markdown (for example, `# Heading`). The template does not insert an H1.
 The collection schema checks frontmatter during development and builds.
 Set `inMenu: false` to keep a page out of the Edition menu, such as

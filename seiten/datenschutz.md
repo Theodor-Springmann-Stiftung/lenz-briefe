@@ -1,7 +1,7 @@
 ---
 menu: Impressum & Datenschutz
 title: Impressum & Datenschutz
-description: Impressum und Datenschutzerklärung der Theodor Springmann Stiftung.
+description: Impressum und Datenschutzerklärung zur kritischen Lenz-Briefausgabe, einem Projekt der Theodor Springmann Stiftung.
 order: 100
 inMenu: false
 ---

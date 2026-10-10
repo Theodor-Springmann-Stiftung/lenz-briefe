@@ -11,16 +11,18 @@ import BackToTop from '../components/BackToTop.astro';
 import PrintEditionLink from '../components/PrintEditionLink.astro';
 import { revision } from '../lib/revision';
 import { pageUrl } from '../lib/pages';
+import { pageTitle } from '../lib/page-titles.mjs';
 interface Props {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   wide?: boolean;
 }
 const {
-  title = 'Kritische Briefausgabe von Jakob Michael Reinhold Lenz',
-  description = 'Die Briefe von und an Jacob Michael Reinhold Lenz. Digitale Edition.',
+  title,
+  description,
   wide = false,
 } = Astro.props;
+const documentTitle = pageTitle(title);
 const generatedAt = new Date();
 const generationMonth = new Intl.DateTimeFormat('de-DE', {
   month: 'long',
@@ -45,10 +47,15 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta property="og:title" content={documentTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="LKB – Kritische Briefausgabe von Jakob Michael Reinhold Lenz" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="googlebot" content="noindex, nofollow" />
     <meta name="theme-color" content="#fcfcfb" />
-    <title>{title}</title>
+    <title>{documentTitle}</title>
     <link rel="icon" href={`${base}favicon.png`} type="image/png" />
     <link rel="manifest" href={`${base}manifest.webmanifest`} />
     <link rel="apple-touch-icon" href={`${base}icons/apple-touch-icon.png`} sizes="180x180" />

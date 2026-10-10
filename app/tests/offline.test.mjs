@@ -198,6 +198,23 @@ test('offline edition includes unvisited pages and assets; page query parameters
   ]) assert.equal(await (await runtime.respond(new Request(`https://edition.test${url}`))).text(), text);
 });
 
+test('uncached offline navigation has edition metadata and a deployment-prefixed return link', async () => {
+  const env = environment({ '/edition/': 'Index' }, { base: '/edition/' });
+  const runtime = env.restart();
+  await runtime.enable();
+  await runtime.synchronize(true);
+  env.disconnect();
+  const response = await runtime.respond({ url: 'https://edition.test/edition/missing/', mode: 'navigate' });
+  assert.equal(response.status, 503);
+  assert.match(response.headers.get('content-type'), /text\/html/);
+  const body = await response.text();
+  assert.match(body, /<title>LKB – Offline<\/title>/);
+  assert.match(body, /<meta name="description" content="Diese Seite der kritischen Lenz-Briefausgabe/);
+  assert.match(body, /<meta name="robots" content="noindex">/);
+  assert.match(body, /<p>Diese Seite ist offline nicht verfügbar\.<\/p>/);
+  assert.match(body, /href="\/edition\/"/);
+});
+
 test('built pages identify their edition while manifest hashes verify the stamped bytes', async () => {
   const directory = await mkdtemp(path.join(tmpdir(), 'lenz-offline-version-'));
   try {

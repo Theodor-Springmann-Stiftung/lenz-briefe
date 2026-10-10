@@ -5,4 +5,8 @@ import PageRedirect from '../components/PageRedirect.astro';
 const firstPage = (await editionPages()).find((page) => page.data.inMenu);
 ---
 
-<PageRedirect href={firstPage ? pageUrl(firstPage.id) : base} title={firstPage?.data.menu ?? 'Briefverzeichnis'} />
+<PageRedirect
+  href={firstPage ? pageUrl(firstPage.id) : base}
+  title={firstPage?.data.menu ?? 'Verzeichnis & Suche'}
+  description={firstPage?.data.description ?? 'Die kritische Briefausgabe von Jakob Michael Reinhold Lenz: Briefverzeichnis, Volltextsuche und Hinweise zur Edition.'}
+/>

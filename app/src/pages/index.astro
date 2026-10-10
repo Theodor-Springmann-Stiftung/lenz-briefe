@@ -20,7 +20,10 @@ const records = catalog.letters.map((l) => ({
 const firstGroup = catalog.groups[0];
 ---
 
-<Layout>
+<Layout
+  title="Verzeichnis & Suche"
+  description={`Alle ${catalog.letters.length} Briefe von und an Jakob Michael Reinhold Lenz: kritische Briefausgabe mit Volltextsuche, Filtern nach Personen und Orten und Überlieferungsnachweisen.`}
+>
   <section class="index-intro">
     <h1>Briefverzeichnis</h1>
     <div class="active-filters" hidden>

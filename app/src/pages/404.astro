@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import { base } from '../lib/edition';
+---
+
+<Layout
+  title="Seite nicht gefunden"
+  description="Die angeforderte Seite der kritischen Lenz-Briefausgabe wurde nicht gefunden. Im Briefverzeichnis können Sie nach Briefen, Personen und Orten suchen."
+>
+  <section class="not-found-page" aria-labelledby="not-found-title">
+    <p class="not-found-code" aria-hidden="true">404</p>
+    <h1 id="not-found-title">Seite nicht gefunden</h1>
+    <p>
+      Die angeforderte Seite wurde nicht gefunden. Im Briefverzeichnis können Sie
+      nach Briefen, Personen und Orten suchen.
+    </p>
+    <a class="all-letters-link" href={base}>
+      <Icon name="search" />
+      Verzeichnis &amp; Suche
+    </a>
+  </section>
+</Layout>
+
+<style>
+  .not-found-page { max-width:40rem; padding-block:3rem 5rem; }
+  .not-found-code { margin:0 0 .5rem; font-size:clamp(4rem, 12vw, 7rem); font-weight:600; line-height:1; color:var(--color-muted); }
+  h1 { margin-bottom:1rem; font-size:clamp(1.8rem, 4vw, 2.5rem); font-weight:700; line-height:1.2; }
+  .not-found-page > p:not(.not-found-code) { margin-bottom:1.5rem; line-height:1.6; }
+</style>

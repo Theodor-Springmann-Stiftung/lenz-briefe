@@ -1,9 +1,12 @@
 ---
+import { pageTitle } from '../lib/page-titles.mjs';
 interface Props {
   href: string;
   title: string;
+  description: string;
 }
-const { href, title } = Astro.props;
+const { href, title, description } = Astro.props;
+const documentTitle = pageTitle(title);
 ---
 
 <!doctype html>
@@ -11,7 +14,10 @@ const { href, title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
+    <title>{documentTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={documentTitle} />
+    <meta property="og:description" content={description} />
     <meta http-equiv="refresh" content={`2;url=${href}`} />
     <meta name="robots" content="noindex" />
     <link rel="canonical" href={new URL(href, Astro.site ?? Astro.url)} />

@@ -13,7 +13,7 @@ import { handDeclarations } from '../../lib/hand-settings.mjs';
 import { handFonts, handKeyRefs } from '../../lib/hand-fonts.mjs';
 import { prepareHandControls } from '../../lib/hand-labels.mjs';
 import { catalog, letterFiles, letterUrl, titleFor, type Letter } from '../../lib/edition';
-import { letterDateLabel } from '../../lib/page-titles.mjs';
+import { letterDateLabel, letterDescription } from '../../lib/page-titles.mjs';
 export function getStaticPaths() {
   return catalog.letters.map((letter, index) => ({
     params: { letter: letter.letter },
@@ -90,7 +90,11 @@ const sectionLinks = [
 ];
 ---
 
-<Layout wide title={`${titleFor(letter)}, ${letterDateLabel(letter.events)}`}>
+<Layout
+  wide
+  title={`${titleFor(letter)}, ${letterDateLabel(letter.events)}`}
+  description={letterDescription(letter, titleFor(letter))}
+>
   {handStyles && <style is:inline set:html={handStyles} />}
   <div class="letter-content" data-letter-title={titleFor(letter)}>
     <div class="letter-spine" aria-hidden="true"></div>
