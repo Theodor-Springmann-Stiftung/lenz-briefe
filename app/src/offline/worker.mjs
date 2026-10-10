@@ -345,7 +345,7 @@ export function createOfflineWorker(worker) {
     try { return await worker.fetch(request); }
     catch (error) {
       if (request.mode !== 'navigate') throw error;
-      return new Response('<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Offline</title><p>Diese Seite ist noch nicht offline verfügbar.</p><p><a href="' + scope.pathname + '">Zum Briefverzeichnis</a></p></html>', {
+      return new Response('<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Offline</title><p>Diese Seite ist offline nicht verfügbar.</p><p><a href="' + scope.pathname + '">Zum Briefverzeichnis</a></p></html>', {
         status: 503, headers: { 'Content-Type': 'text/html; charset=utf-8' },
       });
     }
