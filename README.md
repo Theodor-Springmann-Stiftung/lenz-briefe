@@ -85,6 +85,9 @@ Lizenzen in einem Request, prüft ihre Prüfsummen und speichert sie unter den
 wiederverwendet. Die Download-Größe im Footer wird beim Build aus geschätzten
 gzip-Größen berechnet, mit 3 % Reserve auf ganze MB aufgerundet und direkt in
 die Seiten geschrieben; dafür sind keine zusätzlichen Browser-Requests nötig.
+Vollauflösungen der Manuskriptbilder (`-full.webp`) sind vom Offline-Paket
+ausgenommen; die Vorschaubilder bleiben enthalten. Die Vollansicht benötigt
+eine Internetverbindung.
 
 | Datei oder Unterordner | Inhalt |
 | --- | --- |

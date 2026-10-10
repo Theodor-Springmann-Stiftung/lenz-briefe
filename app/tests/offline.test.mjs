@@ -136,6 +136,53 @@ test('build generates stable versions, deployment-prefixed page URLs, all assets
   } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
+test('full-resolution manuscript images stay online while previews are downloaded offline', async () => {
+  const directory = await mkdtemp(path.join(tmpdir(), 'lenz-offline-images-'));
+  const base = '/edition/';
+  const previews = [
+    'briefe/367/BJK1050.webp', 'briefe/367/BJK1051.webp',
+    'randnotizen-lenz-an-gotter-1775-05-10.webp',
+    'umschlag-lenz-an-weidmanns-erben-und-reich-1776-07-26.webp',
+  ];
+  const fullImages = previews.map((name) => name.replace('.webp', '-full.webp'));
+  const files = { [base]: 'Edition' };
+  try {
+    await mkdir(path.join(directory, 'briefe/367'), { recursive: true });
+    await writeFile(path.join(directory, 'index.html'), files[base]);
+    for (const name of previews) {
+      files[base + name] = `Preview: ${name}`;
+      await writeFile(path.join(directory, name), files[base + name]);
+    }
+    const baseline = await buildOfflineEdition(directory, base);
+    for (const name of fullImages) {
+      files[base + name] = randomBytes(1_000_000);
+      await writeFile(path.join(directory, name), files[base + name]);
+    }
+    const manifest = await buildOfflineEdition(directory, base);
+    // Large online-only files affect neither version nor download estimates.
+    assert.deepEqual(manifest, baseline);
+    for (const name of fullImages)
+      assert.deepEqual(await readFile(path.join(directory, name)), files[base + name]);
+
+    const env = environment(files, { base, manifest });
+    const runtime = env.restart();
+    await runtime.enable();
+    await runtime.synchronize(true);
+    assert.equal((await runtime.status()).phase, 'ready');
+    assert.ok(!env.requests.some((url) => fullImages.includes(url.slice(base.length))));
+    for (const name of fullImages) {
+      const response = await runtime.respond(new Request(`https://edition.test${base}${name}`));
+      assert.deepEqual(Buffer.from(await response.arrayBuffer()), files[base + name]);
+    }
+    const cache = await env.caches.open(`lenz-offline-v1:${base}:files`);
+    assert.ok(!(await cache.keys()).some((request) => new URL(request.url).pathname.endsWith('-full.webp')));
+    env.disconnect();
+    for (const name of previews)
+      assert.equal(await (await runtime.respond(new Request(`https://edition.test${base}${name}`))).text(), files[base + name]);
+    await assert.rejects(runtime.respond(new Request(`https://edition.test${base}${fullImages[0]}`)), /Network unavailable/);
+  } finally { await rm(directory, { recursive: true, force: true }); }
+});
+
 test('offline edition includes unvisited pages and assets; page query parameters share cached HTML', async () => {
   const env = environment({ '/': 'Index', '/briefe/1/': 'Brief', '/edition/regeln/': 'Regeln', '/search.json': 'Search' });
   const runtime = env.restart();

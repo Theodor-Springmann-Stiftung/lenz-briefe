@@ -66,11 +66,13 @@ class FlowContractTests(unittest.TestCase):
             self.assertEqual(figure.xpath('./a/img/@alt'), ['Page two' if index == 2 else 'Page three'])
             self.assertFalse(figure.xpath('./a/img/@width | ./a/img/@height'))
             image_url = '/briefe/367/one-full.webp' if index == 2 else '/briefe/367/two-full.webp'
-            self.assertEqual(figure.xpath('./a/img/@src'), [image_url])
+            preview_url = '/briefe/367/one.webp' if index == 2 else '/briefe/367/two.webp'
+            self.assertEqual(figure.xpath('./a/img/@src'), [preview_url])
             self.assertEqual(figure.xpath('./a/@href'), [image_url])
             self.assertEqual(figure.xpath('./a/@target'), ['_blank'])
             self.assertFalse(figure.xpath('./button'))
             self.assertEqual(figure.xpath('./figcaption/a/@target'), ['_blank'])
+            self.assertEqual(figure.xpath('./figcaption/a/@href'), [image_url])
             self.assertEqual(figure.xpath('./figcaption/a/@aria-label'), ['In voller Auflösung öffnen'])
         self.assertIn('Keep this note above.', figures[0].getprevious().getprevious().text_content())
         self.assertIn('Following text', self.lines(tree)[-1].text_content())

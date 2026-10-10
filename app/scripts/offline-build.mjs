@@ -19,7 +19,10 @@ export async function buildOfflineEdition(directory, base = '/') {
     for (const file of await readdir(path.join(directory, relative), { withFileTypes: true })) {
       const name = path.posix.join(relative, file.name);
       if (file.isDirectory()) await visit(name);
-      else if (file.isFile() && !['sw.js', 'offline-manifest.json', 'offline-licenses.json'].includes(name)) {
+      // Full-resolution manuscript images remain online; previews belong in
+      // the offline edition. Skip them before hashing and estimating its size.
+      else if (file.isFile() && !name.endsWith('-full.webp')
+        && !['sw.js', 'offline-manifest.json', 'offline-licenses.json'].includes(name)) {
         let content = await readFile(path.join(directory, name));
         const page = name.endsWith('.html');
         // Normalize a previous stamp as well, so rebuilding the manifest on the
@@ -41,7 +44,7 @@ export async function buildOfflineEdition(directory, base = '/') {
     }
   }
   await visit();
-  // Include every asset before the pages, not just files emitted into _astro.
+  // Include eligible assets before the pages, not just files emitted into _astro.
   // The worker also waits for the asset batch to finish before starting HTML.
   const priority = (entry) => entry.url.startsWith(`${base}_astro/`) ? 0
     : entry.page ? 2 : 1;

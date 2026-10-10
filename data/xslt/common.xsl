@@ -612,7 +612,7 @@
   <xsl:template match="lb:image">
     <figure class="letter-image" data-letter-image="">
       <a class="letter-image-link" href="/briefe/{@full}" target="_blank" rel="noopener" aria-label="{@alt} – in voller Auflösung öffnen">
-        <img src="/briefe/{@full}" alt="{@alt}" loading="lazy" decoding="async" />
+        <img src="/briefe/{@file}" alt="{@alt}" loading="lazy" decoding="async" />
       </a>
       <figcaption class="screen-only">
         <a class="letter-image-original" href="/briefe/{@full}" target="_blank" rel="noopener" aria-label="In voller Auflösung öffnen" title="In voller Auflösung öffnen">

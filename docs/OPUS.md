@@ -526,8 +526,11 @@ Für Brief 367 werden beide WebP-Fassungen bei jedem Export automatisch aus
 `BJK1050.tif` und `BJK1051.tif` neu erzeugt (Vorschau: maximal 1200 Pixel breit).
 Änderungen dieser TIFF-Dateien lösen nach einem Push auf `main` den Website-Build aus.
 
-Die Website zeigt die Abbildung in voller Auflösung vom linken Rand der Textspalte
+Die Website zeigt die Vorschau (`image/@file`) vom linken Rand der Textspalte
 bis zum rechten Rand des Randnotizenbereichs. Der linke Seitenzahlenrand bleibt frei.
+Ein Klick auf das Bild oder „In voller Auflösung öffnen“ führt zu `image/@full`.
+Die Vorschauen sind offline verfügbar; die Vollauflösungen (`-full.webp`) sind
+vom Offline-Paket ausgenommen.
 Ein Klick auf die Abbildung öffnet sie direkt in einem neuen Tab; sie hat keine Zoomfunktion.
 Die Schaltfläche „In voller Auflösung öffnen“ mit Remix-Icon liegt mit Abstand
 über der unteren rechten Bildecke und öffnet die große Fassung in einem separaten

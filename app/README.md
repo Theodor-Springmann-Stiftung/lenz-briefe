@@ -303,7 +303,10 @@ the percentage beside the progress bar.
 
 `scripts/offline-build.mjs` runs after the license files have been copied. It emits
 `offline-manifest.json` with canonical URLs, byte sizes and SHA-256 hashes for all
-built pages and assets, including fonts and the full-text search index. The
+built pages and assets, including fonts and the full-text search index, except
+full-resolution manuscript images (`-full.webp`). These remain published for
+online viewing; their previews are included offline. Excluded originals also
+do not contribute to the download estimate or edition version. The
 rendered license page is included, but the separate `licenses/` directory of
 source notices and package metadata is excluded from the offline download.
 Its version identifies the actual output, independently of the Git commit. The
