@@ -29,7 +29,7 @@ Bei autographen Manuskripten ist der Seitenumbruch markiert. Einfügungen werden
 
 <a class="letter-image-original editorial-image-original" href="/randnotizen-lenz-an-gotter-1775-05-10-full.webp" target="_blank" rel="noopener">In voller Auflösung öffnen<span class="letter-image-open-icon" aria-hidden="true"></span></a>
 </div>
-<figcaption>Randnotizen im Brief von <a href="/briefe/49/">Lenz an Gotter, 10. Mai 1775</a>.</figcaption>
+<figcaption><lkb-sidenote-position position="left"></lkb-sidenote-position><lkb-sidenote-position position="top"></lkb-sidenote-position>Randnotizen im Brief von <a href="/briefe/49/#page-2">Lenz an Gotter, 10. Mai 1775</a>, S. 2.</figcaption>
 </figure>
 
 Alle Briefe erscheinen in ihrem materialen Kontext, sodass z. B. bei Doppelbriefen auch der mitgeschickte zweite Brief ediert wird. Verzeichnet sind auch ermittelte Briefeinlagen. Brieffremde Elemente auf dem Überlieferungsträger sind Teil der Edition, z.B. Zeichnungen oder Notizen. Oft hat Lenz um Briefentwürfe herum zahlreiche andere Notizen hinterlassen, oder aber Briefempfänger verwenden das Papier für andere Zwecke weiter. Kalkulationen und umfangreichere Notizen zur Sozialreform werden nicht wiedergegeben; es wird stattdessen auf die Edition der Schriften zur Sozialreform verwiesen.
