@@ -50,7 +50,8 @@ export default defineConfig({
       },
     },
   ],
-  trailingSlash: 'always',
+  // Let unknown URLs reach our 404 page with or without a trailing slash.
+  trailingSlash: 'ignore',
   integrations: [
     watchEdition(),
     {

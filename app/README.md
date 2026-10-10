@@ -100,7 +100,10 @@ people are joined with `und`), and static pages use their menu label. Every page
 requires a description; letters describe their own correspondence and date.
 The same title and description are used in Open Graph metadata. Redirects retain
 the target page's metadata and canonical URL. `src/pages/404.astro` generates the
-custom `404.html`, with a link back to the catalogue and search.
+custom `404.html`, with a link back to the catalogue and search. Unknown URLs at
+any depth use this page, with or without a trailing slash. Route matching uses
+`trailingSlash: 'ignore'` so the development server also renders this page instead
+of Astro's trailing-slash warning; published page links still end in `/`.
 The development site's existing indexing restrictions remain in place.
 External HTTP(S) links open in a new tab or window.
 The HTML middleware applies this during rendering, including links in Markdown,
