@@ -4,7 +4,7 @@ import { base, catalog, letterUrl } from '../lib/edition';
 import { editionPages, pageUrl } from '../lib/pages';
 const path = Astro.url.pathname;
 const navigation = [
-  { label: 'Verzeichnis', href: base, active: path === base },
+  { label: 'Verzeichnis & Suche', href: base, active: path === base },
   {
     label: 'Briefansicht',
     href: letterUrl(catalog.letters[0].letter),
