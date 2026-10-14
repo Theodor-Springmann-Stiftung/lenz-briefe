@@ -139,6 +139,7 @@ export async function printSelectionDocument(
   for (const element of copy.querySelectorAll<HTMLTimeElement>('.selection-letter [data-citation-access]')) {
     element.textContent = accessDate;
     element.dateTime = accessIso;
+    element.closest('[data-citation-date]')?.removeAttribute('hidden');
     const pause = checkpoint(); if (pause) await pause;
   }
   return finishPrintDocument(copy, source.baseURI, checkpoint);

@@ -7,6 +7,7 @@ import offlineEdition from './scripts/offline-build.mjs';
 import { fileURLToPath } from 'node:url';
 import { cp } from 'node:fs/promises';
 import { satteri } from '@astrojs/markdown-satteri';
+import sitemap from '@astrojs/sitemap';
 const pagesDirectory = fileURLToPath(new URL('../seiten', import.meta.url));
 export default defineConfig({
   site: 'https://dev.lenz-briefe.de',
@@ -54,6 +55,14 @@ export default defineConfig({
   trailingSlash: 'ignore',
   integrations: [
     watchEdition(),
+    sitemap({
+      // Omit redirects, error pages, and licence material from search discovery.
+      filter: (page) => {
+        const path = new URL(page).pathname;
+        return !['/edition/', '/datenschutz/', '/404/', '/404.html', '/edition/lizenzen/']
+          .includes(path) && !path.startsWith('/licenses/');
+      },
+    }),
     {
       name: 'lenz:licenses',
       hooks: {

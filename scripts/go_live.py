@@ -73,8 +73,11 @@ def prepare(root: Path) -> list[str]:
                       "   `185.199.111.153` (GitHub Pages).")
     old = old.replace("The development site's `robots.txt` and `noindex` meta tags are included in the\n"
                       "published output.",
-                      "The production site allows indexing: no blocking `robots.txt` is published,\n"
-                      "and normal pages have no `noindex` directives. Redirect pages retain `noindex`.")
+                      "The production site allows indexing of edition content. Its `robots.txt` excludes\n"
+                      "the `/licenses/` notice files and advertises the sitemap. Normal content pages\n"
+                      "have no `noindex` directives; redirect and licence pages retain `noindex`.")
+    old = old.replace("The development site's existing indexing restrictions remain in place.",
+                      "Edition content permits indexing; redirect and licence pages remain excluded.")
     if "`dev` CNAME" in old or "development site's" in old:
         raise RuntimeError("Deployment documentation has changed; review it before launching.")
     edits[readme] = old
@@ -83,16 +86,17 @@ def prepare(root: Path) -> list[str]:
     if f"select=\"'{URL}'\"" not in cmif:
         raise RuntimeError("CMIF export must already use the production domain.")
     robots = root / FILES[3]
-    if robots.exists() and robots.read_text(encoding="utf-8") != "# Development site: do not crawl.\nUser-agent: *\nDisallow: /\n":
-        raise RuntimeError("robots.txt has changed; review it before removing it.")
+    production_robots = f"User-agent: *\nDisallow: /licenses/\n\nSitemap: {URL}/sitemap-index.xml\n"
+    if robots.exists() and robots.read_text(encoding="utf-8") not in (
+        "# Development site: do not crawl.\nUser-agent: *\nDisallow: /\n", production_robots
+    ):
+        raise RuntimeError("robots.txt has changed; review it before replacing it.")
+    edits[robots] = production_robots
     changed = []
     for path, content in edits.items():
-        if path.read_text(encoding="utf-8") != content:
+        if not path.exists() or path.read_text(encoding="utf-8") != content:
             path.write_text(content, encoding="utf-8")
             changed.append(str(path.relative_to(root)))
-    if robots.exists():
-        robots.unlink()
-        changed.append(FILES[3])
     return changed
 
 

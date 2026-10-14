@@ -1,0 +1,7 @@
+{
+  "name": "arg",
+  "version": "5.0.2",
+  "license": "MIT",
+  "author": "Josh Junon <junon@wavetilt.com>",
+  "repository": "vercel/arg"
+}

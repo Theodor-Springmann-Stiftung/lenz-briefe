@@ -16,7 +16,7 @@ toc: true
 
 <lkb-briefplaene></lkb-briefplaene>
 
-## Briefe ohne ermittelten Ort, Zeit und Empfänger
+## Briefe ohne ermittelten Ort, ermittelte Zeit und ermittelten Empfänger
 
 <lkb-brieffragmente></lkb-brieffragmente>
 

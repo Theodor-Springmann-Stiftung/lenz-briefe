@@ -1,0 +1,10 @@
+{
+  "name": "undici-types",
+  "version": "7.24.6",
+  "license": "MIT",
+  "homepage": "https://undici.nodejs.org",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodejs/undici.git"
+  }
+}

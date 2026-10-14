@@ -794,6 +794,10 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .apparatus-entry > h2 { text-align:left; }
   .apparatus-text, .apparatus > p { grid-column:1; }
 }
+@media (min-width: 960px) {
+  .edition-menu-panel { padding:.15rem 0; }
+  .edition-menu-panel > li { padding:.4rem; }
+}
 @media (max-width: 959px) {
   /* Active filters add a second row only while they are visible. */
   .index-intro { grid-template-columns:minmax(0,1fr) auto; grid-template-rows:auto; row-gap:.5rem; }

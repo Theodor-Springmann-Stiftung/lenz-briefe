@@ -460,6 +460,12 @@ The license column records package metadata, not a replacement for the actual li
 | mgrs | 1.0.0 | MIT | [license.md](npm/mgrs@1.0.0/license.md) |
 | proj4 | 2.22.0 | MIT | [LICENSE.md](npm/proj4@2.22.0/LICENSE.md) |
 | wkt-parser | 1.5.6 | MIT | [LICENSE.md](npm/wkt-parser@1.5.6/LICENSE.md) |
+| @astrojs/sitemap | 3.7.4 | MIT | [LICENSE](npm/@astrojs__sitemap@3.7.4/LICENSE) |
+| @types/node | 24.19.2 | MIT | [LICENSE](npm/@types__node@24.19.2/LICENSE) |
+| @types/sax | 1.2.7 | MIT | [LICENSE](npm/@types__sax@1.2.7/LICENSE) |
+| arg | 5.0.2 | MIT | [LICENSE.md](npm/arg@5.0.2/LICENSE.md) |
+| sitemap | 9.0.1 | MIT | [LICENSE](npm/sitemap@9.0.1/LICENSE) |
+| undici-types | 7.24.6 | MIT | [LICENSE](npm/undici-types@7.24.6/LICENSE) |
 
 ## Updating this snapshot
 

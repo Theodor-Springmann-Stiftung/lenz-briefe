@@ -13,8 +13,8 @@ const url = new URL(letterUrl(letter.letter), Astro.site ?? Astro.url.origin).hr
   <h2><span class="screen-only">Zitation</span><span class="print-only">Quelle</span></h2>
   <p class="edition-text apparatus-text apparatus-xml-text">
     {citationFor(letter)}{' '}
-    <span class="citation-access">[<a class="citation-url" href={url}>{url}</a>, abgerufen am{' '}
-      <time data-citation-access>DATUM</time>]</span>
+    <span class="citation-access">[<a class="citation-url" href={url}>{url}</a><span data-citation-date hidden>, abgerufen am{' '}
+      <time data-citation-access></time></span>]</span>
   </p>
 </div>
 <script>
@@ -29,6 +29,7 @@ const url = new URL(letterUrl(letter.letter), Astro.site ?? Astro.url.origin).hr
     document.querySelectorAll<HTMLTimeElement>('[data-citation-access]').forEach((element) => {
       element.textContent = text;
       element.dateTime = iso;
+      element.closest('[data-citation-date]')?.removeAttribute('hidden');
     });
   }
   updateAccessDate();

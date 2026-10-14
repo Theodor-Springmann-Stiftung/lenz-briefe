@@ -16,13 +16,19 @@ interface Props {
   title: string;
   description: string;
   wide?: boolean;
+  canonical?: boolean;
+  robots?: string;
 }
 const {
   title,
   description,
   wide = false,
+  canonical = true,
+  robots,
 } = Astro.props;
 const documentTitle = pageTitle(title);
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
+if (!canonicalUrl.pathname.endsWith('/')) canonicalUrl.pathname += '/';
 const generatedAt = new Date();
 const generationMonth = new Intl.DateTimeFormat('de-DE', {
   month: 'long',
@@ -47,11 +53,15 @@ const generationMonth = new Intl.DateTimeFormat('de-DE', {
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    {robots && <meta name="robots" content={robots} />}
+    {canonical && <link rel="canonical" href={canonicalUrl.href} />}
+    <link rel="sitemap" href={new URL(`${base}sitemap-index.xml`, Astro.site ?? Astro.url).href} />
     <meta property="og:title" content={documentTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="LKB – Kritische Briefausgabe von Jakob Michael Reinhold Lenz" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="de_DE" />
+    {canonical && <meta property="og:url" content={canonicalUrl.href} />}
     <meta name="robots" content="noindex, nofollow" />
     <meta name="googlebot" content="noindex, nofollow" />
     <meta name="theme-color" content="#fcfcfb" />

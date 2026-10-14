@@ -1,0 +1,12 @@
+{
+  "name": "@astrojs/sitemap",
+  "version": "3.7.4",
+  "license": "MIT",
+  "author": "withastro",
+  "homepage": "https://docs.astro.build/en/guides/integrations-guide/sitemap/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withastro/astro.git",
+    "directory": "packages/integrations/sitemap"
+  }
+}

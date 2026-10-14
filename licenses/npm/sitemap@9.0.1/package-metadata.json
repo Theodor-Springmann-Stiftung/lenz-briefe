@@ -1,0 +1,11 @@
+{
+  "name": "sitemap",
+  "version": "9.0.1",
+  "license": "MIT",
+  "author": "Eugene Kalinin <e.v.kalinin@gmail.com>",
+  "homepage": "https://github.com/ekalinin/sitemap.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ekalinin/sitemap.js.git"
+  }
+}
