@@ -819,10 +819,16 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 @media (max-width: 639px) {
   .offline-control, .footer-offline-separator { display:none; }
   .letter-content { --page-top-space:1rem; }
-  .letter-toolbar { grid-template-columns:minmax(0,1fr); justify-items:start; }
+  @media screen {
+    main > .letter-content > .detail-header-group { margin-inline:calc(-1.5rem - 1px); }
+    .detail-header { border-inline:0; padding:.875rem; }
+    .letter-toolbar, .detail-header-row > .reading-toolbar { padding-inline:.875rem; }
+    .letter-content > .apparatus { width:calc(100% + 1rem); margin-inline:-.5rem; padding-inline:.75rem; }
+  }
+  .letter-toolbar { grid-template-columns:minmax(0,1fr); justify-items:start; padding-bottom:.25rem; }
   .letter-toolbar > :is(.correspondence-navigation, .letter-actions) { display:none; }
-  .letter-toolbar > .letter-navigation { grid-column:1; grid-row:1; margin-left:0; align-items:center; }
-  .letter-navigation a .ui-icon { transform:none; }
+  .letter-toolbar > .letter-navigation { grid-column:1; grid-row:1; margin-left:0; align-items:center; font-size:1rem; }
+  .letter-navigation a .ui-icon { width:1em; height:1em; transform:none; }
   .site-header { padding-top:.6rem; padding-bottom:.6rem; }
   .site-header-inner { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:.75rem; }
   .wordmark { min-width:0; gap:.5rem; }
