@@ -75,7 +75,7 @@
   .main-navigation-link[aria-current=page], .main-navigation-link.is-current { color:var(--color-paper); background:var(--color-selected); border-color:var(--color-selected); }
   .main-navigation > .main-navigation-link[aria-current=page]::before { content:'•'; color:inherit; }
   .edition-menu-label { display:inline-flex; align-items:center; gap:.6rem; }
-  .edition-menu > summary.is-current .edition-menu-label::after { content:'•'; color:inherit; flex-shrink:0; }
+  .edition-menu > summary.is-current .edition-menu-label::before { content:'•'; color:inherit; flex-shrink:0; }
   .site-header nav [aria-disabled=true] { cursor:default; }
   .site-header .archive-link { margin-left:auto; background:var(--tone-archive, #cdd6cc); border-radius:2px; }
   .site-header .archive-link:is(:hover, :focus-visible):not([aria-current]):not(.is-current) { background:var(--tone-archive-hover, #becabb); }
