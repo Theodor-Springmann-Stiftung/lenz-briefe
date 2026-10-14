@@ -802,6 +802,7 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .filter-information { display:none; }
 }
 @media (max-width: 959px) {
+  .site-header[data-menu-open] { padding-bottom:0; }
   .site-header-inner { gap:.75rem; }
   .site-header[data-menu-ready] .navigation-toggle { display:flex; align-items:center; justify-content:center; width:2.75rem; height:2.75rem; margin-left:auto; border:1px solid var(--color-ink); cursor:pointer; }
   .navigation-toggle:hover { background:var(--tone-hover, #e0e3da); }
