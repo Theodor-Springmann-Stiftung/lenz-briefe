@@ -808,8 +808,8 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .navigation-toggle .ui-icon { width:1.5rem; height:1.5rem; }
   .navigation-toggle .navigation-close-icon, .navigation-toggle[aria-expanded=true] .navigation-open-icon { display:none; }
   .navigation-toggle[aria-expanded=true] .navigation-close-icon { display:block; }
-  .site-header nav { width:100%; margin-left:0; flex-direction:column; align-items:stretch; gap:.25rem; padding-top:.75rem; border-top:1px solid var(--tone-border, #a8b2a8); max-height:calc(100dvh - 6rem); overflow-y:auto; }
-  .site-header[data-menu-ready]:not([data-menu-open]) nav { display:none; }
+  .site-header nav { width:100%; margin-left:0; flex-direction:column; align-items:stretch; gap:.25rem; border-top:1px solid var(--tone-border, #a8b2a8); max-height:calc(100dvh - 6rem); overflow-y:auto; }
+  html.js .site-header:not([data-menu-open]) .main-navigation { display:none; }
   .site-header .main-navigation-link { justify-content:space-between; padding:.65rem .75rem; white-space:normal; }
   /* Keep the current label aligned with other rows; its marker belongs at the end. */
   .main-navigation > .main-navigation-link[aria-current=page]::before { order:1; flex-shrink:0; }
@@ -818,12 +818,17 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 }
 @media (max-width: 639px) {
   .offline-control, .footer-offline-separator { display:none; }
+  .selection-print-tools { display:none; }
+  .about-page, .index-intro { --page-top-space:1rem; }
+  .page-toc { margin-bottom:1.5rem; }
   .letter-content { --page-top-space:1rem; }
   @media screen {
-    main > .letter-content > .detail-header-group { margin-inline:calc(-1.5rem - 1px); }
+    .site-shell { padding-inline:.75rem; }
+    .catalog-section > .filter-toolbar { margin-inline:-.75rem; }
+    main > .letter-content > .detail-header-group { margin-inline:calc(-.75rem - 1px); }
     .detail-header { border-inline:0; padding:.875rem; }
     .letter-toolbar, .detail-header-row > .reading-toolbar { padding-inline:.875rem; }
-    .letter-content > .apparatus { width:calc(100% + 1rem); margin-inline:-.5rem; padding-inline:.75rem; }
+    .letter-content > .apparatus { width:100%; margin-inline:0; padding-inline:.75rem; }
   }
   .letter-toolbar { grid-template-columns:minmax(0,1fr); justify-items:start; padding-bottom:.25rem; }
   .letter-toolbar > :is(.correspondence-navigation, .letter-actions) { display:none; }
@@ -835,8 +840,11 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .wordmark-logo { width:2.75rem; height:2.75rem; }
   .wordmark-name, .wordmark-caption { font-size:1.125rem; white-space:nowrap; }
   .wordmark-caption { max-width:100%; white-space:normal; }
-  .site-header nav { grid-column:1 / -1; }
+  .site-header nav { grid-column:1 / -1; width:calc(100% + 3rem); margin-inline:-1.5rem; }
+  .edition-menu-panel { width:auto; margin-inline:.75rem; padding:.25rem; }
+  .edition-menu-panel a { padding:.65rem .5rem; }
   .index-intro { grid-template-columns:minmax(0,1fr); row-gap:.4rem; }
+  .index-intro h1 { margin-left:0; font-size:2.5rem; }
   .active-filters { grid-row:2; }
   .filter-toolbar { padding:.75rem; }
   .filter-controls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem; width:100%; }
@@ -849,10 +857,10 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .search-results .search-hit { grid-template-columns:minmax(0,1fr); row-gap:.25rem; }
   .year-navigation { grid-template-columns:minmax(0,1fr); margin-top:1rem; padding-bottom:.65rem; }
   .year-tabs { display:grid; gap:.125rem; }
-  .year-navigation a { margin:0; padding:.5rem .625rem; border:0; border-left:2px solid transparent; font-size:.8125rem; line-height:1.4; gap:.4rem; }
+  .year-navigation a { margin:0; padding:.5rem calc(.5rem + 1px) .5rem calc(.5rem - 1px); border:0; border-left:2px solid transparent; font-size:.8125rem; line-height:1.4; gap:.4rem; }
   .year-navigation a[aria-current=page] { border-left-color:var(--color-accent); background:var(--color-filter); }
   .year-count { display:none; }
-  .letter-list > li { padding:1rem; }
+  .letter-list > li { padding:1rem .5rem; }
   .letter-header, .detail-header .letter-header { --header-text-size:1rem; display:grid; grid-template-columns:minmax(0,1fr); gap:.9rem; }
   .letter-header .letter-date { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:start; gap:.75rem; margin:0; font-size:var(--header-text-size); line-height:1.45; }
   .letter-date-text { min-width:0; }
