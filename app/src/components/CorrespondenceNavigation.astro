@@ -21,52 +21,55 @@ const options = correspondenceNavigation(catalog.letters, letter).map((entry) =>
 const selected = selectCorrespondence(options);
 ---
 
-{selected && (
-  <nav
-    class="correspondence-navigation"
-    aria-label="Navigation innerhalb der Korrespondenz"
-    data-correspondence-options={JSON.stringify(options)}
-  >
-    <a
-      class="correspondence-step"
-      data-correspondence-previous
-      href={selected.previous || undefined}
-      hidden={!selected.previous}
-      aria-label={`Vorheriger Brief der Korrespondenz mit ${selected.name}`}
+<div class="letter-toolbar" data-correspondence-options={selected ? JSON.stringify(options) : undefined}>
+  {selected && (
+    <nav
+      class="correspondence-navigation"
+      aria-label="Navigation innerhalb der Korrespondenz"
     >
-      <Icon name="arrowLeft" />
-    </a>
-    <span class="correspondence-caption">
-      <span>Korrespondenz mit</span>
-      {options.length > 1 ? (
-        <label class="correspondent-picker">
-          <span data-correspondent-name aria-hidden="true">{selected.name}</span>
-          <Icon name="chevronDown" />
-          <select aria-label="Korrespondenz auswählen">
-            {options.map((option) => (
-              <option
-                value={option.ref}
-                disabled={!hasOtherLetters(option)}
-                selected={option.ref === selected.ref}
-              >
-                {option.name}{!hasOtherLetters(option) && ' – keine weiteren Briefe'}
-              </option>
-            ))}
-          </select>
-        </label>
-      ) : <span data-correspondent-name>{selected.name}</span>}
-    </span>
-    <a
-      class="correspondence-step"
-      data-correspondence-next
-      href={selected.next || undefined}
-      hidden={!selected.next}
-      aria-label={`Nächster Brief der Korrespondenz mit ${selected.name}`}
-    >
-      <Icon name="arrowRight" />
-    </a>
-    <span class="correspondence-overview">
-      <span class="correspondence-divider" aria-hidden="true"></span>
+      <a
+        class="correspondence-step"
+        data-correspondence-previous
+        href={selected.previous || undefined}
+        hidden={!selected.previous}
+        aria-label={`Vorheriger Brief der Korrespondenz mit ${selected.name}`}
+      >
+        <Icon name="arrowLeft" />
+      </a>
+      <span class="correspondence-caption">
+        <span>Korrespondenz mit</span>
+        {options.length > 1 ? (
+          <label class="correspondent-picker">
+            <span data-correspondent-name aria-hidden="true">{selected.name}</span>
+            <Icon name="chevronDown" />
+            <select aria-label="Korrespondenz auswählen">
+              {options.map((option) => (
+                <option
+                  value={option.ref}
+                  disabled={!hasOtherLetters(option)}
+                  selected={option.ref === selected.ref}
+                >
+                  {option.name}{!hasOtherLetters(option) && ' – keine weiteren Briefe'}
+                </option>
+              ))}
+            </select>
+          </label>
+        ) : <span data-correspondent-name>{selected.name}</span>}
+      </span>
+      <a
+        class="correspondence-step"
+        data-correspondence-next
+        href={selected.next || undefined}
+        hidden={!selected.next}
+        aria-label={`Nächster Brief der Korrespondenz mit ${selected.name}`}
+      >
+        <Icon name="arrowRight" />
+      </a>
+    </nav>
+  )}
+  <slot name="letter-navigation" />
+  <div class="letter-actions">
+    {selected && (
       <a
         class="correspondence-list"
         data-correspondence-list
@@ -78,9 +81,10 @@ const selected = selectCorrespondence(options);
       >
         <Icon name="list" />
       </a>
-    </span>
-  </nav>
-)}
+    )}
+    <slot />
+  </div>
+</div>
 
 <script>
   import '../scripts/correspondence-navigation';

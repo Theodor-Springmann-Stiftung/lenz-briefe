@@ -99,26 +99,23 @@ const sectionLinks = [
   <div class="letter-content" data-letter-title={titleFor(letter)}>
     <div class="letter-spine" aria-hidden="true"></div>
     <div class="detail-header-group">
-      <div class="letter-toolbar">
-        <div class="letter-context-tools">
-          <CorrespondenceNavigation letter={letter} />
-          <button
-            class="letter-print-button"
-            type="button"
-            data-print-letter
-            aria-label="Druck&hairsp;/&hairsp;PDF"
-            data-tooltip="Druck&hairsp;/&hairsp;PDF"
-            data-tippy-placement="top"
-            data-tippy-trigger="mouseenter focus"
-          >
-            <Icon name="printer" />
-          </button>
-          <span class="letter-print-status" role="status" data-print-status hidden>
-            <span data-print-message></span>
-            <progress class="letter-print-progress" data-print-progress max="100" value="0" aria-label="Druckvorbereitung" hidden></progress>
-          </span>
-        </div>
-        <nav class="letter-navigation" aria-label="Briefnavigation">
+      <CorrespondenceNavigation letter={letter}>
+        <button
+          class="letter-print-button"
+          type="button"
+          data-print-letter
+          aria-label="Druck&hairsp;/&hairsp;PDF"
+          data-tooltip="Druck&hairsp;/&hairsp;PDF"
+          data-tippy-placement="top"
+          data-tippy-trigger="mouseenter focus"
+        >
+          <Icon name="printer" />
+        </button>
+        <span class="letter-print-status" role="status" data-print-status hidden>
+          <span data-print-message></span>
+          <progress class="letter-print-progress" data-print-progress max="100" value="0" aria-label="Druckvorbereitung" hidden></progress>
+        </span>
+        <nav slot="letter-navigation" class="letter-navigation" aria-label="Briefnavigation">
           {previous && (
             <a
               href={letterUrl(previous.letter)}
@@ -141,7 +138,7 @@ const sectionLinks = [
             </a>
           )}
         </nav>
-      </div>
+      </CorrespondenceNavigation>
       <div class="detail-header-row">
         <div class="detail-header">
           <LetterHeader letter={letter} />
