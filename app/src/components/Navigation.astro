@@ -42,7 +42,8 @@ const inEdition = path.startsWith(`${base}edition/`);
   {pages.length > 0 && (
     <details class="edition-menu">
       <summary class:list={['main-navigation-link', { 'is-current': inEdition }]}>
-        Edition
+        <span class="edition-menu-label">Edition</span>
+        <Icon name="chevronDown" />
       </summary>
       <ul class="edition-menu-panel">
         {pages.map((item) => (

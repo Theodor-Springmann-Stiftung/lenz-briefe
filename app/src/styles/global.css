@@ -74,7 +74,8 @@
   .main-navigation-link:hover:not([aria-current]):not(.is-current) { color:var(--color-ink); background:var(--tone-hover, #e0e3da); }
   .main-navigation-link[aria-current=page], .main-navigation-link.is-current { color:var(--color-paper); background:var(--color-selected); border-color:var(--color-selected); }
   .main-navigation > .main-navigation-link[aria-current=page]::before { content:'•'; color:inherit; }
-  .edition-menu > summary.is-current::after { content:'•'; color:inherit; flex-shrink:0; }
+  .edition-menu-label { display:inline-flex; align-items:center; gap:.6rem; }
+  .edition-menu > summary.is-current .edition-menu-label::after { content:'•'; color:inherit; flex-shrink:0; }
   .site-header nav [aria-disabled=true] { cursor:default; }
   .site-header .archive-link { margin-left:auto; background:var(--tone-archive, #cdd6cc); border-radius:2px; }
   .site-header .archive-link:is(:hover, :focus-visible):not([aria-current]):not(.is-current) { background:var(--tone-archive-hover, #becabb); }
@@ -83,6 +84,8 @@
   .edition-menu { position:relative; }
   .edition-menu > summary { list-style:none; }
   .edition-menu > summary::-webkit-details-marker { display:none; }
+  .edition-menu > summary > .ui-icon { transition:transform .2s ease; }
+  .edition-menu[open] > summary > .ui-icon { transform:rotate(180deg); }
   .edition-menu[open] > summary:not(.is-current) { background:var(--tone-hover, #e0e3da); }
   .edition-menu-panel { position:absolute; right:0; top:100%; z-index:50; width:18rem; max-width:calc(100vw - 3rem); margin:.65rem 0 0; padding:.4rem; list-style:none; border:1px solid var(--color-ink); background:var(--color-paper); box-shadow:4px 4px 0 var(--color-ink); }
   .edition-menu-panel li + li { border-top:1px solid var(--color-rule); }
@@ -866,6 +869,7 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 html:has(#ueberlieferung:target) { scroll-behavior:auto; }
 @keyframes search-spin { to { transform:rotate(360deg); } }
 @media (prefers-reduced-motion:reduce) {
+  .edition-menu > summary > .ui-icon { transition:none; }
   html { scroll-behavior:auto; }
   .search-spinner, .letter-print-status.is-preparing::before { animation:none; }
 }
