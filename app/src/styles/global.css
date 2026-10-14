@@ -814,12 +814,11 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .edition-menu-panel { position:static; width:100%; max-width:none; margin:.25rem 0; box-shadow:none; }
 }
 @media (max-width: 639px) {
-  .letter-toolbar { grid-template-columns:auto minmax(0,1fr); gap:.625rem; justify-items:start; }
-  .letter-toolbar > .correspondence-navigation { display:none; }
+  .letter-content { --page-top-space:1rem; }
+  .letter-toolbar { grid-template-columns:minmax(0,1fr); justify-items:start; }
+  .letter-toolbar > :is(.correspondence-navigation, .letter-actions) { display:none; }
   .letter-toolbar > .letter-navigation { grid-column:1; grid-row:1; margin-left:0; align-items:center; }
   .letter-navigation a .ui-icon { transform:none; }
-  .letter-toolbar > .letter-actions { grid-column:2; grid-row:1; }
-  .letter-toolbar:has(.correspondence-navigation) > .letter-actions { border:0; padding-left:0; }
   .site-header { padding-top:.6rem; padding-bottom:.6rem; }
   .site-header-inner { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:.75rem; }
   .wordmark { min-width:0; gap:.5rem; }
