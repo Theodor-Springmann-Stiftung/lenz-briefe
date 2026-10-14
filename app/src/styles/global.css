@@ -816,7 +816,8 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 @media (max-width: 639px) {
   .letter-toolbar { grid-template-columns:auto minmax(0,1fr); gap:.625rem; justify-items:start; }
   .letter-toolbar > .correspondence-navigation { display:none; }
-  .letter-toolbar > .letter-navigation { grid-column:1; grid-row:1; margin-left:0; }
+  .letter-toolbar > .letter-navigation { grid-column:1; grid-row:1; margin-left:0; align-items:center; }
+  .letter-navigation a .ui-icon { transform:none; }
   .letter-toolbar > .letter-actions { grid-column:2; grid-row:1; }
   .letter-toolbar:has(.correspondence-navigation) > .letter-actions { border:0; padding-left:0; }
   .site-header { padding-top:.6rem; padding-bottom:.6rem; }
