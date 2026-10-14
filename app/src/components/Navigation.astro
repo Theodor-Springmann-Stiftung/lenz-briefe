@@ -42,7 +42,7 @@ const inEdition = path.startsWith(`${base}edition/`);
   {pages.length > 0 && (
     <details class="edition-menu">
       <summary class:list={['main-navigation-link', { 'is-current': inEdition }]}>
-        Edition <Icon name="chevronDown" />
+        Edition
       </summary>
       <ul class="edition-menu-panel">
         {pages.map((item) => (
@@ -65,7 +65,6 @@ const inEdition = path.startsWith(`${base}edition/`);
       <img src={`${base}lenz-archiv-icon.png`} width="20" height="20" alt="" />
       Jakob Lenz Archiv
     </span>
-    <Icon name="arrowRightUp" class="archive-link-arrow" />
   </a>
 </nav>
 <script>

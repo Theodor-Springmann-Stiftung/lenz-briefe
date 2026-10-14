@@ -74,25 +74,22 @@
   .main-navigation-link:hover:not([aria-current]):not(.is-current) { color:var(--color-ink); background:var(--tone-hover, #e0e3da); }
   .main-navigation-link[aria-current=page], .main-navigation-link.is-current { color:var(--color-paper); background:var(--color-selected); border-color:var(--color-selected); }
   .main-navigation > .main-navigation-link[aria-current=page]::before { content:'•'; color:inherit; }
+  .edition-menu > summary.is-current::after { content:'•'; color:inherit; flex-shrink:0; }
   .site-header nav [aria-disabled=true] { cursor:default; }
   .site-header .archive-link { margin-left:auto; background:var(--tone-archive, #cdd6cc); border-radius:2px; }
   .site-header .archive-link:is(:hover, :focus-visible):not([aria-current]):not(.is-current) { background:var(--tone-archive-hover, #becabb); }
   .archive-link-label { display:inline-flex; align-items:center; gap:.6rem; }
   .archive-link img { width:1.25rem; height:1.25rem; object-fit:contain; flex-shrink:0; }
-  .archive-link:is(:hover, :focus-visible) .archive-link-arrow { animation:archive-arrow-jump .45s ease-out; }
   .edition-menu { position:relative; }
   .edition-menu > summary { list-style:none; }
   .edition-menu > summary::-webkit-details-marker { display:none; }
   .edition-menu[open] > summary:not(.is-current) { background:var(--tone-hover, #e0e3da); }
-  .edition-menu[open] > summary .ui-icon { transform:rotate(180deg); }
   .edition-menu-panel { position:absolute; right:0; top:100%; z-index:50; width:18rem; max-width:calc(100vw - 3rem); margin:.65rem 0 0; padding:.4rem; list-style:none; border:1px solid var(--color-ink); background:var(--color-paper); box-shadow:4px 4px 0 var(--color-ink); }
   .edition-menu-panel li + li { border-top:1px solid var(--color-rule); }
   .edition-menu-panel a { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.8rem; white-space:normal; }
-  .edition-menu-panel a::after { content:'→'; color:var(--color-muted); }
-  .edition-menu-panel a[href]:hover::after, .edition-menu-panel a[href]:focus-visible::after { transform:translateX(4px); }
   .edition-menu-panel a[href]:hover, .edition-menu-panel a[href]:focus-visible { color:var(--color-ink); background:var(--tone-hover, #e6e9e1); }
   .edition-menu-panel a[aria-current=page] { color:var(--color-paper); background:var(--color-selected); }
-  .edition-menu-panel a[aria-current=page]::after { content:'•'; color:inherit; }
+  .edition-menu-panel a[aria-current=page]::after { content:'•'; color:inherit; flex-shrink:0; }
   .letter-print-status { display:inline-flex; align-items:center; gap:.5rem; font-size:.875rem; }
   .letter-print-status.is-preparing::before { content:''; }
   .letter-print-progress { width:6rem; height:.5rem; flex-shrink:0; accent-color:var(--color-accent); }
@@ -431,11 +428,9 @@
   .page-toc ol { list-style:none; margin:0; padding:0; }
   .page-toc li + li { border-top:1px solid var(--color-rule); }
   .page-toc a { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.6rem 1rem; font-weight:600; text-decoration:none; }
-  .page-toc a::after { content:'→'; color:var(--color-muted); flex-shrink:0; }
   .page-toc a:is(:hover, :focus-visible) { background:var(--tone-hover, #e6e9e1); color:var(--color-ink); outline-offset:-3px; }
-  .page-toc a:is(:hover, :focus-visible)::after { transform:translateX(4px); }
   .page-toc a[aria-current=location] { color:var(--color-paper); background:var(--color-selected); }
-  .page-toc a[aria-current=location]::after { content:'•'; color:inherit; transform:none; }
+  .page-toc a[aria-current=location]::after { content:'•'; color:inherit; flex-shrink:0; }
   .page-toc-subheading a { padding-left:1.75rem; font-size:.8rem; font-weight:400; }
   @media (min-width:1200px) {
     .about-page--with-toc { display:grid; grid-template-columns:minmax(0, 1fr) var(--page-toc-width); column-gap:var(--page-column-gap); align-items:start; }
@@ -806,7 +801,9 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .navigation-toggle[aria-expanded=true] .navigation-close-icon { display:block; }
   .site-header nav { width:100%; margin-left:0; flex-direction:column; align-items:stretch; gap:.25rem; padding-top:.75rem; border-top:1px solid var(--tone-border, #a8b2a8); max-height:calc(100dvh - 6rem); overflow-y:auto; }
   .site-header[data-menu-ready]:not([data-menu-open]) nav { display:none; }
-  .site-header .main-navigation-link { justify-content:space-between; white-space:normal; }
+  .site-header .main-navigation-link { justify-content:space-between; padding:.65rem .75rem; white-space:normal; }
+  /* Keep the current label aligned with other rows; its marker belongs at the end. */
+  .main-navigation > .main-navigation-link[aria-current=page]::before { order:1; flex-shrink:0; }
   .site-header .archive-link { margin-left:0; }
   .edition-menu-panel { position:static; width:100%; max-width:none; margin:.25rem 0; box-shadow:none; }
 }
@@ -817,8 +814,7 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
   .wordmark-logo { width:2.75rem; height:2.75rem; }
   .wordmark-name, .wordmark-caption { font-size:1.125rem; white-space:nowrap; }
   .wordmark-caption { max-width:100%; white-space:normal; }
-  .site-header nav { grid-column:1 / -1; font-size:.875rem; }
-  .main-navigation-link { padding:.5rem .55rem; gap:.3rem; }
+  .site-header nav { grid-column:1 / -1; }
   .index-intro { grid-template-columns:minmax(0,1fr); row-gap:.4rem; }
   .active-filters { grid-row:2; }
   .filter-toolbar { padding:.75rem; }
@@ -857,9 +853,7 @@ html:not(.search-highlight-active):is(:not(.js), .has-letter-fragment) .edition-
 }
 html:has(#ueberlieferung:target) { scroll-behavior:auto; }
 @keyframes search-spin { to { transform:rotate(360deg); } }
-@keyframes archive-arrow-jump { 50% { transform:translate(3px, -3px); } }
 @media (prefers-reduced-motion:reduce) {
-  .archive-link:is(:hover, :focus-visible) .archive-link-arrow { animation:none; }
   html { scroll-behavior:auto; }
   .search-spinner, .letter-print-status.is-preparing::before { animation:none; }
 }
