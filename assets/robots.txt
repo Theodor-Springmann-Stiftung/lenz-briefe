@@ -1,3 +1,4 @@
-# Development site: do not crawl.
 User-agent: *
-Disallow: /
+Disallow: /licenses/
+
+Sitemap: https://lenz-briefe.de/sitemap-index.xml

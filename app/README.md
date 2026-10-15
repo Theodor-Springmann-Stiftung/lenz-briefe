@@ -104,7 +104,7 @@ custom `404.html`, with a link back to the catalogue and search. Unknown URLs at
 any depth use this page, with or without a trailing slash. Route matching uses
 `trailingSlash: 'ignore'` so the development server also renders this page instead
 of Astro's trailing-slash warning; published page links still end in `/`.
-The development site's existing indexing restrictions remain in place.
+Edition content permits indexing; redirect and licence pages remain excluded.
 External HTTP(S) links open in a new tab or window.
 The HTML middleware applies this during rendering, including links in Markdown,
 letter content and card templates; internal links keep their normal behavior.
@@ -368,7 +368,7 @@ build should preserve the old offline copy until the update completes. The Node
 tests exercise interruption/restart, version changes, response integrity, cache
 reuse, scope isolation, storage errors and cancellation.
 
-## GitHub Pages development deployment
+## GitHub Pages production deployment
 
 `.github/workflows/pages.yml` validates all four XML documents against their XSDs
 before running the Python/Saxon XSLT export and the static Astro build. Any schema,
@@ -376,20 +376,22 @@ test, export or build failure prevents deployment. Pushes to `main` publish
 `app/dist/`; pull requests targeting `main` validate and build without publishing.
 The workflow can also be run manually on `main`.
 
-The site URL is `https://dev.lenz-briefe.de`, served at `/` without a repository
+The site URL is `https://lenz-briefe.de`, served at `/` without a repository
 path prefix. For the initial setup:
 
 1. In the repository's **Settings → Pages**, select **GitHub Actions** as the source.
-2. Set the custom domain to `dev.lenz-briefe.de`.
-3. At the DNS provider, set the `dev` CNAME record to
-   `theodor-springmann-stiftung.github.io` (no repository path).
+2. Set the custom domain to `lenz-briefe.de`.
+3. At the DNS provider, point the apex (`@`) A records to
+   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and
+   `185.199.111.153` (GitHub Pages).
 4. Enable **Enforce HTTPS** once the certificate is available.
 
 With an Actions deployment, the custom domain must be configured in GitHub's
 settings; a `CNAME` file in the artifact does not configure it. See
 [GitHub's custom-domain instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
-The development site's `robots.txt` and `noindex` meta tags are included in the
-published output.
+The production site allows indexing of edition content. Its `robots.txt` excludes
+the `/licenses/` notice files and advertises the sitemap. Normal content pages
+have no `noindex` directives; redirect and licence pages retain `noindex`.
 
 Run the same strict validation locally from the repository root:
 

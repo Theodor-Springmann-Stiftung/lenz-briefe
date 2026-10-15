@@ -10,7 +10,7 @@ import { satteri } from '@astrojs/markdown-satteri';
 import sitemap from '@astrojs/sitemap';
 const pagesDirectory = fileURLToPath(new URL('../seiten', import.meta.url));
 export default defineConfig({
-  site: 'https://dev.lenz-briefe.de',
+  site: 'https://lenz-briefe.de',
   output: 'static',
   publicDir: '../assets',
   fonts: [
